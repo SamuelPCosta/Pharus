@@ -1,0 +1,30 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.container{
+  margin: 0 auto; /*largura do circulo// altere tb no js*/
+}
+.container .row .box .chart{
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 75px;
+  line-height: 550px;
+  min-width: 550px;
+}
+.container .row .box canvas{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.text p{
+  width: 70%;
+  margin: 0 15%;
+  text-align: justify;
+}
+@media(max-width:1200px) {
+  .container .row .box .chart{
+    max-width: 550px;
+  }
+}

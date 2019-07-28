@@ -1,0 +1,26 @@
+
+h1{ /*Estilização do título*/
+	width: 90%;
+	margin: 0 auto;
+	text-align: left;
+	text-transform: none;
+    font-weight: normal;
+}
+h1 + p{ /*Estilização do paragrafo*/
+	width: 90%;
+	margin: 0 auto;
+	font-size: 20px;
+	text-align: justify;
+	margin-bottom: 50px;
+	text-align: left;
+}
+.row img{
+	margin: 0 5%;
+	width: 90%
+}
+@media(max-width:992px) {
+	.descer{
+		-ms-flex-order: 2;
+  		order: 2;
+	}
+}

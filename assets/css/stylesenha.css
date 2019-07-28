@@ -1,0 +1,10 @@
+.user_card { /*Estilização da caixa*/
+	height: 200px !important;
+	width: 350px;
+	margin-top: auto;
+	margin-bottom: auto;
+	transform: translateY(-80%);
+}
+.logo{
+	margin-top: -250px !important;
+}
