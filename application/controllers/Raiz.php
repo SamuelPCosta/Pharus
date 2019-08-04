@@ -28,6 +28,10 @@ class Raiz extends CI_Controller {
 
 	public function idealdeconsumo(){
 		if (isset($_SESSION['login'])) {
+			$this->load->helper('cookie');
+			if (!isset($_GET['questao'])) {
+				delete_cookie("a"); delete_cookie("b"); delete_cookie("c");
+			}
 			$this->load->view('idealdeconsumo');
 		}else{
 			redirect('login?error=2'); 
@@ -44,7 +48,14 @@ class Raiz extends CI_Controller {
 
 	public function dicas(){
 		if (isset($_SESSION['login'])) {
-			$this->load->view('dicas');
+			$this->load->model("Dicas_model");
+			$dicas['dica1'] = $this->Dicas_model->exibir('a');
+			$dicas['dica2'] = $this->Dicas_model->exibir('a');
+			$dicas['dica3'] = $this->Dicas_model->exibir('a');
+			$dicas['dica4'] = $this->Dicas_model->exibir('a');
+			$dicas['dica5'] = $this->Dicas_model->exibir('b');
+			$dicas['dica6'] = $this->Dicas_model->exibir('c');
+			$this->load->view('dicas', $dicas);
 		}else{
 			redirect('login?error=2'); 
 		}

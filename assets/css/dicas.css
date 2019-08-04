@@ -4,24 +4,25 @@
 	text-align: justify;
 }
 .a{
-	height: 150px;
+	height: 220px;
 	width: 90%;
 	margin: 0 auto;
 	background-color: #00aadd44;
-	margin-bottom: 70px;
+	margin-bottom: 25px;
 }
 .b{
-	height: 370px;
+	height: 465px;
 	width: 90%;
 	margin: 0 auto;
 	background: #ddaa0077;
-	margin-bottom: 70px; 
+	margin-bottom: 25px; 
 }
 .c{
-	height: 590px;
+	height: 710px;
 	width: 90%;
 	margin: 0 auto;
 	background-color: #2b703055;
+	margin-bottom: 25px; 
 }
 #recarregar{
 	text-align: right;
@@ -29,6 +30,11 @@
 	margin-top: 20px;
 	color: white;
 	text-decoration: none;
+	margin-right: 4%
+}
+p::first-line {
+	font-weight: bold;
+ 	font-size: 1.2em;
 }
 @media(max-width:1200px) {
 	.a, .b{
@@ -46,5 +52,6 @@
 		width: 30%;
 		float: none;
 		margin-left: 35%;
+		position: relative;
 	}
 }

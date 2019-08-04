@@ -72,11 +72,9 @@
 	     			</p>
 	     			<p class="btn bg-info" id="mensagem">Mensagem de Apoio ou Chamada de atenção</p>
 	     		</div>
-	     		 <div class="col-xl-6 col-md-12 gasto">
-		        	
+	     		 <div class="col-xl-6 col-md-12 gasto">	        	
 		        			<?php  
 			        			if ($meta==0) {
-			        				//echo($this->session->userdata('selecao'));
 			        		?>
 			        <h2>Defina a Sua <wbr>Meta Mensal</h2>
 		        	<form method="post" action="cadastro_meta/adicionar">

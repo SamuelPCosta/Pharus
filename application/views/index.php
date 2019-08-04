@@ -14,10 +14,6 @@
 <body>
 <div class="tudo">
 
-	<script>
-    	swal("Pronto!", '<?php echo $this->session->flashdata('mensagem_login'); ?>', "success");
-	</script>
-
 	<!-- Header -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark">
@@ -59,7 +55,7 @@
 				      		<div class="chart" data-percent="73" data-scale-color="#ffb400"><?php //echo $meta = $this->session->userdata('meta'); ?>73%</div>
 				    	</div>
 			    	</div>
-			    	<div class="col-xl-6 col-lg-12 text"><p>Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
+			    	<div class="col-xl-6 col-lg-12 text"><p>&emsp;Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
 			    </div>
 			  	</div>
 			  	<div class="container">

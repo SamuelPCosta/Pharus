@@ -49,13 +49,14 @@
             <div class="container first-container">
 	        <div class="row align-items-center">
 	            <div class="col-lg-6 col-md-12">
-	        	<h1>Heading</h1>
-	        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	        	<h1>Faixa de consumo</h1><br>
+	        	<p>Esse valor representa a sua faixa de consumo necessária de acordo com o contexto da sua residência.</p>
 	        </div>
      		<div class="col-lg-6 col-md-12"><!--Div do questionário-->
      			<div class="resultado">
-     				<h3>Intervalod de custo <br><wbr>entre X e Y</h3>
+     				<h3>Intervalo de custo <br><wbr>entre <?php echo $this->session->userdata('faixa'); ?></h3>
      			</div>
+     			
      			<a href="metas" class="btn bg-secondary" id="definirmeta">Definir minha meta</a>
      		</div>
             </div>

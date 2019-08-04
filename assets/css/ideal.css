@@ -28,28 +28,35 @@ label{
 	display: inline !important;
 }
 .alternativas{
-  font-size: 18px;
-  font-weight: 700;
-  border:none;
-  padding: 10px 10px; 
-  cursor: pointer;
-  width: 70%; 
-  margin: auto; 
-  margin-bottom: 20px;
-  margin-right: 15%;
-  background-color: #364046dd;
-  color: #fff; 
-  box-shadow:0 5px 0 #121417dd;  
-  text-align: center;
+	font-size: 18px;
+	font-weight: 700;
+	border:none;
+	padding: 10px 10px; 
+	cursor: pointer;
+	width: 70%; 
+	margin: auto; 
+	margin-bottom: 20px;
+	margin-right: 15%;
+	background-color: #364046dd;
+	color: #fff; 
+	box-shadow:0 5px 0 #121417dd;  
+	text-align: center;
 }
 .alternativas:hover{
-  background: #4f5e67b9;
-  box-shadow:0 5px 0 #333333;  
+	background: #4f5e67b9;
 }
 .alternativas:active{
-  position:relative;
-  top: 5px;
-  box-shadow:none;  
+	position:relative;
+	top: 5px;
+	box-shadow:none;  
+}
+input[type=radio]:checked + label .alternativas{
+    background-color: #0a522d;
+	box-shadow:0 5px 0 #0a2919;  
+}
+input{
+	position: absolute;
+	visibility: hidden;
 }
 
 /*CSS abaxo faz parte do resultado do questionário*/
@@ -68,5 +75,8 @@ label{
 @media(max-width:1200px) {
 	h1{
 		margin-top: 50px;
+	}
+	button{
+		margin-bottom: 50px;
 	}
 }

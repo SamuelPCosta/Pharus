@@ -19,12 +19,13 @@ class Login extends CI_Controller {
 			//Chama a função get meta dentro do modelo metas_model
 			redirect('index'); 
 		}else{
-			$this->session->set_flashdata('mensagem_login','Nome de usuário ou senha incorreto.'); 
 			redirect('login?error=1'); 
 		}		
 	}
 
 	public function logout(){
+		$this->load->helper('cookie');
+		delete_cookie("a"); delete_cookie("b"); delete_cookie("c");
 		unset($_SESSION['login']);
 		unset($_SESSION['meta']);
 		redirect('login'); 

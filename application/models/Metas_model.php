@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Metas_model extends CI_Model {
+	//Função para salvar a meta do usuario
 	public function salvar($meta=NULL, $usuario){
 		if ($meta != NULL) {
 			$this->db->select('conta_contrato');

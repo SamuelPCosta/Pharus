@@ -49,49 +49,43 @@
             <div class="container-fluid first-container">
 	        <div class="row">
 	            <div class="col-xl col-12 colunas">
-			      <div class="a">
-			      	<p>
-			      		<b>A energia é muito consumida pelo ferro de passar roupa!</b></br>
-			      		Lorem ipsum dolor  pariatur. Excepteur sint occaecat.
-			      </p>
-			    </div>
-			      <div class="a">
-			      	<p>
-			      	<b>Troque as lâmpadas!</b><br>
-			      	Lorem ipsum dolor  pariatur. Excepteur sint occaecat.
-			      </p>
-			  </div>
-			      <div class="a">
-			      	<p>
-			      		<b>Evite os banhos demorados!</b><br>
-			      		Lorem ipsum dolor  pariatur. Excepteur sint occaecat.
-			      	</p>
-			      </div>
+				    <div class="a">
+				      	<p>
+				      		<?php echo $dica1; ?>
+				      	</p>
+				    </div>
+				    <div class="a">
+				      	<p>
+				      		<?php echo $dica2; ?>
+				      	</p>
+				  	</div>
+				    <div class="a">
+				      	<p>
+				      		<?php echo $dica3; ?>
+				      	</p>
+				    </div>
 			    </div>
 
 			    <div class="col-xl col-12 colunas">
-			      <div class="a">
-			      	<p>
-			      		<b>Cautela com o ar-condicionado!</b></br>
-			      		Lorem ipsum dolor  pariatur. Excepteur sint occaecat.
-			      	</p>
-			      </div>
-			      <div class="b">
-			      	<p>
-			      		<b>Preste atenção na sua geladeira!</b></br>
-			      		Lorem ipsum dolor  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			      	</p>
-			      </div>
-			    </div>
-
-			    <div class="col-xl col-12 colunas">
-			      <div class="c">
-			      	<p>
-			      		<b>Utilize menos a sua máquina de lavar!</b></br>
-			      		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor  pariatur.
+			    	<div class="a">
+				      	<p>
+				      		<?php echo $dica4; ?>
+				      	</p>
+			      	</div>
+			      	<div class="b">
+			      		<p>
+			      			<?php echo $dica5; ?>
 			      		</p>
 			      	</div>
-			      <a href="#" id="recarregar" class="btn bg-secondary">Novas dicas</a>
+			    </div>
+
+			    <div class="col-xl col-12 colunas">
+			      	<div class="c">
+			      		<p>
+			      			<?php echo $dica6; ?>
+			      		</p>
+			      	</div>
+			      		<a href="dicas" id="recarregar" class="btn bg-secondary">Novas dicas</a>
 			    </div>
             </div>
             </div>
