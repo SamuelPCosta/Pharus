@@ -3,8 +3,6 @@
 	function simulador(){
 		$h_geladeira = 24; //horas que a geladeira fica ligada
 		rand(4,6);
-
-		
 	}
 
 ?>
@@ -29,6 +27,9 @@
 			padding-left: 10px;
 			float: right;
 			margin: 32px 0px 0px 15px;
+		}
+		select{
+			float: right;
 		}
 		h1{
 			font-family: 'Open Sans', sans-serif !important;
@@ -63,7 +64,12 @@
 				<div class="col-xl-4 col-lg-6">
 					<form method="post" action="#">
 					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="geladeira" placeholder="Horas"><br>
+					<input type="number" min="0" max="24" name="geladeira" placeholder="Horas">
+					<select>
+						<option>Potência</option>
+						<option>Potência</option>
+					</select>
+					<br>
 					<h2>Fogão:</h2>
 					<input type="number" min="0" max="24" name="fogao" placeholder="Horas"><br>
 					<h2>Microondas:</h2>
@@ -102,7 +108,7 @@
 		</div>
 	</div>
 	<?php 
-		$geladeira = $_POST['geladeira'];//*potencia da geladeira;
+		//$geladeira = $_POST['geladeira'];//*potencia da geladeira;
 
 	?>
 </body>

@@ -4,7 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Raiz extends CI_Controller {
 	public function index(){
 		if (isset($_SESSION['login'])) {
-			$this->load->view('index');
+			$this->load->model("Consumo_model");
+			$usuario = $this->session->userdata('usuario');
+			$consumo['meta'] = $this->Consumo_model->meta($usuario);
+			$valor_dia = $consumo['meta']/30;
+			$consumo['consumo'] = $this->Consumo_model->exibir($usuario);
+			$consumo['gasto'] = $consumo['consumo']*100/$valor_dia;
+			$this->load->view('index', $consumo);
 		}else{
 			redirect('login'); 
 		}	

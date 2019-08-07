@@ -144,15 +144,17 @@ header .navbar{
 .col-lg-4{
     text-align: center;
 }
+.rounded-circle{
+    margin-bottom: 30px
+}
 .colunas-home{ /*Colunas duplas abaixo da barra central*/
-    height: 75vh;
+    min-height: 75vh;
     padding: 60px 100px;
     /*background-color: #9aada333;*/
-    background-color: #eaeae5;
-    margin-top: 100px; /*Adicionar apenas se tiver barra horizontal acima*/
+    background-color: #eee;
 }
 .colunas-home p{
-    width: 80%;
+    width: 100%;
     text-align: justify;
     margin: auto;
     color: #2b3530;
@@ -209,6 +211,12 @@ header .navbar{
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
+    }
+    .rounded-circle{
+        margin-bottom: 100px
+    }
+    .colunas-home p{
+        width: 85%;
     }
 }
 

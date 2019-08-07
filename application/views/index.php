@@ -52,8 +52,11 @@
                 <div class="row align-items-center">
                 	<div class="col-xl-6 col-lg-12">
 				    	<div class="box">
-				      		<div class="chart" data-percent="73" data-scale-color="#ffb400"><?php //echo $meta = $this->session->userdata('meta'); ?>73%</div>
-				    	</div>
+				      		<div class="chart" data-percent="<?php echo $consumo; ?>" data-scale-color="#ffb400"><?php echo $consumo; ?>%</div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
+				      	</div>
+				      	<!--<div class="box">
+				      		<div class="chart inner" data-percent="<?php echo $consumo; ?>" data-scale-color="#ffb400"><?php echo $consumo; ?>%</div>
+				    	</div>-->
 			    	</div>
 			    	<div class="col-xl-6 col-lg-12 text"><p>&emsp;Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
 			    </div>
@@ -115,6 +118,7 @@
   	<script>
     $(function() {
         $('.chart').easyPieChart({});});
+   		//$('.inner').easyPieChart2({});});
 	</script>
 </body>
 </html>

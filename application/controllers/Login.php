@@ -8,9 +8,8 @@ class Login extends CI_Controller {
 			$senha = $this->input->post("senha"); //Recebe entrada de senha
 			$login = $this->usuarios_model->logarUsuarios($usuario,$senha); //Chama a função logar usuário dentro do modelo usuários model
 		if($login){
-			$this->session->set_flashdata('mensagem_login','Logado com secesso!'); 
+			//$this->session->set_flashdata('mensagem_login','Logado com secesso!'); 
 			$this->session->set_userdata('login', 'autenticado');
-
 			//Tentarei salvar user na session
 			$this->session->set_userdata('usuario', $usuario);
 			//Obter meta isso tá repetido no controler de cadastro de meta para que possamos salvar por usuario
