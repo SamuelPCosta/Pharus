@@ -70,7 +70,13 @@
 	     				}
 	     			?>	
 	     			</p>
-	     			<p class="btn bg-info" id="mensagem">Mensagem de Apoio ou Chamada de atenção</p>
+	     			<?php  
+	     			if ($meta!=0) {
+	     				$this->load->helper('cookie');
+	     				$mensagem = get_cookie('mensagem_meta');
+	     				echo "<p class='btn bg-info' id='mensagem'>".$mensagem."</p>";
+	     			}		
+	     			?>
 	     		</div>
 	     		 <div class="col-xl-6 col-md-12 gasto">	        	
 		        			<?php  
