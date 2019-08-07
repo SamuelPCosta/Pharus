@@ -10,6 +10,14 @@ class Raiz extends CI_Controller {
 			$valor_dia = $consumo['meta']/30;
 			$consumo['consumo'] = $this->Consumo_model->exibir($usuario);
 			$consumo['gasto'] = $consumo['consumo']*100/$valor_dia;
+			$porcentagem = $consumo['gasto'];
+			$this->load->helper('cookie');
+			if ($porcentagem>=100) {
+				$mensagem = "Baixa esse consumpo aí fion.";
+			}else{
+				$mensagem = "Tá top o consumo.";
+			}
+			set_cookie('mensagem_meta', $mensagem, (86400));
 			$this->load->view('index', $consumo);
 		}else{
 			redirect('login'); 
