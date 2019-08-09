@@ -74,7 +74,10 @@
 	     			if ($meta!=0) {
 	     				$this->load->helper('cookie');
 	     				$mensagem = get_cookie('mensagem_meta');
-	     				echo "<p class='btn bg-info' id='mensagem'>".$mensagem."</p>";
+	     				echo "
+	     				<div class='alert alert-primary' role='alert' id='mensagem'>
+	     				".$mensagem."
+						</div>";
 	     			}		
 	     			?>
 	     		</div>
@@ -94,7 +97,7 @@
 		        	<form method="post" action="cadastro_meta/adicionar">
 		        		<div id="meta">
 				        		<!--Alterar de um campo e botão para os outros-->
-				        		<input type="number" min="20" max="2500" name="meta" placeholder="Apenas números. Ex.: 90">
+				        		<input type="number" min="20" max="2500" name="meta" value="<?php echo $meta ?>" placeholder="Apenas números. Ex.: 90">
 				        		<!--o name do input muda-->
 				        		<button type="submit" class="btn">Editar Meta</button><!--Esse botão antes era salvar-->
 			        		<?php  

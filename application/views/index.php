@@ -19,6 +19,20 @@
 		<nav class="navbar navbar-expand-lg navbar-dark">
 			<a href="index" class="logo"><img src="<?= base_url()?>assets/img/logo.png" width=110></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn" id="menu-toggle"><i class="fas fa-bars"></i></a>
+			<!--Dropdown-->
+			<div class="dropdown position-fixed">
+			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    <i class="fas fa-user"></i>
+			  </button>
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			    <span class="dropdown-item">Logado como <?php $user = $this->session->userdata('usuario'); echo $user; ?></span>
+			    <div class="dropdown-divider"></div>
+			    <a class="dropdown-item" href="#">Editar senha</a>
+			    <a class="dropdown-item" href="#">Atualizar dados</a>
+			    <a class="dropdown-item" href="login/logout">Sair</a>
+			  </div>
+			</div>
+			<!---->
 		</nav>
 	</header>
 	<!-- Header -->
@@ -52,11 +66,8 @@
                 <div class="row align-items-center">
                 	<div class="col-xl-6 col-lg-12">
 				    	<div class="box">
-				      		<div class="chart" data-percent="<?php echo $consumo; ?>" data-scale-color="#ffb400"><?php echo $consumo; ?>%</div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
+				      		<div class="chart" data-percent="<?php echo $gasto; ?>" data-scale-color="#ffb400"><?php echo $gasto; ?>% <div id="percent"><p>em <br> X horas</p></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
 				      	</div>
-				      	<!--<div class="box">
-				      		<div class="chart inner" data-percent="<?php echo $consumo; ?>" data-scale-color="#ffb400"><?php echo $consumo; ?>%</div>
-				    	</div>-->
 			    	</div>
 			    	<div class="col-xl-6 col-lg-12 text"><p>&emsp;Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
 			    </div>

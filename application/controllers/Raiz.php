@@ -13,7 +13,7 @@ class Raiz extends CI_Controller {
 			$porcentagem = $consumo['gasto'];
 			$this->load->helper('cookie');
 			if ($porcentagem>=100) {
-				$mensagem = "Baixa esse consumpo aí fion.";
+				$mensagem = "Baixa esse consumo aí fion.";
 			}else{
 				$mensagem = "Tá top o consumo.";
 			}

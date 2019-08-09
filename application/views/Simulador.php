@@ -64,20 +64,20 @@
 				<div class="col-xl-4 col-lg-6">
 					<form method="post" action="#">
 					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="geladeira" placeholder="Horas">
+					<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
 					<select>
 						<option>Potência</option>
 						<option>Potência</option>
 					</select>
 					<br>
 					<h2>Fogão:</h2>
-					<input type="number" min="0" max="24" name="fogao" placeholder="Horas"><br>
+					<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas"><br>
 					<h2>Microondas:</h2>
-					<input type="number" min="0" max="24" name="microondas" placeholder="Horas"><br>
+					<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas"><br>
 					<h2>Freezer:</h2>
-					<input type="number" min="0" max="24" name="freezer" placeholder="Horas"><br>
+					<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas"><br>
 					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
+					<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas"><br>
 				</div>
 				<div class="col-xl-4 col-lg-6">
 					<h2>Geladeira:</h2>

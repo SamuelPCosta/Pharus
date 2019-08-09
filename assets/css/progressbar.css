@@ -10,12 +10,16 @@ body {
   margin: 0 auto;
   text-align: center;
   font-size: 75px;
-  line-height: 550px;
+  line-height: 435px;
   min-width: 550px;
 }
-.container .row .box .inner{
-  position: absolute;
-  top: 30px
+#percent p::first-line {
+  font-weight: bold;
+  font-size: 0.5em;
+}
+#percent{
+  line-height: 50px;
+  transform: translateY(-180px);
 }
 .container .row .box canvas{
   position: absolute;
