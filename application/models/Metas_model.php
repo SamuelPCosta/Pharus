@@ -32,4 +32,18 @@ class Metas_model extends CI_Model {
     		$this->session->set_userdata('meta', $meta);
 		}
 	}
+
+	//Função para converter meta em khw
+	public function kwh($khw=NULL, $usuario){
+		if ($usuario != NULL) {
+			$this->db->select('conta_contrato');
+			$this->db->where('usuario', $usuario);
+			$query = $this->db->get('usuario');
+			$conta_contrato = $query->row()->conta_contrato;
+			
+			$this->db->set('kw_h', $khw);
+			$this->db->where('usuario', $conta_contrato);
+    		$this->db->update('meta');
+		}
+	}
 }

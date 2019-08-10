@@ -11,7 +11,10 @@ class Cadastro_Meta extends CI_Controller {
 			//$meta = array('a'); //criar um erro pra parar a execução
 			$usuario = $this->session->userdata('usuario');
 			$this->Metas_model->salvar($meta, $usuario);
-			
+			$valor_tarifa = 0.7;
+			$khw = intval($meta/$valor_tarifa);
+			$this->Metas_model->kwh($khw, $usuario);
+
 			//Obter meta
 			$this->Metas_model->get_meta($this->session->userdata('usuario')); //Chama a função get meta dentro do modelo metas_model
 			redirect('metas'); 

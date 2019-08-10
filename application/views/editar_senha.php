@@ -2,44 +2,26 @@
 <html lang="pt-br">  
 <head>
 	<meta charset="utf-8">
-	<title>Pharus - Criar Cadastro</title> <!--Título da Aba-->
+	<title>Pharus - Login</title> <!--Título da Aba-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Importação do CSS do BS-->
-	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/stylecadastro.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/style.css"> <!--Importação das folhas de estilo css-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/stylelogin.css"> <!--Importação das folhas de estilo css-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!--Importação da fonte Open Sans-->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Importação de sweetalert-->
 	<link rel="shortcut icon" href="<?= base_url()?>assets/img/icon.ico"/> <!--Icone-->
 </head>
+<!--Coded with love by Mutiullah Samim-->
 <body>
-		<?php  
-			if (!isset($_GET["error"])){}else{
-				$erro=$_GET["error"];
-				if ($erro==1){
-				//Aqui fica o erro para informar ao usuário que a senha dele deve ter no mínimo 8 caracteres
-		?>
-			<script>
-	    		swal("Ops!", 'Sua senha deve conter no mínimo 8 caracteres!', "error");
-	    	</script>
-    	<?php 
-    			}elseif($erro==2){
-    			//Aqui fica o erro para informar ao usuário que a senha dele não bate com a confirmação
-    	?>
-			<script>
-	    		swal("Ops!", 'A confirmação de senha é diferente da senha definida!', "error");
-	    	</script>
-    	<?php 	
-    			}elseif($erro==3){
-    	?>
-    		<script>
-	    		swal("Ops!", 'O nome de usuário já existe!', "error");
-	    	</script>
-    	<?php  
-    			}	
-    		}
-    	?>	
-	<div class="container h-100">
-		<div class="d-flex justify-content-center h-100">
+	<!-- Header -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<a href="index" class="logo"><img src="<?= base_url()?>assets/img/logo.png" width=110></a> <!--Nossa Logo-->
+		</nav>
+	</header>
+	<!-- Header -->
+    <div class="container h-100">
+		<div class="d-flex justify-content-center h-100" >
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
@@ -47,51 +29,40 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-					<form method="post" action="cadastro/adicionar">
-						<div class="input-group mb-3">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-address-card"></i></i></span>
-							</div>
-							<input type="text" name="nome" class="form-control input_user" value="" placeholder="Nome completo" required>
-						</div>
-						<div class="input-group mb-3">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-user"></i></span>
-							</div>
-							<input type="text" name="usuario" class="form-control input_pass" value="" placeholder="Usuário" required>
-						</div>
-						<div class="input-group mb-3">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-keyboard"></i></span>
-							</div>
-							<input type="text" name="conta_contrato" class="form-control input_pass" value="" placeholder="Conta contrato" required>
-						</div>
-						<div class="input-group mb-3">
+					<form method="post" action="#"><!--Mandar para a página de checagem-->
+						<!--Envia para o controller Login.php na função autenticar-->
+						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="senha" class="form-control input_pass" value="" placeholder="Senha" required>
+							<input type="password" name="senhaatual" class="form-control input_user" value="" placeholder="Digite a senha atual">
 						</div>
-						<div class="input-group mb-3">
+						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="confirmar_senha" class="form-control input_pass" value="" placeholder="Confirmar senha" required>
+							<input type="password" name="senha" class="form-control input_pass" value="" placeholder="Nova Senha">
 						</div>
-						<div class="input-group mb-3">
+						<div class="input-group mb-2">
 							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="email" name="email" class="form-control input_user" value="" placeholder="Email" required>
-						</div>				
+							<input type="password" name="confirmarsenha" class="form-control input_pass" value="" placeholder="Confirmar Senha">
+						</div>
+						<div class="form-group">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customControlInline">
+								<label class="custom-control-label" for="customControlInline">Lembre-se de mim</label>
+							</div>
+						</div>
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
-						<button type="submit" name="button" class="btn login_btn">Cadastrar</button>
+						<button type="submit" name="button" class="btn login_btn">Entrar</button>
 					</div>
 				</form>
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						Já tem cadastro? <a href="login" class="ml-2">Entrar</a>
+						Ainda não tem cadastro? <a href="cadastro" class="ml-2">Faça agora!</a>
 					</div>
 				</div>
 			</div>

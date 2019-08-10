@@ -48,7 +48,7 @@ label{
 .alternativas:active{
 	position:relative;
 	top: 5px;
-	box-shadow:none;  
+	box-shadow:none !important;  
 }
 input[type=radio]:checked + label .alternativas{
     background-color: #0a522d;

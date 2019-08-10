@@ -14,7 +14,7 @@ class Consumo_model extends CI_Model {
 		return $consumo; //retorna o consumo
 	}
 
-	public function exibir($usuario){
+	public function consumo($usuario){
 		$this->db->select('conta_contrato'); //seleciona conta contrato
 		$this->db->where('usuario', $usuario);
 		$query = $this->db->get('usuario');

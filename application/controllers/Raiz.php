@@ -7,8 +7,9 @@ class Raiz extends CI_Controller {
 			$this->load->model("Consumo_model");
 			$usuario = $this->session->userdata('usuario');
 			$consumo['meta'] = $this->Consumo_model->meta($usuario);
-			$valor_dia = $consumo['meta']/30;
-			$consumo['consumo'] = $this->Consumo_model->exibir($usuario);
+			$valor_tarifa = 0.7;
+			$valor_dia = ($consumo['meta']/30)/$valor_tarifa;
+			$consumo['consumo'] = $this->Consumo_model->consumo($usuario);
 			$consumo['gasto'] = $consumo['consumo']*100/$valor_dia;
 			$porcentagem = $consumo['gasto'];
 			$this->load->helper('cookie');
@@ -17,7 +18,7 @@ class Raiz extends CI_Controller {
 			}else{
 				$mensagem = "Tá top o consumo.";
 			}
-			set_cookie('mensagem_meta', $mensagem, (86400));
+			set_cookie('mensagem_meta', $mensagem, time() + (86400));
 			$this->load->view('index', $consumo);
 		}else{
 			redirect('login'); 
@@ -89,6 +90,14 @@ class Raiz extends CI_Controller {
 
 	public function recuperarsenha(){
 		$this->load->view('recuperarsenha');
+	}
+
+	public function editar_senha(){
+		if (isset($_SESSION['login'])) {
+			$this->load->view('editar_senha');
+		}else{
+			redirect('login?error=2'); 
+		}
 	}
 
 	public function quemsomos(){

@@ -53,6 +53,6 @@ html {
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 	background-color: #2b3530 !important; /*Cor de fundo da checkbox*/
 }
-.logo{
+.logo_grande{
 	margin-top: -300px;
 }
