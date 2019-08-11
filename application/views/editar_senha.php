@@ -49,20 +49,17 @@
 							</div>
 							<input type="password" name="confirmarsenha" class="form-control input_pass" value="" placeholder="Confirmar Senha">
 						</div>
-						<div class="form-group">
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customControlInline">
-								<label class="custom-control-label" for="customControlInline">Lembre-se de mim</label>
-							</div>
-						</div>
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
-						<button type="submit" name="button" class="btn login_btn">Entrar</button>
+						<button type="submit" name="editar" class="btn login_btn">Editar senha</button>
+					</div>
+					<div class="d-flex justify-content-center mt-3 login_container">
+						<button type="submit" name="cancelar" class="btn login_btn">Cancelar</button>
 					</div>
 				</form>
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						Ainda não tem cadastro? <a href="cadastro" class="ml-2">Faça agora!</a>
+						Ainda não tem cadastro?
 					</div>
 				</div>
 			</div>

@@ -1,10 +1,17 @@
 .first-container{
 	margin: 20px 0px;
 }
+.a, .b{
+  display: flex;
+  align-items: center;
+  //box-shadow: 4px 4px 6px #36404655;
+
+}
 .colunas p{
 	padding: 25px;
 	padding-top: 40px;
 	text-align: justify;
+	width: 95%
 }
 .a{
 	height: 220px;

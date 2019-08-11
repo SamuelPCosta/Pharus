@@ -18,18 +18,21 @@
 		html, body{
 			background-color: #9aada3;
 		}
-		input{
+		.inputs{
+			float: right;
+		}
+		input, select{
 			width: 70px;
 			height: 30px;
 			background-color: #eee;
 			border: none;
 			border-radius: 5px;
 			padding-left: 10px;
-			float: right;
 			margin: 32px 0px 0px 15px;
 		}
 		select{
-			float: right;
+			width: 100px;
+			padding-left: 0px;
 		}
 		h1{
 			font-family: 'Open Sans', sans-serif !important;
@@ -47,6 +50,9 @@
 			margin: 25px 0px 0px 50px;
 			display: inline-block;
 		}
+		.col-lg-6{
+			margin-bottom: 20px
+		}
 		button{
 			background-color: #364046 !important;
 			color: white !important;
@@ -61,25 +67,54 @@
 	<div class="container">
 		<h1>Simulador de Consumo <br>de um domicílio</h1>
 		<div class="row">
-				<div class="col-xl-4 col-lg-6">
+				<div class="col-lg-6">
 					<form method="post" action="#">
 					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
+					<div class="inputs">
+						<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
 					<select>
 						<option>Potência</option>
 						<option>Potência</option>
 					</select>
+					</div>
 					<br>
 					<h2>Fogão:</h2>
-					<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas"><br>
+					<div class="inputs">
+						<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
+					<select>
+						<option>Potência</option>
+						<option>Potência</option>
+					</select>
+					</div>
+					<br>
 					<h2>Microondas:</h2>
-					<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas"><br>
+					<div class="inputs">
+						<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
+					<select>
+						<option>Potência</option>
+						<option>Potência</option>
+					</select>
+					</div>
+					<br>
 					<h2>Freezer:</h2>
-					<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas"><br>
+					<div class="inputs">
+						<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
+					<select>
+						<option>Potência</option>
+						<option>Potência</option>
+					</select>
+					</div>
+					<br>
 					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas"><br>
+					<div class="inputs">
+						<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
+					<select>
+						<option>Potência</option>
+						<option>Potência</option>
+					</select>
+					</div>
 				</div>
-				<div class="col-xl-4 col-lg-6">
+				<div class="col-lg-6">
 					<h2>Geladeira:</h2>
 					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
 					<h2>Fogão:</h2>
@@ -91,7 +126,19 @@
 					<h2>Geladeira:</h2>
 					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
 				</div>
-				<div class="col-xl-4 col-lg-6">
+				<div class="col-lg-6">
+					<h2>Geladeira:</h2>
+					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
+					<h2>Fogão:</h2>
+					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
+					<h2>Microondas:</h2>
+					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
+					<h2>Freezer:</h2>
+					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
+					<h2>Geladeira:</h2>
+					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
+				</div>
+				<div class="col-lg-6">
 					<h2>Geladeira:</h2>
 					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
 					<h2>Fogão:</h2>

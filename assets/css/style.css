@@ -67,9 +67,29 @@ span{
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
+    z-index: 2;
 }
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
+}
+#dark{
+    z-index: 1;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition-property: opacity;
+    background: var(--app-drawer-scrim-background, rgba(0, 0, 0, 0.6));
+}
+.visible{
+    opacity: 1 !important;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 #page-content-wrapper {
     width: 100%;

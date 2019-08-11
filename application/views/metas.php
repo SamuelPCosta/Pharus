@@ -17,6 +17,20 @@
 		<nav class="navbar navbar-expand-lg navbar-dark">
 			<a href="index" class="logo"><img src="<?=base_url()?>/assets/img/logo.png" width=110></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn" id="menu-toggle"><i class="fas fa-bars"></i></a>
+			<!--Dropdown-->
+			<div class="dropdown position-fixed">
+			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    <i class="fas fa-user"></i>
+			  </button>
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			    <span class="dropdown-item">Logado como <?php echo $this->session->userdata('usuario'); ?></span>
+			    <div class="dropdown-divider"></div>
+			    <a class="dropdown-item" href="editar-senha">Editar senha</a>
+			    <a class="dropdown-item" href="atualizar-dados">Atualizar dados</a>
+			    <a class="dropdown-item" href="login/logout">Sair</a>
+			  </div>
+			</div>
+			<!---->
 		</nav>
 	</header>
 	<!-- Header -->
@@ -44,6 +58,7 @@
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
+        <div id="dark"></div>
         <!--conteudo-->
         <div id="page-content-wrapper">
             <div class="container first-container">

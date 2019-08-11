@@ -30,7 +30,7 @@
 						</div>
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
-						<button type="submit" name="button" class="btn login_btn">Entrar</button>
+						<button type="submit" name="button" class="btn login_btn">Enviar email</button>
 					</div>
 				</form>
 		</div>
