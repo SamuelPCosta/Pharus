@@ -90,9 +90,11 @@
 			    <div class="container-fluid">
 			    	<div class="row">
 			    		<div class="col-xl-6 col-lg-12 colunas-home line">
+			    			<h2>Heading</h2><br>
 			    			<p>O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela ddificuldade de suprir a grande demanda e épocas de secas que tornam as bandeira mais ameaçadoras, para que você não sofra esse impacto usufrua de nosso aplicativo e fique por dentro de como racionalizar seu consumo de energia trazendo benefícios para o seu bolso.</p>
 			    		</div>
 				    	<div class="col-xl-6 col-lg-12 colunas-home">
+				    		<h2>Heading</h2><br>
 				    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Morbi non arcu risus quis varius quam quisque. In arcu cursus euismod quis viverra. Sed sed risus pretium quam. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Ac turpis egestas maecenas pharetra.</p>
 				    	</div>
 			    	</div>

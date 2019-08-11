@@ -17,6 +17,10 @@ h1{
     margin: 0 auto;
     text-align: center;
 }
+h2{
+    width: 100%;
+    margin: auto;
+}
 header .navbar{
     width: 100%;
     height: 78px;
@@ -238,6 +242,10 @@ span{
     }
     .rounded-circle{
         margin-bottom: 100px
+    }
+    h2{
+        width: 85%;
+        margin: auto;
     }
     .colunas-home p{
         width: 85%;
