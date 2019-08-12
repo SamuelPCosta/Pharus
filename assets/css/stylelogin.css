@@ -56,3 +56,10 @@ html {
 .logo_grande{
 	margin-top: -300px;
 }
+.title_log{
+	margin-top: -120px;
+	text-transform: capitalize;
+	font-weight: normal;
+	color: #fff;
+	font-size: 2em;
+}

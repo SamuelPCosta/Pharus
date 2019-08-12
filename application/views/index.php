@@ -144,7 +144,10 @@
   	<script>
     $(function() {
         $('.chart').easyPieChart({});});
-   		//$('.inner').easyPieChart2({});});
+    <?php 
+    	if ($gasto<=100) {echo "var corbarra = '#0a522d'";
+    	} else {echo "var corbarra = '#a30a0a'";}
+    ?>
 	</script>
 </body>
 </html>

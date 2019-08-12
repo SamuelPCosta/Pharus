@@ -54,7 +54,7 @@ p::first-line {
 		width: 100%;
 	}
 	.b, .c{
-		min-height: 350px !important;
+		min-height: 375px !important;
 		height: 350px !important;
 	}
 	.row{

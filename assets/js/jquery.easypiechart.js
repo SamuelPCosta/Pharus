@@ -229,7 +229,7 @@ var EasyPieChart = function(el, opts) {
 	}*/
 	var defaultOptions = {
 		/*barColor: '#2b3530', cor da barra*/
-		barColor: '#0a522d',
+		barColor: corbarra,
 		trackColor: '#9aada3dd',/*cor da barra não preenchida*/
 		scaleColor: '#00aa00',
 		scaleLength: 5,

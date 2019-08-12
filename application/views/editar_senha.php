@@ -25,7 +25,7 @@
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<img src="<?= base_url()?>assets/img/logo.png" width=240 class="logo_grande" alt="Logo"><!--Nossa Logo-->
+						<h1 class="title_log">Editar senha</h1><!--Nossa Logo-->
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
