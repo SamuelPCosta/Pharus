@@ -18,7 +18,7 @@ class Raiz extends CI_Controller {
 			}else{
 				$mensagem = "Tá top o consumo.";
 			}
-			set_cookie('mensagem_meta', $mensagem, time() + (86400));
+			set_cookie('mensagem_meta', $mensagem, (86400));
 			$this->load->view('index', $consumo);
 		}else{
 			redirect('login'); 

@@ -67,7 +67,19 @@
                 <div class="row align-items-center">
                 	<div class="col-xl-6 col-lg-12">
 				    	<div class="box">
-				      		<div class="chart" data-percent="<?php echo $gasto; ?>" data-scale-color="#ffb400"><?php echo number_format($gasto, 1); ?>% <div id="percent"><p>da meta em <br> <?php date_default_timezone_set('America/Sao_Paulo'); echo date('H'); ?> horas</p></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
+				    		<?php 
+				    			if ($gasto<=100) {
+				    		?>
+				    			<div class="chart" data-percent="<?php echo $gasto; ?>" data-scale-color="#ffb400"><?php echo number_format($gasto, 1); ?>% <div id="percent"><p>da meta em <br> <?php date_default_timezone_set('America/Sao_Paulo'); echo date('H'); ?> horas</p></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
+				    		<?php
+				    			} else {
+				    		?>
+				    			<div class="chart" data-percent="<?php echo ($gasto-100); ?>" data-scale-color="#ffb400"><?php echo number_format(($gasto-100), 1); ?>% <div id="percent"><p>ultrapassado em <br> <?php date_default_timezone_set('America/Sao_Paulo'); echo date('H'); ?> horas</p></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
+				    		<?php
+				    			}
+				    			
+				    		?>
+				      		
 				      	</div>
 			    	</div>
 			    	<div class="col-xl-6 col-lg-12 text"><p>&emsp;Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>

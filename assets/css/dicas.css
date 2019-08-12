@@ -53,6 +53,10 @@ p::first-line {
 	.a, .b, .c{
 		width: 100%;
 	}
+	.b, .c{
+		min-height: 350px !important;
+		height: 350px !important;
+	}
 	.row{
 		margin-top: 30px;
 	}

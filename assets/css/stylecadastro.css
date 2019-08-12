@@ -1,10 +1,6 @@
 .user_card { /*Estilização da caixa*/
-	height: 1.88rem;
 	height: 500px !important;
-	width: 350px;
-	margin-top: auto;
-	margin-bottom: auto;
 }
-.logo{
+.logo_grande{
 	margin-top: -250px !important;
 }
