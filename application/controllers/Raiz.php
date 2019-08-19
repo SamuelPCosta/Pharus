@@ -4,12 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Raiz extends CI_Controller {
 	public function index(){
 		if (isset($_SESSION['login'])) {
-			$this->load->model("Consumo_model");
+			$this->load->model("Operacoes");
 			$usuario = $this->session->userdata('usuario');
-			$consumo['meta'] = $this->Consumo_model->meta($usuario);
+			$contaContrato = $this->Operacoes->contaContrato($usuario);
+			$this->load->model("Consumo_model");
+			$consumo['meta'] = $this->Consumo_model->meta($contaContrato);
 			$valor_tarifa = 0.7;
 			$valor_dia = ($consumo['meta']/30)/$valor_tarifa;
-			$consumo['consumo'] = $this->Consumo_model->consumo($usuario);
+			$consumo['consumo'] = $this->Consumo_model->consumo($contaContrato);
 			$consumo['gasto'] = $consumo['consumo']*100/$valor_dia;
 			$porcentagem = $consumo['gasto'];
 			$this->load->helper('cookie');
@@ -19,6 +21,7 @@ class Raiz extends CI_Controller {
 				$mensagem = "Tá top o consumo.";
 			}
 			set_cookie('mensagem_meta', $mensagem, (86400));
+			$this->load->view('header_sidebar');
 			$this->load->view('index', $consumo);
 		}else{
 			redirect('login'); 
@@ -27,6 +30,7 @@ class Raiz extends CI_Controller {
 
 	public function consumo(){
 		if (isset($_SESSION['login'])) {
+			$this->load->view('header_sidebar');
 			$this->load->view('consumo');
 		}else{
 			redirect('login?error=2'); 
@@ -35,6 +39,7 @@ class Raiz extends CI_Controller {
 
 	public function metas(){
 		if (isset($_SESSION['login'])) {
+			$this->load->view('header_sidebar');
 			$this->load->view('metas');
 		}else{
 			redirect('login?error=2'); 
@@ -47,6 +52,7 @@ class Raiz extends CI_Controller {
 			if (!isset($_GET['questao'])) {
 				delete_cookie("a"); delete_cookie("b"); delete_cookie("c");
 			}
+			$this->load->view('header_sidebar');
 			$this->load->view('idealdeconsumo');
 		}else{
 			redirect('login?error=2'); 
@@ -55,6 +61,7 @@ class Raiz extends CI_Controller {
 
 	public function resultado(){
 		if (isset($_SESSION['login'])) {
+			$this->load->view('header_sidebar');
 			$this->load->view('resultado');
 		}else{
 			redirect('login?error=2'); 
@@ -70,6 +77,7 @@ class Raiz extends CI_Controller {
 			$dicas['dica4'] = $this->Dicas_model->exibir('a');
 			$dicas['dica5'] = $this->Dicas_model->exibir('b');
 			$dicas['dica6'] = $this->Dicas_model->exibir('c');
+			$this->load->view('header_sidebar');
 			$this->load->view('dicas', $dicas);
 		}else{
 			redirect('login?error=2'); 
@@ -102,6 +110,7 @@ class Raiz extends CI_Controller {
 
 	public function quemsomos(){
 		if (isset($_SESSION['login'])) {
+			$this->load->view('header_sidebar');
 			$this->load->view('quemsomos');
 		}else{
 			redirect('login?error=2'); 

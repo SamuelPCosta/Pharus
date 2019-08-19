@@ -23,8 +23,9 @@ class Questionario extends CI_Controller {
 		}
 		if ($questao>=6) {//Número de questões +1 (Após respondido)
 			$resultado = max($resultado_a, $resultado_b, $resultado_c);
+			//Conferir faixa a faixa, em caso de empate de número de questões permanece a menor faixa
 			if ($resultado==$resultado_a) {
-				$this->session->set_userdata('faixa', "A e B");
+				$this->session->set_userdata('faixa', "A e B"); //dois valores
 			}elseif ($resultado==$resultado_b) {
 				$this->session->set_userdata('faixa', "B e C");
 			}elseif ($resultado==$resultado_c) {

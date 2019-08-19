@@ -6,7 +6,7 @@ h1{ /*Estilização do título*/
 	text-transform: none;
     font-weight: normal;
 }
-h1 ~ p{ /*Estilização do paragrafo*/
+.row .col-xl-6 h1 ~ p{ /*Estilização do paragrafo*/
 	width: 70%;
 	margin: 0 auto;
 	font-size: 20px;
@@ -54,7 +54,7 @@ input[type=radio]:checked + label .alternativas{
     background-color: #0a522d;
 	box-shadow:0 5px 0 #0a2919;  
 }
-input{
+.pergunta ~ form input{
 	position: absolute;
 	visibility: hidden;
 }
@@ -78,5 +78,16 @@ input{
 	}
 	button{
 		margin-bottom: 50px;
+	}
+}
+@media(max-width:768px) {
+	h1, p, .pergunta, .resultado, .alternativas{
+		width: 90% !important;
+	}
+	h1, .pergunta, .alternativas{
+		margin-left: 5% !important;
+	}
+	.col-md-12, p{
+		margin: auto !important;
 	}
 }

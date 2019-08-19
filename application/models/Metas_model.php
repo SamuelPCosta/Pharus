@@ -3,30 +3,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Metas_model extends CI_Model {
 	//Função para salvar a meta do usuario
-	public function salvar($meta=NULL, $usuario){
+	public function salvar($meta=NULL, $contaContrato){
 		if ($meta != NULL) {
-			$this->db->select('conta_contrato');
-			$this->db->where('usuario', $usuario);
-			$query = $this->db->get('usuario');
-			$conta_contrato = $query->row()->conta_contrato;
-			//foreach ($query->result() as $row){} Modo antigo
-			//$this->db->where('usuario', $row->conta_contrato);
 			$this->db->set('meta', $meta);
-			$this->db->where('usuario', $conta_contrato);
+			$this->db->where('usuario', $contaContrato);
     		$this->db->update('meta');
 		}
 	}
 
 	//Função para obter a meta do usuario
-	public function get_meta($usuario){
-		if ($usuario != NULL) {
-			$this->db->select('conta_contrato');
-			$this->db->where('usuario', $usuario);
-			$query = $this->db->get('usuario');
-			$conta_contrato = $query->row()->conta_contrato;
-
+	public function get_meta($contaContrato){
+		if ($contaContrato != NULL) {
 			$this->db->select('meta');
-			$this->db->where('usuario', $conta_contrato);
+			$this->db->where('usuario', $contaContrato);
     		$query = $this->db->get('meta');
     		$meta = $query->row()->meta;
     		$this->session->set_userdata('meta', $meta);
@@ -34,15 +23,10 @@ class Metas_model extends CI_Model {
 	}
 
 	//Função para converter meta em khw
-	public function kwh($khw=NULL, $usuario){
-		if ($usuario != NULL) {
-			$this->db->select('conta_contrato');
-			$this->db->where('usuario', $usuario);
-			$query = $this->db->get('usuario');
-			$conta_contrato = $query->row()->conta_contrato;
-			
+	public function kwh($khw=NULL, $contaContrato){
+		if ($contaContrato != NULL) {
 			$this->db->set('kw_h', $khw);
-			$this->db->where('usuario', $conta_contrato);
+			$this->db->where('usuario', $contaContrato);
     		$this->db->update('meta');
 		}
 	}

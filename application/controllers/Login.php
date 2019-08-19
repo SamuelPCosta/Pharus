@@ -13,8 +13,10 @@ class Login extends CI_Controller {
 			//Tentarei salvar user na session
 			$this->session->set_userdata('usuario', $usuario);
 			//Obter meta isso tá repetido no controler de cadastro de meta para que possamos salvar por usuario
+			$this->load->model("Operacoes");
+			$contaContrato = $this->Operacoes->contaContrato($this->session->userdata('usuario')); 
 			$this->load->model("Metas_model");
-			$this->Metas_model->get_meta($this->session->userdata('usuario')); 
+			$this->Metas_model->get_meta($contaContrato); 
 			//Chama a função get meta dentro do modelo metas_model
 			redirect('index'); 
 		}else{
@@ -24,7 +26,7 @@ class Login extends CI_Controller {
 
 	public function logout(){
 		$this->load->helper('cookie');
-		delete_cookie("a"); delete_cookie("b"); delete_cookie("c");
+		//delete_cookie("a"); delete_cookie("b"); delete_cookie("c");
 		unset($_SESSION['login']);
 		unset($_SESSION['meta']);
 		redirect('login'); 

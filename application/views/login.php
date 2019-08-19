@@ -2,6 +2,7 @@
 <html lang="pt-br">  
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pharus - Login</title> <!--Título da Aba-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Importação do CSS do BS-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/stylelogin.css"> <!--Importação das folhas de estilo css-->
@@ -62,7 +63,7 @@
 						</div>
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
-						<button type="submit" name="button" class="btn login_btn">Entrar</button>
+						<button type="submit" name="button" class="btn login_btn btn-success">Entrar</button>
 					</div>
 				</form>
 				<div class="mt-4">

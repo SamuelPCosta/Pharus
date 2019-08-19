@@ -1,4 +1,3 @@
-
 h1{ /*Estilização do título*/
 	text-align: left;
 	width: 70%;
@@ -20,10 +19,9 @@ h2 + p{ /*Estilização do paragrafo*/
 	margin-left: 15%;
 	margin-bottom: 50px;
 }
-.first-container{
-	min-height: 80vh;
+.meta{
+	min-height: 80vh !important;
 }
-
 #meta,  #ideal{
 	margin: 0 auto;
 	text-align: center;
@@ -92,9 +90,20 @@ i{
 	text-align: justify;
 	margin: auto;
 }
+.alert-danger{
+	width: 60% !important;
+    margin: 5px auto !important;
+}
 
 @media(max-width:1200px) {
 	.valor{
 		margin-top: 50px;
+	}
+}
+@media(max-width:768px) {
+	.colunas-meta h1, .colunas-meta p, h2, 
+	#meta input, #meta button, .instrucoes, 
+	.alert-danger, #consumoideal, #mensagem{
+		width: 90% !important;
 	}
 }

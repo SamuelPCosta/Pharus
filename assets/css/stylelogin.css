@@ -27,9 +27,12 @@ html {
 .fa-user, .fa-address-card{/*correção de width do icone de usuario*/
 	width: 16px
 }
+.form-control{
+	width: 190px !important;
+}
 .login_btn { /*Estilização do botão login e botão cadastrar*/
 	width: 85%;
-	background: #2b3530 !important; /*Cor de fundo do botão login*/
+	//background: #2b3530 !important; /*Cor de fundo do botão entrar*/
 	color: white !important;
 }
 .login_btn:focus {

@@ -1,4 +1,4 @@
-.first-container{
+#dicas .first-container{
 	margin: 20px 0px;
 }
 .a, .b{
@@ -42,7 +42,7 @@
 	text-decoration: none;
 	margin-right: 4%
 }
-p::first-line {
+.colunas p::first-line {
 	font-weight: bold;
  	font-size: 1.2em;
 }

@@ -51,15 +51,15 @@
 						</div>
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
-						<button type="submit" name="editar" class="btn login_btn">Editar senha</button>
+						<button type="submit" name="editar" class="btn login_btn btn-success">Editar senha</button>
 					</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
-						<button type="submit" name="cancelar" class="btn login_btn">Cancelar</button>
+						<button type="submit" name="cancelar" class="btn login_btn btn-danger">Cancelar</button>
 					</div>
 				</form>
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						Ainda não tem cadastro?
+						Atualize a sua senha
 					</div>
 				</div>
 			</div>

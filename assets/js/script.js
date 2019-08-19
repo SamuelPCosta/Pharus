@@ -29,3 +29,7 @@ $(document).mouseup(function(e){
     /*Se o alvo do clique não for a side bar e também não for o 
     botão de menu a class toggled é removida e o menu colapsa*/
 });
+
+window.onload = function(){
+  document.getElementById(atual).classList.add("atual");
+}

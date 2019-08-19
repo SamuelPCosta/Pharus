@@ -23,7 +23,7 @@ h2{
 }
 header .navbar{
     width: 100%;
-    height: 78px;
+    height: 55px;
     position: fixed;
     margin-top: 0px;
     z-index: 2;
@@ -32,24 +32,16 @@ header .navbar{
 .logo{
 	margin:auto;
 }
-.dropdown{
-    right: 16px;
+.logo img{
+    width: 75px !important
 }
 .btn-secondary{
     background-color: #364046 !important;
     border: none !important;
 }
-.dropdown-menu{
-    //top: 60px;
-    right: 0px !important;
-    left: auto;
-}
-span{
-    font-weight: bold !important;
-}
 #wrapper {
     padding-left: 0;
-    padding-top: 78px;
+    padding-top: 55px;
     position: relative;
     z-index: 1;
 }
@@ -75,6 +67,10 @@ span{
 }
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
+}
+.dropdown-divider{
+    margin: 0 !important;
+    border-color: #999;
 }
 #dark{
     z-index: 1;
@@ -129,6 +125,9 @@ span{
     font-size: 1.1em;
     padding: 10px 0px;
 }
+#item_user a{
+    text-transform: capitalize;
+}
 .sidebar-nav li a:hover { /*hover dos itens do menu*/
     text-decoration: none;
     color: #fff;
@@ -177,12 +176,12 @@ span{
 }
 .colunas-home{ /*Colunas duplas abaixo da barra central*/
     min-height: 75vh;
-    padding: 60px 100px;
+    padding: 60px !important;
     /*background-color: #9aada333;*/
     background-color: #eee;
 }
 .colunas-home p{
-    width: 100%;
+    width: 100% !important;
     text-align: justify;
     margin: auto;
     color: #2b3530;
@@ -212,6 +211,15 @@ span{
     }
 }
 @media(min-width:768px) {
+    header .navbar{
+        height: 78px;
+    }
+    #wrapper {
+        padding-top: 78px;
+    }
+    .logo img{
+        width: 110px !important
+    }
     #menu-toggle{ /*Visibilidade do botão de menu*/
         visibility: hidden;
     }
@@ -222,11 +230,9 @@ span{
     #wrapper.toggled {
         padding-left: 250px;
     }
-
     #sidebar-wrapper {
         width: 250px;
     }
-
     #wrapper.toggled #sidebar-wrapper {
         width: -250px;
     }
@@ -247,8 +253,11 @@ span{
         width: 85%;
         margin: auto;
     }
+    .colunas-home{
+        padding: 60px 100px !important;
+    }
     .colunas-home p{
-        width: 85%;
+        width: 85% !important;
     }
 }
 
@@ -275,4 +284,32 @@ footer a{
 footer a:hover{
 	text-decoration: none;
 	color: #fff;
+}
+/*
+####################--QuemSomos--####################
+*/
+.text-center{ /*Estilização do título*/
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    text-transform: none;
+    font-weight: normal;
+}
+.text-center + p{ /*Estilização do paragrafo*/
+    width: 90%;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 50px;
+    text-align: left;
+}
+.row .col-lg-6 img{
+    margin: 0 5%;
+    width: 90%;
+}
+@media(max-width:992px) {
+    .descer{
+        -ms-flex-order: 2;
+        order: 2;
+    }
 }
