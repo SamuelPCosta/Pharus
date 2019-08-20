@@ -1,5 +1,5 @@
-#dicas .first-container{
-	margin: 20px 0px;
+.dicas-container{
+	margin: 20px 0px !important;
 }
 .a, .b{
   display: flex;
@@ -11,7 +11,8 @@
 	padding: 25px;
 	padding-top: 40px;
 	text-align: justify;
-	width: 95%
+	width: 95%;
+	margin: auto;
 }
 .a{
 	height: 220px;

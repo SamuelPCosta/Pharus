@@ -71,6 +71,8 @@ header .navbar{
 .dropdown-divider{
     margin: 0 !important;
     border-color: #999;
+    width: 75%;
+    margin-left: 20% !important;
 }
 #dark{
     z-index: 1;
@@ -149,7 +151,7 @@ header .navbar{
     color: #fff;
 }
 #menu-toggle i{ /*Visibilidade do botão de menu*/
-    font-size: 30px;
+    font-size: 25px;
 }
 .btn:focus, .btn.focus {
   outline: 0;
@@ -176,7 +178,7 @@ header .navbar{
 }
 .colunas-home{ /*Colunas duplas abaixo da barra central*/
     min-height: 75vh;
-    padding: 60px !important;
+    padding: 30px !important;
     /*background-color: #9aada333;*/
     background-color: #eee;
 }

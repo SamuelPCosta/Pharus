@@ -9,7 +9,7 @@ body {
   position: relative;
   margin: 0 auto;
   text-align: center;
-  font-size: 75px;
+  font-size: 4em;
   line-height: 435px;
   min-width: 550px;
 }
@@ -40,15 +40,17 @@ body {
   .container .row .box .chart{
     font-size: 3.2em;
     line-height: 330px;
-    min-width: 460px !important;
-    width: 460px !important;
+    min-width: 300px !important;
+    min-height: 300px !important;
+    //width: 460px !important;
   }
   #percent{
-  line-height: 40px;
-  transform: translateY(-145px);
+    line-height: 40px;
+    transform: translateY(-145px);
   }
   .container .row .box canvas{
-    width: 90%;
-    margin-left: 5% !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: auto !important;
   }
 }

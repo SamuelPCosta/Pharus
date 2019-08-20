@@ -59,6 +59,7 @@ h2 + p{ /*Estilização do paragrafo*/
 #mensagem{
 	margin-top: 42px;
 	background-color: #364046 !important;
+	border:none !important;
 }
 
 #meta button:hover, #consumoideal:hover{

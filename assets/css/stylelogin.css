@@ -32,8 +32,9 @@ html {
 }
 .login_btn { /*Estilização do botão login e botão cadastrar*/
 	width: 85%;
-	//background: #2b3530 !important; /*Cor de fundo do botão entrar*/
+	background: #0a522d; /*Cor de fundo do botão entrar*/
 	color: white !important;
+	border:none;
 }
 .login_btn:focus {
 	box-shadow: none !important;
@@ -65,4 +66,10 @@ html {
 	font-weight: normal;
 	color: #fff;
 	font-size: 2em;
+}
+@media(max-width:768px) {
+	.logo_grande{
+		width: 200px !important;
+		margin-top: -270px;
+	}
 }

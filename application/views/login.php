@@ -63,7 +63,7 @@
 						</div>
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
-						<button type="submit" name="button" class="btn login_btn btn-success">Entrar</button>
+						<button type="submit" name="button" class="btn login_btn">Entrar</button>
 					</div>
 				</form>
 				<div class="mt-4">
