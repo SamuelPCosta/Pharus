@@ -1,52 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<meta charset="utf-8">
-	<title>Pharus - Meta</title> <!--Título da Aba-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Importação do CSS do BS-->
-	<link rel="stylesheet" type="text/css" href="http://localhost/pharus/assets/css/style.css"> <!--Importação da folha de estilo css-->
-	<link rel="stylesheet" type="text/css" href="http://localhost/pharus/assets/css/metas.css"> <!--Importação da folha de estilo css para a barra de progresso-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!--Importação da fonte Open Sans-->
-	<link rel="shortcut icon" href="<?= base_url()?>assets/img/icon.ico"/> <!--Icone-->
-</head>
-<body>
-<div class="tudo">
-	<!-- Header -->
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark">
-			<a href="index" class="logo"><img src="<?=base_url()?>/assets/img/logo.png" width=110></a> <!--Nossa Logo-->
-			<a href="#menu-toggle" class="btn" id="menu-toggle"><i class="fas fa-bars"></i></a>
-		</nav>
-	</header>
-	<!-- Header -->
-
-		<!--Menu lateral-->
-		<!-- Sidebar -->
-        <div id="wrapper">
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li>
-                    <a href="consumo"><i class="fas fa-coins"></i>Consumo</a>
-                </li>
-                <li class="atual">
-                    <a href="metas"><i class="fas fa-bookmark"></i>Metas</a>
-                </li>
-                <li>
-                    <a href="idealdeconsumo"><i class="fas fa-funnel-dollar"></i>Ideal de Consumo</a>
-                </li>
-                <li>
-                    <a href="dicas"><i class="fas fa-lightbulb"></i>Dicas</a>
-                </li>
-                <li>
-                    <a href="login/logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        <!--conteudo-->
+		<?php $titulo="Metas" ?>
+		<!--conteudo-->
         <div id="page-content-wrapper">
-            <div class="container first-container">
+            <div class="container first-container meta">
 	        <div class="row align-items-center">
 	     		<div class="col-xl-6 col-md-12">
 	     			<p class="valor">
@@ -70,13 +25,20 @@
 	     				}
 	     			?>	
 	     			</p>
-	     			<p class="btn bg-info" id="mensagem">Mensagem de Apoio ou Chamada de atenção</p>
+	     			<?php  
+	     			if ($meta!=0) {
+	     				$this->load->helper('cookie');
+	     				$mensagem = get_cookie('mensagem_meta');
+	     				echo "
+	     				<div class='alert alert-primary' role='alert' id='mensagem'>
+	     				".$mensagem."
+						</div>";
+	     			}		
+	     			?>
 	     		</div>
-	     		 <div class="col-xl-6 col-md-12 gasto">
-		        	
+	     		 <div class="col-xl-6 col-md-12 gasto">	        	
 		        			<?php  
 			        			if ($meta==0) {
-			        				//echo($this->session->userdata('selecao'));
 			        		?>
 			        <h2>Defina a Sua <wbr>Meta Mensal</h2>
 		        	<form method="post" action="cadastro_meta/adicionar">
@@ -90,8 +52,17 @@
 		        	<form method="post" action="cadastro_meta/adicionar">
 		        		<div id="meta">
 				        		<!--Alterar de um campo e botão para os outros-->
-				        		<input type="number" min="20" max="2500" name="meta" placeholder="Apenas números. Ex.: 90">
+				        		<input type="number" min="20" max="2500" name="meta" value="<?php echo $meta ?>" placeholder="Apenas números. Ex.: 90">
 				        		<!--o name do input muda-->
+				        		<?php 
+				        			if (isset($_GET['error'])){
+				        				if ($_GET['error']==1) {
+				        		?>
+				        			<div class='alert alert-danger' role='alert'>Para mudar sua meta, altere<br> o valor  do campo numério acima.</div>
+				        		<?php
+				        				}
+				        			}
+				        		?>
 				        		<button type="submit" class="btn">Editar Meta</button><!--Esse botão antes era salvar-->
 			        		<?php  
 			        			}
@@ -138,6 +109,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
 	<!--Fim dos scripts do BS-->
+	<script>
+    var atual ="Metas";
+	</script>
 </body>
 </html>
 <!--https://codepen.io/hudsonsilvaoliveira/pen/doZNep?editors=1010 gráfico de colunas-->

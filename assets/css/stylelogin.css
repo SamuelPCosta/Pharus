@@ -27,14 +27,21 @@ html {
 .fa-user, .fa-address-card{/*correção de width do icone de usuario*/
 	width: 16px
 }
+.form-control{
+	width: 190px !important;
+}
 .login_btn { /*Estilização do botão login e botão cadastrar*/
 	width: 85%;
-	background: #2b3530 !important; /*Cor de fundo do botão login*/
+	background: #0a522d; /*Cor de fundo do botão entrar*/
 	color: white !important;
+	border:none;
 }
 .login_btn:focus {
 	box-shadow: none !important;
 	outline: 0px !important;
+}
+.cancelar{
+	background-color: #672e2e !important
 }
 .login_container {
 	padding: 0 2rem;
@@ -53,6 +60,19 @@ html {
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 	background-color: #2b3530 !important; /*Cor de fundo da checkbox*/
 }
-.logo{
+.logo_grande{
 	margin-top: -300px;
+}
+.title_log{
+	margin-top: -120px;
+	text-transform: capitalize;
+	font-weight: normal;
+	color: #fff;
+	font-size: 2em;
+}
+@media(max-width:768px) {
+	.logo_grande{
+		width: 200px !important;
+		margin-top: -270px;
+	}
 }

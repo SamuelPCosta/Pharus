@@ -1,27 +1,39 @@
+.dicas-container{
+	margin: 20px 0px !important;
+}
+.a, .b{
+  display: flex;
+  align-items: center;
+  //box-shadow: 4px 4px 6px #36404655;
+
+}
 .colunas p{
 	padding: 25px;
 	padding-top: 40px;
 	text-align: justify;
+	width: 95%;
+	margin: auto;
 }
 .a{
-	height: 150px;
+	height: 220px;
 	width: 90%;
 	margin: 0 auto;
 	background-color: #00aadd44;
-	margin-bottom: 70px;
+	margin-bottom: 25px;
 }
 .b{
-	height: 370px;
+	height: 465px;
 	width: 90%;
 	margin: 0 auto;
 	background: #ddaa0077;
-	margin-bottom: 70px; 
+	margin-bottom: 25px; 
 }
 .c{
-	height: 590px;
+	height: 710px;
 	width: 90%;
 	margin: 0 auto;
 	background-color: #2b703055;
+	margin-bottom: 25px; 
 }
 #recarregar{
 	text-align: right;
@@ -29,6 +41,11 @@
 	margin-top: 20px;
 	color: white;
 	text-decoration: none;
+	margin-right: 4%
+}
+.colunas p::first-line {
+	font-weight: bold;
+ 	font-size: 1.2em;
 }
 @media(max-width:1200px) {
 	.a, .b{
@@ -36,6 +53,10 @@
 	}
 	.a, .b, .c{
 		width: 100%;
+	}
+	.b, .c{
+		min-height: 375px !important;
+		height: 350px !important;
 	}
 	.row{
 		margin-top: 30px;
@@ -46,5 +67,6 @@
 		width: 30%;
 		float: none;
 		margin-left: 35%;
+		position: relative;
 	}
 }

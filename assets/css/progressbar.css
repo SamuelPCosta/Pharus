@@ -9,9 +9,17 @@ body {
   position: relative;
   margin: 0 auto;
   text-align: center;
-  font-size: 75px;
-  line-height: 550px;
+  font-size: 4em;
+  line-height: 430px;
   min-width: 550px;
+}
+#percent p::first-line {
+  font-weight: bold;
+  font-size: 0.5em;
+}
+#percent{
+  line-height: 55px;
+  transform: translateY(-190px);
 }
 .container .row .box canvas{
   position: absolute;
@@ -19,12 +27,33 @@ body {
   left: 0px;
 }
 .text p{
-  width: 70%;
+  max-width: 70%;
   margin: 0 15%;
   text-align: justify;
 }
 @media(max-width:1200px) {
   .container .row .box .chart{
     max-width: 550px;
+  }
+}
+@media(max-width:768px) {
+  .container .row .box .chart{
+    font-size: 3.2em;
+    line-height: 7em;
+    min-width: 300px !important;
+    min-height: 300px !important;
+  }
+  #percent{
+    line-height: 40px;
+    transform: translateY(-160px);
+    margin-bottom: 10%;
+  }
+  .container .row .box canvas{
+    width: 100% !important;
+    height: auto !important;
+    margin: auto !important;
+  }
+  .texto_grafico{
+    height: 150% !important;
   }
 }
