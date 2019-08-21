@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h1{ /*Estilização do título*/
 	text-align: left;
 	width: 70%;
@@ -107,4 +108,115 @@ i{
 	.alert-danger, #consumoideal, #mensagem{
 		width: 90% !important;
 	}
+=======
+h1{ /*Estilização do título*/
+	text-align: left;
+	width: 70%;
+	margin: 0 auto;
+	margin-right: 15%;
+	text-transform: none;
+    font-weight: normal;
+}
+h2{ /*Estilização do título*/
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+h2 + p{ /*Estilização do paragrafo*/
+	width: 70%;
+	margin: 0 auto;
+	font-size: 20px;
+	text-align: justify;
+	margin-left: 15%;
+	margin-bottom: 50px;
+}
+.meta{
+	min-height: 80vh !important;
+}
+#meta,  #ideal{
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 30px;
+}
+#meta input{
+	width: 60%;
+	height: 40px;
+	margin: 0 auto;
+	border: 2px solid #ddd;
+	box-shadow: 2px 2px 5px #00000022;
+	text-align: center;
+	display: block;
+	background-color: #ddd;
+}
+#meta button{
+	margin-top: 10px;
+	width: 60%;
+	height: 50px;
+	color: #fff;
+	background-color: #2b3530;
+}
+#consumoideal, #mensagem{
+	display: block;
+	width: 60%;
+	text-align: center;
+	margin: auto;
+	line-height: 55px;
+	position: relative;
+	margin-top: 80px;
+	color: #fff;
+	background-color: #2b3530;
+	margin-bottom: 50px;
+}
+#mensagem{
+	margin-top: 42px;
+	background-color: #364046 !important;
+	border:none !important;
+}
+
+#meta button:hover, #consumoideal:hover{
+	background-color:#0a522d; 
+}
+
+.instrucoes{
+	width: 60%;
+	margin: auto;
+	font-size: 1.5em;
+	text-align: justify;
+}
+.valor{
+	margin: auto;
+	font-size: 3em;
+	text-align: center;
+	line-height: 1.1em
+}
+i{
+	font-style: italic;
+}
+.colunas-meta{
+	min-height: 30vh;
+	background-color: #9aada333;
+	padding: 50px;
+}
+.colunas-meta p{
+	width: 70%;
+	text-align: justify;
+	margin: auto;
+}
+.alert-danger{
+	width: 60% !important;
+    margin: 5px auto !important;
+}
+
+@media(max-width:1200px) {
+	.valor{
+		margin-top: 50px;
+	}
+}
+@media(max-width:768px) {
+	.colunas-meta h1, .colunas-meta p, h2, 
+	#meta input, #meta button, .instrucoes, 
+	.alert-danger, #consumoideal, #mensagem{
+		width: 90% !important;
+	}
+>>>>>>> 21720dccfa5f31846a6118137e2e729a153cc2cc
 }

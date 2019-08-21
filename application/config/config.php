@@ -23,8 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+<<<<<<< HEAD
 $config['base_url'] = 'http://localhost/pharus';
 //$config['base_url'] = 'http://192.168.0.3/pharus';
+=======
+//$config['base_url'] = 'http://localhost/pharus';
+$config['base_url'] = 'http://192.168.0.3/pharus';
+>>>>>>> 21720dccfa5f31846a6118137e2e729a153cc2cc
 /*
 |--------------------------------------------------------------------------
 | Index File

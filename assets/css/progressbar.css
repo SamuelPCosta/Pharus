@@ -10,7 +10,11 @@ body {
   margin: 0 auto;
   text-align: center;
   font-size: 4em;
+<<<<<<< HEAD
   line-height: 430px;
+=======
+  line-height: 435px;
+>>>>>>> 21720dccfa5f31846a6118137e2e729a153cc2cc
   min-width: 550px;
 }
 #percent p::first-line {
@@ -18,8 +22,13 @@ body {
   font-size: 0.5em;
 }
 #percent{
+<<<<<<< HEAD
   line-height: 55px;
   transform: translateY(-190px);
+=======
+  line-height: 50px;
+  transform: translateY(-180px);
+>>>>>>> 21720dccfa5f31846a6118137e2e729a153cc2cc
 }
 .container .row .box canvas{
   position: absolute;
@@ -39,6 +48,7 @@ body {
 @media(max-width:768px) {
   .container .row .box .chart{
     font-size: 3.2em;
+<<<<<<< HEAD
     line-height: 7em;
     min-width: 300px !important;
     min-height: 300px !important;
@@ -47,13 +57,26 @@ body {
     line-height: 40px;
     transform: translateY(-160px);
     margin-bottom: 10%;
+=======
+    line-height: 330px;
+    min-width: 300px !important;
+    min-height: 300px !important;
+    //width: 460px !important;
+  }
+  #percent{
+    line-height: 40px;
+    transform: translateY(-145px);
+>>>>>>> 21720dccfa5f31846a6118137e2e729a153cc2cc
   }
   .container .row .box canvas{
     width: 100% !important;
     height: auto !important;
     margin: auto !important;
   }
+<<<<<<< HEAD
   .texto_grafico{
     height: 150% !important;
   }
+=======
+>>>>>>> 21720dccfa5f31846a6118137e2e729a153cc2cc
 }

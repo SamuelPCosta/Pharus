@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 form#meses{
 	width: 300px;
 	margin: 0 auto;
@@ -48,4 +49,56 @@ option{
 		margin: 0 auto;
 		position: relative;
 	}
+=======
+form#meses{
+	width: 300px;
+	margin: 0 auto;
+	/*position: fixed;
+	top: 100px*/
+}
+select{ /*Estilização da caixa de seleção*/
+	width: 100%;
+	height: 70px;
+	margin-top: 40px;
+	font-size: 1.1em;
+	background-color: #36404655;
+	color: #333;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding-left: 5%;
+	text-align: center;
+}
+#mes{
+	margin-bottom: 50px;
+}
+#mes:hover {
+	background-color:#ddd;
+}
+#mes #placeholder{
+	color: #555;
+}
+option{
+	border-radius: 10px;
+}
+.graficos{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center
+}
+#myChart, #line-chart{
+	width: 500px;
+	height: 500px;
+	margin-top: 50px;
+}
+.container-consumo{
+	height: 50vh;
+}
+/*@media(min-width:1200px) {
+	form{
+		width: 350px;
+		margin: 0 auto;
+		position: relative;
+	}
+>>>>>>> 21720dccfa5f31846a6118137e2e729a153cc2cc
 }*/

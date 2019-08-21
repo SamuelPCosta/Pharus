@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body,
 html {
 	margin: 0;
@@ -75,4 +76,80 @@ html {
 		width: 200px !important;
 		margin-top: -270px;
 	}
+=======
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: #364046 !important; /*Cor de fundo da página*/
+}
+.container{
+	padding-top: 100px;
+}
+.user_card { /*Estilização da caixa*/
+	height: 25rem;
+	width: 22rem;
+	margin-top: auto;
+	margin-bottom: auto;
+	background: #ddd; /*Cor de fundo da caixa*/
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+}
+.fa-user, .fa-address-card{/*correção de width do icone de usuario*/
+	width: 16px
+}
+.form-control{
+	width: 190px !important;
+}
+.login_btn { /*Estilização do botão login e botão cadastrar*/
+	width: 85%;
+	background: #0a522d; /*Cor de fundo do botão entrar*/
+	color: white !important;
+	border:none;
+}
+.login_btn:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+.login_container {
+	padding: 0 2rem;
+}
+.input-group-text {
+	background: #2b3530 !important; /*Cor de fundo dos icones*/
+	color: white !important;
+	border: 0 !important;
+	border-radius: 0.25rem 0 0 0.25rem !important;
+}
+.input_user,
+.input_pass:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+	background-color: #2b3530 !important; /*Cor de fundo da checkbox*/
+}
+.logo_grande{
+	margin-top: -300px;
+}
+.title_log{
+	margin-top: -120px;
+	text-transform: capitalize;
+	font-weight: normal;
+	color: #fff;
+	font-size: 2em;
+}
+@media(max-width:768px) {
+	.logo_grande{
+		width: 200px !important;
+		margin-top: -270px;
+	}
+>>>>>>> 21720dccfa5f31846a6118137e2e729a153cc2cc
 }
