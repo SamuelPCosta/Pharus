@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 .user_card { /*Estilização da caixa*/
 	height: 500px !important;
 }
 .logo_grande{
 	margin-top: -250px !important;
-=======
-.user_card { /*Estilização da caixa*/
-	height: 500px !important;
-}
-.logo_grande{
-	margin-top: -250px !important;
->>>>>>> 21720dccfa5f31846a6118137e2e729a153cc2cc
 }
