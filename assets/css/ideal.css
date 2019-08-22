@@ -41,22 +41,36 @@ label{
 	text-align: center;
 }
 .alternativas:hover{
-	background: #4f5e67b9;
+	background: #53a761;
 }
 .alternativas:active{
 	position:relative;
 	top: 5px;
 	box-shadow:none !important;  
 }
+.alternativa_a{
+	background-color: #516746;
+	box-shadow:0 5px 0 #3a4436;  
+}
+.alternativa_b{
+	background-color: #404e37;
+	box-shadow:0 5px 0 #2a3125;
+}
+.alternativa_c{
+	background-color: #2e3829;
+	box-shadow:0 5px 0 #1c2119;
+}
 input[type=radio]:checked + label .alternativas{
-    background-color: #0a522d;
-	box-shadow:0 5px 0 #0a2919;  
+    background-color: #467fe0;
+	box-shadow:0 5px 0 #1c458a;  
 }
 .pergunta ~ form input{
 	position: absolute;
 	visibility: hidden;
 }
-
+.next{
+	background-color: #2b3530 !important;
+}
 #definirmeta{
 	display: block;
 	width: 45%;
@@ -87,3 +101,4 @@ input[type=radio]:checked + label .alternativas{
 		margin: auto !important;
 	}
 }
+/*https://www.cliquearquitetura.com.br/public/Painel/midia/imagem/full/tendencia_de_cores_2018_14_0.jpg*/

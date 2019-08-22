@@ -10,8 +10,8 @@ body {
   margin: 0 auto;
   text-align: center;
   font-size: 4em;
-  line-height: 430px;
-  min-width: 550px;
+  line-height: 405px;
+  width: 550px;
 }
 #percent p::first-line {
   font-weight: bold;
@@ -40,19 +40,23 @@ body {
   .container .row .box .chart{
     font-size: 3.2em;
     line-height: 7em;
-    min-width: 300px !important;
-    min-height: 300px !important;
+    //min-width: 300px !important;
+    //min-height: 300px !important;
+    width: 300px !important;
+    margin: auto;
   }
   .texto_grafico p{
-    transform: translateY(-65px);
+    transform: translateY(-80px);
+    font-size: 0.9em;
   }
   #percent{
     line-height: 40px;
     transform: translateY(-155px);
-    margin-bottom: -20%;
+    margin-bottom: -40%;
+    font-size: 0.9em;
   }
   .container .row .box canvas{
-    width: 100% !important;
+    width: 300px !important;
     height: auto !important;
     margin: auto !important;
   }

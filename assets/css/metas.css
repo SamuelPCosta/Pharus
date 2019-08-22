@@ -32,7 +32,7 @@ h2 + p{ /*Estilização do paragrafo*/
 	height: 40px;
 	margin: 0 auto;
 	border: 2px solid #ddd;
-	box-shadow: 2px 2px 5px #00000022;
+	box-shadow: 0px 2px 5px #91adbd;
 	text-align: center;
 	display: block;
 	background-color: #ddd;

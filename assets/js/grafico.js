@@ -1,26 +1,29 @@
 /* Gráfico de linha */
-
+var numeros = new Array(25);
+for(var h=0; h < 24; h++){
+    numeros[h] = h;
+}
 var data = {
-  labels: ["January", "February", "March", "April", "May", "June", "July"],
+  labels: [1,2,3,4,5,6,7],
   datasets: [{
     label: "My First dataset",
-    fillColor: "rgba(220,220,220,0.0)",
-    strokeColor: "rgba(220,220,220,1)",
-    pointColor: "rgba(220,220,220,1)",
-    pointStrokeColor: "#fff",
-    pointHighlightFill: "#fff",
-    pointHighlightStroke: "rgba(220,220,220,1)",
-    data: [65, 59, 80, 81, 56, 55, 40]
-  }, {
-    label: "My Second dataset",
     fillColor: "rgba(151,187,205,0.0)",
     strokeColor: "rgba(151,187,205,1)",
     pointColor: "rgba(151,187,205,1)",
     pointStrokeColor: "#fff",
     pointHighlightFill: "#fff",
-    pointHighlightStroke: "rgba(151,187,205,1)",
-    data: [28, 48, 40, 19, 86, 27, 90]
-  }]
+    pointHighlightStroke: "rgba(220,220,220,1)",
+    data: [15, 59, 30, 31, 56, 55, 40]
+   }, //{
+  //   label: "My Second dataset",
+  //   fillColor: "rgba(220,220,220,0.0)",
+  //   strokeColor: "rgba(220,220,220,1)",
+  //   pointColor: "rgba(220,220,220,1)",
+  //   pointStrokeColor: "#fff",
+  //   pointHighlightFill: "#fff",
+  //   pointHighlightStroke: "rgba(151,187,205,1)",
+  //   data: [28, 48, 40, 19, 36, 27, 30]}
+  ]
 };
 var options = {
     bezierCurve : false
@@ -30,7 +33,7 @@ var ctx = document.getElementById("line-chart").getContext("2d");
 var myNewChart = new Chart(ctx).Line(data, options);
 
 var data = {
-    labels: ["January", "Fevereiro", "Março", "Abril"],
+    labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
     datasets: [
         {
             label: "Usuário",

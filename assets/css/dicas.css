@@ -18,22 +18,23 @@
 	height: 220px;
 	width: 90%;
 	margin: 0 auto;
-	background-color: #00aadd44;
+	background-color: #abd8f5; /*#00aadd44*/
 	margin-bottom: 25px;
 }
 .b{
 	height: 465px;
 	width: 90%;
 	margin: 0 auto;
-	background: #ddaa0077;
+	background: #7ec9e6; /*#ddaa0077*/
 	margin-bottom: 25px; 
 }
 .c{
 	height: 710px;
 	width: 90%;
 	margin: 0 auto;
-	background-color: #2b703055;
+	background-color: #33654a; /*#2b703055*/
 	margin-bottom: 25px; 
+	color: white;
 }
 #recarregar{
 	text-align: right;
@@ -63,10 +64,16 @@
 	}
 	#recarregar{
 		text-align: center;
-		margin-bottom: 50px;
-		width: 30%;
+		margin: 0px auto;
+		width: 50%;
 		float: none;
-		margin-left: 35%;
+		margin-left: 25%;
 		position: relative;
+	}
+}
+@media(max-width:768px) {
+	.b, .c{
+		min-height: 375px !important;
+		height: auto !important;
 	}
 }

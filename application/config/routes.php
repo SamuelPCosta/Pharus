@@ -62,6 +62,7 @@ $route['sair'] = 'Raiz/sair';
 $route['quemsomos'] = 'Raiz/quemsomos';
 $route['login'] = 'Raiz/login';
 $route['cadastro'] = 'Raiz/cadastro';
+$route['usuario'] = 'Raiz/usuario';
 $route['recuperarsenha'] = 'Raiz/recuperarsenha';
 $route['editar-senha'] = 'Raiz/editar_senha';
 $route['simulador-de-consumo'] = 'Raiz/simulador';

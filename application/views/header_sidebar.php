@@ -33,8 +33,8 @@
         <div id="wrapper">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-            	<li id="item_user">
-            		<a href="#"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
+            	<li id="Usuario">
+            		<a href="usuario"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
             	</li>
 			    <div class="dropdown-divider"></div>
 			    <li id="Editar senha">

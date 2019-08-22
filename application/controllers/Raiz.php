@@ -94,6 +94,15 @@ class Raiz extends CI_Controller {
 		}
 	}
 
+	public function usuario(){
+		if (isset($_SESSION['login'])) {
+			$this->load->view('header_sidebar');
+			$this->load->view('usuario');
+		}else{
+			$this->load->view('login');
+		}
+	}
+
 	public function cadastro(){
 		$this->load->view('cadastro');
 	}

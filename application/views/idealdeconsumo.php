@@ -61,18 +61,18 @@
 	     			<form method="post" action="Questionario/perguntas/<?php echo $questao;?>">
 	     				<input type="radio" name="resposta" value="resposta_a" id="resposta_a"> 
 					  	<label for="resposta_a">
-					  		<div class="alternativas"><h4><?php echo $pergunta['Alternativa_a']?></h4></div>
+					  		<div class="alternativas alternativa_a"><h4><?php echo $pergunta['Alternativa_a']?></h4></div>
 					  	</label>
 					  	<input type="radio" name="resposta" value="resposta_b" id="resposta_b"> 
 					  	<label for="resposta_b"> 
-					  		<div class="alternativas"><h4><?php echo $pergunta['Alternativa_b']?></h4></div>
+					  		<div class="alternativas alternativa_b"><h4><?php echo $pergunta['Alternativa_b']?></h4></div>
 					  	</label>
 					  	<input type="radio" name="resposta" value="resposta_c" id="resposta_c"> 
 					  	<label for="resposta_c">
-					  		<div class="alternativas"><h4><?php echo $pergunta['Alternativa_c']?></h4></div>
+					  		<div class="alternativas alternativa_c"><h4><?php echo $pergunta['Alternativa_c']?></h4></div>
 					  	</label>
 					  	<div class="d-flex justify-content-center">
-							<button type="submit" name="button" class="btn login_btn btn-secondary">Próxima</button>
+							<button type="submit" name="button" class="btn login_btn next btn-secondary">Próxima</button>
 						</div>
 					</form>
 	     		</div>
