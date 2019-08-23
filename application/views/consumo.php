@@ -56,7 +56,6 @@
 	
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script><!--Importação do Ajax...-->
 	<script src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->
-	<script src="<?= base_url()?>assets/js/scriptcollapse.js"></script><!--Importação do JS do menu...-->
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script><!--Importação do gráfico-->
 	<script type="text/javascript" src="<?= base_url()?>assets/js/grafico.js"></script>
 

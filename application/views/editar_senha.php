@@ -14,13 +14,6 @@
 </head>
 <!--Coded with love by Mutiullah Samim-->
 <body>
-	<!-- Header -->
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark">
-			<a href="index" class="logo"><img src="<?= base_url()?>assets/img/logo.png" width=110></a> <!--Nossa Logo-->
-		</nav>
-	</header>
-	<!-- Header -->
     <div class="container h-100">
 		<div class="d-flex justify-content-center h-100" >
 			<div class="user_card user_card_editar">
@@ -33,11 +26,6 @@
 				        	}
 				        }
 				?>
-				<div class="d-flex justify-content-center">
-					<div class="brand_logo_container">
-						<img src="<?= base_url()?>assets/img/logo.png" width=240 class="logo_grande" alt="Logo"><!--Nossa Logo-->
-					</div>
-				</div>
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
 						<h1 class="title_log">Editar senha</h1><!--Nossa Logo-->
@@ -69,9 +57,6 @@
 						<button type="submit" name="editar" class="btn login_btn btn-success">Editar senha</button>
 					</div>
 				</form>
-				<div class="d-flex justify-content-center mt-3 login_container">
-						<a href="index"><button type="submit" name="cancelar" class="btn login_btn btn-danger cancelar">Cancelar</button></a>
-				</div>
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
 						Atualize a sua senha!
@@ -80,10 +65,15 @@
 			</div>
 		</div>
 	</div>
+
 	<!--Abaixo seguem os scripts para o funcionamento do JS do BS...-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
 	<!--Fim dos scripts do BS-->
+	<script  src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->
+	<script>
+    var atual ="Editar senha";
+	</script>
 </body>
 </html>

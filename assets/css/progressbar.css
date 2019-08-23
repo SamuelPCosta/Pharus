@@ -10,16 +10,20 @@ body {
   margin: 0 auto;
   text-align: center;
   font-size: 4em;
-  line-height: 405px;
+  line-height: 425px;
   width: 550px;
 }
-#percent p::first-line {
+#tempo p{
   font-weight: bold;
   font-size: 0.5em;
 }
-#percent{
+#tempo{
   line-height: 55px;
   transform: translateY(-190px);
+}
+#horas{
+  font-size: 2em;
+  font-weight: normal;
 }
 .container .row .box canvas{
   position: absolute;
@@ -46,14 +50,14 @@ body {
     margin: auto;
   }
   .texto_grafico p{
-    transform: translateY(-80px);
+    transform: translateY(-70px);
     font-size: 0.9em;
   }
-  #percent{
+  #tempo{
     line-height: 40px;
     transform: translateY(-155px);
     margin-bottom: -40%;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .container .row .box canvas{
     width: 300px !important;

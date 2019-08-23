@@ -1,4 +1,4 @@
-h1{ /*Estilização do título*/
+.h1{ /*Estilização do título*/
 	text-align: left;
 	width: 70%;
 	margin: 0 auto;
@@ -83,7 +83,7 @@ i{
 }
 .colunas-meta{
 	min-height: 30vh;
-	background-color: #9aada333;
+	background-color: #e4e8e6;
 	padding: 50px;
 }
 .colunas-meta p{

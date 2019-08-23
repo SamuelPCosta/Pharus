@@ -30,11 +30,8 @@ html {
 .form-control{
 	width: 190px !important;
 }
-.btn{
-	width: 230px !important;
-}
 .login_btn { /*Estilização do botão login e botão cadastrar*/
-	width: 85%;
+	width: 230px !important;
 	background: #0a522d; /*Cor de fundo do botão entrar*/
 	color: white !important;
 	border:none;
@@ -67,20 +64,19 @@ html {
 	margin-top: -300px;
 }
 .title_log{
-	margin-top: -50px;
+	margin: 20px 0px;
 	text-transform: capitalize;
 	font-weight: normal;
 	color: #364046;
-	font-size: 1.5em;
+	font-size: 1.8em;
 	text-align: left !important;
 }
 @media(max-width:768px) {
 	.logo_grande{
-		width: 200px !important;
+		width: 170px !important;
 		margin-top: -270px;
 	}
 	.user_card_editar{
-		margin-top: 100px;
-		margin-bottom: 10px;
+		margin-top: -50px !important;
 	}
 }

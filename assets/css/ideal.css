@@ -1,4 +1,4 @@
-h1{ /*Estilização do título*/
+.row h1{ /*Estilização do título*/
 	text-align: left;
 	width: 70%;
 	margin: 0 auto;
@@ -91,10 +91,10 @@ input[type=radio]:checked + label .alternativas{
 	}
 }
 @media(max-width:768px) {
-	h1, p, .pergunta, .resultado, .alternativas{
+	.row h1, p, .pergunta, .resultado, .alternativas{
 		width: 90% !important;
 	}
-	h1, .pergunta, .alternativas{
+	.row h1, .pergunta, .alternativas{
 		margin-left: 5% !important;
 	}
 	.col-md-12, p{

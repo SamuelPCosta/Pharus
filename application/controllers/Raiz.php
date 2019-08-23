@@ -25,6 +25,7 @@ class Raiz extends CI_Controller {
 			}
 			$this->load->view('header_sidebar');
 			$this->load->view('index', $consumo);
+			$this->load->view('footer');
 		}else{
 			redirect('login'); 
 		}	
@@ -113,6 +114,7 @@ class Raiz extends CI_Controller {
 
 	public function editar_senha(){
 		if (isset($_SESSION['login'])) {
+			$this->load->view('header_sidebar');
 			$this->load->view('editar_senha');
 		}else{
 			redirect('login?error=2'); 

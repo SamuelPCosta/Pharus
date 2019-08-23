@@ -3,11 +3,11 @@
         <div id="page-content-wrapper">
             <div class="container first-container meta">
 	        <div class="row align-items-center">
-	     		<div class="col-xl-6 col-md-12">
-	     			
+	     		<div class="col-xl-4 col-md-8 mx-auto d-inline-block rounded">
+	     			<div class="col-xl-12 h-75 d-inline-block rounded-top my-4"></div>
 	     		</div>
-	     		<div class="col-xl-6 col-md-12">	        	
-			        <h2>Deseja Alterar a Sua <wbr>Meta Mensal?</h2>
+	     		<div class="col-xl-8 col-md-12">	        	
+			        <h2>Este é seu perfil, <?php echo $this->session->userdata('usuario'); ?></h2>
 		        	<form method="post" action="">
 		        	</form>
 		        	<!--<a href="" class="btn" id="consumoideal">Qual o Consumo Ideal?</a>-->
@@ -33,7 +33,6 @@
 	
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script><!--Importação do Ajax...-->
 	<script  src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->
-	<script  src="<?= base_url()?>assets/js/scriptcollapse.js"></script><!--Importação do JS do menu...-->
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script><!--Importação do gráfico-->
 
 	<!--Abaixo seguem os scripts para o funcionamento do JS do BS...-->

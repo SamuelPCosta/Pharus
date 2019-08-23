@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
+    <meta name="theme-color" content="#2b3530">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pharus</title> <!--Título da Aba-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Importação do CSS do BS-->
@@ -21,8 +22,8 @@
 
 	<!-- Header -->
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark">
-			<a href="index" class="logo"><img src="<?= base_url()?>assets/img/logo.png" width=110></a> <!--Nossa Logo-->
+		<nav class="navbar navbar-expand-lg navbar-dark position-fixed my-0 w-100">
+			<a href="index" class="mx-auto logo"><img src="<?= base_url()?>assets/img/logo.png" width=110></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn" id="menu-toggle"><i class="fas fa-bars"></i></a>
 		</nav>
 	</header>
