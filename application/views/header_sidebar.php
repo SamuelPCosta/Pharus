@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pharus</title> <!--Título da Aba-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Importação do CSS do BS-->
-	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/style.css"> <!--Importação da folha de estilo css-->
+	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/stylelogin.css"> <!--Importação da folha de estilo css para login-->
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/style.css"> <!--Importação da folha de estilo css-->
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/metas.css"> <!--Importação da folha de estilo css-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/progressbar.css"> <!--Importação da folha de estilo css para a barra de progresso-->
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/dicas.css"> <!--Importação da folha de estilo css para dicas-->
@@ -38,13 +39,13 @@
             		<a href="usuario" class="text-capitalize"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
             	</li>
 			    <div class="dropdown-divider"></div>
-			    <li id="Editar senha">
-			    	<a href="editar-senha"><i class="fas fa-edit"></i>Editar senha</a>
-			    </li>
-			    <div class="dropdown-divider"></div>
 			    <li id="Atualizar dados">
-			    	<a href="atualizar-dados"><i class="fas fa-address-card"></i>Atualizar dados</a>
+			    	<a href="#"><i class="fas fa-address-card"></i>Atualizar dados</a>
 			    </li>
+                <div class="dropdown-divider"></div>
+                <li id="Editar senha">
+                    <a href="editar-senha"><i class="fas fa-edit"></i>Editar senha</a>
+                </li>
 			    <div class="dropdown-divider"></div>
                 <li id="Consumo">
                     <a href="consumo"><i class="fas fa-coins"></i>Consumo</a>

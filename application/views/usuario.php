@@ -1,20 +1,52 @@
-		<?php $titulo="Metas" ?>
 		<!--conteudo-->
         <div id="page-content-wrapper">
-            <div class="container-fluid first-container meta">
+            <div class="container first-container usuario">
 	        <div class="row align-items-center">
-	     		<div class="col-xl-6 col-md-12 d-inline-block">
-	     			<div class="mx-auto col-12 h-75	rounded-top overflow-hidden" id="inner">
-	     				<img src="<?= base_url()?>assets/img/logo.png" width=240>
+	     		<div class="col-xl-4 col-md-12">
+	     			<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content">
+	     				<img src="<?= base_url()?>assets/img/#.png" width=240>
 	     			</div>
-	     			<h2 class="my-3">Este é seu perfil, <span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
+	     			<h2 class="my-3"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
 	     		</div>
-	     		<div class="col-xl-6 col-lg-12 my-5">	        	
-			        <h2>Aqui vem algo escrito</h2>
-		        	<form method="post" action="">
-		        		<input type="text" name="" value="Nome completo" disabled>
-		        	</form>
-		        </div>
+	     		<div class="col-xl-6 col-md-12 mx-auto">
+	     		<div class="container h-100 usuario">
+				<div class="d-flex justify-content-center h-100" >
+					<div class="user_card user_card_user my-3">
+						<div class="d-flex justify-content-center">
+							<div class="brand_logo_container">
+								<h1 class="title_log">Dados <span class="text-lowercase">do</span> usuário</h1><!--Nossa Logo-->
+							</div>
+						</div>
+						<div class="d-flex justify-content-center form_container">
+							<form method="post" action="#">
+								Nome Completo:
+								<div class="input-group mb-2">
+									<input type="text" name="" value="<?php echo $nome ?>" class="form-control" value="" placeholder="" disabled>
+								</div>
+								Email:
+								<div class="input-group mb-2">
+									<input type="text" name="" value="<?php echo $email ?>" class="form-control" value="" placeholder="" disabled>
+								</div>
+								Conta Contrato:
+								<div class="input-group mb-2">
+									<input type="text" name="" value="<?php echo $contaContrato ?>" class="form-control" value="" placeholder="" disabled>
+								</div>
+								Cep/Bairro:
+								<div class="input-group mb-2">
+									<div class="input-group-append">
+										<span class="input-group-text"><i class="fas fa-key"></i></span>
+									</div>
+									<input type="text" name="senha_atual" class="form-control" value="" placeholder="Digite a senha atual" disabled>
+								</div>
+						</div>
+							<div class="d-flex justify-content-center mt-3 login_container my-3">
+								<a href="#"><button type="submit" name="editar" class="btn login_btn btn-success">Atualizar dados</button></a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+            </div>
             </div>
             </div>
         </div>

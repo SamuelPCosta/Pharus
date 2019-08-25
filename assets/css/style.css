@@ -2,7 +2,7 @@
 	width: 100%;
     height: 100%;
     font-family: 'Open Sans', sans-serif !important;
-    background-color: #f6f6f6;
+    background-color: #f6f6f6 !important;
 }
 .tudo{
     min-height: 100%; /*Configuração necessaria para o footer*/
@@ -61,6 +61,9 @@ header .navbar{
 }
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
+}
+.container{
+    padding-top: 0px !important;
 }
 .dropdown-divider{
     margin: 0 !important;
@@ -253,7 +256,7 @@ header .navbar{
         width: 85% !important;
     }
 }
-
+/*
 footer{
 	position: relative;
 	width: 100%;
@@ -277,12 +280,14 @@ footer a{
 footer a:hover{
 	text-decoration: none;
 	color: #fff;
+}*/
+footer{
+    z-index: 1;
 }
 /*
 ####################--QuemSomos--####################
 */
 .text-center{ /*Estilização do título*/
-    width: 90%;
     margin: 0 auto;
     text-align: left;
     text-transform: none;
@@ -310,10 +315,13 @@ footer a:hover{
 ####################--Usuário--####################
 */
 .row .d-inline-block{
-    height: 320px;
+    height: 520px;
 }
-#inner{
+.content{
     background-color: #555;
-    width: 240px;    
-    height: auto;
+    width: 260px; 
+    height: 260px !important;   
+}
+.usuario .input-group{
+    width: 300px;
 }

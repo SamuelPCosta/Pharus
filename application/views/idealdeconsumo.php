@@ -1,6 +1,6 @@
 		<!--conteudo-->
         <div id="page-content-wrapper">
-            <div class="container first-container">
+            <div class="container first-container ideal">
 		        <div class="row align-items-center">
 		            <div class="col-xl-6 col-md-12">
 		        	<h1>Ideal de consumo <br>

@@ -1,7 +1,7 @@
 		<?php $titulo="Metas" ?>
 		<!--conteudo-->
         <div id="page-content-wrapper">
-            <div class="container first-container meta">
+            <div class="container first-container">
 	        <div class="row align-items-center">
 	     		<div class="col-xl-6 col-md-12">
 	     			<p class="valor">
@@ -58,7 +58,7 @@
 				        			if (isset($_GET['error'])){
 				        				if ($_GET['error']==1) {
 				        		?>
-				        			<div class='alert alert-danger' role='alert'>Para mudar sua meta, altere<br> o valor  do campo numério acima.</div>
+				        			<div class='alert alert-danger' role='alert'>Para mudar sua meta, altere<br> o valor  do campo numérico acima.</div>
 				        		<?php
 				        				}
 				        			}
@@ -73,7 +73,7 @@
 		        </div>
             </div>
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid texto_metas">
             	<div class="row">
             		<div class="col-xl-8 col-md-12 colunas-meta">
             			<h1>Racionalize</h1><br>

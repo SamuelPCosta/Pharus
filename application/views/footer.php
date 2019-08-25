@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer font-small bg-dark pt-4">
+<footer class="page-footer font-small bg-secondary pt-4 position-relative">
   <!-- Footer Links -->
   <div class="container-fluid text-center text-md-left">
     <!-- Grid row -->
@@ -15,19 +15,13 @@
       <!-- Grid column -->
       <div class="col-md-3 mb-md-0 mb-3">
         <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
+        <h5 class="text-uppercase">Referências</h5>
         <ul class="list-unstyled">
           <li>
-            <a href="#!">Link 1</a>
+            Link 1 <a href="#!">Link 1</a>
           </li>
           <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
+            Link 2 <a href="#!">Link 2</a>
           </li>
         </ul>
       </div>
@@ -38,8 +32,8 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+  <div class="footer-copyright text-center py-3 bg-light"><!--©--> <?php echo date('Y') ?> Pharus -
+    <a href="quemsomos">Quem Somos?</a>
   </div>
   <!-- Copyright -->
 

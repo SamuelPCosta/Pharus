@@ -69,7 +69,13 @@ html {
 	font-weight: normal;
 	color: #364046;
 	font-size: 1.8em;
-	text-align: left !important;
+	text-align: center !important;
+}
+.user_card_user{
+	width: 100%;
+}
+.usuario{
+	padding-top: 0px !important;
 }
 @media(max-width:768px) {
 	.logo_grande{
@@ -77,6 +83,6 @@ html {
 		margin-top: -270px;
 	}
 	.user_card_editar{
-		margin-top: -50px !important;
+		margin-top: 0%;
 	}
 }

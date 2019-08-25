@@ -26,8 +26,9 @@ CREATE TABLE `pharus`.`consumo` (
   `usuario` INT(10) UNSIGNED NOT NULL,
   `bandeira` INT(1) NOT NULL,
   `kw_h` FLOAT UNSIGNED NOT NULL,
-  `tarifa` FLOAT UNSIGNED NOT NULL,
-  `intervalo_tempo` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `gasto` FLOAT UNSIGNED NOT NULL,
+  `intervalo_tempo` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `tarifa` FLOAT UNSIGNED NOT NULL
 )
 ENGINE = InnoDB;
 ALTER TABLE consumo
@@ -45,7 +46,7 @@ CREATE TABLE `pharus`.`meta` (
   `usuario` INT(10) UNSIGNED NOT NULL,
   `meta` INT(4),
   `kw_h` FLOAT UNSIGNED NOT NULL,
-  `tarifa` FLOAT UNSIGNED NOT NULL
+  `gasto` FLOAT UNSIGNED NOT NULL
 )
 ENGINE = InnoDB;
 
@@ -82,7 +83,7 @@ VALUES (1234567891, 'Samuel98', 'Samuel Soares Pereira Costa', 'ssoares981@gmail
 (0033451541, 'Zé', 'Zé da Costa', 'zezinho@gmail.com', 'zezinho132', '59645625');
 
 -- POVOAMENTO DE CONSUMO
-INSERT INTO consumo (usuario, kw_h, tarifa) 
+INSERT INTO consumo (usuario, kw_h, gasto, intervalo_tempo, tarifa) 
 VALUES ('1234567891', 12, 5 ),
 ('0009654321', 63, 20 ),
 ('0009658141', 70, 50 ),
@@ -95,7 +96,7 @@ VALUES ('1234567891', 12, 5 ),
 ('0033451541', 231, 240 );
 
 -- POVOAMENTO DE META
-INSERT INTO meta (usuario, kw_h, tarifa, intervalo_tempo) 
+INSERT INTO meta (usuario, kw_h, gasto) 
 VALUES ('1234567891', 400, 50), 
 ('0009654321', 63, 200), 
 ('0009658141', 70, 300),
@@ -109,61 +110,62 @@ VALUES ('1234567891', 400, 50),
 
 -- POVOAMENTO DE DICAS
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
-VALUES ('A energia é muito consumida pelo ferro de passar roupa!Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident.', 
+VALUES ('Apague a luz sempre que sair de um cômodo!', 
 'Preste atenção na sua geladeira!
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
-VALUES ('A energia é muito consumida pelo ferro de passar roupa!Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident.', 
+VALUES ('Na lavadora de roupas procure a opção “lavagem rápida” caso haja poucas peças.', 
 'Preste atenção na sua geladeira!
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
-VALUES ('A energia é muito consumida pelo ferro de passar roupa!Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident.', 
+VALUES ('Mantenha o ar condicionado à 23 graus!', 
 'Preste atenção na sua geladeira!
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
-VALUES ('A energia é muito consumida pelo ferro de passar roupa!Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident.', 
+VALUES ('Evite usar o ferro de passar roupas quando muitos aparelhos estão ligados.', 
 'Preste atenção na sua geladeira!
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
-VALUES ('A energia é muito consumida pelo ferro de passar roupa!Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident.', 
+VALUES ('Comece a passar as roupas pelas peças delicadas, pois elas necessitam de menos
+calor.', 
 'Preste atenção na sua geladeira!
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
-VALUES ('A energia é muito consumida pelo ferro de passar roupa!Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident.', 
+VALUES ('Desligue o monitor do PC sempre que for se ausentar por mais de 5 minutos.', 
 'Preste atenção na sua geladeira!
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
-VALUES ('A energia é muito consumida pelo ferro de passar roupa!Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident.', 
+VALUES ('Prefira ventiladores de mesa ou coluna à ventiladores de teto.', 
 'Preste atenção na sua geladeira!
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
-VALUES ('A energia é muito consumida pelo ferro de passar roupa!Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident.', 
+VALUES ('Evite deixar a TV e ou microondas no modo “stand by”.', 
 'Preste atenção na sua geladeira!
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
-VALUES ('A energia é muito consumida pelo ferro de passar roupa!Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident.', 
+VALUES ('Retire o carregador da tomada quando não estiver em uso.', 
 'Preste atenção na sua geladeira!
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
-VALUES ('A energia é muito consumida pelo ferro de passar roupa!Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident.', 
+VALUES ('Troque lâmpadas incandescente por lâmpadas de LED.', 
 'Preste atenção na sua geladeira!
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!

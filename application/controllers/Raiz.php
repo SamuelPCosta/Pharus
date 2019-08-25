@@ -22,6 +22,7 @@ class Raiz extends CI_Controller {
 					$mensagem = "Tá top o consumo.";
 				}
 				set_cookie('mensagem_meta', $mensagem, (86400));
+				$titulo ="home";
 			}
 			$this->load->view('header_sidebar');
 			$this->load->view('index', $consumo);
@@ -97,8 +98,13 @@ class Raiz extends CI_Controller {
 
 	public function usuario(){
 		if (isset($_SESSION['login'])) {
+			$usuario = $this->session->userdata('usuario');
+			$this->load->model("Operacoes");
+			$dados['nome'] = $this->Operacoes->nomeCompleto($usuario);
+			$dados['email'] = $this->Operacoes->email($usuario);
+			$dados['contaContrato'] = $this->Operacoes->contaContrato($usuario);
 			$this->load->view('header_sidebar');
-			$this->load->view('usuario');
+			$this->load->view('usuario', $dados);
 		}else{
 			$this->load->view('login');
 		}

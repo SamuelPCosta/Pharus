@@ -13,6 +13,7 @@
 	text-align: justify;
 	width: 95%;
 	margin: auto;
+ 	font-size: 1.2em;
 }
 .a{
 	height: 220px;
@@ -20,6 +21,9 @@
 	margin: 0 auto;
 	background-color: #abd8f5; /*#00aadd44*/
 	margin-bottom: 25px;
+}
+.a p{
+	text-align: left;
 }
 .b{
 	height: 465px;
@@ -44,9 +48,9 @@
 	text-decoration: none;
 	margin-right: 4%
 }
-.colunas p::first-line {
-	font-weight: bold;
- 	font-size: 1.2em;
+.colunas p::first-letter{
+	//font-weight: bold;
+ 	font-size: 1.4em;
 }
 @media(max-width:1200px) {
 	.a, .b{
