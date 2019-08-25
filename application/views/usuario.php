@@ -1,16 +1,19 @@
 		<?php $titulo="Metas" ?>
 		<!--conteudo-->
         <div id="page-content-wrapper">
-            <div class="container first-container meta">
+            <div class="container-fluid first-container meta">
 	        <div class="row align-items-center">
-	     		<div class="col-xl-4 col-md-8 mx-auto d-inline-block rounded">
-	     			<div class="col-xl-12 h-75 d-inline-block rounded-top my-4"></div>
+	     		<div class="col-xl-6 col-md-12 d-inline-block">
+	     			<div class="mx-auto col-12 h-75	rounded-top overflow-hidden" id="inner">
+	     				<img src="<?= base_url()?>assets/img/logo.png" width=240>
+	     			</div>
+	     			<h2 class="my-3">Este é seu perfil, <span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
 	     		</div>
-	     		<div class="col-xl-8 col-md-12">	        	
-			        <h2>Este é seu perfil, <?php echo $this->session->userdata('usuario'); ?></h2>
+	     		<div class="col-xl-6 col-lg-12 my-5">	        	
+			        <h2>Aqui vem algo escrito</h2>
 		        	<form method="post" action="">
+		        		<input type="text" name="" value="Nome completo" disabled>
 		        	</form>
-		        	<!--<a href="" class="btn" id="consumoideal">Qual o Consumo Ideal?</a>-->
 		        </div>
             </div>
             </div>

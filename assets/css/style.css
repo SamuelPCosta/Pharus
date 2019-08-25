@@ -121,9 +121,6 @@ header .navbar{
     font-size: 1.1em;
     padding: 10px 0px;
 }
-#item_user a{
-    text-transform: capitalize;
-}
 .sidebar-nav li a:hover { /*hover dos itens do menu*/
     text-decoration: none;
     color: #fff;
@@ -312,10 +309,11 @@ footer a:hover{
 /*
 ####################--Usuário--####################
 */
-.row .rounded{
-    height: 500px;
-    background-color: #9aada3;
+.row .d-inline-block{
+    height: 320px;
 }
-.col-xl-4 .h-75{
-    background-color: red;
+#inner{
+    background-color: #555;
+    width: 240px;    
+    height: auto;
 }

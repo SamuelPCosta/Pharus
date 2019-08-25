@@ -35,7 +35,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
             	<li id="Usuario">
-            		<a href="usuario"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
+            		<a href="usuario" class="text-capitalize"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
             	</li>
 			    <div class="dropdown-divider"></div>
 			    <li id="Editar senha">
