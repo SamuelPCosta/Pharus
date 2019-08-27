@@ -164,11 +164,8 @@ header .navbar{
     color: #fff !important;
     background-color: #364046;
 }
-.col-lg-4{
-    text-align: center;
-}
-.rounded-circle{
-    margin-bottom: 30px
+.container-fluid .row{
+    margin-top: 0;
 }
 .colunas-home{ /*Colunas duplas abaixo da barra central*/
     min-height: 75vh;
@@ -242,9 +239,6 @@ header .navbar{
         position: relative;
         margin-right: 0;
     }
-    .rounded-circle{
-        margin-bottom: 100px
-    }
     h2{
         width: 85%;
         margin: auto;
@@ -283,6 +277,7 @@ footer a:hover{
 }*/
 footer{
     z-index: 1;
+    background-color: #2b3530;
 }
 /*
 ####################--QuemSomos--####################
@@ -323,5 +318,8 @@ footer{
     height: 260px !important;   
 }
 .usuario .input-group{
-    width: 300px;
+    width: 280px;
+}
+.usuario .btn{
+    width: 280px !important;
 }

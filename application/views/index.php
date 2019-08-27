@@ -25,19 +25,19 @@
 				      		
 				      	</div>
 			    	</div>
-			    	<div class="col-xl-6 col-lg-12 text"><p>&emsp;Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
+			    	<div class="col-xl-6 col-lg-12 text"><p class="text-center">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
 			    </div>
 			  	</div>
-			  	<div class="container">
+			  	<div class="container-fluid">
 			  		<!-- Three columns -->
-			        <div class="row">
-			          <div class="col-lg-4">
+			        <div class="row align-items-center py-5 mt-2">
+			          <div class="col-lg-4 my-2 text-center">
 			            <img class="rounded-circle" src="<?= base_url()?>assets/img/circle.png" alt="Generic placeholder image" width="200" height="200">
 			          </div><!-- /.col-lg-4 -->
-			          <div class="col-lg-4">
+			          <div class="col-lg-4 my-2 text-center">
 			            <img class="rounded-circle" src="<?= base_url()?>assets/img/circle.png" alt="Generic placeholder image" width="200" height="200">
 			          </div><!-- /.col-lg-4 -->
-			          <div class="col-lg-4">
+			          <div class="col-lg-4 my-2 text-center">
 			            <img class="rounded-circle" src="<?= base_url()?>assets/img/circle.png" alt="Generic placeholder image" width="200" height="200">
 			          </div><!-- /.col-lg-4 -->
 			        </div><!-- /.row -->
@@ -63,15 +63,15 @@
 </div>
 
 
-	<!-- Footer -->
+	<!-- Footer
 	<footer class="page-footer font-small">
 	  <div>
 	  	<ul>
-	  		<li><a href="quemsomos">Quem Somos?</a></li> <!--Link pra página 'Quem somos?'-->
+	  		<li><a href="quemsomos">Quem Somos?</a></li> <!--Link pra página 'Quem somos?'
 	  	</ul>
 	  </div>
 	</footer>
-	<!-- Footer -->
+	Footer -->
 
 	<!--Abaixo seguem os scripts para o funcionamento do JS do BS...-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

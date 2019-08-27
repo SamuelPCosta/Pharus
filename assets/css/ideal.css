@@ -83,13 +83,13 @@ input[type=radio]:checked + label .alternativas{
 	color: #fff;
 }
 @media(max-width:768px) {
-	.row h1, p, .pergunta, .resultado, .alternativas{
+	.ideal h1, .ideal p, .pergunta, .resultado, .alternativas{
 		width: 90% !important;
 	}
-	.row h1, .pergunta, .alternativas{
+	.ideal h1, .pergunta, .alternativas{
 		margin-left: 5% !important;
 	}
-	.col-md-12, p{
+	.col-md-12, .ideal p{
 		margin: auto !important;
 	}
 }

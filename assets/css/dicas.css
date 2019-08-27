@@ -63,7 +63,7 @@
 		min-height: 375px !important;
 		height: 350px !important;
 	}
-	.row{
+	.dicas-container.row{
 		margin-top: 30px;
 	}
 	#recarregar{

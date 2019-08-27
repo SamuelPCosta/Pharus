@@ -1,7 +1,7 @@
 		<?php $titulo="Metas" ?>
 		<!--conteudo-->
         <div id="page-content-wrapper">
-            <div class="container first-container">
+            <div class="container first-container container-metas">
 	        <div class="row align-items-center">
 	     		<div class="col-xl-6 col-md-12">
 	     			<p class="valor">

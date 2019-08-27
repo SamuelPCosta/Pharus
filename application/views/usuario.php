@@ -11,7 +11,7 @@
 	     		<div class="col-xl-6 col-md-12 mx-auto">
 	     		<div class="container h-100 usuario">
 				<div class="d-flex justify-content-center h-100" >
-					<div class="user_card user_card_user my-3">
+					<div class="user_card user_card_user my-3 h-100">
 						<div class="d-flex justify-content-center">
 							<div class="brand_logo_container">
 								<h1 class="title_log">Dados <span class="text-lowercase">do</span> usuário</h1><!--Nossa Logo-->
