@@ -9,7 +9,7 @@ class Cadastro_Meta extends CI_Controller {
 		$this->load->model("Operacoes");
 		$meta = $this->input->post("meta");
 
-		if ($meta>=20 && $meta<=2500) { //Se a meta do usuario for maior ou = a 20 e menor ou = a 2500
+		if ($meta>=20 && $meta<=10000) { //Se a meta do usuario for maior ou = a 20 e menor ou = a 2500
 			//$meta = array('a'); //criar um erro pra parar a execução
 			$usuario = $this->session->userdata('usuario');
 			$contaContrato = $this->Operacoes->contaContrato($usuario);

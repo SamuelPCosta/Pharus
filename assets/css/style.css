@@ -11,9 +11,9 @@
     height: 100%; /* hack para IE6 que trata height como min-height */
 }
 h1{
-    text-transform: uppercase;
+    /*text-transform: uppercase;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 700;*/
     margin: 0 auto;
     text-align: center;
 }
@@ -138,7 +138,6 @@ header .navbar{
     margin-left: -20px;
     margin-right: 35px;
 }
-
 #menu-toggle{ /*Visibilidade do botão de menu*/
     visibility: visible;
     position: fixed;
@@ -164,6 +163,21 @@ header .navbar{
     color: #fff !important;
     background-color: #364046;
 }
+.barra-horizontal{
+    background-color: #457e99;
+}
+.rounded-circle{
+    border: 3px solid white;
+    width: 200px !important;
+    height: 200px !important;
+}
+.rounded-circle i{
+    font-size: 6em; 
+    color: white
+}
+h4{
+    color: white;
+}
 .container-fluid .row{
     margin-top: 0;
 }
@@ -171,13 +185,12 @@ header .navbar{
     min-height: 75vh;
     padding: 30px !important;
     /*background-color: #9aada333;*/
-    background-color: #eee;
+    background-color: #c2d8e2;
 }
 .colunas-home p{
     width: 100% !important;
     text-align: justify;
     margin: auto;
-    color: #2b3530;
     font-size: 1.15em;
 }
 .line{
@@ -185,7 +198,22 @@ header .navbar{
 }
 .last-container{
     height: 50vh;
-    padding: 60px 100px;
+    background-color: #457E99;
+}
+.last-container h2{
+    text-align: center;
+    color: white;
+    width: 85%;
+}
+.last-container p{
+    text-align: justify;
+    color: white;
+    width: 85%;
+    font-size: 20px;
+}
+.last-container i{
+    font-size: 10em; 
+    color: white
 }
 @media(min-width:1200px) {
     .first-container {
@@ -200,7 +228,13 @@ header .navbar{
         width: 90%
     }
     .line{
-        border-right: 2px solid #dcdccc;
+        border-right: 2px solid #b1c6d0;
+    }
+    .last-container h2{
+        text-align: right;
+    }
+    .last-container p{
+        text-align: right;
     }
 }
 @media(min-width:768px) {
@@ -249,6 +283,9 @@ header .navbar{
     .colunas-home p{
         width: 85% !important;
     }
+    footer{
+        z-index: 1!important;
+    }
 }
 /*
 footer{
@@ -276,19 +313,23 @@ footer a:hover{
 	color: #fff;
 }*/
 footer{
-    z-index: 1;
+    z-index: 0;
     background-color: #2b3530;
+    color: #ccc;
+}
+footer a{
+    color: white;
+}
+footer a:hover{
+    color: white;
 }
 /*
 ####################--QuemSomos--####################
 */
-.text-center{ /*Estilização do título*/
-    margin: 0 auto;
-    text-align: left;
-    text-transform: none;
-    font-weight: normal;
+.text-lg-left{
+    width: 90% !important;
 }
-.text-center + p{ /*Estilização do paragrafo*/
+.text-lg-left + p{ /*Estilização do paragrafo*/
     width: 90%;
     margin: 0 auto;
     font-size: 20px;
@@ -322,4 +363,10 @@ footer{
 }
 .usuario .btn{
     width: 280px !important;
+}
+#Salvar_dados{
+    visibility: hidden;
+}
+#Atualizar_dados, #Salvar_dados{
+    bottom: 0px;
 }

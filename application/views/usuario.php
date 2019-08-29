@@ -6,7 +6,7 @@
 	     			<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content">
 	     				<img src="<?= base_url()?>assets/img/#.png" width=240>
 	     			</div>
-	     			<h2 class="my-3"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
+	     			<h2 class="my-3 text-center"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
 	     		</div>
 	     		<div class="col-xl-6 col-md-12 mx-auto">
 	     		<div class="container h-100 usuario">
@@ -18,30 +18,33 @@
 							</div>
 						</div>
 						<div class="d-flex justify-content-center form_container">
-							<form method="post" action="#">
+							<form method="post" action="cadastro/editarDados">
 								Nome Completo:
 								<div class="input-group mb-2">
-									<input type="text" name="" value="<?php echo $nome ?>" class="form-control" value="" placeholder="" disabled>
+									<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user" value="" placeholder="" disabled>
+								</div>
+								Usuário:
+								<div class="input-group mb-2">
+									<input type="text" name="usuario" value="<?php echo $this->session->userdata('usuario'); ?>" class="form-control dados_user" value="" placeholder="" disabled>
 								</div>
 								Email:
 								<div class="input-group mb-2">
-									<input type="text" name="" value="<?php echo $email ?>" class="form-control" value="" placeholder="" disabled>
+									<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user" value="" placeholder="" disabled>
 								</div>
 								Conta Contrato:
 								<div class="input-group mb-2">
-									<input type="text" name="" value="<?php echo $contaContrato ?>" class="form-control" value="" placeholder="" disabled>
+									<input type="text" name="conta_contrato" value="<?php echo $contaContrato ?>" class="form-control dados_user" value="" placeholder="" disabled>
 								</div>
 								Cep/Bairro:
 								<div class="input-group mb-2">
-									<div class="input-group-append">
-										<span class="input-group-text"><i class="fas fa-key"></i></span>
-									</div>
-									<input type="text" name="senha_atual" class="form-control" value="" placeholder="Digite a senha atual" disabled>
+									<input type="text" name="senha_atual" class="form-control dados_user" value="" placeholder="" disabled>
 								</div>
 						</div>
 							<div class="d-flex justify-content-center mt-3 login_container my-3">
-								<a href="#"><button type="submit" name="editar" class="btn login_btn btn-success">Atualizar dados</button></a>
+							<button type="submit" name="editar" id="Salvar_dados" class="btn login_btn btn-success position-absolute my-4">Salvar alterações</button>
 							</div>
+							<div class="d-flex justify-content-center mt-3 login_container my-3">
+							<button type="" name="editar" id="Atualizar_dados" class="btn login_btn btn-success position-absolute my-4">Atualizar dados</button>
 						</form>
 					</div>
 				</div>
@@ -53,18 +56,6 @@
         <!--conteudo-->
 		</div>
 </div>
-
-
-	<!-- Footer -->
-	<footer class="page-footer font-small">
-	  <div>
-	  	<ul>
-	  		<li><a href="quemsomos">Quem Somos?</a></li> <!--Link pra página 'Quem somos?'-->
-	  	</ul>
-	  </div>
-	</footer>
-	<!-- Footer -->
-
 	
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script><!--Importação do Ajax...-->
 	<script  src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->

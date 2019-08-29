@@ -1,6 +1,6 @@
 		<!--conteudo-->
         <div id="page-content-wrapper">
-            <div class="container">
+            <div class="container quemsomos">
 		        <div class="row align-items-center">
 		     		<div class="col-lg-6 col-md-12 float-left">
 		     			<br><br>
@@ -47,12 +47,13 @@
 
 
 	<!-- Footer -->
-	<footer class="page-footer font-small">
-	  <div>
-	  	<ul>
-	  		<li><a href="index">Home</a></li> <!--Link pra página 'Quem somos?'-->
-	  	</ul>
+	<footer class="page-footer font-small position-relative">
+	  <!-- Footer Links -->
+	  <!-- Copyright -->
+	  <div class="footer-copyright text-center py-3"><!--©--> <?php echo date('Y') ?> Pharus -
+	    <a href="index">Home</a>
 	  </div>
+	  <!-- Copyright -->
 	</footer>
 	<!-- Footer -->
 

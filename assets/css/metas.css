@@ -6,12 +6,12 @@
 	text-transform: none;
     font-weight: normal;
 }
-h2{ /*Estilização do título*/
+.container-metas h2{ /*Estilização do título*/
 	width: 50%;
 	margin: 0 auto;
 	text-align: center;
 }
-h2 + p{ /*Estilização do paragrafo*/
+.container-metas h2 + p{ /*Estilização do paragrafo*/
 	width: 70%;
 	margin: 0 auto;
 	font-size: 20px;
@@ -98,7 +98,7 @@ h2 + p{ /*Estilização do paragrafo*/
 	}
 }
 @media(max-width:768px) {
-	.colunas-meta h1, .colunas-meta p, h2, 
+	.colunas-meta h1, .colunas-meta p,.container-metas h2, 
 	#meta input, #meta button, .instrucoes, 
 	.alert-danger, #consumoideal, #mensagem{
 		width: 90% !important;

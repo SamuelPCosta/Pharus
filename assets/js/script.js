@@ -30,6 +30,16 @@ $(document).mouseup(function(e){
     botão de menu a class toggled é removida e o menu colapsa*/
 });
 
+$("#Atualizar_dados").click(function(e) {
+  e.preventDefault();
+    var inputs = document.getElementsByClassName('dados_user');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].disabled = false;
+    }
+    document.getElementById("Atualizar_dados").style.visibility = "hidden";
+    document.getElementById("Salvar_dados").style.visibility = "visible";
+});
+
 window.onload = function(){
-  document.getElementById(atual).classList.add("atual");
+  document.getElementById(dados_user).classList.add("atual");
 }

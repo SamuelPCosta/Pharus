@@ -6,7 +6,7 @@
 	     			<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content">
 	     				<img src="<?= base_url()?>assets/img/#.png" width=240>
 	     			</div>
-	     			<h2 class="my-3"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
+	     			<h2 class="my-3 text-center"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
 	     		</div>
 	     		<div class="col-xl-6 col-md-12 mx-auto">
 	     		<div class="container h-100">
@@ -58,16 +58,6 @@
         <!--conteudo-->
 		</div>
 </div>
-
-	<!-- Footer -->
-	<footer class="page-footer font-small">
-	  <div>
-	  	<ul>
-	  		<li><a href="quemsomos">Quem Somos?</a></li> <!--Link pra página 'Quem somos?'-->
-	  	</ul>
-	  </div>
-	</footer>
-	<!-- Footer -->
 	
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script><!--Importação do Ajax...-->
 	<script  src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->

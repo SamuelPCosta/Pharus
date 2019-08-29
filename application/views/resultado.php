@@ -19,18 +19,6 @@
         <!--conteudo-->
 		</div>
 </div>
-
-
-	<!-- Footer -->
-	<footer class="page-footer font-small">
-	  <div>
-	  	<ul>
-	  		<li><a href="quemsomos">Quem Somos?</a></li> <!--Link pra página 'Quem somos?'-->
-	  	</ul>
-	  </div>
-	</footer>
-	<!-- Footer -->
-
 	
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script><!--Importação do Ajax...-->
 	<script  src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->

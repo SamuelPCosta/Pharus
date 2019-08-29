@@ -17,7 +17,7 @@
 }
 .a{
 	height: 220px;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	background-color: #abd8f5; /*#00aadd44*/
 	margin-bottom: 25px;
@@ -27,14 +27,14 @@
 }
 .b{
 	height: 465px;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	background: #7ec9e6; /*#ddaa0077*/
 	margin-bottom: 25px; 
 }
 .c{
 	height: 710px;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	background-color: #33654a; /*#2b703055*/
 	margin-bottom: 25px; 
@@ -46,7 +46,6 @@
 	margin-top: 20px;
 	color: white;
 	text-decoration: none;
-	margin-right: 4%
 }
 .colunas p::first-letter{
 	//font-weight: bold;

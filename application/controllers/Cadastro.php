@@ -38,4 +38,16 @@ class Cadastro extends CI_Controller {
 			//Aqui fica o erro para informar ao usuário que a senha dele deve ter no mínimo 8 caracteres
 		}
 	}
+
+	public function editarDados(){
+		$this->load->model("usuarios_model");
+		
+		//Esse array passa os campos a serem inseridos na table usuario;
+		$dados = array(
+			'conta_contrato' => $this->input->post("conta_contrato"),
+			'usuario' => $this->input->post("usuario"),
+			'nome' => $this->input->post("nome"),
+			'email' => $this->input->post("email")
+		);
+	}
 }

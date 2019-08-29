@@ -25,6 +25,12 @@ class Usuarios_model extends CI_Model {
 		return $login;
 	}
 
+	public function atualizarDados($usuario){
+		$this->db->set('senha', $nova_senha);
+		$this->db->where('usuario', $usuario);
+		$this->db->update('usuario');
+	}
+
 	public function senhaAtual($usuario,$senha_atual){
 		$this->db->where("usuario", $usuario); 
 		$this->db->where("senha", $senha_atual);

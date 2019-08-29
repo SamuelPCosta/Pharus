@@ -14,7 +14,9 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/ideal.css"> <!--Importação da folha de estilo css para dicas-->
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/consumo.css"> <!--Importação da folha de estilo css para consumo-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!--Importação da fonte Open Sans-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+    <!--Importação da fonte Open Sans-->
 	<link rel="shortcut icon" href="<?= base_url()?>assets/img/icon.ico"/> <!--Icone-->
 	<!-- O comando base_url() é um atalho para o enderço da nossa base-->
 </head>
@@ -39,10 +41,6 @@
             		<a href="usuario" class="text-capitalize"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
             	</li>
 			    <div class="dropdown-divider"></div>
-			    <li id="Atualizar dados">
-			    	<a href="#"><i class="fas fa-address-card"></i>Atualizar dados</a>
-			    </li>
-                <div class="dropdown-divider"></div>
                 <li id="Editar senha">
                     <a href="editar-senha"><i class="fas fa-edit"></i>Editar senha</a>
                 </li>

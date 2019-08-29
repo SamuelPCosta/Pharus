@@ -25,36 +25,53 @@
 				      		
 				      	</div>
 			    	</div>
-			    	<div class="col-xl-6 col-lg-12 text"><p class="text-center">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
+			    	<div class="col-xl-6 col-lg-12 text"><p class="mx-auto">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
 			    </div>
 			  	</div>
 			  	<div class="container-fluid">
 			  		<!-- Three columns -->
-			        <div class="row align-items-center py-5 mt-2">
+			        <div class="row align-items-center py-5 mt-2 barra-horizontal">
 			          <div class="col-lg-4 my-2 text-center">
-			            <img class="rounded-circle" src="<?= base_url()?>assets/img/circle.png" alt="Generic placeholder image" width="200" height="200">
+			            <div class="rounded-circle mx-auto d-table">
+			            <i class="fas fa-seedling align-middle d-table-cell"></i>
+			        	</div>
+			            <h4 class="py-3">Lorem Ipsum</h4>
 			          </div><!-- /.col-lg-4 -->
 			          <div class="col-lg-4 my-2 text-center">
-			            <img class="rounded-circle" src="<?= base_url()?>assets/img/circle.png" alt="Generic placeholder image" width="200" height="200">
+			            <div class="rounded-circle mx-auto d-table">
+			            <i class="fas fa-plug align-middle d-table-cell"></i>
+			        	</div>
+			            <h4 class="py-3">Maneire seu Consumo</h4>
 			          </div><!-- /.col-lg-4 -->
 			          <div class="col-lg-4 my-2 text-center">
-			            <img class="rounded-circle" src="<?= base_url()?>assets/img/circle.png" alt="Generic placeholder image" width="200" height="200">
+			            <div class="rounded-circle mx-auto d-table">
+			            <i class="fas fa-power-off align-middle d-table-cell"></i>
+			        	</div>
+			            <h4 class="py-3">Lorem Ipsum</h4>
 			          </div><!-- /.col-lg-4 -->
 			        </div><!-- /.row -->
 			    </div>
 			    <div class="container-fluid">
 			    	<div class="row">
 			    		<div class="col-xl-6 col-lg-12 colunas-home line">
-			    			<h2>Heading</h2><br>
+			    			<h2 class="text-center">Heading</h2><br>
 			    			<p>O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela ddificuldade de suprir a grande demanda e épocas de secas que tornam as bandeira mais ameaçadoras, para que você não sofra esse impacto usufrua de nosso aplicativo e fique por dentro de como racionalizar seu consumo de energia trazendo benefícios para o seu bolso.</p>
 			    		</div>
 				    	<div class="col-xl-6 col-lg-12 colunas-home">
-				    		<h2>Heading</h2><br>
-				    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Morbi non arcu risus quis varius quam quisque. In arcu cursus euismod quis viverra. Sed sed risus pretium quam. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Ac turpis egestas maecenas pharetra.</p>
+				    		<h2 class="text-center">Heading</h2><br>
+				    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Morbi non arcu risus quis varius quam quisque. In arcu cursus euismod quis viverra. Sed sed risus pretium quam. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus.</p>
 				    	</div>
 			    	</div>
-			    	<div class="row">
-			    		<div class="col-12 last-container"></div>
+			    	<div class="row align-items-center">
+			    		<div class="col-xl-6 col-lg-12 last-container py-5 px-5 d-table">
+			    			<div class="align-middle d-table-cell">	
+			    			<h2>Heading</h2>
+			    			<p class="mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. </p>
+			    			</div>
+			    		</div>
+			    		<div class="col-xl-6 col-lg-12 last-container py-5 text-center d-table">
+			    			<i class="fas fa-lightbulb align-middle d-table-cell"></i>
+			    		</div>
 			    	</div>
 			  	</div>
         </div>

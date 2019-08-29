@@ -1,4 +1,4 @@
-CREATE database pharus DEFAULT CHARACTER SET utf8mb4 ;
+﻿CREATE database pharus DEFAULT CHARACTER SET utf8mb4 ;
 USE `pharus` ;
 
 -- -----------------------------------------------------
@@ -55,9 +55,6 @@ ADD CONSTRAINT `fk_meta_usuario`
 FOREIGN KEY (`usuario`)
 REFERENCES `pharus`.`usuario` (`conta_contrato`);
 
-ALTER TABLE meta
-ALTER bandeira SET DEFAULT '1';
-
 -- -----------------------------------------------------
 -- Table dicas ---
 -- -----------------------------------------------------
@@ -83,17 +80,17 @@ VALUES (1234567891, 'Samuel98', 'Samuel Soares Pereira Costa', 'ssoares981@gmail
 (0033451541, 'Zé', 'Zé da Costa', 'zezinho@gmail.com', 'zezinho132', '59645625');
 
 -- POVOAMENTO DE CONSUMO
-INSERT INTO consumo (usuario, kw_h, gasto, intervalo_tempo, tarifa) 
-VALUES ('1234567891', 12, 5 ),
-('0009654321', 63, 20 ),
-('0009658141', 70, 50 ),
-('0028458141', 32, 21 ),
-('0028758141', 31, 20 ),
-('0028458751', 264, 52 ),
-('0029428141', 634, 240 ),
-('0033458141', 750, 520 ),
-('0029427141', 322, 211 ),
-('0033451541', 231, 240 );
+INSERT INTO consumo (usuario, kw_h, gasto, tarifa) 
+VALUES ('1234567891', 12, 5, 0),
+('0009654321', 63, 20, 0),
+('0009658141', 70, 50, 0),
+('0028458141', 32, 21, 0),
+('0028758141', 31, 20, 0),
+('0028458751', 264, 52, 0),
+('0029428141', 634, 240, 0),
+('0033458141', 750, 520, 0),
+('0029427141', 322, 211, 0),
+('0033451541', 231, 240, 0);
 
 -- POVOAMENTO DE META
 INSERT INTO meta (usuario, kw_h, gasto) 
@@ -203,7 +200,7 @@ DELIMITER $
 	FROM consumo;
     
     CREATE VIEW view_meta AS
-	SELECT usuario, bandeira, kw_h, tarifa, intervalo_tempo
+	SELECT usuario, meta, kw_h, gasto
 	FROM meta;
     
     CREATE VIEW view_dicas AS 

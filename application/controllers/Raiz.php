@@ -36,6 +36,7 @@ class Raiz extends CI_Controller {
 		if (isset($_SESSION['login'])) {
 			$this->load->view('header_sidebar');
 			$this->load->view('consumo');
+			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
 		}
@@ -45,6 +46,7 @@ class Raiz extends CI_Controller {
 		if (isset($_SESSION['login'])) {
 			$this->load->view('header_sidebar');
 			$this->load->view('metas');
+			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
 		}
@@ -58,6 +60,7 @@ class Raiz extends CI_Controller {
 			}
 			$this->load->view('header_sidebar');
 			$this->load->view('idealdeconsumo');
+			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
 		}
@@ -67,6 +70,7 @@ class Raiz extends CI_Controller {
 		if (isset($_SESSION['login'])) {
 			$this->load->view('header_sidebar');
 			$this->load->view('resultado');
+			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
 		}
@@ -83,6 +87,7 @@ class Raiz extends CI_Controller {
 			$dicas['dica6'] = $this->Dicas_model->exibir('c');
 			$this->load->view('header_sidebar');
 			$this->load->view('dicas', $dicas);
+			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
 		}
@@ -105,6 +110,7 @@ class Raiz extends CI_Controller {
 			$dados['contaContrato'] = $this->Operacoes->contaContrato($usuario);
 			$this->load->view('header_sidebar');
 			$this->load->view('usuario', $dados);
+			$this->load->view('footer');
 		}else{
 			$this->load->view('login');
 		}
@@ -122,6 +128,7 @@ class Raiz extends CI_Controller {
 		if (isset($_SESSION['login'])) {
 			$this->load->view('header_sidebar');
 			$this->load->view('editar_senha');
+			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
 		}
