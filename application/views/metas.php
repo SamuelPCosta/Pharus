@@ -43,7 +43,7 @@
 			        <h2>Defina a Sua <wbr>Meta Mensal</h2>
 		        	<form method="post" action="cadastro_meta/adicionar">
 		        		<div id="meta">
-			        			<input type="number" min="20" max="2500" name="meta" placeholder="Apenas números. Ex.: 90" class="shadow p-3 mb-5 bg-white rounded">
+			        			<input type="number" min="20" max="2500" name="meta" placeholder="Apenas números. Ex.: 90" class="shadow p-3 bg-white rounded">
 			        			<button type="submit" class="btn">Salvar Meta</button><!--Esse botão alterna pra editar-->
 			        		<?php  
 			        			}else{

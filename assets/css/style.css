@@ -370,3 +370,19 @@ footer a:hover{
 #Atualizar_dados, #Salvar_dados{
     bottom: 0px;
 }
+
+/*#################Animação Scroll#################*/
+.js .anime {
+    opacity: 0;
+    transform: translate3D(-50px, 0px, 0px);
+}
+.js .animeR {
+    opacity: 0;
+    transform: translate3D(50px, 0px, 0px);
+}
+.js .anime-init {
+    opacity: 1;
+    transform: translate3D(0px, 0px, 0px);
+    transition: .35s all ease;
+}
+/*https://codepen.io/origamid/pen/vXEmQJ?editors=0110*/
