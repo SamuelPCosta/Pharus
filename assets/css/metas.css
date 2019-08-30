@@ -93,8 +93,8 @@
 }
 
 @media(max-width:1200px) {
-	.valor{
-		margin-top: 50px;
+	.margin-top{
+		margin-top: 50px !important;
 	}
 }
 @media(max-width:768px) {

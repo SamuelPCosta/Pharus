@@ -1,13 +1,13 @@
 		<!--conteudo-->
         <div id="page-content-wrapper">
-            <div class="container first-container">
+            <div class="container first-container ideal">
 	        <div class="row align-items-center">
-	            <div class="col-lg-6 col-md-12">
-	        	<h1>Faixa de consumo</h1><br>
-	        	<p>Esse valor representa a sua faixa de consumo necessária de acordo com o contexto da sua residência.</p>
+	            <div class="col-xl-6 col-md-12">
+	        	<h1 class="mt-5">Faixa de consumo</h1><br>
+	        	<p class="mb-5">Esse valor representa a sua faixa de consumo necessária de acordo com o contexto da sua residência.</p>
 	        </div>
-     		<div class="col-lg-6 col-md-12"><!--Div do questionário-->
-     			<div class="resultado">
+     		<div class="col-xl-6 col-md-12"><!--Div do questionário-->
+     			<div class="resultado mx-auto mt-3">
      				<h3>Intervalo de custo <br><wbr>entre <?php echo $this->session->userdata('faixa'); ?></h3>
      			</div>
      			

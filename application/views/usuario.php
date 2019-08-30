@@ -4,7 +4,7 @@
 	        <div class="row align-items-center">
 	     		<div class="col-xl-4 col-md-12">
 	     			<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content">
-	     				<img src="<?= base_url()?>assets/img/#.png" width=240>
+	     				<img src="<?= base_url()?>assets/img/user_man.png" width=260>
 	     			</div>
 	     			<h2 class="my-3 text-center"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
 	     		</div>

@@ -6,6 +6,7 @@
 }
 .tudo{
     min-height: 100%; /*Configuração necessaria para o footer*/
+    overflow-x: hidden;
 }
 * html #tudo {
     height: 100%; /* hack para IE6 que trata height como min-height */
@@ -182,7 +183,7 @@ h4{
     margin-top: 0;
 }
 .colunas-home{ /*Colunas duplas abaixo da barra central*/
-    min-height: 75vh;
+    min-height: 65vh;
     padding: 30px !important;
     /*background-color: #9aada333;*/
     background-color: #c2d8e2;
@@ -191,7 +192,7 @@ h4{
     width: 100% !important;
     text-align: justify;
     margin: auto;
-    font-size: 1.15em;
+    font-size: 1.35em;
 }
 .line{
     border-right: none;
@@ -355,8 +356,15 @@ footer a:hover{
 }
 .content{
     background-color: #555;
-    width: 260px; 
+    width: 260px !important; 
     height: 260px !important;   
+}
+.fa-upload{
+    font-size: 10em;
+    color: #fff;
+}
+.content img{
+    margin-left: -15px !important;
 }
 .usuario .input-group{
     width: 280px;
@@ -370,3 +378,19 @@ footer a:hover{
 #Atualizar_dados, #Salvar_dados{
     bottom: 0px;
 }
+
+/*#################Animação Scroll#################*/
+.js .anime {
+    opacity: 0;
+    transform: translate3D(-50px, 0px, 0px);
+}
+.js .animeRight{
+    opacity: 0;
+    transform: translate3D(50px, 0px, 0px);
+}
+.js .anime-init {
+    opacity: 1;
+    transform: translate3D(0px, 0px, 0px);
+    transition: .35s all ease;
+}
+/*https://codepen.io/origamid/pen/vXEmQJ?editors=0110*/
