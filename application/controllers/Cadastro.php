@@ -54,21 +54,25 @@ class Cadastro extends CI_Controller {
 
 		//Esse array passa os campos a serem atualizados na table usuario;
 		$dadosUpdate = array();
-			if($conta_contrato!=$contaContratoAtual) {
+			if($conta_contrato!=$contaContratoAtual && $conta_contrato!=NULL && $conta_contrato!=" ") {
 				$dadosUpdate['conta_contrato'] = $conta_contrato;
-			}if ($usuario!=$usuarioAtual) {
+			}if ($usuario!=$usuarioAtual && $usuario!=NULL && $usuario!=" ") {
 				$dadosUpdate['usuario'] = $usuario;
-			}if ($nome!=$nomeAtual) {
+			}if ($nome!=$nomeAtual && $nome!=NULL && $nome!=" ") {
 				$dadosUpdate['nome'] = $nome;
-			}if ($email!=$emailAtual) {
+			}if ($email!=$emailAtual && $email!=NULL && $email!=" ") {
 				$dadosUpdate['email'] = $email;
 			}
 		$this->load->model("Usuarios_model");
-		$this->Usuarios_model->atualizarDados($usuarioAtual, $dadosUpdate);
+		$nome_de_usuario_existente = $this->Usuarios_model->atualizarDados($dadosUpdate, $usuarioAtual);
 		if ($nome_de_usuario_existente) {
-			redirect('usuario?error=1');	
+			redirect('usuario?error=1');	//Nome de usuário já existe
 		}else{
-			redirect('usuario');	
+			if ($usuario!=$usuarioAtual && $usuario!=NULL && $usuario!=" ") {
+				$this->session->set_userdata('usuario', $usuario);
+				//Sobrescreve a seção de usuário
+			}
+			redirect('usuario');
 		}
 	}
 }

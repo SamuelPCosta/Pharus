@@ -44,10 +44,11 @@ window.onload = function(){
   document.getElementById(atual).classList.add("atual");
 }
 
-$("#photo_user").hover(function(){
+$("#div_photo_user").hover(function(){
   $(this).css("cursor", "pointer");
+  }, function(){
+  $(".dropdown-menu").removeClass("show");
 });
-
 /*###########Animação Scroll###########*/
 var root = document.documentElement;
 root.className += ' js';

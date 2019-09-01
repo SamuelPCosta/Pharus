@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Consumo_model extends CI_Model {
-	public function meta($contaContrato){
+	public function SelecionarMeta($contaContrato){
 		$this->db->select('kw_h'); //Seleciona o consumo
 		$this->db->where('usuario', $contaContrato);
     	$query = $this->db->get('meta');
@@ -10,7 +10,7 @@ class Consumo_model extends CI_Model {
 		return $consumo; //retorna o consumo
 	}
 
-	public function consumo($contaContrato){
+	public function SelecionarConsumo($contaContrato){ //Selecionar o consumo até o momento
 		$this->db->select('kw_h'); //Seleciona o consumo
 		$this->db->where('usuario', $contaContrato);
     	$query = $this->db->get('consumo');

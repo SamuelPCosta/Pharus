@@ -8,11 +8,11 @@ class Raiz extends CI_Controller {
 			$usuario = $this->session->userdata('usuario');
 			$contaContrato = $this->Operacoes->contaContrato($usuario);
 			$this->load->model("Consumo_model");
-			$consumo['meta'] = $this->Consumo_model->meta($contaContrato);
+			$consumo['meta'] = $this->Consumo_model->SelecionarMeta($contaContrato);
 			if($consumo['meta']!=0){
 				$valor_tarifa = 0.7;
 				$valor_dia = ($consumo['meta']/30)/$valor_tarifa;
-				$consumo['consumo'] = $this->Consumo_model->consumo($contaContrato);
+				$consumo['consumo'] = $this->Consumo_model->SelecionarConsumo($contaContrato);
 				$consumo['gasto'] = $consumo['consumo']*100/$valor_dia;
 				$porcentagem = $consumo['gasto'];
 				$this->load->helper('cookie');
@@ -34,6 +34,26 @@ class Raiz extends CI_Controller {
 
 	public function consumo(){
 		if (isset($_SESSION['login'])) {
+			//Criar uma array q implementa o consumo de hora em hora e ao final do dia é destruido
+			$agendamento = 13; // Não vou usar minutos aqui
+			$horaAtual   = 13; // Obtenha a hora via JS
+			if ($consumoPorHora=array()) {
+				date_default_timezone_set('America/Sao_Paulo');
+				if(date('H')==0) {
+					unset($consumoPorHora);
+					$agendamento = 0;
+				}if ($agendamento==$horaAtual) {//Mudar isso aqui
+					$this->load->model("Operacoes");
+					$usuario = $this->session->userdata('usuario');
+					$contaContrato = $this->Operacoes->contaContrato($usuario);
+					$this->load->model("Consumo_model");
+					$consumoPorHora = [$this->Consumo_model->SelecionarConsumo($contaContrato)];	
+					//echo date('H');
+				    print_r($consumoPorHora);
+				}
+			}else{
+				$consumoPorHora=array();
+			}
 			$this->load->view('header_sidebar');
 			$this->load->view('consumo');
 			$this->load->view('footer');
@@ -145,5 +165,19 @@ class Raiz extends CI_Controller {
 
 	public function simulador(){
 		$this->load->view('simulador');
+	}
+
+	public function consumir(){
+		if ($consumo=[]){
+			foreach ($potencia as $aparelho) {
+				$potencia=$this->input->post("potencia");
+				$horas=$this->input->post("horas");
+				$consumo[] =$potencia*$horas;
+				array_sum($consumo);
+			}
+			echo array_sum($consumo);
+		}else{
+			$consumo=[];
+		}
 	}
 }

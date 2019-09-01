@@ -67,6 +67,43 @@
 	<div class="container">
 		<h1>Simulador de Consumo <br>de um domicílio</h1>
 		<div class="row">
+				<!-- 
+				• Criar array com nomes de aparelhos;
+				• Criado laço foreach;
+				• echo dentro do foreach com label (pegando do array), e inputs de potência e tempo 
+				For (i=1; i++; i>=lenght){
+					PotênciaHoras[] => "potencia[i]*horas[i]";
+				}
+				sum(PotênciaHoras);
+				-->
+				<div class="col-lg-6">
+					<form method="post" action="Raiz/Consumir">
+					<?php $aparelhos = array(
+						'Geladeira' => 'Geladeira',
+						'Computador' => 'Computador',
+						'Televisão' => 'Televisão',
+						'Microondas' => 'Microondas',
+						'Freezer' => 'Freezer'
+					); 
+					foreach ($aparelhos as $aparelho) {
+						$i=1;
+						echo "<h2>".$aparelho.":</h2>
+							<div class='inputs'>
+								<input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
+							<select name='potencia[]'>
+								<option value='1'>Potência1</option>
+								<option value='1'>Potência2</option>
+								<option value='1'>Potência3</option>
+								<option value='1'>Potência4</option>
+								<option value='1'>Potência5</option>
+							</select></div>";
+						$i++;
+					}
+					?>
+					<button type="submit" name="button" class="btn login_btn">Consumir</button>
+					</form>
+				</div>
+
 				<div class="col-lg-6">
 					<form method="post" action="#">
 					<h2>Geladeira:</h2>
@@ -113,42 +150,6 @@
 						<option>Potência</option>
 					</select>
 					</div>
-				</div>
-				<div class="col-lg-6">
-					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Fogão:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Microondas:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Freezer:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-				</div>
-				<div class="col-lg-6">
-					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Fogão:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Microondas:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Freezer:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-				</div>
-				<div class="col-lg-6">
-					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Fogão:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Microondas:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Freezer:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
-					<h2>Geladeira:</h2>
-					<input type="number" min="0" max="24" name="" placeholder="Horas"><br>
 				</div>
 				<button type="submit" name="button" class="btn login_btn">Consumir</button>
 			</form>

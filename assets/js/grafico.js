@@ -8,7 +8,7 @@ var data = {
   datasets: [{
     label: "My First dataset",
     fillColor: "rgba(151,187,205,0.0)",
-    strokeColor: "rgba(151,187,205,1)",
+    strokeColor: "#9aada3",//"rgba(151,187,205,1)",
     pointColor: "rgba(151,187,205,1)",
     pointStrokeColor: "#fff",
     pointHighlightFill: "#fff",

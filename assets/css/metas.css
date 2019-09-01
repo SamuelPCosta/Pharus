@@ -87,7 +87,7 @@
 	text-align: justify;
 	margin: auto;
 }
-.alert-danger{
+.container-metas .alert-danger{
 	width: 60% !important;
     margin: 5px auto !important;
 }

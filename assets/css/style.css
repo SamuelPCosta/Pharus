@@ -288,31 +288,6 @@ h4{
         z-index: 1!important;
     }
 }
-/*
-footer{
-	position: relative;
-	width: 100%;
-	height: 35px;
-    margin: auto auto;
-    background-color: #353535;
-    z-index: 2;
-}
-footer ul{
-    margin: 0px;
-}
-footer li{
-    list-style: none;
-    margin: auto;
-    line-height: 35px  
-}
-footer a{
-	text-decoration: none;
-	color: #ddd;
-}
-footer a:hover{
-	text-decoration: none;
-	color: #fff;
-}*/
 footer{
     z-index: 0;
     background-color: #2b3530;
@@ -360,7 +335,7 @@ footer a:hover{
     height: 260px !important;   
 }
 .fa-upload{
-    font-size: 10em;
+    font-size: 14em;
     color: #fff;
 }
 .content img{
@@ -368,7 +343,7 @@ footer a:hover{
     opacity: 1;
     transition: opacity .35s;
 }
-#photo_user:hover{
+#div_photo_user:hover>img{
     opacity: 0.25;
     position: absolute;
 }
@@ -398,6 +373,18 @@ footer a:hover{
 }
 .usuario{
     padding-top: 0px !important;
+}
+.dropdown-menu{
+    margin-top: -80px;
+}
+input[type=file]{
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
 }
 /*#################Animação Scroll#################*/
 .js .anime {

@@ -3,14 +3,22 @@
             <div class="container first-container usuario">
 	        <div class="row align-items-center">
 	     		<div class="col-xl-4 col-md-12 mx-auto">
-	     			<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content">
+	     			<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content" id="div_photo_user">
 	     				<img src="<?= base_url()?>assets/img/user_man.png" id="photo_user" width=260>
-	     				<div class="w-75 mx-auto mt-5" id="envio">
-	     					<form action="#" method="post" enctype="multipart/form-data">
-		     					<input type="file" name="arquivo" required="">
-		     					<i class="fas fa-upload ml-1"></i>
+	     				<div class="w-100 mx-auto mt-3" id="envio">
+	     					<!-- <form action="#" method="post" enctype="multipart/form-data"> -->
+		     					<div class="btn-group">
+								  <a class="mx-auto" href="#" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    <i class="fas fa-upload ml-1"></i>
+								  </a>
+								  <div class="dropdown-menu ml-3" aria-labelledby="dropdownMenuLink">
+								  	<span class="position-relative overflow-hidden text-center"><p>Adicione uma foto</p></span>
+								    <input type="file" name="arquivo" required="" class="position-absolute">
+								    <a class="dropdown-item" href="#">Remover foto Atual</a>
+								  </div>
+								</div>
 		     					<!-- <input type="submit" name="Salvar">	 -->
-		     				</form>
+		     				<!-- </form> -->
 		     			</div>	
 	     			</div>
 	     			<h2 class="my-3 text-center"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
@@ -28,19 +36,28 @@
 							<form method="post" action="cadastro/editarDados">
 								Nome Completo:
 								<div class="input-group mb-2">
-									<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user border-top-0 shadow-sm" value="" placeholder="" disabled>
+									<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user border-top-0 shadow-sm" placeholder="" disabled>
 								</div>
 								Usuário:
 								<div class="input-group mb-2">
-									<input type="text" name="usuario" value="<?php echo $this->session->userdata('usuario'); ?>" class="form-control dados_user border-top-0 shadow-sm text-capitalize" value="" placeholder="" disabled>
+									<input type="text" name="usuario" value="<?php echo $this->session->userdata('usuario'); ?>" class="form-control dados_user border-top-0 shadow-sm text-capitalize" placeholder="" disabled>
 								</div>
+								<?php 
+				        			if (isset($_GET['error'])){
+				        				if ($_GET['error']==1) {
+				        		?>
+				        			<div class='alert alert-danger' role='alert'>O nome de usuário<wbr>já existe!</div>
+				        		<?php
+				        				}
+				        			}
+				        		?>
 								Email:
 								<div class="input-group mb-2">
-									<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user border-top-0 shadow-sm" value="" placeholder="" disabled>
+									<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user border-top-0 shadow-sm" placeholder="" disabled>
 								</div>
 								Conta Contrato:
 								<div class="input-group mb-2">
-									<input type="text" name="conta_contrato" value="<?php echo $contaContrato ?>" class="form-control dados_user border-top-0 shadow-sm" value="" placeholder="" disabled>
+									<input type="text" name="conta_contrato" value="<?php echo $contaContrato ?>" class="form-control dados_user border-top-0 shadow-sm" placeholder="" disabled>
 								</div>
 								Cep/Bairro:
 								<div class="input-group mb-2">
