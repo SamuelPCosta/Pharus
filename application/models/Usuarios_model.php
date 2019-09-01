@@ -25,10 +25,19 @@ class Usuarios_model extends CI_Model {
 		return $login;
 	}
 
-	public function atualizarDados($usuario){
-		$this->db->set('senha', $nova_senha);
-		$this->db->where('usuario', $usuario);
-		$this->db->update('usuario');
+	public function atualizarDados($usuarioAtual, $dados){
+		if ($dadosUpdate != NULL) {
+			$this->db->select('usuario');
+			$this->db->where('usuario', $usuarioAtual);
+			$query = $this->db->get('usuario');
+			$nome_de_usuario = $query->num_rows(); //Obtem o número de linhas
+			if ($nome_de_usuario>0) {//Se for >0, o nome de usuário já existe
+				return $nome_de_usuario_existente=TRUE;
+			}else{
+				$this->db->where('usuario', $usuarioAtual);
+				$this->db->update('usuario', $dadosUpdate);
+			}
+		}
 	}
 
 	public function senhaAtual($usuario,$senha_atual){

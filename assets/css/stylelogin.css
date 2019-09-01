@@ -63,20 +63,6 @@ html {
 .logo_grande{
 	margin-top: -300px;
 }
-.title_log{
-	margin: 20px 0px;
-	text-transform: capitalize;
-	font-weight: normal;
-	color: #364046;
-	font-size: 1.8em;
-	text-align: center !important;
-}
-.user_card_user{
-	width: 100%;
-}
-.usuario{
-	padding-top: 0px !important;
-}
 @media(max-width:768px) {
 	.logo_grande{
 		width: 170px !important;

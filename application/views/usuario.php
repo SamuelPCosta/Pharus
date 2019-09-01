@@ -2,9 +2,16 @@
         <div id="page-content-wrapper">
             <div class="container first-container usuario">
 	        <div class="row align-items-center">
-	     		<div class="col-xl-4 col-md-12">
+	     		<div class="col-xl-4 col-md-12 mx-auto">
 	     			<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content">
-	     				<img src="<?= base_url()?>assets/img/user_man.png" width=260>
+	     				<img src="<?= base_url()?>assets/img/user_man.png" id="photo_user" width=260>
+	     				<div class="w-75 mx-auto mt-5" id="envio">
+	     					<form action="#" method="post" enctype="multipart/form-data">
+		     					<input type="file" name="arquivo" required="">
+		     					<i class="fas fa-upload ml-1"></i>
+		     					<!-- <input type="submit" name="Salvar">	 -->
+		     				</form>
+		     			</div>	
 	     			</div>
 	     			<h2 class="my-3 text-center"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
 	     		</div>
@@ -21,31 +28,31 @@
 							<form method="post" action="cadastro/editarDados">
 								Nome Completo:
 								<div class="input-group mb-2">
-									<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user" value="" placeholder="" disabled>
+									<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user border-top-0 shadow-sm" value="" placeholder="" disabled>
 								</div>
 								Usuário:
 								<div class="input-group mb-2">
-									<input type="text" name="usuario" value="<?php echo $this->session->userdata('usuario'); ?>" class="form-control dados_user" value="" placeholder="" disabled>
+									<input type="text" name="usuario" value="<?php echo $this->session->userdata('usuario'); ?>" class="form-control dados_user border-top-0 shadow-sm text-capitalize" value="" placeholder="" disabled>
 								</div>
 								Email:
 								<div class="input-group mb-2">
-									<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user" value="" placeholder="" disabled>
+									<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user border-top-0 shadow-sm" value="" placeholder="" disabled>
 								</div>
 								Conta Contrato:
 								<div class="input-group mb-2">
-									<input type="text" name="conta_contrato" value="<?php echo $contaContrato ?>" class="form-control dados_user" value="" placeholder="" disabled>
+									<input type="text" name="conta_contrato" value="<?php echo $contaContrato ?>" class="form-control dados_user border-top-0 shadow-sm" value="" placeholder="" disabled>
 								</div>
 								Cep/Bairro:
 								<div class="input-group mb-2">
-									<input type="text" name="senha_atual" class="form-control dados_user" value="" placeholder="" disabled>
+									<input type="text" name="" class="form-control dados_user border-top-0 shadow-sm" value="" placeholder="" disabled>
 								</div>
 						</div>
-							<div class="d-flex justify-content-center mt-3 login_container my-3">
-							<button type="submit" name="editar" id="Salvar_dados" class="btn login_btn btn-success position-absolute my-4">Salvar alterações</button>
-							</div>
-							<div class="d-flex justify-content-center mt-3 login_container my-3">
-							<button type="" name="editar" id="Atualizar_dados" class="btn login_btn btn-success position-absolute my-4">Atualizar dados</button>
-						</form>
+								<div class="d-flex justify-content-center mt-3 login_container my-3">
+								<button type="submit" name="editar" id="Salvar_dados" class="btn login_btn btn-success position-absolute my-4">Salvar alterações</button>
+								</div>
+								<div class="d-flex justify-content-center mt-3 login_container my-3">
+								<button type="" name="editar" id="Atualizar_dados" class="btn login_btn btn-success position-absolute my-4">Atualizar dados</button>
+							</form>
 					</div>
 				</div>
 			</div>

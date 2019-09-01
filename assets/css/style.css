@@ -365,6 +365,12 @@ footer a:hover{
 }
 .content img{
     margin-left: -15px !important;
+    opacity: 1;
+    transition: opacity .35s;
+}
+#photo_user:hover{
+    opacity: 0.25;
+    position: absolute;
 }
 .usuario .input-group{
     width: 280px;
@@ -378,7 +384,21 @@ footer a:hover{
 #Atualizar_dados, #Salvar_dados{
     bottom: 0px;
 }
-
+.title_log{
+    margin: 20px 0px;
+    text-transform: capitalize;
+    font-weight: normal;
+    color: #364046;
+    font-size: 1.8em;
+    text-align: center !important;
+}
+.user_card_user{
+    width: 100%;
+    background-color: #e4e4e4;
+}
+.usuario{
+    padding-top: 0px !important;
+}
 /*#################Animação Scroll#################*/
 .js .anime {
     opacity: 0;

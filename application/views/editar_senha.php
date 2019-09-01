@@ -2,7 +2,7 @@
         <div id="page-content-wrapper">
             <div class="container first-container">
 	        <div class="row align-items-center">
-	     		<div class="col-xl-4 col-md-12">
+	     		<div class="col-xl-4 col-md-12 mx-auto">
 	     			<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content">
 	     				<!-- <i class="fas fa-upload align-middle d-table-cell mx-auto"></i> -->
 	     				<img src="<?= base_url()?>assets/img/user_man.png" id="upload" width=260>

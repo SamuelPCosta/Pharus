@@ -44,6 +44,10 @@ window.onload = function(){
   document.getElementById(atual).classList.add("atual");
 }
 
+$("#photo_user").hover(function(){
+  $(this).css("cursor", "pointer");
+});
+
 /*###########Animação Scroll###########*/
 var root = document.documentElement;
 root.className += ' js';

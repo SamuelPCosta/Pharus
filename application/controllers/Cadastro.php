@@ -40,14 +40,35 @@ class Cadastro extends CI_Controller {
 	}
 
 	public function editarDados(){
-		$this->load->model("usuarios_model");
+		$this->load->model("Operacoes");
 		
-		//Esse array passa os campos a serem inseridos na table usuario;
-		$dados = array(
-			'conta_contrato' => $this->input->post("conta_contrato"),
-			'usuario' => $this->input->post("usuario"),
-			'nome' => $this->input->post("nome"),
-			'email' => $this->input->post("email")
-		);
+		$conta_contrato = $this->input->post("conta_contrato");
+		$usuario = $this->input->post("usuario");
+		$nome = $this->input->post("nome");
+		$email = $this->input->post("email");
+
+		$usuarioAtual=$this->session->userdata('usuario');
+		$nomeAtual=$this->Operacoes->nomeCompleto($usuarioAtual);
+		$contaContratoAtual=$this->Operacoes->contaContrato($usuarioAtual);
+		$emailAtual=$this->Operacoes->email($usuarioAtual);
+
+		//Esse array passa os campos a serem atualizados na table usuario;
+		$dadosUpdate = array();
+			if($conta_contrato!=$contaContratoAtual) {
+				$dadosUpdate['conta_contrato'] = $conta_contrato;
+			}if ($usuario!=$usuarioAtual) {
+				$dadosUpdate['usuario'] = $usuario;
+			}if ($nome!=$nomeAtual) {
+				$dadosUpdate['nome'] = $nome;
+			}if ($email!=$emailAtual) {
+				$dadosUpdate['email'] = $email;
+			}
+		$this->load->model("Usuarios_model");
+		$this->Usuarios_model->atualizarDados($usuarioAtual, $dadosUpdate);
+		if ($nome_de_usuario_existente) {
+			redirect('usuario?error=1');	
+		}else{
+			redirect('usuario');	
+		}
 	}
 }
