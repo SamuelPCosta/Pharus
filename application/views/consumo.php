@@ -1,6 +1,4 @@
-		<!--conteudo-->
-        <div id="page-content-wrapper">
-            <div class="container-fluid first-container">
+			<div class="container-fluid first-container">
 		        <div class="row">
 		        	<div class="col-xl-6 col-md-12 graficos">
 		        		<canvas id="line-chart"></canvas>

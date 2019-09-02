@@ -1,6 +1,3 @@
-		<!--conteudo-->
-		<?php $titulo="| Home" ?>
-		<div id="page-content-wrapper">
 			<div class="container first-container">
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-lg-12">

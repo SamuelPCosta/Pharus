@@ -1,6 +1,4 @@
-		<!--conteudo-->
-        <div id="page-content-wrapper">
-            <div class="container first-container ideal">
+			<div class="container first-container ideal">
 	        <div class="row align-items-center">
 	            <div class="col-xl-6 col-md-12">
 	        	<h1 class="mt-5">Faixa de consumo</h1><br>

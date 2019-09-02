@@ -1,6 +1,4 @@
-	<!--conteudo-->
-        <div id="page-content-wrapper">
-            <div class="container-fluid first-container dicas-container">
+			<div class="container-fluid first-container dicas-container">
 	        <div class="row">
 	            <div class="col-xl col-12 colunas">
 				    <div class="a">

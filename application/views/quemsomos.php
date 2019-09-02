@@ -1,6 +1,4 @@
-		<!--conteudo-->
-        <div id="page-content-wrapper">
-            <div class="container quemsomos">
+			<div class="container quemsomos">
 		        <div class="row align-items-center">
 		     		<div class="col-lg-6 col-md-12 float-left">
 		     			<br><br>
