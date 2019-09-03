@@ -1,4 +1,4 @@
-			<div class="container first-container">
+			<div class="container first-container card">
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-lg-12">
 						<div class="box">

@@ -142,7 +142,7 @@ header .navbar{
 #menu-toggle{ /*Visibilidade do botão de menu*/
     visibility: visible;
     position: fixed;
-    color: #fff;
+    //color: #fff;
 }
 #menu-toggle i{ /*Visibilidade do botão de menu*/
     font-size: 25px;
@@ -335,17 +335,30 @@ footer a:hover{
     height: 260px !important;   
 }
 .fa-upload{
-    font-size: 14em;
+    font-size: 3.5em;
     color: #fff;
+    opacity: 0;
 }
 .content img{
     margin-left: -15px !important;
     opacity: 1;
     transition: opacity .35s;
+    min-width: 260px;
+    min-height: 260px;
+    object-fit: cover;
 }
-#div_photo_user:hover>img{
-    opacity: 0.25;
+#div_photo_user div{
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+#div_photo_user:hover>a img{
+    opacity: 0.25;
+}
+#div_photo_user:hover>a .fa-upload{
+    opacity: 1;
 }
 .usuario .input-group{
     width: 280px;
@@ -366,10 +379,6 @@ footer a:hover{
     color: #364046;
     font-size: 1.8em;
     text-align: center !important;
-}
-.user_card_user{
-    width: 100%;
-    background-color: #e4e4e4;
 }
 .usuario{
     padding-top: 0px !important;

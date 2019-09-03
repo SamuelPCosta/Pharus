@@ -44,10 +44,11 @@ window.onload = function(){
   document.getElementById(atual).classList.add("atual");
 }
 
-$("#div_photo_user").hover(function(){
-  $(this).css("cursor", "pointer");
-  }, function(){
-  $(".dropdown-menu").removeClass("show");
+$(document).mouseup(function(e){
+  var img = $(".dropdown-menu");
+  if (!img.is(e.target) && img.has(e.target).length === 0){
+    $(".dropdown-menu").removeClass("show");
+  }
 });
 /*###########Animação Scroll###########*/
 var root = document.documentElement;

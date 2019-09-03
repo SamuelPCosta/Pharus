@@ -27,7 +27,7 @@
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top my-0 w-100 shadow">
 			<a href="index" class="mx-auto logo"><img src="<?= base_url()?>assets/img/logo.png" width=110></a> <!--Nossa Logo-->
-			<a href="#menu-toggle" class="btn" id="menu-toggle"><i class="fas fa-bars"></i></a>
+			<a href="#menu-toggle" class="btn text-dark" id="menu-toggle"><i class="fas fa-bars"></i></a>
 		</nav>
 	</header>
 	<!-- Header -->

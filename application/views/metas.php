@@ -33,7 +33,7 @@
 	     			}		
 	     			?>
 	     		</div>
-	     		 <div class="col-xl-6 col-md-12 gasto">	        	
+	     		 <div class="col-xl-6 col-md-12 gasto card py-5">	        	
 		        			<?php  
 			        			if ($meta==0) {
 			        		?>
