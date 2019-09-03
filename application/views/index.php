@@ -1,4 +1,4 @@
-			<div class="container first-container card">
+			<div class="container first-container">
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-lg-12">
 						<div class="box">
@@ -106,8 +106,8 @@
 			$('.chart').easyPieChart({});});
 		var titulo;
 		<?php 
-		if ($gasto<=100) {echo "var corbarra = '#0a522d'";
-	} else {echo "var corbarra = '#a30a0a'";}
+		if ($gasto<=100) {echo "var corbarra = '#FFC107'";
+	} else {echo "var corbarra = '#a32f2f'";}
 	?>	
 </script>
 </body>

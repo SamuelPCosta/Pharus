@@ -33,7 +33,7 @@
 	     			}		
 	     			?>
 	     		</div>
-	     		 <div class="col-xl-6 col-md-12 gasto card py-5">	        	
+	     		 <div class="col-xl-6 col-md-12 gasto card py-5 px-0 shadow-sm">	        	
 		        			<?php  
 			        			if ($meta==0) {
 			        		?>
@@ -70,15 +70,20 @@
 		        </div>
             </div>
             </div>
-            <div class="container-fluid texto_metas">
+            <div class="container texto_metas card">
             	<div class="row">
             		<div class="col-xl-8 col-md-12 colunas-meta">
             			<h1>Racionalize</h1><br>
             			<p>&emsp;&emsp;O consumo de energia elétrica vem aumentando cada vem mais e isso traz uma série de problemas para o nosso ecossistema, pois no processo de produção dessa corrente elétrica há uma série de fatores prejudiciais, como é o caso da construção de hidrelétricas (representa mais de 90% de nossos recursos energéticos) que contribuem para o desmatamento, areamento do solo ou mesmo na extinção de espécies de animais, além da energia elétrica, eólica e dentre outros. Sendo assim, deve-se evitar esse consumo desenfreado, logo, visando o bem estar social e ambiental.</p>
             		</div>
-            		<div class="col-xl-4 col-md-12 colunas-meta"></div>
+            		<div class="col-xl-4 col-md-12 colunas-meta d-table">
+            			<div class="d-table-call align-center">
+            				<img src="<?= base_url()?>assets/img/user_man.png" id="photo_user" width=100% >
+            			</div>
+            		</div>
             	</div>
             </div>
+            <div class="container-fluid texto_metas card colunas-meta coluna-meta-back bg-white" ></div>
         </div>
         <!--conteudo-->
 		</div>

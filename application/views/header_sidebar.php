@@ -25,7 +25,7 @@
 
 	<!-- Header -->
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top my-0 w-100 shadow">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-0 w-100 shadow">
 			<a href="index" class="mx-auto logo"><img src="<?= base_url()?>assets/img/logo.png" width=110></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn text-dark" id="menu-toggle"><i class="fas fa-bars"></i></a>
 		</nav>
@@ -35,7 +35,7 @@
 		<!--Menu lateral-->
 		<!-- Sidebar -->
         <div id="wrapper">
-        <div id="sidebar-wrapper" class="shadow">
+        <div id="sidebar-wrapper" class="shadow bg-dark">
             <ul class="sidebar-nav">
             	<li id="Usuario">
             		<a href="usuario" class="text-capitalize"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
@@ -69,4 +69,4 @@
         <!-- /#sidebar-wrapper -->
         <div id="dark"></div>
             <!--conteudo-->
-        <div id="page-content-wrapper" class="bg-light">
+        <div id="page-content-wrapper" class="text-white">

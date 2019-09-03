@@ -9,8 +9,8 @@
 	     		</div>
 	     		<div class="col-xl-6 col-md-12 mx-auto">
 	     		<div class="container h-100">
-				<div class="d-flex justify-content-center h-100" >
-					<div class="user_card user_card_user my-3">
+				<div class="d-flex justify-content-center h-100 card py-5 shadow">
+					<div class="">
 						<div class="d-flex justify-content-center">
 							<div class="brand_logo_container">
 								<h1 class="title_log">Editar Senha</h1><!--Nossa Logo-->

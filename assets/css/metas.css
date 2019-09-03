@@ -87,6 +87,11 @@
 	text-align: justify;
 	margin: auto;
 }
+.coluna-meta-back{
+	height: 300px; 
+	margin-top: -15%;
+	z-index: -1
+}
 .container-metas .alert-danger{
 	width: 60% !important;
     margin: 5px auto !important;

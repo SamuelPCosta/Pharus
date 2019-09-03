@@ -9,9 +9,9 @@
 									</div>
 								</a>
 								<div class="dropdown-menu ml-3" aria-labelledby="dropdownMenuLink">
-									<form action="#" method="post" enctype="multipart/form-data">
+									<form action="Raiz/salvarimg" method="post" enctype="multipart/form-data">
 									<span class="position-relative overflow-hidden text-center"><p>Adicione uma foto</p></span><br>
-									<input type="file" name="arquivo" required="" class="position-absolute">
+									<input type="file" name="foto" required="" class="position-absolute">
 									<a class="dropdown-item" href="#">Remover foto Atual</a>
     								<div class="px-5"><input class="text-success" type="submit" value="Salvar"></div>
     								</form>
@@ -22,7 +22,7 @@
 						</div>
 						<div class="col-xl-6 col-md-12 mx-auto">
 							<div class="container h-100 usuario">
-								<div class="card rounded-lg px-3 py-5">
+								<div class="card rounded-lg px-3 py-5 shadow">
 									<div class="">
 										<div class="d-flex justify-content-center">
 											<div class="brand_logo_container">
@@ -62,10 +62,10 @@
 													</div>
 												</div>
 												<div class="d-flex justify-content-center mt-3 login_container my-3">
-													<button type="submit" name="editar" id="Salvar_dados" class="btn login_btn btn-success position-absolute my-4">Salvar alterações</button>
+													<button type="submit" name="editar" id="Salvar_dados" class="btn login_btn btn-success position-absolute my-4 mb-5">Salvar alterações</button>
 												</div>
 												<div class="d-flex justify-content-center mt-3 login_container my-3">
-													<button type="" name="editar" id="Atualizar_dados" class="btn login_btn btn-success position-absolute my-4">Atualizar dados</button>
+													<button type="" name="editar" id="Atualizar_dados" class="btn login_btn btn-success position-absolute my-4 mb-5">Atualizar dados</button>
 												</form>
 											</div>
 										</div>

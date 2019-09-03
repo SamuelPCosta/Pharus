@@ -228,9 +228,8 @@ var EasyPieChart = function(el, opts) {
 		var tamanho = 550;
 	}*/
 	var defaultOptions = {
-		/*barColor: '#2b3530', cor da barra*/
 		barColor: corbarra,
-		trackColor: '#a6b7ae',/*cor da barra não preenchida*/
+		trackColor: '#343a40',/*cor da barra não preenchida*/
 		scaleColor: '#00aa00',
 		scaleLength: 5,
 		lineCap: 'round',

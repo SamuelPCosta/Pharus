@@ -51,7 +51,7 @@ header .navbar{
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background-color: #9aada3; /*Cor de fundo do menu*/
+    //background-color: #9aada3; /*Cor de fundo do menu*/
     padding-top: 0px;
     z-index: 1;
     -webkit-transition: all 0.2s ease;
@@ -96,6 +96,8 @@ header .navbar{
     position: relative;
     padding: 0;
     margin: 0 auto;
+    z-index: -1;
+    border-color: #464B51
 }
 #wrapper.toggled #page-content-wrapper {
     position: relative;
@@ -121,14 +123,14 @@ header .navbar{
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #444;
+    color: #fff;
     font-size: 1.1em;
     padding: 10px 0px;
 }
 .sidebar-nav li a:hover { /*hover dos itens do menu*/
     text-decoration: none;
     color: #fff;
-    background-color: #364046;
+    background-color: #464B51;
 }
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
@@ -152,11 +154,11 @@ header .navbar{
   box-shadow: none !important;
 }
 .atual{
-    border-left: solid 5px #364046; /*Estilos de marcarção para situar página do menu*/
-    background-color: #798984;/*#36404655*/
+    border-left: solid 5px #FFC107; /*Estilos de marcarção para situar página do menu*/
+    background-color: #464B51;/*#36404655*/
 }
 .atual a{
-    color: #222 !important;
+    color: #FFC107 !important;
     margin-left: -5px !important;
 }
 .atual a:hover{
@@ -165,7 +167,8 @@ header .navbar{
     background-color: #364046;
 }
 .barra-horizontal{
-    background-color: #457e99;
+    //background-color: #457e99;
+    background-color: #2E6171;      
 }
 .rounded-circle{
     border: 3px solid white;
@@ -199,7 +202,7 @@ h4{
 }
 .last-container{
     height: 50vh;
-    background-color: #457E99;
+    background-color: #2E6171;
 }
 .last-container h2{
     text-align: center;
@@ -269,6 +272,7 @@ h4{
         position: relative;
         margin: 0 auto;
         overflow:hidden;
+        background-color: #464B51
     }
     #wrapper.toggled #page-content-wrapper {
         position: relative;
@@ -290,7 +294,8 @@ h4{
 }
 footer{
     z-index: 0;
-    background-color: #2b3530;
+    background-color: #464B51
+    ;
     color: #ccc;
 }
 footer a{
@@ -326,6 +331,9 @@ footer a:hover{
 /*
 ####################--Usuário--####################
 */
+.btn{
+    border-radius: 25px;
+}
 .row .d-inline-block{
     height: 520px;
 }

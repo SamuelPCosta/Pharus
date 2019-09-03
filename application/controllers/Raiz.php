@@ -135,6 +135,18 @@ class Raiz extends CI_Controller {
 			$this->load->view('login');
 		}
 	}
+	public function salvarimg(){
+		$config['upload_path'] = '<?= base_url()?>assets/fotos/';
+		$config['allowed_types'] = '*';
+		$config['max_size']     = '512000';
+		$config['max_width']  = '2440';
+		$config['max_height']  = '1600';
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+		$this->upload->do_upload('foto');
+		$imagem = $this->upload->data();
+		$file_url = base_url("assets/fotos/{$imagem['file_name']}");
+	}
 
 	public function cadastro(){
 		$this->load->view('cadastro');

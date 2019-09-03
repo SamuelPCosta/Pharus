@@ -34,7 +34,7 @@
     	?>
     <div class="container h-100">
 		<div class="d-flex justify-content-center h-100" >
-			<div class="user_card">
+			<div class="user_card card">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
 						<img src="<?= base_url()?>assets/img/logo.png" width=240 class="logo_grande" alt="Logo"><!--Nossa Logo-->
