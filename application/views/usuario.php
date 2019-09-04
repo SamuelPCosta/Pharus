@@ -3,26 +3,26 @@
 					<div class="col-xl-4 col-md-12 mx-auto">
 						<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content" id="div_photo_user">
 							<a class="mx-auto" href="#" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<img src="<?= base_url()?>assets/img/user_man.png" id="photo_user" width=260>
+								<img src="<?= base_url()?>assets/fotos/foto_user.png" id="photo_user" width=260>
 									<div clas s="btn-group">
 										<i class="fas fa-upload ml-1"></i>
 									</div>
 								</a>
 								<div class="dropdown-menu ml-3" aria-labelledby="dropdownMenuLink">
 									<form action="Raiz/salvarimg" method="post" enctype="multipart/form-data">
-									<span class="position-relative overflow-hidden text-center"><p>Adicione uma foto</p></span><br>
+									<span class="position-relative overflow-hidden text-center"><p>Atualize sua foto</p></span><br>
 									<input type="file" name="foto" required="" class="position-absolute">
-									<a class="dropdown-item" href="#">Remover foto Atual</a>
-    								<div class="px-5"><input class="text-success" type="submit" value="Salvar"></div>
+									<a class="dropdown-item" href="" id="removerimg">Remover foto Atual</a>
+    								<div class="px-5"><input type="submit" id="salvarimg" value="Salvar Foto"></div>
     								</form>
 								</div>
 								<!-- <input type="submit" name="Salvar">	 -->
 							</div>
-							<h2 class="my-3 text-center"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
+							<h2 class="my-3 text-center theme"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
 						</div>
 						<div class="col-xl-6 col-md-12 mx-auto">
 							<div class="container h-100 usuario">
-								<div class="card rounded-lg px-3 py-5 shadow">
+								<div class="card mb-2 rounded-lg px-3 py-5 shadow">
 									<div class="">
 										<div class="d-flex justify-content-center">
 											<div class="brand_logo_container">
@@ -33,7 +33,7 @@
 											<form method="post" action="cadastro/editarDados">
 												Nome Completo:
 												<div class="input-group mb-2">
-													<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user border-top-0 shadow-sm" placeholder="" disabled>
+													<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user border-top-0 shadow-sm text-capitalize" placeholder="" disabled>
 												</div>
 												Usuário:
 												<div class="input-group mb-2">

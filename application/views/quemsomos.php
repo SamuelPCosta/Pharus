@@ -2,16 +2,16 @@
 		        <div class="row align-items-center">
 		     		<div class="col-lg-6 col-md-12 float-left">
 		     			<br><br>
-		     			<h1 class="text-lg-left text-center">Heading</h1>
-	        			<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		     			<h1 class="text-lg-left text-center theme">Heading</h1>
+	        			<p class="text-justify theme">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		     		</div>
 		     		<div class="col-lg-6 col-md-12">
 		     			<img src="<?= base_url()?>assets/img/logo.png">
 		     		</div>
 		     	</div>
 		     	<div class="row featurette">
-		     		<div class="col-lg-6 col-md-12 float-left order-lg-2">
-		     			<h1 class="text-lg-right featurette-heading text-center">Heading</h1>
+		     		<div class="col-lg-6 col-md-12 float-left order-lg-2 theme">
+		     			<h1 class="text-lg-right featurette-heading text-center theme">Heading</h1>
 	        			<p class="lead text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		     		</div>
 		     		<div class="col-lg-6 col-md-12 order-lg-1 text-center">
@@ -19,8 +19,8 @@
 		     		</div>
 		     	</div>
 		     	<div class="row align-items-center">
-		     		<div class="col-lg-6 col-md-12 float-left">
-		     			<h1 class="text-lg-left text-center">Heading</h1>
+		     		<div class="col-lg-6 col-md-12 float-left theme">
+		     			<h1 class="text-lg-left text-center theme">Heading</h1>
 	        			<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		     		</div>
 		     		<div class="col-lg-6 col-md-12">
@@ -28,8 +28,8 @@
 		     		</div>
 	     		</div>
 	     		<div class="row featurette">
-		     		<div class="col-lg-6 col-md-12 float-left order-lg-2">
-		     			<h1 class="text-lg-right featurette-heading text-center">Heading</h1>
+		     		<div class="col-lg-6 col-md-12 float-left order-lg-2 theme">
+		     			<h1 class="text-lg-right featurette-heading text-center theme">Heading</h1>
 	        			<p class="lead text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		     		</div>
 		     		<div class="col-lg-6 col-md-12 order-lg-1 text-center">
@@ -45,7 +45,7 @@
 
 
 	<!-- Footer -->
-	<footer class="page-footer font-small position-relative">
+	<footer class="page-footer font-small position-relative shadow">
 	  <!-- Footer Links -->
 	  <!-- Copyright -->
 	  <div class="footer-copyright text-center py-3"><!--©--> <?php echo date('Y') ?> Pharus -

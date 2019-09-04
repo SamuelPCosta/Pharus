@@ -1,7 +1,7 @@
 			<div class="container first-container container-metas">
 	        <div class="row align-items-center">
 	     		<div class="col-xl-6 col-md-12">
-	     			<p class="valor margin-top">
+	     			<p class="valor margin-top theme">
 	     			<?php 
 	     			//$meta=0;
 	     			$meta = $this->session->userdata('meta');
@@ -13,7 +13,7 @@
 	     			?>
 	     			</p>
 	     			<!--Taca PHP--><br>
-	     			<p class="instrucoes">
+	     			<p class="instrucoes theme">
 	     			<?php 
 	     				if ($meta==0) {
 	     					echo("Você ainda não tem uma meta de consumo até o final do mês. Para definir uma meta, preencha o campo ao lado com o valor e clique em <span class='font-italic'>'Salvar Meta'</span>.");
@@ -71,15 +71,13 @@
             </div>
             </div>
             <div class="container texto_metas card">
-            	<div class="row">
+            	<div class="row align-items-center">
             		<div class="col-xl-8 col-md-12 colunas-meta">
             			<h1>Racionalize</h1><br>
             			<p>&emsp;&emsp;O consumo de energia elétrica vem aumentando cada vem mais e isso traz uma série de problemas para o nosso ecossistema, pois no processo de produção dessa corrente elétrica há uma série de fatores prejudiciais, como é o caso da construção de hidrelétricas (representa mais de 90% de nossos recursos energéticos) que contribuem para o desmatamento, areamento do solo ou mesmo na extinção de espécies de animais, além da energia elétrica, eólica e dentre outros. Sendo assim, deve-se evitar esse consumo desenfreado, logo, visando o bem estar social e ambiental.</p>
             		</div>
-            		<div class="col-xl-4 col-md-12 colunas-meta d-table">
-            			<div class="d-table-call align-center">
-            				<img src="<?= base_url()?>assets/img/user_man.png" id="photo_user" width=100% >
-            			</div>
+            		<div class="col-xl-4 col-md-12 colunas-meta d-table-call align-center">
+            			<img src="<?= base_url()?>assets/img/user_man.png" id="photo_user" class="py-3" width=100% >
             		</div>
             	</div>
             </div>

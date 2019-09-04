@@ -14,7 +14,15 @@ html {
 	margin-top: auto;
 	margin-bottom: auto;
 	background: #ddd; /*Cor de fundo da caixa*/
+	position: relative;
+	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
 }
 .fa-user, .fa-address-card{/*correção de width do icone de usuario*/
 	width: 16px

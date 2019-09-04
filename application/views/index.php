@@ -6,23 +6,23 @@
 							if (isset($gasto)) {
 								if ($gasto<=100) {
 									?>
-									<div class="chart anime" data-percent="<?php echo $gasto; ?>" data-scale-color="#ffb400"><span class="texto_grafico"><p><?php echo number_format($gasto, 1); ?>%</p><div id="tempo"><p>do limite em<br><span id="horas"><?php date_default_timezone_set('America/Sao_Paulo'); echo date('H'); ?></span> horas</p></span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
+									<div class="chart anime theme" data-percent="<?php echo $gasto; ?>" data-scale-color="#ffb400"><span class="texto_grafico"><p><?php echo number_format($gasto, 1); ?>%</p><div id="tempo"><p>do limite em<br><span id="horas"><?php date_default_timezone_set('America/Sao_Paulo'); echo date('H'); ?></span> horas</p></span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
 									<?php
 								} else {
 									?>
-									<div class="chart anime" data-percent="<?php echo ($gasto-100); ?>" data-scale-color="#ffb400"><span class="texto_grafico"><p><?php echo number_format(($gasto-100), 1); ?>%</p><div id="tempo"><p>excedido em <br><span id="horas"><?php date_default_timezone_set('America/Sao_Paulo'); echo date('H'); ?></span> horas</p></span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
+									<div class="chart anime theme" data-percent="<?php echo ($gasto-100); ?>" data-scale-color="#ffb400"><span class="texto_grafico"><p><?php echo number_format(($gasto-100), 1); ?>%</p><div id="tempo"><p>excedido em <br><span id="horas"><?php date_default_timezone_set('America/Sao_Paulo'); echo date('H'); ?></span> horas</p></span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
 									<?php
 								}
 							}else{
 								?>
-								<div class="chart anime" data-percent="73" data-scale-color="#ffb400"><span class="texto_grafico">Estipule<div id="tempo"><p>uma meta para<br>consumo</p></span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
+								<div class="chart anime theme" data-percent="73" data-scale-color="#ffb400"><span class="texto_grafico">Estipule<div id="tempo"><p>uma meta para<br>consumo</p></span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
 								<?php
 							}
 							?>
 
 						</div>
 					</div>
-					<div class="col-xl-6 col-lg-12 text"><p class="mx-auto animeRight">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
+					<div class="col-xl-6 col-lg-12 text"><p class="mx-auto animeRight theme">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
 				</div>
 			</div>
 			<div class="container-fluid">
@@ -52,13 +52,13 @@
 				<div class="row">
 					<div class="col-xl-6 col-lg-12 colunas-home d-table line">
 						<div class="d-table-cell align-middle">
-						<h2 class="text-center anime">Heading</h2><br>
-						<p class="anime">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela ddificuldade de suprir a grande demanda e épocas de secas.</p>
+						<h2 class="text-center anime theme">Heading</h2><br>
+						<p class="anime theme">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela ddificuldade de suprir a grande demanda e épocas de secas.</p>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-12 colunas-home d-table">
-						<div class="d-table-cell align-middle">
-						<h2 class="text-center animeRight">Heading</h2><br>
+						<div class="d-table-cell align-middle theme">
+						<h2 class="text-center animeRight theme">Heading</h2><br>
 						<p class="animeRight">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela ddificuldade de suprir a grande demanda e épocas de secas.</p>
 						</div>
 					</div>
@@ -66,8 +66,8 @@
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-lg-12 last-container py-5 px-5 d-table">
 						<div class="align-middle d-table-cell">	
-							<h2 class=" anime">Heading</h2>
-							<p class="mx-auto anime">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. </p>
+							<h2 class="anime text-white">Heading</h2>
+							<p class="mx-auto anime text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. </p>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-12 last-container py-5 text-center d-table">

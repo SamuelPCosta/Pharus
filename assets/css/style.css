@@ -4,11 +4,11 @@
     font-family: 'Open Sans', sans-serif !important;
     background-color: #f6f6f6 !important;
 }
-.tudo{
+.master{
     min-height: 100%; /*Configuração necessaria para o footer*/
     overflow-x: hidden;
 }
-* html #tudo {
+* html .master {
     height: 100%; /* hack para IE6 que trata height como min-height */
 }
 h1{
@@ -68,7 +68,7 @@ header .navbar{
 }
 .dropdown-divider{
     margin: 0 !important;
-    border-color: #999;
+    border-color: #808080;
     width: 75%;
     margin-left: 20% !important;
 }
@@ -97,7 +97,8 @@ header .navbar{
     padding: 0;
     margin: 0 auto;
     z-index: -1;
-    border-color: #464B51
+    border-color: #464B51;
+    background-color: #464B51;//bg-dark
 }
 #wrapper.toggled #page-content-wrapper {
     position: relative;
@@ -129,7 +130,7 @@ header .navbar{
 }
 .sidebar-nav li a:hover { /*hover dos itens do menu*/
     text-decoration: none;
-    color: #fff;
+    color: #fff !important;
     background-color: #464B51;
 }
 .sidebar-nav li a:active,
@@ -141,13 +142,15 @@ header .navbar{
     margin-left: -20px;
     margin-right: 35px;
 }
-#menu-toggle{ /*Visibilidade do botão de menu*/
+#menu-toggle, #toggle-theme{ /*Visibilidade do botão de menu*/
     visibility: visible;
-    position: fixed;
     //color: #fff;
 }
-#menu-toggle i{ /*Visibilidade do botão de menu*/
+#menu-toggle i, #toggle-theme i{ /*Visibilidade do botão de menu*/
     font-size: 25px;
+}
+#toggle-theme{
+    right: 15px;
 }
 .btn:focus, .btn.focus {
   outline: 0;
@@ -159,12 +162,13 @@ header .navbar{
 }
 .atual a{
     color: #FFC107 !important;
+    //background-color: #FFC107;
     margin-left: -5px !important;
 }
 .atual a:hover{
     text-decoration: none;
     color: #fff !important;
-    background-color: #364046;
+    background-color: #FFC107 !important;
 }
 .barra-horizontal{
     //background-color: #457e99;
@@ -188,8 +192,9 @@ h4{
 .colunas-home{ /*Colunas duplas abaixo da barra central*/
     min-height: 65vh;
     padding: 30px !important;
-    /*background-color: #9aada333;*/
+    /*background-color: #9aada333;
     background-color: #c2d8e2;
+    color: black*/
 }
 .colunas-home p{
     width: 100% !important;
@@ -206,12 +211,10 @@ h4{
 }
 .last-container h2{
     text-align: center;
-    color: white;
     width: 85%;
 }
 .last-container p{
     text-align: justify;
-    color: white;
     width: 85%;
     font-size: 20px;
 }
@@ -272,7 +275,6 @@ h4{
         position: relative;
         margin: 0 auto;
         overflow:hidden;
-        background-color: #464B51
     }
     #wrapper.toggled #page-content-wrapper {
         position: relative;
@@ -294,9 +296,11 @@ h4{
 }
 footer{
     z-index: 0;
-    background-color: #464B51
-    ;
+    background-color: #464B51;
     color: #ccc;
+}
+footer.shadow{
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.90)!important;
 }
 footer a{
     color: white;

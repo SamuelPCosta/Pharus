@@ -1,13 +1,13 @@
 			<div class="container first-container ideal">
 		        <div class="row align-items-center">
 		            <div class="col-xl-6 col-md-12">
-		        	<h1 class="margin-top">Ideal de consumo <br>
+		        	<h1 class="margin-top theme">Ideal de consumo <br>
 			        	<?php 
 			        		$faixa = $this->session->userdata('faixa');
 			        		if (isset($faixa)){echo "Entre ".$this->session->userdata('faixa');}
 			        	?>
 		        	</h1><br>
-		        	<p>&emsp;&emsp;Aqui você tem acesso a um questionário simples onde suas respostas seram registradas e analisadas com os dados de outros usuários, gerando assim nossa faixa de consumo que fará uma análise das respostas de outros usuários para podermos dar um maior suporte a eles a partir de possíveis soluções para seus problemas.</p>        	
+		        	<p class="theme">&emsp;&emsp;Aqui você tem acesso a um questionário simples onde suas respostas seram registradas e analisadas com os dados de outros usuários, gerando assim nossa faixa de consumo que fará uma análise das respostas de outros usuários para podermos dar um maior suporte a eles a partir de possíveis soluções para seus problemas.</p>        	
 		        </div>
 	     		<div class="col-xl-6 col-md-12"><!--Div do questionário-->
 	     			<?php 

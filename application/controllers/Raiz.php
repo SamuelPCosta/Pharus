@@ -135,18 +135,29 @@ class Raiz extends CI_Controller {
 			$this->load->view('login');
 		}
 	}
+
 	public function salvarimg(){
-		$config['upload_path'] = '<?= base_url()?>assets/fotos/';
-		$config['allowed_types'] = '*';
-		$config['max_size']     = '512000';
-		$config['max_width']  = '2440';
-		$config['max_height']  = '1600';
-		$this->load->library('upload', $config);
-		$this->upload->initialize($config);
-		$this->upload->do_upload('foto');
-		$imagem = $this->upload->data();
-		$file_url = base_url("assets/fotos/{$imagem['file_name']}");
-	}
+	    $curriculo    = $_FILES['foto'];
+	    $usuario = $this->session->userdata('usuario');
+	    $config = array(
+	        'upload_path'   => './assets/fotos/',
+	        'allowed_types' => 'png|jpg|jpeg',
+	        'overwrite'		=> TRUE,
+	        //'file_name'     => $usuario.'.png',
+	        'file_name'     => 'foto_user'.'.png',
+	        'max_size'      => '5000',
+	        'max_width:'    => '2000',
+	        'max_height:'   => '2000'
+	    );      
+	    $this->load->library('upload');
+	    $this->upload->initialize($config);
+	    if ($this->upload->do_upload('foto')){
+	        echo 'Arquivo salvo com sucesso.';
+	    	redirect('usuario');
+	    }else{
+	        echo $this->upload->display_errors();
+	    }
+	 }
 
 	public function cadastro(){
 		$this->load->view('cadastro');

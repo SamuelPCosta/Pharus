@@ -34,7 +34,7 @@
     	?>
     <div class="container h-100">
 		<div class="d-flex justify-content-center h-100" >
-			<div class="user_card card">
+			<div class="user_card">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
 						<img src="<?= base_url()?>assets/img/logo.png" width=240 class="logo_grande" alt="Logo"><!--Nossa Logo-->
@@ -47,7 +47,7 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="usuario" class="form-control input_user" value="<?php echo $this->session->userdata('usuario'); ?>" placeholder="Nome de usuário">
+							<input type="text" name="usuario" class="form-control input_user text-capitalize" value="<?php echo $this->session->userdata('usuario'); ?>" placeholder="Nome de usuário">
 						</div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">

@@ -44,12 +44,56 @@ window.onload = function(){
   document.getElementById(atual).classList.add("atual");
 }
 
-$(document).mouseup(function(e){
-  var img = $(".dropdown-menu");
-  if (!img.is(e.target) && img.has(e.target).length === 0){
-    $(".dropdown-menu").removeClass("show");
-  }
+/*###########Foto User###########*/
+const fotoStorage = localStorage.getItem('foto')
+if (fotoStorage) {
+    //$("#photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
+}
+$("#removerimg").click(function(e) {
+  e.preventDefault();
+    $("#photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
+    if ($("#sidebar-wrapper").hasClass('bg-dark')) {
+      localStorage.setItem('foto', true)
+      return
+    }
+  // senão remove
+  localStorage.removeItem('foto')
 });
+
+/*###########Theme dark###########*/
+// pegamos o valor no localStorage
+const nightModeStorage = localStorage.getItem('NightMode')
+
+// caso tenha o valor no localStorage
+if (nightModeStorage) {
+  // ativa o night mode
+  $("#sidebar-wrapper").toggleClass("bg-dark");
+  $("#sidebar-wrapper").toggleClass("bg-white");
+  $("#page-content-wrapper").toggleClass("bg-light");
+  $(".theme").toggleClass("text-white");
+  $(".sidebar-li-a").toggleClass("text-dark");
+  // já deixa o input marcado como ativo
+  //nightMode.checked = true
+}
+
+$("#toggle-theme").click(function(e) {
+  e.preventDefault();
+  $("#sidebar-wrapper").toggleClass("bg-dark");
+  $("#sidebar-wrapper").toggleClass("bg-white");
+  $("#page-content-wrapper").toggleClass("bg-light");
+  $(".theme").toggleClass("text-white");
+  $(".sidebar-li-a").toggleClass("text-dark");
+
+  // se tiver a classe bg-dark, ou seja, se o tema escuro estiver ativo
+  if ($("#sidebar-wrapper").hasClass('bg-dark')) {
+    // salva o tema no localStorage
+    localStorage.setItem('NightMode', true)
+    return
+  }
+  // senão remove
+  localStorage.removeItem('NightMode')
+});
+
 /*###########Animação Scroll###########*/
 var root = document.documentElement;
 root.className += ' js';

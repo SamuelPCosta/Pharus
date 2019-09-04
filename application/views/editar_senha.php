@@ -3,13 +3,13 @@
 	     		<div class="col-xl-4 col-md-12 mx-auto">
 	     			<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content">
 	     				<!-- <i class="fas fa-upload align-middle d-table-cell mx-auto"></i> -->
-	     				<img src="<?= base_url()?>assets/img/user_man.png" id="upload" width=260>
+	     				<img src="<?=base_url()?>assets/fotos/user_man.png" id="upload" width=260>
 	     			</div>
-	     			<h2 class="my-3 text-center"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
+	     			<h2 class="my-3 text-center theme"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
 	     		</div>
 	     		<div class="col-xl-6 col-md-12 mx-auto">
 	     		<div class="container h-100">
-				<div class="d-flex justify-content-center h-100 card py-5 shadow">
+				<div class="d-flex justify-content-center h-100 card mb-2 py-5 shadow">
 					<div class="">
 						<div class="d-flex justify-content-center">
 							<div class="brand_logo_container">

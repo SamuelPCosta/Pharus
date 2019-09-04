@@ -214,13 +214,15 @@ var CanvasRenderer = function(el, options) {
 	}.bind(this);
 };
 
-/*window.onresize=function() { 
-    var largura = window.innerWidth;
-    var large = 550;
-    if (largura>=576){ //Quando encolher a tela
-        large = 450; //grafico diminui
-    }
-}*/
+const nightModeStorage = localStorage.getItem('NightMode')
+
+// caso tenha o valor no localStorage
+if (nightModeStorage) {
+  // ativa o night mode
+  var cor_n_preenchida = "#343a40";
+}else{
+  var cor_n_preenchida = "#464b51";
+}
 var EasyPieChart = function(el, opts) {
 	/*if ($(".chart").hasClass("inner")) {
 	    var tamanho = 500;
@@ -229,7 +231,7 @@ var EasyPieChart = function(el, opts) {
 	}*/
 	var defaultOptions = {
 		barColor: corbarra,
-		trackColor: '#343a40',/*cor da barra não preenchida*/
+		trackColor: "#343a40",/*cor da barra não preenchida*/
 		scaleColor: '#00aa00',
 		scaleLength: 5,
 		lineCap: 'round',

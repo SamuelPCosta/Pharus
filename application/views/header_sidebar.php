@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-    <meta name="theme-color" content="#2b3530">
+    <meta name="theme-color" content="#343a40">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pharus</title> <!--Título da Aba-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Importação do CSS do BS-->
@@ -21,13 +21,13 @@
 	<!-- O comando base_url() é um atalho para o enderço da nossa base-->
 </head>
 <body>
-<div class="tudo">
-
+<div class="master">
 	<!-- Header -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-0 w-100 shadow">
 			<a href="index" class="mx-auto logo"><img src="<?= base_url()?>assets/img/logo.png" width=110></a> <!--Nossa Logo-->
-			<a href="#menu-toggle" class="btn text-dark" id="menu-toggle"><i class="fas fa-bars"></i></a>
+			<a href="#menu-toggle" class="btn text-white position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
+            <a href="#menu-toggle" class="btn text-white position-fixed pl-5" id="toggle-theme"><i class="fas fa-adjust"></i></a>
 		</nav>
 	</header>
 	<!-- Header -->
@@ -35,38 +35,38 @@
 		<!--Menu lateral-->
 		<!-- Sidebar -->
         <div id="wrapper">
-        <div id="sidebar-wrapper" class="shadow bg-dark">
+        <div id="sidebar-wrapper" class="shadow bg-white">
             <ul class="sidebar-nav">
-            	<li id="Usuario">
-            		<a href="usuario" class="text-capitalize"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
+            	<li id="Usuario" class="">
+            		<a href="usuario" class="text-capitalize sidebar-li-a text-dark"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
             	</li>
 			    <div class="dropdown-divider"></div>
-                <li id="Editar senha">
-                    <a href="editar-senha"><i class="fas fa-edit"></i>Editar senha</a>
+                <li id="Editar senha" class="">
+                    <a href="editar-senha" class="sidebar-li-a text-dark"><i class="fas fa-edit"></i>Editar senha</a>
                 </li>
 			    <div class="dropdown-divider"></div>
-                <li id="Consumo">
-                    <a href="consumo"><i class="fas fa-coins"></i>Consumo</a>
+                <li id="Consumo" class="">
+                    <a href="consumo" class="sidebar-li-a text-dark"><i class="fas fa-coins"></i>Consumo</a>
                 </li>
                 <div class="dropdown-divider"></div>
-                <li id="Metas">
-                    <a href="metas"><i class="fas fa-bookmark"></i>Metas</a>
+                <li id="Metas" class="">
+                    <a href="metas" class="sidebar-li-a text-dark"><i class="fas fa-bookmark"></i>Metas</a>
                 </li>
                 <div class="dropdown-divider"></div>
-                <li id="Ideal de Consumo">
-                    <a href="idealdeconsumo"><i class="fas fa-funnel-dollar"></i>Ideal de Consumo</a>
+                <li id="Ideal de Consumo" class="">
+                    <a href="idealdeconsumo" class="sidebar-li-a text-dark"><i class="fas fa-funnel-dollar"></i>Ideal de Consumo</a>
                 </li>
                 <div class="dropdown-divider"></div>
-                <li id="Dicas">
-                    <a href="dicas"><i class="fas fa-lightbulb"></i>Dicas</a>
+                <li id="Dicas" class="">
+                    <a href="dicas" class="sidebar-li-a text-dark"><i class="fas fa-lightbulb"></i>Dicas</a>
                 </li>
                 <div class="dropdown-divider"></div>
-                <li>
-                    <a href="login/logout"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
+                <li class="">
+                    <a href="login/logout" class="sidebar-li-a text-dark"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
                 </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
         <div id="dark"></div>
             <!--conteudo-->
-        <div id="page-content-wrapper" class="text-white">
+        <div id="page-content-wrapper" class="bg-light">
