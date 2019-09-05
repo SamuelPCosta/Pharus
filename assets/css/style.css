@@ -7,6 +7,7 @@
 .master{
     min-height: 100%; /*Configuração necessaria para o footer*/
     overflow-x: hidden;
+    background-color: #464B51;//bg-dark
 }
 * html .master {
     height: 100%; /* hack para IE6 que trata height como min-height */
@@ -68,7 +69,7 @@ header .navbar{
 }
 .dropdown-divider{
     margin: 0 !important;
-    border-color: #808080;
+    border-color: #b5b5b5;
     width: 75%;
     margin-left: 20% !important;
 }
@@ -98,7 +99,6 @@ header .navbar{
     margin: 0 auto;
     z-index: -1;
     border-color: #464B51;
-    background-color: #464B51;//bg-dark
 }
 #wrapper.toggled #page-content-wrapper {
     position: relative;
@@ -205,6 +205,9 @@ h4{
 .line{
     border-right: none;
 }
+#vertical-line{
+    visibility: hidden;
+}
 .last-container{
     height: 50vh;
     background-color: #2E6171;
@@ -236,6 +239,16 @@ h4{
     }
     .line{
         border-right: 2px solid #b1c6d0;
+    }
+    #vertical-line{
+        width: 2px; 
+        height: 400px; 
+        background-color: #b5b5b5;
+        visibility: visible;    
+    }
+    .bg-dark2{
+        background-color: #464b51!important;
+        border-color: #464b51!important;
     }
     .last-container h2{
         text-align: right;
@@ -372,11 +385,26 @@ footer a:hover{
 #div_photo_user:hover>a .fa-upload{
     opacity: 1;
 }
+input[type="text"]:disabled {
+  background: #f8f9fa;
+  border: none;
+  border-left: 4px solid #FFC107 !important;
+}
+input[type="text"]:enabled , input[type="password"]:enabled{
+  background: white !important;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+  border: none;
+  color: black !important;
+}
 .usuario .input-group{
     width: 280px;
 }
+#page-content-wrapper .btn{
+    background-color: #FFC107!important;
+    color: #343a40!important;
+}
 .usuario .btn{
-    width: 280px !important;
+    width: 280px !important; 
 }
 #Salvar_dados{
     visibility: hidden;

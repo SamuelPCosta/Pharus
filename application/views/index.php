@@ -101,6 +101,7 @@
 	<script  src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->
 	<script src="<?= base_url()?>assets/js/jquery.easypiechart.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Importação de sweetalert-->
+	<script src="dist/gradient-progress-bar.min.js"></script>
 	<script>
 		$(function() {
 			$('.chart').easyPieChart({});});

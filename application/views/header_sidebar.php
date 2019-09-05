@@ -21,7 +21,7 @@
 	<!-- O comando base_url() é um atalho para o enderço da nossa base-->
 </head>
 <body>
-<div class="master">
+<div class="master bg-light">
 	<!-- Header -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-0 w-100 shadow">
@@ -69,4 +69,4 @@
         <!-- /#sidebar-wrapper -->
         <div id="dark"></div>
             <!--conteudo-->
-        <div id="page-content-wrapper" class="bg-light">
+        <div id="page-content-wrapper">

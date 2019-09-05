@@ -69,7 +69,12 @@ if (nightModeStorage) {
   // ativa o night mode
   $("#sidebar-wrapper").toggleClass("bg-dark");
   $("#sidebar-wrapper").toggleClass("bg-white");
-  $("#page-content-wrapper").toggleClass("bg-light");
+  $(".dropdown-divider").toggleClass("bg-dark2");
+  $(".card-theme").toggleClass("bg-dark");
+  $(".form-control").toggleClass("bg-dark2");
+  $(".form-control").toggleClass("text-white");
+  $("#vertical-line").toggleClass("bg-dark2");
+  $(".master").toggleClass("bg-light");
   $(".theme").toggleClass("text-white");
   $(".sidebar-li-a").toggleClass("text-dark");
   // já deixa o input marcado como ativo
@@ -80,7 +85,12 @@ $("#toggle-theme").click(function(e) {
   e.preventDefault();
   $("#sidebar-wrapper").toggleClass("bg-dark");
   $("#sidebar-wrapper").toggleClass("bg-white");
-  $("#page-content-wrapper").toggleClass("bg-light");
+  $(".dropdown-divider").toggleClass("bg-dark2");
+  $(".card-theme").toggleClass("bg-dark");
+  $(".form-control").toggleClass("bg-dark2");
+  $(".form-control").toggleClass("text-white");
+  $("#vertical-line").toggleClass("bg-dark2");
+  $(".master").toggleClass("bg-light");
   $(".theme").toggleClass("text-white");
   $(".sidebar-li-a").toggleClass("text-dark");
 
