@@ -11,7 +11,7 @@ class Raiz extends CI_Controller {
 			$consumo['meta'] = $this->Consumo_model->SelecionarMeta($contaContrato);
 			if($consumo['meta']!=0){
 				$valor_tarifa = 0.7;
-				$valor_dia = ($consumo['meta']/30)/$valor_tarifa;
+				$valor_dia = ($consumo['meta']/30);
 				$consumo['consumo'] = $this->Consumo_model->SelecionarConsumo($contaContrato);
 				$consumo['gasto'] = $consumo['consumo']*100/$valor_dia;
 				$porcentagem = $consumo['gasto'];

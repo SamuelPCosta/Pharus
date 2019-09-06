@@ -32,19 +32,19 @@
 						<div class="rounded-circle mx-auto d-table">
 							<i class="fas fa-seedling align-middle d-table-cell"></i>
 						</div>
-						<h4 class="py-3">Lorem Ipsum</h4>
+						<h4 class="py-3 text-white">Lorem Ipsum</h4>
 					</div><!-- /.col-lg-4 -->
 					<div class="col-lg-4 my-2 text-center anime">
 						<div class="rounded-circle mx-auto d-table">
 							<i class="fas fa-plug align-middle d-table-cell"></i>
 						</div>
-						<h4 class="py-3">Maneire seu Consumo</h4>
+						<h4 class="py-3 text-white">Maneire seu Consumo</h4>
 					</div><!-- /.col-lg-4 -->
 					<div class="col-lg-4 my-2 text-center anime">
 						<div class="rounded-circle mx-auto d-table">
 							<i class="fas fa-power-off align-middle d-table-cell"></i>
 						</div>
-						<h4 class="py-3">Lorem Ipsum</h4>
+						<h4 class="py-3 text-white">Lorem Ipsum</h4>
 					</div><!-- /.col-lg-4 -->
 				</div><!-- /.row -->
 			</div>

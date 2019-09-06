@@ -19,8 +19,9 @@
 	height: 220px;
 	width: 100%;
 	margin: 0 auto;
-	background-color: #abd8f5; /*#00aadd44*/
+	background-color: #2E6171; /*#00aadd44*/
 	margin-bottom: 25px;
+	color: white;
 }
 .a p{
 	text-align: left;

@@ -7,7 +7,7 @@
     font-weight: normal;
 }
 .container-metas h2{ /*Estilização do título*/
-	width: 50%;
+	width: 60%;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -28,7 +28,6 @@
 	margin-top: 30px;
 }
 #meta input{
-	width: 60%;
 	height: 40px;
 	margin: 0 auto;
 	border: 2px solid #ddd;
@@ -38,7 +37,6 @@
 }
 #meta button{
 	margin-top: 10px;
-	width: 60%;
 	height: 50px;
 	color: #fff;
 	background-color: #2b3530;
@@ -57,14 +55,13 @@
 }
 #mensagem{
 	margin-top: 42px;
-	background-color: #364046 !important;
+	background-color: #2e6171 !important;
 	border:none !important;
 }
 
 #meta button:hover, #consumoideal:hover{
 	background-color:#0a522d; 
 }
-
 .instrucoes{
 	width: 60%;
 	margin: auto;
@@ -77,10 +74,15 @@
 	text-align: center;
 	line-height: 1.1em
 }
+.metas h2, .metas input, .metas button, .metas a, .metas .alert{
+	width: 75% !important
+}
 .colunas-meta{
 	min-height: 35vh;
-	background-color: #e4e8e6;
 	padding: 50px;
+}
+.colunas-meta.d-table-cell{
+	background-color: #2e6171!important;
 }
 .colunas-meta p{
 	width: 70%;
@@ -93,7 +95,6 @@
 	z-index: -1
 }
 .container-metas .alert-danger{
-	width: 60% !important;
     margin: 5px auto !important;
 }
 
@@ -107,5 +108,8 @@
 	#meta input, #meta button, .instrucoes, 
 	.alert-danger, #consumoideal, #mensagem{
 		width: 90% !important;
+	}
+	.metas.px-5{
+		padding: 0px !important;
 	}
 }

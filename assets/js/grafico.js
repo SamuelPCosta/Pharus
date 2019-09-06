@@ -37,18 +37,18 @@ var data = {
     datasets: [
         {
             label: "Usuário",
-            fillColor: "#36404655",
-            //strokeColor: "#36404655",
+            fillColor: "#364046",
+            //strokeColor: "#364046",
             highlightFill: "#9aada3",
             //highlightStroke: "#9aada3",
             data: [25, 59, 40, 41]
         },
         {
             label: "Meta",
-            fillColor: "#364046",
+            fillColor: "#464b51",
             //strokeColor: "#364046",
-            highlightFill: "#0a522d",
-            //highlightStroke: "#0a522d",
+            highlightFill: "#ffc107",
+            //highlightStroke: "#ffc107",
             lineTension: 0,
             data: [28, 48, 40, 19]
         }

@@ -8,7 +8,7 @@
 		       		</div>
 		       		<div class="col-12">
 		       			<form id="meses">
-		        			<select id="mes">
+		        			<select id="mes" class="theme card-theme">
 		        				<option value="0" id="placeholder">Selecione um mês</option>
 		        				<option value="Janeiro">Janeiro</option>
 		        				<option value="Fevereiro">Fevereiro</option>

@@ -233,7 +233,7 @@ var EasyPieChart = function(el, opts) {
 	var defaultOptions = {
 		barColor: corbarra,
 		trackColor: "#343a40",/*cor da barra não preenchida*/
-		scaleColor: '#00aa00',
+		scaleColor: false,
 		scaleLength: 5,
 		lineCap: 'round',
 		lineWidth: 30, /*Espessura da barra*/

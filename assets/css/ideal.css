@@ -11,14 +11,16 @@
 	margin: 0 auto;
 	font-size: 20px;
 	text-align: justify;
+	font-size: 1.5em;
 }
 .pergunta, .resultado{ /*Estilização da pergunta*/
 	padding: 50px 10px; 
 	width: 70%; margin: auto; 
-	background-color: #2b3530; 
-	color: #fff; 
+	background-color: #ffc107; 
+	color: #464b51; 
 	margin-right: 15%;
-	margin-bottom: 50px; 
+	margin-bottom: 50px;
+	border-radius:10px; 
 	text-align: center;
 }
 label{
@@ -48,16 +50,19 @@ label{
 	box-shadow:none !important;  
 }
 .alternativa_a{
-	background-color: #516746;
-	box-shadow:0 5px 0 #3a4436;  
+	background-color: #FFDA73;
+	box-shadow:0 5px 0 #846B21;  
 }
 .alternativa_b{
-	background-color: #404e37;
-	box-shadow:0 5px 0 #2a3125;
+	background-color: #FFC526;
+	box-shadow:0 5px 0 #6B5103;
 }
 .alternativa_c{
-	background-color: #2e3829;
-	box-shadow:0 5px 0 #1c2119;
+	background-color: #CC9E1F;
+	box-shadow:0 5px 0 #382A02;
+}
+h4{
+	color: #343a40;
 }
 input[type=radio]:checked + label .alternativas{
     background-color: #467fe0;
