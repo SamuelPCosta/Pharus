@@ -14,9 +14,10 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/ideal.css"> <!--Importação da folha de estilo css para dicas-->
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/consumo.css"> <!--Importação da folha de estilo css para consumo-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
     <!--Importação da fonte Open Sans-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" href="<?= base_url()?>assets/img/icon.ico"/> <!--Icone-->
 	<!-- O comando base_url() é um atalho para o enderço da nossa base-->
 </head>
@@ -25,16 +26,16 @@
 	<!-- Header -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-0 w-100 shadow">
-			<a href="index" class="mx-auto logo"><img src="<?= base_url()?>assets/img/logo.png" width=110></a> <!--Nossa Logo-->
+			<a href="index" class="mx-auto logo"><img src="<?= base_url()?>assets/img/logo.png" width=75></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn text-white position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
-            <a href="#menu-toggle" class="btn text-white position-fixed pl-5" id="toggle-theme"><i class="fas fa-adjust"></i></a>
+            <a href="#menu-toggle" class="btn text-white position-fixed pl-5" id="toggle-theme" title="Modo noturno"><i class="fas fa-adjust"></i></a>
 		</nav>
 	</header>
 	<!-- Header -->
 
 		<!--Menu lateral-->
 		<!-- Sidebar -->
-        <div id="wrapper">
+        <div id="wrapper" class="position-relative">
         <div id="sidebar-wrapper" class="shadow bg-white">
             <ul class="sidebar-nav">
             	<li id="Usuario" class="">

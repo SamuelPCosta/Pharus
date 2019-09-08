@@ -1,10 +1,3 @@
-body {
-  padding: 0;
-  margin: 0;
-}
-.container{
-  margin: 0 auto; /*largura do circulo// altere tb no js*/
-}
 .container .row .box .chart{
   position: relative;
   margin: 0 auto;

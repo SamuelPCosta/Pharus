@@ -1,7 +1,5 @@
 body,
 html {
-	margin: 0;
-	padding: 0;
 	height: 100%;
 	background: #464B51!important; /*Cor de fundo da página*/
 }
@@ -13,7 +11,6 @@ html {
 	width: 22rem;
 	margin-top: auto;
 	margin-bottom: auto;
-	background: #ddd; /*Cor de fundo da caixa*/
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -32,16 +29,11 @@ html {
 }
 .login_btn { /*Estilização do botão login e botão cadastrar*/
 	width: 230px !important;
-	background: #0a522d; /*Cor de fundo do botão entrar*/
-	color: white !important;
-	border:none;
+	border-radius: 25px;
 }
 .login_btn:focus {
 	box-shadow: none !important;
 	outline: 0px !important;
-}
-.cancelar{
-	background-color: #672e2e !important
 }
 .login_container {
 	padding: 0 2rem;
@@ -62,6 +54,15 @@ html {
 }
 .logo_grande{
 	margin-top: -300px;
+}
+.user_card_senha { /*Estilização da caixa*/
+	height: 200px !important;
+}
+.user_card_cadastro{ /*Estilização da caixa*/
+	height: 500px !important;
+}
+.logo_grande_cadastro{
+	margin-top: -250px !important;
 }
 @media(max-width:768px) {
 	.logo_grande{

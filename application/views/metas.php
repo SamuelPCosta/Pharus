@@ -27,7 +27,7 @@
 	     				$this->load->helper('cookie');
 	     				$mensagem = get_cookie('mensagem_meta');
 	     				echo "
-	     				<div class='alert alert-primary' role='alert' id='mensagem'>
+	     				<div class='alert alert-primary mx-auto' role='alert' id='mensagem'>
 	     				".$mensagem."
 						</div>";
 	     			}		
@@ -42,7 +42,7 @@
 		        	<form method="post" action="cadastro_meta/adicionar">
 		        		<div id="meta">
 			        			<input type="number" min="20" max="10000" name="meta" placeholder="Apenas números. Ex.: 90" class="shadow bg-light rounded">
-			        			<button type="submit" class="btn">Salvar Meta</button><!--Esse botão alterna pra editar-->
+			        			<button type="submit" class="btn btn-warning mx-auto">Salvar Meta</button><!--Esse botão alterna pra editar-->
 			        		<?php  
 			        			}else{
 			        		?> 
@@ -61,13 +61,13 @@
 				        				}
 				        			}
 				        		?>
-				        		<button type="submit" class="btn">Editar Meta</button><!--Esse botão antes era salvar-->
+				        		<button type="submit" class="btn btn-warning mx-auto">Editar Meta</button><!--Esse botão antes era salvar-->
 			        		<?php  
 			        			}
 			        		?> 
 		        		</div>
 		        	</form>
-		        	<a href="idealdeconsumo" class="btn" id="consumoideal">Qual o Consumo Ideal?</a>
+		        	<button href="idealdeconsumo" class="btn btn-warning mx-auto" id="consumoideal">Qual o Consumo Ideal?</button>
 		        </div>
 		        </div>
             </div>
@@ -76,14 +76,14 @@
             	<div class="row align-items-center">
             		<div class="col-xl-8 col-md-12 colunas-meta card-theme theme">
             			<h1>Racionalize</h1><br>
-            			<p>&emsp;&emsp;O consumo de energia elétrica vem aumentando cada vem mais e isso traz uma série de problemas para o nosso ecossistema, pois no processo de produção dessa corrente elétrica há uma série de fatores prejudiciais, como é o caso da construção de hidrelétricas (representa mais de 90% de nossos recursos energéticos) que contribuem para o desmatamento, areamento do solo ou mesmo na extinção de espécies de animais, além da energia elétrica, eólica e dentre outros. Sendo assim, deve-se evitar esse consumo desenfreado, logo, visando o bem estar social e ambiental.</p>
+            			<p class="serifa">&emsp;&emsp;O consumo de energia elétrica vem aumentando cada vem mais e isso traz uma série de problemas para o nosso ecossistema, pois no processo de produção dessa corrente elétrica há uma série de fatores prejudiciais, como é o caso da construção de hidrelétricas (representa mais de 90% de nossos recursos energéticos) que contribuem para o desmatamento, areamento do solo ou mesmo na extinção de espécies de animais, além da energia elétrica, eólica e dentre outros. Sendo assim, deve-se evitar esse consumo desenfreado, logo, visando o bem estar social e ambiental.</p>
             		</div>
             		<div class="col-xl-4 col-md-12 colunas-meta d-table-cell align-center">
             			<img src="<?= base_url()?>assets/img/user_man.png" id="photo_user" class="py-3" width=100% >
             		</div>
             	</div>
             </div>
-            <div class="container-fluid texto_metas card colunas-meta coluna-meta-back bg-white" ></div>
+            <div class="container-fluid card coluna-meta-back card-theme"></div>
         </div>
         <!--conteudo-->
 		</div>

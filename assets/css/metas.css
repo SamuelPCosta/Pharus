@@ -35,32 +35,23 @@
 	display: block;
 	background-color: #ddd;
 }
-#meta button{
+.container-metas button{
 	margin-top: 10px;
 	height: 50px;
-	color: #fff;
-	background-color: #2b3530;
 }
 #consumoideal, #mensagem{
 	display: block;
 	width: 60%;
 	text-align: center;
-	margin: auto;
-	line-height: 55px;
 	position: relative;
 	margin-top: 80px;
-	color: #fff;
-	background-color: #2b3530;
 	margin-bottom: 50px;
 }
 #mensagem{
 	margin-top: 42px;
+	color: #fff;
 	background-color: #2e6171 !important;
 	border:none !important;
-}
-
-#meta button:hover, #consumoideal:hover{
-	background-color:#0a522d; 
 }
 .instrucoes{
 	width: 60%;
@@ -80,8 +71,9 @@
 .colunas-meta{
 	min-height: 35vh;
 	padding: 50px;
+	background-color: #fff;
 }
-.colunas-meta.d-table-cell{
+.colunas-meta.d-table-cell, .texto_metas .row{
 	background-color: #2e6171!important;
 }
 .colunas-meta p{
@@ -102,6 +94,10 @@
 	.margin-top{
 		margin-top: 50px !important;
 	}
+	.coluna-meta-back{
+        margin-top: 0%;
+        height: 0px; 
+    }
 }
 @media(max-width:768px) {
 	.colunas-meta h1, .colunas-meta p,.container-metas h2, 

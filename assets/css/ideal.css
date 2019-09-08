@@ -11,7 +11,7 @@
 	margin: 0 auto;
 	font-size: 20px;
 	text-align: justify;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 .pergunta, .resultado{ /*Estilização da pergunta*/
 	padding: 50px 10px; 
@@ -40,21 +40,25 @@ label{
 	color: #fff; 
 	box-shadow:0 5px 0 #121417dd;  
 	text-align: center;
+	-webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;  
 }
-.alternativas:hover{
-	background: #53a761;
-}
+/*.alternativas:hover{
+	box-shadow:0 5px 0 #ffc107;
+}*/
 .alternativas:active{
 	position:relative;
 	top: 5px;
-	box-shadow:none !important;  
+	box-shadow:none !important;
 }
 .alternativa_a{
-	background-color: #FFDA73;
+	background-color: #ffd86d;
 	box-shadow:0 5px 0 #846B21;  
 }
 .alternativa_b{
-	background-color: #FFC526;
+	background-color: #e8bd46;
 	box-shadow:0 5px 0 #6B5103;
 }
 .alternativa_c{
@@ -65,15 +69,18 @@ h4{
 	color: #343a40;
 }
 input[type=radio]:checked + label .alternativas{
-    background-color: #467fe0;
-	box-shadow:0 5px 0 #1c458a;  
+    background-color: #2e6171;
+	box-shadow:0 5px 0 #132f38;  
+}
+input[type=radio]:checked + label .alternativas h4{
+	color: #fff;
 }
 .pergunta ~ form input{
 	position: absolute;
 	visibility: hidden;
 }
 .next{
-	background-color: #2b3530 !important;
+	width: 230px !important;
 }
 #definirmeta{
 	display: block;

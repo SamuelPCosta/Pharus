@@ -1,17 +1,17 @@
 			<div class="container-fluid first-container dicas-container">
 	        <div class="row">
 	            <div class="col-xl col-12 colunas">
-				    <div class="a">
+				    <div class="a mb-4 text-left">
 				      	<p>
 				      		<?php echo $dica1; ?>
 				      	</p>
 				    </div>
-				    <div class="a">
+				    <div class="a mb-4 text-left">
 				      	<p>
 				      		<?php echo $dica2; ?>
 				      	</p>
 				  	</div>
-				    <div class="a">
+				    <div class="a mb-4 text-left">
 				      	<p>
 				      		<?php echo $dica3; ?>
 				      	</p>
@@ -19,12 +19,12 @@
 			    </div>
 
 			    <div class="col-xl col-12 colunas">
-			    	<div class="a align-middle">
+			    	<div class="a mb-4 text-left">
 				      	<p>
 				      		<?php echo $dica4; ?>
 				      	</p>
 			      	</div>
-			      	<div class="b">
+			      	<div class="b mb-4">
 			      		<p>
 			      			<?php echo $dica5; ?>
 			      		</p>
@@ -37,7 +37,7 @@
 			      			<?php echo $dica6; ?>
 			      		</p>
 			      	</div>
-			      		<a href="dicas" id="recarregar" class="btn bg-secondary">Novas dicas <i class="fas fa-redo"></i></a>
+			      		<a href="dicas" id="recarregar" class="btn bg-warning">Novas dicas <i class="fas fa-redo"></i></a>
 			    </div>
             </div>
             </div>

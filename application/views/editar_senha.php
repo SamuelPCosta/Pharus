@@ -32,7 +32,7 @@
 												</div>
 											</div>
 											<div class="d-flex justify-content-center mt-3 login_container">
-												<button type="submit" name="editar" class="btn login_btn btn-success">Editar senha</button>
+												<button type="submit" name="editar" class="btn btn-warning">Editar senha</button>
 											</div>
 										</form>
 										<div class="mt-4">

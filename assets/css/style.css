@@ -4,6 +4,9 @@
     font-family: 'Open Sans', sans-serif !important;
     background-color: #f6f6f6 !important;
 }
+.serifa{
+    font-family: 'Roboto Slab', serif;
+}
 .master{
     min-height: 100%; /*Configuração necessaria para o footer*/
     overflow-x: hidden;
@@ -13,9 +16,6 @@
     height: 100%; /* hack para IE6 que trata height como min-height */
 }
 h1{
-    /*text-transform: uppercase;
-    font-size: 40px;
-    font-weight: 700;*/
     margin: 0 auto;
     text-align: center;
 }
@@ -26,19 +26,10 @@ h2{
 header .navbar{
     height: 55px;
     z-index: 2;
-    //background-color: #2b3530;
-}
-.logo img{
-    width: 75px !important
-}
-.btn-secondary{
-    background-color: #364046 !important;
-    border: none !important;
 }
 #wrapper {
     padding-left: 0;
     padding-top: 55px;
-    position: relative;
     z-index: 1;
 }
 #wrapper.toggled {
@@ -52,7 +43,6 @@ header .navbar{
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    //background-color: #9aada3; /*Cor de fundo do menu*/
     padding-top: 0px;
     z-index: 1;
     -webkit-transition: all 0.2s ease;
@@ -117,24 +107,24 @@ header .navbar{
     padding: 0;
     list-style: none;
 }
-.sidebar-nav li {
+.sidebar-nav li{
     text-indent: 20px;
     line-height: 40px;
 }
-.sidebar-nav li a {
+.sidebar-nav li a{
     display: block;
     text-decoration: none;
     color: #fff;
     font-size: 1.1em;
     padding: 10px 0px;
 }
-.sidebar-nav li a:hover { /*hover dos itens do menu*/
+.sidebar-nav li a:hover{ /*hover dos itens do menu*/
     text-decoration: none;
     color: #fff !important;
     background-color: #464B51;
 }
 .sidebar-nav li a:active,
-.sidebar-nav li a:focus {
+.sidebar-nav li a:focus{
     text-decoration: none;
 }
 .sidebar-nav li a .fas{ /*espaçamento dos icones no menu*/
@@ -157,13 +147,19 @@ header .navbar{
   box-shadow: none !important;
 }
 .atual{
-    border-left: solid 5px #FFC107; /*Estilos de marcarção para situar página do menu*/
-    background-color: #464B51;/*#36404655*/
+    border-left: solid 5px #464B51; /*Estilos de marcarção para situar página do menu*/
+    background-color: #FFC107;
 }
 .atual a{
-    color: #FFC107 !important;
-    //background-color: #FFC107;
+    color:#464B51 !important;
     margin-left: -5px !important;
+}
+.bg-dark .atual{
+    border-left: solid 5px #FFC107; /*Estilos de marcarção para situar página do menu*/
+    background-color: #464B51;
+}
+.bg-dark .atual a{
+    color: #FFC107 !important;
 }
 .atual a:hover{
     text-decoration: none;
@@ -171,7 +167,6 @@ header .navbar{
     background-color: #FFC107 !important;
 }
 .barra-horizontal{
-    //background-color: #457e99;
     background-color: #2E6171;      
 }
 .rounded-circle{
@@ -192,9 +187,6 @@ h4{
 .colunas-home{ /*Colunas duplas abaixo da barra central*/
     min-height: 65vh;
     padding: 30px !important;
-    /*background-color: #9aada333;
-    background-color: #c2d8e2;
-    color: black*/
 }
 .colunas-home p{
     width: 100% !important;
@@ -225,6 +217,10 @@ h4{
     font-size: 10em; 
     color: white
 }
+.bg-dark2{
+    background-color: #464b51!important;
+    border-color: #464b51!important;
+}
 @media(min-width:1200px) {
     .first-container {
         overflow:hidden;
@@ -245,10 +241,6 @@ h4{
         height: 400px; 
         background-color: #b5b5b5;
         visibility: visible;    
-    }
-    .bg-dark2{
-        background-color: #464b51!important;
-        border-color: #464b51!important;
     }
     .last-container h2{
         text-align: right;
@@ -361,7 +353,6 @@ footer a:hover{
 }
 .fa-upload{
     font-size: 3.5em;
-    color: #fff;
     opacity: 0;
 }
 .content img{
@@ -399,10 +390,6 @@ input[type="text"]:enabled , input[type="password"]:enabled{
 .usuario .input-group{
     width: 280px;
 }
-#page-content-wrapper .btn{
-    background-color: #FFC107!important;
-    color: #343a40!important;
-}
 .usuario .btn{
     width: 280px !important; 
 }
@@ -414,9 +401,6 @@ input[type="text"]:enabled , input[type="password"]:enabled{
 }
 .title_log{
     margin: 20px 0px;
-    text-transform: capitalize;
-    font-weight: normal;
-    color: #364046;
     font-size: 1.8em;
     text-align: center !important;
 }

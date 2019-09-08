@@ -6,7 +6,7 @@
 								<a class="mx-auto" href="#" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<img src="<?= base_url()?>assets/fotos/foto_user.png" id="photo_user" width=260>
 									<div clas s="btn-group">
-										<i class="fas fa-upload ml-1"></i>
+										<i class="fas fa-upload ml-1 text-white"></i>
 									</div>
 								</a>
 								<div class="dropdown-menu ml-3" aria-labelledby="dropdownMenuLink">
@@ -67,7 +67,7 @@
 													<button type="submit" name="editar" id="Salvar_dados" class="btn login_btn btn-success position-absolute my-4 mb-5">Salvar alterações</button>
 												</div>
 												<div class="d-flex justify-content-center mt-3 login_container my-3">
-													<button type="" name="editar" id="Atualizar_dados" class="btn login_btn btn-success position-absolute my-4 mb-5">Atualizar dados</button>
+													<button type="" name="editar" id="Atualizar_dados" class="btn btn-warning position-absolute my-4 mb-5">Atualizar dados</button>
 												</form>
 											</div>
 										</div>

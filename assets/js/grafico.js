@@ -4,7 +4,7 @@ for(var h=0; h < 24; h++){
     numeros[h] = h;
 }
 var data = {
-  labels: [0,1,2,3,4,5,6,7,8,9,10,12,12,13,14,15,16,17,18,19,20,21,22,23],
+  labels: [0,1,2,3,4,5,6,7,8,9,10,12,],
   datasets: [{
     label: "My First dataset",
     fillColor: "rgba(151,187,205,0.0)",
@@ -14,15 +14,7 @@ var data = {
     pointHighlightFill: "#fff",
     pointHighlightStroke: "rgba(220,220,220,1)",
     data: [15, 59, 30, 31, 56, 55, 40, 59, 30, 31, 56, 55, 15, 59, 30, 31, 56, 55, 40, 59, 30, 31, 56, 55]
-   }, //{
-  //   label: "My Second dataset",
-  //   fillColor: "rgba(220,220,220,0.0)",
-  //   strokeColor: "rgba(220,220,220,1)",
-  //   pointColor: "rgba(220,220,220,1)",
-  //   pointStrokeColor: "#fff",
-  //   pointHighlightFill: "#fff",
-  //   pointHighlightStroke: "rgba(151,187,205,1)",
-  //   data: [28, 48, 40, 19, 36, 27, 30]}
+   },
   ]
 };
 var options = {

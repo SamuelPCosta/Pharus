@@ -34,7 +34,7 @@
     	?>
     <div class="container h-100">
 		<div class="d-flex justify-content-center h-100" >
-			<div class="user_card">
+			<div class="user_card bg-light">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
 						<img src="<?= base_url()?>assets/img/logo.png" width=240 class="logo_grande" alt="Logo"><!--Nossa Logo-->
@@ -63,7 +63,7 @@
 						</div>
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
-						<button type="submit" name="button" class="btn login_btn">Entrar</button>
+						<button type="submit" name="button" class="btn btn-warning login_btn">Entrar</button>
 					</div>
 				</form>
 				<div class="mt-4">
