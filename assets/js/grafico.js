@@ -6,9 +6,9 @@ for(var h=0; h < 24; h++){
 var data = {
   labels: [0,1,2,3,4,5,6,7,8,9,10,12,],
   datasets: [{
-    label: "My First dataset",
+    label: "Dataset #1",
     fillColor: "rgba(151,187,205,0.0)",
-    strokeColor: "#9aada3",//"rgba(151,187,205,1)",
+    strokeColor: "#f8f9fa",
     pointColor: "rgba(151,187,205,1)",
     pointStrokeColor: "#fff",
     pointHighlightFill: "#fff",
@@ -17,6 +17,7 @@ var data = {
    },
   ]
 };
+
 var options = {
     bezierCurve : false
 };
@@ -29,15 +30,15 @@ var data = {
     datasets: [
         {
             label: "Usuário",
-            fillColor: "#364046",
+            fillColor: "#808080",
             //strokeColor: "#364046",
-            highlightFill: "#9aada3",
-            //highlightStroke: "#9aada3",
+            highlightFill: "#f8f9fa",
+            //highlightStroke: "#808080",
             data: [25, 59, 40, 41]
         },
         {
             label: "Meta",
-            fillColor: "#464b51",
+            fillColor: "#2e6171",
             //strokeColor: "#364046",
             highlightFill: "#ffc107",
             //highlightStroke: "#ffc107",

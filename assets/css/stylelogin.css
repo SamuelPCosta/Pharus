@@ -1,7 +1,7 @@
 body,
 html {
 	height: 100%;
-	background: #464B51!important; /*Cor de fundo da página*/
+	background: #343a40!important; /*Cor de fundo da página*/
 }
 .container{
 	padding-top: 100px;
@@ -39,7 +39,7 @@ html {
 	padding: 0 2rem;
 }
 .input-group-text {
-	background: #2b3530 !important; /*Cor de fundo dos icones*/
+	background: #343a40 !important; /*Cor de fundo dos icones*/
 	color: white !important;
 	border: 0 !important;
 	border-radius: 0.25rem 0 0 0.25rem !important;
@@ -50,7 +50,7 @@ html {
 	outline: 0px !important;
 }
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-	background-color: #2b3530 !important; /*Cor de fundo da checkbox*/
+	background-color: #343a40 !important; /*Cor de fundo da checkbox*/
 }
 .logo_grande{
 	margin-top: -300px;
@@ -69,4 +69,10 @@ html {
 		width: 170px !important;
 		margin-top: -270px;
 	}
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }

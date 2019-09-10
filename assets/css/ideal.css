@@ -6,7 +6,7 @@
 	text-transform: none;
     font-weight: normal;
 }
-.row .col-xl-6 h1 ~ p{ /*Estilização do paragrafo*/
+.ideal .col-xl-6 h1 ~ p{ /*Estilização do paragrafo*/
 	width: 70%;
 	margin: 0 auto;
 	font-size: 20px;
@@ -22,6 +22,7 @@
 	margin-bottom: 50px;
 	border-radius:10px; 
 	text-align: center;
+	box-shadow:0 5px 0 #6B5103;  
 }
 label{
 	display: inline !important;
@@ -40,6 +41,7 @@ label{
 	color: #fff; 
 	box-shadow:0 5px 0 #121417dd;  
 	text-align: center;
+	border-radius: 10px;
 	-webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;

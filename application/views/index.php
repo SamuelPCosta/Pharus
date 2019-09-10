@@ -22,7 +22,10 @@
 
 						</div>
 					</div>
-					<div class="col-xl-6 col-lg-12 text"><p class="mx-auto animeRight theme">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p></div>
+					<div class="col-xl-6 col-lg-12 text">
+						<h1 class="mx-auto animeRight theme" id="titulo_index">Dados Gerais</h1>
+						<p class="mx-auto animeRight theme">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica.</p>
+					</div>
 				</div>
 			</div>
 			<div class="container-fluid">

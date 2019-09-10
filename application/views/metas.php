@@ -42,7 +42,7 @@
 		        	<form method="post" action="cadastro_meta/adicionar">
 		        		<div id="meta">
 			        			<input type="number" min="20" max="10000" name="meta" placeholder="Apenas números. Ex.: 90" class="shadow bg-light rounded">
-			        			<button type="submit" class="btn btn-warning mx-auto">Salvar Meta</button><!--Esse botão alterna pra editar-->
+			        			<button type="submit" class="btn btn-warning mx-auto" autofocus>Salvar Meta</button><!--Esse botão alterna pra editar-->
 			        		<?php  
 			        			}else{
 			        		?> 

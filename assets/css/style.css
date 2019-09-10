@@ -4,9 +4,6 @@
     font-family: 'Open Sans', sans-serif !important;
     background-color: #f6f6f6 !important;
 }
-.serifa{
-    font-family: 'Roboto Slab', serif;
-}
 .master{
     min-height: 100%; /*Configuração necessaria para o footer*/
     overflow-x: hidden;
@@ -26,6 +23,11 @@ h2{
 header .navbar{
     height: 55px;
     z-index: 2;
+}
+.serifa{
+    font-family: 'Roboto Slab';
+    font-weight: 300!important;
+    font-size: 1.1em;
 }
 #wrapper {
     padding-left: 0;

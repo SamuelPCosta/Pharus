@@ -47,7 +47,7 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="usuario" class="form-control input_user text-capitalize" value="<?php echo $this->session->userdata('usuario'); ?>" placeholder="Nome de usuário">
+							<input type="text" name="usuario" class="form-control input_user text-capitalize" value="" placeholder="Nome de usuário" autofocus>
 						</div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
