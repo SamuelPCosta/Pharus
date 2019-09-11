@@ -214,8 +214,6 @@ var CanvasRenderer = function(el, options) {
 	}.bind(this);
 };
 
-const nightModeStorage = localStorage.getItem('NightMode')
-
 // caso tenha o valor no localStorage
 if (nightModeStorage) {
   // ativa o night mode

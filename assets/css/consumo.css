@@ -42,3 +42,9 @@ option{
 .container-consumo{
 	height: 50vh;
 }
+@media(max-width: 1200px){
+	#bar-chart, #line-chart{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+}
