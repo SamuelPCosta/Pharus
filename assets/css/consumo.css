@@ -34,7 +34,7 @@ option{
 	justify-content: center;
 	align-items: center
 }
-#myChart, #line-chart{
+#bar-chart, #line-chart{
 	width: 500px;
 	height: 500px;
 	margin-top: 50px;
