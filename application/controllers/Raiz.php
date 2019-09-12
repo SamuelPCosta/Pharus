@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Raiz extends CI_Controller {
 	public function index(){
-		if (isset($_SESSION['login'])) {
+		if ($_SESSION['login']) {
 			$this->load->model("Operacoes");
 			$usuario = $this->session->userdata('usuario');
 			$contaContrato = $this->Operacoes->contaContrato($usuario);
@@ -33,27 +33,30 @@ class Raiz extends CI_Controller {
 	}
 
 	public function consumo(){
-		if (isset($_SESSION['login'])) {
+		date_default_timezone_set('America/Sao_Paulo');
+		if ($_SESSION['login']) {
 			//Criar uma array q implementa o consumo de hora em hora e ao final do dia é destruido
-			$agendamento = 13; // Não vou usar minutos aqui
-			$horaAtual   = 13; // Obtenha a hora via JS
-			if ($consumoPorHora=array()) {
-				date_default_timezone_set('America/Sao_Paulo');
+			// $agendamento = 13; 
+			// $horaAtual   = 13;
+			if (isset($consumoPorHora)) {
 				if(date('H')==0) {
 					unset($consumoPorHora);
-					$agendamento = 0;
-				}if ($agendamento==$horaAtual) {//Mudar isso aqui
-					$this->load->model("Operacoes");
-					$usuario = $this->session->userdata('usuario');
-					$contaContrato = $this->Operacoes->contaContrato($usuario);
-					$this->load->model("Consumo_model");
-					$consumoPorHora = [$this->Consumo_model->SelecionarConsumo($contaContrato)];	
-					//echo date('H');
-				    print_r($consumoPorHora);
+				}else{
+					for ($i=0; $i <24; $i++) { 
+						$this->load->model("Operacoes");
+						$usuario = $this->session->userdata('usuario');
+						$contaContrato = $this->Operacoes->contaContrato($usuario);
+						$this->load->model("Consumo_model");
+						$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
+						$consumoPorHora[] = $consumo;
+						sleep(4);//3600
+					}
 				}
 			}else{
 				$consumoPorHora=array();
 			}
+			// print_r($consumoPorHora);
+			// echo date('H:i:s');
 			$this->load->view('header_sidebar');
 			$this->load->view('consumo');
 			$this->load->view('footer');
@@ -63,7 +66,7 @@ class Raiz extends CI_Controller {
 	}
 
 	public function metas(){
-		if (isset($_SESSION['login'])) {
+		if ($_SESSION['login']) {
 			$this->load->view('header_sidebar');
 			$this->load->view('metas');
 			$this->load->view('footer');
@@ -73,7 +76,7 @@ class Raiz extends CI_Controller {
 	}
 
 	public function idealdeconsumo(){
-		if (isset($_SESSION['login'])) {
+		if ($_SESSION['login']) {
 			$this->load->helper('cookie');
 			if (!isset($_GET['questao'])) {
 				delete_cookie("a"); delete_cookie("b"); delete_cookie("c");
@@ -87,7 +90,7 @@ class Raiz extends CI_Controller {
 	}
 
 	public function resultado(){
-		if (isset($_SESSION['login'])) {
+		if ($_SESSION['login']) {
 			$this->load->view('header_sidebar');
 			$this->load->view('resultado');
 			$this->load->view('footer');
@@ -97,7 +100,7 @@ class Raiz extends CI_Controller {
 	}
 
 	public function dicas(){
-		if (isset($_SESSION['login'])) {
+		if ($_SESSION['login']) {
 			$this->load->model("Dicas_model");
 			$dicas['dica1'] = $this->Dicas_model->exibir('a');
 			$dicas['dica2'] = $this->Dicas_model->exibir('a');
@@ -114,7 +117,7 @@ class Raiz extends CI_Controller {
 	}
 
 	public function login(){
-		if (isset($_SESSION['login'])) {
+		if ($_SESSION['login']) {
 			redirect('index'); 
 		}else{
 			$this->load->view('login');
@@ -122,7 +125,7 @@ class Raiz extends CI_Controller {
 	}
 
 	public function usuario(){
-		if (isset($_SESSION['login'])) {
+		if ($_SESSION['login']) {
 			$usuario = $this->session->userdata('usuario');
 			$this->load->model("Operacoes");
 			$dados['nome'] = $this->Operacoes->nomeCompleto($usuario);
@@ -168,7 +171,7 @@ class Raiz extends CI_Controller {
 	}
 
 	public function editar_senha(){
-		if (isset($_SESSION['login'])) {
+		if ($_SESSION['login']) {
 			$this->load->view('header_sidebar');
 			$this->load->view('editar_senha');
 			$this->load->view('footer');
@@ -178,7 +181,7 @@ class Raiz extends CI_Controller {
 	}
 
 	public function quemsomos(){
-		if (isset($_SESSION['login'])) {
+		if ($_SESSION['login']) {
 			$this->load->view('header_sidebar');
 			$this->load->view('quemsomos');
 		}else{
