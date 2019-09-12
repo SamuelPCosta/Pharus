@@ -3,12 +3,16 @@ var numeros = new Array(25);
 for(var h=0; h <= 23; h++){
     numeros[h] = h;
 }
-window.onload = function charts(){
-// caso tenha o valor no localStorage
 if (nightModeStorage) {
-    Chart.defaults.global.defaultFontColor = 'white';
+  Chart.defaults.global.defaultFontColor = 'white';
+}else{
+  Chart.defaults.global.defaultFontColor = '#343a40'
 }
-
+function update(myChart) {
+    Chart.defaults.global.defaultFontColor = (Chart.defaults.global.defaultFontColor == '#343a40') ? 'white' : '#343a40';
+    myChart.update();
+    myBarChart.update();
+}
  //alert("Funcionou!");
 Chart.defaults.global.defaultFontSize = 16;
 var ctx = document.getElementById('line-chart').getContext('2d');
@@ -41,6 +45,14 @@ var myChart = new Chart(ctx, {
                     beginAtZero: true
                 }
             }]
+        },
+        tooltips: {
+            mode: 'index',
+            intersect: false,
+        },
+        hover: {
+            mode: 'nearest',
+            intersect: true
         }
     }
 });
@@ -87,4 +99,3 @@ var myBarChart = new Chart(ctx,{
         }
     }
 });
-}

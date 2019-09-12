@@ -1,10 +1,10 @@
 			<div class="container-fluid first-container">
 		        <div class="row">
 		        	<div class="col-xl-6 col-md-12 graficos">
-		        		<canvas id="line-chart" class="px-5" height="325"></canvas>
+		        		<canvas id="line-chart" class="px-5" height="350"></canvas>
 		        	</div>
 		            <div class="col-xl-6 col-md-12 graficos">
-		            	<canvas id="bar-chart" class="px-5" height="325"></canvas>
+		            	<canvas id="bar-chart" class="px-5" height="350"></canvas>
 		       		</div>
 		       		<div class="col-12">
 		       			<form id="meses">

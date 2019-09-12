@@ -36,7 +36,7 @@ option{
 }
 #bar-chart, #line-chart{
 	width: 500px;
-	height: 500px;
+	height: 700px;
 	margin-top: 50px;
 }
 .container-consumo{
