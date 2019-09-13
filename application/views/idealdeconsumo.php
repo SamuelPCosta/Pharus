@@ -53,6 +53,13 @@
 							);
 						}
 	     			?>
+	     			<nav aria-label="...">
+						<ul class="pagination justify-content-center my-3">
+							<?php for ($i=1; $i <=5 ; $i++){//numero de questoes na paginacao ?>
+								<li class="page-item" id="questao<?php echo $i?>"><a class="page-link nperguntas theme active"><?php echo $i; ?></a></li>
+							<?php }?>
+						</ul>
+					</nav>
 	     			<div class="pergunta my-3">
 	     				<h3><?php echo $pergunta['Pergunta']?></h3>
 	     			</div>
@@ -72,7 +79,7 @@
 					  	<div class="d-flex justify-content-center my-3">
 							<button type="submit" name="button" class="next btn btn-warning">Próxima</button>
 						</div>
-					</form>
+						</form>					
 	     		</div>
 	            </div>
             </div>
@@ -102,6 +109,11 @@
 	?>
 	<script>
     var atual ="Ideal de Consumo";
+    	<?php if (isset($_GET['questao'])){?> 
+    var questao="questao<?php echo $_GET['questao'];?>";
+		<?php }else{?>
+	var questao="questao1";
+		<?php }?>
 	</script>
 </body>
 </html>

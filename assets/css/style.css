@@ -176,7 +176,7 @@ header .navbar{
 .barra-horizontal{
     background-color: #2E6171;      
 }
-.rounded-circle{
+.barra-horizontal .rounded-circle{
     border: 3px solid white;
     width: 200px !important;
     height: 200px !important;

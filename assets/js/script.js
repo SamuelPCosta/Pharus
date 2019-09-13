@@ -42,6 +42,7 @@ $("#Atualizar_dados").click(function(e) {
 
 window.onload = function(){
   document.getElementById(atual).classList.add("atual");
+  document.getElementById(questao).classList.add("active");
 }
 
 /*###########Foto User###########*/
@@ -76,6 +77,7 @@ if (nightModeStorage) {
   $("#vertical-line").toggleClass("bg-dark2");
   $(".master").toggleClass("bg-light");
   $(".theme").toggleClass("text-white");
+  $(".nperguntas").toggleClass("bg-dark2");
   $(".sidebar-li-a").toggleClass("text-dark");
   // já deixa o input marcado como ativo
   //nightMode.checked = true
@@ -92,6 +94,7 @@ $("#toggle-theme").click(function(e) {
   $("#vertical-line").toggleClass("bg-dark2");
   $(".master").toggleClass("bg-light");
   $(".theme").toggleClass("text-white");
+  $(".nperguntas").toggleClass("bg-dark2");
   $(".sidebar-li-a").toggleClass("text-dark");
 
   // se tiver a classe bg-dark, ou seja, se o tema escuro estiver ativo
