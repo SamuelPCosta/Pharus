@@ -12,9 +12,14 @@
 * html .master {
     height: 100%; /* hack para IE6 que trata height como min-height */
 }
+@font-face{
+    font-family: 'Orkney-Regular';
+    src:url('../fonts/Orkney-Regular.otf');
+}
 h1{
     margin: 0 auto;
     text-align: center;
+    font-family: 'Orkney-Regular';
 }
 h2{
     width: 100%;
