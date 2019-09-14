@@ -1,8 +1,8 @@
 			<div class="container first-container">
 				<div class="card py-5 px-5 my-4 shadow card-theme">
 					<div class="row align-items-center">
-						<div class="col-xl col-md-12 mx-auto">
-							<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content">
+						<div class="col-xl col-md-12 mx-auto px-0">
+							<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content px-0">
 								<!-- <i class="fas fa-upload align-middle d-table-cell mx-auto"></i> -->
 								<img src="<?=base_url()?>assets/fotos/user_man.png" id="upload" width=260>
 							</div>

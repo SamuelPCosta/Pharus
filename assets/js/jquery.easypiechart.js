@@ -222,12 +222,6 @@ if (nightModeStorage) {
   var cor_n_preenchida = "#464b51";
 }
 var EasyPieChart = function(el, opts) {
-	/*if ($(".chart").hasClass("inner")) {
-	    var tamanho = 500;
-	}else{
-		var tamanho = 550;
-	}*/
-	
 	var defaultOptions = {
 		barColor: corbarra,
 		trackColor: "#343a40",/*cor da barra não preenchida*/

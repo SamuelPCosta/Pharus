@@ -1,8 +1,8 @@
 			<div class="container first-container usuario">
 				<div class="card py-5 px-5 my-4 shadow card-theme">
 					<div class="row align-items-center">
-						<div class="col-xl col-md-12 mx-auto">
-							<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content" id="div_photo_user">
+						<div class="col-xl col-md-12 mx-auto px-0">
+							<div class="mx-auto col-12 h-75 my-3 rounded-top overflow-hidden content px-0" id="div_photo_user">
 								<a class="mx-auto" href="#" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<img src="<?= base_url()?>assets/fotos/foto_user.png" id="photo_user" width=260>
 									<div clas s="btn-group">
@@ -13,8 +13,8 @@
 									<form action="Raiz/salvarimg" method="post" enctype="multipart/form-data">
 										<span class="position-relative overflow-hidden text-center"><p>Atualize sua foto</p></span><br>
 										<input type="file" name="foto" required="" class="position-absolute">
+										<div><input type="submit" id="salvarimg" class="btn" value="Salvar Foto"></div>
 										<a class="dropdown-item" href="" id="removerimg">Remover foto Atual</a>
-										<div class="px-5"><input type="submit" id="salvarimg" value="Salvar Foto"></div>
 									</form>
 								</div>
 								<!-- <input type="submit" name="Salvar">	 -->

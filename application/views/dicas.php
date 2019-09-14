@@ -1,26 +1,26 @@
 			<div class="container-fluid first-container dicas-container">
 	        <div class="row">
 	            <div class="col-xl col-12 colunas">
-				    <div class="a mb-4 text-left">
-				      	<p>
+				    <div class="a mb-4">
+				      	<p class="text-left">
 				      		<?php echo $dica1; ?>
 				      	</p>
 				    </div>
-				    <div class="a mb-4 text-left">
-				      	<p>
+				    <div class="a mb-4">
+				      	<p class="text-left">
 				      		<?php echo $dica2; ?>
 				      	</p>
 				  	</div>
-				    <div class="a mb-4 text-left">
-				      	<p>
+				    <div class="a mb-4">
+				      	<p class="text-left">
 				      		<?php echo $dica3; ?>
 				      	</p>
 				    </div>
 			    </div>
 
 			    <div class="col-xl col-12 colunas">
-			    	<div class="a mb-4 text-left">
-				      	<p>
+			    	<div class="a mb-4">
+				      	<p class="text-left">
 				      		<?php echo $dica4; ?>
 				      	</p>
 			      	</div>

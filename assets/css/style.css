@@ -363,7 +363,6 @@ footer a:hover{
     opacity: 0;
 }
 .content img{
-    margin-left: -15px !important;
     opacity: 1;
     transition: opacity .35s;
     min-width: 260px;
@@ -410,6 +409,7 @@ input[type="text"]:enabled , input[type="password"]:enabled{
     margin: 20px 0px;
     font-size: 1.8em;
     text-align: center !important;
+    min-width: 280px;
 }
 .usuario{
     padding-top: 0px !important;
