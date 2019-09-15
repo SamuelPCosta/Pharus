@@ -19,7 +19,7 @@
 h1{
     margin: 0 auto;
     text-align: center;
-    font-family: 'Orkney-Regular';
+    //font-family: 'Orkney-Regular';
 }
 h2{
     width: 100%;
@@ -370,11 +370,11 @@ footer a:hover{
     object-fit: cover;
 }
 #div_photo_user div{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
 }
 #div_photo_user:hover>a img{
     opacity: 0.25;

@@ -69,6 +69,10 @@ html {
 		width: 170px !important;
 		margin-top: -270px;
 	}
+	.user_card_cadastro{
+		margin-top: 80px;
+		margin-bottom:30px;
+	}
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 

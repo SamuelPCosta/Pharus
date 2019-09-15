@@ -49,8 +49,7 @@
 			        <h2>Deseja Alterar a Sua <wbr>Meta Mensal?</h2>
 		        	<form method="post" action="cadastro_meta/adicionar">
 		        		<div id="meta">
-				        		<!--Alterar de um campo e botão para os outros-->
-				        		<input type="number" min="20" max="10000" name="meta" value="<?php echo $meta ?>" placeholder="Apenas números. Ex.: 90" class="shadow-sm bg-light rounded">
+				        		<input type="number" min="20" max="10000" name="meta" value="<?php echo $meta ?>" placeholder="Apenas números. Ex.: 90" class="shadow-sm bg-light">
 				        		<!--o name do input muda-->
 				        		<?php 
 				        			if (isset($_GET['error'])){

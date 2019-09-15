@@ -9,7 +9,7 @@
 										<i class="fas fa-upload ml-1 text-white"></i>
 									</div>
 								</a>
-								<div class="dropdown-menu ml-3" aria-labelledby="dropdownMenuLink">
+								<div class="dropdown-menu mt-2" aria-labelledby="dropdownMenuLink">
 									<form action="Raiz/salvarimg" method="post" enctype="multipart/form-data">
 										<span class="position-relative overflow-hidden text-center"><p>Atualize sua foto</p></span><br>
 										<input type="file" name="foto" required="" class="position-absolute">

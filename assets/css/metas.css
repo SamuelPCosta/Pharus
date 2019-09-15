@@ -34,6 +34,7 @@
 	text-align: center;
 	display: block;
 	background-color: #ddd;
+	border-radius: 10px;
 }
 .container-metas button{
 	margin-top: 10px;
@@ -46,6 +47,7 @@
 	position: relative;
 	margin-top: 80px;
 	margin-bottom: 50px;
+	border-radius: 10px;
 }
 #mensagem{
 	margin-top: 42px;

@@ -1,10 +1,12 @@
-			<div class="container-fluid first-container">
-		        <div class="row">
+			<div class="container-fluid first-container px-5 my-3">		
+		        <div class="card card-theme my-4 shadow">
+		        	<h2 class="my-4 ml-5 theme">Analise seu Consumo</h2>
+		        <div class="row px-3">
 		        	<div class="col-xl-6 col-md-12 graficos">
-		        		<canvas id="line-chart" class="px-5" height="350"></canvas>
+		        		<canvas id="line-chart" class="px-1 mx-3" height="350"></canvas>
 		        	</div>
 		            <div class="col-xl-6 col-md-12 graficos">
-		            	<canvas id="bar-chart" class="px-5" height="350"></canvas>
+		            	<canvas id="bar-chart" class="px-1 mx-3" height="350"></canvas>
 		       		</div>
 		       		<div class="col-12">
 		       			<form id="meses">
@@ -24,20 +26,14 @@
 		        				<option value="Dezembro">Dezembro</option>
 		        			</select>
 		        		</form>
-		       		</div>
-	            </div>
-            </div>
-            <!--<div class="container">
-            	<div class="row">
-		     		<div class="col-12 container-consumo">	
-		     		</div>
-		     		<div class="col-12 container-consumo">	
-		     		</div>
-		     	</div>
-            </div>-->
-        </div>
-        <!--conteudo-->
+		        	</div>
+		        </div>
+		        </div>
+		    </div>
 		</div>
+	</div>
+	<!--conteudo-->
+</div>
 </div>
 
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script><!--Importação do Ajax...-->
