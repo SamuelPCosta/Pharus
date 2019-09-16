@@ -7,7 +7,7 @@
 			        		if (isset($faixa)){echo "Entre ".$this->session->userdata('faixa');}
 			        	?>
 		        	</h1><br>
-		        	<p class="theme">&emsp;&emsp;Aqui você tem acesso a um questionário simples onde suas respostas seram registradas e analisadas com os dados de outros usuários, gerando assim nossa faixa de consumo que fará uma análise das respostas de outros usuários para podermos dar um maior suporte a eles a partir de possíveis soluções para seus problemas.</p>        	
+		        	<p class="theme mb-4">&emsp;&emsp;Aqui você tem acesso a um questionário simples onde suas respostas seram registradas e analisadas com os dados de outros usuários, gerando assim nossa faixa de consumo que fará uma análise das respostas de outros usuários para podermos dar um maior suporte a eles a partir de possíveis soluções para seus problemas.</p>        	
 		        </div>
 	     		<div class="col-xl-6 col-md-12 card py-5 card-theme shadow" id="questionario"><!--Div do questionário-->
 	     			<?php 

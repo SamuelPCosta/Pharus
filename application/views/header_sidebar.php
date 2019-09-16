@@ -63,7 +63,7 @@
                 </li>
                 <div class="dropdown-divider"></div>
                 <li class="">
-                    <a href="login/logout" class="sidebar-li-a text-dark"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
+                    <a href="login/logout" class="sidebar-li-a text-dark" onclick="destroyphoto()"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
                 </li>
             </ul>
         </div>

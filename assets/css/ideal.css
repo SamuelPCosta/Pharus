@@ -107,8 +107,4 @@ input[type=radio]:checked + label .alternativas h4{
 	.ideal h1, .pergunta, .alternativas{
 		margin-left: 5% !important;
 	}
-	.col-md-12, .ideal p{
-		margin: auto !important;
-	}
 }
-/*https://www.cliquearquitetura.com.br/public/Painel/midia/imagem/full/tendencia_de_cores_2018_14_0.jpg*/

@@ -149,8 +149,8 @@ class Raiz extends CI_Controller {
 	        'upload_path'   => './assets/fotos/',
 	        'allowed_types' => 'png|jpg|jpeg',
 	        'overwrite'		=> TRUE,
-	        //'file_name'     => $usuario.'.png',
-	        'file_name'     => 'foto_user'.'.png',
+	        'file_name'     => 'profile_'.$usuario.'.png',
+	        //'file_name'     => 'foto_user'.'.png',
 	        'max_size'      => '5000',
 	        'max_width:'    => '2000',
 	        'max_height:'   => '2000'

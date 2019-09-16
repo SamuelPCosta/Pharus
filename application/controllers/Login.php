@@ -12,7 +12,6 @@ class Login extends CI_Controller {
 			$this->session->set_userdata('login', 'autenticado');
 			//Tentarei salvar user na session
 			$this->session->set_userdata('usuario', $usuario);
-			//Obter meta isso tá repetido no controler de cadastro de meta para que possamos salvar por usuario
 			$this->load->model("Operacoes");
 			$contaContrato = $this->Operacoes->contaContrato($this->session->userdata('usuario')); 
 			$this->load->model("Metas_model");

@@ -93,7 +93,6 @@
 	  </div>
 	</footer>
 	Footer -->
-
 	<!--Abaixo seguem os scripts para o funcionamento do JS do BS...-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -104,7 +103,6 @@
 	<script  src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->
 	<script src="<?= base_url()?>assets/js/jquery.easypiechart.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Importação de sweetalert-->
-	<script src="dist/gradient-progress-bar.min.js"></script>
 	<script>
 		$(function() {
 			$('.chart').easyPieChart({});});
@@ -113,7 +111,10 @@
 		if ($gasto<=100) {echo "var corbarra = '#FFC107'";
 	} else {echo "var corbarra = '#a32f2f'";}
 	?>	
-</script>
+	</script>
+	<script>
+	    localStorage.setItem('Usuario', "<?php echo $this->session->userdata('usuario'); ?>");
+	</script>
 </body>
 </html>
 <!--https://codepen.io/Philippe_Fercha/pen/yawbqB link do menu-->

@@ -13,26 +13,27 @@
     height: 100%; /* hack para IE6 que trata height como min-height */
 }
 @font-face{
-    font-family: 'Orkney-Regular';
-    src:url('../fonts/Orkney-Regular.otf');
+    font-family: 'Nexa';
+    src:url('../fonts/Nexa/Nexa-Light.otf');
 }
 h1{
     margin: 0 auto;
     text-align: center;
-    //font-family: 'Orkney-Regular';
+    font-family: 'Nexa';
 }
 h2{
     width: 100%;
     margin: auto;
 }
+p{
+    font-weight: lighter;
+}
 header .navbar{
     height: 55px;
     z-index: 2;
 }
-.serifa{
-    font-family: 'Roboto Slab';
-    font-weight: 300!important;
-    font-size: 1.1em;
+.texto-corrido{
+    
 }
 #wrapper {
     padding-left: 0;
@@ -181,7 +182,7 @@ header .navbar{
     width: 200px !important;
     height: 200px !important;
 }
-.rounded-circle i{
+.barra-horizontal .rounded-circle i{
     font-size: 6em; 
     color: white
 }

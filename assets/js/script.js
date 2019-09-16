@@ -46,21 +46,25 @@ window.onload = function(){
 }
 
 /*###########Foto User###########*/
-const fotoStorage = localStorage.getItem('foto')
+const fotoStorage = localStorage.getItem('Foto')
+const usuario = localStorage.getItem('Usuario')
 if (fotoStorage) {
-    //$("#photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
+    $("#photo_user").attr("src","http://localhost/pharus/assets/fotos/profile_"+usuario+".png");
 }
 $("#removerimg").click(function(e) {
   e.preventDefault();
     $("#photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
-    if ($("#sidebar-wrapper").hasClass('bg-dark')) {
-      localStorage.setItem('foto', true)
-      return
-    }
-  // senão remove
-  localStorage.removeItem('foto')
+    localStorage.removeItem('Foto')
 });
-
+function salvarimg(){
+    $("#photo_user").attr("src","http://localhost/pharus/assets/fotos/profile_"+usuario+".png");
+    $(".dropdown-menu").toggleClass("show");
+    localStorage.setItem('Foto', true)
+    return  
+}
+function destroyphoto(){
+  localStorage.removeItem('Usuario')
+}
 /*###########Theme dark###########*/
 // pegamos o valor no localStorage
 const nightModeStorage = localStorage.getItem('NightMode')
