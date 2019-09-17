@@ -1,13 +1,8 @@
 .dicas-container{
 	margin: 20px 0px !important;
 }
-.a, .b{
-  display: flex;
-  align-items: center;
-}
 .colunas p{
 	padding: 25px;
-	padding-top: 40px;
 	text-align: justify;
 	width: 95%;
 	margin: auto;
@@ -24,15 +19,14 @@
 	height: 465px;
 	width: 100%;
 	margin: 0 auto;
-	background: #7ec9e6;
+	background-color: #2E6171;
+	color: white;
 }
 .c{
 	height: 710px;
 	width: 100%;
 	margin: 0 auto;
-	background-color: #33654a;
 	margin-bottom: 25px; 
-	color: #93ffdc;
 }
 #recarregar{
 	text-align: right;

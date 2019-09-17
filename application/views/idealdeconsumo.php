@@ -56,7 +56,7 @@
 	     			<nav aria-label="...">
 						<ul class="pagination justify-content-center my-3">
 							<?php for ($i=1; $i <=5 ; $i++){//numero de questoes na paginacao ?>
-								<li class="page-item" id="questao<?php echo $i?>"><a class="page-link nperguntas theme active"><?php echo $i; ?></a></li>
+								<li class="page-item" id="questao<?php echo $i?>"><a class="text-center rounded-circle page-link nperguntas theme active"><?php echo $i; ?></a></li>
 							<?php }?>
 						</ul>
 					</nav>

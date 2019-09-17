@@ -82,6 +82,10 @@ input[type=radio]:checked + label .alternativas h4{
     background-color: #ffc107!important;
     border-color: #ffc107!important;
 }
+.pagination>li>a, .pagination>li>span{
+	margin: 0 3px;
+	width: 38px;
+}
 .pergunta ~ form input{
 	position: absolute;
 	visibility: hidden;
