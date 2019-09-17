@@ -15,8 +15,8 @@
 								}
 							}else{
 								?>
-								<div class="chart anime theme" data-percent="73" data-scale-color="#ffb400"><span class="texto_grafico">Estipule<div id="tempo"><p>uma meta para<br>consumo</p></span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
-								<?php
+								<div class="chart line-height-normal anime theme" data-scale-color="#ffb400"><span">Defina uma <br> meta para<br>o consumo</span></div><!--Usuário ainda n definiu uma meta para ele, logo não temos gráfico-->
+							<?php
 							}
 							?>
 

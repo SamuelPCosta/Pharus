@@ -7,6 +7,9 @@
   width: 550px;
   font-weight: 200;
 }
+.line-height-normal{
+  line-height: 1em!important;
+}
 #tempo p{
   font-size: 0.5em;
   font-weight: 400;
@@ -34,6 +37,10 @@
   }
   .text p, #titulo_index{
     text-align: center !important;
+  }
+  .line-height-normal{
+    margin-top: 50px!important;
+    margin-bottom: 50px!important;
   }
 }
 @media(max-width:768px) {

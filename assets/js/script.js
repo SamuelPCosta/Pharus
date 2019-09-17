@@ -46,20 +46,22 @@ window.onload = function(){
 }
 
 /*###########Foto User###########*/
-const fotoStorage = localStorage.getItem('Foto')
 const usuario = localStorage.getItem('Usuario')
+const fotoStorage = localStorage.getItem(usuario)
 if (fotoStorage) {
     $("#photo_user").attr("src","http://localhost/pharus/assets/fotos/profile_"+usuario+".png");
+}else{
+  $("#photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
 }
 $("#removerimg").click(function(e) {
   e.preventDefault();
     $("#photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
-    localStorage.removeItem('Foto')
+    localStorage.removeItem(usuario)
 });
 function salvarimg(){
     $("#photo_user").attr("src","http://localhost/pharus/assets/fotos/profile_"+usuario+".png");
     $(".dropdown-menu").toggleClass("show");
-    localStorage.setItem('Foto', true)
+    localStorage.setItem(usuario, true)
     return  
 }
 function destroyphoto(){
