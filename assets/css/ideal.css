@@ -55,9 +55,9 @@ label{
 	top: 5px;
 	box-shadow:none !important;
 }
-.alternativa_a{
-	background-color: #ffd86d;
-	box-shadow:0 5px 0 #846B21;  
+.alternativa_a,.alternativa_b,.alternativa_c{
+	background-color: #ffd86d !important;
+	box-shadow:0 5px 0 #846B21 !important;  
 }
 .alternativa_b{
 	background-color: #e8bd46;
@@ -71,12 +71,12 @@ h4{
 	color: #343a40;
 }
 input[type=radio]:checked + label .alternativas{
-    background-color: #2e6171;
+    background-color: #ffc107!important; //#2e6171
 	box-shadow:0 5px 0 #132f38;  
 }
-input[type=radio]:checked + label .alternativas h4{
+/*input[type=radio]:checked + label .alternativas h4{
 	color: #fff;
-}
+}*/
 .page-item.active .page-link {
     color: #464b51!important;
     background-color: #ffc107!important;

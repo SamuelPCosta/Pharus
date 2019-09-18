@@ -56,13 +56,13 @@
 					<div class="col-xl-6 col-lg-12 colunas-home d-table line">
 						<div class="d-table-cell align-middle">
 						<h2 class="text-center anime theme">Heading</h2><br>
-						<p class="anime theme">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela ddificuldade de suprir a grande demanda e épocas de secas.</p>
+						<p class="anime theme">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-12 colunas-home d-table">
 						<div class="d-table-cell align-middle theme">
 						<h2 class="text-center animeRight theme">Heading</h2><br>
-						<p class="animeRight">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela ddificuldade de suprir a grande demanda e épocas de secas.</p>
+						<p class="animeRight">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
 						</div>
 					</div>
 				</div>

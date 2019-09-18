@@ -1,6 +1,8 @@
 /* Gráfico de linha */
-var numeros = new Array(25);
-for(var h=0; h <= 23; h++){
+data=new Date();
+var hora = data.getHours(); 
+var numeros = new Array();
+for(var h=0; h <= hora; h++){//Passando o limite como uma variável com o numero de horas 
     numeros[h] = h;
 }
 if (nightModeStorage) {
@@ -27,8 +29,8 @@ var myChart = new Chart(ctx, {
             borderWidth: 3,
             backgroundColor: '#FFC107',
             borderColor: '#FFC107',
-            pointBorderWidth: 10,
-            pointHitRadius: 15,
+            pointBorderWidth: 5,
+            pointHitRadius: 10,
             fill: false,
             lineTension : 0
         }]
@@ -37,7 +39,8 @@ var myChart = new Chart(ctx, {
         responsive: true,
         title: {
             display: true,
-            text: 'Gráfico de Consumo por hora'
+            text: 'Gráfico de Consumo por hora',
+            fontSize: 25
         },
         scales: {
             yAxes: [{
@@ -75,7 +78,7 @@ var myBarChart = new Chart(ctx,{
         },
         {
             label: "Minha Meta",
-            backgroundColor: "#2e6171",
+            backgroundColor: "#555",
             borderWidth: 1,
             borderColor: '#808080',
             hoverBackgroundColor:"#ffc107",
@@ -87,7 +90,8 @@ var myBarChart = new Chart(ctx,{
         responsive: true,
         title: {
             display: true,
-            text: 'Gráfico de expectativas por mês'
+            text: 'Gráfico de expectativas por mês',
+            fontSize: 25
         },
         tooltips: {
             mode: 'index',

@@ -1,15 +1,15 @@
 			<div class="container-fluid first-container px-5 my-3">		
-		        <div class="card card-theme my-4 shadow">
+		        <div class="card card-theme my-4 shadow-sm">
 		        	<h2 class="my-4 ml-5 theme">Analise seu Consumo</h2>
 		        <div class="row px-3">
-		        	<div class="col-xl-6 col-md-12 graficos">
-		        		<canvas id="line-chart" class="px-1 mx-3" height="350"></canvas>
+		        	<div class="col-xl-6 col-md-12 graficos px-4 py-5">
+		        		<canvas id="line-chart" height="350"></canvas>
 		        	</div>
-		            <div class="col-xl-6 col-md-12 graficos">
-		            	<canvas id="bar-chart" class="px-1 mx-3" height="350"></canvas>
+		            <div class="col-xl-6 col-md-12 graficos px-4 py-5">
+		            	<canvas id="bar-chart" height="350"></canvas>
 		       		</div>
 		       		<div class="col-12">
-		       			<form id="meses">
+		       			<!-- <form id="meses">
 		        			<select id="mes" class="theme card-theme">
 		        				<option value="0" id="placeholder">Selecione um mês</option>
 		        				<option value="Janeiro">Janeiro</option>
@@ -25,7 +25,7 @@
 		        				<option value="Novembro">Novembro</option>
 		        				<option value="Dezembro">Dezembro</option>
 		        			</select>
-		        		</form>
+		        		</form> -->
 		        	</div>
 		        </div>
 		        </div>
