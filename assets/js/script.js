@@ -85,8 +85,6 @@ if (nightModeStorage) {
   $(".theme").toggleClass("text-white");
   $(".nperguntas").toggleClass("bg-dark2");
   $(".sidebar-li-a").toggleClass("text-dark");
-  // já deixa o input marcado como ativo
-  //nightMode.checked = true
 }
 
 $("#toggle-theme").click(function(e) {
