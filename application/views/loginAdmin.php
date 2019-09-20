@@ -26,7 +26,7 @@
     			}elseif($erro==2){
     	?>
 			<script>
-	    		swal("Ops!", 'Faça login para acessar essa página!', "error");
+	    		swal("Ops!", 'Faça login como administrador para acessar essa página!', "error");
 	    	</script>
     	<?php 	
     			}
@@ -37,11 +37,12 @@
 			<div class="user_card bg-light">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<img src="<?= base_url()?>assets/img/logo.png" width=240 class="logo_grande" alt="Logo"><!--Nossa Logo-->
+						<img src="<?= base_url()?>assets/img/logo.png" width=240 class="logo_grande" alt="Logo mb-0"><!--Nossa Logo-->
+						<h2 class="text-center mb-3">ADMIN</h2>
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-					<form method="post" action="login/autenticar"><!--Mandar para a página de checagem-->
+					<form method="post" action="login/loginAdmin"><!--Mandar para a página de checagem-->
 						<!--Envia para o controller Login.php na função autenticar-->
 						<div class="input-group mb-3">
 							<div class="input-group-append">
@@ -56,9 +57,8 @@
 							<input type="password" name="senha" class="form-control input_pass" value="" placeholder="Senha">
 						</div>
 						<div class="form-group">
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customControlInline">
-								<label class="custom-control-label" for="customControlInline">Lembre-se de mim</label>
+							<div class="text-center">
+								<span>Acesso somente de admin.</span>
 							</div>
 						</div>
 				</div>
@@ -66,14 +66,6 @@
 						<button type="submit" name="button" class="btn btn-warning login_btn">Entrar</button>
 					</div>
 				</form>
-				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Ainda não tem cadastro? <a href="cadastro" class="ml-2">Faça agora!</a>
-					</div>
-					<div class="d-flex justify-content-center links">
-						<a href="recuperarsenha">Esqueceu sua senha?</a>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

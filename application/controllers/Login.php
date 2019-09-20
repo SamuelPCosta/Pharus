@@ -28,7 +28,7 @@ class Login extends CI_Controller {
 			$usuario = $this->input->post("usuario"); //Recebe entrada de usuario
 			$senha = $this->input->post("senha"); //Recebe entrada de senha
 			$login = $this->usuarios_model->logarUsuarios($usuario,$senha); //Chama a função logar usuário dentro do modelo usuários model
-		if($login){
+		if($loginAdmin){
 			//$this->session->set_flashdata('mensagem_login','Logado com secesso!'); 
 			$this->session->set_userdata('login', 'autenticado');
 			//Tentarei salvar user na session
@@ -38,9 +38,9 @@ class Login extends CI_Controller {
 			$this->load->model("Metas_model");
 			$this->Metas_model->get_meta($contaContrato); 
 			//Chama a função get meta dentro do modelo metas_model
-			redirect('index'); 
+			redirect('login-administrador'); 
 		}else{
-			redirect('login?error=1'); 
+			redirect('login-administrador?error=1'); 
 		}		
 	}
 

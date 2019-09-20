@@ -127,6 +127,14 @@ class Raiz extends CI_Controller {
 		}
 	}
 
+	public function loginAdmin(){
+		if (isset($_SESSION['login'])) {
+			redirect('index'); 
+		}else{
+			$this->load->view('loginAdmin');
+		}
+	}
+
 	public function usuario(){
 		if (isset($_SESSION['login'])) {
 			$usuario = $this->session->userdata('usuario');
