@@ -28,6 +28,10 @@ select{ /*Estilização da caixa de seleção*/
 option{
 	border-radius: 10px;
 }
+h2.card-theme{
+	border-left: 5px solid #ffc107;
+	width: 100% !important;
+}
 .graficos{
 	display: flex;
 	flex-direction: row;

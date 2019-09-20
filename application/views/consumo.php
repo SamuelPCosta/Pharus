@@ -1,6 +1,6 @@
 			<div class="container-fluid first-container px-5 my-3">		
-		        <div class="card card-theme my-4 shadow-sm">
-		        	<h2 class="my-4 ml-5 theme">Analise seu Consumo</h2>
+		        <div class="my-4">
+		        	<h2 class="my-4 card text-lg-left text-center card-theme px-5 py-3 theme">Analise seu Consumo</h2>
 		        <div class="row px-3">
 		        	<div class="col-xl-6 col-md-12 graficos px-4 py-5">
 		        		<canvas id="line-chart" height="350"></canvas>

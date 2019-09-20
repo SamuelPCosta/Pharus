@@ -37,20 +37,35 @@
 		     			<img src="<?= base_url()?>assets/img/logo.png" class="my-5">
 		     		</div>
 	     		</div>
-	     		<div class="row featurette">
-		     		<div class="col-lg-6 col-md-12 float-left order-lg-2 theme">
-		     			<h1 class="text-lg-right featurette-heading text-center theme">Componentes</h1>
-	        				<ul class="lead">
-								<li>Gabriel Felipe - </li>
-								<li>José André - </li>
-								<li>Keliane Martins - </li>
-								<li>Samuel Soares - </li>
-							</ul>
+	     		<div class="row align-items-center py-5">
+	     			<div class="col-lg-12 col-md-12 float-left theme">
+		     			<h1 class="featurette-heading text-center theme mb-3">Componentes</h1>
 		     		</div>
-		     		<div class="col-lg-6 col-md-12 order-lg-1 text-center">
-		     			<img src="<?= base_url()?>assets/img/logo.png" class="featurette-image img-fluid mx-auto my-5">
-		     		</div>
-		     	</div>
+					<div class="col-lg-3 my-2 text-center anime">
+						<div class="rounded-circle mx-auto d-table">
+							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
+						</div>
+						<h4 class="py-3 text-white">Gabriel Felipe - </h4>
+					</div><!-- /.col-lg-4 -->
+					<div class="col-lg-3 my-2 text-center anime">
+						<div class="rounded-circle mx-auto d-table">
+							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
+						</div>
+						<h4 class="py-3 text-white">José André - </h4>
+					</div><!-- /.col-lg-4 -->
+					<div class="col-lg-3 my-2 text-center animeRight">
+						<div class="rounded-circle mx-auto d-table">
+							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
+						</div>
+						<h4 class="py-3 text-white">Keliane Martins - </h4>
+					</div><!-- /.col-lg-4 -->
+					<div class="col-lg-3 my-2 text-center animeRight">
+						<div class="rounded-circle mx-auto d-table">
+							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
+						</div>
+						<h4 class="py-3 text-white">Samuel Soares - </h4>
+					</div><!-- /.col-lg-4 -->
+				</div><!-- /.row -->
             </div>
             </div>
         </div>
