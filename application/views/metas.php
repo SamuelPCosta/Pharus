@@ -1,17 +1,17 @@
 			<div class="container first-container container-metas">
 	        <div class="row align-items-center">
 	     		<div class="col-xl-6 col-md-12">
-	     			<p class="valor margin-top theme">
+	     			<h2 class="valor margin-top theme">
 	     			<?php 
 	     			//$meta=0;
 	     			$meta = $this->session->userdata('meta');
 	     				if ($meta==0) {
 	     					echo("Defina sua <br> meta mensal.");
 	     				}else{
-	     					echo("Sua meta é: <br>".$meta." reais.");
+	     					echo("Sua meta é: <br><span style='font-family: Open Sans !important; font-weight:lighter;'>".$meta."</span> reais.");
 	     				}
 	     			?>
-	     			</p>
+	     			</h2>
 	     			<!--Taca PHP--><br>
 	     			<p class="instrucoes theme">
 	     			<?php 

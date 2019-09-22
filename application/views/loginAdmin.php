@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Pharus | Login</title> <!--Título da Aba-->
+	<title>Pharus | Admin</title> <!--Título da Aba-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Importação do CSS do BS-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/stylelogin.css"> <!--Importação das folhas de estilo css-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
@@ -34,11 +34,13 @@
     	?>
     <div class="container h-100">
 		<div class="d-flex justify-content-center h-100" >
-			<div class="user_card bg-light">
+			<div class="user_card user_card_admin bg-light" style="height: 250px">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<img src="<?= base_url()?>assets/img/logo.png" width=240 class="logo_grande" alt="Logo mb-0"><!--Nossa Logo-->
-						<h2 class="text-center mb-3">ADMIN</h2>
+						<div class="logo_grande mx-auto">	
+							<img src="<?= base_url()?>assets/img/logo.png" width=240 alt="Logo mb-0"><!--Nossa Logo-->
+							<h2 class="text-center mb-3 text-light administrador">Administrador</h2>
+						</div>
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
@@ -58,12 +60,12 @@
 						</div>
 						<div class="form-group">
 							<div class="text-center">
-								<span>Acesso somente de admin.</span>
+								<span>Acesso somente por admin.</span>
 							</div>
 						</div>
 				</div>
-					<div class="d-flex justify-content-center mt-3 login_container">
-						<button type="submit" name="button" class="btn btn-warning login_btn">Entrar</button>
+					<div class="d-flex justify-content-center mt-3">
+						<button type="submit" name="button" class="btn btn-warning login_btn">Acessar Dashboard</button>
 					</div>
 				</form>
 			</div>

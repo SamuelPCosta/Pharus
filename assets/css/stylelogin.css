@@ -64,6 +64,10 @@ html {
 .logo_grande_cadastro{
 	margin-top: -250px !important;
 }
+.brand_logo_container div.logo_grande{
+	width: auto !important;
+	margin-top: -210px;
+}
 @media(max-width:768px) {
 	.logo_grande{
 		width: 170px !important;

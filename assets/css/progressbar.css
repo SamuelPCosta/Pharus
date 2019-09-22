@@ -29,7 +29,7 @@
 }
 .text p, #titulo_index{
   width: 70% !important;
-  text-align: right !important;
+  text-align: right /*!important descomente para alinhar o titulo a direita*/;
 }
 @media(max-width:1200px) {
   .container .row .box .chart{

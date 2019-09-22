@@ -6,7 +6,7 @@
 								<!-- <i class="fas fa-upload align-middle d-table-cell mx-auto"></i> -->
 								<img src="<?=base_url()?>assets/fotos/user_man.png"  id="photo_user" width=260>
 							</div>
-							<h2 class="my-3 text-center theme"><span class="text-capitalize"><?php echo $this->session->userdata('usuario'); ?></span></h2>
+							<h4 class="my-3 text-center theme"><span class="text-capitalize" style="font-size: 2rem; font-weight:lighter;"><?php echo $this->session->userdata('usuario'); ?></span></h4>
 						</div>
 						<div id="vertical-line"></div>
 						<div class="col-xl col-md-12 mx-auto">

@@ -15,7 +15,7 @@ function update(myChart) {
     myChart.update();
     myBarChart.update();
 }
- //alert("Funcionou!");
+
 Chart.defaults.global.defaultFontSize = 16;
 var ctx = document.getElementById('line-chart').getContext('2d');
 var myChart = new Chart(ctx, {

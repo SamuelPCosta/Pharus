@@ -17,7 +17,7 @@
 	padding: 50px 10px; 
 	width: 70%; margin: auto; 
 	background-color: #ffc107; 
-	color: #464b51; 
+	color: #343a40; 
 	margin-right: 15%;
 	margin-bottom: 50px;
 	border-radius:10px; 
@@ -97,12 +97,9 @@ input[type=radio]:checked + label .alternativas{
 	display: block;
 	width: 45%;
 	height: 70px;
-	text-align: center;
 	margin: auto;
 	line-height: 55px;
 	position: relative;
-	margin-top: 50px;
-	color: #fff;
 }
 @media(max-width:768px) {
 	.ideal h1, .ideal p, .pergunta, .resultado, .alternativas{

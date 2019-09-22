@@ -19,11 +19,12 @@
 h1{
     margin: 0 auto;
     text-align: center;
-    font-family: 'Nexa';
+    font-family: 'Nexa' !important;
 }
 h2{
     width: 100%;
     margin: auto;
+    font-family: 'Nexa' !important;
 }
 p{
     font-weight: lighter;
