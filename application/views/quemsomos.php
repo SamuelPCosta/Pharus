@@ -41,25 +41,25 @@
 	     			<div class="col-lg-12 col-md-12 float-left theme">
 		     			<h1 class="featurette-heading text-center theme mb-3">Componentes</h1>
 		     		</div>
-					<div class="col-lg-3 my-2 text-center anime">
+					<div class="col-lg-3 col-md-6 my-2 text-center anime">
 						<div class="rounded-circle mx-auto d-table">
 							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
 						</div>
 						<h4 class="py-3 text-white">Gabriel Felipe - </h4>
 					</div><!-- /.col-lg-4 -->
-					<div class="col-lg-3 my-2 text-center anime">
+					<div class="col-lg-3 col-md-6 my-2 text-center anime">
 						<div class="rounded-circle mx-auto d-table">
 							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
 						</div>
 						<h4 class="py-3 text-white">José André - </h4>
 					</div><!-- /.col-lg-4 -->
-					<div class="col-lg-3 my-2 text-center animeRight">
+					<div class="col-lg-3 col-md-6 my-2 text-center animeRight">
 						<div class="rounded-circle mx-auto d-table">
 							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
 						</div>
 						<h4 class="py-3 text-white">Keliane Martins - </h4>
 					</div><!-- /.col-lg-4 -->
-					<div class="col-lg-3 my-2 text-center animeRight">
+					<div class="col-lg-3 col-md-6 my-2 text-center animeRight">
 						<div class="rounded-circle mx-auto d-table">
 							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
 						</div>

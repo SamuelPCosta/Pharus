@@ -29,15 +29,18 @@
 }
 .text p, #titulo_index{
   width: 70% !important;
-  text-align: right /*!important descomente para alinhar o titulo a direita*/;
+  text-align: center /*!important descomente para alinhar o titulo a direita*/;
+}
+ #titulo_index{
+  border-left: solid 10px #ffc107;
 }
 @media(max-width:1200px) {
   .container .row .box .chart{
     max-width: 550px;
   }
-  .text p, #titulo_index{
+  /*.text p, #titulo_index{
     text-align: center !important;
-  }
+  }*/
   .line-height-normal{
     margin-top: 50px!important;
     margin-bottom: 50px!important;
