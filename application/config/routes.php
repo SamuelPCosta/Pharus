@@ -68,3 +68,4 @@ $route['recuperarsenha'] = 'Raiz/recuperarsenha';
 $route['editar-senha'] = 'Raiz/editar_senha';
 $route['simulador-de-consumo'] = 'Raiz/simulador';
 $route['index'] = 'Raiz';
+$route['admin'] = 'Raiz/AdminIndex';

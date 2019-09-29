@@ -32,6 +32,14 @@ class Raiz extends CI_Controller {
 		}	
 	}
 
+	public function AdminIndex(){
+		if (isset($_SESSION['admin'])) {
+			$this->load->view('Admin/index');
+		}else{
+			redirect('login-administrador?error=1'); 
+		}
+	}
+
 	public function monitorarConsumo(){
 	//Criar uma array q implementa o consumo de hora em hora e ao final do dia é destruido
 		// $agendamento = 13; 

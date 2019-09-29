@@ -6,7 +6,7 @@
 	        </div>
      		<div class="col-xl-6 col-md-12 card py-5 card-theme shadow"><!--Div do questionário-->
      			<div class="resultado mx-auto mt-3">
-     				<h3>Intervalo de custo <br><wbr>entre <?php echo $this->session->userdata('faixa'); ?></h3>
+     				<h3>Faixa de gastos <br><wbr>entre <?php echo $this->session->userdata('faixa'); ?></h3>
      			</div>
      			
      			<a href="metas" class="btn bg-warning text-center mt-3" id="definirmeta">Definir minha meta</a>

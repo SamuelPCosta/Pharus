@@ -22,15 +22,15 @@
 		     		<div class="col-lg-6 col-md-12 float-left theme">
 		     			<h1 class="text-lg-left text-center theme">Linguagens e Frameworks Utilizados</h1>
 	        			<ul class="lead">
-							<li>CSS - Design do site</li>
-							<li>HTML - Estrura</li>
-							<li>Java Script - Animações</li>
-							<li>MySQL - Banco de Dados</li>
-							<li>PHP - Funções</li>
+							<li class="ml-5">CSS - Design do site</li>
+							<li class="ml-5">HTML - Estrura</li>
+							<li class="ml-5">Java Script - Animações</li>
+							<li class="ml-5">MySQL - Banco de Dados</li>
+							<li class="ml-5">PHP - Funções</li>
 						</ul>
 						<ul class="lead">
-							<li>Bootstrap - Front-end</li>
-							<li>CodeIgniter - Back-end</li>
+							<li class="ml-5">Bootstrap - Front-end</li>
+							<li class="ml-5">CodeIgniter - Back-end</li>
 						</ul>
 		     		</div>
 		     		<div class="col-lg-6 col-md-12">

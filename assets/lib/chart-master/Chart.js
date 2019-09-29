@@ -264,11 +264,11 @@ window.Chart = function(context){
 	this.Doughnut = function(data,options){
 	
 		chart.Doughnut.defaults = {
-			segmentShowStroke : true,
+			segmentShowStroke : false,
 			segmentStrokeColor : "#d6d9dc",
 			segmentStrokeWidth : 2,
 			percentageInnerCutout : 70,
-			animation : true,
+			animation : false,
 			animationSteps : 100,
 			animationEasing : "easeOutBounce",
 			animateRotate : true,

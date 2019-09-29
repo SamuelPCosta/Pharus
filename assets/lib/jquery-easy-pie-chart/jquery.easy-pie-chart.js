@@ -119,28 +119,6 @@ Thanks to Philip Thrasher for the jquery plugin boilerplate for coffee script
         _this.ctx.stroke();
         return _this.ctx.restore();
       };
-      animateLine = function(from, to) {
-        var currentStep, fps, steps;
-        fps = 30;
-        steps = fps * _this.options.animate / 1000;
-        currentStep = 0;
-        _this.options.onStart.call(_this);
-        _this.percentage = to;
-        if (_this.animation) {
-          clearInterval(_this.animation);
-          _this.animation = false;
-        }
-        return _this.animation = setInterval(function() {
-          _this.ctx.clearRect(-_this.options.size / 2, -_this.options.size / 2, _this.options.size, _this.options.size);
-          renderBackground.call(_this);
-          drawLine.call(_this, [easeInOutQuad(currentStep, from, to - from, steps)]);
-          currentStep++;
-          if ((currentStep / steps) > 1) {
-            clearInterval(_this.animation);
-            _this.animation = false;
-            return _this.options.onStop.call(_this);
-          }
-        }, 1000 / fps);
       };
       easeInOutQuad = function(t, b, c, d) {
         var easeIn, easing;
