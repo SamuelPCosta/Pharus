@@ -43,7 +43,7 @@
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="index.html" class="logo"><b>DASH<span>IO</span></b></a>
+      <a href="index.html" class="logo"><b><span>P</span>harus</b></a>
       <!--logo end-->
       <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
@@ -130,7 +130,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="img/ui-zac.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="<?= base_url()?>assets/imgAdmin/ui-zac.jpg"></span>
                   <span class="subject">
                   <span class="from">Zac Snider</span>
                   <span class="time">Just now</span>
@@ -142,7 +142,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="img/ui-divya.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="<?= base_url()?>assets/imgAdmin/ui-divya.jpg"></span>
                   <span class="subject">
                   <span class="from">Divya Manian</span>
                   <span class="time">40 mins.</span>
@@ -154,7 +154,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="img/ui-danro.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="<?= base_url()?>assets/imgAdmin/ui-danro.jpg"></span>
                   <span class="subject">
                   <span class="from">Dan Rogers</span>
                   <span class="time">2 hrs.</span>
@@ -166,7 +166,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="img/ui-sherman.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="<?= base_url()?>assets/imgAdmin/ui-sherman.jpg"></span>
                   <span class="subject">
                   <span class="from">Dj Sherman</span>
                   <span class="time">4 hrs.</span>
@@ -232,7 +232,7 @@
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="login-administrador">Logout</a></li>
+          <li><a class="logout" href="login/logout">Sair</a></li>
         </ul>
       </div>
     </header>
@@ -245,8 +245,8 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Sam Costa</h5>
+          <p class="centered"><a href="profile.html"><img src="<?= base_url()?>assets/imgAdmin/ui-sam.jpg" class="img-circle" width="80"></a></p>
+          <h5 class="centered"><?php echo $this->session->userdata('admin'); ?></h5>
           <li class="mt">
             <a class="active" href="index.html">
               <i class="fa fa-dashboard"></i>
@@ -268,7 +268,7 @@
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-cogs"></i>
-              <span>Components</span>
+              <span>Componentes</span>
               </a>
             <ul class="sub">
               <li><a href="grids.html">Grids</a></li>
@@ -283,7 +283,7 @@
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-book"></i>
-              <span>Extra Pages</span>
+              <span>Páginas Extras</span>
               </a>
             <ul class="sub">
               <li><a href="blank.html">Blank Page</a></li>
@@ -304,7 +304,7 @@
               </a>
             <ul class="sub">
               <li><a href="form_component.html">Form Components</a></li>
-              <li><a href="advanced_form_components.html">Advanced Components</a></li>
+              <li><a href="advanced_form_components.html">Componentes Avançados</a></li>
               <li><a href="form_validation.html">Form Validation</a></li>
               <li><a href="contactform.html">Contact Form</a></li>
             </ul>
@@ -507,20 +507,20 @@
                   </div>
                   <div class="row">
                     <div class="col-md-3 centered hidden-sm hidden-xs">
-                      <img src="img/ui-danro.jpg" class="img-circle" width="65">
+                      <img src="<?= base_url()?>assets/imgAdmin/ui-danro.jpg" class="img-circle" width="65">
                     </div>
                     <div class="col-md-9">
                       <p>
                         <name>Dan Rogers</name>
-                        sent you a message.
+                        enviou uma mensagem.
                       </p>
-                      <p class="small">3 hours ago</p>
+                      <p class="small">3 horas atrás</p>
                       <p class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                       <form class="form-inline" role="form">
                         <div class="form-group">
                           <input type="text" class="form-control" id="exampleInputText" placeholder="Reply Dan">
                         </div>
-                        <button type="submit" class="btn btn-default">Send</button>
+                        <button type="submit" class="btn btn-default">Enviar</button>
                       </form>
                     </div>
                   </div>
@@ -545,7 +545,7 @@
                   <div class="white-header">
                     <h5>TOP USER</h5>
                   </div>
-                  <p><img src="img/ui-zac.jpg" class="img-circle" width="50"></p>
+                  <p><img src="<?= base_url()?>assets/imgAdmin/ui-zac.jpg" class="img-circle" width="50"></p>
                   <p><b>Zac Snider</b></p>
                   <div class="row">
                     <div class="col-md-6">
@@ -576,7 +576,7 @@
               <div class="col-lg-4 col-md-4 col-sm-4 mb">
                 <div class="product-panel-2 pn">
                   <div class="badge badge-hot">HOT</div>
-                  <img src="img/product.jpg" width="200" alt="">
+                  <img src="<?= base_url()?>assets/imgAdmin/product.jpg" width="200" alt="">
                   <h5 class="mt">Flat Pack Heritage</h5>
                   <h6>TOTAL SALES: 1388</h6>
                   <button class="btn btn-small btn-theme04">FULL REPORT</button>
@@ -588,7 +588,7 @@
                 <div class="content-panel pn">
                   <div id="profile-02">
                     <div class="user">
-                      <img src="img/friends/fr-06.jpg" class="img-circle" width="80">
+                      <img src="<?= base_url()?>assets/imgAdmin/friends/fr-06.jpg" class="img-circle" width="80">
                       <h4>DJ SHERMAN</h4>
                     </div>
                   </div>
@@ -721,7 +721,7 @@
             <!-- First Member -->
             <div class="desc">
               <div class="thumb">
-                <img class="img-circle" src="img/ui-divya.jpg" width="35px" height="35px" align="">
+                <img class="img-circle" src="<?= base_url()?>assets/imgAdmin/ui-divya.jpg" width="35px" height="35px" align="">
               </div>
               <div class="details">
                 <p>
@@ -733,7 +733,7 @@
             <!-- Second Member -->
             <div class="desc">
               <div class="thumb">
-                <img class="img-circle" src="img/ui-sherman.jpg" width="35px" height="35px" align="">
+                <img class="img-circle" src="<?= base_url()?>assets/imgAdmin/ui-sherman.jpg" width="35px" height="35px" align="">
               </div>
               <div class="details">
                 <p>
@@ -745,7 +745,7 @@
             <!-- Third Member -->
             <div class="desc">
               <div class="thumb">
-                <img class="img-circle" src="img/ui-danro.jpg" width="35px" height="35px" align="">
+                <img class="img-circle" src="<?= base_url()?>assets/imgAdmin/ui-danro.jpg" width="35px" height="35px" align="">
               </div>
               <div class="details">
                 <p>
@@ -757,7 +757,7 @@
             <!-- Fourth Member -->
             <div class="desc">
               <div class="thumb">
-                <img class="img-circle" src="img/ui-zac.jpg" width="35px" height="35px" align="">
+                <img class="img-circle" src="<?= base_url()?>assets/imgAdmin/ui-zac.jpg" width="35px" height="35px" align="">
               </div>
               <div class="details">
                 <p>

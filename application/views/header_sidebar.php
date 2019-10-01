@@ -26,7 +26,7 @@
 	<!-- Header -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-0 w-100 shadow">
-			<a href="index" class="mx-auto logo"><img src="<?= base_url()?>assets/img/logo.png" width=75></a> <!--Nossa Logo-->
+			<a href="index" class="mx-auto logo"><img src="<?= base_url()?>assets/img/logo.png" width=35><h1 class="text-white d-inline-block ml-2">Pharus</h1></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn text-white position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
             <a href="#menu-toggle" class="btn text-white position-fixed pl-5" id="toggle-theme" title="Modo noturno" onclick="update(myChart)"><i class="fas fa-adjust"></i></a>
 		</nav>

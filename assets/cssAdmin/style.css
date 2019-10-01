@@ -259,7 +259,7 @@ ul.top-menu > li > .logout {
     height:17px;
     width:17px;
     display:inline-block;
-    background: url("../img/nav-expand.png") no-repeat top;
+    background: url("../imgAdmin/nav-expand.png") no-repeat top;
     border-radius:3px;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
@@ -268,7 +268,7 @@ ul.top-menu > li > .logout {
     top:15px;
 }
 .active .dcjq-icon {
-    background: url("../img/nav-expand.png") no-repeat bottom;
+    background: url("../imgAdmin/nav-expand.png") no-repeat bottom;
     border-radius:3px;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
@@ -570,7 +570,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     height: 10px;
 }
 
-.dropdown-menu.inbox li a .photo img {
+.dropdown-menu.inbox li a .photo imgAdmin {
     border-radius: 2px 2px 2px 2px;
     float: left;
     height: 40px;
@@ -697,7 +697,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .log-arrow-up {
-    background: url("../img/arrow-up.png") no-repeat;
+    background: url("../imgAdmin/arrow-up.png") no-repeat;
     width: 20px;
     height: 11px;
     position: absolute;
@@ -1042,7 +1042,7 @@ PANELS CONFIGURATIONS
 }
 .stock .stock-chart #chart {
     height: 10.7em;
-    background: url(http://i.imgbox.com/abmuNQx2) center bottom no-repeat;
+    background: url(http://i.imgAdminbox.com/abmuNQx2) center bottom no-repeat;
 }
 .stock .current-price {
   background: #1d2122;
@@ -1092,7 +1092,7 @@ PANELS CONFIGURATIONS
 
 /* Weather 1 */
 .weather {
-	background: url(../img/weather.jpg) no-repeat center top;
+	background: url(../imgAdmin/weather.jpg) no-repeat center top;
 	text-align: center;
 	background-position: center center;
 }
@@ -1238,7 +1238,7 @@ PANELS CONFIGURATIONS
 
 /* Instagram Panel*/
 .instagram-panel {
-	background: url(../img/instagram.jpg) no-repeat center top;
+	background: url(../imgAdmin/instagram.jpg) no-repeat center top;
 	text-align: center;
 	background-position: center center;
 }
@@ -1282,7 +1282,7 @@ PANELS CONFIGURATIONS
 
 /* Soptify Panel */
 #spotify {
-	background: url(../img/lorde.jpg) no-repeat center top;
+	background: url(../imgAdmin/lorde.jpg) no-repeat center top;
 	margin-top: -15px;
 	background-attachment: relative;
 	background-position: center center;
@@ -1326,7 +1326,7 @@ PANELS CONFIGURATIONS
 
 /* BLOG PANEL */
 #blog-bg {
-	background: url(../img/blog-bg.jpg) no-repeat center top;
+	background: url(../imgAdmin/blog-bg.jpg) no-repeat center top;
 	margin-top: -15px;
 	background-attachment: relative;
 	background-position: center center;
@@ -1451,7 +1451,7 @@ PANELS CONFIGURATIONS
 /* PROFILE PANELS */
 /* Profile 01*/
 #profile-01 {
-	background: url(../img/profile-01.jpg) no-repeat center top;
+	background: url(../imgAdmin/profile-01.jpg) no-repeat center top;
 	margin-top: -15px;
 	background-attachment: relative;
 	background-position: center center;
@@ -1499,7 +1499,7 @@ PANELS CONFIGURATIONS
 
 /* Profile 02*/
 #profile-02 {
-	background: url(../img/profile-02.jpg) no-repeat center top;
+	background: url(../imgAdmin/profile-02.jpg) no-repeat center top;
 	margin-top: -15px;
 	background-attachment: relative;
 	background-position: center center;
@@ -1687,7 +1687,7 @@ PANELS CONFIGURATIONS
 
 .project:hover .photo-wrapper {
   background-color: #ffc107;
-	background-image:url(../img/zoom.png);
+	background-image:url(../imgAdmin/zoom.png);
 	background-repeat:no-repeat;
 	background-position:center;
 	top: 0;
@@ -1783,8 +1783,8 @@ label {
     position: relative;
     text-align: left;
     width: 80px;
-    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
-    mask: url('../img/mask.png') 0 0 no-repeat;
+    -webkit-mask: url('../imgAdmin/mask.png') 0 0 no-repeat;
+    mask: url('../imgAdmin/mask.png') 0 0 no-repeat;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1890,8 +1890,8 @@ label {
 .switch-square {
     border-radius: 6px;
     -webkit-border-radius: 6px;
-    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
-    mask: url('../img/mask.png') 0 0 no-repeat;
+    -webkit-mask: url('../imgAdmin/mask.png') 0 0 no-repeat;
+    mask: url('../imgAdmin/mask.png') 0 0 no-repeat;
 }
 .switch-square > div.switch-off label {
     border-color: #7f8c9a;
@@ -2020,7 +2020,7 @@ ul li {
 
 
 /* PROFILE PAGE CONF */
-.profile-pic img {
+.profile-pic imgAdmin {
 	width: 130px;
 	height: 130px;
 	border-radius: 50%;
@@ -2283,7 +2283,7 @@ ul.my-friends li .friends-pic {
 
 
 /* 404 & 500 Error Pages Conf*/
-.p404 img {
+.p404 imgAdmin {
 	margin-top: 120px;
 }
 
@@ -2329,7 +2329,7 @@ ul.my-friends li .friends-pic {
     width:65px;
     float:left;
 }
-.user-head .inbox-avatar img {
+.user-head .inbox-avatar imgAdmin {
     border-radius:4px;
     -webkit-border-radius:4px;
 }
@@ -2442,7 +2442,7 @@ ul.labels-info li a:hover,ul.labels-info li a:focus {
     color:#6a6a6a;
     background:none;
 }
-ul.labels-info li img {
+ul.labels-info li imgAdmin {
     margin-right:10px;
 }
 .nav.nav-pills.nav-stacked.labels-info p {
@@ -2676,7 +2676,7 @@ ul.inbox-pagination li {
 
 }
 
-.mail-sender img {
+.mail-sender imgAdmin {
     width: 30px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -2704,7 +2704,7 @@ ul.inbox-pagination li {
     list-style: none;
 }
 
-.attachment-mail ul li a.atch-thumb img {
+.attachment-mail ul li a.atch-thumb imgAdmin {
     width: 200px;
     height: 180px;
     margin-bottom: 10px;

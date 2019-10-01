@@ -60,11 +60,12 @@
 						</div>
 						<div class="form-group">
 							<div class="text-center">
-								<span>Acesso somente por admin.</span>
+								<span>Acesso somente por admin.</span><br>
+								<a href="login">Acessar como usuário</a>
 							</div>
 						</div>
 				</div>
-					<div class="d-flex justify-content-center mt-3">
+					<div class="d-flex justify-content-center mt-1">
 						<button type="submit" name="button" class="btn btn-warning login_btn">Acessar Dashboard</button>
 					</div>
 				</form>
