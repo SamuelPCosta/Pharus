@@ -39,3 +39,6 @@
 	<script>
     var atual ="Consumo";
 	</script>
+	<script>
+	    localStorage.setItem('consumo', "<?php echo $this->session->userdata('consumo');?>");
+	</script>

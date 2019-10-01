@@ -16,6 +16,7 @@ function update(myChart) {
     myBarChart.update();
 }
 
+var consumo = localStorage.getItem('consumo');
 Chart.defaults.global.defaultFontSize = 16;
 var ctx = document.getElementById('line-chart').getContext('2d');
 var myChart = new Chart(ctx, {

@@ -48,13 +48,14 @@ class Raiz extends CI_Controller {
 			if(date('H')==0) {
 				unset($consumoPorHora);
 			}else{
-				for ($i=0; $i <24; $i++) { 
+				for ($i=0; $i <23; $i++) { 
 					$this->load->model("Operacoes");
 					$usuario = $this->session->userdata('usuario');
 					$contaContrato = $this->Operacoes->contaContrato($usuario);
 					$this->load->model("Consumo_model");
 					$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
 					$consumoPorHora[] = $consumo;
+					$this->session->set_userdata('consumo', $consumoPorHora[]);
 					sleep(4);//3600
 				}
 			}
