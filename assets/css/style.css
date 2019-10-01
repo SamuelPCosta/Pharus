@@ -35,6 +35,7 @@ header .navbar{
 }
 .logo h1{
     vertical-align: middle !important;
+    text-transform: uppercase;
 }
 #wrapper {
     padding-left: 0;

@@ -10,7 +10,7 @@ class Raiz extends CI_Controller {
 			$this->load->model("Consumo_model");
 			$consumo['meta'] = $this->Consumo_model->SelecionarMeta($contaContrato);
 			if($consumo['meta']!=0){
-				$valor_tarifa = 0.7;
+				$valor_tarifa = 0.7; //Atualizar com base na tarifa local
 				$valor_dia = ($consumo['meta']/30);
 				$consumo['consumo'] = $this->Consumo_model->SelecionarConsumo($contaContrato);
 				$consumo['gasto'] = $consumo['consumo']*100/$valor_dia;
@@ -22,9 +22,9 @@ class Raiz extends CI_Controller {
 					$mensagem = "Tá top o consumo.";
 				}
 				set_cookie('mensagem_meta', $mensagem, (86400));
-				$titulo ="home";
+				$title['titulo'] ="Home";
 			}
-			$this->load->view('header_sidebar');
+			$this->load->view('header_sidebar', $title);
 			$this->load->view('index', $consumo);
 			$this->load->view('footer');
 		}else{
@@ -68,7 +68,8 @@ class Raiz extends CI_Controller {
 	public function consumo(){
 		date_default_timezone_set('America/Sao_Paulo');
 		if (isset($_SESSION['login'])) {
-			$this->load->view('header_sidebar');
+			$title['titulo'] ="Consumo";
+			$this->load->view('header_sidebar', $title);
 			$this->load->view('consumo');
 			$this->load->view('footer');
 		}else{
@@ -78,7 +79,8 @@ class Raiz extends CI_Controller {
 
 	public function metas(){
 		if (isset($_SESSION['login'])) {
-			$this->load->view('header_sidebar');
+			$title['titulo'] ="Metas";
+			$this->load->view('header_sidebar', $title);
 			$this->load->view('metas');
 			$this->load->view('footer');
 		}else{
@@ -92,7 +94,8 @@ class Raiz extends CI_Controller {
 			if (!isset($_GET['questao'])) {
 				delete_cookie("a"); delete_cookie("b"); delete_cookie("c");
 			}
-			$this->load->view('header_sidebar');
+			$title['titulo'] ="Ideal de consumo";
+			$this->load->view('header_sidebar', $title);
 			$this->load->view('idealdeconsumo');
 			$this->load->view('footer');
 		}else{
@@ -102,7 +105,8 @@ class Raiz extends CI_Controller {
 
 	public function resultado(){
 		if (isset($_SESSION['login'])) {
-			$this->load->view('header_sidebar');
+			$title['titulo'] ="Resultado";
+			$this->load->view('header_sidebar', $title);
 			$this->load->view('resultado');
 			$this->load->view('footer');
 		}else{
@@ -119,7 +123,8 @@ class Raiz extends CI_Controller {
 			$dicas['dica4'] = $this->Dicas_model->exibir('a');
 			$dicas['dica5'] = $this->Dicas_model->exibir('b');
 			$dicas['dica6'] = $this->Dicas_model->exibir('c');
-			$this->load->view('header_sidebar');
+			$title['titulo'] ="Dicas";
+			$this->load->view('header_sidebar', $title);
 			$this->load->view('dicas', $dicas);
 			$this->load->view('footer');
 		}else{
@@ -150,7 +155,8 @@ class Raiz extends CI_Controller {
 			$dados['nome'] = $this->Operacoes->nomeCompleto($usuario);
 			$dados['email'] = $this->Operacoes->email($usuario);
 			$dados['contaContrato'] = $this->Operacoes->contaContrato($usuario);
-			$this->load->view('header_sidebar');
+			$title['titulo'] ="Usuário";
+			$this->load->view('header_sidebar', $title);
 			$this->load->view('usuario', $dados);
 			$this->load->view('footer');
 		}else{
@@ -191,7 +197,8 @@ class Raiz extends CI_Controller {
 
 	public function editar_senha(){
 		if (isset($_SESSION['login'])) {
-			$this->load->view('header_sidebar');
+			$title['titulo'] ="Editar senha";
+			$this->load->view('header_sidebar', $title);
 			$this->load->view('editar_senha');
 			$this->load->view('footer');
 		}else{
@@ -201,8 +208,18 @@ class Raiz extends CI_Controller {
 
 	public function quemsomos(){
 		if (isset($_SESSION['login'])) {
-			$this->load->view('header_sidebar');
+			$title['titulo'] ="Quem somos";
+			$this->load->view('header_sidebar', $title);
 			$this->load->view('quemsomos');
+		}else{
+			redirect('login?error=2'); 
+		}
+	}
+
+	public function notFound(){
+		if (isset($_SESSION['login'])) {
+			$title['titulo'] ="Erro 404";
+			$this->load->view('404', $title);
 		}else{
 			redirect('login?error=2'); 
 		}
