@@ -35,10 +35,10 @@
 	<!--conteudo-->
 </div>
 </div>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+	<!--Fim dos scripts do BS-->
 	<script>
     var atual ="Consumo";
 	</script>
-	<script>
-	    localStorage.setItem('consumo', "<?php echo $this->session->userdata('consumo');?>");
-	</script>
+
+	
