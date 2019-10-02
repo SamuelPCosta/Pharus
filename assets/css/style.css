@@ -36,6 +36,7 @@ header .navbar{
 .logo h1{
     vertical-align: middle !important;
     text-transform: uppercase;
+    font-size: 1.8em ;
 }
 #wrapper {
     padding-left: 0;
@@ -267,6 +268,9 @@ h4{
     }
     .logo img{
         width: 60px !important;
+    }
+    .logo h1{
+        font-size: 2.5rem !important;
     }
     #menu-toggle{ /*Visibilidade do botão de menu*/
         visibility: hidden;
