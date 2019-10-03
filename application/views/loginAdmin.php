@@ -34,13 +34,11 @@
     	?>
     <div class="container h-100">
 		<div class="d-flex justify-content-center h-100" >
-			<div class="user_card user_card_admin bg-light" style="height: 250px">
+			<div class="user_card user_card_admin bg-light" style="height: 350px">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<div class="logo_grande mx-auto">	
-							<img src="<?= base_url()?>assets/img/logo.png" width=240 alt="Logo mb-0"><!--Nossa Logo-->
-							<h2 class="text-center mb-3 text-light administrador">Administrador</h2>
-						</div>
+							<img src="<?= base_url()?>assets/img/logo.png" class="logo_grande mx-auto px-2 py-2 mb-2 rounded-circle" width=160 alt="Logo mb-0"><!--Nossa Logo-->
+						<h2 class="text-center">ADMIN</h2>
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">

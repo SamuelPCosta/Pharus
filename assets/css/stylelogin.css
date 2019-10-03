@@ -53,28 +53,25 @@ html {
 	background-color: #343a40 !important; /*Cor de fundo da checkbox*/
 }
 .logo_grande{
-	margin-top: -300px;
+	margin-top: -160px;
+	background: #343a40;
+}
+.logo_grande_cadastro{
+	margin-top: -100px !important;
+	background: #343a40;
 }
 .user_card_senha { /*Estilização da caixa*/
 	height: 200px !important;
 }
 .user_card_cadastro{ /*Estilização da caixa*/
-	height: 500px !important;
-}
-.logo_grande_cadastro{
-	margin-top: -250px !important;
+	height: 540px !important;
 }
 .brand_logo_container div.logo_grande{
 	width: auto !important;
 	margin-top: -210px;
 }
 @media(max-width:768px) {
-	.logo_grande{
-		width: 170px !important;
-		margin-top: -270px;
-	}
 	.user_card_cadastro{
-		margin-top: 80px;
 		margin-bottom:30px;
 	}
 }

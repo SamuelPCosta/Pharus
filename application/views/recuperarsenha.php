@@ -18,7 +18,7 @@
 			<div class="user_card user_card_senha bg-light">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<img src="<?= base_url()?>assets/img/logo.png" width=240 class="logo_grande" alt="Logo"><!--Nossa Logo-->
+						<img src="<?= base_url()?>assets/img/logo.png" width=160 class="logo_grande px-2 py-2 mb-2 rounded-circle" alt="Logo"><!--Nossa Logo-->
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
