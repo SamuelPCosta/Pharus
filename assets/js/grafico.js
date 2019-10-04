@@ -25,7 +25,7 @@ var myChart = new Chart(ctx, {
         labels: numeros, //Passando direto o nome do array ele organiza
         datasets: [{
             label: 'Consumo kWh',
-            data: [12, 19, 3, 5, 2, 3],
+            data: consumo,
             // backgroundColor:,
             borderWidth: 3,
             backgroundColor: '#FFC107',

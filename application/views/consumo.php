@@ -1,6 +1,6 @@
 			<div class="container-fluid first-container px-5 my-3">		
 		        <div class="my-4">
-		        	<h2 class="my-4 card text-lg-left text-center card-theme px-5 py-3 theme">Analise seu Consumo</h2>
+		        	<h2 class="my-4 card text-lg-left text-center card-theme px-5 py-3 theme"><a href="Raiz/monitorarConsumo"></a>Analise seu Consumo</h2>
 		        <div class="row">
 		        	<div class="col-xl-6 col-md-12 graficos">
 		        		<canvas id="line-chart" height="350"></canvas>
@@ -36,7 +36,10 @@
 </div>
 </div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-	<!--Fim dos scripts do BS-->
+	<!--Importação ajax-->
+	<script>
+	    localStorage.setItem('consumo', "<?php echo $this->session->userdata('consumo'); ?>");
+	</script>
 	<script>
     var atual ="Consumo";
 	</script>

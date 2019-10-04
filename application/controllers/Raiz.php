@@ -42,25 +42,29 @@ class Raiz extends CI_Controller {
 
 	public function monitorarConsumo(){
 	//Criar uma array q implementa o consumo de hora em hora e ao final do dia é destruido
-		// $agendamento = 13; 
-		// $horaAtual   = 13;
-		if (isset($consumoPorHora)) {
+		date_default_timezone_set('America/Sao_Paulo');
+		if (isset($_SESSION['consumo'])){
+			echo date('H');
 			if(date('H')==0) {
 				unset($consumoPorHora);
-			}else{
-				for ($i=0; $i <23; $i++) { 
-					$this->load->model("Operacoes");
-					$usuario = $this->session->userdata('usuario');
-					$contaContrato = $this->Operacoes->contaContrato($usuario);
-					$this->load->model("Consumo_model");
-					$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
-					$consumoPorHora[] = $consumo;
-					$this->session->set_userdata('consumo', $consumoPorHora[]);
-					sleep(4);//3600
-				}
 			}
+			//for ($i=0; $i <23; $i++) { Se o cron for implementado isso se torna desnecessario
+				$this->load->model("Operacoes");
+				$usuario = $this->session->userdata('usuario');
+				$contaContrato = $this->Operacoes->contaContrato($usuario);
+				$this->load->model("Consumo_model");
+				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
+				$consumoPorHora[1] = $consumo;
+				$consumoPorHora[2] = $consumo;
+				$this->session->set_userdata('consumo', $consumoPorHora);
+				echo "cuscuz ";
+				print_r($consumoPorHora);
+				//sleep(4);//3600
+			//}
 		}else{
 			$consumoPorHora=array();
+			$this->session->set_userdata('consumo', $consumoPorHora);
+			echo date('H'). " horas - teste exibição"; 
 		}
 		// print_r($consumoPorHora);
 		// echo date('H:i:s');
