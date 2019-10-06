@@ -24,11 +24,9 @@
 	     			</p>
 	     			<?php  
 	     			if ($meta!=0) {
-	     				$this->load->helper('cookie');
-	     				$mensagem = get_cookie('mensagem_meta');
 	     				echo "
 	     				<div class='alert alert-primary mx-auto' role='alert' id='mensagem'>
-	     				".$mensagem."
+	     				".$this->session->userdata('mensagem')."
 						</div>";
 	     			}		
 	     			?>

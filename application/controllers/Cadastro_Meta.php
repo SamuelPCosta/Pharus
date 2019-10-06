@@ -21,7 +21,7 @@ class Cadastro_Meta extends CI_Controller {
 
 			//Obter meta
 			$this->Metas_model->get_meta($contaContrato); //Chama a função get meta dentro do modelo metas_model
-			
+			$this->session->set_userdata('mensagem', "Fique de olho no seu consumo!");
 			redirect('metas'); 
 		}else{
 			redirect('metas?error=1');

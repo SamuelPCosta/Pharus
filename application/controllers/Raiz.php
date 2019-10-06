@@ -17,11 +17,11 @@ class Raiz extends CI_Controller {
 				$porcentagem = $consumo['gasto'];
 				$this->load->helper('cookie');
 				if ($porcentagem>=100) {
-					$mensagem = "Baixa esse consumo aí fion.";
+					$this->session->set_userdata('mensagem', "Baixa esse consumo aí fion.");
 				}else{
-					$mensagem = "Tá top o consumo.";
+					$this->session->set_userdata('mensagem', "Tá top o consumo.");
 				}
-				set_cookie('mensagem_meta', $mensagem, (86400));
+				//set_cookie('mensagem_meta', $mensagem, (86400));
 				$title['titulo'] ="Home";
 			}
 			$this->load->view('header_sidebar', $title);
