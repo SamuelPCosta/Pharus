@@ -55,7 +55,6 @@ header .navbar{
     margin-left: -250px;
     overflow-y: auto;
     padding-top: 0px;
-    z-index: 1;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;

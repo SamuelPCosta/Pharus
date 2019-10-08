@@ -30,6 +30,26 @@
 						</div>";
 	     			}		
 	     			?>
+					<div class='mx-auto mb-5' role='alert' id='notificationdiv'>
+						<button type="submit" class="btn btn-warning mx-auto" id="notifiqueme" style="width:100%;">Notifique-me!</button>
+						<div class="bg-warning px-5 pt-2" id="notificationpopup">
+							<p>Selecione um horário em que você deseja ser notificado diáriamente</p>
+							<form action="" class="pt-0">
+							<select name="" id="">
+								<?php
+									echo "<option value='0' class=''>0 hora</option>";
+									for($i=0; $i<=23; $i++){
+										echo "<option value='' class='text-center'>$i horas</option>";
+									}
+								?>
+							</select>
+							<input type="number" max="23" min="0" name="">
+							<input type="number" max="59" min="0" name="">
+							<button type='submit' class='btn btn-dark col-12 mb-2'>Ok, me notifique!</button>
+							</form>
+						</div>
+					</div>
+					
 	     		</div>
 	     		 <div class="col-xl-6 col-md-12 metas px-5">	
 	     		 <div class="card py-5 px-0 shadow card-theme theme mx-auto mb-5">	

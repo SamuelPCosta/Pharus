@@ -51,15 +51,27 @@
 }
 #mensagem{
 	margin-top: 42px;
+	margin-bottom: 0px;
 	color: #fff;
 	background-color: #2e6171 !important;
 	border:none !important;
 }
-.instrucoes{
+.instrucoes, #notificationdiv{
 	width: 60%;
 	margin: auto;
 	font-size: 1.5em;
 	text-align: justify;
+}
+#notificationdiv{
+	font-size: 1em;
+}
+#notificationpopup{
+	width:57%;
+	border-radius: 20px;
+	z-index: 9999 !important;
+	float: left;
+	position: absolute;
+	//visibility: hidden;
 }
 .valor{
 	margin: auto;
@@ -105,7 +117,7 @@
 @media(max-width:768px) {
 	.colunas-meta h1, .colunas-meta p,.container-metas h2, 
 	#meta input, #meta button, .instrucoes, 
-	.alert-danger, #consumoideal, #mensagem{
+	.alert-danger, #consumoideal, #mensagem, #notificationdiv{
 		width: 90% !important;
 	}
 	.metas.px-5{
