@@ -1,10 +1,7 @@
 $("#menu-toggle").click(function(e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
-  if($("#dark").hasClass("visible")){
-  }else{
-    $("#dark").toggleClass("visible");
-  }
+  $("#dark").toggleClass("visible");
 /*Esse script adiciona ou remove a classe toggled 
 toda vez que o botão do menu é clicado*/
 });
@@ -47,13 +44,6 @@ window.onload = function(){
   document.getElementById(atual).classList.add("atual");
   document.getElementById(questao).classList.add("active");
 }
-
-/*###########Notification pop-up###########*/
-$("#notifiqueme").click(function(e) {
-    e.preventDefault();
-    $("#dark").toggleClass("visible");
-  /*Escurece a tela e exibe poup-up*/
-  });
 
 /*###########Foto User###########*/
 const usuario = localStorage.getItem('Usuario')
