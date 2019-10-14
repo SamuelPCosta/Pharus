@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Admin Pharus</title>
+  <title>Pharus | Admin</title>
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="<?= base_url()?>assets/img/icon.ico"/> 
@@ -564,11 +564,34 @@
               <!-- /col-md-4 -->
               <div class="col-md-4 mb">
                 <!-- NOVOS ADMINISTRADORES -->
-                <a href="#"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
+                <a href="#" data-toggle="modal" data-target="#ExemploModalCentralizado"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
                   <i class="fas fa-user-lock fa-4x"></i>
                   <h2 style="color:#fff;">Cadastrar novos<br> administradores</h2>
                 </div></a>
               </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                  </div>
+                </div>
+              </div>
+              </div>
+              
+
               <!-- /col-md-4 -->
             </div>
             <!-- /row -->
