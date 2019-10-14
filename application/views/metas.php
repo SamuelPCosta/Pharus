@@ -109,12 +109,25 @@
 	<script>
 		function notificacao(){
 			swal({
-			  type: 'info',
-			  title: 'Notificação Diária.',
-			  text: 'Selecione abaixo o horário em que você deseja ser notificado diáriamente.'
-			})
+				title: 'Notificação Diária.',
+				text: 'Selecione abaixo o horário em que você deseja ser notificado diáriamente.',
+				type: "input",
+				buttons: {
+				    cancelar: true,
+				    confirm: true,
+				},
+				content: {
+			    element: "input",
+			    attributes: {
+			    placeholder: "Type your password",
+			    type: "time",
+			    },
+			  },
+			});
 		}
 	</script>
+	<script src="<?= base_url()?>assets/js/notification.js"></script><!--Importação do JS do menu...-->
 	<script>
     var atual ="Metas";
 	</script>
+	

@@ -104,7 +104,34 @@
 .container-metas .alert-danger{
     margin: 5px auto !important;
 }
-
+.swal-button{
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: #ffc107 !important;
+  font-size: 12px;
+  color: #464b51;
+  border: 1px solid #aaa;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+.swal-button--cancelar{
+	background-color: #464b51 !important;;
+	color: #fff;
+}
+.swal-content__input{
+    background-color: #f6f6f6!important;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #aaa;
+    text-align: center;
+    font-size: 1.6em;
+    width: 150px;
+    margin: auto;
+    font-weight: 100;
+}
+.swal-text{
+	text-align: center;
+	width: 75%;
+}
 @media(max-width:1200px) {
 	.margin-top{
 		margin-top: 50px !important;

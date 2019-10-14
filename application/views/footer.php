@@ -1,4 +1,4 @@
-<!-- Footer -->
+ Footer -->
 <footer class="page-footer font-small position-relative shadow">
   <!-- Footer Links -->
   <!-- Copyright -->
@@ -20,8 +20,12 @@
 	<script type="text/javascript" src="<?= base_url()?>assets/js/grafico.js"></script>
 	<script src="<?= base_url()?>assets/js/jquery.easypiechart.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Importação de sweetalert-->
-
+	<script src="dist/sweetalert.min.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	Optional: include a polyfill for ES6 Promises for IE11 and Android browser
+	<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="sweetalert2.all.min.js"></script> -->
 </body>
 </html>
 <!-- https://www.chartjs.org/docs/latest/charts/line.html documentacao graficos-->
-<!--https://codepen.io/Philippe_Fercha/pen/yawbqB link do menu-->
+<!--https://codepen.io/Philippe_Fercha/pen/yawbqB link do menu
