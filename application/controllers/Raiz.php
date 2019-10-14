@@ -21,9 +21,9 @@ class Raiz extends CI_Controller {
 				}else{
 					$this->session->set_userdata('mensagem', "Tá top o consumo.");
 				}
-				//set_cookie('mensagem_meta', $mensagem, (86400));
-				$title['titulo'] ="Home";
+				//set_cookie('mensagem_meta', $mensagem, (86400));		
 			}
+			$title['titulo'] ="Home";
 			$this->load->view('header_sidebar', $title);
 			$this->load->view('index', $consumo);
 			$this->load->view('footer');
@@ -36,7 +36,7 @@ class Raiz extends CI_Controller {
 		if (isset($_SESSION['admin'])) {
 			$this->load->view('Admin/index');
 		}else{
-			redirect('login-administrador?error=1'); 
+			redirect('login-administrador?error=2'); 
 		}
 	}
 

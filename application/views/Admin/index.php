@@ -16,12 +16,14 @@
   <!-- Bootstrap core CSS -->
   <link href="<?= base_url()?>assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--external css-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
   <link href="<?= base_url()?>assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/cssAdmin/css/zabuto_calendar.css">
   <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/lib/gritter/css/jquery.gritter.css" />
   <!-- Custom styles for this template -->
   <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/cssAdmin/style.css">
   <link href="<?= base_url()?>assets/cssAdmin/style-responsive.css" rel="stylesheet">
+  
   <script src="<?= base_url()?>assets/lib/chart-master/Chart.js"></script>
 
   <!-- =======================================================
@@ -245,10 +247,10 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="<?= base_url()?>assets/imgAdmin/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered"><?php echo $this->session->userdata('admin'); ?></h5>
+          <p class="centered"><a href="profile.html"><img src="<?= base_url()?>assets/img/logo.png" class="img-circle" width="80"></a></p>
+          <h5 class="centered" style="text-transform: capitalize;"><?php echo $this->session->userdata('admin'); ?></h5>
           <li class="mt">
-            <a class="active" href="index.html">
+            <a class="active" href="admin">
               <i class="fa fa-dashboard"></i>
               <span>Dashboard</span>
               </a>
@@ -256,13 +258,13 @@
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-desktop"></i>
-              <span>UI Elements</span>
+              <span>Elementos UI</span>
               </a>
             <ul class="sub">
-              <li><a href="general.html">General</a></li>
-              <li><a href="buttons.html">Buttons</a></li>
-              <li><a href="panels.html">Panels</a></li>
-              <li><a href="font_awesome.html">Font Awesome</a></li>
+              <li><a href="general.html">Geral</a></li>
+              <li><a href="buttons.html">Butões</a></li>
+              <li><a href="panels.html">Paineis</a></li>
+              <li><a href="font_awesome.html">Icones Font Awesome</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -272,12 +274,12 @@
               </a>
             <ul class="sub">
               <li><a href="grids.html">Grids</a></li>
-              <li><a href="calendar.html">Calendar</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="calendar.html">Calendário</a></li>
+              <li><a href="gallery.html">Galeria</a></li>
               <li><a href="todo_list.html">Todo List</a></li>
-              <li><a href="dropzone.html">Dropzone File Upload</a></li>
-              <li><a href="inline_editor.html">Inline Editor</a></li>
-              <li><a href="file_upload.html">Multiple File Upload</a></li>
+              <li><a href="dropzone.html">Zona de Arquivos Upados</a></li>
+              <li><a href="inline_editor.html">Editor em Linha</a></li>
+              <li><a href="file_upload.html">Upload de múltiplos arq.</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -286,51 +288,51 @@
               <span>Páginas Extras</span>
               </a>
             <ul class="sub">
-              <li><a href="blank.html">Blank Page</a></li>
+              <li><a href="blank.html">Página em branco</a></li>
               <li><a href="login.html">Login</a></li>
-              <li><a href="lock_screen.html">Lock Screen</a></li>
-              <li><a href="profile.html">Profile</a></li>
-              <li><a href="invoice.html">Invoice</a></li>
-              <li><a href="pricing_table.html">Pricing Table</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="404.html">404 Error</a></li>
-              <li><a href="500.html">500 Error</a></li>
+              <li><a href="lock_screen.html">Tela de Bloqueio</a></li>
+              <li><a href="profile.html">Perfil</a></li>
+              <li><a href="invoice.html">Conta</a></li>
+              <li><a href="pricing_table.html">Tabela de Preços</a></li>
+              <li><a href="faq.html">Perguntas frequentes</a></li>
+              <li><a href="404.html">Erro 404</a></li>
+              <li><a href="500.html">Erro 500</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-tasks"></i>
-              <span>Forms</span>
+              <span>Formulários</span>
               </a>
             <ul class="sub">
-              <li><a href="form_component.html">Form Components</a></li>
+              <li><a href="form_component.html">Componentes de Formulários</a></li>
               <li><a href="advanced_form_components.html">Componentes Avançados</a></li>
-              <li><a href="form_validation.html">Form Validation</a></li>
-              <li><a href="contactform.html">Contact Form</a></li>
+              <li><a href="form_validation.html">Validação de Formulários</a></li>
+              <li><a href="contactform.html">Formulários de Contato</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-th"></i>
-              <span>Data Tables</span>
+              <span>Tabela de dados</span>
               </a>
             <ul class="sub">
-              <li><a href="basic_table.html">Basic Table</a></li>
-              <li><a href="responsive_table.html">Responsive Table</a></li>
-              <li><a href="advanced_table.html">Advanced Table</a></li>
+              <li><a href="basic_table.html">Tabela Básica</a></li>
+              <li><a href="responsive_table.html">Tabela Responsiva</a></li>
+              <li><a href="advanced_table.html">Tabela avançada</a></li>
             </ul>
           </li>
           <li>
             <a href="inbox.html">
               <i class="fa fa-envelope"></i>
-              <span>Mail </span>
+              <span>Email </span>
               <span class="label label-theme pull-right mail-info">2</span>
               </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class=" fa fa-bar-chart-o"></i>
-              <span>Charts</span>
+              <span>Gráficos</span>
               </a>
             <ul class="sub">
               <li><a href="morris.html">Morris</a></li>
@@ -518,7 +520,7 @@
                       <p class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                       <form class="form-inline" role="form">
                         <div class="form-group">
-                          <input type="text" class="form-control" id="exampleInputText" placeholder="Reply Dan">
+                          <input type="text" class="form-control" id="exampleInputText" placeholder="Responder...">
                         </div>
                         <button type="submit" class="btn btn-default">Enviar</button>
                       </form>
@@ -561,25 +563,23 @@
               </div>
               <!-- /col-md-4 -->
               <div class="col-md-4 mb">
-                <!-- INSTAGRAM PANEL -->
-                <div class="instagram-panel pn">
-                  <i class="fa fa-instagram fa-4x"></i>
-                  <p>@THISISYOU<br/> 5 min. ago
-                  </p>
-                  <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
-                </div>
+                <!-- NOVOS ADMINISTRADORES -->
+                <a href="#"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
+                  <i class="fas fa-user-lock fa-4x"></i>
+                  <h2 style="color:#fff;">Cadastrar novos<br> administradores</h2>
+                </div></a>
               </div>
               <!-- /col-md-4 -->
             </div>
             <!-- /row -->
             <div class="row">
-              <div class="col-lg-4 col-md-4 col-sm-4 mb">
-                <div class="product-panel-2 pn">
-                  <div class="badge badge-hot">HOT</div>
-                  <img src="<?= base_url()?>assets/imgAdmin/product.jpg" width="200" alt="">
-                  <h5 class="mt">Flat Pack Heritage</h5>
-                  <h6>TOTAL SALES: 1388</h6>
-                  <button class="btn btn-small btn-theme04">FULL REPORT</button>
+              <div class="col-md-4 mb">
+                <!--  -->
+                <div class="instagram-panel pn">
+                  <i class="fa fa-instagram fa-4x"></i>
+                  <p>@THISISYOU<br/> 5 min. ago
+                  </p>
+                  <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
                 </div>
               </div>
               <!-- /col-md-4 -->
@@ -717,7 +717,7 @@
               </div>
             </div>
             <!-- USERS ONLINE SECTION -->
-            <h4 class="centered mt">TEAM MEMBERS ONLINE</h4>
+            <h4 class="centered mt">Membros da equipe</h4>
             <!-- First Member -->
             <div class="desc">
               <div class="thumb">

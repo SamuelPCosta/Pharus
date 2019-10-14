@@ -1242,11 +1242,16 @@ PANELS CONFIGURATIONS
 	text-align: center;
 	background-position: center center;
 }
-.instagram-panel i {
+.new-user-panel {
+    background-color: #343a40;
+    text-align: center;
+	background-position: center center;
+}
+.instagram-panel i, .new-user-panel i{
 	color: white;
 	margin-top: 35px;
 }
-.instagram-panel p {
+.instagram-panel p, .new-user-panel p {
 	margin: 5px;
 	color: white;
 }
