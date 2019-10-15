@@ -30,10 +30,10 @@ function notifyMe(icon, title, mensagem, link){
 	var link = 'http://localhost/pharus/';
 
 	data=new Date();
-	var horaAtual = data.getHours();
+	var horaAtual = data.getHours(); 
 	var minutoAtual = data.getMinutes();
-	var horas = localStorage.getItem('horas');
-	var minutos = localStorage.getItem('minutos');
+	var horas = localStorage.getItem('horas'); //Resgata o valor da hora definida pra notificacao
+	var minutos = localStorage.getItem('minutos'); //Resgata o valor dos minutos definidos pra notificacao
 
 	if (horaAtual==horas) {
 		if(minutoAtual==minutos){
