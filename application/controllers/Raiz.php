@@ -98,7 +98,15 @@ class Raiz extends CI_Controller {
 			$horario = $this->input->post("horario"); //Recebe horario inserido
 			$horas = substr($horario, 0, 2); //Quebra em horas
 			$minutos = substr($horario, 3, 2); //E em minutos
-			
+			$this->session->set_userdata('horas', $horas);
+			$this->session->set_userdata('minutos', $minutos);
+	?>
+		<script>
+			localStorage.setItem('horas', "<?php echo $this->session->userdata('horas'); ?>");
+			localStorage.setItem('minutos', "<?php echo $this->session->userdata('minutos'); ?>");
+		</script>
+	<?php
+			redirect('metas');
 		}else{
 			//redirect('login?error=2'); 
 		}

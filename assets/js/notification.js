@@ -30,10 +30,14 @@ function notifyMe(icon, title, mensagem, link){
 	var link = 'http://localhost/pharus/';
 
 	data=new Date();
-	var hora = data.getHours();  
-	var horaNotification = localStorage.getItem('horaNotification')
+	var horaAtual = data.getHours();
+	var minutoAtual = data.getMinutes();
+	var horas = localStorage.getItem('horas');
+	var minutos = localStorage.getItem('minutos');
 
-	if (hora!=2) {
-		notifyMe(icon, title, mensagem, link);
-		sleep(3600);
+	if (horaAtual==horas) {
+		if(minutoAtual==minutos){
+			notifyMe(icon, title, mensagem, link);
+			//sleep(3600);
+		}
 	}
