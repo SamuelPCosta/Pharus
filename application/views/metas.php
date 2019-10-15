@@ -31,23 +31,39 @@
 	     			}		
 	     			?>
 					<div class='mx-auto mb-5' role='alert' id='notificationdiv'>
-						<button type="submit" class="btn btn-warning mx-auto" id="" style="width:100%;" onclick="notificacao()">Notifique-me!</button>
-						<!-- <div class="bg-warning px-5 pt-2" id="notificationpopup">
-							<p>Selecione um horário em que você deseja ser notificado diáriamente</p>
-							<form action="" class="pt-0">
-							<select name="" id="">
-								<?php
-									// echo "<option value='0' class=''>0 hora</option>";
-									// for($i=0; $i<=23; $i++){
-									// 	echo "<option value='' class='text-center'>$i horas</option>";
-									// }
-								?>
-							</select>
-							<input type="number" max="23" min="0" name="">
-							<input type="number" max="59" min="0" name="">
-							<button type='submit' class='btn btn-dark col-12 mb-2' >Ok, me notifique!</button>
-							</form>
-						</div> -->
+						<!-- Botão para acionar modal -->
+						<button type="submit" class="btn btn-warning mx-auto" id="" style="width:100%;"  data-toggle="modal" data-target="#ExemploModalCentralizado">Notifique-me!</button>
+						
+						<!-- Modal -->
+						<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="TituloModalCentralizado">Notificação Diária.
+								</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						      	<p>Selecione abaixo o horário em que você deseja ser notificado: </p>
+						        <div class="container usuario">
+				                    <div class="row align-items-center">
+					                    <div class="col-xl-4 col-lg-8 col-md-12 mx-auto">
+					                    	<form method="post" action="Raiz/notificacao">
+					                       		<input type="time" class="modal_input_time mx-auto" name="horario">
+					                    </div>
+				                	</div>
+				                </div>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						        <button type="submit" class="btn btn-warning">Salvar horário</button>
+						        </form>
+						      </div>
+						    </div>
+						  </div>
+						</div>
 					</div>
 					
 	     		</div>
@@ -106,7 +122,7 @@
         <!--conteudo-->
 		</div>
 </div>
-	<script>
+	<!-- <script>
 		function notificacao(){
 			swal({
 				title: 'Notificação Diária.',
@@ -125,7 +141,7 @@
 			  },
 			});
 		}
-	</script>
+	</script> -->
 	<script src="<?= base_url()?>assets/js/notification.js"></script><!--Importação do JS do menu...-->
 	<script>
     var atual ="Metas";

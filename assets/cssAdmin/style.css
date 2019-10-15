@@ -18,7 +18,7 @@ Website: http://Alvarez.is/
 
 /* BASIC THEME CONFIGURATION */
 body {
-    color: #797979;
+    color: #ddd;
 	background: #eaeaea;
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
@@ -968,7 +968,7 @@ PANELS CONFIGURATIONS
 
 .darkblue-panel {
 	text-align: center;
-	background: #444c57;
+	background: #343a40;;
 }
 .darkblue-panel .darkblue-header {
 	background: transparent;

@@ -10,9 +10,9 @@
   <title>Pharus | Admin</title>
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="<?= base_url()?>assets/img/icon.ico"/> 
+  <link rel="shortcut icon" href="<?= base_url()?>assets/img/favicon.png"/> 
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Importação do CSS do BS-->
   <!-- Bootstrap core CSS -->
   <link href="<?= base_url()?>assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--external css-->
@@ -34,7 +34,7 @@
   ======================================================= -->
 </head>
 
-<body>
+<body style="background-color: #464b51!important;">
   <section id="container">
     <!-- **********************************************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
@@ -575,23 +575,70 @@
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                    <h6 class="modal-title" id="TituloModalCentralizado">Cadastrar novos administradores</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-                    ...
+
+
+                    <div class="d-flex justify-content-center form_container">
+                      <form method="post" action="cadastro/adicionar">
+                        <div class="input-group mb-3">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-address-card"></i></i></span>
+                          </div>
+                          <input type="text" name="nome" class="form-control input_user text-capitalize" value="" placeholder="Nome completo" required autofocus>
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                          </div>
+                          <input type="text" name="usuario" class="form-control input_pass text-capitalize" value="" placeholder="Usuário" required>
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-keyboard"></i></span>
+                          </div>
+                          <input type="text" name="conta_contrato" class="form-control input_pass" value="" placeholder="Conta contrato" required>
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                          </div>
+                          <input type="password" name="senha" class="form-control input_pass" value="" placeholder="Senha" required>
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                          </div>
+                          <input type="time" name="confirmar_senha" class="form-control input_pass" value="" placeholder="Confirmar senha" required>
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                          </div>
+                          <input type="email" name="email" class="form-control input_user" value="" placeholder="Email" required>
+                        </div>  
+                        <div class="form-group">
+                          <div class="custom-control custom-checkbox" style="font-size: 1.4em">
+                            <input type="checkbox" class="custom-control-input" id="customControlInline">
+                            <label class="custom-control-label text-dark" for="customControlInline">Conceder privilégios de administrador</label>
+                          </div>
+                        </div>   
+                    </div>
+
+
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                    <button type="button" class="btn btn-success">Salvar mudanças</button>
                   </div>
                 </div>
               </div>
               </div>
               
-
               <!-- /col-md-4 -->
             </div>
             <!-- /row -->

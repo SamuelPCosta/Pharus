@@ -93,6 +93,17 @@ class Raiz extends CI_Controller {
 		}
 	}
 
+	public function notificacao(){
+		if (isset($_SESSION['login'])) {
+			$horario = $this->input->post("horario"); //Recebe horario inserido
+			$horas = substr($horario, 0, 2); //Quebra em horas
+			$minutos = substr($horario, 3, 2); //E em minutos
+			
+		}else{
+			//redirect('login?error=2'); 
+		}
+	}
+
 	public function idealdeconsumo(){
 		if (isset($_SESSION['login'])) {
 			$this->load->helper('cookie');
