@@ -24,6 +24,9 @@
 	text-align: center;
 	box-shadow:0 5px 0 #6B5103;  
 }
+.resultado{
+	box-shadow:none;  
+}
 label{
 	display: inline !important;
 }

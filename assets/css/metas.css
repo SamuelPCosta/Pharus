@@ -62,24 +62,13 @@
 	font-size: 1.5em;
 	text-align: justify;
 }
-#notificationdiv{
-	font-size: 1em;
-}
-#notificationpopup{
-	width:57%;
-	border-radius: 20px;
-	z-index: 9999 !important;
-	float: left;
-	position: absolute;
-	//visibility: hidden;
-}
 .valor{
 	margin: auto;
 	font-size: 3em;
 	text-align: center;
 	line-height: 1.1em
 }
-.metas h2, .metas input, .metas button, .metas a, .metas .alert{
+.metas h2, .metas input, .metas button, .metas a{
 	width: 75% !important
 }
 .colunas-meta{

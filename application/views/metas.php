@@ -89,7 +89,7 @@
 				        			if (isset($_GET['error'])){
 				        				if ($_GET['error']==1) {
 				        		?>
-				        			<div class='alert alert-danger' role='alert'>Para mudar sua meta, altere<br> o valor  do campo numérico acima.</div>
+				        			<div class='alert alert-danger w-75' role='alert'>Para mudar sua meta, altere<br> o valor  do campo numérico acima.</div>
 				        		<?php
 				        				}
 				        			}

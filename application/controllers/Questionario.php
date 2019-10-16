@@ -31,9 +31,9 @@ class Questionario extends CI_Controller {
 			}elseif ($resultado==$resultado_c) {
 				$this->session->set_userdata('faixa', "C e D");
 			}
-			redirect('resultado?&ra='.$resultado_a.'&rb='.$resultado_b.'&rc='.$resultado_c);
+			redirect('resultado?&a='.$resultado_a.'&b='.$resultado_b.'&c='.$resultado_c);
 		}else{
-			redirect('idealdeconsumo?questao='.$questao.'&ra='.$resultado_a.'&rb='.$resultado_b.'&rc='.$resultado_c);
+			redirect('idealdeconsumo?questao='.$questao.'&a='.$resultado_a.'&b='.$resultado_b.'&c='.$resultado_c);
 		}
 		
 	}
