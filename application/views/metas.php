@@ -57,8 +57,8 @@
 				                </div>
 						      </div>
 						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						        <button type="submit" class="btn btn-warning">Salvar horário</button>
+						        <button type="submit" class="btn btn-secondary" value="desativar" name="btn">Desativar</button>
+						        <button type="submit" class="btn btn-warning" value="salvar" name="btn">Salvar horário</button>
 						        </form>
 						      </div>
 						    </div>
@@ -122,28 +122,23 @@
         <!--conteudo-->
 		</div>
 </div>
-	<!-- <script>
-		function notificacao(){
-			swal({
-				title: 'Notificação Diária.',
-				text: 'Selecione abaixo o horário em que você deseja ser notificado diáriamente.',
-				type: "input",
-				buttons: {
-				    cancelar: true,
-				    confirm: true,
-				},
-				content: {
-			    element: "input",
-			    attributes: {
-			    placeholder: "Type your password",
-			    type: "time",
-			    },
-			  },
-			});
-		}
-	</script> -->
+	<?php 
+		if (isset($_SESSION['notificacao'])) {
+	?>
+		<script>
+			localStorage.setItem('estado', "ativada");
+			localStorage.setItem('horas', "<?php echo $this->session->userdata('horas'); ?>");
+			localStorage.setItem('minutos', "<?php echo $this->session->userdata('minutos'); ?>");
+		</script>
+	<?php 
+		}else{
+	?>
+		<script> localStorage.setItem('estado', "desativada"); </script>
+	<?php 
+		}	
+	?>
 	<script src="<?= base_url()?>assets/js/notification.js"></script><!--Importação do JS do menu...-->
 	<script>
-    var atual ="Metas";
+   		var atual ="Metas";
 	</script>
 	
