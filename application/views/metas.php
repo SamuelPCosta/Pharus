@@ -49,7 +49,7 @@
 						      	<p>Selecione abaixo o horário em que você deseja ser notificado: </p>
 						        <div class="container usuario">
 				                    <div class="row align-items-center">
-					                    <div class="col-xl-4 col-lg-8 col-md-12 mx-auto">
+					                    <div class="col-4 mx-auto">
 					                    	<form method="post" action="Raiz/notificacao">
 					                       		<input type="time" class="modal_input_time mx-auto" name="horario" value="<?php echo $this->session->userdata('horas').":".$this->session->userdata('minutos') ?>">
 					                    </div>

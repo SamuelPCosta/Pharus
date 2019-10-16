@@ -12,13 +12,13 @@ class Questionario extends CI_Controller {
 			$resposta = $_POST['resposta'];
 			if ($resposta==="resposta_a") {
 				$resultado_a = get_cookie('a')+1; //Aumenta 1 caso a resposta seja A
-				set_cookie('a', $resultado_a, time() + (300)); //Dá update no cookie
+				set_cookie('a', $resultado_a, '300'); //Dá update no cookie
 			}elseif ($resposta==="resposta_b") {
 				$resultado_b = get_cookie('b')+1;
-				set_cookie('b', $resultado_b, time() + (300));
+				set_cookie('b', $resultado_b, '300');
 			}elseif ($resposta==="resposta_c") {
 				$resultado_c = get_cookie('c')+1;
-				set_cookie('c', $resultado_c, time() + (300));
+				set_cookie('c', $resultado_c, '300');
 			}
 		}
 		if ($questao>=6) {//Número de questões +1 (Após respondido)
