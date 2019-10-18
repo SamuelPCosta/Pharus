@@ -372,7 +372,7 @@
           <div class="col-lg-9 main-chart">
             <!--CUSTOM CHART START -->
             <div class="border-head">
-              <h3>USER VISITS</h3>
+              <h3>CONSUMO MÉDIO DE ENERGIA</h3>
             </div>
             <div class="custom-bar-chart">
               <ul class="y-axis">
@@ -415,161 +415,13 @@
             <!--custom chart end-->
             <div class="row mt">
               <!-- SERVER STATUS PANELS -->
-              <div class="col-md-4 col-sm-4 mb">
-                <div class="grey-panel pn donut-chart">
-                  <div class="grey-header">
-                    <h5>SERVER LOAD</h5>
-                  </div>
-                  <canvas id="serverstatus01" height="120" width="120"></canvas>
-                  <script>
-                    var doughnutData = [{
-                        value: 70,
-                        color: "#FF6B6B"
-                      },
-                      {
-                        value: 30,
-                        color: "#fdfdfd"
-                      }
-                    ];
-                    var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-                  </script>
-                  <div class="row">
-                    <div class="col-sm-6 col-xs-6 goleft">
-                      <p>Usage<br/>Increase:</p>
-                    </div>
-                    <div class="col-sm-6 col-xs-6">
-                      <h2>21%</h2>
-                    </div>
-                  </div>
-                </div>
-                <!-- /grey-panel -->
-              </div>
-              <!-- /col-md-4-->
-              <div class="col-md-4 col-sm-4 mb">
-                <div class="darkblue-panel pn">
-                  <div class="darkblue-header">
-                    <h5>DROPBOX STATICS</h5>
-                  </div>
-                  <canvas id="serverstatus02" height="120" width="120"></canvas>
-                  <script>
-                    var doughnutData = [{
-                        value: 60,
-                        color: "#1c9ca7"
-                      },
-                      {
-                        value: 40,
-                        color: "#f68275"
-                      }
-                    ];
-                    var myDoughnut = new Chart(document.getElementById("serverstatus02").getContext("2d")).Doughnut(doughnutData);
-                  </script>
-                  <p>April 17, 2014</p>
-                  <footer>
-                    <div class="pull-left">
-                      <h5><i class="fa fa-hdd-o"></i> 17 GB</h5>
-                    </div>
-                    <div class="pull-right">
-                      <h5>60% Used</h5>
-                    </div>
-                  </footer>
-                </div>
-                <!--  /darkblue panel -->
-              </div>
-              <!-- /col-md-4 -->
-              <div class="col-md-4 col-sm-4 mb">
-                <!-- REVENUE PANEL -->
-                <div class="green-panel pn">
-                  <div class="green-header">
-                    <h5>REVENUE</h5>
-                  </div>
-                  <div class="chart mt">
-                    <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,464,655]"></div>
-                  </div>
-                  <p class="mt"><b>$ 17,980</b><br/>Month Income</p>
-                </div>
-              </div>
-              <!-- /col-md-4 -->
-            </div>
-            <!-- /row -->
-            <div class="row">
-              <!-- WEATHER PANEL -->
-              <div class="col-md-4 mb">
-                <div class="weather pn">
-                  <i class="fa fa-cloud fa-4x"></i>
-                  <h2>11º C</h2>
-                  <h4>BUDAPEST</h4>
-                </div>
-              </div>
-              <!-- /col-md-4-->
-              <!-- DIRECT MESSAGE PANEL -->
-              <div class="col-md-8 mb">
-                <div class="message-p pn">
-                  <div class="message-header">
-                    <h5>DIRECT MESSAGE</h5>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-3 centered hidden-sm hidden-xs">
-                      <img src="<?= base_url()?>assets/imgAdmin/ui-danro.jpg" class="img-circle" width="65">
-                    </div>
-                    <div class="col-md-9">
-                      <p>
-                        <name>Dan Rogers</name>
-                        enviou uma mensagem.
-                      </p>
-                      <p class="small">3 horas atrás</p>
-                      <p class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                      <form class="form-inline" role="form">
-                        <div class="form-group">
-                          <input type="text" class="form-control" id="exampleInputText" placeholder="Responder...">
-                        </div>
-                        <button type="submit" class="btn btn-default">Enviar</button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <!-- /Message Panel-->
-              </div>
-              <!-- /col-md-8  -->
-            </div>
-            <div class="row">
-              <!-- TWITTER PANEL -->
-              <div class="col-md-4 mb">
-                <div class="twitter-panel pn">
-                  <i class="fa fa-twitter fa-4x"></i>
-                  <p>Dashio is here! Take a look and enjoy this new Bootstrap Dashboard theme.</p>
-                  <p class="user">@Alvrz_is</p>
-                </div>
-              </div>
-              <!-- /col-md-4 -->
-              <div class="col-md-4 mb">
-                <!-- WHITE PANEL - TOP USER -->
-                <div class="white-panel pn">
-                  <div class="white-header">
-                    <h5>TOP USER</h5>
-                  </div>
-                  <p><img src="<?= base_url()?>assets/imgAdmin/ui-zac.jpg" class="img-circle" width="50"></p>
-                  <p><b>Zac Snider</b></p>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <p class="small mt">MEMBER SINCE</p>
-                      <p>2012</p>
-                    </div>
-                    <div class="col-md-6">
-                      <p class="small mt">TOTAL SPEND</p>
-                      <p>$ 47,60</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /col-md-4 -->
-              <div class="col-md-4 mb">
+              <div class="col-lg-4 col-md-12 mb">
                 <!-- NOVOS ADMINISTRADORES -->
-                <a href="#" data-toggle="modal" data-target="#ExemploModalCentralizado"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
-                  <i class="fas fa-user-lock fa-4x"></i>
-                  <h2 style="color:#fff;">Cadastrar novos<br> administradores</h2>
+                <a href="#" data-toggle="modal" data-target="#ExemploModalCentralizado"><div class="new-user-panel pn bg-warning"> <!--Link pra cadastrar novo usuario-->
+                  <i class="fas fa-user-lock fa-4x text-dark"></i>
+                  <h2 class="text-dark">Cadastrar novos<br> adminis<wbr>tradores</h2>
                 </div></a>
               </div>
-
               <!-- Modal -->
               <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
@@ -613,7 +465,7 @@
                           <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                           </div>
-                          <input type="time" name="confirmar_senha" class="form-control input_pass" value="" placeholder="Confirmar senha" required>
+                          <input type="password" name="confirmar_senha" class="form-control input_pass" value="" placeholder="Confirmar senha" required>
                         </div>
                         <div class="input-group mb-3">
                           <div class="input-group-append">
@@ -638,12 +490,128 @@
                 </div>
               </div>
               </div>
-              
+              <!-- /col-md-4-->
+              <div class="col-lg-4 col-md-12 mb">
+                <!-- NOVOS ADMINISTRADORES -->
+                <a href="#" data-toggle="modal" data-target="#removerAdmin"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
+                  <i class="fas fa-user-lock fa-4x"></i>
+                  <h2 style="color:#fff;">Remover<br> adminis<wbr>trador</h2>
+                </div></a>
+              </div>
+              <!-- /col-md-4 -->
+                            <!-- Modal -->
+              <div class="modal fade" id="removerAdmin" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h6 class="modal-title" id="TituloModalCentralizado">Remover administradores já cadastrados</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success">Salvar mudanças</button>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-lg-4 col-md-12 mb">
+                <!-- REVENUE PANEL -->
+                <div class="darkblue-panel pn">
+                  <div class="darkblue-header">
+                    <h5>DROPBOX STATICS</h5>
+                  </div>
+                  <canvas id="serverstatus02" height="120" width="120"></canvas>
+                  <script>
+                    var doughnutData = [{
+                        value: 60,
+                        color: "#1c9ca7"
+                      },
+                      {
+                        value: 40,
+                        color: "#f68275"
+                      }
+                    ];
+                    var myDoughnut = new Chart(document.getElementById("serverstatus02").getContext("2d")).Doughnut(doughnutData);
+                  </script>
+                  <p>April 17, 2014</p>
+                  <footer>
+                    <div class="pull-left">
+                      <h5><i class="fa fa-hdd-o"></i> 17 GB</h5>
+                    </div>
+                    <div class="pull-right">
+                      <h5>60% Used</h5>
+                    </div>
+                  </footer>
+                </div>
+              </div>
               <!-- /col-md-4 -->
             </div>
             <!-- /row -->
             <div class="row">
-              <div class="col-md-4 mb">
+              <!-- WEATHER PANEL -->
+              <div class="col-lg-4 col-md-12 mb">
+                <div class="weather pn">
+                  <i class="fa fa-cloud fa-4x"></i>
+                  <h2>11º C</h2>
+                  <h4>BUDAPEST</h4>
+                </div>
+              </div>
+              <!-- /col-md-4-->
+              <!-- DIRECT MESSAGE PANEL -->
+              <div class="col-lg-8 col-md-12 mb">
+                <div class="message-p pn">
+                  <div class="message-header">
+                    <h5>DIRECT MESSAGE</h5>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 centered hidden-sm hidden-xs">
+                      <img src="<?= base_url()?>assets/imgAdmin/ui-danro.jpg" class="img-circle" width="65">
+                    </div>
+                    <div class="col-md-9">
+                      <p>
+                        <name>Dan Rogers</name>
+                        enviou uma mensagem.
+                      </p>
+                      <p class="small">3 horas atrás</p>
+                      <p class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                      <form class="form-inline" role="form">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="exampleInputText" placeholder="Responder...">
+                        </div>
+                        <button type="submit" class="btn btn-default">Enviar</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Message Panel-->
+              </div>
+              <!-- /col-md-8  -->
+            </div>
+            <div class="row">
+              <!-- TWITTER PANEL -->
+              <div class="col-lg-8 col-md-12 mb">
+                <div class="twitter-panel pn pnx2">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>Dashio is here! Take a look and enjoy this new Bootstrap Dashboard theme.</p>
+                  <p class="user">@Alvrz_is</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12 mb">
+                <!-- NOVOS ADMINISTRADORES -->
+                <a href="#"><div class="new-user-panel pn pnx2"> <!--Link pra cadastrar novo usuario-->
+                </div></a>
+              </div>
+
+              <!-- /col-md-4 -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+              <div class="col-md-4 col-sm-4 mb">
                 <!--  -->
                 <div class="instagram-panel pn">
                   <i class="fa fa-instagram fa-4x"></i>
