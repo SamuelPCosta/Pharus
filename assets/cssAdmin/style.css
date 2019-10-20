@@ -19,7 +19,7 @@ Website: http://Alvarez.is/
 /* BASIC THEME CONFIGURATION */
 body {
     color: #ddd;
-	background: #eaeaea;
+	background: #464b51;
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -502,7 +502,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     top: 42px;
     width: 235px !important;
     padding: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176) !important;
+    /*box-shadow:*/ 0 2px 5px rgba(0, 0, 0, 0.176) !important;
     border: none !important;
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -511,7 +511,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     /* Safari and Chrome */
     .dropdown-menu.extended  {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176) !important;
+        /*box-shadow:*/ 0 2px 8px rgba(0, 0, 0, 0.176) !important;
     };
     }
 
@@ -767,7 +767,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 /* Dash Side */
 
 .ds {
-	background: #d6d9dc;
+	background:#464b51;
 	padding-top: 20px;
 }
 
@@ -788,7 +788,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .ds .desc:hover {
-	background: #ffffff;
+	background: #333;
 }
 
 .ds .thumb {
@@ -915,6 +915,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 .donut-main {
 	display: block;
 	text-align: center;
+    height: 215px
 }
 
 .donut-main h4 {
@@ -930,7 +931,7 @@ PANELS CONFIGURATIONS
 
 .pn {
 	height: 250px;
-	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+	/*box-shadow:*/ 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .pnx2 {
@@ -1000,8 +1001,7 @@ PANELS CONFIGURATIONS
 	text-align: center;
 	background: #ffc107;
 }
-.green-panel .green-header {
-	background: #43b1a9;
+.green-panel .g-header{
 	padding: 3px;
 	margin-bottom: 15px;
 }
@@ -1036,7 +1036,7 @@ PANELS CONFIGURATIONS
 /*STOCK CARD Panel*/
 .card {
   background: white;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+  /*box-shadow:*/ 0 2px 1px rgba(0, 0, 0, 0.2);
   margin-bottom: 1em;
   height: 250px;
 }
@@ -1083,7 +1083,7 @@ PANELS CONFIGURATIONS
 /*Content Panel*/
 .content-panel {
 	background: #ffffff;
-	box-shadow: 0px 3px 2px #aab2bd;
+	/*box-shadow:*/ 0px 3px 2px #aab2bd;
 	padding-top: 15px;
 	padding-bottom: 5px;
 }
@@ -1186,7 +1186,6 @@ PANELS CONFIGURATIONS
 	background: #f5f5f5;
 }
 .message-p .message-header {
-	background: #dcdfe3;
 	padding: 3px;
 	margin-bottom: 15px;
 	text-align: center;
@@ -1222,7 +1221,6 @@ PANELS CONFIGURATIONS
 
 /*Twitter Panel*/
 .twitter-panel {
-	background: #4fc1e9;
 	text-align: center;
 }
 .twitter-panel i {
@@ -1613,7 +1611,7 @@ PANELS CONFIGURATIONS
 	background: #ffffff;
 	padding: 15px;
 	margin-bottom: 15px;
-	box-shadow: 0px 3px 2px #aab2bd;
+	/*box-shadow:*/ 0px 3px 2px #aab2bd;
 }
 
 /* Font Awesome Showcase */
@@ -1739,7 +1737,7 @@ background: #fffbcc !important;
 	background: #ffffff;
 	margin: 10px;
 	padding: 10px;
-	box-shadow: 0px 3px 2px #aab2bd;
+	/*box-shadow:*/ 0px 3px 2px #aab2bd;
 	text-align: left;
 }
 
@@ -1766,7 +1764,7 @@ label {
 
 #focusedInput {
 	border: 1px solid #ed5565;
-	box-shadow: none;
+	/*box-shadow:*/ none;
 }
 
 .add-on {
@@ -1826,9 +1824,9 @@ label {
 .has-switch > div.switch-off label {
     background-color: #7f8c9a;
     border-color: #bdc3c7;
-    -webkit-box-shadow: -1px 0 0 rgba(255, 255, 255, 0.5);
-    -moz-box-shadow: -1px 0 0 rgba(255, 255, 255, 0.5);
-    box-shadow: -1px 0 0 rgba(255, 255, 255, 0.5);
+    -webkit-/*box-shadow:*/ -1px 0 0 rgba(255, 255, 255, 0.5);
+    -moz-/*box-shadow:*/ -1px 0 0 rgba(255, 255, 255, 0.5);
+    /*box-shadow:*/ -1px 0 0 rgba(255, 255, 255, 0.5);
 }
 .has-switch > div.switch-on {
     left: 0%;
@@ -2476,7 +2474,7 @@ ul.labels-info li imgAdmin {
 .inbox-head .sr-input {
     height:40px;
     border:none;
-    box-shadow:none;
+    /*box-shadow:*/none;
     padding:0 10px;
     float:left;
     border-radius:4px 0 0 4px;
@@ -2598,7 +2596,7 @@ ul.inbox-pagination li {
 }
 .inbox-body .modal .modal-body input,.inbox-body .modal .modal-body textarea {
     border:1px solid #e6e6e6;
-    box-shadow:none;
+    /*box-shadow:*/none;
 }
 .btn-send,.btn-send:hover {
     background:#00A8B3;
@@ -2799,7 +2797,7 @@ ul.inbox-pagination li {
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
-    box-shadow: none;
+    /*box-shadow:*/ none;
     background: #34495e;
     padding:0 5px 0 35px;
     margin-top: 2px;
@@ -2809,7 +2807,7 @@ ul.inbox-pagination li {
 
 .chat-room-head .search-btn:focus {
     width: 180px;
-    box-shadow: none;
+    /*box-shadow:*/ none;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
@@ -3381,7 +3379,7 @@ ul.chat-available-user li a:hover {
 .contact-form input, .contact-form textarea {
   padding: 10px 12px;
   border-radius: 0;
-  box-shadow: none;
+  /*box-shadow:*/ none;
   font-size: 14px;
   height: auto;
 }

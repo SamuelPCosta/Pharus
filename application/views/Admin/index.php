@@ -34,7 +34,7 @@
   ======================================================= -->
 </head>
 
-<body style="background-color: #464b51!important;">
+<body>
   <section id="container">
     <!-- **********************************************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
@@ -417,9 +417,9 @@
               <!-- SERVER STATUS PANELS -->
               <div class="col-lg-4 col-md-12 mb">
                 <!-- NOVOS ADMINISTRADORES -->
-                <a href="#" data-toggle="modal" data-target="#ExemploModalCentralizado"><div class="new-user-panel pn bg-warning"> <!--Link pra cadastrar novo usuario-->
-                  <i class="fas fa-user-lock fa-4x text-dark"></i>
-                  <h2 class="text-dark">Cadastrar novos<br> adminis<wbr>tradores</h2>
+                <a href="#" data-toggle="modal" data-target="#ExemploModalCentralizado"><div class="new-user-panel pn bg-dark"> <!--Link pra cadastrar novo usuario-->
+                  <i class="fas fa-user-lock fa-4x text-warning"></i>
+                  <h2 class="text-white">Cadastrar novos<br> adminis<wbr>tradores</h2>
                 </div></a>
               </div>
               <!-- Modal -->
@@ -494,7 +494,7 @@
               <div class="col-lg-4 col-md-12 mb">
                 <!-- NOVOS ADMINISTRADORES -->
                 <a href="#" data-toggle="modal" data-target="#removerAdmin"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
-                  <i class="fas fa-user-lock fa-4x"></i>
+                  <i class="fas fa-user-slash fa-4x"></i>
                   <h2 style="color:#fff;">Remover<br> adminis<wbr>trador</h2>
                 </div></a>
               </div>
@@ -553,6 +553,32 @@
             </div>
             <!-- /row -->
             <div class="row">
+              <!-- DIRECT MESSAGE PANEL -->
+              <div class="col-lg-8 col-md-12 mb">
+                <div class="message-p pn bg-dark">
+                  <div class="message-header">
+                    <h5 class="text-white">MENSAGENS</h5>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 centered hidden-sm hidden-xs">
+                      <img src="<?= base_url()?>assets/img/user_man.png" class="img-circle mx-auto" width="140">
+                    </div>
+                    <div class="col-md-9">
+                      <p style="font-size: 18px" class="text-warning">Steve Rogers</p>
+                      <p class=" text-light">3 horas atrás</p>
+                      <p class="message text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                      <form class="form-inline" role="form">
+                        <div class="form-group">
+                          <input type="text" class="form-control float-left col-10 ml-3" id="exampleInputText" placeholder="Responder..." style="height: 38px">
+                          <button type="submit" class="btn btn-warning rounded-circle ml-2" style="width: 38px; height: 38px !important"><i class="far fa-paper-plane text-dark" style="font-size: 12px;"></i></button>
+                        </div> 
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Message Panel-->
+              </div>
+              <!-- /col-md-8  -->
               <!-- WEATHER PANEL -->
               <div class="col-lg-4 col-md-12 mb">
                 <div class="weather pn">
@@ -562,43 +588,13 @@
                 </div>
               </div>
               <!-- /col-md-4-->
-              <!-- DIRECT MESSAGE PANEL -->
-              <div class="col-lg-8 col-md-12 mb">
-                <div class="message-p pn">
-                  <div class="message-header">
-                    <h5>DIRECT MESSAGE</h5>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-3 centered hidden-sm hidden-xs">
-                      <img src="<?= base_url()?>assets/imgAdmin/ui-danro.jpg" class="img-circle" width="65">
-                    </div>
-                    <div class="col-md-9">
-                      <p>
-                        <name>Dan Rogers</name>
-                        enviou uma mensagem.
-                      </p>
-                      <p class="small">3 horas atrás</p>
-                      <p class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                      <form class="form-inline" role="form">
-                        <div class="form-group">
-                          <input type="text" class="form-control" id="exampleInputText" placeholder="Responder...">
-                        </div>
-                        <button type="submit" class="btn btn-default">Enviar</button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <!-- /Message Panel-->
-              </div>
-              <!-- /col-md-8  -->
             </div>
             <div class="row">
               <!-- TWITTER PANEL -->
               <div class="col-lg-8 col-md-12 mb">
-                <div class="twitter-panel pn pnx2">
-                  <i class="fa fa-twitter fa-4x"></i>
-                  <p>Dashio is here! Take a look and enjoy this new Bootstrap Dashboard theme.</p>
-                  <p class="user">@Alvrz_is</p>
+                <div class="twitter-panel pn pnx2 bg-dark">
+                  <i class="fas fa-lightbulb fa-4x"></i>
+                  <h3 class="text-white">Inserir nova dica</h3>
                 </div>
               </div>
               <div class="col-lg-4 col-md-12 mb">
@@ -609,10 +605,10 @@
 
               <!-- /col-md-4 -->
             </div>
+            <!--Inutil ou desnecessario-->
             <!-- /row -->
-            <div class="row">
+           <!--  <div class="row">
               <div class="col-md-4 col-sm-4 mb">
-                <!--  -->
                 <div class="instagram-panel pn">
                   <i class="fa fa-instagram fa-4x"></i>
                   <p>@THISISYOU<br/> 5 min. ago
@@ -620,28 +616,18 @@
                   <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
                 </div>
               </div>
-              <!-- /col-md-4 -->
-              <!--  PROFILE 02 PANEL -->
+              /col-md-4
+              PROFILE 02 PANEL
               <div class="col-lg-4 col-md-4 col-sm-4 mb">
-                <div class="content-panel pn">
-                  <div id="profile-02">
-                    <div class="user">
-                      <img src="<?= base_url()?>assets/imgAdmin/friends/fr-06.jpg" class="img-circle" width="80">
-                      <h4>DJ SHERMAN</h4>
-                    </div>
-                  </div>
-                  <div class="pr2-social centered">
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                  </div>
+                <div class="content-panel pn bg-dark">
+                    
                 </div>
-                <!-- /panel -->
+                /panel
               </div>
-              <!--/ col-md-4 -->
+              / col-md-4
               <div class="col-md-4 col-sm-4 mb">
-                <div class="green-panel pn">
-                  <div class="green-header">
+                <div class="green-panel pn bg-dark">
+                  <div class="g-header">
                     <h5>DISK SPACE</h5>
                   </div>
                   <canvas id="serverstatus03" height="120" width="120"></canvas>
@@ -660,8 +646,8 @@
                   <h3>60% USED</h3>
                 </div>
               </div>
-              <!-- /col-md-4 -->
-            </div>
+              /col-md-4
+            </div> -->
             <!-- /row -->
           </div>
           <!-- /col-lg-9 END SECTION MIDDLE -->
@@ -669,6 +655,113 @@
               RIGHT SIDEBAR CONTENT
               *********************************************************************************************************************************************************** -->
           <div class="col-lg-3 ds">
+            <!-- USERS ONLINE SECTION -->
+            <h4 class="centered mt">NOSSA EQUIPE</h4>
+            <div style="height: 1px" class="bg-warning mb-5"></div>
+            <!-- First Member -->
+            <div class="desc">
+              <div class="thumb">
+                <img class="img-circle" src="<?= base_url()?>assets/img/user_man.png" width="35px" height="35px" align="">
+              </div>
+              <div class="details">
+                <p>
+                  <a href="#">Gabriel Ribeiro</a><br/>
+                  <muted class="text-white">Available</muted class="text-white">
+                </p>
+              </div>
+            </div>
+            <!-- Second Member -->
+            <div class="desc">
+              <div class="thumb">
+                <img class="img-circle" src="<?= base_url()?>assets/img/user_man.png" width="35px" height="35px" align="">
+              </div>
+              <div class="details">
+                <p>
+                  <a href="#">André Tavares</a><br/>
+                  <muted class="text-white">I am Busy</muted class="text-white">
+                </p>
+              </div>
+            </div>
+            <!-- Third Member -->
+            <div class="desc">
+              <div class="thumb">
+                <img class="img-circle" src="<?= base_url()?>assets/img/user_man.png" width="35px" height="35px" align="">
+              </div>
+              <div class="details">
+                <p>
+                  <a href="#">Keliane Martins</a><br/>
+                  <muted class="text-white">Available</muted class="text-white">
+                </p>
+              </div>
+            </div>
+            <!-- Fourth Member -->
+            <div class="desc">
+              <div class="thumb">
+                <img class="img-circle" src="<?= base_url()?>assets/img/user_man.png" width="35px" height="35px" align="">
+              </div>
+              <div class="details">
+                <p>
+                  <a href="#">Samuel Costa</a><br/>
+                  <muted class="text-white">Available</muted class="text-white">
+                </p>
+              </div>
+            </div>
+            
+            <div class="bg-dark">
+            <!-- RECENT ACTIVITIES SECTION -->
+            <h4 class="centered pt-5">RECENT ACTIVITY</h4>
+            <!-- First Activity -->
+            <div class="desc">
+              <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+              </div>
+              <div class="details">
+                <p>
+                  <muted class="text-white">Just Now</muted class="text-white">
+                  <br/>
+                  <a href="#">Paul Rudd</a> purchased an item.<br/>
+                </p>
+              </div>
+            </div>
+            <!-- Second Activity -->
+            <div class="desc">
+              <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+              </div>
+              <div class="details">
+                <p>
+                  <muted class="text-white">2 Minutes Ago</muted class="text-white">
+                  <br/>
+                  <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+                </p>
+              </div>
+            </div>
+            <!-- Third Activity -->
+            <div class="desc">
+              <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+              </div>
+              <div class="details">
+                <p>
+                  <muted class="text-white">3 Hours Ago</muted class="text-white">
+                  <br/>
+                  <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
+                </p>
+              </div>
+            </div>
+            <!-- Fourth Activity -->
+            <div class="desc">
+              <div class="thumb">
+                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+              </div>
+              <div class="details">
+                <p>
+                  <muted class="text-white">7 Hours Ago</muted class="text-white">
+                  <br/>
+                  <a href="#">Brando Page</a> purchased a year subscription.<br/>
+                </p>
+              </div>
+            </div>
             <!--COMPLETED ACTIONS DONUTS CHART-->
             <div class="donut-main">
               <h4>COMPLETED ACTIONS & PROGRESS</h4>
@@ -699,112 +792,7 @@
                 </div>
               </div>
             </div>
-            <!--new earning end-->
-            <!-- RECENT ACTIVITIES SECTION -->
-            <h4 class="centered mt">RECENT ACTIVITY</h4>
-            <!-- First Activity -->
-            <div class="desc">
-              <div class="thumb">
-                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-              </div>
-              <div class="details">
-                <p>
-                  <muted>Just Now</muted>
-                  <br/>
-                  <a href="#">Paul Rudd</a> purchased an item.<br/>
-                </p>
-              </div>
-            </div>
-            <!-- Second Activity -->
-            <div class="desc">
-              <div class="thumb">
-                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-              </div>
-              <div class="details">
-                <p>
-                  <muted>2 Minutes Ago</muted>
-                  <br/>
-                  <a href="#">James Brown</a> subscribed to your newsletter.<br/>
-                </p>
-              </div>
-            </div>
-            <!-- Third Activity -->
-            <div class="desc">
-              <div class="thumb">
-                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-              </div>
-              <div class="details">
-                <p>
-                  <muted>3 Hours Ago</muted>
-                  <br/>
-                  <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-                </p>
-              </div>
-            </div>
-            <!-- Fourth Activity -->
-            <div class="desc">
-              <div class="thumb">
-                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-              </div>
-              <div class="details">
-                <p>
-                  <muted>7 Hours Ago</muted>
-                  <br/>
-                  <a href="#">Brando Page</a> purchased a year subscription.<br/>
-                </p>
-              </div>
-            </div>
-            <!-- USERS ONLINE SECTION -->
-            <h4 class="centered mt">Membros da equipe</h4>
-            <!-- First Member -->
-            <div class="desc">
-              <div class="thumb">
-                <img class="img-circle" src="<?= base_url()?>assets/imgAdmin/ui-divya.jpg" width="35px" height="35px" align="">
-              </div>
-              <div class="details">
-                <p>
-                  <a href="#">DIVYA MANIAN</a><br/>
-                  <muted>Available</muted>
-                </p>
-              </div>
-            </div>
-            <!-- Second Member -->
-            <div class="desc">
-              <div class="thumb">
-                <img class="img-circle" src="<?= base_url()?>assets/imgAdmin/ui-sherman.jpg" width="35px" height="35px" align="">
-              </div>
-              <div class="details">
-                <p>
-                  <a href="#">DJ SHERMAN</a><br/>
-                  <muted>I am Busy</muted>
-                </p>
-              </div>
-            </div>
-            <!-- Third Member -->
-            <div class="desc">
-              <div class="thumb">
-                <img class="img-circle" src="<?= base_url()?>assets/imgAdmin/ui-danro.jpg" width="35px" height="35px" align="">
-              </div>
-              <div class="details">
-                <p>
-                  <a href="#">DAN ROGERS</a><br/>
-                  <muted>Available</muted>
-                </p>
-              </div>
-            </div>
-            <!-- Fourth Member -->
-            <div class="desc">
-              <div class="thumb">
-                <img class="img-circle" src="<?= base_url()?>assets/imgAdmin/ui-zac.jpg" width="35px" height="35px" align="">
-              </div>
-              <div class="details">
-                <p>
-                  <a href="#">Zac Sniders</a><br/>
-                  <muted>Available</muted>
-                </p>
-              </div>
-            </div>
-            <!-- CALENDAR-->
+           <!-- CALENDAR-->
             <div id="calendar" class="mb">
               <div class="panel green-panel no-margin">
                 <div class="panel-body">
@@ -818,6 +806,9 @@
               </div>
             </div>
             <!-- / calendar -->
+            <!--new earning end-->
+            </div>
+            </div>
           </div>
           <!-- /col-lg-3 -->
         </div>
@@ -829,7 +820,11 @@
     <footer class="site-footer">
       <div class="text-center">
         <p>
-          &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
+          <strong>Pharus</strong>. 2019
+          <script language=javascript type="text/javascript">
+          now = new Date
+          document.write now.getFullYear()
+          </script>
         </p>
         <div class="credits">
           <!--
@@ -838,7 +833,7 @@
             Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
             Licensing information: https://templatemag.com/license/
           -->
-          Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
+          Criado com template Dashio
         </div>
         <a href="index.html#" class="go-top">
           <i class="fa fa-angle-up"></i>
