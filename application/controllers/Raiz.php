@@ -44,27 +44,49 @@ class Raiz extends CI_Controller {
 	//Criar uma array q implementa o consumo de hora em hora e ao final do dia é destruido
 		date_default_timezone_set('America/Sao_Paulo');
 		if (isset($_SESSION['consumo'])){
-			echo date('H');
+			//echo date('H');
 			if(date('H')==0) {
 				unset($consumoPorHora);
-			}
-			//for ($i=0; $i <23; $i++) { Se o cron for implementado isso se torna desnecessario
+				unset($_SESSION['consumo']);
 				$this->load->model("Operacoes");
 				$usuario = $this->session->userdata('usuario');
 				$contaContrato = $this->Operacoes->contaContrato($usuario);
 				$this->load->model("Consumo_model");
 				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
-				$consumoPorHora[1] = $consumo;
-				$consumoPorHora[2] = $consumo;
+				$consumoPorHora[date('H')] = $consumo;
 				$this->session->set_userdata('consumo', $consumoPorHora);
-				echo "cuscuz ";
 				print_r($consumoPorHora);
-				//sleep(4);//3600
+			}else{
+				//for ($i=0; $i <23; $i++) { Se o cron for implementado isso se torna desnecessario
+				$this->load->model("Operacoes");
+				$usuario = $this->session->userdata('usuario');
+				$contaContrato = $this->Operacoes->contaContrato($usuario);
+				$this->load->model("Consumo_model");
+				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
+				$consumoPorHora = $this->session->userdata('consumo');
+				array_push($consumoPorHora, $consumo);
+				$this->session->set_userdata('consumo', $consumoPorHora);
+				print_r($consumoPorHora);
+				//unset($_SESSION['consumo']);
+				$dadosConsumo = json_encode($consumoPorHora); 
+				?>
+					<script type="text/javascript">
+						// use php implode function to build string for JavaScript array literal
+						var consumoPorHora = <?php echo json_encode($consumoPorHora) ?>;
+						localStorage.setItem('consumo', consumoPorHora);
+					</script>
+				<?php
+			}
 			//}
 		}else{
-			$consumoPorHora=array();
+			$this->load->model("Operacoes");
+			$usuario = $this->session->userdata('usuario');
+			$contaContrato = $this->Operacoes->contaContrato($usuario);
+			$this->load->model("Consumo_model");
+			$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
+			$consumoPorHora[date('H')] = $consumo;
 			$this->session->set_userdata('consumo', $consumoPorHora);
-			echo date('H'). " horas - teste exibição"; 
+			print_r($consumoPorHora);
 		}
 		// print_r($consumoPorHora);
 		// echo date('H:i:s');
