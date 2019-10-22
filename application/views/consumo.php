@@ -38,7 +38,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 	<!--Importação ajax-->
 	<script>
-	    localStorage.setItem('consumo', "<?php echo $this->session->userdata('consumo'); ?>");
+	    //localStorage.setItem('consumo', "<?php //echo $this->session->userdata('consumo'); ?>");
 	</script>
 	<script>
     var atual ="Consumo";

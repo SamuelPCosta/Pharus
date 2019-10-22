@@ -48,12 +48,17 @@ class Raiz extends CI_Controller {
 			if(date('H')==0) {
 				unset($consumoPorHora);
 				unset($_SESSION['consumo']);
+			?>
+				<script>
+				localStorage.removeItem('consumo');
+				</script>
+			<?php
 				$this->load->model("Operacoes");
 				$usuario = $this->session->userdata('usuario');
 				$contaContrato = $this->Operacoes->contaContrato($usuario);
 				$this->load->model("Consumo_model");
 				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
-				$consumoPorHora[date('H')] = $consumo;
+				$consumoPorHora[] = $consumo;
 				$this->session->set_userdata('consumo', $consumoPorHora);
 				print_r($consumoPorHora);
 			}else{
@@ -68,14 +73,18 @@ class Raiz extends CI_Controller {
 				$this->session->set_userdata('consumo', $consumoPorHora);
 				print_r($consumoPorHora);
 				//unset($_SESSION['consumo']);
-				$dadosConsumo = json_encode($consumoPorHora); 
 				?>
-					<script type="text/javascript">
+					<script>
 						// use php implode function to build string for JavaScript array literal
-						var consumoPorHora = <?php echo json_encode($consumoPorHora) ?>;
-						localStorage.setItem('consumo', consumoPorHora);
+						var consumoPorHora = JSON.parse('<?php echo json_encode($consumoPorHora) ?>');
+						console.log(consumoPorHora);
+						localStorage.setItem('consumo', JSON.stringify(consumoPorHora));
+						var consumo = localStorage.getItem('consumo');
+						console.log(consumo+" good like a chocolateee");
 					</script>
 				<?php
+				//redirect('consumo');
+				//header('Location:../consumo');
 			}
 			//}
 		}else{
@@ -88,6 +97,7 @@ class Raiz extends CI_Controller {
 			$this->session->set_userdata('consumo', $consumoPorHora);
 			print_r($consumoPorHora);
 		}
+		//redirect('consumo');
 		// print_r($consumoPorHora);
 		// echo date('H:i:s');
 	}
