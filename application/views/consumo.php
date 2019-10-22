@@ -37,8 +37,13 @@
 </div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 	<!--Importação ajax-->
+	<?php $consumoPorHora = $this->session->userdata('consumo'); ?>
 	<script>
-	    //localStorage.setItem('consumo', "<?php //echo $this->session->userdata('consumo'); ?>");
+		var consumoPorHora = JSON.parse('<?php echo json_encode($consumoPorHora) ?>');
+		console.log(consumoPorHora);
+		localStorage.setItem('consumo', JSON.stringify(consumoPorHora));
+		var consumo = localStorage.getItem('consumo');
+		console.log(consumo+" good like a chocolateee");
 	</script>
 	<script>
     var atual ="Consumo";

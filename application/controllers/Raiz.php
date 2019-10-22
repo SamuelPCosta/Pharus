@@ -73,18 +73,6 @@ class Raiz extends CI_Controller {
 				$this->session->set_userdata('consumo', $consumoPorHora);
 				print_r($consumoPorHora);
 				//unset($_SESSION['consumo']);
-				?>
-					<script>
-						// use php implode function to build string for JavaScript array literal
-						var consumoPorHora = JSON.parse('<?php echo json_encode($consumoPorHora) ?>');
-						console.log(consumoPorHora);
-						localStorage.setItem('consumo', JSON.stringify(consumoPorHora));
-						var consumo = localStorage.getItem('consumo');
-						console.log(consumo+" good like a chocolateee");
-					</script>
-				<?php
-				//redirect('consumo');
-				//header('Location:../consumo');
 			}
 			//}
 		}else{
@@ -97,7 +85,7 @@ class Raiz extends CI_Controller {
 			$this->session->set_userdata('consumo', $consumoPorHora);
 			print_r($consumoPorHora);
 		}
-		//redirect('consumo');
+		redirect('consumo');
 		// print_r($consumoPorHora);
 		// echo date('H:i:s');
 	}
