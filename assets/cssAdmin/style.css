@@ -782,9 +782,10 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 
 .ds .desc {
 	border-bottom: 1px dotted #979797;
-	display: inline-block;
+    /* display: inline-block; */
+    display: block;
 	padding: 15px 0;
-	width: 100%;
+	/* width: 100%; */
 }
 
 .ds .desc:hover {
@@ -798,13 +799,13 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 	float: left;
 }
 
-.ds .details {
+/* .ds .details {
 	width: 170px;
 	float: left;
-}
+} */
 
 .ds > .desc p {
-	font-size: 11px;
+    font-size: 15px;
 }
 
 .ds p > muted {

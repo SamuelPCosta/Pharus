@@ -560,16 +560,16 @@
                     <h5 class="text-white">MENSAGENS</h5>
                   </div>
                   <div class="row">
-                    <div class="col-md-3 centered hidden-sm hidden-xs">
-                      <img src="<?= base_url()?>assets/img/user_man.png" class="img-circle mx-auto" width="140">
+                    <div class="centered col-3 hidden-sm hidden-xs">
+                      <img src="<?= base_url()?>assets/img/user_man.png" class="img-circle mx-auto" width="90">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                       <p style="font-size: 18px" class="text-warning">Steve Rogers</p>
-                      <p class=" text-light">3 horas atrás</p>
+                      <!-- <p class=" text-light">3 horas atrás</p> -->
                       <p class="message text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                       <form class="form-inline" role="form">
                         <div class="form-group">
-                          <input type="text" class="form-control float-left col-10 ml-3" id="exampleInputText" placeholder="Responder..." style="height: 38px">
+                          <input type="text" class="form-control float-left col-xl-9 col-md-8 col-10 ml-3" id="exampleInputText" placeholder="Responder..." style="height: 38px">
                           <button type="submit" class="btn btn-warning rounded-circle ml-2" style="width: 38px; height: 38px !important"><i class="far fa-paper-plane text-dark" style="font-size: 12px;"></i></button>
                         </div> 
                       </form>
@@ -657,12 +657,12 @@
           <div class="col-lg-3 ds">
             <!-- USERS ONLINE SECTION -->
             <h4 class="centered mt">NOSSA EQUIPE</h4>
-            <div style="height: 1px" class="bg-warning mb-5"></div>
+            <div style="height: 1px" class="bg-warning"></div>
             <!-- First Member -->
-            <div class="desc">
-              <div class="thumb">
+            <div class="desc centered">
+              <!-- <div class="thumb">
                 <img class="img-circle" src="<?= base_url()?>assets/img/user_man.png" width="35px" height="35px" align="">
-              </div>
+              </div> -->
               <div class="details">
                 <p>
                   <a href="#">Gabriel Ribeiro</a><br/>
@@ -671,10 +671,10 @@
               </div>
             </div>
             <!-- Second Member -->
-            <div class="desc">
-              <div class="thumb">
+            <div class="desc centered">
+              <!-- <div class="thumb">
                 <img class="img-circle" src="<?= base_url()?>assets/img/user_man.png" width="35px" height="35px" align="">
-              </div>
+              </div> -->
               <div class="details">
                 <p>
                   <a href="#">André Tavares</a><br/>
@@ -683,10 +683,10 @@
               </div>
             </div>
             <!-- Third Member -->
-            <div class="desc">
-              <div class="thumb">
+            <div class="desc centered">
+              <!-- <div class="thumb">
                 <img class="img-circle" src="<?= base_url()?>assets/img/user_man.png" width="35px" height="35px" align="">
-              </div>
+              </div> -->
               <div class="details">
                 <p>
                   <a href="#">Keliane Martins</a><br/>
@@ -695,10 +695,10 @@
               </div>
             </div>
             <!-- Fourth Member -->
-            <div class="desc">
-              <div class="thumb">
+            <div class="desc centered">
+              <!-- <div class="thumb">
                 <img class="img-circle" src="<?= base_url()?>assets/img/user_man.png" width="35px" height="35px" align="">
-              </div>
+              </div> -->
               <div class="details">
                 <p>
                   <a href="#">Samuel Costa</a><br/>
