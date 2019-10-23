@@ -67,8 +67,10 @@ class Raiz extends CI_Controller {
 				$usuario = $this->session->userdata('usuario');
 				$contaContrato = $this->Operacoes->contaContrato($usuario);
 				$this->load->model("Consumo_model");
-				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
 				$consumoPorHora = $this->session->userdata('consumo');
+				$consumoPrevio=array_sum($consumoPorHora);
+				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
+				$consumo=$consumo-$consumoPrevio;
 				array_push($consumoPorHora, $consumo);
 				$this->session->set_userdata('consumo', $consumoPorHora);
 				print_r($consumoPorHora);

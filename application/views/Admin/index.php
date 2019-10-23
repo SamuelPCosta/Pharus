@@ -665,8 +665,8 @@
               </div> -->
               <div class="details">
                 <p>
-                  <a href="#">Gabriel Ribeiro</a><br/>
-                  <muted class="text-white">Available</muted class="text-white">
+                  <a href="#"><br>Gabriel Ribeiro</a><br/>
+                  <!-- <muted class="text-white">Available</muted class="text-white"> -->
                 </p>
               </div>
             </div>
@@ -677,8 +677,8 @@
               </div> -->
               <div class="details">
                 <p>
-                  <a href="#">André Tavares</a><br/>
-                  <muted class="text-white">I am Busy</muted class="text-white">
+                  <a href="#"><br>André Tavares</a><br/>
+                  <!-- <muted class="text-white">I am Busy</muted class="text-white"> -->
                 </p>
               </div>
             </div>
@@ -689,8 +689,8 @@
               </div> -->
               <div class="details">
                 <p>
-                  <a href="#">Keliane Martins</a><br/>
-                  <muted class="text-white">Available</muted class="text-white">
+                  <a href="#"><br>Keliane Martins</a><br/>
+                  <!-- <muted class="text-white">Available</muted class="text-white"> -->
                 </p>
               </div>
             </div>
@@ -701,8 +701,8 @@
               </div> -->
               <div class="details">
                 <p>
-                  <a href="#">Samuel Costa</a><br/>
-                  <muted class="text-white">Available</muted class="text-white">
+                  <a href="#"><br>Samuel Costa</a><br/>
+                  <!-- <muted class="text-white">Available</muted class="text-white"> -->
                 </p>
               </div>
             </div>

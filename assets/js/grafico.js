@@ -17,6 +17,8 @@ function update(myChart) {
 }
 
 var consumo = localStorage.getItem('consumo');
+console.log(consumo);
+console.log(numeros);
 Chart.defaults.global.defaultFontSize = 16;
 var ctx = document.getElementById('line-chart').getContext('2d');
 var myChart = new Chart(ctx, {
@@ -25,7 +27,7 @@ var myChart = new Chart(ctx, {
         labels: numeros, //Passando direto o nome do array ele organiza
         datasets: [{
             label: 'Consumo kWh',
-            data: [1,6,3,3.4,2,4,3,2,4,1],//consumo
+            data: JSON.parse(consumo),//consumo
             // backgroundColor:,
             borderWidth: 3,
             backgroundColor: '#FFC107',

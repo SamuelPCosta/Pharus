@@ -39,11 +39,11 @@
 	<!--Importação ajax-->
 	<?php $consumoPorHora = $this->session->userdata('consumo'); ?>
 	<script>
-		var consumoPorHora = JSON.parse('<?php echo json_encode($consumoPorHora) ?>');
+		var consumoPorHora = '<?php echo json_encode($consumoPorHora) ?>';
 		console.log(consumoPorHora);
-		localStorage.setItem('consumo', JSON.stringify(consumoPorHora));
+		localStorage.setItem('consumo', consumoPorHora);
 		var consumo = localStorage.getItem('consumo');
-		console.log(consumo+" good like a chocolateee");
+		console.log(consumo);
 	</script>
 	<script>
     var atual ="Consumo";
