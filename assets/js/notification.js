@@ -29,6 +29,7 @@ function notifyMe(icon, title, mensagem, link){
 	var mensagem = 'Lorem ipsum dolor sit amet, consectetur.';
 	var link = 'http://localhost/pharus/';
 
+	var timer = setInterval(function() {
 	data=new Date();
 	var horaAtual = data.getHours(); 
 	var minutoAtual = data.getMinutes();
@@ -36,12 +37,11 @@ function notifyMe(icon, title, mensagem, link){
 	var horas = localStorage.getItem('horas'); //Resgata o valor da hora definida pra notificacao
 	var minutos = localStorage.getItem('minutos'); //Resgata o valor dos minutos definidos pra notificacao
 	var estado = localStorage.getItem('estado'); //Resgata o valor de ligaga ou desligada
-
-	if (estado=="ativada") {
-		if (horaAtual==horas) {
-			if(minutoAtual==minutos){
-				notifyMe(icon, title, mensagem, link);
-				//sleep(3600);
+		if (estado=="ativada") {
+			if (horaAtual==horas) {
+				if(minutoAtual==minutos){
+					notifyMe(icon, title, mensagem, link);
+				}
 			}
 		}
-	}
+	}, 60000);
