@@ -816,7 +816,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .ds a {
-	color: #ffc107;
+	color: #fff;
 }
 
 /* MAIN CHART CONFIGURATION */
@@ -1208,7 +1208,7 @@ PANELS CONFIGURATIONS
 	font-weight: 700;
 }
 .message-p .message {
-	font-size: 12px;
+	font-size: 14px;
 }
 .message-p .form-inline {
 	margin-left: 10px;

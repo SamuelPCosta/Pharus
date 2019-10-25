@@ -52,7 +52,7 @@
         <ul class="nav top-menu">
           <!-- settings start -->
           <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+            <a data-toggle="dropdown" class="dropdown" href="index.html#">
               <i class="fa fa-tasks"></i>
               <span class="badge bg-theme">4</span>
               </a>
@@ -121,7 +121,7 @@
           <!-- settings end -->
           <!-- inbox dropdown start-->
           <li id="header_inbox_bar" class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+            <a data-toggle="dropdown" class="dropdown" href="index.html#">
               <i class="fa fa-envelope-o"></i>
               <span class="badge bg-theme">5</span>
               </a>
@@ -186,7 +186,7 @@
           <!-- inbox dropdown end -->
           <!-- notification dropdown start-->
           <li id="header_notification_bar" class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+            <a data-toggle="dropdown" class="dropdown" href="index.html#">
               <i class="fa fa-bell-o"></i>
               <span class="badge bg-warning">7</span>
               </a>
@@ -557,22 +557,27 @@
               <div class="col-lg-8 col-md-12 mb">
                 <div class="message-p pn bg-dark">
                   <div class="message-header">
-                    <h5 class="text-white">MENSAGENS</h5>
+                    <h5 class="text-white"><br></h5>
                   </div>
-                  <div class="row">
-                    <div class="centered col-3 hidden-sm hidden-xs">
-                      <img src="<?= base_url()?>assets/img/user_man.png" class="img-circle mx-auto" width="90">
+                  <div class="row mx-auto">
+                    <!-- <div class="centered hidden-sm hidden-xs">
+                      
+                    </div> -->
+                    <div class="ml-5 d-table">
+                      <img src="<?= base_url()?>assets/img/user_man.png" class="img-circle float-left ml-3 mr-2 align-middle d-table-cell" width="50">
+                      <p style="font-size: 18px;" class="text-warning align-middle d-table-cell">Steve Rogers</p>
                     </div>
-                    <div class="col-md-8">
-                      <p style="font-size: 18px" class="text-warning">Steve Rogers</p>
+                  <div class="row ml-4 mr-4 mt-3">
                       <!-- <p class=" text-light">3 horas atrás</p> -->
+                      <div class="col-12">
                       <p class="message text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                       <form class="form-inline" role="form">
                         <div class="form-group">
-                          <input type="text" class="form-control float-left col-xl-9 col-md-8 col-10 ml-3" id="exampleInputText" placeholder="Responder..." style="height: 38px">
+                          <input type="text" class="form-control float-left col-xl-10 col-md-8 col-10 ml-3" id="exampleInputText" placeholder="Responder..." style="height: 38px; width: 90%">
                           <button type="submit" class="btn btn-warning rounded-circle ml-2" style="width: 38px; height: 38px !important"><i class="far fa-paper-plane text-dark" style="font-size: 12px;"></i></button>
                         </div> 
                       </form>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -591,15 +596,37 @@
             </div>
             <div class="row">
               <!-- TWITTER PANEL -->
-              <div class="col-lg-8 col-md-12 mb">
-                <div class="twitter-panel pn pnx2 bg-dark">
-                  <i class="fas fa-lightbulb fa-4x"></i>
-                  <h3 class="text-white">Inserir nova dica</h3>
+              <div class="col-lg-8 col-md-12">
+                <div class="message-p pn bg-dark mb pnx2">
+                  <div class="message-header bg-warning">
+                    <h3 class="text-white text-left ml-5 text-dark">Inserir Novas Dicas</h3>
+                  </div>
+                  <div class="mx-auto">
+                    <input type="radio" name="tipo" id="a" style="display: none;">
+                    <button class="btn btn-warning col-3"><label for="a" class="text-dark">Dica Pequena</label></button>
+                    <input type="radio" name="tipo" id="b" style="display: none;">
+                    <button class="btn btn-warning col-3"><label for="b" class="text-dark">Dica Média</label></button>
+                    <input type="radio" name="tipo" id="c" style="display: none;">
+                    <button class="btn btn-warning col-3"><label for="c" class="text-dark">Dica Grande</label></button>
+                  </div>
+                  <div style="height: 3px" class="bg-warning"></div>
+                  <div class="row mx-auto px-5 py-5">
+                   <textarea style="width: 100%; height: 300px; border: none; font-size: 14px" class="bg-dark"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+                  
+                  </div>
+                  <button class="rounded-circle float-right mr-4" style="width: 35px; height: 35px">Ok</button>
                 </div>
+                <!-- /Message Panel-->
               </div>
               <div class="col-lg-4 col-md-12 mb">
                 <!-- NOVOS ADMINISTRADORES -->
-                <a href="#"><div class="new-user-panel pn pnx2"> <!--Link pra cadastrar novo usuario-->
+                <a href="#"><div class="new-user-panel pn pnx2">
+                <i class="fas fa-lightbulb fa-4x"></i> <!--Link pra cadastrar novo usuario-->
                 </div></a>
               </div>
 
@@ -656,8 +683,8 @@
               *********************************************************************************************************************************************************** -->
           <div class="col-lg-3 ds">
             <!-- USERS ONLINE SECTION -->
-            <h4 class="centered mt">NOSSA EQUIPE</h4>
-            <div style="height: 1px" class="bg-warning"></div>
+            <h3 class="centered mt">NOSSA EQUIPE</h3>
+            <div style="height: 3px" class="bg-warning"></div>
             <!-- First Member -->
             <div class="desc centered">
               <!-- <div class="thumb">
@@ -665,7 +692,7 @@
               </div> -->
               <div class="details">
                 <p>
-                  <a href="#"><br>Gabriel Ribeiro</a><br/>
+                  <a href="#"><br>Gabriel Ribeiro</a>
                   <!-- <muted class="text-white">Available</muted class="text-white"> -->
                 </p>
               </div>
@@ -677,7 +704,7 @@
               </div> -->
               <div class="details">
                 <p>
-                  <a href="#"><br>André Tavares</a><br/>
+                  <a href="#"><br>André Tavares</a>
                   <!-- <muted class="text-white">I am Busy</muted class="text-white"> -->
                 </p>
               </div>
@@ -689,7 +716,7 @@
               </div> -->
               <div class="details">
                 <p>
-                  <a href="#"><br>Keliane Martins</a><br/>
+                  <a href="#"><br>Keliane Martins</a>
                   <!-- <muted class="text-white">Available</muted class="text-white"> -->
                 </p>
               </div>
@@ -701,7 +728,7 @@
               </div> -->
               <div class="details">
                 <p>
-                  <a href="#"><br>Samuel Costa</a><br/>
+                  <a href="#"><br>Samuel Costa</a>
                   <!-- <muted class="text-white">Available</muted class="text-white"> -->
                 </p>
               </div>
@@ -709,7 +736,7 @@
             
             <div class="bg-dark">
             <!-- RECENT ACTIVITIES SECTION -->
-            <h4 class="centered pt-5">RECENT ACTIVITY</h4>
+            <!-- <h4 class="centered pt-5 mt-0">RECENT ACTIVITY</h4> -->
             <!-- First Activity -->
             <div class="desc">
               <div class="thumb">

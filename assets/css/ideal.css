@@ -90,8 +90,7 @@ input[type=radio]:checked + label .alternativas{
 	width: 38px;
 }
 .pergunta ~ form input{
-	position: absolute;
-	visibility: hidden;
+	display: none;
 }
 .next{
 	width: 230px !important;
