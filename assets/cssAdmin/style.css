@@ -1096,7 +1096,7 @@ PANELS CONFIGURATIONS
 
 /* Weather 1 */
 .weather {
-	background: url(../imgAdmin/weather.jpg) no-repeat center top;
+	/*background: url(../imgAdmin/weather.jpg) no-repeat center top;*/
 	text-align: center;
 	background-position: center center;
 }
@@ -1106,11 +1106,9 @@ PANELS CONFIGURATIONS
 }
 .weather h2 {
 	color: white;
-	font-weight: 900;
 }
 .weather h4 {
 	color: white;
-	font-weight: 900;
 	letter-spacing: 1px;
 }
 
@@ -3490,4 +3488,9 @@ ul.chat-available-user li a:hover {
 
 #copyrights a {
   color: #fff;
+}
+
+/*#################################################*/
+input[type=radio]:checked + button .dicas{
+    background-color: #ffc107!important;
 }

@@ -418,7 +418,7 @@
               <div class="col-lg-4 col-md-12 mb">
                 <!-- NOVOS ADMINISTRADORES -->
                 <a href="#" data-toggle="modal" data-target="#ExemploModalCentralizado"><div class="new-user-panel pn bg-dark"> <!--Link pra cadastrar novo usuario-->
-                  <i class="fas fa-user-lock fa-4x text-warning"></i>
+                  <i class="fas fa-user-plus fa-4x text-warning"></i>
                   <h2 class="text-white">Cadastrar novos<br> adminis<wbr>tradores</h2>
                 </div></a>
               </div>
@@ -438,45 +438,27 @@
                     <div class="d-flex justify-content-center form_container">
                       <form method="post" action="cadastro/adicionar">
                         <div class="input-group mb-3">
-                          <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-address-card"></i></i></span>
-                          </div>
                           <input type="text" name="nome" class="form-control input_user text-capitalize" value="" placeholder="Nome completo" required autofocus>
                         </div>
                         <div class="input-group mb-3">
-                          <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                          </div>
                           <input type="text" name="usuario" class="form-control input_pass text-capitalize" value="" placeholder="Usuário" required>
                         </div>
                         <div class="input-group mb-3">
-                          <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-keyboard"></i></span>
-                          </div>
                           <input type="text" name="conta_contrato" class="form-control input_pass" value="" placeholder="Conta contrato" required>
                         </div>
                         <div class="input-group mb-3">
-                          <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                          </div>
                           <input type="password" name="senha" class="form-control input_pass" value="" placeholder="Senha" required>
                         </div>
                         <div class="input-group mb-3">
-                          <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                          </div>
                           <input type="password" name="confirmar_senha" class="form-control input_pass" value="" placeholder="Confirmar senha" required>
                         </div>
                         <div class="input-group mb-3">
-                          <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                          </div>
                           <input type="email" name="email" class="form-control input_user" value="" placeholder="Email" required>
                         </div>  
                         <div class="form-group">
-                          <div class="custom-control custom-checkbox" style="font-size: 1.4em">
-                            <input type="checkbox" class="custom-control-input" id="customControlInline">
-                            <label class="custom-control-label text-dark" for="customControlInline">Conceder privilégios de administrador</label>
+                          <div class="" style="font-size: 1.4em">
+                            <input type="checkbox" class="mx-2" id="checkbox" style="transform : scale(2); z-index: 3000; border: none;">
+                            <label class="text-dark" for="checkbox">Conceder privilégios de administrador</label>
                           </div>
                         </div>   
                     </div>
@@ -494,8 +476,8 @@
               <div class="col-lg-4 col-md-12 mb">
                 <!-- NOVOS ADMINISTRADORES -->
                 <a href="#" data-toggle="modal" data-target="#removerAdmin"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
-                  <i class="fas fa-user-slash fa-4x"></i>
-                  <h2 style="color:#fff;">Remover<br> adminis<wbr>trador</h2>
+                  <i class="fas fa-users fa-4x"></i>
+                  <h2 style="color:#fff;">Listar todos os<br> adminis<wbr>tradores</h2>
                 </div></a>
               </div>
               <!-- /col-md-4 -->
@@ -586,10 +568,10 @@
               <!-- /col-md-8  -->
               <!-- WEATHER PANEL -->
               <div class="col-lg-4 col-md-12 mb">
-                <div class="weather pn">
-                  <i class="fa fa-cloud fa-4x"></i>
-                  <h2>11º C</h2>
-                  <h4>BUDAPEST</h4>
+                <div class="weather pn bg-dark">
+                  <i class="fa fa-envelope fa-4x"></i>
+                  <h2>Mensagens</h2>
+                  <h4>Leia as anteriores</h4>
                 </div>
               </div>
               <!-- /col-md-4-->
@@ -601,33 +583,34 @@
                   <div class="message-header bg-warning">
                     <h3 class="text-white text-left ml-5 text-dark">Inserir Novas Dicas</h3>
                   </div>
-                  <div class="mx-auto">
+                  <div class="mx-auto" style="margin-top: -14px">
                     <input type="radio" name="tipo" id="a" style="display: none;">
-                    <button class="btn btn-warning col-3"><label for="a" class="text-dark">Dica Pequena</label></button>
+                    <button class="btn btn-dark col-4"><label for="a" class="text-white pt-3">Dica Pequena</label></button>
                     <input type="radio" name="tipo" id="b" style="display: none;">
-                    <button class="btn btn-warning col-3"><label for="b" class="text-dark">Dica Média</label></button>
+                    <button class="btn btn-dark col-4" style=" margin:-2px;"><label for="b" class="text-white pt-3">Dica Média</label></button>
                     <input type="radio" name="tipo" id="c" style="display: none;">
-                    <button class="btn btn-warning col-3"><label for="c" class="text-dark">Dica Grande</label></button>
+                    <button class="btn btn-dark col-4" style=" margin:-2px;"><label for="c" class="text-white pt-3">Dica Grande</label></button>
                   </div>
                   <div style="height: 3px" class="bg-warning"></div>
                   <div class="row mx-auto px-5 py-5">
-                   <textarea style="width: 100%; height: 300px; border: none; font-size: 14px" class="bg-dark"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-                  
+                  <form class="w-100">
+                  <textarea style="width: 100%; height: 300px; border: none; font-size: 14px;outline: 0" class="bg-dark">Escreva aqui novas dicas para serem ionseridas no banco de dados, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
                   </div>
-                  <button class="rounded-circle float-right mr-4" style="width: 35px; height: 35px">Ok</button>
+                  <button class="rounded-circle btn btn-warning float-right mr-4 text-dark" type="submit" style=" height: 42px; transform: translateY(-45px);">Ok</button>
+                  </form>
                 </div>
                 <!-- /Message Panel-->
               </div>
               <div class="col-lg-4 col-md-12 mb">
                 <!-- NOVOS ADMINISTRADORES -->
-                <a href="#"><div class="new-user-panel pn pnx2">
-                <i class="fas fa-lightbulb fa-4x"></i> <!--Link pra cadastrar novo usuario-->
-                </div></a>
+                <a href="#">
+                <div class="new-user-panel pn pnx2 d-table col-12">
+                  <div class="d-table-cell align-middle">
+                    <i class="fas fa-lightbulb fa-4x"></i>
+                    <h3 class="text-white mb-5">Listagem de dicas</h3>
+                  </div>
+                </div>
+                </a>
               </div>
 
               <!-- /col-md-4 -->
