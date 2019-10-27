@@ -3494,3 +3494,16 @@ ul.chat-available-user li a:hover {
 input[type=radio]:checked + button .dicas{
     background-color: #ffc107!important;
 }
+
+::-webkit-input-placeholder {
+   color: #aaa;
+}
+:-moz-placeholder {
+   color: #aaa;
+}
+::-moz-placeholder {
+   color: #aaa;
+}
+:-ms-input-placeholder {  
+   color: #aaa; 
+}

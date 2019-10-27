@@ -36,13 +36,10 @@
 			      		</p>
 			      	</div>
 			      		<a href="dicas" id="recarregar" class="btn bg-warning">Novas dicas <i class="fas fa-redo"></i></a>
-			    </div>
-            </div>
-            </div>
-        </div>
-        <!--conteudo-->
-		</div>
-</div>
+			      	</div>
+			      </div>
+			      <!--conteudo-->
+			</div>
 
 	<script>
     var atual ="Dicas";

@@ -594,7 +594,7 @@
                   <div style="height: 3px" class="bg-warning"></div>
                   <div class="row mx-auto px-5 py-5">
                   <form class="w-100">
-                  <textarea style="width: 100%; height: 300px; border: none; font-size: 14px;outline: 0" class="bg-dark">Escreva aqui novas dicas para serem ionseridas no banco de dados, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+                  <textarea style="width: 100%; height: 300px; border: none; font-size: 14px;outline: 0" class="bg-dark" placeholder="Escreva aqui novas dicas para serem ionseridas no banco de dados, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."></textarea>
                   </div>
                   <button class="rounded-circle btn btn-warning float-right mr-4 text-dark" type="submit" style=" height: 42px; transform: translateY(-45px);">Ok</button>
                   </form>

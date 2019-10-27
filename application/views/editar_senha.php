@@ -44,13 +44,10 @@
 								</div>
 							</div>
 						</div>
+						<!--conteudo-->
 					</div>
 				</div>
 			</div>
-			<!--conteudo-->
-		</div>
-	</div>
-</div>
 
 <script>
 	var atual ="Editar senha";

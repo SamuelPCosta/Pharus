@@ -70,16 +70,14 @@
 													<button type="" name="editar" id="Atualizar_dados" class="btn btn-warning position-absolute my-4 mb-5">Editar dados</button>
 												</form>
 											</div>
-										</div>
 									</div>
 								</div>
 							</div>
+							<!--conteudo-->
 						</div>
 					</div>
-					<!--conteudo-->
 				</div>
 			</div>
-		</div>
 
 		<script>
 			var atual ="Usuario";
