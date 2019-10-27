@@ -9,7 +9,7 @@
 		     			<img src="<?= base_url()?>assets/img/logo.png" class="my-5">
 		     		</div>
 		     	</div>
-		     	<div class="row featurette">
+		     	<div class="row align-items-center featurette">
 		     		<div class="col-lg-6 col-md-12 float-left order-lg-2 theme">
 		     			<h1 class="text-lg-right featurette-heading text-center theme">O que fizemos?</h1>
 	        			<p class="lead text-justify">Os compenentes estudaram juntos na mesma sala e cada um teve a sua participação no projeto, sendo pelo back-end ou front-end. O projeto irá ser finalizado até o final do quarto bimestre do ano de 2019 e irá ser apresentado na xxx do ano já citado. Várias pesquisas e entrevistas foram feitas para que houvesse as informações e o conhecimento necessário para o funcionamento do sistema.</p>

@@ -228,9 +228,9 @@ var EasyPieChart = function(el, opts) {
 		scaleColor: false,
 		scaleLength: 5,
 		lineCap: 'round',
-		lineWidth: 30, /*Espessura da barra*/
+		lineWidth: 25, /*Espessura da barra*/
 		trackWidth: undefined,
-		size: 550, /*tamanho do circulo*/
+		size: 525, /*tamanho do circulo*/
 		rotate: 0,
 		animate: {
 			duration: 1000,
