@@ -28,8 +28,8 @@
   left: 0px;
 }
 .text p, #titulo_index{
-  width: 70% !important;
-  text-align: center /*!important descomente para alinhar o titulo a direita*/;
+  width: 85% !important;
+  text-align: justify; /*!important descomente para alinhar o titulo a direita*/;
 }
  #titulo_index{
   border-left: solid 10px #ffc107;
@@ -54,6 +54,9 @@
     //min-height: 300px !important;
     width: 300px !important;
     margin: auto;
+  }
+  #titulo_index{
+    margin-bottom: 1rem !important;
   }
   .texto_grafico p{
     transform: translateY(-70px);

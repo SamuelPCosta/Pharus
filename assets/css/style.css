@@ -102,8 +102,12 @@ header .navbar{
     margin-right: 0px;
     height: 100%;
 }
+#card-home{
+    height: 100px !important;
+    margin-top: 1.5rem!important;
+}
 .text{
-    font-size: 1.75em;
+    font-size: 1.6em;
 }
 .sidebar-nav {
     position: absolute;
@@ -235,6 +239,9 @@ h4{
         justify-content: center;
         min-height: calc(100vh - 78px);
     }
+    #card-home{
+        margin-top: 0rem!important;
+    }
     .barra-central img{
         margin: 0 5%;
         width: 90%
@@ -294,6 +301,10 @@ h4{
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
+    }
+    #card-home{
+        height: 540px !important;
+        margin-top: 1.5rem;
     }
     h2{
         width: 85%;
