@@ -173,7 +173,7 @@ header .navbar{
     background-color: #FFC107 !important;
 }
 .barra-horizontal{
-    background-color: #2E6171;      
+    background-color: #3b94af;      
 }
 .barra-horizontal .rounded-circle{
     border: 3px solid white;
@@ -208,7 +208,7 @@ h4{
 }
 .last-container{
     height: 50vh;
-    background-color: #2E6171;
+    background-color: #3b94af;
 }
 .last-container h2{
     text-align: center;

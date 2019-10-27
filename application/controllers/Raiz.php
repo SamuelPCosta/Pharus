@@ -11,7 +11,15 @@ class Raiz extends CI_Controller {
 			$consumo['meta'] = $this->Consumo_model->SelecionarMeta($contaContrato);
 			if($consumo['meta']!=0){
 				$valor_tarifa = 0.7; //Atualizar com base na tarifa local
-				$valor_dia = ($consumo['meta']/30);
+				date_default_timezone_set('America/Sao_Paulo'); 
+				if(date('m')==2){
+					$qtd_dias=28;
+				}elseif(date('m')==4 || date('m')==6 || date('m')==9 || date('m')==11){
+					$qtd_dias=30;
+				}else{
+					$qtd_dias=31;
+				}
+				$valor_dia = ($consumo['meta']/$qtd_dias);
 				$consumo['consumo'] = $this->Consumo_model->SelecionarConsumo($contaContrato);
 				$consumo['gasto'] = $consumo['consumo']*100/$valor_dia;
 				$porcentagem = $consumo['gasto'];
@@ -45,7 +53,7 @@ class Raiz extends CI_Controller {
 		date_default_timezone_set('America/Sao_Paulo');
 		if (isset($_SESSION['consumo'])){
 			//echo date('H');
-			if(date('H')==0) {
+			if(date('H')==0){
 				unset($consumoPorHora);
 				unset($_SESSION['consumo']);
 			?>

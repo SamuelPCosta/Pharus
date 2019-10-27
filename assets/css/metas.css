@@ -6,6 +6,9 @@
 	text-transform: none;
     font-weight: normal;
 }
+.container-metas{
+	min-height: 85vh !important;
+}
 .container-metas h2{ /*Estilização do título*/
 	width: 60%;
 	margin: 0 auto;
@@ -53,7 +56,7 @@
 	margin-top: 42px;
 	margin-bottom: 0px;
 	color: #fff;
-	background-color: #2e6171 !important;
+	background-color: #3b94af !important;
 	border:none !important;
 }
 .instrucoes, #notificationdiv{
@@ -77,7 +80,7 @@
 	background-color: #fff;
 }
 .colunas-meta.d-table-cell, .texto_metas .row{
-	background-color: #2e6171!important;
+	background-color: #3b94af!important;
 }
 .colunas-meta p{
 	width: 70%;
