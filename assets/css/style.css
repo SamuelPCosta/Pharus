@@ -16,15 +16,24 @@
     font-family: 'Nexa';
     src:url('../fonts/Nexa/Nexa-Light.otf');
 }
+@font-face{
+    font-family: 'Existence';
+    src:url('../fonts/Existence/Existence-Light.otf');
+}
+@font-face{
+    font-family: 'Lane';
+    src:url('../fonts/Lane/LANENAR.ttf');
+}
+
 h1{
     margin: 0 auto;
     text-align: center;
-    font-family: 'Nexa' !important;
+    font-family: 'Lane' !important;
 }
 h2{
     width: 100%;
     margin: auto;
-    font-family: 'Nexa' !important;
+    font-family: 'Lane' !important;
 }
 p{
     font-weight: lighter;
@@ -32,11 +41,13 @@ p{
 header .navbar{
     height: 55px;
     z-index: 2;
+    background-color: #22242a !important
 }
 .logo h1{
     vertical-align: middle !important;
     text-transform: uppercase;
     font-size: 1.8em ;
+    font-family: Existence!important;
 }
 #wrapper {
     padding-left: 0;
