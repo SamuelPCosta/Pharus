@@ -10,6 +10,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!--Importação da fonte Open Sans-->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Importação de sweetalert-->
 	<link rel="shortcut icon" href="<?= base_url()?>assets/img/favicon.png"/> <!--Icone-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="<?= base_url()?>assets/js/jquery.maskMoney.js" type="text/javascript"></script>
 </head>
 <body>
 		<?php  
@@ -89,10 +91,9 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-coins"></i></span>
 							</div>
-							<input type="number" name="tarifa_kwh" class="form-control input_pass" value="" placeholder="Tarifa por kWh"  min="0.00" max="10000.00" step="0.01">
+							<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney" value="" placeholder="Tarifa por kWh"  min="0.10" max="3.00" step="0.01">
 						</div>			
 						<a href="login" class="ml-2 float-right" data-toggle="modal" data-target="#saibamais">Entenda melhor</a>
-
 
 						<!-- ###modal### -->
 						 <div class="modal fade" id="saibamais" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -129,6 +130,15 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		$("#tarifa").maskMoney({
+		  thousands: '.', 
+		  decimal: '.' , 
+		  precision: 2, 
+		  affixesStay : false, 
+		  bringCaretAtEndOnFocus: true 
+		}); 
+	</script>
 	<!--Abaixo seguem os scripts para o funcionamento do JS do BS...-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

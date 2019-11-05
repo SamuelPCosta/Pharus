@@ -45,13 +45,13 @@
                 <li id="Editar senha" class="">
                     <a href="editar-senha" class="sidebar-li-a text-dark"><i class="fas fa-edit"></i>Editar senha</a>
                 </li>
-			    <div class="dropdown-divider"></div>
-                <li id="Consumo" class="">
-                    <a href="consumo" class="sidebar-li-a text-dark"><i class="fas fa-coins"></i>Consumo</a>
-                </li>
                 <div class="dropdown-divider"></div>
                 <li id="Metas" class="">
                     <a href="metas" class="sidebar-li-a text-dark"><i class="fas fa-bookmark"></i>Metas</a>
+                </li>
+			    <div class="dropdown-divider"></div>
+                <li id="Consumo" class="">
+                    <a href="consumo" class="sidebar-li-a text-dark"><i class="fas fa-coins"></i>Consumo</a>
                 </li>
                 <div class="dropdown-divider"></div>
                 <li id="Ideal de Consumo" class="">
