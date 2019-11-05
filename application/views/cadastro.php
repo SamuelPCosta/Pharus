@@ -6,7 +6,6 @@
 	<title>Pharus | Criar Cadastro</title> <!--Título da Aba-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Importação do CSS do BS-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/stylelogin.css"> <!--Importação das folhas de estilo css-->
-	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/stylecadastro.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!--Importação da fonte Open Sans-->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Importação de sweetalert-->
@@ -63,10 +62,10 @@
 						</div>
 						<div class="input-group mb-3">
 							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-keyboard"></i></span>
+								<span class="input-group-text"><i class="fas fa-envelope"></i></span>
 							</div>
-							<input type="text" name="conta_contrato" class="form-control input_pass" value="" placeholder="Conta contrato" required>
-						</div>
+							<input type="email" name="email" class="form-control input_user" value="" placeholder="Email" required>
+						</div>	
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
@@ -79,18 +78,26 @@
 							</div>
 							<input type="password" name="confirmar_senha" class="form-control input_pass" value="" placeholder="Confirmar senha" required>
 						</div>
-						<div class="input-group mb-3">
+						<div class="input-group mb-2">
 							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+								<span class="input-group-text"><i class="fas fa-keyboard"></i></span>
 							</div>
-							<input type="email" name="email" class="form-control input_user" value="" placeholder="Email" required>
-						</div>				
+							<input type="text" name="conta_contrato" class="form-control input_pass" value="" placeholder="Conta contrato" required>
+						</div>
+						<span class="text-secondary">Opcional</span>
+						<div class="input-group mb-1">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-coins"></i></span>
+							</div>
+							<input type="number" name="tarifa_kwh" class="form-control input_pass" value="" placeholder="Tarifa por kWh"  min="0.00" max="10000.00" step="0.01">
+						</div>			
+						<a href="login" class="ml-2 float-right">Entenda melhor</a>
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
 						<button type="submit" name="button" class="btn btn-warning login_btn">Cadastrar</button>
 					</div>
 				</form>
-				<div class="mt-4">
+				<div class="mt-1">
 					<div class="d-flex justify-content-center links">
 						Já tem cadastro? <a href="login" class="ml-2">Entrar</a>
 					</div>

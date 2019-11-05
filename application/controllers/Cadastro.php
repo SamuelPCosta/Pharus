@@ -5,13 +5,18 @@ class Cadastro extends CI_Controller {
 	public function adicionar(){
 		$this->load->model("usuarios_model");
 
+		$tarifa_kwh = $this->input->post("tarifa_kwh");
+		if (empty($this->input->post("tarifa_kwh"))) {
+			$tarifa_kwh = '0.60';
+		}
 		//Esse array passa os campos a serem inseridos na table usuario;
 		$dados = array(
-			'conta_contrato' => $this->input->post("conta_contrato"),
 			'usuario' => $this->input->post("usuario"),
 			'nome' => $this->input->post("nome"),
 			'email' => $this->input->post("email"),
-			'senha' => $this->input->post("senha")	
+			'senha' => $this->input->post("senha"),
+			'conta_contrato' => $this->input->post("conta_contrato"),
+			'tarifa_kwh' => $tarifa_kwh
 		);
 
 		//Próximo array serve para povoar table consumo e metas
