@@ -91,7 +91,31 @@
 							</div>
 							<input type="number" name="tarifa_kwh" class="form-control input_pass" value="" placeholder="Tarifa por kWh"  min="0.00" max="10000.00" step="0.01">
 						</div>			
-						<a href="login" class="ml-2 float-right">Entenda melhor</a>
+						<a href="login" class="ml-2 float-right" data-toggle="modal" data-target="#saibamais">Entenda melhor</a>
+
+
+						<!-- ###modal### -->
+						 <div class="modal fade" id="saibamais" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+			              <div class="modal-dialog modal-dialog-centered" role="document">
+			                <div class="modal-content">
+			                  <div class="modal-header">
+			                    <h6 class="modal-title" id="TituloModalCentralizado">Entenda melhor</h6>
+			                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			                      <span aria-hidden="true">&times;</span>
+			                    </button>
+			                  </div>
+			                  <div class="modal-body">
+			                  	<p class="text-justify">A sua conta contrato serve para identificação dos gastos, dos titulares da conta e disponibilidade de outras informações. Ela está localizada na parte inferir da sua conta de energia. Lembre-se, ela sempre possui 10 dígitos</p>
+			                  	<p class="text-justify">Já a tarifa de energia é o valor cobrado em reais a cada kWh de energia consumida. Este vaor está diretamente relacionado ao preço da sua conta ao final do mês. Essa taxa pode variar de cidade para cidade, ou até mesmo de bairro para bairro. Então, se você puder informar a tarifa de energia você terá uma maior precisão do controle dos seus gastos mensais. Esse valor encontra-se impresso XXX</p>
+			                  </div>
+			                  <div class="modal-footer">
+			                    <button type="button" class="btn btn-warning text-dark">Ok</button>
+			                  </div>
+			                </div>
+			              </div>
+			              </div>
+
+
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
 						<button type="submit" name="button" class="btn btn-warning login_btn">Cadastrar</button>
