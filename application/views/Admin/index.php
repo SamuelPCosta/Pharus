@@ -23,7 +23,7 @@
   <!-- Custom styles for this template -->
   <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/cssAdmin/style.css">
   <link href="<?= base_url()?>assets/cssAdmin/style-responsive.css" rel="stylesheet">
-  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="<?= base_url()?>assets/lib/chart-master/Chart.js"></script>
 
   <!-- =======================================================
@@ -234,7 +234,7 @@
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="login/logout">Sair</a></li>
+          <li><a class="logout" href="Admin/logout">Sair</a></li>
         </ul>
       </div>
     </header>
@@ -436,15 +436,12 @@
 
 
                     <div class="d-flex justify-content-center form_container">
-                      <form method="post" action="cadastro/adicionar">
+                      <form method="post" action="Admin/adicionar">
                         <div class="input-group mb-3">
                           <input type="text" name="nome" class="form-control input_user text-capitalize" value="" placeholder="Nome completo" required autofocus>
                         </div>
                         <div class="input-group mb-3">
                           <input type="text" name="usuario" class="form-control input_pass text-capitalize" value="" placeholder="Usuário" required>
-                        </div>
-                        <div class="input-group mb-3">
-                          <input type="text" name="conta_contrato" class="form-control input_pass" value="" placeholder="Conta contrato" required>
                         </div>
                         <div class="input-group mb-3">
                           <input type="password" name="senha" class="form-control input_pass" value="" placeholder="Senha" required>
@@ -457,7 +454,7 @@
                         </div>  
                         <div class="form-group">
                           <div class="" style="font-size: 1.4em">
-                            <input type="checkbox" class="mx-2" id="checkbox" style="transform : scale(2); z-index: 3000; border: none;">
+                            <input type="checkbox" class="mx-2" name="admin" value="1" id="checkbox" style="transform : scale(2); z-index: 3000; border: none;">
                             <label class="text-dark" for="checkbox">Conceder privilégios de administrador</label>
                           </div>
                         </div>   
@@ -467,14 +464,14 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-success">Salvar mudanças</button>
+                    <button type="submit" class="btn btn-success">Salvar mudanças</button>
                   </div>
                 </div>
               </div>
               </div>
               <!-- /col-md-4-->
               <div class="col-lg-4 col-md-12 mb">
-                <!-- NOVOS ADMINISTRADORES -->
+                <!-- LISTAR ADMINISTRADORES -->
                 <a href="#" data-toggle="modal" data-target="#removerAdmin"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
                   <i class="fas fa-users fa-4x"></i>
                   <h2 style="color:#fff;">Listar todos os<br> adminis<wbr>tradores</h2>
@@ -483,16 +480,49 @@
               <!-- /col-md-4 -->
                             <!-- Modal -->
               <div class="modal fade" id="removerAdmin" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h6 class="modal-title" id="TituloModalCentralizado">Remover administradores já cadastrados</h6>
+                    <h6 class="modal-title" id="TituloModalCentralizado">Editar administradores já cadastrados</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-
+                    <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+            <th>
+              <span class="custom-checkbox">
+                <input type="checkbox" id="selectAll">
+                <label for="selectAll"></label>
+              </span>
+            </th>
+                        <th>Nome</th>
+                        <th>Usuário</th>
+                        <th>Email</th>
+                        <th>Senha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+            <td>
+              <span class="custom-checkbox">
+                <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                <label for="checkbox1"></label>
+              </span>
+            </td>
+                        <td>Thomas Hardy</td>
+                        <td>Thomas</td>
+                        <td>thomashardy@mail.com</td>
+                        <td>senha123</td>
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons text-warning" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons text-danger" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -501,9 +531,9 @@
                 </div>
               </div>
               </div>
-              <div class="col-lg-4 col-md-12 mb">
-                <!-- REVENUE PANEL -->
-                <div class="darkblue-panel pn">
+               <!--<div class="col-lg-4 col-md-12 mb">
+                REVENUE PANEL -->
+                <!-- GRAFICO PIE DONUT WHEEL CHART div class="darkblue-panel pn">
                   <div class="darkblue-header">
                     <h5>DROPBOX STATICS</h5>
                   </div>
@@ -529,7 +559,15 @@
                       <h5>60% Used</h5>
                     </div>
                   </footer>
-                </div>
+                </div> -->
+
+                <div class="col-lg-4 col-md-12 mb">
+                <!-- LISTAR ADMINISTRADORES -->
+                <a href="#" data-toggle="modal" data-target="#removerAdmin"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
+                  <i class="fas fa-flag fa-4x"></i>
+                  <h2 style="color:#fff;">Bandeira <br>de energia</h2>
+                </div></a>
+
               </div>
               <!-- /col-md-4 -->
             </div>

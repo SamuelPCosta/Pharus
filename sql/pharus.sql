@@ -12,7 +12,6 @@ CREATE TABLE `pharus`.`usuario` (
   `senha` VARCHAR(25) NOT NULL,
   `cep` INT(8) UNSIGNED NOT NULL,
   `tarifa_kwh` INT(3) NOT NULL,
-  `admin` INT(1) NULL,
   PRIMARY KEY (`conta_contrato`, `usuario`)
   )
 ENGINE = InnoDB;
@@ -21,6 +20,20 @@ ALTER TABLE usuario
 ADD CONSTRAINT ck_senha
 CHECK (LENGTH(senha)>=8);
 -- Restrição de senha: letras e números
+
+CREATE TABLE `pharus`.`admin` (
+  `usuario` VARCHAR(30) NOT NULL,
+  `nome` VARCHAR(50) NOT NULL,
+  `email` VARCHAR(50) NOT NULL,
+  `senha` VARCHAR(25) NOT NULL,
+  `admin` INT(1) NULL,
+  PRIMARY KEY (`usuario`)
+  )
+ENGINE = InnoDB;
+
+ALTER TABLE admin
+ADD CONSTRAINT ck_senha
+CHECK (LENGTH(senha)>=8);
 -- -----------------------------------------------------
 -- Table consumo --
 -- -----------------------------------------------------

@@ -25,14 +25,6 @@ class Usuarios_model extends CI_Model {
 		return $login;
 	}
 
-	public function logarAdmin($usuario,$senha){
-		$this->db->where("usuario", $usuario); 
-		$this->db->where("senha", $senha);
-		$this->db->where("admin", 1);
-		$loginAdmin = $this->db->get("usuario")->row_array();
-		return $loginAdmin;
-	}
-
 	public function atualizarDados($dadosUpdate=NULL, $usuarioAtual){
 		if ($dadosUpdate != NULL) {
 			$this->db->select('usuario');
