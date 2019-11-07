@@ -40,10 +40,7 @@
   ======================================================= -->
   <style type="text/css">
 		html, body{
-			background-color: #9aada3;
-		}
-		.inputs{
-			float: right;
+			background-color: #343a40;
 		}
 		input, select{
 			width: 70px;
@@ -79,8 +76,6 @@
 			margin-bottom: 20px
 		}
 		button{
-			background-color: #364046 !important;
-			color: white !important;
 			margin: auto;
 			margin-top: 50px;
 			margin-bottom: 50px;
@@ -109,7 +104,8 @@
 </head>
 <br><br><br>
 	<div class="container mt-5">
-		<h1 class="mb-5">Simulador de Consumo <br>de um domicílio</h1>
+		<h1 class="mb-5 text-white">Simulador de Consumo</h1>
+		<form method="post" action="Raiz/Consumir">
 		<div class="row">
 				<!-- 
 				• Criar array com nomes de aparelhos;
@@ -120,85 +116,71 @@
 				}
 				sum(PotênciaHoras);
 				-->
-				<div class="col-lg-6">
-					<form method="post" action="Raiz/Consumir">
-					<?php $aparelhos = array(
-						'Geladeira' => 'Geladeira',
-						'Computador' => 'Computador',
-						'Televisão' => 'Televisão',
-						'Microondas' => 'Microondas',
-						'Freezer' => 'Freezer'
-					); 
-					foreach ($aparelhos as $aparelho) {
+				<?php $cozinha = array('Geladeira','Computador','Televisão','Microondas','Freezer');
+				$quarto = array();
+				$sala = array();
+				$outros = array();
+				$options = "<option value='1'>Potência1</option>
+							<option value='2'>Potência2</option>
+							<option value='3'>Potência3</option>
+							<option value='4'>Potência4</option>
+							<option value='5'>Potência5</option>" 
+				?>
+				<div class="col-lg-6 col-sm-12" id="cozinha">
+					<table>					
+					<?php
+					foreach ($cozinha as $aparelho) {
 						$i=1;
-						echo "<h2>".$aparelho.":</h2>
-							<div class='inputs'>
-								<input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
-							<select name='potencia[]'>
-								<option value='1'>Potência1</option>
-								<option value='1'>Potência2</option>
-								<option value='1'>Potência3</option>
-								<option value='1'>Potência4</option>
-								<option value='1'>Potência5</option>
-							</select></div>";
+						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
+							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
+							<select name='potencia[]'>".$options."</select></div></td></tr>";
 						$i++;
 					}
 					?>
-					<button type="submit" name="button" class="btn login_btn">Consumir</button>
-					</form>
+					</table>
 				</div>
-
-				<div class="col-lg-6">
-					<form method="post" action="#">
-					<h2>Geladeira:</h2>
-					<div class="inputs">
-						<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
-					<select>
-						<option>Potência</option>
-						<option>Potência</option>
-					</select>
-					</div>
-					<br>
-					<h2>Fogão:</h2>
-					<div class="inputs">
-						<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
-					<select>
-						<option>Potência</option>
-						<option>Potência</option>
-					</select>
-					</div>
-					<br>
-					<h2>Microondas:</h2>
-					<div class="inputs">
-						<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
-					<select>
-						<option>Potência</option>
-						<option>Potência</option>
-					</select>
-					</div>
-					<br>
-					<h2>Freezer:</h2>
-					<div class="inputs">
-						<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
-					<select>
-						<option>Potência</option>
-						<option>Potência</option>
-					</select>
-					</div>
-					<br>
-					<h2>Geladeira:</h2>
-					<div class="inputs">
-						<input type="number" min="0" max="24" name="consumo[]" placeholder="Horas">
-					<select>
-						<option>Potência</option>
-						<option>Potência</option>
-					</select>
-					</div>
+				<div class="col-lg-6 col-sm-12" id="quarto">
+					<table>					
+					<?php
+					foreach ($quarto as $aparelho) {
+						$i=1;
+						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
+							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
+							<select name='potencia[]'>".$options."</select></div></td></tr>";
+						$i++;
+					}
+					?>
+					</table>
 				</div>
-				<button type="submit" name="button" class="btn login_btn">Consumir</button>
-				</form>
+				<div class="col-lg-6 col-sm-12" id="sala">
+					<table>					
+					<?php
+					foreach ($sala as $aparelho) {
+						$i=1;
+						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
+							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
+							<select name='potencia[]'>".$options."</select></div></td></tr>";
+						$i++;
+					}
+					?>
+					</table>
 				</div>
-	</div>
+				<div class="col-lg-6 col-sm-12" id="outros">
+					<table>					
+					<?php
+					foreach ($outros as $aparelho) {
+						$i=1;
+						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
+							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
+							<select name='potencia[]'>".$options."</select></div></td></tr>";
+						$i++;
+					}
+					?>
+					</table>
+				</div>	
+		</div>
+		<button type="submit" name="button" class="btn login_btn bg-warning mx-auto d-block">Consumir</button>
+		</form>
 	<?php 
 		//$geladeira = $_POST['geladeira'];//*potencia da geladeira;
 
