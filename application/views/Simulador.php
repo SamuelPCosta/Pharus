@@ -50,6 +50,7 @@
 			border-radius: 5px;
 			padding-left: 10px;
 			margin: 32px 0px 0px 15px;
+			outline: 0;
 		}
 		select{
 			width: 100px;

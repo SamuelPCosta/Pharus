@@ -282,16 +282,20 @@ class Raiz extends CI_Controller {
 	}
 
 	public function consumir(){
-		if ($consumo=[]){
-			foreach ($potencia as $aparelho) {
-				$potencia=$this->input->post("potencia");
-				$horas=$this->input->post("horas");
-				$consumo[] =$potencia*$horas;
-				array_sum($consumo);
+		$consumo=[];
+		$horas=$this->input->post("horas");
+		$potencia=$this->input->post("potencia");
+		$i=0;
+		foreach ($horas as $aparelho) {
+			if(empty($horas[$i])){
+				$horas[$i]=0;
 			}
-			echo array_sum($consumo);
-		}else{
-			$consumo=[];
+			$consumo[] = $potencia[$i]*$horas[$i];
+			array_sum($consumo);
+			$i++;
+			//print_r($consumo); Ver produto por indice
 		}
+		$consumokwh = array_sum($consumo)/1000;
+		echo "Soma: ".$consumokwh;
 	}
 }
