@@ -15,7 +15,7 @@
 								}
 							}else{
 								?>
-								<div class="card py-5 px-0 shadow card-theme theme mx-auto mb-5 d-table" id="card-home">
+								<div class="card py-5 px-0 shadow card-theme theme mx-auto mb-5 d-table anime" id="card-home">
 									<img src="<?= base_url()?>assets/img/user_man.png" class="py-3 mx-auto d-table-cell align-middle" width=80%>
 								</div><!--Usuário ainda n definiu uma meta para ele, logo não temos gráfico-->
 							<?php
@@ -37,6 +37,7 @@
 					<div class="col-xl-6 col-lg-12 text">
 					<h1 class="mx-auto text-center animeRight theme card card-theme mb-5 py-2 shadow-sm" id="titulo_index">Novo aqui?</h1>
 					<p class="mx-auto animeRight theme">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica. Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+					<a href="metas" class="btn btn-warning mx-auto py-3 position-relative d-block text-center animeRight" id="primeirobutton">Vamos definir uma meta para você!</a>
 					</div>
 					<?php
 						}

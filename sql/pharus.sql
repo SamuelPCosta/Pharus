@@ -11,7 +11,7 @@ CREATE TABLE `pharus`.`usuario` (
   `email` VARCHAR(50) NOT NULL,
   `senha` VARCHAR(25) NOT NULL,
   `cep` INT(8) UNSIGNED NOT NULL,
-  `tarifa_kwh` INT(3) NOT NULL,
+  `tarifa_kwh` FLOAT(3) NULL,
   PRIMARY KEY (`conta_contrato`, `usuario`)
   )
 ENGINE = InnoDB;
@@ -94,18 +94,22 @@ VALUES (1234567891, 'Samuel98', 'Samuel Soares Pereira Costa', 'ssoares981@gmail
 (0029427141, 'Keliane', 'Keliane Martins', 'Kel@gmail.com', '85642a43', '59157825'),
 (0033451541, 'Zé', 'Zé da Costa', 'zezinho@gmail.com', 'zezinho132', '59645625');
 
+-- POVOAMENTO DE ADMIN
+INSERT INTO admin (usuario, nome, email, senha, admin) 
+VALUES ('Samuel98', 'Samuel Soares Pereira Costa', 'ssoares981@gmail.com', 'pharus98', '1');
+
 -- POVOAMENTO DE CONSUMO
 INSERT INTO consumo (usuario, kw_h, gasto, tarifa) 
 VALUES ('1234567891', 12, 5, 0),
-('0009654321', 63, 20, 0),
-('0009658141', 70, 50, 0),
-('0028458141', 32, 21, 0),
-('0028758141', 31, 20, 0),
-('0028458751', 264, 52, 0),
-('0029428141', 634, 240, 0),
-('0033458141', 750, 520, 0),
-('0029427141', 322, 211, 0),
-('0033451541', 231, 240, 0);
+('0009654321', 0, 20, 0),
+('0009658141', 0, 50, 0),
+('0028458141', 0, 21, 0),
+('0028758141', 0, 20, 0),
+('0028458751', 0, 52, 0),
+('0029428141', 0, 240, 0),
+('0033458141', 0, 520, 0),
+('0029427141', 0, 211, 0),
+('0033451541', 0, 240, 0);
 
 -- POVOAMENTO DE META
 INSERT INTO meta (usuario, kw_h, gasto) 

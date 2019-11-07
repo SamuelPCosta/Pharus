@@ -43,7 +43,9 @@ var myChart = new Chart(ctx, {
         title: {
             display: true,
             text: 'Gráfico de Consumo por hora',
-            fontSize: 25
+            fontSize: 25,
+            fontStyle: 'normal',
+            fontFamily: 'Open Sans'
         },
         scales: {
             yAxes: [{
@@ -94,7 +96,9 @@ var myBarChart = new Chart(ctx,{
         title: {
             display: true,
             text: 'Gráfico de expectativas por mês',
-            fontSize: 25
+            fontSize: 25,
+            fontStyle: 'normal',
+            fontFamily: 'Open Sans'
         },
         tooltips: {
             mode: 'index',

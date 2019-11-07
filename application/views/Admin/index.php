@@ -45,7 +45,7 @@
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="index.html" class="logo"><b><span>P</span>harus</b></a>
+      <a href="" class="logo"><b><span>P</span>harus</b></a>
       <!--logo end-->
       <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
@@ -254,6 +254,12 @@
               <i class="fa fa-dashboard"></i>
               <span>Dashboard</span>
               </a>
+          </li>
+          <li class="sub-menu">
+            <a href="simulador-de-consumo">
+              <i class="fas fa-laptop-code"></i>
+              <span>Simulador</span>
+            </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">

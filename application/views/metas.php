@@ -8,7 +8,7 @@
 	     				if ($meta==0) {
 	     					echo("Defina sua <br> meta mensal.");
 	     				}else{
-	     					echo("Sua meta é: <br><span style='font-family: Open Sans !important; font-weight:lighter;'>".$meta."</span> reais.");
+	     					echo("<span style='font-family: Open Sans !important; font-weight:lighter;'>Sua meta é: <br>".$meta." reais.</span>");
 	     				}
 	     			?>
 	     			</h2>
@@ -75,7 +75,7 @@
 			        <h2>Defina a Sua <wbr>Meta Mensal</h2>
 		        	<form method="post" action="cadastro_meta/adicionar">
 		        		<div id="meta">
-			        			<input type="number" min="20" max="10000" name="meta" placeholder="Apenas números. Ex.: 90" class="shadow bg-light rounded">
+			        			<input type="number" min="20" max="10000" name="meta" placeholder="Apenas números. Ex.: 90" class="shadow bg-light">
 			        			<button type="submit" class="btn btn-warning mx-auto">Salvar Meta</button><!--Esse botão alterna pra editar-->
 			        		<?php  
 			        			}else{

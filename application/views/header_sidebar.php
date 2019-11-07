@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-    <meta name="theme-color" content="#343a40">
+    <meta name="theme-color" content="#22242a">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pharus | <?php echo $titulo;?></title> <!--Título da Aba-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Importação do CSS do BS-->
@@ -26,7 +26,7 @@
 	<!-- Header -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-0 w-100 shadow">
-			<a href="index" class="mx-auto logo"><img src="<?= base_url()?>assets/img/logo.png" width=35><h1 class="text-white d-inline-block ml-2">Pharus</h1></a> <!--Nossa Logo-->
+			<a href="index" class="mx-auto logo"><img src="<?= base_url()?>assets/img/logo.png" width=35><h1 class="text-white d-inline-block ml-2">Ph<span class="text-warning">a</span>rus</h1></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn text-white position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
             <a href="#menu-toggle" class="btn text-white position-fixed pl-5" id="toggle-theme" title="Modo noturno" onclick="update(myChart)"><i class="fas fa-adjust"></i></a>
 		</nav>
