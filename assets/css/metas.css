@@ -55,7 +55,13 @@
 	text-align: center;
 	position: relative;
 	margin-top: 80px;
-	margin-bottom: 50px;
+	border-radius: 10px;
+}
+#empresa{
+	display: block;
+	width: 60%;
+	text-align: center;
+	position: relative;
 	border-radius: 10px;
 }
 #mensagem{

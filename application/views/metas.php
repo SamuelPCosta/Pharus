@@ -102,6 +102,7 @@
 		        		</div>
 		        	</form>
 		        	<a href="idealdeconsumo" class="btn btn-warning mx-auto py-3" id="consumoideal">Qual o Consumo Ideal?</a>
+		        	<a href="" class="btn btn-warning mx-auto py-3 mt-3" id="empresa">Você faz parte de uma empresa?</a>
 		        </div>
 		        </div>
             </div>

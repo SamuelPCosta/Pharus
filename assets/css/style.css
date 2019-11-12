@@ -139,7 +139,7 @@ header .navbar{
     font-size: 1.1em;
     padding: 10px 0px;
 }
-.sidebar-nav li a:hover{ /*hover dos itens do menu*/
+.sidebar-nav li a:hover, #painelnot span:hover{ /*hover dos itens do menu*/
     text-decoration: none;
     color: #fff !important;
     background-color: #464B51;
@@ -157,11 +157,14 @@ header .navbar{
     visibility: visible;
     //color: #fff;
 }
-#menu-toggle i, #toggle-theme i{ /*Visibilidade do botão de menu*/
+#menu-toggle i, #toggle-theme i, #notifications i{ /*Visibilidade do botão de menu*/
     font-size: 25px;
 }
 #toggle-theme{
     right: 15px;
+}
+#notifications{
+    right: 65px;
 }
 .btn:focus, .btn.focus {
   outline: 0;
