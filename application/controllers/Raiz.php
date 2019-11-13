@@ -68,7 +68,7 @@ class Raiz extends CI_Controller {
 				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
 				$consumoPorHora[] = $consumo;
 				$this->session->set_userdata('consumo', $consumoPorHora);
-				print_r($consumoPorHora);
+				//print_r($consumoPorHora); conferir adição de valores 
 			}else{
 				//for ($i=0; $i <23; $i++) { Se o cron for implementado isso se torna desnecessario
 				$this->load->model("Operacoes");
@@ -81,7 +81,7 @@ class Raiz extends CI_Controller {
 				$consumo=$consumo-$consumoPrevio;
 				array_push($consumoPorHora, $consumo);
 				$this->session->set_userdata('consumo', $consumoPorHora);
-				print_r($consumoPorHora);
+				//print_r($consumoPorHora); conferir adição de valores 
 				//unset($_SESSION['consumo']);
 			}
 			//}
@@ -93,9 +93,9 @@ class Raiz extends CI_Controller {
 			$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
 			$consumoPorHora[date('H')] = $consumo;
 			$this->session->set_userdata('consumo', $consumoPorHora);
-			print_r($consumoPorHora);
+			// print_r($consumoPorHora); conferir adição de valores
 		}
-		redirect('consumo');
+		redirect('monitor');
 		// print_r($consumoPorHora);
 		// echo date('H:i:s');
 	}

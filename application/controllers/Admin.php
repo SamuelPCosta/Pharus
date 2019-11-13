@@ -61,4 +61,8 @@ class Admin extends CI_Controller {
 			//Aqui fica o erro para informar ao usuário que a senha dele deve ter no mínimo 8 caracteres
 		}
 	}
+
+	public function monitor(){
+		$this->load->view('Admin/monitor');
+	}
 }

@@ -25,7 +25,7 @@
   <link href="<?= base_url()?>assets/cssAdmin/style-responsive.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="<?= base_url()?>assets/lib/chart-master/Chart.js"></script>
-
+  <script src="<?= base_url()?>assets/js/monitorScript.js"></script>
   <!-- =======================================================
     Template Name: Dashio
     Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
@@ -256,9 +256,15 @@
               </a>
           </li>
           <li class="sub-menu">
-            <a href="simulador-de-consumo">
+            <a href="simulador-de-consumo" target="_blank">
               <i class="fas fa-laptop-code"></i>
               <span>Simulador</span>
+            </a>
+          </li>
+          <li class="sub-menu">
+            <a href="monitor" target="_blank" onclick="monitor()">
+              <i class="fas fa-clipboard-list"></i>
+              <span>Monitor Consumo</span>
             </a>
           </li>
           <li class="sub-menu">

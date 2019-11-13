@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Pharus | Admin</title>
+  <title>Pharus | Monitor</title>
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="<?= base_url()?>assets/img/favicon.png"/> 
@@ -23,7 +23,7 @@
   <!-- Custom styles for this template -->
   <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/cssAdmin/style.css">
   <link href="<?= base_url()?>assets/cssAdmin/style-responsive.css" rel="stylesheet">
-
+  <script src="<?= base_url()?>assets/js/monitorScript.js"></script>
   <!-- =======================================================
     Template Name: Dashio
     Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
@@ -95,84 +95,20 @@
     </header>
     <!--header end-->
 </head>
-<br><br><br>
-	<div class="container mt-5">
-		<h1 class="mb-5 text-white">Simulador de Consumo</h1>
-		<form method="post" action="Raiz/Consumir">
-		<div class="row">
-				<!-- 
-				• Criar array com nomes de aparelhos;
-				• Criado laço foreach;
-				• echo dentro do foreach com label (pegando do array), e inputs de potência e tempo 
-				For (i=1; i++; i>=lenght){
-					PotênciaHoras[] => "potencia[i]*horas[i]";
-				}
-				sum(PotênciaHoras);
-				-->
-				<?php $cozinha = array('Geladeira','Computador','Televisão','Microondas','Freezer');
-				$quarto = array();
-				$sala = array();
-				$outros = array();
-				$options = "<option value='1'>Potência1</option>
-							<option value='2'>Potência2</option>
-							<option value='3'>Potência3</option>
-							<option value='4'>Potência4</option>
-							<option value='5'>Potência5</option>" 
+<div class="row align-itens-middle">
+	<div class="d-table w-100" style="height: 100vh">
+		<div class="container mt-5 d-table-cell align-middle">
+			<h1 class="mb-5 text-white">Monitor de Consumo</h1>
+			<div class="row">
+				<?php 
+					date_default_timezone_set('America/Sao_Paulo');
+					$horas = date('H');
+					$minutos = date('i');
+					$segundos = date('s');
 				?>
-				<div class="col-lg-6 col-sm-12" id="cozinha">
-					<table>					
-					<?php
-					foreach ($cozinha as $aparelho) {
-						$i=1;
-						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
-							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
-							<select name='potencia[]'>".$options."</select></div></td></tr>";
-						$i++;
-					}
-					?>
-					</table>
-				</div>
-				<div class="col-lg-6 col-sm-12" id="quarto">
-					<table>					
-					<?php
-					foreach ($quarto as $aparelho) {
-						$i=1;
-						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
-							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
-							<select name='potencia[]'>".$options."</select></div></td></tr>";
-						$i++;
-					}
-					?>
-					</table>
-				</div>
-				<div class="col-lg-6 col-sm-12" id="sala">
-					<table>					
-					<?php
-					foreach ($sala as $aparelho) {
-						$i=1;
-						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
-							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
-							<select name='potencia[]'>".$options."</select></div></td></tr>";
-						$i++;
-					}
-					?>
-					</table>
-				</div>
-				<div class="col-lg-6 col-sm-12" id="outros">
-					<table>					
-					<?php
-					foreach ($outros as $aparelho) {
-						$i=1;
-						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
-							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
-							<select name='potencia[]'>".$options."</select></div></td></tr>";
-						$i++;
-					}
-					?>
-					</table>
-				</div>	
+			<h1 class="mb-5 text-white">Atualizado em: <br><?php echo $horas.":".$minutos.":".$segundos;?></h1>	
 		</div>
-		<button type="submit" name="button" class="btn login_btn bg-warning mx-auto d-block">Consumir</button>
-		</form>
+	</div>
+</div>
 </body>
 </html>
