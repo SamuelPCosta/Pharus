@@ -70,8 +70,7 @@
 		}
 		button{
 			margin: auto;
-			margin-top: 50px;
-			margin-bottom: 50px;
+			margin-bottom: 20px;
 			max-height: 40px;
 		}
 	</style>
@@ -113,11 +112,11 @@
 				$quarto = array();
 				$sala = array();
 				$outros = array();
-				$options = "<option value='1'>Potência1</option>
-							<option value='2'>Potência2</option>
-							<option value='3'>Potência3</option>
-							<option value='4'>Potência4</option>
-							<option value='5'>Potência5</option>" 
+				$options = "<option value='10'>Potência1</option>
+							<option value='20'>Potência2</option>
+							<option value='30'>Potência3</option>
+							<option value='40'>Potência4</option>
+							<option value='50'>Potência5</option>" 
 				?>
 				<div class="col-lg-6 col-sm-12" id="cozinha">
 					<table>					
@@ -172,7 +171,12 @@
 					</table>
 				</div>	
 		</div>
-		<button type="submit" name="button" class="btn login_btn bg-warning mx-auto d-block">Consumir</button>
+		<input type="text" name="usuario" class="btn login_btn bg-light mx-auto d-block w-25" placeholder="Informe o usuario" style="text-transform: capitalize;">
+		<button type="submit" name="button" class="btn login_btn bg-warning mx-auto d-block w-25 mt-1">Consumir</button>
+		</form>
+		<form method="post" action="Admin/zerar">
+			<input type="text" name="usuario" class="btn login_btn bg-light mx-auto d-block w-25" placeholder="Informe o usuario" style="text-transform: capitalize;">
+			<button type="submit" class="btn login_btn bg-danger text-white mx-auto d-block w-25 mt-1">Zerar</button>
 		</form>
 </body>
 </html>

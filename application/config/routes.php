@@ -70,3 +70,4 @@ $route['simulador-de-consumo'] = 'Raiz/simulador';
 $route['index'] = 'Raiz';
 $route['admin'] = 'Raiz/AdminIndex';
 $route['monitor'] = 'Admin/monitor';
+$route['simuladorAtualizar'] = 'Admin/simuladorAtualizar';

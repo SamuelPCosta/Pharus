@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Pharus | Monitor</title>
+  <title>Pharus | Simulador</title>
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="<?= base_url()?>assets/img/favicon.png"/> 
@@ -23,7 +23,7 @@
   <!-- Custom styles for this template -->
   <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/cssAdmin/style.css">
   <link href="<?= base_url()?>assets/cssAdmin/style-responsive.css" rel="stylesheet">
-  <script src="<?= base_url()?>assets/js/monitorScript.js"></script>
+  <script src="<?= base_url()?>assets/js/simuladorScript.js"></script>
   <!-- =======================================================
     Template Name: Dashio
     Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
@@ -98,7 +98,8 @@
 <div class="row align-itens-middle">
 	<div class="d-table w-100" style="height: 100vh">
 		<div class="container mt-5 d-table-cell align-middle">
-			<h1 class="mb-5 text-white">Monitor de Consumo</h1>
+			<h1 class="mb-5 text-white">Simulado de Consumo</h1>
+			<h1 class="text-white"><?php echo $this->session->userdata('usuarioSimulado'); ?></h1>
 			<div class="row">
 				<?php 
 					date_default_timezone_set('America/Sao_Paulo');
@@ -107,6 +108,7 @@
 					$segundos = date('s');
 				?>
 			<h1 class="mb-5 text-white">Atualizado em: <br><?php echo $horas.":".$minutos.":".$segundos;?></h1>	
+			</div>
 		</div>
 	</div>
 </div>

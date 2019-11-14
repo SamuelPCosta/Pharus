@@ -23,4 +23,16 @@ class Admin_model extends CI_Model {
 			}
 		}
 	}
+
+	public function adicionarConsumo($usuario, $qtd_consumida){
+		$this->db->set('kw_h', $qtd_consumida);
+		$this->db->where('usuario', $usuario);  
+		$this->db->update('consumo');
+	}
+
+	public function zerar($usuario){
+		$this->db->set('kw_h', 0);
+		$this->db->where('usuario', $usuario);  
+		$this->db->update('consumo');
+	}
 }

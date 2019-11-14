@@ -20,6 +20,8 @@ var consumo = localStorage.getItem('consumo');
 console.log(consumo);
 console.log(numeros);
 Chart.defaults.global.defaultFontSize = 16;
+Chart.defaults.global.legend.labels.usePointStyle = true;
+Chart.defaults.global.legend.labels.position = 'bottom';
 var ctx = document.getElementById('line-chart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
@@ -54,6 +56,10 @@ var myChart = new Chart(ctx, {
                 }
             }]
         },
+        legend: {
+            display: true,
+            position: 'bottom'
+        },
         tooltips: {
             mode: 'index',
             intersect: false,
@@ -73,7 +79,7 @@ var myBarChart = new Chart(ctx,{
     data:{
         labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
         datasets: [{
-            label: "Meu Consumo",
+            label: "Consumo",
             data: [25, 59, 40, 41],
             backgroundColor: "#ddd",
             borderWidth: 1,
@@ -82,13 +88,22 @@ var myBarChart = new Chart(ctx,{
             highlightFill: "#f8f9fa",
         },
         {
-            label: "Minha Meta",
+            label: "Meta",
             backgroundColor: "#555",
             borderWidth: 1,
             borderColor: '#808080',
             hoverBackgroundColor:"#ffc107",
             lineTension: 0,
             data: [28, 48, 40, 19]
+        },
+        {
+            label: "Média",
+            backgroundColor: "#3b94af",
+            borderWidth: 1,
+            borderColor: '#808080',
+            hoverBackgroundColor:"#3b94af",
+            lineTension: 0,
+            data: [38, 42, 32, 29]
         }]
     },
     options: {
@@ -99,6 +114,10 @@ var myBarChart = new Chart(ctx,{
             fontSize: 25,
             fontStyle: 'normal',
             fontFamily: 'Open Sans'
+        },
+        legend: {
+            display: true,
+            position: 'bottom'
         },
         tooltips: {
             mode: 'index',

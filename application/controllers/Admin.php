@@ -62,7 +62,19 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function zerar(){
+		$usuario=$this->input->post("usuario");
+		$this->load->model("Operacoes");
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
+		$this->load->model("Admin_model");
+		$this->Admin_model->zerar($contaContrato);
+		redirect('simulador-de-consumo');
+	}
+
 	public function monitor(){
 		$this->load->view('Admin/monitor');
+	}
+	public function simuladorAtualizar(){
+		$this->load->view('Admin/simuladorAtualizar');
 	}
 }

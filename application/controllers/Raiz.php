@@ -95,7 +95,7 @@ class Raiz extends CI_Controller {
 			$this->session->set_userdata('consumo', $consumoPorHora);
 			// print_r($consumoPorHora); conferir adição de valores
 		}
-		redirect('monitor');
+		//redirect('monitor');
 		// print_r($consumoPorHora);
 		// echo date('H:i:s');
 	}
@@ -296,6 +296,30 @@ class Raiz extends CI_Controller {
 			//print_r($consumo); Ver produto por indice
 		}
 		$consumokwh = array_sum($consumo)/1000;
-		echo "Soma: ".$consumokwh;
+		//echo "Soma: ".$consumokwh; conferir manualmente
+		$this->session->set_userdata('totalSimulador', $consumokwh);
+		$usuario=$this->input->post("usuario");
+		//converter conta contrato
+		$this->session->set_userdata('usuarioSimulado', $usuario);
+		$this->load->model("Operacoes");
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
+		$this->session->set_userdata('contaContratoSimulador', $contaContrato);
+		redirect('simuladorAtualizar');
+	}
+
+	public function adicionarConsumo(){
+		date_default_timezone_set('America/Sao_Paulo');
+		$horas = date('H');
+		$simulador = $this->session->userdata('totalSimulador');
+		$usuario = $this->session->userdata('contaContratoSimulador');
+		$this->load->model("Consumo_model");
+		$previo = $this->Consumo_model->SelecionarConsumo($usuario);
+		$qtd_consumida = $simulador/(24);
+		//$margem = rand(-1,2);
+		$qtd_consumida=$qtd_consumida+$previo;
+		$this->load->model("Admin_model");
+		$this->Admin_model->adicionarConsumo($usuario, $qtd_consumida);
+		$this->monitorarConsumo();
+		redirect('simuladorAtualizar');
 	}
 }

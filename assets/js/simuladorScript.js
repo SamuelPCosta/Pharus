@@ -1,6 +1,4 @@
-var timer = setInterval(function() {
-// data=new Date();
-// var horaAtual = data.getHours(); 
-
-window.location.href=''
-}, 3.6*1000000);
+function consumir(){
+	window.location.href='Raiz/adicionarConsumo'
+}
+var timer = setInterval(consumir, 3600000);
