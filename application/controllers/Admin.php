@@ -62,12 +62,31 @@ class Admin extends CI_Controller {
 		}
 	}
 
+
+	public function zerarArray(){
+		unset($consumoPorHora);
+		unset($_SESSION['consumo']);
+		?>
+			<script>
+			localStorage.removeItem('consumo');
+			</script>
+		<?php
+		$this->load->model("Operacoes");
+		$usuario = $this->session->userdata('usuario');
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
+		$this->load->model("Consumo_model");
+		$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
+		$consumoPorHora[] = $consumo;
+		$this->session->set_userdata('consumo', $consumoPorHora);
+	}
+
 	public function zerar(){
 		$usuario=$this->input->post("usuario");
 		$this->load->model("Operacoes");
 		$contaContrato = $this->Operacoes->contaContrato($usuario);
 		$this->load->model("Admin_model");
 		$this->Admin_model->zerar($contaContrato);
+		$this->zerarArray();
 		redirect('simulador-de-consumo');
 	}
 

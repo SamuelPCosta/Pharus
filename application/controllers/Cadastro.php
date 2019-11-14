@@ -51,11 +51,13 @@ class Cadastro extends CI_Controller {
 		$usuario = $this->input->post("usuario");
 		$nome = $this->input->post("nome");
 		$email = $this->input->post("email");
+		$tarifa = $this->input->post("tarifa_kwh");
 
 		$usuarioAtual=$this->session->userdata('usuario');
 		$nomeAtual=$this->Operacoes->nomeCompleto($usuarioAtual);
 		$contaContratoAtual=$this->Operacoes->contaContrato($usuarioAtual);
 		$emailAtual=$this->Operacoes->email($usuarioAtual);
+		$tarifaAtual=$this->Operacoes->tarifa($usuarioAtual);
 
 		//Esse array passa os campos a serem atualizados na table usuario;
 		$dadosUpdate = array();
@@ -67,6 +69,8 @@ class Cadastro extends CI_Controller {
 				$dadosUpdate['nome'] = $nome;
 			}if ($email!=$emailAtual && $email!=NULL && $email!=" ") {
 				$dadosUpdate['email'] = $email;
+			}if ($tarifa!=$tarifaAtual && $tarifa!=NULL && $tarifa!=" ") {
+				$dadosUpdate['tarifa_kwh'] = $tarifa;
 			}
 		$this->load->model("Usuarios_model");
 		$nome_de_usuario_existente = $this->Usuarios_model->atualizarDados($dadosUpdate, $usuarioAtual);

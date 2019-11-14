@@ -58,9 +58,9 @@
 												<div class="input-group mb-2">
 													<input type="text" name="conta_contrato" value="<?php echo $contaContrato ?>" class="form-control dados_user border-0" placeholder="" disabled>
 												</div>
-												<span>Cep/Bairro:</span>
+												<span>Tarifa kWh:</span>
 												<div class="input-group mb-2">
-													<input type="text" name="" class="form-control dados_user border-0" value="" placeholder="" disabled>
+													<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney dados_user border-0" value="<?php echo $tarifa ?>" placeholder="Tarifa por kWh"  min="0.10" max="3.00" step="0.01" disabled>
 												</div>
 												</div>
 												<div class="d-flex justify-content-center mt-3 login_container my-3">
@@ -78,7 +78,15 @@
 					</div>
 				</div>
 			</div>
-
+		<script>
+			$("#tarifa").maskMoney({
+			  thousands: '.', 
+			  decimal: '.' , 
+			  precision: 2, 
+			  affixesStay : false, 
+			  bringCaretAtEndOnFocus: true 
+			}); 
+		</script>
 		<script>
 			var atual ="Usuario";
 		</script>

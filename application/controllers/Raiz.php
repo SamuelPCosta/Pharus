@@ -48,58 +48,6 @@ class Raiz extends CI_Controller {
 		}
 	}
 
-	public function monitorarConsumo(){
-	//Criar uma array q implementa o consumo de hora em hora e ao final do dia é destruido
-		date_default_timezone_set('America/Sao_Paulo');
-		if (isset($_SESSION['consumo'])){
-			//echo date('H');
-			if(date('H')==0){
-				unset($consumoPorHora);
-				unset($_SESSION['consumo']);
-			?>
-				<script>
-				localStorage.removeItem('consumo');
-				</script>
-			<?php
-				$this->load->model("Operacoes");
-				$usuario = $this->session->userdata('usuario');
-				$contaContrato = $this->Operacoes->contaContrato($usuario);
-				$this->load->model("Consumo_model");
-				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
-				$consumoPorHora[] = $consumo;
-				$this->session->set_userdata('consumo', $consumoPorHora);
-				//print_r($consumoPorHora); conferir adição de valores 
-			}else{
-				//for ($i=0; $i <23; $i++) { Se o cron for implementado isso se torna desnecessario
-				$this->load->model("Operacoes");
-				$usuario = $this->session->userdata('usuario');
-				$contaContrato = $this->Operacoes->contaContrato($usuario);
-				$this->load->model("Consumo_model");
-				$consumoPorHora = $this->session->userdata('consumo');
-				$consumoPrevio=array_sum($consumoPorHora);
-				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
-				$consumo=$consumo-$consumoPrevio;
-				array_push($consumoPorHora, $consumo);
-				$this->session->set_userdata('consumo', $consumoPorHora);
-				//print_r($consumoPorHora); conferir adição de valores 
-				//unset($_SESSION['consumo']);
-			}
-			//}
-		}else{
-			$this->load->model("Operacoes");
-			$usuario = $this->session->userdata('usuario');
-			$contaContrato = $this->Operacoes->contaContrato($usuario);
-			$this->load->model("Consumo_model");
-			$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
-			$consumoPorHora[date('H')] = $consumo;
-			$this->session->set_userdata('consumo', $consumoPorHora);
-			// print_r($consumoPorHora); conferir adição de valores
-		}
-		//redirect('monitor');
-		// print_r($consumoPorHora);
-		// echo date('H:i:s');
-	}
-
 	public function consumo(){
 		date_default_timezone_set('America/Sao_Paulo');
 		if (isset($_SESSION['login'])) {
@@ -207,6 +155,7 @@ class Raiz extends CI_Controller {
 			$dados['nome'] = $this->Operacoes->nomeCompleto($usuario);
 			$dados['email'] = $this->Operacoes->email($usuario);
 			$dados['contaContrato'] = $this->Operacoes->contaContrato($usuario);
+			$dados['tarifa'] = $this->Operacoes->tarifa($usuario);
 			$title['titulo'] ="Usuário";
 			$this->load->view('header_sidebar', $title);
 			$this->load->view('usuario', $dados);
@@ -281,6 +230,75 @@ class Raiz extends CI_Controller {
 		$this->load->view('simulador');
 	}
 
+
+	public function monitorarConsumo(){
+	//Criar uma array q implementa o consumo de hora em hora e ao final do dia é destruido
+		date_default_timezone_set('America/Sao_Paulo');
+		if (isset($_SESSION['consumo'])){
+			//echo date('H');
+			if(date('H')==0){
+				unset($consumoPorHora);
+				unset($_SESSION['consumo']);
+			?>
+				<script>
+				localStorage.removeItem('consumo');
+				</script>
+			<?php
+				$this->load->model("Operacoes");
+				$usuario = $this->session->userdata('usuario');
+				$contaContrato = $this->Operacoes->contaContrato($usuario);
+				$this->load->model("Consumo_model");
+				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
+				$consumoPorHora[] = $consumo;
+				$this->session->set_userdata('consumo', $consumoPorHora);
+				//print_r($consumoPorHora); conferir adição de valores 
+			}else{
+				//for ($i=0; $i <23; $i++) { Se o cron for implementado isso se torna desnecessario
+				$this->load->model("Operacoes");
+				$usuario = $this->session->userdata('usuario');
+				$contaContrato = $this->Operacoes->contaContrato($usuario);
+				$this->load->model("Consumo_model");
+				$consumoPorHora = $this->session->userdata('consumo');
+				$consumoPrevio=array_sum($consumoPorHora);
+				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
+				$consumo=$consumo-$consumoPrevio;
+				array_push($consumoPorHora, $consumo);
+				$this->session->set_userdata('consumo', $consumoPorHora);
+				//print_r($consumoPorHora); conferir adição de valores 
+				//unset($_SESSION['consumo']);
+			}
+			//}
+		}else{
+			$this->load->model("Operacoes");
+			$usuario = $this->session->userdata('usuario');
+			$contaContrato = $this->Operacoes->contaContrato($usuario);
+			$this->load->model("Consumo_model");
+			$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
+			$consumoPorHora[date('H')] = $consumo;
+			$this->session->set_userdata('consumo', $consumoPorHora);
+			// print_r($consumoPorHora); conferir adição de valores
+		}
+		//redirect('monitor');
+		// print_r($consumoPorHora);
+		// echo date('H:i:s');
+	}
+
+	public function adicionarConsumo(){
+		date_default_timezone_set('America/Sao_Paulo');
+		$horas = date('H');
+		$simulador = $this->session->userdata('totalSimulador');
+		$usuario = $this->session->userdata('contaContratoSimulador');
+		$this->load->model("Consumo_model");
+		$previo = $this->Consumo_model->SelecionarConsumo($usuario);
+		$qtd_consumida = $simulador/(24);
+		//$margem = rand(-1,2);
+		$qtd_consumida=$qtd_consumida+$previo;
+		$this->load->model("Admin_model");
+		$this->Admin_model->adicionarConsumo($usuario, $qtd_consumida);
+		$this->monitorarConsumo();
+		redirect('simuladorAtualizar');
+	}
+
 	public function consumir(){
 		$consumo=[];
 		$horas=$this->input->post("horas");
@@ -304,22 +322,7 @@ class Raiz extends CI_Controller {
 		$this->load->model("Operacoes");
 		$contaContrato = $this->Operacoes->contaContrato($usuario);
 		$this->session->set_userdata('contaContratoSimulador', $contaContrato);
-		redirect('simuladorAtualizar');
-	}
-
-	public function adicionarConsumo(){
-		date_default_timezone_set('America/Sao_Paulo');
-		$horas = date('H');
-		$simulador = $this->session->userdata('totalSimulador');
-		$usuario = $this->session->userdata('contaContratoSimulador');
-		$this->load->model("Consumo_model");
-		$previo = $this->Consumo_model->SelecionarConsumo($usuario);
-		$qtd_consumida = $simulador/(24);
-		//$margem = rand(-1,2);
-		$qtd_consumida=$qtd_consumida+$previo;
-		$this->load->model("Admin_model");
-		$this->Admin_model->adicionarConsumo($usuario, $qtd_consumida);
-		$this->monitorarConsumo();
+		$this->adicionarConsumo();
 		redirect('simuladorAtualizar');
 	}
 }

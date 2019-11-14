@@ -25,4 +25,12 @@ class Operacoes extends CI_Model {
 		$email = $query->row()->email;
 		return $email;
 	}
+
+	public function tarifa($usuario){
+		$this->db->select('tarifa_kwh');
+		$this->db->where('usuario', $usuario); //Onde o usuário for igual ao nome de usuário q está logado
+		$query = $this->db->get('usuario');
+		$tarifa_kwh = $query->row()->tarifa_kwh;
+		return $tarifa_kwh;
+	}
 }
