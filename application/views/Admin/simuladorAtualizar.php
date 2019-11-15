@@ -78,7 +78,6 @@
 </head>
 
 <body>
-  <section id="container">
     <!-- **********************************************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
         *********************************************************************************************************************************************************** -->
@@ -94,20 +93,24 @@
       </div>
     </header>
     <!--header end-->
-</head>
-<div class="row align-itens-middle">
-	<div class="d-table w-100" style="height: 100vh">
-		<div class="container mt-5 d-table-cell align-middle">
-			<h1 class="mb-5 text-white">Simulado de Consumo</h1>
-			<h1 class="text-white"><?php echo $this->session->userdata('usuarioSimulado'); ?></h1>
-			<div class="row">
-				<?php 
-					date_default_timezone_set('America/Sao_Paulo');
-					$horas = date('H');
-					$minutos = date('i');
-					$segundos = date('s');
-				?>
-			<h1 class="mb-5 text-white">Atualizado em: <br><?php echo $horas.":".$minutos.":".$segundos;?></h1>	
+<div class="container d-table" style="height: 50vh; margin-top: 25vh">
+	<div class="card bg-dark shadow-lg px-5 py-5 d-table-cell align-middle">
+		<div class="row align-itens-middle">
+			<div class=" mx-auto">
+				<div class="container mt-5">
+					<h1 class="mb-5 text-white">Simulador de Consumo</h1>
+					<h1 class="text-white">Usuário: <span class="text-warning"><?php echo $this->session->userdata('usuarioSimulado'); ?></span></h1>
+					<h1 class="text-white">Total: <span class="text-warning"><?php echo $this->session->userdata('totalSimulador'); ?> kWh</span></h1>
+					<div class="row">
+						<?php 
+							date_default_timezone_set('America/Fortaleza');
+							$horas = date('H');
+							$minutos = date('i');
+							$segundos = date('s');
+						?>
+					<h1 class="mb-5 text-white">Atualizado em: <?php echo $horas.":".$minutos.":".$segundos;?></h1>	
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

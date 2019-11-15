@@ -1,4 +1,4 @@
 function consumir(){
 	window.location.href='Raiz/adicionarConsumo'
 }
-var timer = setInterval(consumir, 3600000);
+var timer = setInterval(consumir, 3600);

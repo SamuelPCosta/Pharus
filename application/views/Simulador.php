@@ -73,6 +73,7 @@
 			margin-bottom: 20px;
 			max-height: 40px;
 		}
+
 	</style>
 </head>
 
@@ -108,10 +109,10 @@
 				}
 				sum(PotênciaHoras);
 				-->
-				<?php $cozinha = array('Geladeira','Computador','Televisão','Microondas','Freezer');
-				$quarto = array();
-				$sala = array();
-				$outros = array();
+				<?php $cozinha = array('Geladeira','Freezer','Exaustor','Liquidificador','Microondas','Fogão Elétrico','Lava-Louça');
+				$quarto = array('Vídeogame','Computador','Impressora','Estabilizador','Ar-Condicionado');
+				$sala = array('Televisão','Ventilador');
+				$outros = array('Lâmpada Fluor.','Lâmpada Incan.','Lavadora','Secador','Ferro Elétrico','Chuveiro Elétrico');
 				$options = "<option value='10'>Potência1</option>
 							<option value='20'>Potência2</option>
 							<option value='30'>Potência3</option>
@@ -123,7 +124,7 @@
 					<?php
 					foreach ($cozinha as $aparelho) {
 						$i=1;
-						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
+						echo "<tr><td style='width:330px;'><h2 class='text-white'>".$aparelho.":</h2></td>
 							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
 							<select name='potencia[]'>".$options."</select></div></td></tr>";
 						$i++;
@@ -136,7 +137,7 @@
 					<?php
 					foreach ($quarto as $aparelho) {
 						$i=1;
-						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
+						echo "<tr><td style='width:330px;'><h2 class='text-white'>".$aparelho.":</h2></td>
 							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
 							<select name='potencia[]'>".$options."</select></div></td></tr>";
 						$i++;
@@ -149,7 +150,7 @@
 					<?php
 					foreach ($sala as $aparelho) {
 						$i=1;
-						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
+						echo "<tr><td style='width:330px;'><h2 class='text-white'>".$aparelho.":</h2></td>
 							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
 							<select name='potencia[]'>".$options."</select></div></td></tr>";
 						$i++;
@@ -162,7 +163,7 @@
 					<?php
 					foreach ($outros as $aparelho) {
 						$i=1;
-						echo "<tr><td><h2 class='text-white'>".$aparelho.":</h2></td>
+						echo "<tr><td style='width:330px;'><h2 class='text-white'>".$aparelho.":</h2></td>
 							<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
 							<select name='potencia[]'>".$options."</select></div></td></tr>";
 						$i++;

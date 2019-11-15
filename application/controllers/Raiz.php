@@ -236,7 +236,7 @@ class Raiz extends CI_Controller {
 		date_default_timezone_set('America/Sao_Paulo');
 		if (isset($_SESSION['consumo'])){
 			//echo date('H');
-			if(date('H')==0){
+			if(date('H')==1){
 				unset($consumoPorHora);
 				unset($_SESSION['consumo']);
 			?>
@@ -284,17 +284,27 @@ class Raiz extends CI_Controller {
 	}
 
 	public function adicionarConsumo(){
-		date_default_timezone_set('America/Sao_Paulo');
+		date_default_timezone_set('America/Fortaleza');
 		$horas = date('H');
 		$simulador = $this->session->userdata('totalSimulador');
 		$usuario = $this->session->userdata('contaContratoSimulador');
 		$this->load->model("Consumo_model");
 		$previo = $this->Consumo_model->SelecionarConsumo($usuario);
 		$qtd_consumida = $simulador/(24);
-		//$margem = rand(-1,2);
-		$qtd_consumida=$qtd_consumida+$previo;
+		$margem=0; 
+		if ($horas>9 && $horas<22) {
+			$porcentagem = rand(2,20);
+			$margem = ($qtd_consumida/100)*$porcentagem;
+		}else{
+			$porcentagem = rand(2,20);
+			$margem = -($qtd_consumida/100)*$porcentagem;
+		}
+		//$margem = rand($margem1,$margem2);
+		$qtd_consumida=$qtd_consumida+$margem+$previo;
 		$this->load->model("Admin_model");
 		$this->Admin_model->adicionarConsumo($usuario, $qtd_consumida);
+		// $novoTotal = $simulador-$qtd_consumida+$previo;
+		// $this->session->set_userdata('totalSimulador', $novoTotal);
 		$this->monitorarConsumo();
 		redirect('simuladorAtualizar');
 	}

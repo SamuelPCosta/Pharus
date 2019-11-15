@@ -77,7 +77,7 @@ var ctx = document.getElementById("bar-chart").getContext("2d");
 var myBarChart = new Chart(ctx,{
     type: 'bar',
     data:{
-        labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
+        labels: ["Julho", "Agosto", "Setembro", "Outubro"],
         datasets: [{
             label: "Consumo",
             data: [25, 59, 40, 41],
