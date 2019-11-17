@@ -1,4 +1,3 @@
- 
  <!--Footer -->
 <footer class="page-footer font-small position-relative shadow">
   <!-- Footer Links -->

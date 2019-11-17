@@ -62,7 +62,23 @@ class Admin extends CI_Controller {
 		}
 	}
 
-
+	public function adicionarDica(){
+		$tipo = $this->input->post("tipo");
+		if ($tipo=='a') {
+			$dica='dica_a';
+		}elseif ($tipo=='b') {
+			$dica='dica_b';
+		}else{
+			$dica='dica_c';
+		}
+		$dicas = array(
+			$dica => $this->input->post("dica")
+		);
+		$this->load->model("Admin_model");
+		$consumo=$this->Admin_model->inserirDica($dicas);	
+		redirect('admin');	
+	}
+	
 	public function zerarArray(){
 		unset($consumoPorHora);
 		unset($_SESSION['consumo']);
@@ -99,6 +115,16 @@ class Admin extends CI_Controller {
 		redirect('simulador-de-consumo');
 	}
 
+	public function editarBandeira(){
+		$bandeira=$this->input->post("bandeira");
+		$usuario=$this->input->post("usuario");
+		$this->load->model("Operacoes");
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
+		$this->load->model("Admin_model");
+		$this->Admin_model->editarBandeira($contaContrato, $bandeira);
+		redirect('admin');
+	}
+	
 	public function monitor(){
 		$this->load->view('Admin/monitor');
 	}

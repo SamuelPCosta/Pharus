@@ -466,11 +466,11 @@
                         </div>   
                     </div>
 
-
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                     <button type="submit" class="btn btn-success">Salvar mudanças</button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -478,15 +478,15 @@
               <!-- /col-md-4-->
               <div class="col-lg-4 col-md-12 mb">
                 <!-- LISTAR ADMINISTRADORES -->
-                <a href="#" data-toggle="modal" data-target="#removerAdmin"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
+                <a href="#" data-toggle="modal" data-target="#listaradmins"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
                   <i class="fas fa-users fa-4x"></i>
                   <h2 style="color:#fff;">Listar todos os<br> adminis<wbr>tradores</h2>
                 </div></a>
               </div>
               <!-- /col-md-4 -->
                             <!-- Modal -->
-              <div class="modal fade" id="removerAdmin" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal fade" id="listaradmins" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+              <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h6 class="modal-title" id="TituloModalCentralizado">Editar administradores já cadastrados</h6>
@@ -537,6 +537,59 @@
                 </div>
               </div>
               </div>
+
+              <!-- /col-md-4-->
+              <div class="col-lg-4 col-md-12 mb">
+                <!-- LISTAR ADMINISTRADORES -->
+                <a href="#" data-toggle="modal" data-target="#exampleModal"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
+                  <i class="fas fa-flag fa-4x"></i>
+                  <h2 style="color:#fff;">Editar<br>Bandeira</h2>
+                </div></a>
+              </div>
+              <!-- /col-md-4 -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nova mensagem</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body text-dark">
+                    <div class="d-flex justify-content-center form_container w-100">
+                      <form method="post" action="Admin/editarBandeira" class="w-100">
+                        <table class="table table-striped table-hover w-100">
+                          <tr>
+                            <td>Usuário: </td>
+                            <td>Bandeira: </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="text" name="usuario" required>
+                            </td>
+                            <td>
+                              <select name="bandeira">
+                                <option value="1" style="background-color: rgba(0,255,0,0.5);">Verde</option>
+                                <option value="2" style="background-color: rgba(255,255,0,0.5);">Amarela</option>
+                                <option value="3" style="background-color: rgba(255,0,0,0.5);">Vermelha</option>
+                              </select>
+                            </td>
+                          </tr>
+                        </table>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <!-- /col-md-4-->
+            </div>
+
                <!--<div class="col-lg-4 col-md-12 mb">
                 REVENUE PANEL -->
                 <!-- GRAFICO PIE DONUT WHEEL CHART div class="darkblue-panel pn">
@@ -565,18 +618,8 @@
                       <h5>60% Used</h5>
                     </div>
                   </footer>
-                </div> -->
-
-                <div class="col-lg-4 col-md-12 mb">
-                <!-- LISTAR ADMINISTRADORES -->
-                <a href="#" data-toggle="modal" data-target="#removerAdmin"><div class="new-user-panel pn"> <!--Link pra cadastrar novo usuario-->
-                  <i class="fas fa-flag fa-4x"></i>
-                  <h2 style="color:#fff;">Bandeira <br>de energia</h2>
-                </div></a>
-
-              </div>
+                </div> -->     
               <!-- /col-md-4 -->
-            </div>
             <!-- /row -->
             <div class="row">
               <!-- DIRECT MESSAGE PANEL -->
@@ -628,19 +671,19 @@
                     <h3 class="text-white text-left ml-5 text-dark">Inserir Novas Dicas</h3>
                   </div>
                   <div class="mx-auto" style="margin-top: -14px">
-                    <input type="radio" name="tipo" id="a" style="display: none;">
+                  <form class="w-100" method="post" action="Admin/adicionarDica">
+                    <input type="radio" name="tipo" value="a" id="a" style="display: none;">
                     <button class="btn btn-dark col-4"><label for="a" class="text-white pt-3">Dica Pequena</label></button>
-                    <input type="radio" name="tipo" id="b" style="display: none;">
+                    <input type="radio" name="tipo" value="b" id="b" style="display: none;">
                     <button class="btn btn-dark col-4" style=" margin:-2px;"><label for="b" class="text-white pt-3">Dica Média</label></button>
-                    <input type="radio" name="tipo" id="c" style="display: none;">
+                    <input type="radio" name="tipo" value="c" id="c" style="display: none;">
                     <button class="btn btn-dark col-4" style=" margin:-2px;"><label for="c" class="text-white pt-3">Dica Grande</label></button>
                   </div>
                   <div style="height: 3px" class="bg-warning"></div>
                   <div class="row mx-auto px-5 py-5">
-                  <form class="w-100">
-                  <textarea style="width: 100%; height: 300px; border: none; font-size: 14px;outline: 0" class="bg-dark" placeholder="Escreva aqui novas dicas para serem ionseridas no banco de dados, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."></textarea>
+                  <textarea style="width: 100%; height: 300px; border: none; font-size: 14px;outline: 0" class="bg-dark" placeholder="Escreva aqui novas dicas para serem ionseridas no banco de dados, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." name="dica" required></textarea>
                   </div>
-                  <button class="rounded-circle btn btn-warning float-right mr-4 text-dark" type="submit" style=" height: 42px; transform: translateY(-45px);">Ok</button>
+                  <button type="submit" class="rounded-circle btn btn-warning float-right mr-4 text-dark" type="submit" style=" height: 42px; transform: translateY(-45px);">Ok</button>
                   </form>
                 </div>
                 <!-- /Message Panel-->

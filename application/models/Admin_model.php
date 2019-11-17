@@ -35,4 +35,14 @@ class Admin_model extends CI_Model {
 		$this->db->where('usuario', $usuario);  
 		$this->db->update('consumo');
 	}
+
+	public function editarBandeira($usuario, $bandeira){
+		$this->db->set('bandeira', $bandeira);
+		$this->db->where('usuario', $usuario);  
+		$this->db->update('consumo');
+	}
+
+	public function inserirDica($dicas){
+		$this->db->insert("dicas", $dicas);
+	}
 }

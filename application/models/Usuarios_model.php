@@ -20,7 +20,7 @@ class Usuarios_model extends CI_Model {
 
 	public function logarUsuarios($usuario,$senha){
 		$this->db->where("usuario", $usuario); 
-		$this->db->where("senha", $senha);
+		$this->db->where("senha", md5($senha));
 		$login = $this->db->get("usuario")->row_array();
 		return $login;
 	}
@@ -42,13 +42,13 @@ class Usuarios_model extends CI_Model {
 
 	public function senhaAtual($usuario,$senha_atual){
 		$this->db->where("usuario", $usuario); 
-		$this->db->where("senha", $senha_atual);
+		$this->db->where("senha", md5($senha_atual));
 		$senha = $this->db->get("usuario")->row_array();
 		return $senha;
 	}
 
 	public function atualizarSenha($usuario,$nova_senha){
-		$this->db->set('senha', $nova_senha);
+		$this->db->set('senha', md5($nova_senha));
 		$this->db->where('usuario', $usuario);
 		$this->db->update('usuario');
 	}

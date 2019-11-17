@@ -33,4 +33,12 @@ class Operacoes extends CI_Model {
 		$tarifa_kwh = $query->row()->tarifa_kwh;
 		return $tarifa_kwh;
 	}
+
+	public function bandeira($usuario){
+		$this->db->select('bandeira');
+		$this->db->where('usuario', $usuario); //Onde o usuário for igual ao nome de usuário q está logado
+		$query = $this->db->get('consumo');
+		$bandeira = $query->row()->bandeira;
+		return $bandeira;
+	}
 }

@@ -10,7 +10,7 @@ class Raiz extends CI_Controller {
 			$this->load->model("Consumo_model");
 			$consumo['meta'] = $this->Consumo_model->SelecionarMeta($contaContrato);
 			if($consumo['meta']!=0){
-				$valor_tarifa = 0.7; //Atualizar com base na tarifa local
+				//$valor_tarifa = 0.7; //Atualizar com base na tarifa local
 				date_default_timezone_set('America/Sao_Paulo'); 
 				if(date('m')==2){
 					$qtd_dias=28;

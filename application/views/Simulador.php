@@ -172,11 +172,11 @@
 					</table>
 				</div>	
 		</div>
-		<input type="text" name="usuario" class="btn login_btn bg-light mx-auto d-block w-25" placeholder="Informe o usuario" style="text-transform: capitalize;">
+		<input type="text" name="usuario" class="btn login_btn bg-light mx-auto d-block w-25" placeholder="Informe o usuario" style="text-transform: capitalize;" required>
 		<button type="submit" name="button" class="btn login_btn bg-warning mx-auto d-block w-25 mt-1">Consumir</button>
 		</form>
 		<form method="post" action="Admin/zerar">
-			<input type="text" name="usuario" class="btn login_btn bg-light mx-auto d-block w-25" placeholder="Informe o usuario" style="text-transform: capitalize;">
+			<input type="text" name="usuario" class="btn login_btn bg-light mx-auto d-block w-25" placeholder="Informe o usuario" style="text-transform: capitalize;" required>
 			<button type="submit" class="btn login_btn bg-danger text-white mx-auto d-block w-25 mt-1">Zerar</button>
 		</form>
 </body>
