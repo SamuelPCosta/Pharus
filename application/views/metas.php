@@ -121,8 +121,7 @@
             <div class="container-fluid card coluna-meta-back card-theme"></div>
         </div>
         <!--conteudo-->
-		</div>
-</div>
+
 	<?php 
 		if (isset($_SESSION['notificacao'])) {
 	?>

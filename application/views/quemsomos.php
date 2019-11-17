@@ -67,12 +67,8 @@
 					</div><!-- /.col-lg-4 -->
 				</div><!-- /.row -->
             </div>
-            </div>
         </div>
         <!--conteudo-->
-		</div>
-</div>
-
 
 	<!-- Footer -->
 	<footer class="page-footer font-small position-relative shadow">

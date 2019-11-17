@@ -85,9 +85,6 @@
             </div>
         </div>
         <!--conteudo-->
-		</div>
-</div>
-
 	<?php 
 		if (isset($_GET['questao']) && $_GET['questao']>=2) {
 	?>

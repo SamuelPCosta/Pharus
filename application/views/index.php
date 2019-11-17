@@ -96,8 +96,6 @@
 			</div>
 		</div>
 		<!--conteudo-->
-	</div>
-</div>
 
 	<!--Demais scripts-->
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script><!--Importação do Ajax...-->
