@@ -85,6 +85,7 @@
     <header class="header black-bg position-fixed" style="top:0;">
       <!--logo start-->
       <a href="admin" class="logo"><b><span>P</span>harus</b></a>
+      <a href="admin/zerar2/<?php echo $this->session->userdata('usuarioSimulado'); ?>" class="logo ml-3 btn btn-warning text-dark mt-3" style="font-size: 1em">Zerar</a>
       <!--logo end-->
       <div class="top-menu ">
         <ul class="nav pull-right top-menu mt-3">
@@ -100,7 +101,8 @@
 				<div class="container mt-5">
 					<h1 class="mb-5 text-white">Simulador de Consumo</h1>
 					<h1 class="text-white">Usuário: <span class="text-warning"><?php echo $this->session->userdata('usuarioSimulado'); ?></span></h1>
-					<h1 class="text-white">Total: <span class="text-warning"><?php echo $this->session->userdata('totalSimulador'); ?> kWh</span></h1>
+					<h1 class="text-white">Total: <span class="text-warning"><?php echo $this->session->userdata('totalSimulador');?> kWh</span></h1>
+					<h1 class="text-white">Restante: <span class="text-warning"><?php echo $this->session->userdata('totalInserir');?> kWh</span></h1>
 					<div class="row">
 						<?php 
 							date_default_timezone_set('America/Fortaleza');
@@ -108,7 +110,7 @@
 							$minutos = date('i');
 							$segundos = date('s');
 						?>
-					<h1 class="mb-5 text-white">Atualizado em: <?php echo $horas.":".$minutos.":".$segundos;?></h1>	
+					<h1 class="mb-5 text-white">Atualizado em: <span class="text-warning"><?php echo $horas.":".$minutos.":".$segundos;?></span></h1>	
 					</div>
 				</div>
 			</div>

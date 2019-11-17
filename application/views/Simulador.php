@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Pharus | Admin</title>
+  <title>Pharus | Simulador</title>
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="<?= base_url()?>assets/img/favicon.png"/> 
@@ -113,11 +113,11 @@
 				$quarto = array('Vídeogame','Computador','Impressora','Estabilizador','Ar-Condicionado');
 				$sala = array('Televisão','Ventilador');
 				$outros = array('Lâmpada Fluor.','Lâmpada Incan.','Lavadora','Secador','Ferro Elétrico','Chuveiro Elétrico');
-				$options = "<option value='10'>Potência1</option>
-							<option value='20'>Potência2</option>
-							<option value='30'>Potência3</option>
-							<option value='40'>Potência4</option>
-							<option value='50'>Potência5</option>" 
+				$options = "<option value='15'>Potência1</option>
+							<option value='50'>Potência2</option>
+							<option value='100'>Potência3</option>
+							<option value='200'>Potência4</option>
+							<option value='300'>Potência5</option>" 
 				?>
 				<div class="col-lg-6 col-sm-12" id="cozinha">
 					<table>					

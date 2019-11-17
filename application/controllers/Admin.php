@@ -90,6 +90,15 @@ class Admin extends CI_Controller {
 		redirect('simulador-de-consumo');
 	}
 
+	public function zerar2($usuario){
+		$this->load->model("Operacoes");
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
+		$this->load->model("Admin_model");
+		$this->Admin_model->zerar($contaContrato);
+		$this->zerarArray();
+		redirect('simulador-de-consumo');
+	}
+
 	public function monitor(){
 		$this->load->view('Admin/monitor');
 	}

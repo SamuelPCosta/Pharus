@@ -262,6 +262,7 @@ class Raiz extends CI_Controller {
 				$consumoPrevio=array_sum($consumoPorHora);
 				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
 				$consumo=$consumo-$consumoPrevio;
+				$consumo=number_format($consumo,3);
 				array_push($consumoPorHora, $consumo);
 				$this->session->set_userdata('consumo', $consumoPorHora);
 				//print_r($consumoPorHora); conferir adição de valores 
@@ -290,8 +291,7 @@ class Raiz extends CI_Controller {
 		$usuario = $this->session->userdata('contaContratoSimulador');
 		$this->load->model("Consumo_model");
 		$previo = $this->Consumo_model->SelecionarConsumo($usuario);
-		$qtd_consumida = $simulador/(24);
-		$margem=0; 
+		$qtd_consumida = $simulador/24;
 		if ($horas>9 && $horas<22) {
 			$porcentagem = rand(2,20);
 			$margem = ($qtd_consumida/100)*$porcentagem;
@@ -299,12 +299,16 @@ class Raiz extends CI_Controller {
 			$porcentagem = rand(2,20);
 			$margem = -($qtd_consumida/100)*$porcentagem;
 		}
-		//$margem = rand($margem1,$margem2);
-		$qtd_consumida=$qtd_consumida+$margem+$previo;
+		$TotalInserir=$qtd_consumida+$margem+$previo;
+		if (($qtd_consumida+$margem+$previo)>$simulador) {
+			$TotalInserir=$simulador;
+		}
 		$this->load->model("Admin_model");
-		$this->Admin_model->adicionarConsumo($usuario, $qtd_consumida);
-		// $novoTotal = $simulador-$qtd_consumida+$previo;
-		// $this->session->set_userdata('totalSimulador', $novoTotal);
+		$this->Admin_model->adicionarConsumo($usuario, $TotalInserir);
+		$this->load->model("Consumo_model");
+		$previo = $this->Consumo_model->SelecionarConsumo($usuario);
+		$this->session->set_userdata('totalInserir', ($simulador-$previo));
+		//$novoTotal = $simulador-$TotalInserir;
 		$this->monitorarConsumo();
 		redirect('simuladorAtualizar');
 	}

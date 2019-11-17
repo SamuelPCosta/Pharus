@@ -45,6 +45,12 @@ window.onload = function(){
   document.getElementById(questao).classList.add("active");
 }
 
+/*###########Tip###########*/
+$("#hide").click(function(e) {
+  e.preventDefault();
+    document.getElementById("alerta-dica-chart").style.display = "none";
+});
+
 /*###########Foto User###########*/
 const usuario = localStorage.getItem('Usuario')
 const fotoStorage = localStorage.getItem(usuario)

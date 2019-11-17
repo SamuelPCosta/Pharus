@@ -1,7 +1,7 @@
 /* Gráfico de linha */
 data=new Date();
-var hora = data.getHours(); 
-var numeros = new Array();
+var hora = data.getHours()+2; 
+var numeros = new Array(24);
 for(var h=0; h <= hora; h++){//Passando o limite como uma variável com o numero de horas 
     numeros[h] = h;
 }
