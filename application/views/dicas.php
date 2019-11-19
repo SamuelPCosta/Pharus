@@ -30,8 +30,8 @@
 			      	</div>
 			    </div>
 			    <div class="col-xl col-12 colunas">
-			      	<div class="c card-theme theme card shadow-sm">
-			      		<p>
+			      	<div class="c card-theme theme card shadow-sm" style="background-image: url(<?= base_url()?>assets/img/dicas.png);background-size: 50%; background-repeat: no-repeat;background-position-y: 100%;background-position-x: 100%;">
+			      		<p style="margin: 25px auto"> 
 			      			<?php echo $dica6; ?>
 			      		</p>
 			      	</div>

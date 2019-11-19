@@ -114,7 +114,7 @@
             			<p class="texto-corrido">&emsp;&emsp;O consumo de energia elétrica vem aumentando cada vem mais e isso traz uma série de problemas para o nosso ecossistema, pois no processo de produção dessa corrente elétrica há uma série de fatores prejudiciais, como é o caso da construção de hidrelétricas (representa mais de 90% de nossos recursos energéticos) que contribuem para o desmatamento, areamento do solo ou mesmo na extinção de espécies de animais, além da energia elétrica, eólica e dentre outros. Sendo assim, deve-se evitar esse consumo desenfreado, logo, visando o bem estar social e ambiental.</p>
             		</div>
             		<div class="col-xl-4 col-lg-8 col-md-12 mx-auto colunas-meta d-table-cell align-center">
-            			<img src="<?= base_url()?>assets/img/user_man.png" class="py-3" width=100% >
+            			<img src="<?= base_url()?>assets/img/interruptor.png" class="py-3" width=100% >
             		</div>
             	</div>
             </div>

@@ -16,7 +16,7 @@
 							}else{
 								?>
 								<div class="card py-5 px-0 shadow card-theme theme mx-auto mb-5 d-table anime" id="card-home">
-									<img src="<?= base_url()?>assets/img/user_man.png" class="py-3 mx-auto d-table-cell align-middle" width=80%>
+									<img src="<?= base_url()?>assets/img/calendario.png" class="py-3 mx-auto d-table-cell align-middle" width=80%>
 								</div><!--Usuário ainda n definiu uma meta para ele, logo não temos gráfico-->
 							<?php
 							}
@@ -90,7 +90,7 @@
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-12 last-container py-5 text-center d-table">
-						<i class="fas fa-lightbulb align-middle d-table-cell animeRight"></i>
+						<img src="<?= base_url()?>assets/img/lampada.png" class="py-3 animeRight" height=100% >
 					</div>
 				</div>
 			</div>

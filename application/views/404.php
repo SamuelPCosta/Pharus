@@ -24,7 +24,7 @@
                 <div class="card bg-dark py-5 px-5 my-4 shadow card-theme w-75 mx-auto">
                     <div class="row align-items-center">
                     <div class="col-xl-4 col-lg-8 col-md-12 mx-auto colunas-meta d-table-cell align-center">
-                        <img src="<?= base_url()?>assets/img/user_man.png" class="py-3 rounded-circle" width=100% >
+                        <img src="<?= base_url()?>assets/img/tomada.png" class="py-3 rounded-circle" width=100% >
                     </div>
                 </div>
                     <div class="row align-items-center">
