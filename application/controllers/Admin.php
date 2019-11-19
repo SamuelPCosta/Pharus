@@ -35,14 +35,14 @@ class Admin extends CI_Controller {
 			'usuario' => $this->input->post("usuario"),
 			'nome' => $this->input->post("nome"),
 			'email' => $this->input->post("email"),
-			'senha' => $this->input->post("senha"),
+			'senha' => md5($this->input->post("senha")),
 			'admin' => $admin
 		);
 
 		$usuario = $dados['usuario'];
 		$senha = $dados['senha']; //Define a variavel senha
 		$ncaracteres = strlen($senha); //Função que conta o número de caracteres de uma variavel
-		$confirmar_senha = $this->input->post("confirmar_senha"); 
+		$confirmar_senha = md5($this->input->post("confirmar_senha")); 
 		//Define a variavel senha, ela não faz parte do nosso vetor, pois serve apenas para verificação e não vai para o Banco de Dados
 		if ($ncaracteres>=8) { //Se a senha do usuario for maior ou igual a 8 caracteres podemos prosseguir
 			if ($senha===$confirmar_senha) {

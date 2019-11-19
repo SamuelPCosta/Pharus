@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin_model extends CI_Model {
 	public function logarAdmin($usuario,$senha){
 		$this->db->where("usuario", $usuario); 
-		$this->db->where("senha", $senha);
+		$this->db->where("senha", md5($senha));
 		$this->db->where("admin", 1);
 		$loginAdmin = $this->db->get("admin")->row_array();
 		return $loginAdmin;
