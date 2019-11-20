@@ -59,8 +59,8 @@ REFERENCES usuario (conta_contrato);
 -- -----------------------------------------------------
 CREATE TABLE `pharus`.`consumo_mensal` (
   `usuario` INT(10) UNSIGNED NOT NULL,
-  `kw_h` FLOAT UNSIGNED NOT NULL,
-  `gasto` FLOAT UNSIGNED NOT NULL,
+  `kw_h_total` FLOAT UNSIGNED NOT NULL,
+  `gasto_total` FLOAT UNSIGNED NOT NULL,
   `intervalo_tempo` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`usuario`)
 )
@@ -69,7 +69,7 @@ ENGINE = InnoDB;
 ALTER TABLE pharus.consumo_mensal 
 ADD CONSTRAINT fk_consumo_mensal
 FOREIGN KEY (usuario)
-REFERENCES usuario (conta_contrato);
+REFERENCES consumo (usuario);
 
 -- -----------------------------------------------------
 -- Table meta --
@@ -166,50 +166,3 @@ VALUES ('Troque lâmpadas incandescente por lâmpadas de LED.',
 Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
-
-
-CREATE VIEW view_usuario AS  /*View da table usuario*/
-SELECT usuario, nome, conta_contrato, email, MD5(senha)
-FROM pharus.usuario;
-
-DELIMITER $ 
-	CREATE FUNCTION nome_bandeira (bandeira INT (1))
-	RETURNS VARCHAR (10)
-
-	READS SQL DATA
-	DETERMINISTIC
-
-	BEGIN
-		IF bandeira = '1' THEN
-			RETURN "Verde";
-		ELSEIF bandeira = '2' THEN
-			RETURN "Amarela";
-		ELSEIF bandeira = '3' THEN
-			RETURN "Vermelha";
-		END IF;
-	END
-$
-
-DELIMITER ;
-DELIMITER $
- CREATE PROCEDURE procedimento()
- BEGIN
-	CREATE VIEW view_consumo AS  
-	SELECT usuario, bandeira, kw_h, intervalo_tempo
-	FROM consumo;
-    
-    CREATE VIEW view_meta AS
-	SELECT usuario, meta, kw_h, gasto
-	FROM meta;
-    
-    CREATE VIEW view_dicas AS 
-    SELECT id_dicas, dica_a, dica_b, dica_c 
-	FROM dicas; 
-	 
- END
- $
-DELIMITER ;
-#Chamando o procedimento
-CALL procedimento();
-
-SELECT * FROM view_usuario;

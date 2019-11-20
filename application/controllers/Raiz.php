@@ -14,6 +14,10 @@ class Raiz extends CI_Controller {
 				date_default_timezone_set('America/Sao_Paulo'); 
 				if(date('m')==2){
 					$qtd_dias=28;
+					$ano = date('Y');
+					if (($ano/4)==0 && ($ano/100)!=0) {//Conferir se o ano e bissexto
+						$qtd_dias=29;
+					}
 				}elseif(date('m')==4 || date('m')==6 || date('m')==9 || date('m')==11){
 					$qtd_dias=30;
 				}else{
@@ -25,9 +29,12 @@ class Raiz extends CI_Controller {
 				$porcentagem = $consumo['gasto'];
 				$this->load->helper('cookie');
 				if ($porcentagem>=100) {
-					$this->session->set_userdata('mensagem', "Baixa esse consumo aí fion.");
+					$this->session->set_userdata('mensagem', "Você precisa melhorar seu consumo!");
 				}else{
-					$this->session->set_userdata('mensagem', "Tá top o consumo.");
+					$this->session->set_userdata('mensagem', "Seu consumo está ótimo!");
+				}
+				if (date('d')==1) {
+					$this->conferirMeta($contaContrato);
 				}
 				//set_cookie('mensagem_meta', $mensagem, (86400));		
 			}
@@ -68,6 +75,19 @@ class Raiz extends CI_Controller {
 			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
+		}
+	}
+
+	public function conferirMeta($contaContrato){
+		$this->load->model("Consumo_model");
+		$metaTotal = $this->Consumo_model->SelecionarMeta($contaContrato);
+		$consumoTotal = $this->Consumo_model->SelecionarConsumoTotal($contaContrato);
+		if ($metaTotal>=$consumoTotal) {
+			$this->session->set_userdata('conferirMeta','cumpriu');
+			$this->session->set_userdata('mensagem', "Parabéns por cumprir a meta!");
+		}else{
+			$this->session->set_userdata('conferirMeta','não cumpriu');
+			$this->session->set_userdata('mensagem', "Boa sorte nesse mês!");
 		}
 	}
 

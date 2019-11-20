@@ -14,6 +14,7 @@ class Usuarios_model extends CI_Model {
 				$this->db->insert("usuario", $dados);//Insere os dados na tabela usuario
 				$this->db->insert("consumo", $usuario);
 				$this->db->insert("meta", $usuario);
+				$this->db->insert("consumo_mensal", $usuario);
 			}
 		}
 	}

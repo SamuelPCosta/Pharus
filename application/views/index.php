@@ -1,3 +1,10 @@
+			<?php 
+				if (isset($_SESSION['conferirMeta'])) {
+			?>
+				<div class='alert alert-danger bg-warning border-0 float-left py-3' id="alerta-dica-chart" role='alert' style="width: 100%!important">Hoje é dia primeiro! E você <span style="font-weight:bold;"><?php echo $this->session->userdata('conferirMeta'); ?></span> sua meta! <a href="metas" class="text-dark">Clique aqui para mais detalhes.</a></div>
+			<?php
+				}
+			?>
 			<div class="container first-container">
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-lg-12">

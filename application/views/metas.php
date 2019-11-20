@@ -5,21 +5,38 @@
 	     			<?php 
 	     			//$meta=0;
 	     			$meta = $this->session->userdata('meta');
-	     				if ($meta==0) {
-	     					echo("Defina sua <br> meta mensal.");
+	     				if (isset($_SESSION['conferirMeta'])) {
+	     					$conferirMeta = $this->session->userdata('conferirMeta');
+	     					if ($conferirMeta=="cumpriu") {
+	     						echo("Você conseuiu! Meta cumprida!");
+	     					}else{
+	     						echo("Ops... Não foi <br>dessa vez.");
+	     					}
 	     				}else{
-	     					echo("<span style='font-family: Open Sans !important; font-weight:lighter;'>Sua meta é: <br>".$meta." reais.</span>");
+		     				if ($meta==0) {
+		     					echo("Defina sua <br> meta mensal.");
+		     				}else{
+		     					echo("<span style='font-family: Open Sans !important; font-weight:lighter;'>Sua meta é: <br>".$meta." reais.</span>");
+		     				}
 	     				}
 	     			?>
 	     			</h2>
 	     			<!--Taca PHP--><br>
 	     			<p class="instrucoes theme">
 	     			<?php 
-	     				if ($meta==0) {
-	     					echo("Você ainda não tem uma meta de consumo até o final do mês. Para definir uma meta, preencha o campo ao lado com o valor e clique em <span class='font-italic'>'Salvar Meta'</span>.");
+	     				if (isset($_SESSION['conferirMeta'])) {
+	     					if ($conferirMeta=="cumpriu") {
+	     						echo("Uma vitória! Seu bolso e o meio ambiente agradecem seu esforço. Sua meta era ".$meta.", o que equivale a X kWh, você consumiu em torno de Y kWh e sua conta deve vir em torno de A00 reais.");
+	     					}else{
+	     						echo("Esse mês você não conseguiu alcançar seu objetivo. Sua meta era ".$meta.", o que equivale a X kWh, mas você consumiu em torno de Y kWh e sua conta deve vir em torno de A00 reais. Por que você acredita não ter conseguido?");
+	     					}
 	     				}else{
-	     					echo("Você deve gastar menos que isto até o final do mês. Para alterar esse valor clique em <span class='font-italic'>'Editar Meta'</span> ao lado.");
-	     				}
+		     				if ($meta==0) {
+		     					echo("Você ainda não tem uma meta de consumo até o final do mês. Para definir uma meta, preencha o campo ao lado com o valor e clique em <span class='font-italic'>'Salvar Meta'</span>.");
+		     				}else{
+		     					echo("Você deve gastar menos que isto até o final do mês. Para alterar esse valor clique em <span class='font-italic'>'Editar Meta'</span> ao lado.");
+		     				}
+		     			}
 	     			?>	
 	     			</p>
 	     			<?php  

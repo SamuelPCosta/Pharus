@@ -17,4 +17,12 @@ class Consumo_model extends CI_Model {
     	$consumo = $query->row()->kw_h; //Pega a consulta
 		return $consumo; //retorna o consumo
 	}
+	
+	public function SelecionarConsumoTotal($contaContrato){ //Selecionar o consumo até o momento
+		$this->db->select('kw_h_total'); //Seleciona o consumo
+		$this->db->where('usuario', $contaContrato);
+    	$query = $this->db->get('consumoTotal');
+    	$consumoTotal = $query->row()->kw_h_total; //Pega a consulta
+		return $consumoTotal; //retorna o consumo
+	}
 }

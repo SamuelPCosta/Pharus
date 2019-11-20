@@ -19,7 +19,7 @@ class Cadastro extends CI_Controller {
 			'tarifa_kwh' => $tarifa_kwh
 		);
 
-		//Próximo array serve para povoar table consumo e metas
+		//Próximo array serve para povoar table consumo, consumo_mensal e metas
 		$usuario = array('usuario' => $this->input->post("conta_contrato"));
 
 		$senha = $dados['senha']; //Define a variavel senha

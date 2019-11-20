@@ -110,7 +110,7 @@
 			                  	<p class="text-justify">Já a tarifa de energia é o valor cobrado em reais a cada kWh de energia consumida. Este vaor está diretamente relacionado ao preço da sua conta ao final do mês. Essa taxa pode variar de cidade para cidade, ou até mesmo de bairro para bairro. Então, se você puder informar a tarifa de energia você terá uma maior precisão do controle dos seus gastos mensais. Esse valor encontra-se impresso XXX</p>
 			                  </div>
 			                  <div class="modal-footer">
-			                    <button type="button" class="btn btn-warning text-dark">Ok</button>
+			                    <button type="button" class="btn btn-warning text-dark" data-dismiss="modal">Ok</button>
 			                  </div>
 			                </div>
 			              </div>
