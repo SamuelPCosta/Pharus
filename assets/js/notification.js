@@ -26,7 +26,7 @@ function notifyMe(icon, title, mensagem, link){
 
 	var icon = 'http://localhost/pharus/assets/img/logo.png';
 	var title = 'O seu consumo hoje ultrapssou o limite!';
-	var mensagem = 'Lorem ipsum dolor sit amet, consectetur.';
+	var mensagem = 'Clique aqui para mais informações.';
 	var link = 'http://localhost/pharus/';
 
 	var timer = setInterval(function() {

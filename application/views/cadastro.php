@@ -94,7 +94,7 @@
 							</div>
 							<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney" value="" placeholder="Tarifa por kWh"  min="0.10" max="3.00" step="0.01">
 						</div>			
-						<a href="login" class="ml-2 float-right" data-toggle="modal" data-target="#saibamais">Entenda melhor</a>
+						<a href="login" class="ml-2 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2"></i>Entenda melhor</a>
 
 						<!-- ###modal### -->
 						 <div class="modal fade" id="saibamais" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -125,7 +125,7 @@
 				</form>
 				<div class="mt-1">
 					<div class="d-flex justify-content-center links">
-						Já tem cadastro? <a href="login" class="ml-2">Entrar</a>
+						Já tem cadastro? <a href="login" class="ml-2">Faça login</a>
 					</div>
 				</div>
 			</div>

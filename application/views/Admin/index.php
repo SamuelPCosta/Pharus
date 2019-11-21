@@ -570,9 +570,9 @@
                             </td>
                             <td>
                               <select name="bandeira">
-                                <option value="1" style="background-color: rgba(0,255,0,0.5);">Verde</option>
-                                <option value="2" style="background-color: rgba(255,255,0,0.5);">Amarela</option>
-                                <option value="3" style="background-color: rgba(255,0,0,0.5);">Vermelha</option>
+                                <option value="0" style="background-color: rgba(0,255,0,0.5);">Verde</option>
+                                <option value="0.015" style="background-color: rgba(255,255,0,0.5);">Amarela</option>
+                                <option value="0.040" style="background-color: rgba(255,0,0,0.5);">Vermelha</option>
                               </select>
                             </td>
                           </tr>

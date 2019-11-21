@@ -108,62 +108,50 @@ VALUES ('Samuel98', 'Samuel Soares Pereira Costa', 'ssoares981@gmail.com', '7cbd
 -- POVOAMENTO DE DICAS
 INSERT INTO pharus.dicas (dica_a, dica_b, dica_c) 
 VALUES ('Apague a luz sempre que sair de um cômodo!', 
-'Preste atenção na sua geladeira!
-Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+'Utilize mais a luz natural e para isso você pode optar por pintar os ambientes de sua casa com cores claras, pois isto fará com que a luz reflita no espaço e o ambiente seja mais facilmente iluminado. Além disso, ambientes com cores claras podem ser iluminados com lâmpadas mais econômicas, diminuindo de maneira relevante o seu consumo de energia.',
  'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
 VALUES ('Na lavadora de roupas procure a opção “lavagem rápida” caso haja poucas peças.', 
-'Preste atenção na sua geladeira!
-Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
- 'Utilize menos a sua máquina de lavar!
+'Tire da tomada os aparelhos que não estão sendo usados, o aumento do uso de aparelhos eletrônicos vêm adicionando mais energia a ser paga em nossa conta. Isso acontece especialmente pelo fato de eles ficarem ligados sem necessidade quando estão fora de uso. Mantê-los em stand-by, por exemplo, pode significar um aumento de até 12% no consumo de energia.
+', 'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
 VALUES ('Mantenha o ar condicionado à 23 graus!', 
-'Preste atenção na sua geladeira!
-Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
- 'Utilize menos a sua máquina de lavar!
+'A utilização de aquecimento solar de água é um modo prático de economizar energia. Este tipo de aquecimento proporciona uma economia relevante, pois pode proporcionar gasto zero com a água do banho e evitando o uso de chuveiros elétricos que são, um dos itens que mais consomem energia dentro de uma residência.
+', 'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
 VALUES ('Evite usar o ferro de passar roupas quando muitos aparelhos estão ligados.', 
-'Preste atenção na sua geladeira!
-Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
- 'Utilize menos a sua máquina de lavar!
+'Optem sempre pela compra de aparelhos novos, pois os aparelhos elétricos e eletrodomésticos contribuem significativamente para um maior consumo de energia quando já estão desgastados, pois necessitam de mais força para compensar quaisquer defeitos.
+', 'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
 VALUES ('Comece a passar as roupas pelas peças delicadas, pois elas necessitam de menos
 calor.', 
-'Preste atenção na sua geladeira!
-Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
- 'Utilize menos a sua máquina de lavar!
+'Verifique freqüentemente os itens como a borracha de vedação da geladeira ou filtros de ar-condicionado para que seja feita a limpeza, troca ou manutenção sempre que necessário, pois o mal  funcionamento destes itens implicam no maior consumo de energia.', 'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
 VALUES ('Desligue o monitor do PC sempre que for se ausentar por mais de 5 minutos.', 
-'Preste atenção na sua geladeira!
-Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
- 'Utilize menos a sua máquina de lavar!
+'Desative o bluetooth, wifi ou dados móveis  sempre que não estiver utilizando.  Mesmo fora de alcance do sinal o celular irá continuar buscando uma  conexão de qualidade, essas buscas constantes gera rápida queda no nível de bateria do celular, fazendo você usuário do aparelho pôr para carregar mais vezes que o necessário.    
+', 'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
 VALUES ('Prefira ventiladores de mesa ou coluna à ventiladores de teto.', 
-'Preste atenção na sua geladeira!
-Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
- 'Utilize menos a sua máquina de lavar!
+'Diminua o brilho de tela do seu celular. As telas coloridas usam bastante energia, para evitar o descarregamento rápido opte pela diminuição do brilho. Nas configurações do seu smartphone existe a opção de adaptação automática do brilho, mas para poupar ainda mais energia deixe o brilho no mínimo manualmente, vale também ressaltar o benefício à saúde dos seus olhos com essa simples ação.
+', 'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
 VALUES ('Evite deixar a TV e ou microondas no modo “stand by”.', 
-'Preste atenção na sua geladeira!
-Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
- 'Utilize menos a sua máquina de lavar!
+'Diminua o brilho de tela do seu celular. As telas coloridas usam bastante energia, para evitar o descarregamento rápido opte pela diminuição do brilho. Nas configurações do seu smartphone existe a opção de adaptação automática do brilho, mas para poupar ainda mais energia deixe o brilho no mínimo manualmente, vale também ressaltar o benefício à saúde dos seus olhos com essa simples ação.
+', 'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
 VALUES ('Retire o carregador da tomada quando não estiver em uso.', 
-'Preste atenção na sua geladeira!
-Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
- 'Utilize menos a sua máquina de lavar!
+'Diminua o brilho de tela do seu celular. As telas coloridas usam bastante energia, para evitar o descarregamento rápido opte pela diminuição do brilho. Nas configurações do seu smartphone existe a opção de adaptação automática do brilho, mas para poupar ainda mais energia deixe o brilho no mínimo manualmente, vale também ressaltar o benefício à saúde dos seus olhos com essa simples ação.
+', 'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');
 INSERT INTO dicas (dica_a, dica_b, dica_c) 
 VALUES ('Troque lâmpadas incandescente por lâmpadas de LED.', 
-'Preste atenção na sua geladeira!
-Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
- 'Utilize menos a sua máquina de lavar!
+'', 'Utilize menos a sua máquina de lavar!
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor pariatur.');

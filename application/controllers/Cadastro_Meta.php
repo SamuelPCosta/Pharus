@@ -18,7 +18,7 @@ class Cadastro_Meta extends CI_Controller {
 			$this->load->model("Operacoes");
 			$tarifa = $this->Operacoes->tarifa($usuario);
 			$bandeira = $this->Operacoes->bandeira($contaContrato);
-			$valor_tarifa = $bandeira*$tarifa;
+			$valor_tarifa = $bandeira+$tarifa;
 			$khw = intval($meta/$valor_tarifa);
 			$this->Metas_model->kwh($khw, $contaContrato);
 

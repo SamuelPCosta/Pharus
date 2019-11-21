@@ -129,6 +129,10 @@ $(document).ready(function() {
             animationClass = 'anime-init',
             windowHeight = $(window).height(),
             offset = windowHeight - (windowHeight / 4);
+    var $targetTop = $('.animeTop'),
+            animationClass = 'anime-init',
+            windowHeight = $(window).height(),
+            offset = windowHeight - (windowHeight / 4);
 
     function animeScroll() {
         var documentTop = $(document).scrollTop();
@@ -140,6 +144,13 @@ $(document).ready(function() {
             }
         });
         $targetRight.each(function() {
+            if (documentTop > boxTop(this) - offset) {
+                $(this).addClass(animationClass);
+            } else {
+                $(this).removeClass(animationClass);
+            }
+        });
+        $targetTop.each(function() {
             if (documentTop > boxTop(this) - offset) {
                 $(this).addClass(animationClass);
             } else {
