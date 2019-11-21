@@ -3492,7 +3492,10 @@ ul.chat-available-user li a:hover {
 }
 
 /*#################################################*/
-input[type=radio]:checked + button .dicas{
+*:focus{
+    outline: none!important;
+}
+input[type=radio]:checked + label .dicas{
     background-color: #ffc107!important;
 }
 

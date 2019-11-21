@@ -54,4 +54,9 @@ class Usuarios_model extends CI_Model {
 		$this->db->update('usuario');
 	}
 
+	public function adicionarFaixa($usuario,$faixa){
+		$this->db->set('faixa', $faixa);
+		$this->db->where('usuario', $usuario);
+		$this->db->update('usuario');
+	}
 }

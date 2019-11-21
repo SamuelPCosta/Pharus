@@ -11,6 +11,7 @@ CREATE TABLE `pharus`.`usuario` (
   `email` VARCHAR(50) NOT NULL,
   `senha` VARCHAR(50) NOT NULL,
   `tarifa_kwh` FLOAT(3) NULL,
+  `faixa` INT(1) NULL,
   PRIMARY KEY (`conta_contrato`, `usuario`)
   )
 ENGINE = InnoDB;

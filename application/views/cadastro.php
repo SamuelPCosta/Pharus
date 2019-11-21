@@ -12,6 +12,7 @@
 	<link rel="shortcut icon" href="<?= base_url()?>assets/img/favicon.png"/> <!--Icone-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="<?= base_url()?>assets/js/jquery.maskMoney.js" type="text/javascript"></script>
+	<script src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->
 </head>
 <body>
 		<?php  
@@ -84,7 +85,7 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-keyboard"></i></span>
 							</div>
-							<input type="text" name="conta_contrato" class="form-control input_pass" value="" placeholder="Conta contrato" required>
+							<input type="text" name="conta_contrato" class="form-control input_pass" value="" placeholder="Conta contrato" required data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Clique em 'Entenda melhor' para não ter dúvidas.">
 						</div>
 						<span class="text-secondary">Opcional</span>
 						<div class="input-group mb-1">

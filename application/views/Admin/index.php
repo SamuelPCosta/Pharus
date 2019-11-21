@@ -120,7 +120,7 @@
           </li>
           <!-- settings end -->
           <!-- inbox dropdown start-->
-          <li id="header_inbox_bar" class="dropdown">
+         <!--  <li id="header_inbox_bar" class="dropdown">
             <a data-toggle="dropdown" class="dropdown" href="index.html#">
               <i class="fa fa-envelope-o"></i>
               <span class="badge bg-theme">5</span>
@@ -182,7 +182,7 @@
                 <a href="index.html#">See all messages</a>
               </li>
             </ul>
-          </li>
+          </li> -->
           <!-- inbox dropdown end -->
           <!-- notification dropdown start-->
           <li id="header_notification_bar" class="dropdown">
@@ -671,13 +671,13 @@
                     <h3 class="text-white text-left ml-5 text-dark">Inserir Novas Dicas</h3>
                   </div>
                   <div class="mx-auto" style="margin-top: -14px">
-                  <form class="w-100" method="post" action="Admin/adicionarDica">
+                  <form class="w-100 col-12" method="post" action="Admin/adicionarDica">
                     <input type="radio" name="tipo" value="a" id="a" style="display: none;">
-                    <button class="btn btn-dark col-4"><label for="a" class="text-white pt-3">Dica Pequena</label></button>
+                    <label for="a" class="text-white"><div class="btn btn-dark dicas"><h4>Dica Pequena</h4></div></label>
                     <input type="radio" name="tipo" value="b" id="b" style="display: none;">
-                    <button class="btn btn-dark col-4" style=" margin:-2px;"><label for="b" class="text-white pt-3">Dica Média</label></button>
+                    <!-- <button type="button" class="btn btn-dark col-4" style=" margin:-2px;"><label for="b" class="text-white pt-3">Dica Média</label></button>
                     <input type="radio" name="tipo" value="c" id="c" style="display: none;">
-                    <button class="btn btn-dark col-4" style=" margin:-2px;"><label for="c" class="text-white pt-3">Dica Grande</label></button>
+                    <button type="button" class="btn btn-dark col-4" style=" margin:-2px;"><label for="c" class="text-white pt-3">Dica Grande</label></button> -->
                   </div>
                   <div style="height: 3px" class="bg-warning"></div>
                   <div class="row mx-auto px-5 py-5">

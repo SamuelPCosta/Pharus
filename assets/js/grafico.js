@@ -133,3 +133,18 @@ var myBarChart = new Chart(ctx,{
         }
     }
 });
+
+/*###########Tip###########*/
+const tipdisabled = localStorage.getItem('tipdisabled')
+if (tipdisabled) {
+  document.getElementById("alerta-dica-chart").style.display = "none";
+}
+
+$("#hide").click(function(e) {
+  e.preventDefault();
+    document.getElementById("alerta-dica-chart").style.display = "none";
+    if ($("input[type=checkbox]").is(":checked")) {
+      localStorage.setItem('tipdisabled', true); 
+      return
+    } 
+});

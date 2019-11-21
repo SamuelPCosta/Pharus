@@ -26,14 +26,20 @@ class Questionario extends CI_Controller {
 			//Conferir faixa a faixa, em caso de empate de número de questões permanece a menor faixa
 			if ($resultado==$resultado_a) {
 				$this->session->set_userdata('faixa', "A e B"); //dois valores
+				$faixa = '1';
 			}elseif ($resultado==$resultado_b) {
 				$this->session->set_userdata('faixa', "B e C");
+				$faixa = '2';
 			}elseif ($resultado==$resultado_c) {
 				$this->session->set_userdata('faixa', "C e D");
+				$faixa = '3';
 			}
-			redirect('resultado?&a='.$resultado_a.'&b='.$resultado_b.'&c='.$resultado_c);
+			$this->load->model("Usuarios_model");
+			$usuario = $this->session->userdata('usuario');
+			$this->Usuarios_model->adicionarFaixa($usuario, $faixa);
+			redirect('resultado');
 		}else{
-			redirect('idealdeconsumo?questao='.$questao.'&a='.$resultado_a.'&b='.$resultado_b.'&c='.$resultado_c);
+			redirect('idealdeconsumo?questao='.$questao);
 		}
 		
 	}
