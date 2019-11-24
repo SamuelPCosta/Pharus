@@ -13,6 +13,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="<?= base_url()?>assets/js/jquery.maskMoney.js" type="text/javascript"></script>
 	<script src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->
+	<style type="text/css">
+		input[type=number]::-webkit-inner-spin-button { 
+		    -webkit-appearance: none;  
+		}
+		input[type=number] { 
+		   -moz-appearance: textfield;
+		   appearance: textfield;
+
+		}
+	</style>
 </head>
 <body>
 		<?php  
@@ -85,16 +95,18 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-keyboard"></i></span>
 							</div>
-							<input type="text" name="conta_contrato" class="form-control input_pass" value="" placeholder="Conta contrato" required data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Clique em 'Entenda melhor' para não ter dúvidas.">
+							<input type="number" name="conta_contrato" class="form-control input_pass" value="" placeholder="Conta contrato" required data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Clique em 'Entenda melhor' para não ter dúvidas.">
 						</div>
+						<a href="login" class="ml-1 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2 text-dark" style="position: relative; top: -40px; z-index: 333"></i></a>
 						<span class="text-secondary">Opcional</span>
 						<div class="input-group mb-1">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-coins"></i></span>
 							</div>
 							<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney" value="" placeholder="Tarifa por kWh"  min="0.10" max="3.00" step="0.01">
-						</div>			
-						<a href="login" class="ml-2 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2"></i>Entenda melhor</a>
+						</div>	
+						<a href="login" class="ml-1 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2 text-dark" style="position: relative; top: -35px; z-index: 333"></i></a>		
+						<a href="login" class="float-right" data-toggle="modal" data-target="#saibamais" style="transform: translateX(25px);">Entenda melhor</a>
 
 						<!-- ###modal### -->
 						 <div class="modal fade" id="saibamais" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -107,8 +119,14 @@
 			                    </button>
 			                  </div>
 			                  <div class="modal-body">
-			                  	<p class="text-justify">A sua conta contrato serve para identificação dos gastos, dos titulares da conta e disponibilidade de outras informações. Ela está localizada na parte inferir da sua conta de energia. Lembre-se, ela sempre possui 10 dígitos</p>
-			                  	<p class="text-justify">Já a tarifa de energia é o valor cobrado em reais a cada kWh de energia consumida. Este vaor está diretamente relacionado ao preço da sua conta ao final do mês. Essa taxa pode variar de cidade para cidade, ou até mesmo de bairro para bairro. Então, se você puder informar a tarifa de energia você terá uma maior precisão do controle dos seus gastos mensais. Esse valor encontra-se impresso XXX</p>
+			                  	<p class="text-justify">&emsp;A sua <span class="font-weight-bold">conta contrato</span> serve para identificação dos gastos, dos titulares da conta e disponibilidade de outras informações. Ela é um número único que está localizado na parte inferir da sua conta de energia. Lembre-se, ela sempre possui 10 dígitos.</p>
+			                  	<div class="row">
+			                  		<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-3 mx-auto" width='200'>
+			                  	</div>
+			                  	<p class="text-justify">&emsp;Já a <span class="font-weight-bold">tarifa por kWh</span> é o valor cobrado em reais a cada kWh (Quilowatt-hora) de energia consumida. Este vaor está diretamente relacionado ao preço da sua conta ao final do mês. Essa taxa pode variar de cidade para cidade, ou até mesmo de bairro para bairro. Então, se você puder informar a tarifa de energia você terá uma maior precisão do controle dos seus gastos mensais. Esse valor encontra-se impresso na parte inferior da sua conta.</p>
+			                  	<div class="row">
+			                  		<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 mx-auto" width='200'>
+			                  	</div>
 			                  </div>
 			                  <div class="modal-footer">
 			                    <button type="button" class="btn btn-warning text-dark" data-dismiss="modal">Ok</button>

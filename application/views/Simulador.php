@@ -113,11 +113,24 @@
 				$quarto = array('Vídeogame','Computador','Impressora','Estabilizador','Ar-Condicionado');
 				$sala = array('Televisão','Ventilador');
 				$outros = array('Lâmpada Fluor.','Lâmpada Incan.','Lavadora','Secador','Ferro Elétrico','Chuveiro Elétrico');
-				$options = "<option value='15'>Potência1</option>
-							<option value='50'>Potência2</option>
-							<option value='100'>Potência3</option>
-							<option value='200'>Potência4</option>
-							<option value='300'>Potência5</option>" 
+				$options = "<option value='15'>15W (PS1)</option>
+							<option value='180'>180W (Computador)</option>
+							<option value='1500'>1500W (Ar-Condicionado)</option>
+							<option value='80'>80W (TV)</option>
+							<option value='90'>90W (Ventilador)</option>
+							<option value='110'>110W (Geladeira)</option>
+							<option value='130'>130W (Freezer)</option>
+							<option value='170'>170W (Exaustor)</option>
+							<option value='300'>300W (Liquidificador)</option>
+							<option value='120'>1200W (Microondas)</option>
+							<option value='9120'>9120W (Fogão Elétrico)</option>
+							<option value='15'>15W (Lâmpada Fluo.)</option>
+							<option value='55'>55W (Lâmpada Inc.)</option>
+							<option value='500'>500W (Lavadora de Roupas)</option>
+							<option value='700'>700W (Secador de Cabelo)</option>
+							<option value='100'>1000W (Ferro Elétrico)</option>
+							<option value='1500'>1500W (Lavadora de Louças)</option>
+							<option value='4500'>4500W (Chuveiro Elétrico)</option>" 
 				?>
 				<div class="col-lg-6 col-sm-12" id="cozinha">
 					<table>					

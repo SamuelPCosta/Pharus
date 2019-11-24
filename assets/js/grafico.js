@@ -81,26 +81,26 @@ var myBarChart = new Chart(ctx,{
         datasets: [{
             label: "Consumo",
             data: [25, 59, 40, 41],
-            backgroundColor: "#ddd",
+            backgroundColor: "#343a40",
             borderWidth: 1,
-            borderColor: '#808080',
-            hoverBackgroundColor:"#808080",
+            borderColor: '#343a40',
+            hoverBackgroundColor:"#22242a",
             highlightFill: "#f8f9fa",
         },
         {
             label: "Meta",
-            backgroundColor: "#555",
+            backgroundColor: "#ffc107dd",
             borderWidth: 1,
-            borderColor: '#808080',
+            borderColor: '#ffc107dd',
             hoverBackgroundColor:"#ffc107",
             lineTension: 0,
             data: [28, 48, 40, 19]
         },
         {
             label: "Média",
-            backgroundColor: "#3b94af",
+            backgroundColor: "#3b94af55",
             borderWidth: 1,
-            borderColor: '#808080',
+            borderColor: '#3b94af',
             hoverBackgroundColor:"#3b94af",
             lineTension: 0,
             data: [38, 42, 32, 29]

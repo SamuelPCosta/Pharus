@@ -15,7 +15,7 @@
 }
 .pergunta, .resultado{ /*Estilização da pergunta*/
 	padding: 50px 10px; 
-	width: 70%; margin: auto; 
+	width: 90%; margin: auto; 
 	background-color: #ffc107; 
 	color: #343a40; 
 	margin-right: 15%;
@@ -26,6 +26,7 @@
 }
 .resultado{
 	box-shadow:none;  
+	width: 70%; 
 }
 label{
 	display: inline !important;
@@ -36,7 +37,7 @@ label{
 	border:none;
 	padding: 10px 10px; 
 	cursor: pointer;
-	width: 70%; 
+	width: 90%; 
 	margin: auto; 
 	margin-bottom: 10px;
 	margin-right: 15%;
@@ -58,7 +59,7 @@ label{
 	top: 5px;
 	box-shadow:none !important;
 }
-.alternativa_a,.alternativa_b,.alternativa_c{
+.alternativa_a,.alternativa_b,.alternativa_c,.alternativa_d{
 	background-color: #ffd86d !important;
 	box-shadow:0 5px 0 #846B21 !important;  
 }

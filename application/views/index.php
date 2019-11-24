@@ -36,14 +36,14 @@
 					?>
 					<div class="col-xl-6 col-lg-12 text">
 					<h1 class="mx-auto text-center animeRight theme card card-theme mb-5 py-2 shadow-sm" id="titulo_index">Dados Gerais</h1>
-					<p class="mx-auto animeRight theme">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica. Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+					<p class="mx-auto animeRight theme">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica, vendo o quanto foi gasto de sua meta em porcentagem até o presente momento. Você deve consumir no máximo até chegar ao limite de 100%, passar disso significa que você extrapolou sua meta.</p>
 					</div>
 					<?php
 						}else{
 					?>
 					<div class="col-xl-6 col-lg-12 text">
 					<h1 class="mx-auto text-center animeRight theme card card-theme mb-5 py-2 shadow-sm" id="titulo_index">Novo aqui?</h1>
-					<p class="mx-auto animeRight theme">Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica. Aqui você pode visualizar rapidamente os dados gerais de seu consumo de energia de maneira mais ampla e dinâmica. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+					<p class="mx-auto animeRight theme">Seja bem vindo ao Pharus! Aqui você poderá gerenciar melhor o seu consumo de energia a partir de metas feitas por você mesmo e dicas que o ajudará a saber como consumir energia de modo consciente, além disso você poderá ver seu desenvolvimento em tempo real. Comece clicando no botão abaixo!</p>
 					<a href="metas" class="btn btn-warning mx-auto py-3 position-relative d-block text-center animeRight" id="primeirobutton">Vamos definir uma meta para você!</a>
 					</div>
 					<?php
