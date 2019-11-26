@@ -12,9 +12,17 @@ class Usuarios_model extends CI_Model {
 				return $nome_de_usuario_existente=TRUE;
 			}else{
 				$this->db->insert("usuario", $dados);//Insere os dados na tabela usuario
-				$this->db->insert("consumo", $usuario);
-				$this->db->insert("meta", $usuario);
-				$this->db->insert("consumo_mensal", $usuario);
+				$usuario = $dados['usuario'];
+				$this->db->select('conta_contrato');
+				$this->db->where('usuario', $usuario); //Onde o usuário for igual ao nome de usuário q está logado
+				$query = $this->db->get('usuario');
+				$contaContrato = $query->row()->conta_contrato;
+				$inserirContaContrato = array(
+					'usuario' => $contaContrato
+				);
+				$this->db->insert("consumo", $inserirContaContrato);
+				$this->db->insert("meta", $inserirContaContrato);
+				$this->db->insert("consumo_mensal", $inserirContaContrato);
 			}
 		}
 	}

@@ -6,7 +6,7 @@ USE `pharus` ;
 -- -----------------------------------------------------
 CREATE TABLE `pharus`.`usuario` (
   `usuario` VARCHAR(30) NOT NULL,
-  `conta_contrato` INT(10) UNSIGNED NOT NULL,
+  `conta_contrato` INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
   `nome` VARCHAR(50) NOT NULL,
   `email` VARCHAR(50) NOT NULL,
   `senha` VARCHAR(50) NOT NULL,

@@ -7,7 +7,7 @@ class Cadastro extends CI_Controller {
 
 		$tarifa_kwh = $this->input->post("tarifa_kwh");
 		if (empty($this->input->post("tarifa_kwh"))) {
-			$tarifa_kwh = '0.60';
+			$tarifa_kwh = '0.55';
 		}
 		//Esse array passa os campos a serem inseridos na table usuario;
 		$dados = array(
@@ -15,7 +15,6 @@ class Cadastro extends CI_Controller {
 			'nome' => $this->input->post("nome"),
 			'email' => $this->input->post("email"),
 			'senha' => md5($this->input->post("senha")),
-			'conta_contrato' => $this->input->post("conta_contrato"),
 			'tarifa_kwh' => $tarifa_kwh
 		);
 
@@ -47,7 +46,6 @@ class Cadastro extends CI_Controller {
 	public function editarDados(){
 		$this->load->model("Operacoes");
 		
-		$conta_contrato = $this->input->post("conta_contrato");
 		$usuario = $this->input->post("usuario");
 		$nome = $this->input->post("nome");
 		$email = $this->input->post("email");
@@ -61,9 +59,7 @@ class Cadastro extends CI_Controller {
 
 		//Esse array passa os campos a serem atualizados na table usuario;
 		$dadosUpdate = array();
-			if($conta_contrato!=$contaContratoAtual && $conta_contrato!=NULL && $conta_contrato!=" ") {
-				$dadosUpdate['conta_contrato'] = $conta_contrato;
-			}if ($usuario!=$usuarioAtual && $usuario!=NULL && $usuario!=" ") {
+			if ($usuario!=$usuarioAtual && $usuario!=NULL && $usuario!=" ") {
 				$dadosUpdate['usuario'] = $usuario;
 			}if ($nome!=$nomeAtual && $nome!=NULL && $nome!=" ") {
 				$dadosUpdate['nome'] = $nome;
