@@ -762,7 +762,7 @@
               </div> -->
               <div class="details">
                 <p>
-                  <a href="#"><br>Gabriel Ribeiro</a>
+           <!--        <a href="#"><br>Gabriel Ribeiro</a> -->
                   <!-- <muted class="text-white">Available</muted class="text-white"> -->
                 </p>
               </div>

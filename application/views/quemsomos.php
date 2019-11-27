@@ -53,7 +53,7 @@
 						<div class="rounded-circle mx-auto d-table">
 							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
 						</div>
-						<h4 class="py-3 theme">André Tavares<br><span style="font-size: 0.75em">Função <br>Função</span></h4>
+						<h4 class="py-3 theme">André Tavares<br><span style="font-size: 0.75em">Elaboração de textos;<br>Conteúdo;</span></h4>
 					</div><!-- /.col-lg-4 -->
 					<div class="col-lg-3 col-md-6 my-2 text-center animeRight">
 						<div class="rounded-circle mx-auto d-table">

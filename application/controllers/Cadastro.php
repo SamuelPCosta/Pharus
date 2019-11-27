@@ -21,7 +21,7 @@ class Cadastro extends CI_Controller {
 		//Próximo array serve para povoar table consumo, consumo_mensal e metas
 		$usuario = array('usuario' => $this->input->post("conta_contrato"));
 
-		$senha = $dados['senha']; //Define a variavel senha
+		$senha = $this->input->post("senha"); //Define a variavel senha
 		$ncaracteres = strlen($senha); //Função que conta o número de caracteres de uma variavel
 		$confirmar_senha = md5($this->input->post("confirmar_senha")); 
 		//Define a variavel senha, ela não faz parte do nosso vetor, pois serve apenas para verificação e não vai para o Banco de Dados

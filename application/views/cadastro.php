@@ -83,7 +83,7 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="senha" class="form-control input_pass" value="" placeholder="Senha" required>
+							<input type="password" name="senha" class="form-control input_pass" value="" placeholder="Senha (Min. 8 dígitos)" required>
 						</div>
 						<div class="input-group mb-3">
 							<div class="input-group-append">

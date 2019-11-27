@@ -117,4 +117,5 @@
 	</script>
 	<script>
 	    localStorage.setItem('Usuario', "<?php echo $this->session->userdata('usuario'); ?>");
+   		var atual ="Home";
 	</script>

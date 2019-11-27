@@ -35,12 +35,12 @@
               </a>
               <div class="btn-group">
               <div class="dropdown-menu card-theme theme dropdown-menu-right" id="painelnot" style="top:100px; width: 320px; overflow-x: auto; max-height: 350px">
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">21/11</span></span></span>
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">20/11</span></span></span>
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ruim! - <span class="text-secondary">19/11</span></span></span>
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">18/11</span></span></span>
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">17/11</span></span></span>
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ruim! - <span class="text-secondary">19/11</span></span></span>
+                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">26/11</span></span></span>
+                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">25/11</span></span></span>
+                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ruim! - <span class="text-secondary">24/11</span></span></span>
+                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">23/11</span></span></span>
+                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">22/11</span></span></span>
+                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ruim! - <span class="text-secondary">21/11</span></span></span>
               </div>
             </div>
             <a href="#menu-toggle" class="btn text-white position-fixed" id="toggle-theme" title="Modo noturno" onclick="update(myChart)"><i class="fas fa-adjust"></i></a>
@@ -53,6 +53,10 @@
         <div id="wrapper" class="position-relative">
         <div id="sidebar-wrapper" class="shadow bg-white">
             <ul class="sidebar-nav">
+            	<li id="Home" class="">
+            		<a href="index" class="text-capitalize sidebar-li-a text-dark"><i class="fas fa-home"></i>Home</a>
+            	</li>
+			    <div class="dropdown-divider"></div>
             	<li id="Usuario" class="">
             		<a href="usuario" class="text-capitalize sidebar-li-a text-dark"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
             	</li>
