@@ -40,6 +40,7 @@ $("#Atualizar_dados").click(function(e) {
     document.getElementById("Salvar_dados").style.visibility = "visible";
 });
 
+//Marcador da sidebar e marcador das perguntas
 window.onload = function(){
   document.getElementById(atual).classList.add("atual");
   document.getElementById(questao).classList.add("active");
@@ -80,7 +81,7 @@ if (nightModeStorage) {
   $(".card-theme").toggleClass("bg-dark");
   $(".form-control").toggleClass("bg-dark2");
   $(".form-control").toggleClass("text-white");
-  $("#vertical-line").toggleClass("bg-dark2");
+  $(".vertical-line").toggleClass("bg-dark2");
   $(".master").toggleClass("bg-light");
   $(".theme").toggleClass("text-white");
   $(".nperguntas").toggleClass("bg-dark2");
@@ -95,7 +96,7 @@ $("#toggle-theme").click(function(e) {
   $(".card-theme").toggleClass("bg-dark");
   $(".form-control").toggleClass("bg-dark2");
   $(".form-control").toggleClass("text-white");
-  $("#vertical-line").toggleClass("bg-dark2");
+  $(".vertical-line").toggleClass("bg-dark2");
   $(".master").toggleClass("bg-light");
   $(".theme").toggleClass("text-white");
   $(".nperguntas").toggleClass("bg-dark2");

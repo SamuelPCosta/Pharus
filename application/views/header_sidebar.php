@@ -60,10 +60,6 @@
             	<li id="Usuario" class="">
             		<a href="usuario" class="text-capitalize sidebar-li-a text-dark"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
             	</li>
-			    <div class="dropdown-divider"></div>
-                <li id="Editar senha" class="">
-                    <a href="editar-senha" class="sidebar-li-a text-dark"><i class="fas fa-edit"></i>Editar senha</a>
-                </li>
                 <div class="dropdown-divider"></div>
                 <li id="Metas" class="">
                     <a href="metas" class="sidebar-li-a text-dark"><i class="fas fa-bookmark"></i>Metas</a>
@@ -77,8 +73,16 @@
                     <a href="idealdeconsumo" class="sidebar-li-a text-dark"><i class="fas fa-funnel-dollar"></i>Ideal de Consumo</a>
                 </li>
                 <div class="dropdown-divider"></div>
+                <li id="Simulador" class="">
+                    <a href="Simulador" class="sidebar-li-a text-dark"><i class="fas fa-laptop-code"></i>Simulador</a>
+                </li>
+                <div class="dropdown-divider"></div>
                 <li id="Dicas" class="">
                     <a href="dicas" class="sidebar-li-a text-dark"><i class="fas fa-lightbulb"></i>Dicas</a>
+                </li>
+                <div class="dropdown-divider"></div>
+                <li id="Atualize" class="">
+                    <a href="atualize" class="sidebar-li-a text-dark"><i class="fas fa-star"></i>Atualize</a>
                 </li>
                 <div class="dropdown-divider"></div>
                 <li class="">

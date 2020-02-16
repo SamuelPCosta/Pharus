@@ -17,7 +17,6 @@
         <!--conteudo-->
 		</div>
 </div>
-
-	<script>
+<script>
     var atual ="Ideal de Consumo";
-	</script>
+</script>

@@ -134,6 +134,17 @@ class Raiz extends CI_Controller {
 		}
 	}
 
+	public function atualize(){
+		if (isset($_SESSION['login'])) {
+			$title['titulo'] ="Atualize sua conta";
+			$this->load->view('header_sidebar', $title);
+			$this->load->view('atualize');
+			$this->load->view('footer');
+		}else{
+			redirect('login?error=2'); 
+		}
+	}
+
 	public function dicas(){
 		if (isset($_SESSION['login'])) {
 			$this->load->model("Dicas_model");

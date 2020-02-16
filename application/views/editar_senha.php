@@ -8,8 +8,8 @@
 							</div>
 							<h4 class="my-3 text-center theme"><span class="text-capitalize" style="font-size: 2rem; font-weight:lighter;"><?php echo $this->session->userdata('usuario'); ?></span></h4>
 						</div>
-						<div id="vertical-line"></div>
-						<div class="col-xl col-md-12 mx-auto">
+						<div class="vertical-line"></div>
+						<div class="col-xl col-md-12 mx-auto px-0">
 							<div class="container h-100 usuario">
 								<div class="d-flex justify-content-center h-100 mb-2 py-5">
 									<div class="">
@@ -50,5 +50,5 @@
 			</div>
 
 <script>
-	var atual ="Editar senha";
+	var atual ="Usuario";
 </script>

@@ -221,7 +221,7 @@ h4{
 .line{
     border-right: none;
 }
-#vertical-line{
+.vertical-line{
     visibility: hidden;
 }
 .last-container{
@@ -263,7 +263,7 @@ h4{
     .line{
         border-right: 2px solid #b1c6d0;
     }
-    #vertical-line{
+    .vertical-line{
         width: 2px; 
         height: 400px; 
         background-color: #b5b5b5;
@@ -435,7 +435,7 @@ input[type="text"]:enabled , input[type="password"]:enabled{
 #Salvar_dados{
     visibility: hidden;
 }
-#Atualizar_dados, #Salvar_dados{
+#Atualizar_dados, #Salvar_dados, #atualizar{
     bottom: 0px;
 }
 .title_log{
