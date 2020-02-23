@@ -2,8 +2,10 @@
 <footer class="page-footer font-small position-relative shadow">
   <!-- Footer Links -->
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3"><!--©--> <?php echo date('Y') ?> Pharus -
-    <a href="quemsomos">Quem Somos?</a>
+  <div class="footer-copyright text-center py-3"><!--©--> Pharus <?php echo date('Y') ?> -
+    <a href="quemsomos">Quem Somos?</a> -
+    <a href="parceiros">Parceiros</a> -
+    <a href="contato">Contato</a>
   </div>
   <!-- Copyright -->
 </footer>

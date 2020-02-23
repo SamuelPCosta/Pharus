@@ -80,7 +80,7 @@ header .navbar{
 .dropdown-divider{
     margin: 0 auto !important;
     border-color: #b5b5b5;
-    width: 90%;
+    width: 100%;
 }
 #dark{
     z-index: 1;
@@ -458,6 +458,34 @@ input[type=file]{
     font-size: 20px;
     cursor: pointer;
     opacity: 0;
+}
+a#editar_senha{
+    text-decoration: none;
+}
+a#editar_senha:hover{
+    color: #007bff!important;
+}
+.text-white a#editar_senha:hover{
+    color: #ffc107!important;
+}
+.atualize h2{
+    text-align: left;
+    margin: 0 auto;
+    margin-right: 15%;
+    text-transform: none;
+    font-weight: normal;
+}
+.atualize p{
+    width: 100%;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 1.4em;
+}
+.atualize ul li{
+    font-weight: lighter;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 1.4em;
 }
 /*#################Animação Scroll#################*/
 .js .anime {

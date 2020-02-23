@@ -58,7 +58,7 @@
 												<div class="input-group mb-2">
 													<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney dados_user border-0" value="<?php echo $tarifa ?>" placeholder="Tarifa por kWh"  min="0.10" max="3.00" step="0.01" disabled>
 												</div>
-												<a href="editar-senha" class="sidebar-li-a text-dark theme"><i class="fas fa-edit"></i> Editar senha</a>
+												<a href="editar-senha" class="sidebar-li-a text-dark theme" id="editar_senha"><i class="fas fa-edit"></i> Editar senha</a>
 												<a href="login" class="ml-1 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2 theme" style="position: relative; top: -38px; bottom: 0px; z-index: 333"></i></a>		
 										</div>
 												<!-- ###modal### -->

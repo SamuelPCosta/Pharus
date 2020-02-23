@@ -9,7 +9,6 @@
 .ideal .col-xl-6 h1 ~ p{ /*Estilização do paragrafo*/
 	width: 70%;
 	margin: 0 auto;
-	font-size: 20px;
 	text-align: justify;
 	font-size: 1.4em;
 }

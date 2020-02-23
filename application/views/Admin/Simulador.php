@@ -98,7 +98,7 @@
 <br><br><br>
 	<div class="container mt-5">
 		<h1 class="mb-5 text-white">Simulador de Consumo</h1>
-		<form method="post" action="Raiz/Consumir">
+		<form method="post" action="Admin/Consumir">
 		<div class="row">
 				<!-- 
 				• Criar array com nomes de aparelhos;

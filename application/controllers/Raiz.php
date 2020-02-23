@@ -171,14 +171,6 @@ class Raiz extends CI_Controller {
 		}
 	}
 
-	public function loginAdmin(){
-		if (isset($_SESSION['login'])) {
-			redirect('index'); 
-		}else{
-			$this->load->view('loginAdmin');
-		}
-	}
-
 	public function usuario(){
 		if (isset($_SESSION['login'])) {
 			$usuario = $this->session->userdata('usuario');
@@ -243,6 +235,29 @@ class Raiz extends CI_Controller {
 			$title['titulo'] ="Quem somos";
 			$this->load->view('header_sidebar', $title);
 			$this->load->view('quemsomos');
+			$this->load->view('footer');
+		}else{
+			redirect('login?error=2'); 
+		}
+	}
+
+		public function parceiros(){
+		if (isset($_SESSION['login'])) {
+			$title['titulo'] ="Nossos parceiros";
+			$this->load->view('header_sidebar', $title);
+			$this->load->view('parceiros');
+			$this->load->view('footer');
+		}else{
+			redirect('login?error=2'); 
+		}
+	}
+
+	public function contato(){
+		if (isset($_SESSION['login'])) {
+			$title['titulo'] ="Contato";
+			$this->load->view('header_sidebar', $title);
+			$this->load->view('contato');
+			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
 		}

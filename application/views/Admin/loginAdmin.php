@@ -42,7 +42,7 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-					<form method="post" action="Admin/loginAdmin"><!--Mandar para a página de checagem-->
+					<form method="post" action="Admin/logarAdmin"><!--Mandar para a página de checagem-->
 						<!--Envia para o controller Login.php na função autenticar-->
 						<div class="input-group mb-3">
 							<div class="input-group-append">
