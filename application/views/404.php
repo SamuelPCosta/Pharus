@@ -23,7 +23,7 @@
             <div class="container usuario">
                 <div class="card bg-dark py-5 px-5 my-4 shadow card-theme w-75 mx-auto">
                     <div class="row align-items-center">
-                    <div class="col-xl-4 col-lg-8 col-md-12 mx-auto colunas-meta d-table-cell align-center">
+                    <div class="col-xl-8 col-lg-8 col-md-12 mx-auto colunas-meta d-table-cell align-center">
                         <img src="<?= base_url()?>assets/img/tomada.png" class="py-3 rounded-circle" width=100% >
                     </div>
                 </div>
@@ -40,7 +40,7 @@
 <footer class="page-footer font-small position-relatiave">
   <!-- Footer Links -->
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3" style="color: #bbb; font-size: 1.2em"><!--©--> <?php echo date('Y') ?> Pharus -
+  <div class="footer-copyright text-center py-3" style="color: #bbb; font-size: 1.2em"><!--©--> Pharus <?php echo date('Y') ?>  -
     <a href="index" class="text-white">Home</a>
   </div>
   <!-- Copyright -->

@@ -163,6 +163,17 @@ class Raiz extends CI_Controller {
 		}
 	}
 
+	public function conquistas(){
+		if (isset($_SESSION['login'])) {
+			$title['titulo'] ="Conquistas";
+			$this->load->view('header_sidebar', $title);
+			$this->load->view('conquistas');
+			$this->load->view('footer');
+		}else{
+			redirect('login?error=2'); 
+		}
+	}
+
 	public function login(){
 		if (isset($_SESSION['login'])) {
 			redirect('index'); 
@@ -273,7 +284,14 @@ class Raiz extends CI_Controller {
 	}
 
 	public function simulador(){
-		$this->load->view('simulador');
+		if (isset($_SESSION['login'])) {
+			$title['titulo'] ="Simulador";
+			$this->load->view('header_sidebar', $title);
+			$this->load->view('simulador');
+			$this->load->view('footer');
+		}else{
+			redirect('login?error=2'); 
+		}
 	}
 
 

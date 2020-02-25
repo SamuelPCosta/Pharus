@@ -74,15 +74,19 @@
                 </li>
                 <div class="dropdown-divider"></div>
                 <li id="Simulador" class="">
-                    <a href="Simulador" class="sidebar-li-a text-dark"><i class="fas fa-laptop-code"></i>Simulador</a>
+                    <a href="simulador" class="sidebar-li-a text-dark"><i class="fas fa-laptop-code"></i>Simulador</a>
                 </li>
                 <div class="dropdown-divider"></div>
                 <li id="Dicas" class="">
                     <a href="dicas" class="sidebar-li-a text-dark"><i class="fas fa-lightbulb"></i>Dicas</a>
                 </li>
                 <div class="dropdown-divider"></div>
+                <li id="Conquistas" class="">
+                    <a href="conquistas" class="sidebar-li-a text-dark"><i class="fas fa-star"></i>Conquistas</a>
+                </li>
+                <div class="dropdown-divider"></div>
                 <li id="Atualize" class="">
-                    <a href="atualize" class="sidebar-li-a text-dark"><i class="fas fa-star"></i>Atualize</a>
+                    <a href="atualize" class="sidebar-li-a text-dark"><i class="fas fa-award"></i>Atualize</a>
                 </li>
                 <div class="dropdown-divider"></div>
                 <li class="">
