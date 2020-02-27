@@ -38,6 +38,7 @@ class Raiz extends CI_Controller {
 				}
 				//set_cookie('mensagem_meta', $mensagem, (86400));		
 			}
+			$this->ChecarPreminum();
 			$title['titulo'] ="Home";
 			$this->load->view('header_sidebar', $title);
 			$this->load->view('index', $consumo);
@@ -52,6 +53,15 @@ class Raiz extends CI_Controller {
 			$this->load->view('Admin/index');
 		}else{
 			redirect('login-administrador?error=2'); 
+		}
+	}
+
+	public function ChecarPreminum(){
+		$this->load->model("Operacoes");
+		$usuario = $this->session->userdata('usuario');
+		$premium = $this->Operacoes->premium($usuario);
+		if ($premium) {
+			$this->session->set_userdata('premium', true);
 		}
 	}
 
@@ -135,13 +145,17 @@ class Raiz extends CI_Controller {
 	}
 
 	public function atualize(){
-		if (isset($_SESSION['login'])) {
-			$title['titulo'] ="Atualize sua conta";
-			$this->load->view('header_sidebar', $title);
-			$this->load->view('atualize');
-			$this->load->view('footer');
+		if ($this->session->userdata('premium')==TRUE) {
+			$this->notFound();
 		}else{
-			redirect('login?error=2'); 
+			if (isset($_SESSION['login'])) {
+				$title['titulo'] ="Atualize sua conta";
+				$this->load->view('header_sidebar', $title);
+				$this->load->view('atualize');
+				$this->load->view('footer');
+			}else{
+				redirect('login?error=2'); 
+			}
 		}
 	}
 

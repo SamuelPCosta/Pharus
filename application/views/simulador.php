@@ -1,25 +1,27 @@
 <head>
 	<style type="text/css">
 	input, select{
-		width: 70px;
+		width: 80px;
 		height: 30px;
 		background-color: #eee;
 		border: none;
 		border-radius: 5px;
 		padding-left: 10px;
-		margin: 32px 0px 0px 15px;
+		margin: 5px 20px 0px 15px;
 		outline: 0;
 	}
 	select{
-		width: 100px;
+		width: 80px;
 		padding-left: 0px;
+		margin-bottom: 10px;
 	}
 	h2{
 		font-family: 'Open Sans', sans-serif !important;
 		color: #222;
-		margin: 25px 0px 0px 50px;
+		margin: 5px 0px 10px 50px;
 		display: inline-block;
 		font-weight: 100;
+		font-size: 2em;
 	}
 	.col-lg-6{
 		margin-bottom: 20px
@@ -29,14 +31,25 @@
 		margin-bottom: 20px;
 		max-height: 40px;
 	}
+	@media(max-width:1200px){
+		table{
+			margin-left: auto!important;
+			margin-right: auto!important;
+		}
+	}
+	@media(max-width:450px){
+		h2{
+			font-size: 1.5em;
+		}
+	}
 	</style>
 </head>
 <section id="containerSimulador">
 	<div class="container mt-5">
 		<!-- <h1 class="mb-5 text-uppercase theme">Simulador de Consumo</h1> -->
-		<h2 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme" style="margin-left: 0px;">Simulador de Consumo</h2>
 		<form method="post" action="Admin/Consumir">
 		<div class="row">
+			<h2 class="mt-0 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme" style="margin-left: 0px;">Simulador de Consumo</h2>
 				<!-- 
 				• Criar array com nomes de aparelhos;
 				• Criado laço foreach;
@@ -80,7 +93,7 @@
 								<li>Excepteur sint occaecat cupidatat non proident.</li>
 							</ul>
 						</div>
-						<div class="vertical-line"></div>
+						<div class="vertical-line" style="height: 250px!important"></div>
 						<div class="col-xl col-md-12 mx-auto px-0">
 							<ul class="col-xl col-md-12 mx-auto px-5 theme">
 								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
@@ -220,10 +233,10 @@
 				</div> -->	
 		</div>
 		<br>
-		<button type="submit" name="button" class="btn login_btn bg-warning mx-auto d-block w-25 mt-1">Consumir</button>
+		<button type="submit" name="button" class="btn login_btn bg-warning mx-auto d-block w-25 mt-1">Simular consumo</button>
 		</form>
 		<form method="post" action="Admin/zerar">
-			<button type="submit" class="btn login_btn bg-danger text-white mx-auto d-block w-25 mt-1">Zerar</button>
+			<button type="submit" class="btn login_btn bg-danger text-white mx-auto d-block w-25 mt-1">Zerar simulador</button>
 		</form>
 </div>
 <script>

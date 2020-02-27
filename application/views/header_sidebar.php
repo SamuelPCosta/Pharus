@@ -27,7 +27,7 @@
 <div class="master bg-light">
 	<!-- Header -->
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-0 w-100 shadow">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-0 w-100">
 			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo.png" width=35><h1 class="text-white d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn text-white position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
               <a class="dropdown btn text-white position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;">
@@ -84,10 +84,17 @@
                 <li id="Conquistas" class="">
                     <a href="conquistas" class="sidebar-li-a text-dark"><i class="fas fa-star"></i>Conquistas</a>
                 </li>
+                <?php 
+                    if (!isset($_SESSION['premium'])){
+                        //CONFERIRI SE O USUÁRIO É PREMIUM
+                ?>
                 <div class="dropdown-divider"></div>
                 <li id="Atualize" class="">
                     <a href="atualize" class="sidebar-li-a text-dark"><i class="fas fa-award"></i>Atualize</a>
                 </li>
+                <?php
+                    }
+                ?>
                 <div class="dropdown-divider"></div>
                 <li class="">
                     <a href="login/logout" class="sidebar-li-a text-dark" onclick="destroyphoto()"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->

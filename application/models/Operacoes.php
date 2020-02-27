@@ -41,4 +41,12 @@ class Operacoes extends CI_Model {
 		$bandeira = $query->row()->bandeira;
 		return $bandeira;
 	}
+
+	public function premium($usuario){
+		$this->db->select('premium');
+		$this->db->where('usuario', $usuario); //Onde o usuário for igual ao nome de usuário q está logado
+		$query = $this->db->get('usuario');
+		$premium = $query->row()->premium;
+		return $premium;
+	}
 }

@@ -43,6 +43,9 @@ header .navbar{
     z-index: 2;
     background-color: #22242a !important
 }
+.logo{
+    margin: auto;
+}
 .logo h1{
     vertical-align: middle !important;
     text-transform: uppercase;
@@ -283,6 +286,9 @@ h4{
     }
     #wrapper {
         padding-top: 78px;
+    }
+    .logo{
+        margin-left: 0;
     }
     .logo img{
         width: 60px !important;

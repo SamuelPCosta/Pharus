@@ -1,4 +1,4 @@
-			<div class="container first-container usuario">
+			<div class="container first-container usuario" style="display: flex; flex-direction: column; justify-content: center; min-height: calc(100vh - 78px);">
 				<div class="card py-5 px-5 my-4 shadow card-theme">
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">

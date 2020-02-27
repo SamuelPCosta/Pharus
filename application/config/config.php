@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/pharus';
-//$config['base_url'] = 'http://192.168.0.5/pharus';
+//$config['base_url'] = 'http://192.168.0.3/pharus';
 /*
 |--------------------------------------------------------------------------
 | Index File

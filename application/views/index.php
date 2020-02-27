@@ -20,6 +20,41 @@
 									<div class="chart anime theme" data-percent="<?php echo ($gasto-100); ?>" data-scale-color="#ffb400"><span class="texto_grafico"><p><?php echo number_format(($gasto-100), 1); ?>%</p><div id="tempo"><p>excedido em <br><span id="horas"><?php date_default_timezone_set('America/Fortaleza'); echo date('H'); ?></span> horas</p></span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
 									<?php
 								}
+								if (!isset($_SESSION['premium'])){//CONFERIRI SE O USUÁRIO É PREMIUM
+								?>
+									<a href="" data-toggle="modal" data-target="#addvalores" class="position-relative text-warning anime" style="font-size: 1.8em; top: -105px; left: 200px"><h1><i class='fas fa-plus-circle'></i></a>
+										<!-- Modal -->
+										<div class="modal fade" id="addvalores" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+										  <div class="modal-dialog modal-dialog-centered" role="document">
+										    <div class="modal-content">
+										      <div class="modal-header">
+										        <h5 class="modal-title font-weight-bold" id="TituloModalCentralizado">Inserir leitura.
+												</h5>
+										        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+										          <span aria-hidden="true">&times;</span>
+										        </button>
+										      </div>
+										      <div class="modal-body">
+										      	<p class="text-justify font-weight-normal" style="font-size: 0.6em">Você não possui monitoramento de consumo, mas pode inserir manualmente no campo abaixo o valor de leitura do seu medidor:</p>
+										        <div class="container usuario">
+								                    <div class="row align-items-center">
+									                    <div class="col mx-auto">
+									                    	<form method="post" action="">
+									                       		<input type="number" min="0" max="10000" class="modal_input_time mx-auto" name="leitura" style="font-size: 0.5em">
+									                    </div>
+								                	</div>
+								                </div>
+										      </div>
+										      <div class="modal-footer">
+										        <a href="atualize" class="text-primary btn font-weight-bold">Seja premium</a>
+										        <button type="submit" class="btn btn-warning font-weight-bold" value="salvar" name="btn">Inserir valor</button>
+										        </form>
+										      </div>
+										    </div>
+										  </div>
+										</div>
+								<?php
+								}
 							}else{
 								?>
 								<div class="card py-5 px-0 shadow card-theme theme mx-auto mb-5 d-table anime" id="card-home">
