@@ -28,6 +28,7 @@ class Login extends CI_Controller {
 		//delete_cookie("a"); delete_cookie("b"); delete_cookie("c");
 		unset($_SESSION['login']);
 		unset($_SESSION['meta']);
+		unset($_SESSION['conferirMeta']);
 		redirect('login'); 
 	}
 

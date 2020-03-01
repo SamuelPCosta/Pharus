@@ -34,13 +34,44 @@
                 <i class="fas fa-bell"></i>
               </a>
               <div class="btn-group">
-              <div class="dropdown-menu card-theme theme dropdown-menu-right" id="painelnot" style="top:100px; width: 320px; overflow-x: auto; max-height: 350px">
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">26/11</span></span></span>
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">25/11</span></span></span>
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ruim! - <span class="text-secondary">24/11</span></span></span>
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">23/11</span></span></span>
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ótimo! - <span class="text-secondary">22/11</span></span></span>
-                <span class="dropdown-item theme" href=""><img src="<?= base_url()?>assets/img/favicon.png" width='40'>Seu consumo foi ruim! - <span class="text-secondary">21/11</span></span></span>
+                <div class="dropdown-menu card-theme theme dropdown-menu-right" id="painelnot" style="top:100px; width: 320px; overflow-x: auto; max-height: 350px">
+                    <table class="mx-auto"> 
+                        <tr class="dropdown-item theme">
+                            <td class="py-2 theme">Seu consumo foi ótimo!</td>
+                            <td class="text-secondary"> - </td>
+                            <td class="text-secondary text-right">Ontem</td>
+                        </tr>
+                        <tr class="dropdown-item theme">
+                            <td class="py-2 theme">Seu consumo foi ótimo!</td>
+                            <td class="text-secondary"> - </td>
+                            <td class="text-secondary text-right">Há 2 dias</td>
+                        </tr>
+                        <tr class="dropdown-item theme">
+                            <td class="py-2 theme">Seu consumo foi ruim!</td>
+                            <td class="text-secondary"> - </td>
+                            <td class="text-secondary text-right">Há 3 dias</td>
+                        </tr>
+                        <tr class="dropdown-item theme">
+                            <td class="py-2 theme">Seu consumo foi ótimo!</td>
+                            <td class="text-secondary"> - </td>
+                            <td class="text-secondary text-right">Há 4 dias</td>
+                        </tr>
+                        <tr class="dropdown-item theme">
+                            <td class="py-2 theme">Seu consumo foi ruim!</td>
+                            <td class="text-secondary"> - </td>
+                            <td class="text-secondary text-right">Há 5 dias</td>
+                        </tr>
+                        <tr class="dropdown-item theme">
+                            <td class="py-2 theme">Seu consumo foi ótimo!</td>
+                            <td class="text-secondary"> - </td>
+                            <td class="text-secondary text-right">Há 6 dias</td>
+                        </tr>
+                        <tr class="dropdown-item theme">
+                            <td class="py-2 theme">Seu consumo foi ótimo!</td>
+                            <td class="text-secondary"> - </td>
+                            <td class="text-secondary text-right">Há 7 dias</td>
+                        </tr>
+                    </table>
               </div>
             </div>
             <a href="#menu-toggle" class="btn text-white position-fixed" id="toggle-theme" title="Modo noturno" onclick="update(myChart)"><i class="fas fa-adjust"></i></a>

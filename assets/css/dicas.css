@@ -66,3 +66,11 @@
 		height: auto !important;
 	}
 }
+/*#####################CONQUISTAS#####################*/
+/*#####################CONQUISTAS#####################*/
+.conquistas-container h1{
+	color: #ffc107;
+}
+.nao_conquistado, .nao_conquistado + p{
+	color: #808080 !important;
+}

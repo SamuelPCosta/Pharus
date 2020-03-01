@@ -27,6 +27,14 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function AdminIndex(){
+		if (isset($_SESSION['admin'])) {
+			$this->load->view('Admin/index');
+		}else{
+			redirect('login-administrador?error=2'); 
+		}
+	}
+
 	public function logout(){
 		unset($_SESSION['admin']);
 		redirect('login-administrador'); 

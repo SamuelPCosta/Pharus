@@ -52,6 +52,12 @@ header .navbar{
     font-size: 1.8em ;
     font-family: Existence!important;
 }
+td:nth-child(1){
+    min-width: 180px !important;
+}
+tr.theme:hover{
+    background-color: #ffc107;
+}
 #wrapper {
     padding-left: 0;
     padding-top: 55px;

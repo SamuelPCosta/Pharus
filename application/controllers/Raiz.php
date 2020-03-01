@@ -48,14 +48,6 @@ class Raiz extends CI_Controller {
 		}	
 	}
 
-	public function AdminIndex(){
-		if (isset($_SESSION['admin'])) {
-			$this->load->view('Admin/index');
-		}else{
-			redirect('login-administrador?error=2'); 
-		}
-	}
-
 	public function ChecarPreminum(){
 		$this->load->model("Operacoes");
 		$usuario = $this->session->userdata('usuario');

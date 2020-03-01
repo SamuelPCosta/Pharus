@@ -39,7 +39,7 @@
 										        <div class="container usuario">
 								                    <div class="row align-items-center">
 									                    <div class="col mx-auto">
-									                    	<form method="post" action="">
+									                    	<form method="post" action="Raiz/leitura">
 									                       		<input type="number" min="0" max="10000" class="modal_input_time mx-auto" name="leitura" style="font-size: 0.5em">
 									                    </div>
 								                	</div>
