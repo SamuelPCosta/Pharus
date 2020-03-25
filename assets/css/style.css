@@ -1,4 +1,4 @@
-﻿body, html{
+body, html{
 	width: 100%;
     height: 100%;
     font-family: 'Open Sans', sans-serif !important;
@@ -41,7 +41,7 @@ p{
 header .navbar{
     height: 55px;
     z-index: 2;
-    background-color: #22242a !important
+    background-color: #22242a;
 }
 .logo{
     margin: auto;
@@ -51,6 +51,7 @@ header .navbar{
     text-transform: uppercase;
     font-size: 1.8em ;
     font-family: Existence!important;
+    color: #22242a;
 }
 td:nth-child(1){
     min-width: 180px !important;
@@ -133,7 +134,8 @@ tr.theme:hover{
     position: absolute;
     top: 0;
     width: 250px;
-    margin: 0;
+    /*margin: 0;*/
+    overflow-y: auto;
     padding: 0;
     list-style: none;
 }
@@ -199,27 +201,19 @@ tr.theme:hover{
     color: #fff !important;
     background-color: #FFC107 !important;
 }
-.barra-horizontal{
-    background-color: #3b94af;      
-}
 .barra-horizontal .rounded-circle{
-    border: 3px solid white;
     width: 200px !important;
     height: 200px !important;
 }
-.barra-horizontal .rounded-circle i{
+.barra-horizontal .rounded-circle{
     font-size: 6em; 
-    color: white
+    background-color: #3b94af;
 }
 h4{
     color: white;
 }
 .container-fluid .row{
     margin-top: 0;
-}
-.colunas-home{ /*Colunas duplas abaixo da barra central*/
-    min-height: 65vh;
-    padding: 30px !important;
 }
 .colunas-home p{
     width: 100% !important;
@@ -235,14 +229,12 @@ h4{
 }
 .last-container{
     height: 50vh;
-    background-color: #3b94af;
 }
 .last-container h2{
     text-align: center;
     width: 85%;
 }
 .last-container p{
-    text-align: justify;
     width: 85%;
     font-size: 20px;
 }
@@ -279,9 +271,6 @@ h4{
         visibility: visible;    
     }
     .last-container h2{
-        text-align: right;
-    }
-    .last-container p{
         text-align: right;
     }
 }
@@ -337,10 +326,10 @@ h4{
         margin: auto;
     }
     .colunas-home{
-        padding: 60px 100px !important;
+        padding: 60px 85px !important;
     }
     .colunas-home p{
-        width: 85% !important;
+       /*width: 85% !important;*/
     }
     footer{
         /*z-index: 1!important;*/

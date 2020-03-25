@@ -1,4 +1,4 @@
-	     	<div class="container-fluid first-container quemsomos">
+	     	<div class="container first-container quemsomos">
 	     		<div class="row align-items-center py-5">
 	     			<div class="col-lg-12 col-md-12 float-left theme">
 		     			<h1 class="featurette-heading text-center theme mb-3">Nossos parceiros</h1>

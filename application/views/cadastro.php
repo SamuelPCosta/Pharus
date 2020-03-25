@@ -71,7 +71,7 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="usuario" class="form-control input_pass text-capitalize" value="" placeholder="Usuário" required>
+							<input type="text" name="usuario" class="form-control input_pass text-capitalize" value="" placeholder="Nome de usuário" required>
 						</div>
 						<div class="input-group mb-3">
 							<div class="input-group-append">

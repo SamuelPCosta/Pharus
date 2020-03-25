@@ -84,6 +84,7 @@ if (nightModeStorage) {
   $(".vertical-line").toggleClass("bg-dark2");
   $(".master").toggleClass("bg-light");
   $(".theme").toggleClass("text-white");
+  $(".theme-nav").toggleClass("bg-white");
   $(".nperguntas").toggleClass("bg-dark2");
   $(".sidebar-li-a").toggleClass("text-dark");
 }
@@ -99,6 +100,7 @@ $("#toggle-theme").click(function(e) {
   $(".vertical-line").toggleClass("bg-dark2");
   $(".master").toggleClass("bg-light");
   $(".theme").toggleClass("text-white");
+  $(".theme-nav").toggleClass("bg-white");
   $(".nperguntas").toggleClass("bg-dark2");
   $(".sidebar-li-a").toggleClass("text-dark");
 
@@ -124,16 +126,16 @@ function boxTop(idBox) {
 $(document).ready(function() {
     var $target = $('.anime'),
             animationClass = 'anime-init',
-            windowHeight = $(window).height(),
-            offset = windowHeight - (windowHeight / 4);
+            windowHeight = $(window).height()+300,
+            offset = windowHeight - (windowHeight /4);
     var $targetRight = $('.animeRight'),
             animationClass = 'anime-init',
-            windowHeight = $(window).height(),
-            offset = windowHeight - (windowHeight / 4);
+            windowHeight = $(window).height()+300,
+            offset = windowHeight - (windowHeight /4);
     var $targetTop = $('.animeTop'),
             animationClass = 'anime-init',
-            windowHeight = $(window).height(),
-            offset = windowHeight - (windowHeight / 4);
+            windowHeight = $(window).height()+300,
+            offset = windowHeight - (windowHeight /4);
 
     function animeScroll() {
         var documentTop = $(document).scrollTop();

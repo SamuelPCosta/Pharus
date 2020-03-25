@@ -22,7 +22,7 @@
 								}
 								if (!isset($_SESSION['premium'])){//CONFERIRI SE O USUÁRIO É PREMIUM
 								?>
-									<a href="" data-toggle="modal" data-target="#addvalores" class="position-relative text-warning anime" style="font-size: 1.8em; top: -105px; left: 200px"><h1><i class='fas fa-plus-circle'></i></a>
+									<a href="" data-toggle="modal" data-target="#addvalores" class="position-relative text-warning" style="font-size: 1.8em; top: -105px; left: 200px"><h1><i class='fas fa-plus-circle'></i></a>
 										<!-- Modal -->
 										<div class="modal fade" id="addvalores" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
 										  <div class="modal-dialog modal-dialog-centered" role="document">
@@ -39,7 +39,7 @@
 										        <div class="container usuario">
 								                    <div class="row align-items-center">
 									                    <div class="col mx-auto">
-									                    	<form method="post" action="Raiz/leitura">
+									                    	<form method="post" action="Raiz/leituras">
 									                       		<input type="number" min="0" max="10000" class="modal_input_time mx-auto" name="leitura" style="font-size: 0.5em">
 									                    </div>
 								                	</div>
@@ -88,55 +88,65 @@
 			</div>
 			<div class="container-fluid">
 				<!-- Three columns -->
-				<div class="row align-items-center py-5 mt-2 barra-horizontal">
-					<div class="col-lg-4 my-2 text-center anime">
-						<div class="rounded-circle mx-auto d-table">
-							<i class="fas fa-seedling align-middle d-table-cell"></i>
+				<div class="row align-items-center py-5 mt-2 barra-horizontal card card-theme">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4 my-2 text-center animeTop">
+								<div class="rounded-circle mx-auto d-table">
+									<i class="fas fa-seedling align-middle d-table-cell text-white"></i>
+								</div>
+								<h4 class="py-3 theme">Lorem Ipsum</h4>
+							</div><!-- /.col-lg-4 -->
+							<div class="col-lg-4 my-2 text-center animeTop">
+								<div class="rounded-circle mx-auto d-table">
+									<i class="fas fa-plug align-middle d-table-cell text-white"></i>
+								</div>
+								<h4 class="py-3 theme">Maneire seu Consumo</h4>
+							</div><!-- /.col-lg-4 -->
+							<div class="col-lg-4 my-2 text-center animeTop">
+								<div class="rounded-circle mx-auto d-table">
+									<i class="fas fa-power-off align-middle d-table-cell text-white"></i>
+								</div>
+								<h4 class="py-3 theme">Lorem Ipsum</h4>
+							</div><!-- /.col-lg-4 -->
 						</div>
-						<h4 class="py-3 text-white">Lorem Ipsum</h4>
-					</div><!-- /.col-lg-4 -->
-					<div class="col-lg-4 my-2 text-center anime">
-						<div class="rounded-circle mx-auto d-table">
-							<i class="fas fa-plug align-middle d-table-cell"></i>
-						</div>
-						<h4 class="py-3 text-white">Maneire seu Consumo</h4>
-					</div><!-- /.col-lg-4 -->
-					<div class="col-lg-4 my-2 text-center anime">
-						<div class="rounded-circle mx-auto d-table">
-							<i class="fas fa-power-off align-middle d-table-cell"></i>
-						</div>
-						<h4 class="py-3 text-white">Lorem Ipsum</h4>
-					</div><!-- /.col-lg-4 -->
+					</div>
 				</div><!-- /.row -->
 			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xl-6 col-lg-12 colunas-home d-table line">
+			<div class="container">
+				<div class="row my-4">
+					<div class="col-xl-6 col-lg-12 colunas-home d-table">
 						<div class="d-table-cell align-middle">
-						<h2 class="text-center anime theme">Heading</h2><br>
+						<h2 class="text-center anime theme">Domicílio</h2><br>
 						<p class="anime theme">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-12 colunas-home d-table">
 						<div class="d-table-cell align-middle theme">
-						<h2 class="text-center animeRight theme">Heading</h2><br>
+						<h2 class="text-center animeRight theme">Empresa</h2><br>
 						<p class="animeRight">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
 						</div>
 					</div>
 				</div>
-				<div class="row align-items-center">
-					<div class="col-xl-6 col-lg-12 last-container py-5 px-5 d-table">
-						<div class="align-middle d-table-cell">	
-							<h2 class="anime text-white">Heading</h2>
-							<p class="mx-auto anime text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. </p>
+			</div>
+			<div class="container-fluid">
+				<!-- Three columns -->
+				<div class="row align-items-center card card-theme">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-6 col-lg-12 last-container py-5 px-5 d-table">
+								<div class="align-middle d-table-cell">	
+									<h2 class="anime theme text-center">Heading</h2>
+									<p class="mx-auto anime theme text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. </p>
+								</div>
+							</div>
+							<div class="col-xl-6 col-lg-12 last-container py-5 text-center d-table">
+								<img src="<?= base_url()?>assets/img/lampada.png" class="py-3 animeRight" height=100% >
+							</div>
 						</div>
 					</div>
-					<div class="col-xl-6 col-lg-12 last-container py-5 text-center d-table">
-						<img src="<?= base_url()?>assets/img/lampada.png" class="py-3 animeRight" height=100% >
-					</div>
-				</div>
+				</div><!-- /.row -->
 			</div>
-		</div>
 		<!--conteudo-->
 
 	<!--Demais scripts-->

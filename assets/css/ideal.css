@@ -36,15 +36,18 @@ label{
 	border:none;
 	padding: 10px 10px; 
 	cursor: pointer;
-	width: 90%; 
+	width: 45%; 
+	display: inline-block;
 	margin: auto; 
-	margin-bottom: 10px;
+	margin-bottom: 10px;	
 	margin-right: 15%;
 	background-color: #4f585d;
 	color: #fff; 
 	box-shadow:0 5px 0 #121417dd;  
 	text-align: center;
 	border-radius: 10px;
+	background-color: #ffd86d !important;
+	box-shadow:0 5px 0 #846B21 !important; 
 	-webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
@@ -58,9 +61,8 @@ label{
 	top: 5px;
 	box-shadow:none !important;
 }
-.alternativa_a,.alternativa_b,.alternativa_c,.alternativa_d{
-	background-color: #ffd86d !important;
-	box-shadow:0 5px 0 #846B21 !important;  
+.alternativa_a{
+	margin-left: 5% !important; 
 }
 .alternativa_b{
 	background-color: #e8bd46;
@@ -69,6 +71,7 @@ label{
 .alternativa_c{
 	background-color: #CC9E1F;
 	box-shadow:0 5px 0 #382A02;
+	margin-left: 5% !important;
 }
 h4{
 	color: #343a40;

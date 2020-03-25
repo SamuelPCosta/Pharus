@@ -57,6 +57,21 @@ class Raiz extends CI_Controller {
 		}
 	}
 
+	public function leituras(){
+		if ($_POST["btn"]=="salvar") {
+			$leitura = $this->input->post("leitura"); //Recebe a leitura inserida
+			date_default_timezone_set('America/Fortaleza');
+			$minutos = (date('H')*60)+date('i');
+			echo $minutos;
+			echo "<br>";
+			$minutosTotais = 1440;
+			$porcentagemDia = ($minutos/$minutosTotais)*100;
+			$estimativa = ($leitura*100)/$porcentagemDia;
+			echo $estimativa;
+		}
+		redirect('index');
+	}
+
 	public function consumo(){
 		date_default_timezone_set('America/Sao_Paulo');
 		if (isset($_SESSION['login'])) {

@@ -27,14 +27,14 @@
 <div class="master bg-light">
 	<!-- Header -->
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-0 w-100">
-			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo.png" width=35><h1 class="text-white d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
-			<a href="#menu-toggle" class="btn text-white position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
-              <a class="dropdown btn text-white position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;">
+		<nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0 w-100">
+			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo.png" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
+			<a href="#menu-toggle" class="btn text-white text-dark sidebar-li-a position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
+              <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;">
                 <i class="fas fa-bell"></i>
               </a>
               <div class="btn-group">
-                <div class="dropdown-menu card-theme theme dropdown-menu-right" id="painelnot" style="top:100px; width: 320px; overflow-x: auto; max-height: 350px">
+                <div class="dropdown-menu card-theme theme dropdown-menu-right" id="painelnot" style="top:100px; width: 320px; overflow-x: auto; max-height: 350px; overflow-y: hidden;">
                     <table class="mx-auto"> 
                         <tr class="dropdown-item theme">
                             <td class="py-2 theme">Seu consumo foi ótimo!</td>
@@ -74,7 +74,7 @@
                     </table>
               </div>
             </div>
-            <a href="#menu-toggle" class="btn text-white position-fixed" id="toggle-theme" title="Modo noturno" onclick="update(myChart)"><i class="fas fa-adjust"></i></a>
+            <a href="#menu-toggle" class="btn text-white position-fixed sidebar-li-a text-dark" id="toggle-theme" title="Modo noturno" onclick="update(myChart)"><i class="fas fa-adjust"></i></a>
 		</nav>
 	</header>
 	<!-- Header -->
@@ -128,7 +128,7 @@
                 ?>
                 <div class="dropdown-divider"></div>
                 <li class="">
-                    <a href="login/logout" class="sidebar-li-a text-dark" onclick="destroyphoto()"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
+                    <a href="login/logout" class="sidebar-li-a text-dark" onclick="destroyphoto()"><i class="fas fa-sign-out-alt pb-5"></i> Sair</a><!--Controller login/ função logout-->
                 </li>
             </ul>
         </div>
