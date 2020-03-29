@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Cadastro_Meta extends CI_Controller {
+class CadastroMeta extends CI_Controller {
 	public function adicionar(){
 		if($this->session->userdata('meta')==$this->input->post("meta")){
 			redirect('metas?error=1');

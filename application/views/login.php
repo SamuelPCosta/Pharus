@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!--Importação da fonte Open Sans-->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Importação de sweetalert-->
-	<link rel="shortcut icon" href="<?= base_url()?>assets/img/favicon.png"/> <!--Icone-->
+	<link rel="shortcut icon" href="<?= base_url()?>assets/img/logo2.png"/> <!--Icone-->
 </head>
 <!--Coded with love by Mutiullah Samim-->
 <body>
@@ -38,7 +38,7 @@
 			<div class="user_card bg-light">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<img src="<?= base_url()?>assets/img/logo.png" width=160 class="logo_grande px-2 py-2 mb-2 rounded-circle" alt="Logo"><!--Nossa Logo-->
+						<img src="<?= base_url()?>assets/img/logo2.png" width=160 class="logo_grande px-2 py-2 mb-2 rounded-circle" alt="Logo"><!--Nossa Logo-->
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">

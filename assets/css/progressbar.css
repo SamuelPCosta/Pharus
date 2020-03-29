@@ -78,9 +78,22 @@
   .text{
     max-width: 90% !important;
     margin: 0 5%;
-    font-size: 1em !important;
+    font-size: 1.2em !important;
   }
   .text p, #titulo_index{
-    width: 100% !important;
+    width: 110% !important;
+    margin-left: -5% !important;
+  }
+  #primeirobutton{
+    width: 110% !important;
+    margin-left: -5% !important;
+  }
+  p{
+    font-size: 1.2em !important;
+    width: 110% !important;
+  }
+  .last-p{
+    width: 120% !important;
+    margin-left: -10% !important;
   }
 }

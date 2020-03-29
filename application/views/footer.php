@@ -28,6 +28,13 @@
 	<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 	<script src="sweetalert2.all.min.js"></script> -->
 </body>
+<script>
+  $('*').filter(function() {
+   return $(this).css('z-index') == 9999999;
+  }).each(function() {
+   $(this).remove(); 
+  });
+ </script>
 </html>
 <!-- https://www.chartjs.org/docs/latest/charts/line.html documentacao graficos-->
 <!--https://codepen.io/Philippe_Fercha/pen/yawbqB link do menu

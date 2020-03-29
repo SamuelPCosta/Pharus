@@ -84,7 +84,7 @@
 	line-height: 1.1em
 }
 .metas h2, .metas input, .metas button, .metas a{
-	width: 75% !important
+	width: 60% !important
 }
 .colunas-meta{
 	min-height: 35vh;
@@ -131,12 +131,16 @@ textarea:focus, input:focus, select:focus {
     }
 }
 @media(max-width:768px) {
-	.colunas-meta h1, .colunas-meta p,.container-metas h2, 
+	.colunas-meta h1,.container-metas h2, 
 	#meta input, #meta button, .instrucoes, 
 	.alert-danger, #consumoideal, #mensagem, #notificationdiv{
 		width: 90% !important;
 	}
 	.metas.px-5{
 		padding: 0px !important;
+	}
+	.texto-corrido{
+		width: 115% !important;
+		margin-left: -7% !important;
 	}
 }

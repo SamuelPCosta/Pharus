@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
     <!--Importação da fonte Open Sans-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700" rel="stylesheet">
-	<link rel="shortcut icon" href="<?= base_url()?>assets/img/favicon.png"/> <!--Icone-->
+	<link rel="shortcut icon" href="<?= base_url()?>assets/img/logo2.png"/> <!--Icone-->
 	<!-- O comando base_url() é um atalho para o enderço da nossa base-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="<?= base_url()?>assets/js/jquery.maskMoney.js" type="text/javascript"></script>
@@ -27,8 +27,8 @@
 <div class="master bg-light">
 	<!-- Header -->
 	<header>
-		<nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0 w-100">
-			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo.png" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
+		<nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0">
+			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn text-white text-dark sidebar-li-a position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
               <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;">
                 <i class="fas fa-bell"></i>
@@ -89,7 +89,7 @@
             	</li>
 			    <div class="dropdown-divider"></div>
             	<li id="Usuario" class="">
-            		<a href="usuario" class="text-capitalize sidebar-li-a text-dark"><i class="fas fa-user"></i><?php echo $this->session->userdata('usuario'); ?></a>
+            		<a href="usuario" class="text-capitalize sidebar-li-a text-dark"><img src="<?= base_url()?>assets/fotos/user_man.png" class="photo_user rounded-circle mr-2" width=35 style="margin-left: -11px; margin-top:-4px; height: 35px; object-fit: cover;"><?php echo $this->session->userdata('usuario'); ?></a>
             	</li>
                 <div class="dropdown-divider"></div>
                 <li id="Metas" class="">
@@ -127,8 +127,8 @@
                     }
                 ?>
                 <div class="dropdown-divider"></div>
-                <li class="">
-                    <a href="login/logout" class="sidebar-li-a text-dark" onclick="destroyphoto()"><i class="fas fa-sign-out-alt pb-5"></i> Sair</a><!--Controller login/ função logout-->
+                <li class="mb-5">
+                    <a href="login/logout" class="sidebar-li-a text-dark" onclick="destroyphoto()"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
                 </li>
             </ul>
         </div>

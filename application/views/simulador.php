@@ -1,7 +1,7 @@
 <head>
 	<style type="text/css">
 	input, select{
-		width: 80px;
+		width: 72px;
 		height: 30px;
 		background-color: #eee;
 		border: none;
@@ -11,7 +11,7 @@
 		outline: 0;
 	}
 	select{
-		width: 80px;
+		width: 72px;
 		padding-left: 0px;
 		margin-bottom: 10px;
 	}
@@ -44,12 +44,11 @@
 	}
 	</style>
 </head>
-<section id="containerSimulador">
-	<div class="container mt-5">
+	<div class="container first-container mt-5">
 		<!-- <h1 class="mb-5 text-uppercase theme">Simulador de Consumo</h1> -->
 		<form method="post" action="Admin/Consumir">
-		<div class="row">
-			<h2 class="mt-0 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme" style="margin-left: 0px;">Simulador de Consumo</h2>
+		<div class="row align-items-center">
+			<h2 class="mt-0 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme mx-3" >Simulador de Consumo</h2>
 				<!-- 
 				• Criar array com nomes de aparelhos;
 				• Criado laço foreach;
@@ -82,6 +81,7 @@
 							<option value='1500'>1500W (Lavadora de Louças)</option>
 							<option value='4500'>4500W (Chuveiro Elétrico)</option>" 
 				?>
+			</div>
 				<div class="card py-5 px-5 mt-4 mb-0 shadow card-theme">
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">	
@@ -231,6 +231,7 @@
 					?>
 					</table>
 				</div> -->	
+		</div>
 		</div>
 		<br>
 		<button type="submit" name="button" class="btn login_btn bg-warning mx-auto d-block w-25 mt-1">Simular consumo</button>

@@ -118,13 +118,13 @@
 					<div class="col-xl-6 col-lg-12 colunas-home d-table">
 						<div class="d-table-cell align-middle">
 						<h2 class="text-center anime theme">Domicílio</h2><br>
-						<p class="anime theme">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
+						<p class="anime theme mb-5">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-12 colunas-home d-table">
 						<div class="d-table-cell align-middle theme">
 						<h2 class="text-center animeRight theme">Empresa</h2><br>
-						<p class="animeRight">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
+						<p class="animeRight mb-5">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
 						</div>
 					</div>
 				</div>
@@ -137,7 +137,7 @@
 							<div class="col-xl-6 col-lg-12 last-container py-5 px-5 d-table">
 								<div class="align-middle d-table-cell">	
 									<h2 class="anime theme text-center">Heading</h2>
-									<p class="mx-auto anime theme text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. </p>
+									<p class="mx-auto anime theme text-justify last-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. </p>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-12 last-container py-5 text-center d-table">
