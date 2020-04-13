@@ -84,34 +84,28 @@
         <div id="wrapper" class="position-relative">
         <div id="sidebar-wrapper" class="shadow bg-white">
             <ul class="sidebar-nav">
+                <li id="Usuario" class="">
+                    <a href="usuario" class="text-capitalize sidebar-li-a text-dark"><img src="<?= base_url()?>assets/fotos/user_man.png" class="photo_user rounded-circle mr-2" width=35 style="margin-left: -11px; margin-top:-4px; height: 35px; object-fit: cover;"><?php echo $this->session->userdata('usuario'); ?></a>
+                </li>
+                <div class="dropdown-divider"></div>
             	<li id="Home" class="">
             		<a href="index" class="text-capitalize sidebar-li-a text-dark"><i class="fas fa-home"></i>Home</a>
             	</li>
-			    <div class="dropdown-divider"></div>
-            	<li id="Usuario" class="">
-            		<a href="usuario" class="text-capitalize sidebar-li-a text-dark"><img src="<?= base_url()?>assets/fotos/user_man.png" class="photo_user rounded-circle mr-2" width=35 style="margin-left: -11px; margin-top:-4px; height: 35px; object-fit: cover;"><?php echo $this->session->userdata('usuario'); ?></a>
-            	</li>
-                <div class="dropdown-divider"></div>
                 <li id="Metas" class="">
                     <a href="metas" class="sidebar-li-a text-dark"><i class="fas fa-bookmark"></i>Metas</a>
                 </li>
-			    <div class="dropdown-divider"></div>
                 <li id="Consumo" class="">
                     <a href="consumo" class="sidebar-li-a text-dark"><i class="fas fa-coins"></i>Consumo</a>
                 </li>
-                <div class="dropdown-divider"></div>
                 <li id="Ideal de Consumo" class="">
                     <a href="idealdeconsumo" class="sidebar-li-a text-dark"><i class="fas fa-funnel-dollar"></i>Ideal de Consumo</a>
                 </li>
-                <div class="dropdown-divider"></div>
                 <li id="Simulador" class="">
                     <a href="simulador" class="sidebar-li-a text-dark"><i class="fas fa-laptop-code"></i>Simulador</a>
                 </li>
-                <div class="dropdown-divider"></div>
                 <li id="Dicas" class="">
                     <a href="dicas" class="sidebar-li-a text-dark"><i class="fas fa-lightbulb"></i>Dicas</a>
                 </li>
-                <div class="dropdown-divider"></div>
                 <li id="Conquistas" class="">
                     <a href="conquistas" class="sidebar-li-a text-dark"><i class="fas fa-star"></i>Conquistas</a>
                 </li>
@@ -119,14 +113,12 @@
                     if (!isset($_SESSION['premium'])){
                         //CONFERIRI SE O USUÁRIO É PREMIUM
                 ?>
-                <div class="dropdown-divider"></div>
                 <li id="Atualize" class="">
                     <a href="atualize" class="sidebar-li-a text-dark"><i class="fas fa-award"></i>Atualize</a>
                 </li>
                 <?php
                     }
                 ?>
-                <div class="dropdown-divider"></div>
                 <li class="mb-5">
                     <a href="login/logout" class="sidebar-li-a text-dark" onclick="destroyphoto()"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
                 </li>

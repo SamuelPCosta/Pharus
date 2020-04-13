@@ -133,7 +133,7 @@ textarea:focus, input:focus, select:focus {
 @media(max-width:768px) {
 	.colunas-meta h1,.container-metas h2, 
 	#meta input, #meta button, .instrucoes, 
-	.alert-danger, #consumoideal, #mensagem, #notificationdiv{
+	.alert-danger, #consumoideal, #notificationdiv{
 		width: 90% !important;
 	}
 	.metas.px-5{
@@ -142,5 +142,9 @@ textarea:focus, input:focus, select:focus {
 	.texto-corrido{
 		width: 115% !important;
 		margin-left: -7% !important;
+	}
+	#mensagem{
+		width: 90% !important;
+		margin-left: 5% !important;
 	}
 }

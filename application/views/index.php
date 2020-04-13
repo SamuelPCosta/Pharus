@@ -13,16 +13,16 @@
 							if (isset($gasto)) {
 								if ($gasto<=100) {
 									?>
-									<div class="chart anime theme" data-percent="<?php echo $gasto; ?>" data-scale-color="#ffb400"><span class="texto_grafico"><p><?php echo number_format($gasto, 1); ?>%</p><div id="tempo"><p>do limite em<br><span id="horas"><?php date_default_timezone_set('America/Fortaleza'); echo date('H'); ?></span> horas</p></span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
-									<?php
+									<div class="chart anime theme" data-percent="<?php echo $gasto; ?>" data-scale-color="#ffb400"><p id="vcgastou">Você gastou</p><div id="porcentagem"><p id="numeroporcentagem"><?php echo number_format($gasto, 1); ?>%</p><span id="horas">do limite em <?php date_default_timezone_set('America/Fortaleza'); echo date('H'); ?>h</span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
+								<?php
 								} else {
 									?>
-									<div class="chart anime theme" data-percent="<?php echo ($gasto-100); ?>" data-scale-color="#ffb400"><span class="texto_grafico"><p><?php echo number_format(($gasto-100), 1); ?>%</p><div id="tempo"><p>excedido em <br><span id="horas"><?php date_default_timezone_set('America/Fortaleza'); echo date('H'); ?></span> horas</p></span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
+									<div class="chart anime theme" data-percent="<?php echo ($gasto-100); ?>" data-scale-color="#ffb400"><p id="vcgastou">Você excedeu</p><div id="porcentagem"><p id="numeroporcentagem"><?php echo number_format(($gasto-100), 1); ?>%</p><span id="horas">do limite em <?php date_default_timezone_set('America/Fortaleza'); echo date('H'); ?>h</span></div></div><!--Consumo do usuário, consumo do usuário também é passado como parâmetro para o % em data-percent (Acima)-->
 									<?php
 								}
 								if (!isset($_SESSION['premium'])){//CONFERIRI SE O USUÁRIO É PREMIUM
 								?>
-									<a href="" data-toggle="modal" data-target="#addvalores" class="position-relative text-warning" style="font-size: 1.8em; top: -105px; left: 200px"><h1><i class='fas fa-plus-circle'></i></a>
+									<a href="" id="addButton" data-toggle="modal" data-target="#addvalores" class="position-relative text-warning animeTop"><h1><i class='fas fa-plus-circle'></i></a>
 										<!-- Modal -->
 										<div class="modal fade" id="addvalores" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
 										  <div class="modal-dialog modal-dialog-centered" role="document">

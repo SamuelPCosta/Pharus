@@ -61,23 +61,27 @@
 				</div>
 				<div class="d-flex justify-content-center form_container">
 					<form method="post" action="cadastro/adicionar">
+						<input type="text" name="email" class="form-control input_user position-absolute" value="" placeholder="" style="opacity: 0">
+						<input type="password" name="senha" class="form-control input_user position-absolute" value="" placeholder="" style="opacity: 0">
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-address-card"></i></i></span>
 							</div>
-							<input type="text" name="nome" class="form-control input_user text-capitalize" value="" placeholder="Nome completo" required autofocus>
+							<input type="text" name="nome" class="form-control input_user text-capitalize" value="<?php if(isset($_SESSION['dadoserro'])){echo $_SESSION['dadoserro']['nome'];}?>" placeholder="Nome completo" required autofocus>
 						</div>
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="usuario" class="form-control input_pass text-capitalize" value="" placeholder="Nome de usuário" required>
+							<input type="text" name="usuario" class="form-control input_pass text-capitalize" value="" placeholder="Nome de usuário" style="display: none">
+							<!-- Essa e a gambiarra pra tirar autocomplete -->
+							<input type="text" name="usuario" class="form-control input_pass text-capitalize" value="<?php if(isset($_SESSION['dadoserro']['usuario'])){echo $_SESSION['dadoserro']['usuario'];}?>" placeholder="Nome de usuário" required>
 						</div>
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-envelope"></i></span>
 							</div>
-							<input type="email" name="email" class="form-control input_user" value="" placeholder="Email" required>
+							<input type="email" name="email" class="form-control input_user" value="<?php if(isset($_SESSION['dadoserro'])){echo $_SESSION['dadoserro']['email'];}?>" placeholder="Email" required>
 						</div>	
 						<div class="input-group mb-3">
 							<div class="input-group-append">
@@ -96,7 +100,7 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-coins"></i></span>
 							</div>
-							<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney" value="" placeholder="Preço por kWh"  min="0.10" max="3.00" step="0.01">
+							<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney" value="<?php if(isset($_SESSION['dadoserro'])){echo $_SESSION['dadoserro']['tarifa_kwh'];}?>" placeholder="Preço por kWh"  min="0.10" max="3.00" step="0.01">
 						</div>	
 						<a href="login" class="ml-1 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2 text-dark" style="position: relative; top: -35px; z-index: 333"></i></a>		
 						<a href="login" class="float-right" data-toggle="modal" data-target="#saibamais" style="transform: translateX(25px);">Entenda melhor</a>

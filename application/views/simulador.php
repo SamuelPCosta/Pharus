@@ -85,7 +85,7 @@
 				<div class="card py-5 px-5 mt-4 mb-0 shadow card-theme">
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">	
-							<ul class="col-xl col-md-12 mx-auto px-5 theme">
+							<ul class="col-xl col-md-12 mx-auto px-5 theme text-justify">
 								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
 								<li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
 								<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
@@ -95,7 +95,7 @@
 						</div>
 						<div class="vertical-line" style="height: 250px!important"></div>
 						<div class="col-xl col-md-12 mx-auto px-0">
-							<ul class="col-xl col-md-12 mx-auto px-5 theme">
+							<ul class="col-xl col-md-12 mx-auto px-5 theme text-justify">
 								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
 								<li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
 								<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>

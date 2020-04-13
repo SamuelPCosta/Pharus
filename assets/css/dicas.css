@@ -65,6 +65,10 @@
 		min-height: 375px !important;
 		height: auto !important;
 	}
+	p{
+		font-size: 1.2em !important;
+		width: 100% !important;
+	}
 }
 /*#####################CONQUISTAS#####################*/
 /*#####################CONQUISTAS#####################*/

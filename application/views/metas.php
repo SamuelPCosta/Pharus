@@ -1,4 +1,4 @@
-			<div class="container first-container container-metas">
+			<div class="container first-container px-4 container-metas">
 	        <div class="row align-items-center">
 	     		<div class="col-xl-6 col-md-12">
 	     			<h2 class="valor margin-top theme">
@@ -106,7 +106,7 @@
 				        			if (isset($_GET['error'])){
 				        				if ($_GET['error']==1) {
 				        		?>
-				        			<div class='alert alert-danger w-75' role='alert'>Para mudar sua meta altere<br> o valor  do campo numérico acima.</div>
+				        			<div class='alert alert-danger w-100 mx-auto' role='alert'>Para mudar sua meta altere<br> o valor  do campo numérico acima.</div>
 				        		<?php
 				        				}
 				        			}
@@ -124,8 +124,8 @@
 		        </div>
             </div>
             </div>
-            <div class="container texto_metas shadow-lg bg-white">
-            	<div class="row align-items-center">
+            <div class="container texto_metas px-4">
+            	<div class="row align-items-center shadow-lg">
             		<div class="col-xl-8 col-md-12 colunas-meta card-theme theme">
             			<h1>Racionalize</h1><br>
             			<p class="texto-corrido">&emsp;&emsp;O consumo de energia elétrica vem aumentando cada vez mais e isso traz uma série de problemas para o nosso ecossistema, pois no processo de produção dessa corrente elétrica há uma série de fatores prejudiciais, como é o caso da construção de hidrelétricas (representa mais de 90% de nossos recursos energéticos) que contribuem para o desmatamento, areamento do solo ou mesmo na extinção de espécies de animais, além da energia elétrica, eólica e dentre outros. Sendo assim, deve-se evitar esse consumo desenfreado, logo, visando o bem estar social e ambiental.</p>

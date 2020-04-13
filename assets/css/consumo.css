@@ -41,10 +41,19 @@ h2.card-theme{
 #bar-chart, #line-chart{
 	width: 500px;
 	height: 700px;
+	max-width: 110% !important;
 	margin-top: 50px;
 }
 .container-consumo{
 	height: 50vh;
+}
+@media(max-width: 1600px){
+	#bar-chart, #line-chart{
+		max-width: 85% !important;
+	}
+	h2.card-theme{
+		width: 85% !important;
+	}
 }
 @media(max-width: 1200px){
 	#bar-chart, #line-chart{
@@ -55,15 +64,14 @@ h2.card-theme{
 @media(max-width: 768px){
 	#line-chart ,#bar-chart{
         height: 310px !important;
-        width: 340px !important
+       	width: 120% !important;
     }
     h2.card-theme{
 		border-left: 5px solid #ffc107;
-		width: 120% !important;
-		margin-left: -10% !important;
+		width: 100% !important;
+		font-size: 1.6em;
 	}
 	.alert{
-		width: 120% !important;
-		margin-left: -10% !important;
+		width: 100% !important;
 	}
 }

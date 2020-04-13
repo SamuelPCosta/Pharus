@@ -6,12 +6,29 @@ $("#menu-toggle").click(function(e) {
 toda vez que o botão do menu é clicado*/
 });
 
+var largura = window.innerWidth;
+const containerconsumo = document.getElementById("containerconsumo")
+if (largura<1600 && largura>768) {
+  document.body.style.zoom = "85%"
+  if (containerconsumo !== null) {document.getElementById("containerconsumo").style.zoom = "117.65%"}
+}
 window.onresize=function() { 
     var largura = window.innerWidth;
+    const containerconsumo = document.getElementById("containerconsumo")
     if (largura>=768){ /*Quando ampliar a tela*/
         var menu = document.getElementById("wrapper"); /*O menu*/
         menu.classList.remove("toggled"); /*Volta a colapsar*/
         document.getElementById("dark").classList.remove("visible"); 
+    }
+    if (largura>=1600){ /*Quando ampliar a tela*/
+      document.body.style.zoom = "100%"
+      if (containerconsumo !== null) {document.getElementById("containerconsumo").style.zoom = "100%"}
+    }else if(largura<=768){
+      document.body.style.zoom = "100%"
+      if (containerconsumo !== null) {document.getElementById("containerconsumo").style.zoom = "117.65%"}
+    }else{
+      document.body.style.zoom = "85%"
+      if (containerconsumo !== null) {document.getElementById("containerconsumo").style.zoom = "117.65%"}
     }
 }
 
@@ -167,11 +184,3 @@ $(document).ready(function() {
         setTimeout(function() {animeScroll()}, 150);
     });
 });
-
-/*###########Popover###########*/
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-$('.popover-dismiss').popover({
-  trigger: 'focus'
-})
