@@ -59,9 +59,9 @@
 				sum(PotênciaHoras);
 				-->
 				<?php $cozinha = array('Geladeira','Freezer','Exaustor','Liquidificador','Microondas','Fogão Elétrico','Lava-Louça');
-				$quarto = array('Vídeogame','Computador','Impressora','Estabilizador','Ar-Condicionado', 'Aparelho 1', 'Aparelho 2');
-				$sala = array('Televisão','Ventilador', 'Aparelho 1', 'Aparelho 2', 'Aparelho 3', 'Aparelho 4');
+				$quartosala = array('Vídeogame','Computador','Impressora','Estabilizador','Ar-Condicionado', 'Ventilador', 'Televisão');
 				$outros = array('Lâmpada Fluor.','Lâmpada Incan.','Lavadora','Secador','Ferro Elétrico','Chuveiro Elétrico');
+				$personalizados = array('Aparelho 1', 'Aparelho 2', 'Aparelho 3', 'Aparelho 4', 'Aparelho 5', 'Aparelho 6');
 				$options = "<option value='15'>15W (PS1)</option>
 							<option value='180'>180W (Computador)</option>
 							<option value='1500'>1500W (Ar-Condicionado)</option>
@@ -129,7 +129,7 @@
 							<div id="quarto">
 								<table>					
 								<?php
-								foreach ($quarto as $aparelho) {
+								foreach ($quartosala as $aparelho) {
 									$i=1;
 									echo "<tr><td style='width:330px;'><h2 class='theme'>".$aparelho.":</h2></td>
 										<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
@@ -149,7 +149,7 @@
 							<div id="sala">
 								<table>					
 								<?php
-								foreach ($sala as $aparelho) {
+								foreach ($outros as $aparelho) {
 									$i=1;
 									echo "<tr><td style='width:330px;'><h2 class='theme'>".$aparelho.":</h2></td>
 										<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
@@ -165,7 +165,7 @@
 							<div id="outros">
 								<table>					
 								<?php
-								foreach ($outros as $aparelho) {
+								foreach ($personalizados as $aparelho) {
 									$i=1;
 									echo "<tr><td style='width:330px;'><h2 class='theme'>".$aparelho.":</h2></td>
 										<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>

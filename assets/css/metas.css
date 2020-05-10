@@ -33,11 +33,14 @@
 #meta input{
 	height: 40px;
 	margin: 0 auto;
-	border: 2px solid #ddd;
+	border: 1px solid #80808055;
 	text-align: center;
 	display: block;
 	background-color: #ddd;
 	border-radius: 20px;
+}
+.bg-dark.text-white #meta input{
+	background-color: #464b51 !important;
 }
 .container-metas button{
 	margin-top: 10px;
@@ -65,7 +68,7 @@
 	border-radius: 10px;
 }
 #mensagem{
-	margin-top: 42px;
+	margin-top: 20px;
 	margin-bottom: 0px;
 	color: #fff;
 	background-color: #3b94af !important;

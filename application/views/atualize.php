@@ -2,7 +2,7 @@
 				<div class="card py-5 px-5 mt-4 mb-0 shadow card-theme">
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">
-							<h2 class="theme px-5">Lorem ipsum dolor</h2>
+							<h2 class="theme px-5">Atualize para conta Pro</h2>
 							<p class="my-3 text-justify theme px-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
 						</div>
 						<div class="vertical-line"></div>
@@ -61,7 +61,7 @@
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">	
 							<ul class="col-xl col-md-12 mx-auto px-5 theme">
-								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+								<li>Vantagens</li>
 								<li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
 								<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
 								<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
@@ -71,7 +71,7 @@
 						<div class="vertical-line"></div>
 						<div class="col-xl col-md-12 mx-auto px-0">
 							<ul class="col-xl col-md-12 mx-auto px-5 theme">
-								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+								<li>Desvantagens</li>
 								<li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
 								<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
 								<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>

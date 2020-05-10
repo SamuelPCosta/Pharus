@@ -47,6 +47,57 @@ h2.card-theme{
 .container-consumo{
 	height: 50vh;
 }
+
+/*info*/
+#containerinfo h2, #containerinfo .dropdown-divider{
+	width: 80% !important; margin-left: 0px!important
+}
+
+.icones .point1, .icones .point2, .icones .point3{ color: #464b51;}
+.icones .text-white .point1, .icones .text-white .point2 , .icones .text-white .point3, #circulofixo{
+	color: #dadada; border-color: #dadada; 
+}
+.icones .point1:hover, .icones .point2:hover , .icones .point3:hover{ color: #ffc107 !important; transition: 0.2s ease-in }
+.icones .point1:after, .icones .point2:after , .icones .point3:after{ color: #ffc107 !important;}
+
+.imagematualdocirculo{color: #ffc107!important;}
+
+.textogiro{
+	position: absolute;
+	z-index: -1;
+}
+
+.textodogirovisivel{
+	position: static!important;
+	z-index: 1!important;
+}
+
+#circulomovimento{
+	animation: girar 10s infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes girar{
+	0% {transform: rotate(0deg); z-index: 0;}
+ 	100% {transform: rotate(360deg); z-index: 0;}
+}
+
+.down-enter-active { animation: 0.4s down-enter; }
+.down-leave-active { animation: 0.4s down-leave; }
+
+@keyframes down-enter {
+  0% { clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0);}
+  50% { clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 100%);}
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);}
+}
+
+@keyframes down-leave {
+  0% { clip-path: polygon(45% 0, 100% 0, 100% 100%, 0 100%, 0 45%);}
+  25% { clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);}
+  50% {clip-path: polygon(100% 55%, 100% 55%, 100% 100%, 55% 100%, 55% 100%);}
+  100% {clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);}
+}
+
 @media(max-width: 1600px){
 	#bar-chart, #line-chart{
 		max-width: 85% !important;
@@ -59,7 +110,49 @@ h2.card-theme{
 	#bar-chart, #line-chart{
         padding-right: 0px !important;
         padding-left: 0px !important;
-    }
+    }  
+
+    #containerinfo h2, #containerinfo .dropdown-divider{
+		width: 100% !important; 
+	}
+	#containerinfo .my-5{
+		position: relative;
+		top: -80px;
+	}
+
+	#containerinfo .col-xl-2{
+		text-align: center;
+	}
+	#containerinfo .fas{
+		padding-left: 0px!important;
+	}
+
+	#giroimagens div{
+		width: 300px !important;
+		height: 300px !important;
+		top: 50px !important;
+		margin: auto;
+		clear: both !important;
+		float: none !important;
+		display: block;
+	}
+	/*#containerinfo p{
+		transform: translateY(100px);
+		margin-bottom: 100px;
+	}*/
+	#circulomovimento{
+		top: -296px !important;
+	}
+
+	.textogiro{
+		position: absolute;
+		z-index: -1;
+	}
+
+	.textodogirovisivel{
+		position: static!important;
+		z-index: 1!important;
+	}
 }
 @media(max-width: 768px){
 	#line-chart ,#bar-chart{

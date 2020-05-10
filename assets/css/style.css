@@ -38,9 +38,12 @@ h2{
 p{
     font-weight: lighter;
 }
+a, a:hover{
+    text-decoration: none;
+}
 header .navbar{
     height: 55px;
-    z-index: 2;
+    z-index: 3;
     background-color: #22242a;
 }
 .logo{
@@ -79,7 +82,7 @@ tr.theme:hover{
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    z-index: 2;
+    z-index: 3;
 }
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
@@ -93,7 +96,7 @@ tr.theme:hover{
     width: 100%;
 }
 #dark{
-    z-index: 1;
+    z-index: 2;
     visibility: hidden;
     position: absolute;
     top: 0;
@@ -149,8 +152,12 @@ tr.theme:hover{
     color: #fff;
     font-size: 1.1em;
     padding: 10px 0px;
+    position: relative; 
+    box-sizing: border-box; 
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;  
 }
-.sidebar-nav li a:hover, #painelnot span:hover{ /*hover dos itens do menu*/
+#painelnot span:hover{ /*hover dos itens do menu*/
     text-decoration: none;
     color: #fff !important;
     background-color: #464B51;
@@ -158,6 +165,48 @@ tr.theme:hover{
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus{
     text-decoration: none;
+}  
+.sidebar-nav li a:after { 
+  content: "";
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0px;  
+  position: absolute; 
+  transition: all 0.2s ease 0s; 
+  -webkit-transition: all 0.2s ease 0s; 
+  z-index: -1;
+}
+.sidebar-nav li a:hover{
+    color: #fff !important;
+}
+.sidebar-nav li a:hover:after{ width: 100%;}
+.sidebar-nav li a:after{ 
+    text-decoration: none;
+    background-color: #464B51; 
+}
+.atual{
+    border-left: solid 5px #464B51; /*Estilos de marcarção para situar página do menu*/
+    background-color: #FFC107;
+}
+.atual a{
+    color:#464B51 !important;
+    margin-left: -5px !important;
+}
+.bg-dark .atual{
+    border-left: solid 5px #FFC107; /*Estilos de marcarção para situar página do menu*/
+    background: #464B51;
+}
+.bg-dark .atual a{
+    color: #FFC107 !important;
+}
+.atual:hover{
+    background: #464B5100;
+    border-left: solid 5px #FFC107;
+}
+.sidebar-nav li.atual a:after{ 
+    text-decoration: none;
+    background-color: #FFC107!important; 
 }
 .sidebar-nav li a .fas{ /*espaçamento dos icones no menu*/
     width: 16px;
@@ -180,26 +229,6 @@ tr.theme:hover{
 .btn:focus, .btn.focus {
   outline: 0;
   box-shadow: none !important;
-}
-.atual{
-    border-left: solid 5px #464B51; /*Estilos de marcarção para situar página do menu*/
-    background-color: #FFC107;
-}
-.atual a{
-    color:#464B51 !important;
-    margin-left: -5px !important;
-}
-.bg-dark .atual{
-    border-left: solid 5px #FFC107; /*Estilos de marcarção para situar página do menu*/
-    background-color: #464B51;
-}
-.bg-dark .atual a{
-    color: #FFC107 !important;
-}
-.atual a:hover{
-    text-decoration: none;
-    color: #fff !important;
-    background-color: #FFC107 !important;
 }
 .barra-horizontal .rounded-circle{
     width: 200px !important;
@@ -425,16 +454,12 @@ footer a:hover{
     opacity: 1;
     color: #fff !important
 }
-input[type="text"]:disabled {
-  background: #f8f9fa;
-  border: none;
-  border-left: 4px solid #FFC107 !important;
-}
 input[type="text"]:enabled , input[type="password"]:enabled{
-  background: white !important;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
-  border: none;
-  color: black !important;
+    background: #f8f9fa;
+    border: none;
+    border-left: 4px solid #FFC107 !important;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+    color: black;
 }
 .usuario .input-group{
     width: 280px;
@@ -442,12 +467,7 @@ input[type="text"]:enabled , input[type="password"]:enabled{
 .usuario .btn{
     width: 280px !important; 
 }
-#Salvar_dados{
-    visibility: hidden;
-}
-#Atualizar_dados, #Salvar_dados, #atualizar{
-    bottom: 0px;
-}
+
 .title_log{
     margin: 20px 0px;
     font-size: 1.8em;

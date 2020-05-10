@@ -35,11 +35,11 @@
 											<form method="post" action="cadastro/editarDados">
 												<span>Nome Completo:</span>
 												<div class="input-group mb-2">
-													<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user border-0 text-capitalize" placeholder="" disabled>
+													<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user border-0 text-capitalize" placeholder="">
 												</div>
 												<span>Usuário:</span>
 												<div class="input-group mb-2">
-													<input type="text" name="usuario" value="<?php echo $this->session->userdata('usuario'); ?>" class="form-control dados_user border-0 text-capitalize" placeholder="" disabled>
+													<input type="text" name="usuario" value="<?php echo $this->session->userdata('usuario'); ?>" class="form-control dados_user border-0 text-capitalize" placeholder="">
 												</div>
 												<?php 
 												if (isset($_GET['error'])){
@@ -52,11 +52,11 @@
 													?>
 												<span>Email:</span>
 												<div class="input-group mb-2">
-													<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user border-0" placeholder="" disabled>
+													<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user border-0" placeholder="">
 												</div>
 												<span>Preço por kWh:</span>
 												<div class="input-group mb-2">
-													<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney dados_user border-0" value="<?php echo $tarifa ?>" placeholder="Tarifa por kWh"  min="0.10" max="3.00" step="0.01" disabled>
+													<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney dados_user border-0" value="<?php echo $tarifa ?>" placeholder="Tarifa por kWh"  min="0.10" max="3.00" step="0.01">
 												</div>
 												<a href="editar-senha" class="sidebar-li-a text-dark theme" id="editar_senha"><i class="fas fa-edit"></i> Editar senha</a>
 												<a href="login" class="ml-1 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2 theme" style="position: relative; top: -38px; bottom: 0px; z-index: 333"></i></a>		
@@ -83,11 +83,9 @@
 									                </div>
 										            </div>
 										        </div>
-												<div class="d-flex justify-content-center mt-0 login_container mb-3">
-													<button type="submit" name="editar" id="Salvar_dados" class="btn login_btn btn-success position-absolute my-4 mb-5">Salvar alterações</button>
+												<div class="d-flex justify-content-center mt-0 login_container mb-4">
+													<button type="submit" name="editar" id="Salvar_dados" class="btn login_btn btn-warning position-absolute my-4 mb-5">Editar dados</button>
 												</div>
-												<div class="d-flex justify-content-center mt-3 login_container my-3">
-													<button type="" name="editar" id="Atualizar_dados" class="btn btn-warning position-absolute my-4 mb-5">Editar dados</button>
 												</form>
 											</div>
 									</div>

@@ -34,7 +34,7 @@
 		     				if ($meta==0) {
 		     					echo("Você ainda não tem uma meta de consumo até o final do mês. Para definir uma meta, preencha o campo ao lado com o valor e clique em <span class='font-italic'>'Salvar Meta'</span>.");
 		     				}else{
-		     					echo("Você deve gastar menos que isto até o final do mês. Para alterar esse valor clique em <span class='font-italic'>'Editar Meta'</span> ao lado.");
+		     					echo("Você deve gastar menos que isto até o final do mês. Para alterar esse valor preencha o campo seguinte e clique em <span class='font-italic'>'Editar Meta'</span> ao lado.");
 		     				}
 		     			}
 	     			?>	
@@ -92,7 +92,7 @@
 			        <h2>Defina a Sua <wbr>Meta Mensal</h2>
 		        	<form method="post" action="cadastroMeta/adicionar">
 		        		<div id="meta">
-			        			<input type="number" min="20" max="10000" name="meta" placeholder="Apenas números. Ex.: 90" class="shadow bg-light">
+			        			<input type="number" min="20" max="10000" name="meta" placeholder="Apenas números. Ex.: 90" class="shadow bg-light theme">
 			        			<button type="submit" class="btn btn-warning mx-auto">Salvar Meta</button><!--Esse botão alterna pra editar-->
 			        		<?php  
 			        			}else{
@@ -100,7 +100,7 @@
 			        <h2>Deseja Alterar a Sua <wbr>Meta Mensal?</h2>
 		        	<form method="post" action="cadastroMeta/adicionar">
 		        		<div id="meta">
-				        		<input type="number" min="20" max="10000" name="meta" value="<?php echo $meta ?>" placeholder="Apenas números. Ex.: 90" class="shadow-sm bg-light">
+				        		<input type="number" min="20" max="10000" name="meta" value="<?php echo $meta ?>" placeholder="Apenas números. Ex.: 90" class="shadow-sm bg-light theme">
 				        		<!--o name do input muda-->
 				        		<?php 
 				        			if (isset($_GET['error'])){

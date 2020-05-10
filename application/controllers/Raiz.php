@@ -72,6 +72,17 @@ class Raiz extends CI_Controller {
 		redirect('index');
 	}
 
+	public function informacoes(){
+		if (isset($_SESSION['login'])) {
+			$title['titulo'] ="Informações";
+			$this->load->view('header_sidebar', $title);
+			$this->load->view('informacoes');
+			$this->load->view('footer');
+		}else{
+			redirect('login?error=2'); 
+		}
+	}
+
 	public function consumo(){
 		date_default_timezone_set('America/Sao_Paulo');
 		if (isset($_SESSION['login'])) {

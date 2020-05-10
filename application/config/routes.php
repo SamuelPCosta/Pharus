@@ -54,6 +54,7 @@ $route['404_override'] = 'Raiz/notFound';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['consumo'] = 'Raiz/consumo';
+$route['informacoes'] = 'Raiz/informacoes';
 $route['metas'] = 'Raiz/metas';
 $route['idealdeconsumo'] = 'Raiz/idealdeconsumo';
 $route['resultado'] = 'Raiz/resultado';

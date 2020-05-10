@@ -47,20 +47,35 @@ $(document).mouseup(function(e){
     botão de menu a class toggled é removida e o menu colapsa*/
 });
 
-$("#Atualizar_dados").click(function(e) {
-  e.preventDefault();
-    var inputs = document.getElementsByClassName('dados_user');
-    for(var i = 0; i < inputs.length; i++) {
-        inputs[i].disabled = false;
-    }
-    document.getElementById("Atualizar_dados").style.visibility = "hidden";
-    document.getElementById("Salvar_dados").style.visibility = "visible";
-});
+// $("#Atualizar_dados").click(function(e) {
+//   e.preventDefault();
+//     var inputs = document.getElementsByClassName('dados_user');
+//     for(var i = 0; i < inputs.length; i++) {
+//         inputs[i].disabled = false;
+//     }
+//     document.getElementById("Atualizar_dados").style.visibility = "hidden";
+//     document.getElementById("Salvar_dados").style.visibility = "visible";
+// });
 
 //Marcador da sidebar e marcador das perguntas
 window.onload = function(){
   document.getElementById(atual).classList.add("atual");
   document.getElementById(questao).classList.add("active");
+}
+
+/*###########Giro de imgs###########*/
+function point(imagem, point, texto) {
+  $("#imagemdocirculo").addClass('down-enter-active');
+  $("#imagemdocirculo2").addClass('down-leave-active');
+  $("#imagemdocirculo").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
+  $(".point").removeClass('imagematualdocirculo');
+  $("."+point).addClass('imagematualdocirculo');
+  $(".textogiro").removeClass('textodogirovisivel');
+  $("."+texto).addClass('textodogirovisivel');
+  setTimeout(function(){ 
+    $("#imagemdocirculo").removeClass('down-enter-active'); 
+    $("#imagemdocirculo2").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
+    $("#imagemdocirculo2").removeClass('down-leave-active');}, 400);
 }
 
 /*###########Foto User###########*/

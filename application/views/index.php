@@ -92,22 +92,22 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<div class="rounded-circle mx-auto d-table">
-									<i class="fas fa-seedling align-middle d-table-cell text-white"></i>
-								</div>
-								<h4 class="py-3 theme">Lorem Ipsum</h4>
+								<a href="informacoes#">
+									<img src="<?= base_url()?>assets/img/seedling.png" class="rounded-circle" width=200>
+								</a>
+								<a href="informacoes#"><h4 class="py-3 theme">Opção #01</h4><a>
 							</div><!-- /.col-lg-4 -->
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<div class="rounded-circle mx-auto d-table">
-									<i class="fas fa-plug align-middle d-table-cell text-white"></i>
-								</div>
-								<h4 class="py-3 theme">Maneire seu Consumo</h4>
+								<a href="informacoes#">
+									<img src="<?= base_url()?>assets/img/plug.png" class="rounded-circle" width=200>
+								</a>
+								<a href="informacoes#"><h4 class="py-3 theme">Maneire seu Consumo</h4><a>
 							</div><!-- /.col-lg-4 -->
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<div class="rounded-circle mx-auto d-table">
-									<i class="fas fa-power-off align-middle d-table-cell text-white"></i>
-								</div>
-								<h4 class="py-3 theme">Lorem Ipsum</h4>
+								<a href="informacoes#">
+									<img src="<?= base_url()?>assets/img/power-off.png" class="rounded-circle" width=200>
+								</a>
+								<a href="informacoes#"><h4 class="py-3 theme">Opção #03</h4><a>
 							</div><!-- /.col-lg-4 -->
 						</div>
 					</div>
@@ -140,7 +140,7 @@
 									<p class="mx-auto anime theme text-justify last-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. </p>
 								</div>
 							</div>
-							<div class="col-xl-6 col-lg-12 last-container py-5 text-center d-table">
+							<div class="col-xl-6 col-lg-12 last-container py-5 text-center">
 								<img src="<?= base_url()?>assets/img/lampada.png" class="py-3 animeRight" height=100% >
 							</div>
 						</div>
