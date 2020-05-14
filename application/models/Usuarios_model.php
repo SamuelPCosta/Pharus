@@ -67,4 +67,54 @@ class Usuarios_model extends CI_Model {
 		$this->db->where('usuario', $usuario);
 		$this->db->update('usuario');
 	}
+
+	public function getFaixa($usuario){
+		$this->db->select('faixa');
+		$this->db->where('usuario', $usuario);
+		$query = $this->db->get('usuario');
+		$faixa = $query->row()->faixa;
+		return $faixa;
+	}
+
+	public function adicionarHorasDormidas($horasDormidas,$contaContrato){
+		$this->db->set('horas_dormidas', $horasDormidas);
+		$this->db->where('usuario', $contaContrato);
+		$this->db->update('consumo');
+	}
+
+	public function adicionarHoraInicial($horaInicial,$contaContrato){
+		$this->db->set('hora_inicial_sono', $horaInicial);
+		$this->db->where('usuario', $contaContrato);
+		$this->db->update('consumo');
+	}
+
+	public function adicionarBaseDormindo($base,$contaContrato){
+		$this->db->set('consumo_dormindo', $base);
+		$this->db->where('usuario', $contaContrato);
+		$this->db->update('consumo');
+	}
+
+	public function getHorasDormidas($contaContrato){
+		$this->db->select('horas_dormidas');
+		$this->db->where('usuario', $contaContrato);
+		$query = $this->db->get('consumo');
+		$horas_dormidas = $query->row()->horas_dormidas;
+		return $horas_dormidas;
+	}
+
+	public function getHoraInicial($contaContrato){
+		$this->db->select('hora_inicial_sono');
+		$this->db->where('usuario', $contaContrato);
+		$query = $this->db->get('consumo');
+		$hora_inicial_sono = $query->row()->hora_inicial_sono;
+		return $hora_inicial_sono;
+	}
+
+	public function getBaseDormindo($contaContrato){
+		$this->db->select('consumo_dormindo');
+		$this->db->where('usuario', $contaContrato);
+		$query = $this->db->get('consumo');
+		$consumo_dormindo = $query->row()->consumo_dormindo;
+		return $consumo_dormindo;
+	}
 }

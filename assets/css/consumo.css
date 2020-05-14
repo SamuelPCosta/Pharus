@@ -1,33 +1,3 @@
-form#meses{
-	width: 300px;
-	margin: 0 auto;
-	/*position: fixed;
-	top: 100px*/
-}
-select{ /*Estilização da caixa de seleção*/
-	width: 100%;
-	height: 70px;
-	margin-top: 40px;
-	font-size: 1.1em;
-	background-color: #36404655;
-	color: #333;
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	padding-left: 5%;
-	text-align: center;
-}
-#mes{
-	margin-bottom: 50px;
-}
-#mes:hover {
-	background-color:#ddd;
-}
-#mes #placeholder{
-	color: #555;
-}
-option{
-	border-radius: 10px;
-}
 h2.card-theme{
 	border-left: 5px solid #ffc107;
 	width: 100% !important;
@@ -48,7 +18,7 @@ h2.card-theme{
 	height: 50vh;
 }
 
-/*info*/
+/*visaogeral*/
 #containerinfo h2, #containerinfo .dropdown-divider{
 	width: 80% !important; margin-left: 0px!important
 }
@@ -98,6 +68,14 @@ h2.card-theme{
   100% {clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);}
 }
 
+#opcoesdevideo{
+	height: 150px;
+}
+.marcadorvideo{
+	top: -208px;
+}.inativo{
+	display: none;
+}
 @media(max-width: 1600px){
 	#bar-chart, #line-chart{
 		max-width: 85% !important;
@@ -140,7 +118,7 @@ h2.card-theme{
 		transform: translateY(100px);
 		margin-bottom: 100px;
 	}*/
-	#circulomovimento{
+	#circulomovimento.cimg{
 		top: -296px !important;
 	}
 
@@ -152,6 +130,11 @@ h2.card-theme{
 	.textodogirovisivel{
 		position: static!important;
 		z-index: 1!important;
+	}
+}
+@media(max-width: 841px){
+	#opcoesdevideo{
+		height: 400px;
 	}
 }
 @media(max-width: 768px){

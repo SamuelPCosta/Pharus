@@ -9,17 +9,21 @@
 										<i class="fas fa-upload ml-1 text-white"></i>
 									</div>
 								</a>
-								<div class="dropdown-menu mt-2" aria-labelledby="dropdownMenuLink">
+								<div class="dropdown-menu dropdown-menu-foto mt-2" aria-labelledby="dropdownMenuLink">
 									<form action="Raiz/salvarimg" method="post" enctype="multipart/form-data">
-										<span class="position-relative overflow-hidden text-center"><p style="font-weight: 400">Atualize sua foto</p></span><br>
-										<input type="file" name="foto" required="" class="position-absolute">
-										<div><input type="submit" onclick="salvarimg()" class="btn" value="Salvar Foto"></div>
+										<span class="position-relative overflow-hidden text-center"><p style="font-weight: normal;">Atualize sua foto</p></span>
+										<input type="file" name="foto" id="upload" class="position-absolute">
+										<!-- <div><input type="submit" onclick="salvarimg()" class="btn" value="Salvar Foto"></div> -->
 										<a class="dropdown-item" href="" id="removerimg">Remover foto Atual</a>
-									</form>
+									
 								</div>
 								<!-- <input type="submit" name="Salvar">	 -->
 							</div>
 							<h4 class="my-3 text-center theme"><span class="text-capitalize" style="font-size: 2rem; font-weight:lighter;"><?php echo $this->session->userdata('usuario'); ?></span></h4>
+							<div class="d-flex justify-content-center mt-0 login_container mb-4" style="transform: translateY(-50px);">
+								<button type="submit" onclick="salvarimg()" id="btndesalvar" class="btn btn-warning position-absolute mx-auto text-center inativo">Salvar foto</button>
+							</div>
+							</form>
 						</div>
 						<div class="vertical-line"></div>
 						<div class="col-xl col-md-12 mx-auto px-0">

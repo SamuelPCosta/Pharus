@@ -1,7 +1,7 @@
 			<div class="container first-container ideal">
 	        <div class="row align-items-center">
 	            <div class="col-xl-6 col-md-12">
-	        	<h1 class="mt-5 theme">Faixa de consumo</h1><br>
+	        	<h1 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme">Faixa de consumo</h1>
 	        	<p class="mb-5 theme">Esse valor representa a sua faixa de consumo necessária de acordo com o contexto da sua residência.</p>
 	        </div>
      		<div class="col-xl-6 col-md-12 card py-5 card-theme shadow"><!--Div do questionário-->

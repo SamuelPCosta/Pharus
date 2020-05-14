@@ -6,7 +6,7 @@
   line-height: 412.5px;
   width: 525px;
   font-weight: 200;
-  top: 34px;
+  top: 0px; /*Se o botão de leitura for readicionado é só mudar pra 34px e olhar o comentario do @media768px*/
 }
 .line-height-normal{
   line-height: 1em!important;
@@ -65,6 +65,7 @@ a.text-warning:focus{
     width: 300px !important;
     margin: auto;
     min-height: 350px;
+    top: 34px; /*Se o botão de leitura for readicionado remover essa linha*/
   }
   #vcgastou{
     transform: translate(-10px,-15px);

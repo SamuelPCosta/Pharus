@@ -7,6 +7,7 @@ class Raiz extends CI_Controller {
 			$this->load->model("Operacoes");
 			$usuario = $this->session->userdata('usuario');
 			$contaContrato = $this->Operacoes->contaContrato($usuario);
+			$this->inserirConsumo($contaContrato);
 			$this->load->model("Consumo_model");
 			$consumo['meta'] = $this->Consumo_model->SelecionarMeta($contaContrato);
 			if($consumo['meta']!=0){
@@ -57,26 +58,11 @@ class Raiz extends CI_Controller {
 		}
 	}
 
-	public function leituras(){
-		if ($_POST["btn"]=="salvar") {
-			$leitura = $this->input->post("leitura"); //Recebe a leitura inserida
-			date_default_timezone_set('America/Fortaleza');
-			$minutos = (date('H')*60)+date('i');
-			echo $minutos;
-			echo "<br>";
-			$minutosTotais = 1440;
-			$porcentagemDia = ($minutos/$minutosTotais)*100;
-			$estimativa = ($leitura*100)/$porcentagemDia;
-			echo $estimativa;
-		}
-		redirect('index');
-	}
-
-	public function informacoes(){
+	public function visaogeral(){
 		if (isset($_SESSION['login'])) {
-			$title['titulo'] ="Informações";
+			$title['titulo'] ="Visão Geral";
 			$this->load->view('header_sidebar', $title);
-			$this->load->view('informacoes');
+			$this->load->view('visaogeral');
 			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
@@ -86,9 +72,13 @@ class Raiz extends CI_Controller {
 	public function consumo(){
 		date_default_timezone_set('America/Sao_Paulo');
 		if (isset($_SESSION['login'])) {
+			$usuario = $this->session->userdata('usuario');
+			$this->load->model("Operacoes");//converter conta contrato
+			$contaContrato['usuario'] = $this->Operacoes->contaContrato($usuario);
 			$title['titulo'] ="Consumo";
+			$this->inserirConsumo($this->Operacoes->contaContrato($usuario));
 			$this->load->view('header_sidebar', $title);
-			$this->load->view('consumo');
+			$this->load->view('consumo', $contaContrato);
 			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
@@ -141,6 +131,15 @@ class Raiz extends CI_Controller {
 			$this->load->helper('cookie');
 			if (!isset($_GET['questao'])) {
 				delete_cookie("a"); delete_cookie("b"); delete_cookie("c");
+			}
+			$this->load->model("Usuarios_model");
+			$faixa = $this->Usuarios_model->getFaixa($this->session->userdata('usuario'));
+			if ($faixa==1) {
+				$this->session->set_userdata('faixa', "122 e 155"); //dois valores alterar aqui e no controller questionario
+			}elseif ($faixa==2) {
+				$this->session->set_userdata('faixa', "156 e 210");
+			}elseif ($faixa==3) {
+				$this->session->set_userdata('faixa', "211 e 300");
 			}
 			$title['titulo'] ="Ideal de consumo";
 			$this->load->view('header_sidebar', $title);
@@ -240,9 +239,9 @@ class Raiz extends CI_Controller {
 	        'overwrite'		=> TRUE,
 	        'file_name'     => 'profile_'.$usuario.'.png',
 	        //'file_name'     => 'foto_user'.'.png',
-	        'max_size'      => '5000',
-	        'max_width:'    => '2000',
-	        'max_height:'   => '2000'
+	        'max_size'      => '10000',
+	        'max_width:'    => '5000',
+	        'max_height:'   => '5000'
 	    );      
 	    $this->load->library('upload');
 	    $this->upload->initialize($config);
@@ -317,122 +316,226 @@ class Raiz extends CI_Controller {
 
 	public function simulador(){
 		if (isset($_SESSION['login'])) {
+			$this->load->model("Operacoes");//converter conta contrato
+			$usuario = $this->session->userdata('usuario');
+			$contaContrato = $this->Operacoes->contaContrato($usuario);
+			$dados['contaContrato'] ="Quem somos";
 			$title['titulo'] ="Simulador";
 			$this->load->view('header_sidebar', $title);
-			$this->load->view('simulador');
+			$this->load->view('simulador',$dados);
 			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
 		}
 	}
 
+//Todo o codigo abaixo é destinado a simulacao de consumo, seja por meio do cadastro de aparelhos ou leitura manual
+//Todo o codigo abaixo é destinado a simulacao de consumo, seja por meio do cadastro de aparelhos ou leitura manual
+//Todo o codigo abaixo é destinado a simulacao de consumo, seja por meio do cadastro de aparelhos ou leitura manual
+//Todo o codigo abaixo é destinado a simulacao de consumo, seja por meio do cadastro de aparelhos ou leitura manual
+//Todo o codigo abaixo é destinado a simulacao de consumo, seja por meio do cadastro de aparelhos ou leitura manual
 
-	public function monitorarConsumo(){
-	//Criar uma array q implementa o consumo de hora em hora e ao final do dia é destruido
-		date_default_timezone_set('America/Sao_Paulo');
-		if (isset($_SESSION['consumo'])){
-			//echo date('H');
-			if(date('H')==1){
-				unset($consumoPorHora);
-				unset($_SESSION['consumo']);
-			?>
-				<script>
-				localStorage.removeItem('consumo');
-				</script>
-			<?php
-				$this->load->model("Operacoes");
-				$usuario = $this->session->userdata('usuario');
-				$contaContrato = $this->Operacoes->contaContrato($usuario);
-				$this->load->model("Consumo_model");
-				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
-				$consumoPorHora[] = $consumo;
-				$this->session->set_userdata('consumo', $consumoPorHora);
-				//print_r($consumoPorHora); conferir adição de valores 
-			}else{
-				//for ($i=0; $i <23; $i++) { Se o cron for implementado isso se torna desnecessario
-				$this->load->model("Operacoes");
-				$usuario = $this->session->userdata('usuario');
-				$contaContrato = $this->Operacoes->contaContrato($usuario);
-				$this->load->model("Consumo_model");
-				$consumoPorHora = $this->session->userdata('consumo');
-				$consumoPrevio=array_sum($consumoPorHora);
-				$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
-				$consumo=$consumo-$consumoPrevio;
-				$consumo=number_format($consumo,3);
-				array_push($consumoPorHora, $consumo);
-				$this->session->set_userdata('consumo', $consumoPorHora);
-				//print_r($consumoPorHora); conferir adição de valores 
-				//unset($_SESSION['consumo']);
+	public function criarSimulacao(){
+		$usuario = $this->session->userdata('usuario');
+		$this->load->model("Operacoes");//converter conta contrato
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
+		$simulador = $this->session->userdata('totalSimulador'.$contaContrato);
+		//echo $simulador."<br>";
+		if (isset($_SESSION['leitura'])) {
+			$leitura = $this->session->userdata('leitura');
+			if (isset($_SESSION['totalSimulador'.$contaContrato])) {
+				$TotalDia = ($leitura+$simulador)/2; //media ponderada entre leitura e simulador
+			} else {
+				$TotalDia = $leitura;
 			}
-			//}
-		}else{
-			$this->load->model("Operacoes");
-			$usuario = $this->session->userdata('usuario');
-			$contaContrato = $this->Operacoes->contaContrato($usuario);
-			$this->load->model("Consumo_model");
-			$consumo=$this->Consumo_model->SelecionarConsumo($contaContrato);	
-			$consumoPorHora[date('H')] = $consumo;
-			$this->session->set_userdata('consumo', $consumoPorHora);
-			// print_r($consumoPorHora); conferir adição de valores
+		} else {
+			$TotalDia = $simulador;
 		}
-		//redirect('monitor');
-		// print_r($consumoPorHora);
-		// echo date('H:i:s');
+		//echo $TotalDia."<br>";
+
+		//Variaveis
+		$this->load->model("Usuarios_model");
+		if ($this->Usuarios_model->getHorasDormidas($contaContrato)!=NULL) {
+			$horasDormidas = $this->Usuarios_model->getHorasDormidas($contaContrato);
+		}else{
+			$horasDormidas = 8;
+		}
+		if ($this->Usuarios_model->getHoraInicial($contaContrato)!=NULL) {
+			$horaInicialDeSono = $this->Usuarios_model->getHoraInicial($contaContrato);
+		}else{
+			$horaInicialDeSono = 22;
+		}
+		if ($this->Usuarios_model->getBaseDormindo($contaContrato)!=NULL) {
+			$kwhBase_horasDormidas = $this->Usuarios_model->getBaseDormindo($contaContrato);
+		}else{
+			$kwhBase_horasDormidas = 0.022;
+			//$this->session->set_userdata('kwhBase_horasDormidas'.$contaContrato, 0.022);
+		}
+		if (24-$horaInicialDeSono>0) {
+			$horaFinalDeSono = $horasDormidas-(24-$horaInicialDeSono);
+		}else{
+			$horaFinalDeSono = $horasDormidas;
+		}
+		//$kwhBase_horasDormidas = $this->session->userdata('kwhBase_horasDormidas'.$contaContrato); //Substituir aqui para alterar o consumo durante a noite
+		$consumoDormindo = $kwhBase_horasDormidas*$horasDormidas;
+		$consumoAcordado = $TotalDia-$consumoDormindo;
+		$qtd_consumidaMedia = $consumoAcordado/(24-$horasDormidas);
+		echo "<br>".$horasDormidas;
+		echo "<br>".$horaInicialDeSono;
+		echo "<br>".$kwhBase_horasDormidas;
+		//echo $qtd_consumidaMedia;
+		//aqui embaixo que a magica vai acontecer
+		do {
+			for ($i=0; $i <24 ; $i++) { 
+				if ($i>$horaInicialDeSono || $i<=$horaFinalDeSono) {//Dormindo
+					$consumo = $kwhBase_horasDormidas;
+				}elseif($i>=18 && $i<=$horaInicialDeSono) {//Acordado em pico
+					$porcentagem = rand(150,160);
+					$consumo = ($qtd_consumidaMedia/100)*$porcentagem;
+				}else{//Acordado fora de pico
+					$porcentagem = rand(60,70); 
+					$consumo = ($qtd_consumidaMedia/100)*$porcentagem; //Erro1: quando calculo o resultado fica maior q no horario de pico
+				}
+				$consumoSimuladoPorHora[] = number_format($consumo, 3);
+			}
+			$gabarito = array_sum($consumoSimuladoPorHora);
+		} while ($gabarito > $TotalDia);//|| $gabarito < $TotalDia-$TotalDia*10/100 -- atualmente a margem de erro é 18%
+		echo $gabarito." - Gabarito<br>";
+		echo $TotalDia." - TotalDia<br>";
+		$this->session->set_userdata('consumo'.$contaContrato, $consumoSimuladoPorHora); //Array com simulacao
+		$arrayBackup = $this->session->userdata('consumo'.$contaContrato);
+		$this->load->model("Simulador_model");
+
+		$simulcaoAtiva = $this->Simulador_model->checharUsuarioSimulcao($contaContrato);
+		if ($simulcaoAtiva==true) {
+			$this->Simulador_model->getBackupSimulador($contaContrato);
+			$backupSimulador = $this->session->userdata('simulacaoBackup'.$contaContrato);
+		}else{$simulcaoAtiva=false;$this->Simulador_model->ativarSimulacao($contaContrato);}
+		
+		$this->Simulador_model->backupSimulador($contaContrato,$arrayBackup);
+		//unset($_SESSION['reiniciado'.$contaContrato]); 
+		//$this->session->set_userdata('reiniciado'.$contaContrato, true);
+		$this->inserirConsumo($contaContrato);
+		redirect('consumo');
 	}
 
-	public function adicionarConsumo(){
-		date_default_timezone_set('America/Fortaleza');
-		$horas = date('H');
-		$simulador = $this->session->userdata('totalSimulador');
-		$usuario = $this->session->userdata('contaContratoSimulador');
-		$this->load->model("Consumo_model");
-		$previo = $this->Consumo_model->SelecionarConsumo($usuario);
-		$qtd_consumida = $simulador/24;
-		if ($horas>9 && $horas<22) {
-			$porcentagem = rand(2,20);
-			$margem = ($qtd_consumida/100)*$porcentagem;
-		}else{
-			$porcentagem = rand(2,20);
-			$margem = -($qtd_consumida/100)*$porcentagem;
-		}
-		$TotalInserir=$qtd_consumida+$margem+$previo;
-		if (($qtd_consumida+$margem+$previo)>$simulador) {
-			$TotalInserir=$simulador;
-		}
-		$this->load->model("Admin_model");
-		$this->Admin_model->adicionarConsumo($usuario, $TotalInserir);
-		$this->load->model("Consumo_model");
-		$previo = $this->Consumo_model->SelecionarConsumo($usuario);
-		$this->session->set_userdata('totalInserir', ($simulador-$previo));
-		//$novoTotal = $simulador-$TotalInserir;
-		$this->monitorarConsumo();
-		redirect('simuladorAtualizar');
-	}
-
-	public function consumir(){
+	public function consumir(){//Faz a somatória do simulador e depois joga pra simulacao propriamente dita
 		$consumo=[];
 		$horas=$this->input->post("horas");
 		$potencia=$this->input->post("potencia");
+		$qntd=$this->input->post("qntd");
 		$i=0;
 		foreach ($horas as $aparelho) {
 			if(empty($horas[$i])){
 				$horas[$i]=0;
 			}
-			$consumo[] = $potencia[$i]*$horas[$i];
+			$consumo[] = $potencia[$i]*$horas[$i]*$qntd[$i];
 			array_sum($consumo);
 			$i++;
 			//print_r($consumo); Ver produto por indice
 		}
 		$consumokwh = array_sum($consumo)/1000;
 		//echo "Soma: ".$consumokwh; conferir manualmente
-		$this->session->set_userdata('totalSimulador', $consumokwh);
-		$usuario=$this->input->post("usuario");
-		//converter conta contrato
-		$this->session->set_userdata('usuarioSimulado', $usuario);
-		$this->load->model("Operacoes");
+		$usuario=$this->session->userdata('usuario');
+		$this->load->model("Operacoes");//converter conta contrato
 		$contaContrato = $this->Operacoes->contaContrato($usuario);
-		$this->session->set_userdata('contaContratoSimulador', $contaContrato);
-		$this->adicionarConsumo();
-		redirect('simuladorAtualizar');
+		$this->session->set_userdata('totalSimulador'.$contaContrato, $consumokwh);
+		$personalizados=$this->input->post("personalizados");
+		$this->session->set_userdata('personalizados', $personalizados);
+		$this->criarSimulacao();
 	}
+
+	public function leituras(){
+		if ($_POST["btn"]=="salvar") {
+			$leitura = $this->input->post("leitura"); //Recebe a leitura inserida
+			date_default_timezone_set('America/Fortaleza');
+			$minutos = (date('H')*60)+date('i');
+			//echo $minutos;
+			$minutosTotais = 1440; //minutos em um dia
+			$porcentagemDia = ($minutos/$minutosTotais)*100;
+			$estimativaLeitura = ($leitura*100)/$porcentagemDia;
+			//echo $estimativa;
+			$this->session->set_userdata('leitura', $estimativaLeitura);
+			$this->criarSimulacao();
+		}
+	}
+
+	public function inserirConsumo($contaContrato){
+		date_default_timezone_set('America/Fortaleza');
+
+		$this->load->model("Simulador_model");
+		$simulcaoAtiva = $this->Simulador_model->checharUsuarioSimulcao($contaContrato);
+		if ($simulcaoAtiva==true) {
+			$this->Simulador_model->getBackupSimulador($contaContrato);
+			$backupSimulador = $this->session->userdata('simulacaoBackup'.$contaContrato);
+		}else{$simulcaoAtiva=false;}
+		
+		if (isset($_SESSION['simulacaoBackup'.$contaContrato]) && $simulcaoAtiva==true){
+			$simulacao = $backupSimulador;
+			$this->load->model("Consumo_model");
+			$meta = $this->Consumo_model->SelecionarMeta($contaContrato);
+			if ($meta!=NULL && $meta!=0) {
+				if(date('H')==0){
+					$totalAteHoraH = array_slice($simulacao, 0, 24);
+					$totalInserir = array_sum($totalAteHoraH);
+					$this->load->model("Simulador_model");
+					$this->Simulador_model->adicionarConsumo($contaContrato, $totalInserir);
+				}else{
+					$totalAteHoraH = array_slice($simulacao, 0, date('H'));
+					$totalInserir = array_sum($totalAteHoraH);
+					//echo "<br>inserindo valor correspondente a hora".$totalInserir;
+					$this->load->model("Simulador_model");
+					$this->Simulador_model->adicionarConsumo($contaContrato, $totalInserir);
+				}	
+			}	
+		}
+	}
+
+	//Criar uma funcao pra jogar do consumo diario pro mensal
+	//
+	//Add coluna dia na tabela simulacao pra ter a referencia de qndo foi criada a ultima simulacao
+	//Na tabela consumo pegar kw_h_total e intervalo_tempo
+	//Toda vez q abrir o index ou consumo chamar funcao para checar há qntos dias foi add no consumo mensal
+	//$simulacao = $this->session->userdata('consumo'.$contaContrato);
+	//Somar valor kw_h_total com (array_sum($simulacao)*(dia atual-intervalo_tempo))
+	//Add no consumo mensal
+
+	// public function zerarArray($contaContrato){
+	// 	unset($_SESSION['inserirPorHora'.$contaContrato]);
+	// 	unset($_SESSION['consumo'.$contaContrato]);
+	// 	unset($_SESSION['totalSimulador'.$contaContrato]);
+	// 	<?php
+	// 		<script>
+	// 		localStorage.removeItem('consumo');
+	// 		</script>
+	// 	<?php
+	// 	$consumoSimuladoPorHora[] = 0;
+	// 	$this->session->set_userdata('consumo'.$contaContrato, $consumoSimuladoPorHora);
+	// }
+
+	// public function zerar(){
+	// 	$usuario=$this->session->userdata('usuario');
+	// 	$this->load->model("Operacoes");
+	// 	$contaContrato = $this->Operacoes->contaContrato($usuario);
+	// 	$this->load->model("Simulador_model");
+	// 	$this->Simulador_model->zerar($contaContrato);
+	// 	$this->zerarArray($contaContrato);
+	// 	redirect('simulador');
+	// }
+
+	// public function reiniciarInsercaoValores($contaContrato){
+	// 	if (isset($_SESSION['consumo'.$contaContrato])){
+	// 	unset($consumoSimuladoPorHora);
+	// 	unset($_SESSION['consumo'.$contaContrato]);
+	// 	for ($i=0; $i < 24; $i++) { 
+	// 		$inserirPorHora[$i] = false;
+	// 		$this->session->set_userdata('inserirPorHora'.$contaContrato, $inserirPorHora);
+	// 	}
+	// 	unset($_SESSION['inserirPorHora'.$contaContrato]);
+	// 	unset($_SESSION['reiniciado'.$contaContrato]); 
+	// 	echo "reiniciarInsercaoValores";
+	// 	$this->load->model("Simulador_model");
+	// 	$kwhBase_horasDormidas = $this->session->userdata('kwhBase_horasDormidas'.$contaContrato);
+	// 	$this->Simulador_model->zerar($contaContrato,$kwhBase_horasDormidas); //zerar jogar o consumo pra 0.022 se necessario corrigir no model
+	// }
 }

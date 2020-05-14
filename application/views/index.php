@@ -22,7 +22,7 @@
 								}
 								if (!isset($_SESSION['premium'])){//CONFERIRI SE O USUÁRIO É PREMIUM
 								?>
-									<a href="" id="addButton" data-toggle="modal" data-target="#addvalores" class="position-relative text-warning animeTop"><h1><i class='fas fa-plus-circle'></i></a>
+									<!-- <a href="" id="addButton" data-toggle="modal" data-target="#addvalores" class="position-relative text-warning animeTop"><h1><i class='fas fa-plus-circle'></i></a> -->
 										<!-- Modal -->
 										<div class="modal fade" id="addvalores" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
 										  <div class="modal-dialog modal-dialog-centered" role="document">
@@ -40,7 +40,7 @@
 								                    <div class="row align-items-center">
 									                    <div class="col mx-auto">
 									                    	<form method="post" action="Raiz/leituras">
-									                       		<input type="number" min="0" max="10000" class="modal_input_time mx-auto" name="leitura" style="font-size: 0.5em">
+									                       		<input type="number" min="0" max="10000" class="modal_input_time mx-auto" name="leitura" style="font-size: 0.5em" required>
 									                    </div>
 								                	</div>
 								                </div>
@@ -78,7 +78,7 @@
 					?>
 					<div class="col-xl-6 col-lg-12 text">
 					<h1 class="mx-auto text-center animeRight theme card card-theme mb-5 py-2 shadow-sm" id="titulo_index">Novo aqui?</h1>
-					<p class="mx-auto animeRight theme">Seja bem vindo ao Pharus, <span class="text-capitalize"><?php echo $this->session->userdata('usuario');?></span>! Aqui você poderá gerenciar melhor o seu consumo de energia a partir de metas feitas por você mesmo e dicas que o ajudará a saber como consumir energia de modo consciente, além disso você poderá ver seu desenvolvimento em tempo real. Comece clicando no botão abaixo!</p>
+					<p class="mx-auto animeRight theme">Seja bem vindo ao Pharus, <span class="text-capitalize"><?php echo $this->session->userdata('usuario');?></span>! Aqui você poderá gerenciar melhor o seu consumo de energia a partir de metas feitas por você mesmo e dicas que o ajudaram a saber como consumir energia de modo consciente, além disso você poderá ver seu desenvolvimento em tempo real. Comece clicando no botão abaixo!</p>
 					<a href="metas" class="btn btn-warning mx-auto py-3 position-relative d-block text-center animeRight" id="primeirobutton">Vamos definir uma meta para você!</a>
 					</div>
 					<?php
@@ -92,22 +92,22 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<a href="informacoes#">
+								<a href="visaogeral#">
 									<img src="<?= base_url()?>assets/img/seedling.png" class="rounded-circle" width=200>
-								</a>
-								<a href="informacoes#"><h4 class="py-3 theme">Opção #01</h4><a>
+									<h4 class="py-3 theme">Opção #01</h4>
+								<a>
 							</div><!-- /.col-lg-4 -->
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<a href="informacoes#">
+								<a href="visaogeral#">
 									<img src="<?= base_url()?>assets/img/plug.png" class="rounded-circle" width=200>
-								</a>
-								<a href="informacoes#"><h4 class="py-3 theme">Maneire seu Consumo</h4><a>
+									<h4 class="py-3 theme">Maneire seu Consumo</h4>
+									<a>
 							</div><!-- /.col-lg-4 -->
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<a href="informacoes#">
+								<a href="visaogeral#">
 									<img src="<?= base_url()?>assets/img/power-off.png" class="rounded-circle" width=200>
-								</a>
-								<a href="informacoes#"><h4 class="py-3 theme">Opção #03</h4><a>
+									<h4 class="py-3 theme">Opção #03</h4>
+								<a>
 							</div><!-- /.col-lg-4 -->
 						</div>
 					</div>

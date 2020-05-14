@@ -78,6 +78,15 @@ function point(imagem, point, texto) {
     $("#imagemdocirculo2").removeClass('down-leave-active');}, 400);
 }
 
+function video(video, marcador) {
+  $(".marcadorvideo").addClass('inativo');
+  $(".marcadorvideo"+marcador).removeClass('inativo');
+  $('#videoclip').get(0).pause();
+  $('#mp4video').attr('src', "http://localhost/pharus/assets/videos/"+video+".mp4");
+  $('#videoclip').get(0).load();
+  $('#videoclip').get(0).play();
+}
+
 /*###########Foto User###########*/
 const usuario = localStorage.getItem('Usuario')
 const fotoStorage = localStorage.getItem(usuario)
@@ -91,9 +100,23 @@ $("#removerimg").click(function(e) {
     $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
     localStorage.removeItem(usuario)
 });
+$(function(){
+  $('#upload').change(function(){
+    const file = $(this)[0].files[0]
+    const fileReader = new FileReader()
+    fileReader.onloadend = function(){
+       $('.photo_user').attr('src',fileReader.result);
+      console.log(fileReader.result)
+    }
+    fileReader.readAsDataURL(file)
+    $(".dropdown-menu-foto").toggleClass("show");
+    $("#btndesalvar").toggleClass("inativo");
+  })
+})
 function salvarimg(){
+    $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
+    localStorage.removeItem(usuario)
     $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/profile_"+usuario+".png");
-    $(".dropdown-menu").toggleClass("show");
     localStorage.setItem(usuario, true)
     return  
 }

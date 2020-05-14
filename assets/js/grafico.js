@@ -38,6 +38,13 @@ var myChart = new Chart(ctx, {
             pointHitRadius: 10,
             fill: false,
             lineTension : 0
+        },{
+            label: 'Curva padrão',
+            fill: false,
+            backgroundColor: '#3b94af',
+            borderColor: '#3b94af44',
+            lineTension : 0,
+            data: [0.022,0.022,0.022,0.022,0.022,0.022,0.022,0.2,0.3,0.34,0.34,0.3,0.2,0.15,0.2,0.3,0.4,0.5,0.9,1.15,1.2,1.15,1,0.6],
         }]
     },
     options: {
@@ -77,15 +84,15 @@ var ctx = document.getElementById("bar-chart").getContext("2d");
 var myBarChart = new Chart(ctx,{
     type: 'bar',
     data:{
-        labels: ["Julho", "Agosto", "Setembro", "Outubro"],
+        labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
         datasets: [{
             label: "Consumo",
-            data: [25, 59, 40, 41],
             backgroundColor: "#343a40",
             borderWidth: 1,
             borderColor: '#343a40',
             hoverBackgroundColor:"#22242a",
             highlightFill: "#f8f9fa",
+            data: [0,0,0,0],
         },
         {
             label: "Meta",
@@ -94,7 +101,7 @@ var myBarChart = new Chart(ctx,{
             borderColor: '#ffc107dd',
             hoverBackgroundColor:"#ffc107",
             lineTension: 0,
-            data: [28, 48, 40, 19]
+            data: [0,0,0,0]
         },
         {
             label: "Média",
@@ -103,7 +110,7 @@ var myBarChart = new Chart(ctx,{
             borderColor: '#3b94af',
             hoverBackgroundColor:"#3b94af",
             lineTension: 0,
-            data: [38, 42, 32, 29]
+            data: [0,0,0,0]
         }]
     },
     options: {

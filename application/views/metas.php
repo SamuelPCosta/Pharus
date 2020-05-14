@@ -13,7 +13,7 @@
 	     						echo("Ops... Não foi <br>dessa vez.");
 	     					}
 	     				}else{
-		     				if ($meta==0) {
+		     				if ($meta==NULL) {
 		     					echo("Defina sua <br> meta mensal.");
 		     				}else{
 		     					echo("<span style='font-family: Open Sans !important; font-weight:lighter;'>Sua meta é: <br>".$meta." reais.</span>");
@@ -32,7 +32,7 @@
 	     					}
 	     				}else{
 		     				if ($meta==0) {
-		     					echo("Você ainda não tem uma meta de consumo até o final do mês. Para definir uma meta, preencha o campo ao lado com o valor e clique em <span class='font-italic'>'Salvar Meta'</span>.");
+		     					echo("Você ainda não tem uma meta de consumo até o final do mês. Para definir uma meta, preencha o campo seguinte e clique em <span class='font-italic'>'Salvar Meta'</span>.");
 		     				}else{
 		     					echo("Você deve gastar menos que isto até o final do mês. Para alterar esse valor preencha o campo seguinte e clique em <span class='font-italic'>'Editar Meta'</span> ao lado.");
 		     				}
@@ -40,7 +40,7 @@
 	     			?>	
 	     			</p>
 	     			<?php  
-	     			if ($meta!=0) {
+	     			if ($meta!=NULL) {
 	     				echo "
 	     				<div class='alert alert-primary mx-auto' role='alert' id='mensagem'>
 	     				".$this->session->userdata('mensagem')."
@@ -87,7 +87,7 @@
 	     		 <div class="col-xl-6 col-md-12 metas px-0">	
 	     		 <div class="card py-5 px-0 shadow card-theme theme mx-auto mb-5">	
 		        			<?php  
-			        			if ($meta==0) {
+			        			if ($meta==NULL) {
 			        		?>
 			        <h2>Defina a Sua <wbr>Meta Mensal</h2>
 		        	<form method="post" action="cadastroMeta/adicionar">

@@ -1,7 +1,7 @@
 			<div class="container first-container ideal">
 		        <div class="row align-items-center">
 		            <div class="col-xl-6 col-md-12">
-		        	<h1 class="margin-top theme">Ideal de consumo <br>
+		        	<h1 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme">Ideal de consumo <br>
 			        	<?php 
 			        		$faixa = $this->session->userdata('faixa');
 			        		if (isset($faixa)){echo "Entre ".$this->session->userdata('faixa');}
@@ -64,11 +64,35 @@
 								'Alternativa_c' => "Até 8 horas",
 								'Alternativa_d' => "Pular pergunta"
 							);
+						}elseif ($questao==7) {
+							$pergunta = array(
+								'Pergunta' => "Quantas horas por dia você dorme?",
+								'Alternativa_a' => "Até 6 horas",
+								'Alternativa_b' => "Até 8 horas",
+								'Alternativa_c' => "Até 10 horas",
+								'Alternativa_d' => "Pular pergunta"
+							);
+						}elseif ($questao==8) {
+							$pergunta = array(
+								'Pergunta' => "De qual hora você vai dormir?",
+								'Alternativa_a' => "22 horas ou antes",
+								'Alternativa_b' => "23 horas",
+								'Alternativa_c' => "00 horas ou depois",
+								'Alternativa_d' => "Pular pergunta"
+							);
+						}elseif ($questao==9) {
+							$pergunta = array(
+								'Pergunta' => "O que fica ligado enquanto você dorme?",
+								'Alternativa_a' => "Nada",
+								'Alternativa_b' => "Algumas lâmpadas",
+								'Alternativa_c' => "O ar condicionado",
+								'Alternativa_d' => "Pular pergunta"
+							);
 						}
 	     			?>
 	     			<nav aria-label="...">
 						<ul class="pagination justify-content-center my-3">
-							<?php for ($i=1; $i <=6 ; $i++){//numero de questoes na paginacao ?>
+							<?php for ($i=1; $i <=9 ; $i++){//numero de questoes na paginacao ?>
 								<li class="page-item" id="questao<?php echo $i?>"><a class="text-center rounded-circle page-link nperguntas theme active"><?php echo $i; ?></a></li>
 							<?php }?>
 						</ul>
