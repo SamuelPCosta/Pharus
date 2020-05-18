@@ -36,10 +36,14 @@ class Usuarios_model extends CI_Model {
 
 	public function atualizarDados($dadosUpdate=NULL, $usuarioAtual){
 		if ($dadosUpdate != NULL) {
-			$this->db->select('usuario');
-			$this->db->where('usuario', $dadosUpdate['usuario']);
-			$query = $this->db->get('usuario');
-			$nome_de_usuario = $query->num_rows(); //Obtem o número de linhas
+			if ($dadosUpdate['usuario'] != $usuarioAtual) {
+				$this->db->select('usuario');
+				$this->db->where('usuario', $dadosUpdate['usuario']);
+				$query = $this->db->get('usuario');
+				$nome_de_usuario = $query->num_rows(); //Obtem o número de linhas
+			}else{
+				$nome_de_usuario=0;
+			}
 			if ($nome_de_usuario>0) {//Se for >0, o nome de usuário já existe
 				return $nome_de_usuario_existente=TRUE;
 			}else{

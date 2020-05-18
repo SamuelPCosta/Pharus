@@ -78,7 +78,7 @@
 	}
 	</style>
 </head>
-	<div class="container first-container mt-5">
+	<div class="container first-container mt-5 container-simulador">
 		<!-- <h1 class="mb-5 text-uppercase theme">Simulador de Consumo</h1> -->
 		<form method="post" action="Raiz/Consumir">
 		<div class="row align-items-center">
@@ -225,7 +225,7 @@
 								<?php
 								$i=0;
 								foreach ($personalizados as $aparelho) {
-									echo "<tr><td class='theme' class='nomep'><input type='text' class='personalizados' name='personalizados[]' placeholder='' value='$aparelho'style='width:200px;border-radius: 0px; text-transform: capitalize;'></td>
+									echo "<tr><td class='theme nomep'><input type='text' class='personalizados' name='personalizados[]' placeholder='' value='$aparelho'style='width:200px;border-radius: 0px; text-transform: capitalize;'></td>
 										<td><input type='number' min='0' max='24' name='horas[]' class='horasp' placeholder='Horas'>
 										<select name='qntd[]' class='mr-0 ml-0 corrigiraltura'>".$qntd."</select>
 										<select name='potencia[]' class='potenciap'>".$optionsC.$optionsQS.$optionsO."</select></td></tr>";

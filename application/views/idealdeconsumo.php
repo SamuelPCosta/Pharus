@@ -1,10 +1,10 @@
 			<div class="container first-container ideal">
 		        <div class="row align-items-center">
 		            <div class="col-xl-6 col-md-12">
-		        	<h1 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme">Ideal de consumo <br>
+		        	<h1 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme">
 			        	<?php 
 			        		$faixa = $this->session->userdata('faixa');
-			        		if (isset($faixa)){echo "Entre ".$this->session->userdata('faixa');}
+			        		if (isset($faixa)){echo "Seu ideal de consumo <br> é entre ".$this->session->userdata('faixa');}else{echo "Ideal de consumo <br>";}
 			        	?>
 		        	</h1><br>
 		        	<p class="theme mb-4">&emsp;&emsp;Aqui você tem acesso a um questionário simples onde suas respostas serão registradas e analisadas com os dados de outros usuários, gerando assim uma faixa de consumo <!-- que fará uma análise das respostas de outros usuários --> para podermos te dar um maior suporte a partir de possíveis soluções para seus problemas. Você pode conferir esses dados na página <i>Consumo.</i></p>        	

@@ -52,16 +52,23 @@ h2.card-theme{
  	100% {transform: rotate(360deg); z-index: 0;}
 }
 
+.diagonal-enter-active { animation: 0.4s diagonal-enter; }
+.diagonal-leave-active { animation: 0.4s diagonal-leave; }
+
 .down-enter-active { animation: 0.4s down-enter; }
 .down-leave-active { animation: 0.4s down-leave; }
 
 @keyframes down-enter {
+  0% { clip-path: circle(0.5% at 80% 0); }
+  100% { clip-path: circle(100.0% at 50% 15%); }
+}
+
+@keyframes diagonal-enter {
   0% { clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0);}
   50% { clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 100%);}
   100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);}
 }
-
-@keyframes down-leave {
+@keyframes diagonal-leave {
   0% { clip-path: polygon(45% 0, 100% 0, 100% 100%, 0 100%, 0 45%);}
   25% { clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);}
   50% {clip-path: polygon(100% 55%, 100% 55%, 100% 100%, 55% 100%, 55% 100%);}

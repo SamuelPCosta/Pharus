@@ -7,9 +7,11 @@ class Raiz extends CI_Controller {
 			$this->load->model("Operacoes");
 			$usuario = $this->session->userdata('usuario');
 			$contaContrato = $this->Operacoes->contaContrato($usuario);
+			$consumo['foto'] = $this->Operacoes->foto($usuario);
 			$this->inserirConsumo($contaContrato);
 			$this->load->model("Consumo_model");
 			$consumo['meta'] = $this->Consumo_model->SelecionarMeta($contaContrato);
+			$consumo['contaContrato'] = $contaContrato;
 			if($consumo['meta']!=0){
 				//$valor_tarifa = 0.7; //Atualizar com base na tarifa local
 				date_default_timezone_set('America/Sao_Paulo'); 
@@ -193,6 +195,16 @@ class Raiz extends CI_Controller {
 			redirect('login?error=2'); 
 		}
 	}
+	public function dicasRecarregar(){
+		$this->load->model("Dicas_model");
+		$dicas['dica1'] = $this->Dicas_model->recarregar('a');
+		$dicas['dica2'] = $this->Dicas_model->recarregar('a');
+		$dicas['dica3'] = $this->Dicas_model->recarregar('a');
+		$dicas['dica4'] = $this->Dicas_model->recarregar('a');
+		$dicas['dica5'] = $this->Dicas_model->recarregar('b');
+		$dicas['dica6'] = $this->Dicas_model->recarregar('c');
+		echo json_encode($dicas);
+	}
 
 	public function conquistas(){
 		if (isset($_SESSION['login'])) {
@@ -221,6 +233,7 @@ class Raiz extends CI_Controller {
 			$dados['email'] = $this->Operacoes->email($usuario);
 			$dados['contaContrato'] = $this->Operacoes->contaContrato($usuario);
 			$dados['tarifa'] = $this->Operacoes->tarifa($usuario);
+			$dados['nomeestado'] = $this->Operacoes->estado($usuario);
 			$title['titulo'] ="Usuário";
 			$this->load->view('header_sidebar', $title);
 			$this->load->view('usuario', $dados);
@@ -231,13 +244,14 @@ class Raiz extends CI_Controller {
 	}
 
 	public function salvarimg(){
-	    $curriculo    = $_FILES['foto'];
-	    $usuario = $this->session->userdata('usuario');
+		$this->load->model("Operacoes");
+		$usuario = $this->session->userdata('usuario');
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
 	    $config = array(
 	        'upload_path'   => './assets/fotos/',
 	        'allowed_types' => 'png|jpg|jpeg',
 	        'overwrite'		=> TRUE,
-	        'file_name'     => 'profile_'.$usuario.'.png',
+	        'file_name'     => 'profile_'.$contaContrato.'.png',
 	        //'file_name'     => 'foto_user'.'.png',
 	        'max_size'      => '10000',
 	        'max_width:'    => '5000',
@@ -251,7 +265,21 @@ class Raiz extends CI_Controller {
 	    }else{
 	        echo $this->upload->display_errors();
 	    }
-	 }
+	}
+
+	public function registrarFotoDB(){
+		$this->load->model("Operacoes");
+		$usuario = $this->session->userdata('usuario');
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
+		$this->Operacoes->regsitrarFoto($contaContrato);
+	}
+
+	public function removerFotoDB(){
+		$this->load->model("Operacoes");
+		$usuario = $this->session->userdata('usuario');
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
+		$this->Operacoes->removerFoto($contaContrato);
+	}
 
 	public function cadastro(){
 		$this->load->view('cadastro');

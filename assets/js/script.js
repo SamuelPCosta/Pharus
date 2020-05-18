@@ -65,17 +65,17 @@ window.onload = function(){
 
 /*###########Giro de imgs###########*/
 function point(imagem, point, texto) {
-  $("#imagemdocirculo").addClass('down-enter-active');
-  $("#imagemdocirculo2").addClass('down-leave-active');
+  $("#imagemdocirculo").addClass('diagonal-enter-active');
+  $("#imagemdocirculo2").addClass('diagonal-leave-active');
   $("#imagemdocirculo").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
   $(".point").removeClass('imagematualdocirculo');
   $("."+point).addClass('imagematualdocirculo');
   $(".textogiro").removeClass('textodogirovisivel');
   $("."+texto).addClass('textodogirovisivel');
   setTimeout(function(){ 
-    $("#imagemdocirculo").removeClass('down-enter-active'); 
+    $("#imagemdocirculo").removeClass('diagonal-enter-active'); 
     $("#imagemdocirculo2").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
-    $("#imagemdocirculo2").removeClass('down-leave-active');}, 400);
+    $("#imagemdocirculo2").removeClass('diagonal-leave-active');}, 400);
 }
 
 function video(video, marcador) {
@@ -88,18 +88,31 @@ function video(video, marcador) {
 }
 
 /*###########Foto User###########*/
-const usuario = localStorage.getItem('Usuario')
-const fotoStorage = localStorage.getItem(usuario)
-if (fotoStorage) {
-    $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/profile_"+usuario+".png");
+var usuario = localStorage.getItem('Usuario')
+var fotoStorage = localStorage.getItem('fotoStorage')
+//localStorage.setItem('fotoStorage', true);
+if (fotoStorage=="true") {
+  $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/profile_"+usuario+".png");
 }else{
   $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
 }
+
 $("#removerimg").click(function(e) {
   e.preventDefault();
     $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
-    localStorage.removeItem(usuario)
+    $.ajax({
+        url: "http://localhost/pharus/Raiz/removerFotoDB",
+        type: "POST",
+        data: {},
+        success: function(){
+      },
+      error: function(){
+          console.log('Error');
+      }
+    });
+    localStorage.removeItem('fotoStorage')
 });
+
 $(function(){
   $('#upload').change(function(){
     const file = $(this)[0].files[0]
@@ -113,16 +126,26 @@ $(function(){
     $("#btndesalvar").toggleClass("inativo");
   })
 })
+
 function salvarimg(){
-    $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
-    localStorage.removeItem(usuario)
+    $.ajax({
+        url: "http://localhost/pharus/Raiz/registrarFotoDB",
+        type: "POST",
+        data: {},
+        success: function(){
+      },
+      error: function(){
+          console.log('Error');
+      }
+    });
+    localStorage.setItem('fotoStorage', "true");
+    var fotoStorage = localStorage.getItem('fotoStorage')
     $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/profile_"+usuario+".png");
-    localStorage.setItem(usuario, true)
-    return  
+     
+    //window.location.reload(true)
+    //return  
 }
-function destroyphoto(){
-  localStorage.removeItem('Usuario')
-}
+
 /*###########Theme dark###########*/
 // pegamos o valor no localStorage
 const nightModeStorage = localStorage.getItem('NightMode')
@@ -169,6 +192,16 @@ $("#toggle-theme").click(function(e) {
   localStorage.removeItem('NightMode')
 });
 
+/*###########Animação notificacoes###########*/
+function animarNotificacao() {
+  if ( $(".navbar-expand-lg").is(".open") ) {
+    $(".navbar").removeClass('open');
+  }else{
+    $("#painelnot").addClass('down-enter-active');
+    $(".navbar").addClass('open');
+    setTimeout(function(){$("#painelnot").removeClass('down-enter-active');}, 400);
+  } 
+}
 /*###########Animação Scroll###########*/
 var root = document.documentElement;
 root.className += ' js';

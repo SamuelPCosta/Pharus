@@ -30,6 +30,7 @@ class Login extends CI_Controller {
 		unset($_SESSION['dadoserro']);
 		unset($_SESSION['meta']);
 		unset($_SESSION['conferirMeta']);
+		unset($_SESSION['faixa']);
 		redirect('login'); 
 	}
 

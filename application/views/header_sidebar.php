@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700" rel="stylesheet">
 	<link rel="shortcut icon" href="<?= base_url()?>assets/img/logo2.png"/> <!--Icone-->
 	<!-- O comando base_url() é um atalho para o enderço da nossa base-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="<?= base_url()?>assets/js/jquery.maskMoney.js" type="text/javascript"></script>
 </head>
 <body>
@@ -30,7 +30,7 @@
 		<nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0">
 			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn text-white text-dark sidebar-li-a position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
-              <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;">
+              <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;" onclick="animarNotificacao()">
                 <i class="fas fa-bell"></i>
               </a>
               <div class="btn-group">
@@ -104,7 +104,7 @@
                     <a href="simulador" class="sidebar-li-a text-dark"><i class="fas fa-laptop-code"></i>Simulador</a>
                 </li>
                 <li id="Dicas" class="">
-                    <a href="dicas" class="sidebar-li-a text-dark"><i class="fas fa-lightbulb"></i>Dicas</a>
+                    <a href="dicas#" class="sidebar-li-a text-dark"><i class="fas fa-lightbulb"></i>Dicas</a>
                 </li>
                 <li id="Conquistas" class="">
                     <a href="conquistas" class="sidebar-li-a text-dark"><i class="fas fa-star"></i>Conquistas</a>

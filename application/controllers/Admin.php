@@ -23,7 +23,7 @@ class Admin extends CI_Controller {
 		if (isset($_SESSION['login'])) {
 			redirect('index'); 
 		}else{
-			$this->load->view('admin/loginAdmin');
+			$this->load->view('Admin/loginAdmin');
 		}
 	}
 

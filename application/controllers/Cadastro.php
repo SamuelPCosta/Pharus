@@ -9,13 +9,18 @@ class Cadastro extends CI_Controller {
 		if (empty($this->input->post("tarifa_kwh"))) {
 			$tarifa_kwh = '0.55';
 		}
+		$estado = $this->input->post("estado");
+		if ($this->input->post("estado")=="estado") {
+			$estado = NULL;
+		}
 		//Esse array passa os campos a serem inseridos na table usuario;
 		$dados = array(
 			'usuario' => $this->input->post("usuario"),
 			'nome' => $this->input->post("nome"),
 			'email' => $this->input->post("email"),
 			'senha' => md5($this->input->post("senha")),
-			'tarifa_kwh' => $tarifa_kwh
+			'tarifa_kwh' => $tarifa_kwh,
+			'estado' => $estado
 		);
 
 		//Próximo array serve para povoar table consumo, consumo_mensal e metas
@@ -61,23 +66,29 @@ class Cadastro extends CI_Controller {
 		$nome = $this->input->post("nome");
 		$email = $this->input->post("email");
 		$tarifa = $this->input->post("tarifa_kwh");
+		$estado = $this->input->post("estado");
 
 		$usuarioAtual=$this->session->userdata('usuario');
 		$nomeAtual=$this->Operacoes->nomeCompleto($usuarioAtual);
 		$contaContratoAtual=$this->Operacoes->contaContrato($usuarioAtual);
 		$emailAtual=$this->Operacoes->email($usuarioAtual);
 		$tarifaAtual=$this->Operacoes->tarifa($usuarioAtual);
+		$estadoAtual=$this->Operacoes->estado($usuarioAtual);
 
 		//Esse array passa os campos a serem atualizados na table usuario;
 		$dadosUpdate = array();
 			if ($usuario!=$usuarioAtual && $usuario!=NULL && $usuario!=" ") {
 				$dadosUpdate['usuario'] = $usuario;
+			}else{
+				$dadosUpdate['usuario'] = $usuarioAtual;
 			}if ($nome!=$nomeAtual && $nome!=NULL && $nome!=" ") {
 				$dadosUpdate['nome'] = $nome;
 			}if ($email!=$emailAtual && $email!=NULL && $email!=" ") {
 				$dadosUpdate['email'] = $email;
 			}if ($tarifa!=$tarifaAtual && $tarifa!=NULL && $tarifa!=" ") {
 				$dadosUpdate['tarifa_kwh'] = $tarifa;
+			}if ($estado!=$estadoAtual) {
+				$dadosUpdate['estado'] = $estado;
 			}
 		$this->load->model("Usuarios_model");
 		$nome_de_usuario_existente = $this->Usuarios_model->atualizarDados($dadosUpdate, $usuarioAtual);

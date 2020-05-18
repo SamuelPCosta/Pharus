@@ -34,6 +34,34 @@ class Operacoes extends CI_Model {
 		return $tarifa_kwh;
 	}
 
+	public function estado($usuario){
+		$this->db->select('estado');
+		$this->db->where('usuario', $usuario); //Onde o usuário for igual ao nome de usuário q está logado
+		$query = $this->db->get('usuario');
+		$estado = $query->row()->estado;
+		return $estado;
+	}
+
+	public function foto($usuario){
+		$this->db->select('foto');
+		$this->db->where('usuario', $usuario); //Onde o usuário for igual ao nome de usuário q está logado
+		$query = $this->db->get('usuario');
+		$foto = $query->row()->foto;
+		return $foto;
+	}
+
+	public function regsitrarFoto($contaContrato){
+		$this->db->set('foto', "true");
+		$this->db->where('conta_contrato', $contaContrato); //Onde a contacontrato for igual a q está logado
+		$this->db->update('usuario');
+	}
+
+	public function removerFoto($contaContrato){
+		$this->db->set('foto', NULL);
+		$this->db->where('conta_contrato', $contaContrato); //Onde a contacontrato for igual a q está logado
+		$this->db->update('usuario');
+	}
+
 	public function bandeira($usuario){
 		$this->db->select('bandeira');
 		$this->db->where('usuario', $usuario); //Onde o usuário for igual ao nome de usuário q está logado

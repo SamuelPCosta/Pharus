@@ -28,7 +28,7 @@
 						<div class="vertical-line"></div>
 						<div class="col-xl col-md-12 mx-auto px-0">
 							<div class="container h-100 usuario">
-								<div class="mb-2 rounded-lg px-3 py-5">
+								<div class="mb-2 rounded-lg px-3 pt-2 pb-5">
 									<div class="">
 										<div class="d-flex justify-content-center">
 											<div class="brand_logo_container">
@@ -58,12 +58,63 @@
 												<div class="input-group mb-2">
 													<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user border-0" placeholder="">
 												</div>
-												<span>Preço por kWh:</span>
+												<span>Estado/Concessionária :</span>
 												<div class="input-group mb-2">
-													<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney dados_user border-0" value="<?php echo $tarifa ?>" placeholder="Tarifa por kWh"  min="0.10" max="3.00" step="0.01">
+													<select name="tarifa_kwh" id="estado" class="input-group mb-2 form-control input_pass dados_user">
+														<option value="0.55"></option>
+														<option value="AC">Acre</option>
+														<option value="AL">Alagoas</option>
+														<option value="AP">Amapá</option>
+														<option value="AM">Amazonas</option>
+														<option value="BA">Bahia</option>
+														<option value="CE">Ceará</option>
+														<option value="DF">Distrito Federal</option>
+														<option value="ES">Espírito Santo</option>
+														<option value="GO">Goiás</option>
+														<option value="MA">Maranhão</option>
+														<option value="MT">Mato Grosso</option>
+														<option value="MS">Mato Grosso do Sul</option>
+														<option value="MG">Minas Gerais</option>
+														<option value="0.33">Pará</option>
+														<option value="PB">Paraíba</option>
+														<option value="PR">Paraná</option>
+														<option value="PE">Pernambuco</option>
+														<option value="PI">Piauí</option>
+														<option value="RJ">Rio de Janeiro</option>
+														<option value="0.55">Rio Grande do Norte</option>
+														<option value="RS">Rio Grande do Sul</option>
+														<option value="RO">Rondônia</option>
+														<option value="RR">Roraima</option>
+														<option value="SC">Santa Catarina</option>
+														<option value="SP">São Paulo</option>
+														<option value="SE">Sergipe</option>
+														<option value="TO">Tocantins</option>
+													</select>
+													<input type="hidden" name="estado" id="estadonome" value="estado">
+													<script type="text/javascript">
+														$(document).ready(function (){
+															var nomedoestado = "<?php echo$nomeestado?>"
+															$("input[name=estado]").val(nomedoestado)
+															if (nomedoestado=="") {
+																$("#estado option:contains(null)").attr('selected', true);
+															}else{
+																$("#estado option:contains('"+nomedoestado+"')").attr('selected', true);
+															}
+														});
+														$("select").change(function () {
+															var str = "";
+														    $("select option:selected").each(function() {
+														      str += $( this ).text();
+														    });
+														    //console.log(str);
+														    $("input[name=estado]").val(str)
+														    var valorName = $("input[name=estado]").val()
+															console.log(valorName);
+														}).change();
+													</script>
 												</div>
 												<a href="editar-senha" class="sidebar-li-a text-dark theme" id="editar_senha"><i class="fas fa-edit"></i> Editar senha</a>
-												<a href="login" class="ml-1 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2 theme" style="position: relative; top: -38px; bottom: 0px; z-index: 333"></i></a>		
+												<a href="login" class="ml-1 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2 theme" style="position: relative; top: -78px; bottom: 0px; z-index: 333"></i></a>		
 										</div>
 												<!-- ###modal### -->
 												 <div class="modal fade" id="saibamais" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -110,5 +161,7 @@
 			}); 
 		</script>
 		<script>
+			localStorage.setItem('Usuario', "<?php echo $contaContrato; ?>");
+			//var consumo = localStorage.getItem('consumo');
 			var atual ="Usuario";
 		</script>

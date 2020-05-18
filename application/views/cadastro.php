@@ -98,11 +98,54 @@
 						<span class="text-secondary">Opcional</span>
 						<div class="input-group mb-1">
 							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-coins"></i></span>
+								<span class="input-group-text"><i class="fas fa-map-marker-alt"></i></i></span>
 							</div>
-							<input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney" value="<?php if(isset($_SESSION['dadoserro'])){echo $_SESSION['dadoserro']['tarifa_kwh'];}?>" placeholder="Preço por kWh"  min="0.10" max="3.00" step="0.01">
+							<!-- <input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney" value="<?php if(isset($_SESSION['dadoserro'])){echo $_SESSION['dadoserro']['tarifa_kwh'];}?>" placeholder="Preço por kWh"  min="0.10" max="3.00" step="0.01"> -->
+							<select name="tarifa_kwh" class="form-control input_pass" id="estadonome">
+								<option value="0.55">Estado</option>
+								<option value="AC">Acre</option>
+								<option value="AL">Alagoas</option>
+								<option value="AP">Amapá</option>
+								<option value="AM">Amazonas</option>
+								<option value="BA">Bahia</option>
+								<option value="CE">Ceará</option>
+								<option value="DF">Distrito Federal</option>
+								<option value="ES">Espírito Santo</option>
+								<option value="GO">Goiás</option>
+								<option value="MA">Maranhão</option>
+								<option value="MT">Mato Grosso</option>
+								<option value="MS">Mato Grosso do Sul</option>
+								<option value="MG">Minas Gerais</option>
+								<option value="PA">Pará</option>
+								<option value="PB">Paraíba</option>
+								<option value="PR">Paraná</option>
+								<option value="PE">Pernambuco</option>
+								<option value="PI">Piauí</option>
+								<option value="RJ">Rio de Janeiro</option>
+								<option value="RN">Rio Grande do Norte</option>
+								<option value="RS">Rio Grande do Sul</option>
+								<option value="RO">Rondônia</option>
+								<option value="RR">Roraima</option>
+								<option value="SC">Santa Catarina</option>
+								<option value="SP">São Paulo</option>
+								<option value="SE">Sergipe</option>
+								<option value="TO">Tocantins</option>
+							</select>
+							<input type="hidden" name="estadonome" id="estadonome" value="">
+							<script type="text/javascript">
+								$("select").change(function () {
+									var str = "";
+								    $("select option:selected").each(function() {
+								      str += $( this ).text() + " ";
+								    });
+								    //console.log(str);
+								    $("input[name=estadonome]").val(str)
+								    var valorName = $("input[name=estadonome]").val()
+									console.log(valorName);
+								}).change();
+							</script>
 						</div>	
-						<a href="login" class="ml-1 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2 text-dark" style="position: relative; top: -35px; z-index: 333"></i></a>		
+						<a href="login" class="ml-1 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2 text-dark" style="position: relative; top: -70px; z-index: 333"></i></a>		
 						<a href="login" class="float-right" data-toggle="modal" data-target="#saibamais" style="transform: translateX(25px);">Entenda melhor</a>
 
 						<!-- ###modal### -->
@@ -143,13 +186,13 @@
 		</div>
 	</div>
 	<script>
-		$("#tarifa").maskMoney({
-		  thousands: '.', 
-		  decimal: '.' , 
-		  precision: 2, 
-		  affixesStay : false, 
-		  bringCaretAtEndOnFocus: true 
-		}); 
+		// $("#tarifa").maskMoney({
+		//   thousands: '.', 
+		//   decimal: '.' , 
+		//   precision: 2, 
+		//   affixesStay : false, 
+		//   bringCaretAtEndOnFocus: true 
+		// }); 
 	</script>
 	<!--Abaixo seguem os scripts para o funcionamento do JS do BS...-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

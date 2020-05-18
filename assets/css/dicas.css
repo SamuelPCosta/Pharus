@@ -34,6 +34,15 @@
 	margin-top: 20px;
 	text-decoration: none;
 }
+.recarregarIcone{
+	animation: recarregar 1s;
+	/*animation-timing-function: linear;*/
+}
+
+@keyframes recarregar{
+	0% {transform: rotate(0deg);}
+ 	100% {transform: rotate(360deg);}
+}
 .colunas p::first-letter{
  	font-size: 1.4em;
 }
@@ -54,10 +63,11 @@
 	#recarregar{
 		text-align: center;
 		margin: 0px auto;
-		width: 50%;
+		width: 20%;
 		float: none;
-		margin-left: 25%;
-		position: relative;
+		right: 30px;
+		bottom: 100px;
+		position: fixed;
 	}
 }
 @media(max-width:768px) {

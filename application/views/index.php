@@ -160,7 +160,21 @@
 	} else {echo "var corbarra = '#a32f2f'";}
 	?>	
 	</script>
+	<?php 
+		if ($foto=="true") {
+		?>
+		<script>
+			localStorage.setItem('fotoStorage', "true");
+			console.log(localStorage.getItem('fotoStorage'))
+		</script>
+	<?php
+	}else{
+	?>
+		<script>
+			localStorage.setItem('fotoStorage', "false");
+		</script>
+	<?php }?>
 	<script>
-	    localStorage.setItem('Usuario', "<?php echo $this->session->userdata('usuario'); ?>");
+	    localStorage.setItem('Usuario', "<?php echo $contaContrato; ?>");
    		var atual ="Home";
 	</script>

@@ -19,12 +19,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 	<!--Importação ajax-->
 	<?php 
-		if (isset($_SESSION['consumo'.$usuario]) || $this->session->userdata('simulacaoBackup'.$usuario)!=NULL){
-			if (isset($_SESSION['consumo'.$usuario])){
-				$consumoSimuladoPorHora = $this->session->userdata('consumo'.$usuario);
-			}else{
-				$consumoSimuladoPorHora = $this->session->userdata('simulacaoBackup'.$usuario);
-			}
+		if ($this->session->userdata('simulacaoBackup'.$usuario)!=NULL){
+			$consumoSimuladoPorHora = $this->session->userdata('simulacaoBackup'.$usuario);
 		}
 		// print_r($this->session->userdata('consumo'.$usuario));
 		// echo "<br><br>";
