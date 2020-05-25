@@ -102,7 +102,7 @@
 							</div>
 							<!-- <input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney" value="<?php if(isset($_SESSION['dadoserro'])){echo $_SESSION['dadoserro']['tarifa_kwh'];}?>" placeholder="Preço por kWh"  min="0.10" max="3.00" step="0.01"> -->
 							<select name="tarifa_kwh" class="form-control input_pass" id="estadonome">
-								<option value="0.55">Estado</option>
+								<option value="0.55">Estado/Fornecedor</option>
 								<option value="AC">Acre</option>
 								<option value="AL">Alagoas</option>
 								<option value="AP">Amapá</option>

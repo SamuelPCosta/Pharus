@@ -18,7 +18,7 @@ class Simulador_model extends CI_Model {
 	public function backupSimulador($usuario, $array){
 		$i=0;
 		foreach ($array as $key) {
-			echo $i;
+			//echo $i;
 			$this->db->set('hora'.$i, $array[$i]);
 			$this->db->where('usuario', $usuario);  
 			$this->db->update('simulacao');
@@ -50,6 +50,34 @@ class Simulador_model extends CI_Model {
 		}
 	}
 
+	public function horasSimulacao($usuario, $array){
+		$this->db->set('horas_simulacao', json_encode($array));
+		$this->db->where('usuario', $usuario);  
+		$this->db->update('simulacao');
+	}
+
+	public function getHorasSimulacao($usuario){
+		$this->db->select('horas_simulacao');
+		$this->db->where('usuario', $usuario);
+		$query = $this->db->get('simulacao');
+		$horas_simulacao = $query->row()->horas_simulacao;
+		return $horas_simulacao;
+	}
+
+	public function aparelhosPersonalizados($usuario, $array){
+		$this->db->set('aparelhos_personalizados', json_encode($array));
+		$this->db->where('usuario', $usuario);  
+		$this->db->update('simulacao');
+	}
+
+	public function getAparelhosPersonalizados($usuario){
+		$this->db->select('aparelhos_personalizados');
+		$this->db->where('usuario', $usuario);
+		$query = $this->db->get('simulacao');
+		$aparelhos_personalizados = $query->row()->aparelhos_personalizados;
+		return $aparelhos_personalizados;
+	}
+	
 	public function zerar($usuario,$kwhBase_horasDormidas){
 		$this->db->set('kw_h', $kwhBase_horasDormidas);
 		$this->db->where('usuario', $usuario);  

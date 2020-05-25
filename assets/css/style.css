@@ -60,7 +60,10 @@ td:nth-child(1){
     min-width: 180px !important;
 }
 tr.theme:hover{
-    background-color: #ffc107;
+    background-color: #f7da80;
+}
+tr.theme.text-white:hover{
+    background-color: #39444d;
 }
 #wrapper {
     padding-left: 0;
@@ -94,6 +97,9 @@ tr.theme:hover{
     margin: 0 auto !important;
     border-color: #b5b5b5;
     width: 100%;
+}
+.dropdown-item{
+    border-radius: 10px;
 }
 #dark{
     z-index: 2;
@@ -160,7 +166,7 @@ tr.theme:hover{
 #painelnot span:hover{ /*hover dos itens do menu*/
     text-decoration: none;
     color: #fff !important;
-    background-color: #464B51;
+    background-color: #f7da80;
 }
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus{
@@ -378,17 +384,17 @@ select.bg-dark2{
 }
 footer{
     z-index: 0;
-    background-color: #464B51;
-    color: #ccc;
+    background-color: #fff;
+    color: #808080;
 }
 footer.shadow{
     box-shadow:0 .5rem 1rem rgba(0,0,0,.90)!important;
 }
 footer a{
-    color: white;
+    color: #343a40;
 }
 footer a:hover{
-    color: white;
+    color: black;
 }
 /*
 ####################--QuemSomos--####################
@@ -466,7 +472,8 @@ input[type="text"]:enabled , input[type="password"]:enabled, select{
 }
 select{
     background:#f8f9fa!important; 
-    border-left: 4px solid #FFC107 !important;  
+    border-left: 4px solid #FFC107 !important;
+    border-top: 0 none !important;border-right: 0 none !important;border-bottom: 0 none !important;
 }
 .container-simulador select{
     border-left: 0px !important; 
@@ -553,5 +560,18 @@ a#editar_senha:hover{
     opacity: 1;
     transform: translate3D(0px, 0px, 0px);
     transition: .35s all ease;
+}
+
+.di-1{animation: spwan 0.05s;animation-timing-function: linear;}
+.di-2{animation: spwan 0.1s;animation-timing-function: linear;}
+.di-3{animation: spwan 0.15s;animation-timing-function: linear;}
+.di-4{animation: spwan 0.2s;animation-timing-function: linear;}
+.di-5{animation: spwan 0.25s;animation-timing-function: linear;}
+.di-6{animation: spwan 0.3s;animation-timing-function: linear;}
+.di-7{animation: spwan 0.35s;animation-timing-function: linear;}
+
+@keyframes spwan{
+    0% {margin-top: 15px;}
+    100% {margin-top: 0px;}
 }
 /*https://codepen.io/origamid/pen/vXEmQJ?editors=0110*/

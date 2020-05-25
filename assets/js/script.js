@@ -25,7 +25,7 @@ window.onresize=function() {
       if (containerconsumo !== null) {document.getElementById("containerconsumo").style.zoom = "100%"}
     }else if(largura<=768){
       document.body.style.zoom = "100%"
-      if (containerconsumo !== null) {document.getElementById("containerconsumo").style.zoom = "117.65%"}
+      if (containerconsumo !== null) {document.getElementById("containerconsumo").style.zoom = "100%"}
     }else{
       document.body.style.zoom = "85%"
       if (containerconsumo !== null) {document.getElementById("containerconsumo").style.zoom = "117.65%"}
@@ -199,7 +199,8 @@ function animarNotificacao() {
   }else{
     $("#painelnot").addClass('down-enter-active');
     $(".navbar").addClass('open');
-    setTimeout(function(){$("#painelnot").removeClass('down-enter-active');}, 400);
+    $("#avisonotificacao").addClass('inativo');
+    setTimeout(function(){$("#painelnot").removeClass('down-enter-active');$(".navbar").removeClass('open');}, 400);
   } 
 }
 /*###########Animação Scroll###########*/

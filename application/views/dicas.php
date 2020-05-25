@@ -36,6 +36,7 @@
 			      		</p>
 			      	</div>
 			      		<button id="recarregar" onclick="recarregar()" class="btn bg-warning"><i class="fas fa-redo" id="recarregarIcone"></i> Novas dicas</button>
+			      		<button id="recarregarMobile" onclick="recarregar()" class="btn bg-warning"><i class="fas fa-redo" id="recarregarIconeMobile"></i></button>
 			      	</div>
 			      </div>
 			      <!--conteudo-->
@@ -43,16 +44,11 @@
 
 	<script>
     function recarregar(){
-    	var $targetTop = $('.animeTop'),
-            animationClass = 'anime-init',
-            windowHeight = $(window).height()+300,
-            offset = windowHeight - (windowHeight /4);
-
-	        var documentTop = $(document).scrollTop();
-	        $targetTop.each(function() {
-	            $(this).removeClass(animationClass);
-	        });  
-	        $('#recarregarIcone').addClass('recarregarIcone');
+    	$('.anime').addClass('animeTop');
+    	$('.animeTop').removeClass('anime-init');
+    	$('.animeTop').removeClass('anime');
+	    $('#recarregarIcone').addClass('recarregarIcone');
+	    $('#recarregarIconeMobile').addClass('recarregarIcone');
 
         $.ajax({
             url: "<?php echo base_url(); ?>Raiz/dicasRecarregar",
@@ -70,24 +66,62 @@
 	        error: function(){
 	            console.log('Error');
 	        }
-        });  
-
-        function animeScroll() {
-	        $targetTop.each(function() {
-	            if (documentTop > boxTop(this) - offset) {
-	                $(this).addClass(animationClass);
-	            } else {
-	                $(this).removeClass(animationClass);
-	            }
-	        });
-	    }
-        animeScroll();
-
-	    $(document).scroll(function() {
-	        setTimeout(function() {animeScroll()}, 150);
-	    });
-	    setTimeout(function() {$('#recarregarIcone').removeClass('recarregarIcone')}, 1000);
+        });
+        setTimeout(function() { $('.animeTop').addClass('anime-init');}, 150);
+	    setTimeout(function() {$('#recarregarIcone').removeClass('recarregarIcone');$('#recarregarIconeMobile').removeClass('recarregarIcone')}, 1000);
     };
 
+	var inicialX;
+	  addEventListener('touchstart', function(e) {
+	    var toqueobj = e.changedTouches[0];
+	    inicialX = toqueobj.pageX;
+	    inicialY = toqueobj.pageY;
+	  }, false);
+	  //
+	  addEventListener('touchmove', function(e){
+	    e.preventDefault();
+	  }, false)
+	  //
+	  addEventListener('touchend', function(e){
+	    var toqueobj = e.changedTouches[0];
+	    var distancia = toqueobj.pageX - inicialX;
+	    var distanciaV = toqueobj.pageY - inicialY;
+	    if(distanciaV > 0){
+
+	    }
+	    if(distancia > 100 & distanciaV<100){
+	    $('.animeTop').removeClass('anime-init');
+    	$('.animeTop').addClass('anime');
+    	$('.animeTop').removeClass('animeTop');
+    	$('.anime').removeClass('anime-init');
+	    $('#recarregarIcone').addClass('recarregarIcone');
+	    $('#recarregarIconeMobile').addClass('recarregarIcone');
+
+        $.ajax({
+            url: "<?php echo base_url(); ?>Raiz/dicasRecarregar",
+            type: "POST",
+            data: {},
+            success: function(result){
+            console.log(JSON.parse(result));
+            $('#dica1').html(JSON.parse(result).dica1);
+            $('#dica2').html(JSON.parse(result).dica2);
+            $('#dica3').html(JSON.parse(result).dica3);
+            $('#dica4').html(JSON.parse(result).dica4);
+            $('#dica5').html(JSON.parse(result).dica5);
+            $('#dica6').html(JSON.parse(result).dica6);
+	        },
+	        error: function(){
+	            console.log('Error');
+	        }
+        });
+        setTimeout(function() { $('.anime').addClass('anime-init');}, 150);
+	    setTimeout(function() {$('#recarregarIcone').removeClass('recarregarIcone');$('#recarregarIconeMobile').removeClass('recarregarIcone')}, 1000);
+	    }
+	  }, false)
+
+	var largura = window.innerWidth;
+	if (largura<768) {
+	  $('#dark').addClass('visible');
+	}
     var atual ="Dicas";
 	</script>

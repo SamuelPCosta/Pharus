@@ -86,9 +86,10 @@
 				<?php $cozinha = array('Exaustor','Freezer','Fogão Elétrico','Geladeira','Microondas','Lava-Louça','Liquidificador');
 				$quartosala = array('Ar-Condicionado','Computador','Estabilizador','Impressora','Televisão','Ventilador','Vídeogame');
 				$outros = array('Chuveiro Elétrico','Ferro Elétrico','Lâmpada Fluor.','Lâmpada Incan.','Lavadora','Secador');
+				if (empty($horassalvas)) {$horassalvas=null;}
 				if (isset($_SESSION['personalizados'])) {
-					$personalizados = $this->session->userdata('personalizados');
-					//var_dump($personalizados);
+					$personalizados = $aparelhosPersonalizados;
+					if (empty($personalizados)){$personalizados=array('Aparelho 1', 'Aparelho 2', 'Aparelho 3', 'Aparelho 4', 'Aparelho 5', 'Aparelho 6');}
 				}else{
 					$personalizados = array('Aparelho 1', 'Aparelho 2', 'Aparelho 3', 'Aparelho 4', 'Aparelho 5', 'Aparelho 6');
 				}
@@ -129,7 +130,7 @@
 							<ul class="col-xl col-md-12 mx-auto px-5 theme text-justify">
 								<li>Insira os valores correspondentes a quantas horas cada aparelho permanece ligado.</li>
 								<li>Estamos considerando uma potência média para cada aparelho.</li>
-								<li>---Só não tá salvando ainda os dados, mas tá salvando o nome dos personalizados.---</li>
+								<li>Os dados ficam salvos para que você tenha um referncial futuro de sua última simulação.</li>
 							</ul>
 						</div>
 						<div class="vertical-line" style="height: 150px!important"></div>
@@ -137,7 +138,7 @@
 							<ul class="col-xl col-md-12 mx-auto px-5 theme text-justify">
 								<li>O último bloco é reservado para aparelhos personalizavéis.</li>
 								<li>Você pode alterar seus nomes clicando sobre eles.</li>
-								<li>Além disso, você pode alterar a potência desses aparelhos.</.li>
+								<li>Além disso, você pode alterar a potência destes aparelhos.</.li>
 							</ul>
 							<!--conteudo-->
 						</div>
@@ -153,7 +154,7 @@
 								$i=0;
 								foreach ($cozinha as $aparelho) {
 									echo "<tr><td style='width:330px;'><h2 class='theme'>".$aparelho.":</h2></td>
-										<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
+										<td><input type='number' min='0' max='24' name='horas[]' value='".$horassalvas[$i]."' placeholder='Horas'>
 										<select name='potencia[]' style='display:none!important;' class='g1".$i."'>".$optionsC."</select>
 										<select name='qntd[]'>".$qntd."</select></td></tr>";
 								?>
@@ -176,7 +177,7 @@
 								$i=0;
 								foreach ($quartosala as $aparelho) {
 									echo "<tr><td style='width:330px;'><h2 class='theme'>".$aparelho.":</h2></td>
-										<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
+										<td><input type='number' min='0' max='24' name='horas[]' value='".$horassalvas[$i+7]."' placeholder='Horas'>
 										<select name='potencia[]' style='display:none!important;' class='g2".$i."'>".$optionsQS."</select>
 										<select name='qntd[]'>".$qntd."</select></td></tr>";
 								?>
@@ -203,7 +204,7 @@
 								$i=0;
 								foreach ($outros as $aparelho) {
 									echo "<tr><td style='width:330px;'><h2 class='theme'>".$aparelho.":</h2></td>
-										<td><input type='number' min='0' max='24' name='horas[]' placeholder='Horas'>
+										<td><input type='number' min='0' max='24' name='horas[]' value='".$horassalvas[$i+14]."' placeholder='Horas'>
 										<select name='potencia[]' style='display:none!important;' class='g3".$i."'>".$optionsO."</select>
 										<select name='qntd[]'>".$qntd."</select></td></tr>";
 								?>
@@ -225,8 +226,8 @@
 								<?php
 								$i=0;
 								foreach ($personalizados as $aparelho) {
-									echo "<tr><td class='theme nomep'><input type='text' class='personalizados' name='personalizados[]' placeholder='' value='$aparelho'style='width:200px;border-radius: 0px; text-transform: capitalize;'></td>
-										<td><input type='number' min='0' max='24' name='horas[]' class='horasp' placeholder='Horas'>
+									echo "<tr><td class='theme nomep'><input type='text' class='personalizados' name='personalizados[]' placeholder='' value='".$personalizados[$i]."' style='width:200px;border-radius: 0px; text-transform: capitalize;'></td>
+										<td><input type='number' min='0' max='24' name='horas[]' class='horasp' value='".$horassalvas[$i+20]."' placeholder='Horas'>
 										<select name='qntd[]' class='mr-0 ml-0 corrigiraltura'>".$qntd."</select>
 										<select name='potencia[]' class='potenciap'>".$optionsC.$optionsQS.$optionsO."</select></td></tr>";
 								$i++;

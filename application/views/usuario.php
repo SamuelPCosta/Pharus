@@ -58,7 +58,7 @@
 												<div class="input-group mb-2">
 													<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user border-0" placeholder="">
 												</div>
-												<span>Estado/Concessionária :</span>
+												<span>Estado/Fornecedor:</span>
 												<div class="input-group mb-2">
 													<select name="tarifa_kwh" id="estado" class="input-group mb-2 form-control input_pass dados_user">
 														<option value="0.55"></option>

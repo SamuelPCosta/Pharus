@@ -2,10 +2,10 @@
 <footer class="page-footer font-small position-relative shadow">
   <!-- Footer Links -->
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3"><!--©--> Pharus <?php echo date('Y') ?> -
-    <a href="quemsomos">Quem Somos?</a> -
-    <a href="parceiros">Parceiros</a> -
-    <a href="contato">Contato</a>
+  <div class="footer-copyright text-center py-3 card-theme"><!--©--> Pharus <?php echo date('Y') ?> -
+    <a href="quemsomos" class="theme">Quem Somos?</a> -
+    <a href="parceiros" class="theme">Parceiros</a> -
+    <a href="contato" class="theme">Contato</a>
   </div>
   <!-- Copyright -->
 </footer>

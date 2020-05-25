@@ -106,7 +106,7 @@
 							<div class="col-lg-4 my-2 text-center animeTop">
 								<a href="visaogeral#">
 									<img src="<?= base_url()?>assets/img/power-off.png" class="rounded-circle" width=200>
-									<h4 class="py-3 theme">Opção #03</h4>
+									<h4 class="py-3 theme">Primeiros passos</h4>
 								<a>
 							</div><!-- /.col-lg-4 -->
 						</div>

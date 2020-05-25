@@ -37,7 +37,7 @@
   text-align: justify; /*!important descomente para alinhar o titulo a direita*/;
 }
 #titulo_index{
-  border-left: solid 10px #ffc107;
+  border-left: solid 5px #ffc107;
 }
 #addButton{
   top: -100px !important;

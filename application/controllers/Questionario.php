@@ -4,22 +4,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Questionario extends CI_Controller {
 	public function perguntas($questao){
 		$this->load->helper('cookie');
+		//Respostas
+		$a1=27.00; $b1=45.00; $c1=72.00;
+		$a2=16.20; $b2=27.00; $c2=43.20;
+		$a3=08.10; $b3=13.50; $c3=121.60; 
+		$a4=27.00; $b4=45.00; $c4=72.00;
+		$a5=54.00; $b5=90.00; $c5=144.00;
+		$a6=02.70; $b6=04.50; $c6=07.20;
+
 		if ($_POST['resposta']!=NULL) {
-			$questao++; //Passar para a proxima questao
 			$resultado_a = get_cookie('a');
 			$resultado_b = get_cookie('b');
 			$resultado_c = get_cookie('c');
 			$resposta = $_POST['resposta'];
 			if ($resposta==="resposta_a") {
-				$resultado_a = get_cookie('a')+1; //Aumenta 1 caso a resposta seja A
+				$valor = 'a'.$questao;
+				$resultado_a = get_cookie('a')+$$valor; //Aumenta 1 caso a resposta seja A
 				set_cookie('a', $resultado_a, '300'); //Dá update no cookie
 			}elseif ($resposta==="resposta_b") {
-				$resultado_b = get_cookie('b')+1;
+				$valor = 'b'.$questao;
+				$resultado_b = get_cookie('b')+$$valor;
 				set_cookie('b', $resultado_b, '300');
 			}elseif ($resposta==="resposta_c") {
-				$resultado_c = get_cookie('c')+1;
+				$valor = 'c'.$questao;
+				$resultado_c = get_cookie('c')+$$valor;
 				set_cookie('c', $resultado_c, '300');
 			}
+			$questao++; //Passar para a proxima questao
 		}
 		$usuario = $this->session->userdata('usuario');
 		if ($questao>=10) {//Número de questões +1 (Após respondido)

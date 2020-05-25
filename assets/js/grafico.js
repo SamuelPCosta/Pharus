@@ -51,7 +51,7 @@ var myChart = new Chart(ctx, {
         responsive: true,
         title: {
             display: true,
-            text: 'Gráfico de Consumo por hora',
+            text: 'Gráfico de Consumo por hora (kWh)',
             fontSize: 25,
             fontStyle: 'normal',
             fontFamily: 'Open Sans'
@@ -84,7 +84,7 @@ var ctx = document.getElementById("bar-chart").getContext("2d");
 var myBarChart = new Chart(ctx,{
     type: 'bar',
     data:{
-        labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
+        labels: [mesatual],
         datasets: [{
             label: "Consumo",
             backgroundColor: "#343a40",
@@ -92,7 +92,7 @@ var myBarChart = new Chart(ctx,{
             borderColor: '#343a40',
             hoverBackgroundColor:"#22242a",
             highlightFill: "#f8f9fa",
-            data: [0,0,0,0],
+            data: [JSON.parse(meuconsumo)],
         },
         {
             label: "Meta",
@@ -101,10 +101,10 @@ var myBarChart = new Chart(ctx,{
             borderColor: '#ffc107dd',
             hoverBackgroundColor:"#ffc107",
             lineTension: 0,
-            data: [0,0,0,0]
+            data: [JSON.parse(meta)]
         },
         {
-            label: "Média",
+            label: "Consumo médio faixa",
             backgroundColor: "#3b94af55",
             borderWidth: 1,
             borderColor: '#3b94af',
@@ -117,7 +117,7 @@ var myBarChart = new Chart(ctx,{
         responsive: true,
         title: {
             display: true,
-            text: 'Gráfico de expectativas por mês',
+            text: 'Gráfico de expectativas por mês (kWh)',
             fontSize: 25,
             fontStyle: 'normal',
             fontFamily: 'Open Sans'

@@ -44,7 +44,7 @@
 												</div>
 										</div>
 												<div class="d-flex justify-content-center mt-3 login_container my-3">
-													<button type="" name="editar" id="atualizar" class="btn btn-warning position-absolute my-4 mb-5">Atualizar conta</button>
+													<button type="" name="editar" id="atualizar" class="btn btn-warning position-absolute my-4 mb-5" disabled>Atualizar conta</button>
 												</form>
 											</div>
 									</div>

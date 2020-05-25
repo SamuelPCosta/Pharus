@@ -26,7 +26,38 @@ class Raiz extends CI_Controller {
 				}else{
 					$qtd_dias=31;
 				}
-				$valor_dia = ($consumo['meta']/$qtd_dias);
+				//Daqui pra baixo e para jogar o consumo no consumo geral e fazer esquema de bonus e onus
+				$this->load->model("Consumo_model");
+				$consumoAtivo = $this->Consumo_model->SelecionarConsumo($contaContrato);
+				$rconsumoTotal = $this->Consumo_model->SelecionarConsumoTotal($contaContrato);
+				$consumoTotal = floatval(number_format($rconsumoTotal, 3, ',', '.'));
+				if ($consumoAtivo!=0) {
+					$ultimaAtualizacao = $this->inserirConsumoTotal();
+					if ($ultimaAtualizacao!=date('d')) {
+						$vezes = (date('d')-$ultimaAtualizacao);
+						$backupSimulador = $this->session->userdata('simulacaoBackup'.$contaContrato);
+						$inserirTotal = ($vezes*array_sum($backupSimulador))+$consumoTotal;
+						$this->Consumo_model->inserirConsumoTotal($inserirTotal,$contaContrato);
+					}
+				}
+				if ($consumoTotal!=0) {
+					$rmeta = $this->Consumo_model->SelecionarMeta($contaContrato);
+					$meta = floatval(number_format($rmeta, 3, ',', '.'));
+					$diasParaFimMes = date('t')-(date('d')-1); //Contando com hj qntos dias faltam para o fim do mes
+					//echo $diasParaFimMes;
+					if ($meta-$consumoTotal<=12*$diasParaFimMes) {//corrigir aqui para a media de consumo de kwh diaria
+						//echo "<br>meta ".$meta;
+						//echo "<br>consumoTotal ".$consumoTotal;
+						//echo "<br>diasParaFimMes ".$diasParaFimMes*12;
+						$valor_dia = ($consumo['meta']/$qtd_dias);
+						//echo"<br>valor_dia ".$valor_dia;
+					}else{
+						$valor_dia = ($meta-$consumoTotal)/$diasParaFimMes;
+					}
+				}else{
+					$valor_dia = ($consumo['meta']/$qtd_dias); //ATENCAO Se tudo por aqui tiver dando errado essa linha tem q sobreviver ATENCAO
+				}
+				//Aqui se encerra o trecho citado no comentario anterior
 				$consumo['consumo'] = $this->Consumo_model->SelecionarConsumo($contaContrato);
 				$consumo['gasto'] = $consumo['consumo']*100/$valor_dia;
 				$porcentagem = $consumo['gasto'];
@@ -60,6 +91,15 @@ class Raiz extends CI_Controller {
 		}
 	}
 
+	public function inserirConsumoTotal(){
+		$this->load->model("Operacoes");
+		$usuario = $this->session->userdata('usuario');
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
+		$intervaloTempo = $this->Operacoes->intervaloTempo($contaContrato);
+		$ultimaAtualizacao = substr($intervaloTempo, 8, 2);
+		return $ultimaAtualizacao;
+	}
+
 	public function visaogeral(){
 		if (isset($_SESSION['login'])) {
 			$title['titulo'] ="Visão Geral";
@@ -76,16 +116,46 @@ class Raiz extends CI_Controller {
 		if (isset($_SESSION['login'])) {
 			$usuario = $this->session->userdata('usuario');
 			$this->load->model("Operacoes");//converter conta contrato
-			$contaContrato['usuario'] = $this->Operacoes->contaContrato($usuario);
-			$title['titulo'] ="Consumo";
+			$dados['usuario'] = $this->Operacoes->contaContrato($usuario);
 			$this->inserirConsumo($this->Operacoes->contaContrato($usuario));
+			$this->load->model("Metas_model");
+			$dados['meta'] =json_encode($this->Metas_model->get_kwh($dados['usuario']));
+			$this->load->model("Consumo_model");
+			$dados['meuconsumo'] =json_encode($this->Consumo_model->SelecionarConsumoTotal($dados['usuario']));
+			$this->load->model("Usuarios_model");
+			$dados['minha faixa'] = $this->Usuarios_model->getFaixa($usuario);
+			$title['titulo'] ="Consumo";
 			$this->load->view('header_sidebar', $title);
-			$this->load->view('consumo', $contaContrato);
+			$this->load->view('consumo', $dados);
 			$this->load->view('footer');
 		}else{
 			redirect('login?error=2'); 
 		}
 	}
+
+	public function gerarPdf(){
+		error_reporting(0);
+ 		ini_set('display_errors', 0);
+ 		include("mpdf60/mpdf.php");
+        // Instancia a classe mPDF
+		$mpdf = new mPDF();
+		// $mpdf->SetDisplayMode('fullpage');
+		// Ao invés de imprimir a view 'welcome_message' na tela, passa o código
+		// HTML dela para a variável $html
+		$html = $this->load->view('relatorio','',TRUE);
+		// Insere o conteúdo da variável $html no arquivo PDF
+		$mpdf->writeHTML($html);
+		// Cria uma nova página no arquivo
+		//$mpdf->AddPage();
+		ob_clean();
+		// Gera o arquivo PDF
+		$mpdf->Output('Relatorio.pdf', 'D');
+		redirect('consumo'); 
+    }
+
+    public function testarPdf(){
+    	$this->load->view('relatorio');
+    }
 
 	public function metas(){
 		if (isset($_SESSION['login'])) {
@@ -347,6 +417,14 @@ class Raiz extends CI_Controller {
 			$this->load->model("Operacoes");//converter conta contrato
 			$usuario = $this->session->userdata('usuario');
 			$contaContrato = $this->Operacoes->contaContrato($usuario);
+			$this->load->model("Simulador_model");
+			if ($this->Simulador_model->checharUsuarioSimulcao($contaContrato)==true) {
+				$horassalvar = json_decode($this->Simulador_model->getHorasSimulacao($contaContrato));
+				$personalizados = json_decode($this->Simulador_model->getAparelhosPersonalizados($contaContrato));
+				if($personalizados!=null) {$this->session->set_userdata('personalizados', $personalizados);}
+				$title['horassalvas'] = str_replace(0, "", $horassalvar);
+				$title['aparelhosPersonalizados'] = $personalizados;
+			}
 			$dados['contaContrato'] ="Quem somos";
 			$title['titulo'] ="Simulador";
 			$this->load->view('header_sidebar', $title);
@@ -408,9 +486,9 @@ class Raiz extends CI_Controller {
 		$consumoDormindo = $kwhBase_horasDormidas*$horasDormidas;
 		$consumoAcordado = $TotalDia-$consumoDormindo;
 		$qtd_consumidaMedia = $consumoAcordado/(24-$horasDormidas);
-		echo "<br>".$horasDormidas;
-		echo "<br>".$horaInicialDeSono;
-		echo "<br>".$kwhBase_horasDormidas;
+		//echo "<br>".$horasDormidas;
+		//echo "<br>".$horaInicialDeSono;
+		//echo "<br>".$kwhBase_horasDormidas;
 		//echo $qtd_consumidaMedia;
 		//aqui embaixo que a magica vai acontecer
 		do {
@@ -428,8 +506,8 @@ class Raiz extends CI_Controller {
 			}
 			$gabarito = array_sum($consumoSimuladoPorHora);
 		} while ($gabarito > $TotalDia);//|| $gabarito < $TotalDia-$TotalDia*10/100 -- atualmente a margem de erro é 18%
-		echo $gabarito." - Gabarito<br>";
-		echo $TotalDia." - TotalDia<br>";
+		//echo $gabarito." - Gabarito<br>";
+		//echo $TotalDia." - TotalDia<br>";
 		$this->session->set_userdata('consumo'.$contaContrato, $consumoSimuladoPorHora); //Array com simulacao
 		$arrayBackup = $this->session->userdata('consumo'.$contaContrato);
 		$this->load->model("Simulador_model");
@@ -469,7 +547,9 @@ class Raiz extends CI_Controller {
 		$contaContrato = $this->Operacoes->contaContrato($usuario);
 		$this->session->set_userdata('totalSimulador'.$contaContrato, $consumokwh);
 		$personalizados=$this->input->post("personalizados");
-		$this->session->set_userdata('personalizados', $personalizados);
+		$this->load->model("Simulador_model");
+		$this->Simulador_model->horasSimulacao($contaContrato, $horas);
+		$this->Simulador_model->aparelhosPersonalizados($contaContrato, $personalizados);
 		$this->criarSimulacao();
 	}
 

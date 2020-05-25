@@ -22,6 +22,16 @@ class Metas_model extends CI_Model {
 		}
 	}
 
+	public function get_kwh($contaContrato){
+		if ($contaContrato != NULL) {
+			$this->db->select('kw_h');
+			$this->db->where('usuario', $contaContrato);
+    		$query = $this->db->get('meta');
+    		$kw_h = $query->row()->kw_h;
+			return $kw_h;
+		}
+	}
+
 	//Função para converter meta em khw
 	public function kwh($khw=NULL, $contaContrato){
 		if ($contaContrato != NULL) {

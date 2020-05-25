@@ -28,45 +28,51 @@
 	<!-- Header -->
 	<header>
 		<nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0">
-			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
+			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning" style="text-shadow: 0px 0px 1px #22242a">P</span>harus</h1></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn text-white text-dark sidebar-li-a position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
               <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;" onclick="animarNotificacao()">
+                <div class="rounded-circle bg-warning position-fixed border border-dark" id="avisonotificacao" style="width: 12px; height: 12px; margin-left: 13px; margin-top: -2px"></div>
                 <i class="fas fa-bell"></i>
               </a>
               <div class="btn-group">
                 <div class="dropdown-menu card-theme theme dropdown-menu-right" id="painelnot" style="top:100px; width: 320px; overflow-x: auto; max-height: 350px; overflow-y: hidden;">
                     <table class="mx-auto"> 
-                        <tr class="dropdown-item theme">
+                        <tr class="dropdown-item theme di-1 inativo">
+                            <td class="py-2 theme">Seja bem vindo ao Pharus!</td>
+                            <td class="text-secondary"> - </td>
+                            <td class="text-secondary text-right">Hoje</td>
+                        </tr>
+                        <tr class="dropdown-item theme di-1">
                             <td class="py-2 theme">Seu consumo foi ótimo!</td>
                             <td class="text-secondary"> - </td>
                             <td class="text-secondary text-right">Ontem</td>
                         </tr>
-                        <tr class="dropdown-item theme">
+                        <tr class="dropdown-item theme di-2">
                             <td class="py-2 theme">Seu consumo foi ótimo!</td>
                             <td class="text-secondary"> - </td>
                             <td class="text-secondary text-right">Há 2 dias</td>
                         </tr>
-                        <tr class="dropdown-item theme">
+                        <tr class="dropdown-item theme di-3">
                             <td class="py-2 theme">Seu consumo foi ruim!</td>
                             <td class="text-secondary"> - </td>
                             <td class="text-secondary text-right">Há 3 dias</td>
                         </tr>
-                        <tr class="dropdown-item theme">
+                        <tr class="dropdown-item theme di-4">
                             <td class="py-2 theme">Seu consumo foi ótimo!</td>
                             <td class="text-secondary"> - </td>
                             <td class="text-secondary text-right">Há 4 dias</td>
                         </tr>
-                        <tr class="dropdown-item theme">
+                        <tr class="dropdown-item theme di-5">
                             <td class="py-2 theme">Seu consumo foi ruim!</td>
                             <td class="text-secondary"> - </td>
                             <td class="text-secondary text-right">Há 5 dias</td>
                         </tr>
-                        <tr class="dropdown-item theme">
+                        <tr class="dropdown-item theme di-6">
                             <td class="py-2 theme">Seu consumo foi ótimo!</td>
                             <td class="text-secondary"> - </td>
                             <td class="text-secondary text-right">Há 6 dias</td>
                         </tr>
-                        <tr class="dropdown-item theme">
+                        <tr class="dropdown-item theme di-7">
                             <td class="py-2 theme">Seu consumo foi ótimo!</td>
                             <td class="text-secondary"> - </td>
                             <td class="text-secondary text-right">Há 7 dias</td>

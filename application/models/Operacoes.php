@@ -77,4 +77,12 @@ class Operacoes extends CI_Model {
 		$premium = $query->row()->premium;
 		return $premium;
 	}
+
+	public function intervaloTempo($contaContrato){
+		$this->db->select('intervalo_tempo');
+		$this->db->where('usuario', $contaContrato); //Onde o usuário for igual ao nome de usuário q está logado
+		$query = $this->db->get('consumo_mensal');
+		$intervalo_tempo = $query->row()->intervalo_tempo;
+		return $intervalo_tempo;
+	}
 }

@@ -25,4 +25,10 @@ class Consumo_model extends CI_Model {
     	$consumoTotal = $query->row()->kw_h_total; //Pega a consulta
 		return $consumoTotal; //retorna o consumo
 	}
+
+	public function inserirConsumoTotal($inserirTotal, $contaContrato){ //Selecionar o consumo até o momento
+		$this->db->set('kw_h_total', $inserirTotal); //Seleciona o consumo
+		$this->db->where('usuario', $contaContrato);
+		$this->db->update('consumo_mensal');
+	}
 }

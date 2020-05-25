@@ -38,6 +38,19 @@
 	animation: recarregar 1s;
 	/*animation-timing-function: linear;*/
 }
+#recarregarMobile{
+	float: right;
+	text-align: center;
+	margin: 0px auto;
+	width: 70px;
+	height: 70px;
+	float: none;
+	right: 25px;
+	bottom: 30px;
+	position: fixed;
+	border-radius: 50%;
+	visibility: hidden;
+}
 
 @keyframes recarregar{
 	0% {transform: rotate(0deg);}
@@ -78,6 +91,12 @@
 	p{
 		font-size: 1.2em !important;
 		width: 100% !important;
+	}
+	#recarregar{
+		visibility: hidden;
+	}
+	#recarregarMobile{
+		visibility: visible;
 	}
 }
 /*#####################CONQUISTAS#####################*/

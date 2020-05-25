@@ -10,7 +10,7 @@ class Cadastro extends CI_Controller {
 			$tarifa_kwh = '0.55';
 		}
 		$estado = $this->input->post("estado");
-		if ($this->input->post("estado")=="estado") {
+		if ($this->input->post("estado")=="Estado/Fornecedor") {
 			$estado = NULL;
 		}
 		//Esse array passa os campos a serem inseridos na table usuario;

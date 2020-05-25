@@ -76,4 +76,6 @@ $route['atualize'] = 'Raiz/atualize';
 $route['parceiros'] = 'Raiz/parceiros';
 $route['contato'] = 'Raiz/contato';
 $route['monitor'] = 'Admin/monitor';
+$route['gerarPdf'] = 'Raiz/gerarPdf';
+$route['testarPdf'] = 'Raiz/testarPdf';
 $route['simuladorAtualizar'] = 'Admin/simuladorAtualizar';
