@@ -137,7 +137,7 @@ tr.theme.text-white:hover{
     margin-top: 1.5rem!important;
 }
 .text{
-    font-size: 1.6em;
+    font-size: 1.4em;
 }
 .sidebar-nav {
     position: absolute;
@@ -529,7 +529,7 @@ a#editar_senha:hover{
     width: 100% !important;
     margin: 0 auto;
     text-align: justify;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 .atualize ul li{
     font-weight: lighter;

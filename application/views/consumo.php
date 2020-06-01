@@ -7,7 +7,7 @@
 		        	<div class='alert alert-danger bg-warning border-0 float-left' id="alerta-dica-chart" role='alert' style="width: 100%">
 		        	Se você ainda não foi classificado em uma faixa de <wbr>consuno descubra o seu <a href="idealdeconsumo" class="text-secondary">ideal de consumo</a>.<br>
 		        	Clique nas legendas dos dados <wbr>para alterar a visibilidade deles.
-		        	<span class="float-right ml-4" id="hide" onclick="esconder()" style="cursor: pointer;">Ok</span><span class="float-right text-dark"><input type="checkbox" name="" id="del" class="mr-1"><label for="del">Não exibir novamente</label></span></div>
+		        	<span class="float-right ml-4" id="hide" onclick="escoder()" style="cursor: pointer;">Ok</span><span class="float-right text-dark"><input type="checkbox" name="" id="del" class="mr-1"><label for="del">Não exibir novamente</label></span></div>
 		        <div class="row">
 		        	<div class="col-md-12 graficos">
 		        		<canvas id="line-chart" height="275"></canvas>
@@ -33,6 +33,8 @@
 		var consumoSimuladoPorHora = '<?php echo json_encode($consumoSimuladoPorHora) ?>';
 		var meta = '<?php echo $meta; ?>';
 		var meuconsumo = '<?php echo $meuconsumo; ?>';
+		var minhafaixa = '<?php echo $minhafaixa; ?>';
+		var mediafaixa = '<?php echo $mediaFaixa; ?>';
 		var mesatual = '<?php
 			setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 			date_default_timezone_set('America/Sao_Paulo'); 

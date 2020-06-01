@@ -9,9 +9,11 @@ if (nightModeStorage) {
   Chart.defaults.global.defaultFontColor = 'white';
 }else{
   Chart.defaults.global.defaultFontColor = '#343a40'
+
 }
 function update(myChart) {
     Chart.defaults.global.defaultFontColor = (Chart.defaults.global.defaultFontColor == '#343a40') ? 'white' : '#343a40';
+    var cordabarra = 'white';
     myChart.update();
     myBarChart.update();
 }
@@ -41,7 +43,7 @@ var myChart = new Chart(ctx, {
         },{
             label: 'Curva padrão',
             fill: false,
-            backgroundColor: '#3b94af',
+            backgroundColor: '#80bef7',
             borderColor: '#3b94af44',
             lineTension : 0,
             data: [0.022,0.022,0.022,0.022,0.022,0.022,0.022,0.2,0.3,0.34,0.34,0.3,0.2,0.15,0.2,0.3,0.4,0.5,0.9,1.15,1.2,1.15,1,0.6],
@@ -87,30 +89,30 @@ var myBarChart = new Chart(ctx,{
         labels: [mesatual],
         datasets: [{
             label: "Consumo",
-            backgroundColor: "#343a40",
-            borderWidth: 1,
-            borderColor: '#343a40',
-            hoverBackgroundColor:"#22242a",
+            backgroundColor: "#80bef7",
+            borderWidth: 0,
+            borderColor: '#80bef7',
+            hoverBackgroundColor:"#80bef7",
             highlightFill: "#f8f9fa",
             data: [JSON.parse(meuconsumo)],
         },
         {
             label: "Meta",
-            backgroundColor: "#ffc107dd",
-            borderWidth: 1,
-            borderColor: '#ffc107dd',
-            hoverBackgroundColor:"#ffc107",
+            backgroundColor: "#FFC107",
+            borderWidth: 0,
+            borderColor: '#FFC107',
+            hoverBackgroundColor:"#FFC107",
             lineTension: 0,
             data: [JSON.parse(meta)]
         },
         {
-            label: "Consumo médio faixa",
-            backgroundColor: "#3b94af55",
-            borderWidth: 1,
-            borderColor: '#3b94af',
-            hoverBackgroundColor:"#3b94af",
+            label: "Consumo médio da faixa "+minhafaixa,
+            backgroundColor: '#f7da80',
+            borderWidth: 0,
+            borderColor: '#f7da80',
+            hoverBackgroundColor:"#f7da80",
             lineTension: 0,
-            data: [0,0,0,0]
+            data: [JSON.parse(mediafaixa)]
         }]
     },
     options: {
@@ -136,6 +138,9 @@ var myBarChart = new Chart(ctx,{
                 display: true,
                 position: 'left',
                 id: 'y-axis-1',
+                ticks: {
+                    beginAtZero: true
+                }
             }],
         }
     }

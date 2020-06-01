@@ -58,59 +58,107 @@
 												<div class="input-group mb-2">
 													<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user border-0" placeholder="">
 												</div>
-												<span>Estado/Fornecedor:</span>
+												<span>Estado/Fornecedor:</span><br>
 												<div class="input-group mb-2">
-													<select name="tarifa_kwh" id="estado" class="input-group mb-2 form-control input_pass dados_user">
-														<option value="0.55"></option>
-														<option value="AC">Acre</option>
-														<option value="AL">Alagoas</option>
-														<option value="AP">Amapá</option>
-														<option value="AM">Amazonas</option>
-														<option value="BA">Bahia</option>
-														<option value="CE">Ceará</option>
-														<option value="DF">Distrito Federal</option>
-														<option value="ES">Espírito Santo</option>
-														<option value="GO">Goiás</option>
-														<option value="MA">Maranhão</option>
-														<option value="MT">Mato Grosso</option>
-														<option value="MS">Mato Grosso do Sul</option>
-														<option value="MG">Minas Gerais</option>
-														<option value="0.33">Pará</option>
-														<option value="PB">Paraíba</option>
-														<option value="PR">Paraná</option>
-														<option value="PE">Pernambuco</option>
-														<option value="PI">Piauí</option>
-														<option value="RJ">Rio de Janeiro</option>
-														<option value="0.55">Rio Grande do Norte</option>
-														<option value="RS">Rio Grande do Sul</option>
-														<option value="RO">Rondônia</option>
-														<option value="RR">Roraima</option>
-														<option value="SC">Santa Catarina</option>
-														<option value="SP">São Paulo</option>
-														<option value="SE">Sergipe</option>
-														<option value="TO">Tocantins</option>
+													<select name="estado" id="estado" class="input-group mb-2 pr-0 form-control input_pass dados_user" style="width:10px!important; display: inline-block;">
+														<option value="AC">AC</option>
+														<option value="AL">AL</option>
+														<option value="AP">AP</option>
+														<option value="AM">AM</option>
+														<option value="BA">BA</option>
+														<option value="CE">CE</option>
+														<option value="DF">DF</option>
+														<option value="ES">ES</option>
+														<option value="GO">GO</option>
+														<option value="MA">MA</option>
+														<option value="MT">MT</option>
+														<option value="MS">MS</option>
+														<option value="MG">MG</option>
+														<option value="PA">PA</option>
+														<option value="PB">PB</option>
+														<option value="PR">PR</option>
+														<option value="PE">PE</option>
+														<option value="PI">PI</option>
+														<option value="RJ">RJ</option>
+														<option value="RN">RN</option>
+														<option value="RS">RS</option>
+														<option value="RO">RO</option>
+														<option value="RR">RR</option>
+														<option value="SC">SC</option>
+														<option value="SP">SP</option>
+														<option value="SE">SE</option>
+														<option value="TO">TO</option>
 													</select>
-													<input type="hidden" name="estado" id="estadonome" value="estado">
+													<input type="hidden" name="estado" value="estado">
 													<script type="text/javascript">
 														$(document).ready(function (){
-															var nomedoestado = "<?php echo$nomeestado?>"
+														var nomedoestado = "<?php echo $nomeestado?>"
 															$("input[name=estado]").val(nomedoestado)
 															if (nomedoestado=="") {
 																$("#estado option:contains(null)").attr('selected', true);
 															}else{
 																$("#estado option:contains('"+nomedoestado+"')").attr('selected', true);
 															}
-														});
-														$("select").change(function () {
 															var str = "";
-														    $("select option:selected").each(function() {
+														    $("#estado option:selected").each(function() {
 														      str += $( this ).text();
 														    });
 														    //console.log(str);
 														    $("input[name=estado]").val(str)
 														    var valorName = $("input[name=estado]").val()
 															console.log(valorName);
+															var estado = '<?php echo $nomeestado?>'
+															$.ajax({
+													            url: "<?php echo base_url(); ?>Cadastro/carregarfornecedores",
+													            type: "POST",
+													            data: {estado: estado},
+													            success: function(result){
+													            console.log(JSON.parse(result));
+													            $('#fornecedor').html(JSON.parse(result));
+													            var fornecedor = "<?php echo $fornecedor?>"
+															if (fornecedor=="") {
+															$("#fornecedor option:contains(null)").attr('selected', true);}else{
+															$("#fornecedor option:contains('"+fornecedor+"')").attr('selected', true);}
+														        },
+														        error: function(){
+														            console.log('Error');
+														        }
+													        });
+														});
+
+														$("#estado").change(function () {
+															var str = "";
+														    $("#estado option:selected").each(function() {
+														      str += $( this ).text();
+														    });
+														    //console.log(str);
+														    $("input[name=estado]").val(str)
+														    var valorName = $("input[name=estado]").val()
+															console.log(valorName);
+															var estado = valorName
+															$.ajax({
+													            url: "<?php echo base_url(); ?>Cadastro/carregarfornecedores",
+													            type: "POST",
+													            data: {estado: estado},
+													            success: function(result){
+													            console.log(JSON.parse(result));
+													            $('#fornecedor').html(JSON.parse(result));
+														        },
+														        error: function(){
+														            console.log('Error');
+														        }
+													        });
 														}).change();
+													</script>
+													<select name="fornecedor" id="fornecedor" class="input-group mb-2 ml-3 form-control input_pass dados_user" style="width: 140px!important; display: inline-block;"><option></option>
+													</select>
+													<script>
+														// $(document).ready(function (){
+														// var fornecedor = "<?php echo $fornecedor?>"
+														// setTimeout(function(){if (fornecedor=="") {
+														// 	$("#fornecedor option:contains(null)").attr('selected', true);}else{
+														// 	$("#fornecedor option:contains('Pesadao')").attr('selected', true);}}, 50);
+														// });
 													</script>
 												</div>
 												<a href="editar-senha" class="sidebar-li-a text-dark theme" id="editar_senha"><i class="fas fa-edit"></i> Editar senha</a>

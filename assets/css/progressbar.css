@@ -68,7 +68,7 @@ a.text-warning:focus{
     top: 34px; /*Se o botão de leitura for readicionado remover essa linha*/
   }
   #vcgastou{
-    transform: translate(-10px,-15px);
+    transform: translate(0,-15px);
     font-size: 0.7em !important;
   }
   #titulo_index{
@@ -82,7 +82,7 @@ a.text-warning:focus{
   #numeroporcentagem{
     font-size: 2em !important;
     line-height: 20px  !important;
-    transform: translateX(-10px);
+    /*transform: translateX(-10px);*/
   }
   #horas{
     transform: translateY(-120px) !important;
@@ -114,7 +114,7 @@ a.text-warning:focus{
     width: 110% !important;
   }
   .modal-body p{
-    font-size: 0.55em !important;
+    //font-size: 0.55em !important;
     width: 100% !important;
   }
   .last-p{

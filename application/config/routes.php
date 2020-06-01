@@ -79,3 +79,4 @@ $route['monitor'] = 'Admin/monitor';
 $route['gerarPdf'] = 'Raiz/gerarPdf';
 $route['testarPdf'] = 'Raiz/testarPdf';
 $route['simuladorAtualizar'] = 'Admin/simuladorAtualizar';
+$route['cronjob'] = 'Raiz/atualizarValores';

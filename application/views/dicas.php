@@ -1,5 +1,10 @@
 			<div class="container-fluid first-container dicas-container">
 	        <div class="row">
+	        	<div id="alerta-dica-dicas" style="z-index: 5; margin-left: 12.5%;">
+		        	<img src="<?= base_url()?>assets/img/dicamao.gif" class="position-absolute w-75 justify-content-center">
+		        	<h2 class="position-absolute w-75 justify-content-center px-5 text-center text-white" style="transform: translateY(220px); font-size: 1.6em">Deslize para a direita para gerar novas dicas.</h2>
+		        		<span class="position-absolute w-75 justify-content-center text-center text-warning" id="hideDicas" style="cursor: pointer;transform: translateY(370px);">Entendi</span><span class="float-right">
+				</div>
 	            <div class="col-xl col-12 colunas">
 				    <div class="a mb-4 card-theme theme card shadow-sm">
 				      	<p class="animeTop text-center w-75" id="dica1">
@@ -119,9 +124,22 @@
 	    }
 	  }, false)
 
-	var largura = window.innerWidth;
-	if (largura<768) {
-	  $('#dark').addClass('visible');
+
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		document.getElementById("alerta-dica-dicas").style.display = "visible";
+	}else{document.getElementById("alerta-dica-dicas").style.display = "none";}
+
+	const tipdisabledDicas = localStorage.getItem('tipdisabledDicas')
+	if (tipdisabledDicas) {
+	  document.getElementById("alerta-dica-dicas").style.display = "none";
 	}
+
+	$("#hideDicas").click(function(e) {
+	  e.preventDefault();
+	  document.getElementById("alerta-dica-dicas").style.display = "none";
+      localStorage.setItem('tipdisabledDicas', true); 
+      return
+	});
+
     var atual ="Dicas";
 	</script>

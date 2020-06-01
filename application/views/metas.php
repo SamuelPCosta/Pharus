@@ -34,7 +34,7 @@
 		     				if ($meta==0) {
 		     					echo("Você ainda não tem uma meta de consumo até o final do mês. Para definir uma meta, preencha o campo seguinte e clique em <span class='font-italic'>'Salvar Meta'</span>.");
 		     				}else{
-		     					echo("Você deve gastar menos que isto até o final do mês. Para alterar esse valor preencha o campo seguinte e clique em <span class='font-italic'>'Editar Meta'</span> ao lado.");
+		     					echo("Você tem até o <span style='font-weight:bolder;'>quinto</span> dia do mês para editar sua meta. Para alterar o valor preencha o campo seguinte e clique em <span class='font-italic'>'Editar Meta'</span> ao lado.");
 		     				}
 		     			}
 	     			?>	
@@ -89,7 +89,7 @@
 		        			<?php  
 			        			if ($meta==NULL) {
 			        		?>
-			        <h2>Defina a Sua <wbr>Meta Mensal</h2>
+			        <h2>Defina a sua <wbr>meta mensal</h2>
 		        	<form method="post" action="cadastroMeta/adicionar">
 		        		<div id="meta">
 			        			<input type="number" min="20" max="10000" name="meta" placeholder="Apenas números. Ex.: 90" class="shadow bg-light theme">
@@ -97,8 +97,8 @@
 			        		<?php  
 			        			}else{
 			        		?> 
-			        <h2>Deseja Alterar a Sua <wbr>Meta Mensal?</h2>
-		        	<form method="post" action="cadastroMeta/adicionar">
+			        <h2 id="alterarmetatitulo">Deseja alterar a sua <wbr>meta mensal?</h2>
+		        	<form method="post" action="cadastroMeta/adicionar" id="formulariometa">
 		        		<div id="meta">
 				        		<input type="number" min="20" max="10000" name="meta" value="<?php echo $meta ?>" placeholder="Apenas números. Ex.: 90" class="shadow-sm bg-light theme">
 				        		<!--o name do input muda-->
@@ -108,10 +108,14 @@
 				        		?>
 				        			<div class='alert alert-danger w-100 mx-auto' role='alert'>Para mudar sua meta altere<br> o valor  do campo numérico acima.</div>
 				        		<?php
+				        				}else{
+				        		?>
+				        			<div class='alert alert-danger w-100 mx-auto' role='alert'>Parece que você está tentando<br> definir uma meta que não condiz com a sua realidade!</div>
+				        		<?php
 				        				}
 				        			}
 				        		?>
-				        		<button type="submit" class="btn btn-warning mx-auto">Editar Meta</button>
+				        		<button type="submit" class="btn btn-warning mx-auto" id="editarMeta">Editar Meta</button>
 				        		<!--Esse botão antes era salvar-->
 			        		<?php  
 			        			}
@@ -156,6 +160,14 @@
 	?>
 	<script src="<?= base_url()?>assets/js/notification.js"></script><!--Importação do JS do menu...-->
 	<script>
+		var data = new Date();
+		var dia  = data.getDate();
+		var meta = '<?php echo $meta ?>'
+		if (dia>5 && meta!=null) {
+			$('#editarMeta').attr('disabled', 'disabled');
+			$('#formulariometa').attr('action', '');
+			$('#alterarmetatitulo').html('Você não pode mais alterar a meta do mês!');
+		}
    		var atual ="Metas";
 	</script>
 	

@@ -9,8 +9,8 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!--Importação da fonte Open Sans-->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Importação de sweetalert-->
-	<link rel="shortcut icon" href="<?= base_url()?>assets/img/favicon.png"/> <!--Icone-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="shortcut icon" href="<?= base_url()?>assets/img/logo2.png"/> <!--Icone-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="<?= base_url()?>assets/js/jquery.maskMoney.js" type="text/javascript"></script>
 	<script src="<?= base_url()?>assets/js/script.js"></script><!--Importação do JS do menu...-->
 	<style type="text/css">
@@ -95,14 +95,12 @@
 							</div>
 							<input type="password" name="confirmar_senha" class="form-control input_pass" value="" placeholder="Confirmar senha" required>
 						</div>
-						<span class="text-secondary">Opcional</span>
-						<div class="input-group mb-1">
+						<div class="input-group mb-3">
 							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-map-marker-alt"></i></i></span>
+								<span class="input-group-text"><i class="fas fa-map-marker-alt" style="padding: 0 2px"></i></span>
 							</div>
 							<!-- <input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney" value="<?php if(isset($_SESSION['dadoserro'])){echo $_SESSION['dadoserro']['tarifa_kwh'];}?>" placeholder="Preço por kWh"  min="0.10" max="3.00" step="0.01"> -->
-							<select name="tarifa_kwh" class="form-control input_pass" id="estadonome">
-								<option value="0.55">Estado/Fornecedor</option>
+							<select name="estado" class="form-control input_pass" id="estadonome" required>
 								<option value="AC">Acre</option>
 								<option value="AL">Alagoas</option>
 								<option value="AP">Amapá</option>
@@ -131,22 +129,78 @@
 								<option value="SE">Sergipe</option>
 								<option value="TO">Tocantins</option>
 							</select>
-							<input type="hidden" name="estadonome" id="estadonome" value="">
-							<script type="text/javascript">
-								$("select").change(function () {
-									var str = "";
-								    $("select option:selected").each(function() {
-								      str += $( this ).text() + " ";
-								    });
+							<input type="hidden" name="estadonome" value="">
+							<?php if(isset($_SESSION['dadoserro']['estado'])){
+								$nomeestado = $_SESSION['dadoserro']['estado'];
+								if ($_SESSION['dadoserro']['fornecedor']) {
+									$fornecedor = $_SESSION['dadoserro']['fornecedor'];
+								}
+							}else{ $nomeestado = "AC"; $fornecedor = '';}
+							?>
+							<script>
+								$(document).ready(function (){
+								var sigla = "<?php echo $nomeestado?>"
+									if (sigla=="") {
+										$("#estadonome option:contains(Acre)").attr('selected', true);
+									}else{
+										$("#estadonome").val(sigla).attr('selected', true);
+									}
+								    //console.log(str);
+								    $("input[name=estadonome]").val(sigla)
+								    var valorName = $("input[name=estado]").val()
+									console.log(valorName);
+									var estado = '<?php echo $nomeestado?>'
+									$.ajax({
+							            url: "<?php echo base_url(); ?>Cadastro/carregarfornecedores",
+							            type: "POST",
+							            data: {estado: estado},
+							            success: function(result){
+							            console.log(JSON.parse(result));
+							            $('#distribuidor').html(JSON.parse(result));
+							            var fornecedor = '<?php echo $fornecedor?>'
+									if (fornecedor=="") {
+									$("#distribuidor option:contains(null)").attr('selected', true);}else{
+									$("#distribuidor option:contains('"+fornecedor+"')").attr('selected', true);}
+								        },
+								        error: function(){
+								            console.log('Error');
+								        }
+							        });
+								});
+
+								$("#estadonome").change(function () {
+									var str = $("select[name=estado]").val()
 								    //console.log(str);
 								    $("input[name=estadonome]").val(str)
 								    var valorName = $("input[name=estadonome]").val()
 									console.log(valorName);
+									var estado = valorName
+									$.ajax({
+							            url: "<?php echo base_url(); ?>Cadastro/carregarfornecedores",
+							            type: "POST",
+							            data: {estado: estado},
+							            success: function(result){
+							            console.log(JSON.parse(result));
+							            $('#distribuidor').html(JSON.parse(result));
+								        },
+								        error: function(){
+								            console.log('Error');
+								        }
+							        });
 								}).change();
 							</script>
 						</div>	
-						<a href="login" class="ml-1 float-right" data-toggle="modal" data-target="#saibamais"><i class="far fa-question-circle mr-2 text-dark" style="position: relative; top: -70px; z-index: 333"></i></a>		
-						<a href="login" class="float-right" data-toggle="modal" data-target="#saibamais" style="transform: translateX(25px);">Entenda melhor</a>
+						<!-- <span class="text-secondary">Opcional</span> -->
+						<div class="input-group mb-1">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-bolt" style="padding: 0 3px"></i></span>
+							</div>
+							<!-- <input type="text" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney" value="<?php if(isset($_SESSION['dadoserro'])){echo $_SESSION['dadoserro']['tarifa_kwh'];}?>" placeholder="Preço por kWh"  min="0.10" max="3.00" step="0.01"> -->
+							<select name="fornecedor" class="form-control input_pass" id="distribuidor" required>
+								<option value="Fornecedor">Fornecedor</option>
+							</select>
+						</div>		
+						<a href="login" class="float-right" data-toggle="modal" data-target="#saibamais">Entenda melhor<i class="far fa-question-circle ml-2 text-dark"></i></a>
 
 						<!-- ###modal### -->
 						 <div class="modal fade" id="saibamais" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -195,7 +249,6 @@
 		// }); 
 	</script>
 	<!--Abaixo seguem os scripts para o funcionamento do JS do BS...-->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
 	<!--Fim dos scripts do BS-->

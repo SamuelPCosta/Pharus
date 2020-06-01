@@ -31,4 +31,34 @@ class Consumo_model extends CI_Model {
 		$this->db->where('usuario', $contaContrato);
 		$this->db->update('consumo_mensal');
 	}
+
+	public function mediaFaixa($usuario,$minhafaixa){
+		$this->db->select('usuario');
+		$this->db->where('faixa', $minhafaixa);
+		$query = $this->db->get('usuario');
+		$nUsersFaixa = $query->num_rows(); //Obtem o número de linhas
+
+		$this->db->select('conta_contrato');
+		$this->db->where("faixa", $minhafaixa);
+	    $usuarios = $this->db->get('usuario');
+	    $total=0;
+	    $inativos=0;
+	    $usuarioInativo=0;
+	    for ($i=0; $i <$nUsersFaixa ; $i++) { 
+	    	$this->db->select('kw_h_total');
+			$this->db->where("usuario", $usuarios->result_array()[$i]['conta_contrato']);
+			$query = $this->db->get('consumo_mensal');
+			$consumoTotal = $query->row()->kw_h_total;
+			//echo $nUsersFaixa;
+			if ($consumoTotal==0) {
+				$usuarioInativo=1;
+			}
+			$total=$total+$consumoTotal;
+			$inativos=$inativos+$usuarioInativo;
+			//echo "<br>consumoTotal: ".$consumoTotal;
+			//echo "<br>".$total;
+	    }
+		$media = $total/($nUsersFaixa-$usuarioInativo);
+	    return $media;
+	}
 }

@@ -42,6 +42,14 @@ class Operacoes extends CI_Model {
 		return $estado;
 	}
 
+	public function fornecedor($usuario){
+		$this->db->select('fornecedor');
+		$this->db->where('usuario', $usuario); //Onde o usuário for igual ao nome de usuário q está logado
+		$query = $this->db->get('usuario');
+		$fornecedor = $query->row()->fornecedor;
+		return $fornecedor;
+	}
+
 	public function foto($usuario){
 		$this->db->select('foto');
 		$this->db->where('usuario', $usuario); //Onde o usuário for igual ao nome de usuário q está logado

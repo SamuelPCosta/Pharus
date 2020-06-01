@@ -14,50 +14,7 @@ class Raiz extends CI_Controller {
 			$consumo['contaContrato'] = $contaContrato;
 			if($consumo['meta']!=0){
 				//$valor_tarifa = 0.7; //Atualizar com base na tarifa local
-				date_default_timezone_set('America/Sao_Paulo'); 
-				if(date('m')==2){
-					$qtd_dias=28;
-					$ano = date('Y');
-					if (($ano/4)==0 && ($ano/100)!=0) {//Conferir se o ano e bissexto
-						$qtd_dias=29;
-					}
-				}elseif(date('m')==4 || date('m')==6 || date('m')==9 || date('m')==11){
-					$qtd_dias=30;
-				}else{
-					$qtd_dias=31;
-				}
-				//Daqui pra baixo e para jogar o consumo no consumo geral e fazer esquema de bonus e onus
-				$this->load->model("Consumo_model");
-				$consumoAtivo = $this->Consumo_model->SelecionarConsumo($contaContrato);
-				$rconsumoTotal = $this->Consumo_model->SelecionarConsumoTotal($contaContrato);
-				$consumoTotal = floatval(number_format($rconsumoTotal, 3, ',', '.'));
-				if ($consumoAtivo!=0) {
-					$ultimaAtualizacao = $this->inserirConsumoTotal();
-					if ($ultimaAtualizacao!=date('d')) {
-						$vezes = (date('d')-$ultimaAtualizacao);
-						$backupSimulador = $this->session->userdata('simulacaoBackup'.$contaContrato);
-						$inserirTotal = ($vezes*array_sum($backupSimulador))+$consumoTotal;
-						$this->Consumo_model->inserirConsumoTotal($inserirTotal,$contaContrato);
-					}
-				}
-				if ($consumoTotal!=0) {
-					$rmeta = $this->Consumo_model->SelecionarMeta($contaContrato);
-					$meta = floatval(number_format($rmeta, 3, ',', '.'));
-					$diasParaFimMes = date('t')-(date('d')-1); //Contando com hj qntos dias faltam para o fim do mes
-					//echo $diasParaFimMes;
-					if ($meta-$consumoTotal<=12*$diasParaFimMes) {//corrigir aqui para a media de consumo de kwh diaria
-						//echo "<br>meta ".$meta;
-						//echo "<br>consumoTotal ".$consumoTotal;
-						//echo "<br>diasParaFimMes ".$diasParaFimMes*12;
-						$valor_dia = ($consumo['meta']/$qtd_dias);
-						//echo"<br>valor_dia ".$valor_dia;
-					}else{
-						$valor_dia = ($meta-$consumoTotal)/$diasParaFimMes;
-					}
-				}else{
-					$valor_dia = ($consumo['meta']/$qtd_dias); //ATENCAO Se tudo por aqui tiver dando errado essa linha tem q sobreviver ATENCAO
-				}
-				//Aqui se encerra o trecho citado no comentario anterior
+				$valor_dia = $this->atualizarValores();
 				$consumo['consumo'] = $this->Consumo_model->SelecionarConsumo($contaContrato);
 				$consumo['gasto'] = $consumo['consumo']*100/$valor_dia;
 				$porcentagem = $consumo['gasto'];
@@ -91,6 +48,56 @@ class Raiz extends CI_Controller {
 		}
 	}
 
+	public function atualizarValores(){
+		$usuario = $this->session->userdata('usuario');
+		$this->load->model("Operacoes");
+		$contaContrato = $this->Operacoes->contaContrato($usuario);
+		date_default_timezone_set('America/Sao_Paulo'); 
+		$qtd_dias = date('t');
+
+		//Daqui pra baixo e para jogar o consumo no consumo geral e fazer esquema de bonus e onus
+		$this->load->model("Consumo_model");
+		$consumoAtivo = $this->Consumo_model->SelecionarConsumo($contaContrato);
+		$rconsumoTotal = $this->Consumo_model->SelecionarConsumoTotal($contaContrato);
+		$consumoTotal = floatval(number_format($rconsumoTotal, 3, ',', '.'));
+
+		if ($consumoAtivo!=0) {
+			$ultimaAtualizacao = $this->inserirConsumoTotal(); //31
+			if ($ultimaAtualizacao!=date('d')) { //31!=01
+				if ($ultimaAtualizacao==date('t')) {
+					$backupSimulador = $this->session->userdata('simulacaoBackup'.$contaContrato);
+					$inserirTotal = array_sum($backupSimulador)+$consumoTotal;
+					$this->Consumo_model->inserirConsumoTotal($inserirTotal,$contaContrato);
+				}else{
+					$vezes = (date('d')-$ultimaAtualizacao);
+					$backupSimulador = $this->session->userdata('simulacaoBackup'.$contaContrato);
+					$inserirTotal = ($vezes*array_sum($backupSimulador))+$consumoTotal;
+					$this->Consumo_model->inserirConsumoTotal($inserirTotal,$contaContrato);
+				}
+			}
+		}
+
+		if ($consumoTotal!=0) {
+			$rmeta = $this->Consumo_model->SelecionarMeta($contaContrato);
+			$meta = $rmeta;
+			$diasParaFimMes = date('t')-(date('d')-1); //Contando com hj qntos dias faltam para o fim do mes
+			//echo $diasParaFimMes;
+			if ($meta-$consumoTotal<=12*$diasParaFimMes) {//corrigir aqui para a media de consumo de kwh diaria
+				//echo "<br>meta ".$meta;
+				//echo "<br>consumoTotal ".$consumoTotal;
+				//echo "<br>diasParaFimMes ".$diasParaFimMes*12;
+				$valor_dia = ($meta/$qtd_dias);
+				//echo"<br>valor_dia ".$valor_dia;
+			}else{
+				$valor_dia = ($meta-$consumoTotal)/$diasParaFimMes;
+			}
+		}else{
+			$valor_dia = ($meta/$qtd_dias); //ATENCAO Se tudo por aqui tiver dando errado essa linha tem q sobreviver ATENCAO
+		}
+		return $valor_dia;
+		//Aqui se encerra o trecho citado no comentario anterior
+	}
+
 	public function inserirConsumoTotal(){
 		$this->load->model("Operacoes");
 		$usuario = $this->session->userdata('usuario');
@@ -119,12 +126,15 @@ class Raiz extends CI_Controller {
 			$dados['usuario'] = $this->Operacoes->contaContrato($usuario);
 			$this->inserirConsumo($this->Operacoes->contaContrato($usuario));
 			$this->load->model("Metas_model");
-			$dados['meta'] =json_encode($this->Metas_model->get_kwh($dados['usuario']));
+			$dados['meta'] = json_encode($this->Metas_model->get_kwh($dados['usuario']));
 			$this->load->model("Consumo_model");
-			$dados['meuconsumo'] =json_encode($this->Consumo_model->SelecionarConsumoTotal($dados['usuario']));
+			$dados['meuconsumo'] = json_encode($this->Consumo_model->SelecionarConsumoTotal($dados['usuario']));
 			$this->load->model("Usuarios_model");
-			$dados['minha faixa'] = $this->Usuarios_model->getFaixa($usuario);
+			$dados['minhafaixa'] = $this->Usuarios_model->getFaixa($usuario);
+			$this->load->model("Consumo_model");
+			$dados['mediaFaixa'] = json_encode($this->Consumo_model->mediaFaixa($usuario,$dados['minhafaixa']));
 			$title['titulo'] ="Consumo";
+			//echo $dados['mediaFaixa'];
 			$this->load->view('header_sidebar', $title);
 			$this->load->view('consumo', $dados);
 			$this->load->view('footer');
@@ -142,7 +152,38 @@ class Raiz extends CI_Controller {
 		// $mpdf->SetDisplayMode('fullpage');
 		// Ao invés de imprimir a view 'welcome_message' na tela, passa o código
 		// HTML dela para a variável $html
-		$html = $this->load->view('relatorio','',TRUE);
+		$usuario = $this->session->userdata('usuario');
+		$this->load->model("Operacoes");//converter conta contrato
+		$dados['usuario'] = $this->Operacoes->contaContrato($usuario);
+		$this->inserirConsumo($this->Operacoes->contaContrato($usuario));
+		$dados['tarifa'] = $this->Operacoes->tarifa($usuario);
+		$dados['estado'] = $this->Operacoes->estado($usuario);
+		$dados['nomedeusuario'] = $usuario;
+		$dados['nomeCompleto'] = $this->Operacoes->nomeCompleto($usuario);
+		$dados['fornecedor'] = $this->Operacoes->fornecedor($usuario);
+		$dados['email'] = $this->Operacoes->email($usuario);
+		$this->load->model("Metas_model");
+		$dados['meta'] = $this->Metas_model->get_kwh($dados['usuario']);
+		$this->load->model("Consumo_model");
+		$dados['meuconsumo'] = $this->Consumo_model->SelecionarConsumoTotal($dados['usuario']);
+		$this->load->model("Usuarios_model");
+		$dados['minhafaixa'] = $this->Usuarios_model->getFaixa($usuario);
+		$this->load->model("Consumo_model");
+		$dados['mediaFaixa'] = $this->Consumo_model->mediaFaixa($usuario,$dados['minhafaixa']);
+		$this->load->model("Simulador_model");
+		$dados['simulacao'] = $this->Simulador_model->getBackupSimulador($dados['usuario']);
+	    if (isset($_SESSION['meta'])) {$dados['metareais'] = $this->session->userdata('meta');}
+	    $this->load->model("Conquistas_model");
+	    $j=0;
+	    for ($i=2; $i <=3 ; $i++) { 
+	    	$nomeconquista ='conquista'.$i;
+	    	$resposta = $this->Conquistas_model->$nomeconquista($dados['usuario']);
+	    	if ($resposta=='true') {$j=$j+1;}
+	    }
+	    $dados['conquistas'] = $j;
+		$this->ChecarPreminum();
+		//$dados['']='';
+		$html = $this->load->view('relatorio',$dados,TRUE);
 		// Insere o conteúdo da variável $html no arquivo PDF
 		$mpdf->writeHTML($html);
 		// Cria uma nova página no arquivo
@@ -154,7 +195,26 @@ class Raiz extends CI_Controller {
     }
 
     public function testarPdf(){
-    	$this->load->view('relatorio');
+    	$usuario = $this->session->userdata('usuario');
+		$this->load->model("Operacoes");//converter conta contrato
+		$dados['usuario'] = $this->Operacoes->contaContrato($usuario);
+		$this->inserirConsumo($this->Operacoes->contaContrato($usuario));
+		$dados['tarifa'] = $this->Operacoes->tarifa($usuario);
+		$dados['estado'] = $this->Operacoes->estado($usuario);
+		$dados['fornecedor'] = $this->Operacoes->fornecedor($usuario);
+		$dados['email'] = $this->Operacoes->email($usuario);
+		$this->load->model("Metas_model");
+		$dados['meta'] = $this->Metas_model->get_kwh($dados['usuario']);
+		$this->load->model("Consumo_model");
+		$dados['meuconsumo'] = $this->Consumo_model->SelecionarConsumoTotal($dados['usuario']);
+		$this->load->model("Usuarios_model");
+		$dados['minhafaixa'] = $this->Usuarios_model->getFaixa($usuario);
+		$this->load->model("Consumo_model");
+		$dados['mediaFaixa'] = $this->Consumo_model->mediaFaixa($usuario,$dados['minhafaixa']);
+		$this->load->model("Simulador_model");
+		$dados['simulacao'] = $this->Simulador_model->getBackupSimulador($dados['usuario']);
+		$this->ChecarPreminum();
+    	$this->load->view('relatorio', $dados);
     }
 
 	public function metas(){
@@ -172,12 +232,14 @@ class Raiz extends CI_Controller {
 		$this->load->model("Consumo_model");
 		$metaTotal = $this->Consumo_model->SelecionarMeta($contaContrato);
 		$consumoTotal = $this->Consumo_model->SelecionarConsumoTotal($contaContrato);
-		if ($metaTotal>=$consumoTotal) {
-			$this->session->set_userdata('conferirMeta','cumpriu');
-			$this->session->set_userdata('mensagem', "Parabéns por cumprir a meta!");
-		}else{
-			$this->session->set_userdata('conferirMeta','não cumpriu');
-			$this->session->set_userdata('mensagem', "Boa sorte nesse mês!");
+		if ($consumoTotal>0) {
+			if ($metaTotal>=$consumoTotal) {
+				$this->session->set_userdata('conferirMeta','cumpriu');
+				$this->session->set_userdata('mensagem', "Parabéns por cumprir a meta!");
+			}else{
+				$this->session->set_userdata('conferirMeta','não cumpriu');
+				$this->session->set_userdata('mensagem', "Boa sorte nesse mês!");
+			}
 		}
 	}
 
@@ -207,7 +269,7 @@ class Raiz extends CI_Controller {
 			$this->load->model("Usuarios_model");
 			$faixa = $this->Usuarios_model->getFaixa($this->session->userdata('usuario'));
 			if ($faixa==1) {
-				$this->session->set_userdata('faixa', "122 e 155"); //dois valores alterar aqui e no controller questionario
+				$this->session->set_userdata('faixa', "122 e 155"); //dois valores alterar aqui e no controller questionario e controler de metas
 			}elseif ($faixa==2) {
 				$this->session->set_userdata('faixa', "156 e 210");
 			}elseif ($faixa==3) {
@@ -304,6 +366,7 @@ class Raiz extends CI_Controller {
 			$dados['contaContrato'] = $this->Operacoes->contaContrato($usuario);
 			$dados['tarifa'] = $this->Operacoes->tarifa($usuario);
 			$dados['nomeestado'] = $this->Operacoes->estado($usuario);
+			$dados['fornecedor'] = $this->Operacoes->fornecedor($usuario);
 			$title['titulo'] ="Usuário";
 			$this->load->view('header_sidebar', $title);
 			$this->load->view('usuario', $dados);
