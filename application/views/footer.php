@@ -1,11 +1,11 @@
  <!--Footer -->
-<footer class="page-footer font-small position-relative shadow">
+<footer class="page-footer font-small position-relative shadow" id="rodape">
   <!-- Footer Links -->
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3 card-theme"><!--©--> Pharus <?php echo date('Y') ?> -
-    <a href="quemsomos" class="theme">Quem Somos?</a> -
+    <a href="quemsomos" class="theme">Quem Somos</a> -
     <a href="parceiros" class="theme">Parceiros</a> -
-    <a href="contato" class="theme">Contato</a>
+    <a href="contato" class="theme">Contato e FAQ</a>
   </div>
   <!-- Copyright -->
 </footer>

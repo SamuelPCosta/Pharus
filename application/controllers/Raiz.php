@@ -59,19 +59,28 @@ class Raiz extends CI_Controller {
 		$this->load->model("Consumo_model");
 		$consumoAtivo = $this->Consumo_model->SelecionarConsumo($contaContrato);
 		$rconsumoTotal = $this->Consumo_model->SelecionarConsumoTotal($contaContrato);
-		$consumoTotal = floatval(number_format($rconsumoTotal, 3, ',', '.'));
+		$consumoTotal = floatval(number_format($rconsumoTotal, 3, '.', ','));
 
 		if ($consumoAtivo!=0) {
-			$ultimaAtualizacao = $this->inserirConsumoTotal(); //31
-			if ($ultimaAtualizacao!=date('d')) { //31!=01
-				if ($ultimaAtualizacao==date('t')) {
+			$ultimaAtualizacao = $this->inserirConsumoTotal();
+			$dia_de_hoje = date('m\/d\/Y');
+			// converte as datas para o formato timestamp
+			$d1 = strtotime($ultimaAtualizacao); 
+			$d2 = strtotime($dia_de_hoje);
+			//echo $dia_de_hoje;
+			// verifica a diferença em segundos entre as duas datas e divide pelo número de segundos que um dia possui
+			$dias = ($d2-$d1)/86400;
+			//echo $ultimaAtualizacao;
+			if ($dias>=1) {
+				if (date('d')>=2 && $dias>date('d')-1) {
+					$this->Consumo_model->inserirConsumoTotal(0,$contaContrato);
+					$dias = date('d')-1;
 					$backupSimulador = $this->session->userdata('simulacaoBackup'.$contaContrato);
-					$inserirTotal = array_sum($backupSimulador)+$consumoTotal;
+					$inserirTotal = ($dias*array_sum($backupSimulador));
 					$this->Consumo_model->inserirConsumoTotal($inserirTotal,$contaContrato);
 				}else{
-					$vezes = (date('d')-$ultimaAtualizacao);
 					$backupSimulador = $this->session->userdata('simulacaoBackup'.$contaContrato);
-					$inserirTotal = ($vezes*array_sum($backupSimulador))+$consumoTotal;
+					$inserirTotal = ($dias*array_sum($backupSimulador))+$consumoTotal;
 					$this->Consumo_model->inserirConsumoTotal($inserirTotal,$contaContrato);
 				}
 			}
@@ -86,12 +95,13 @@ class Raiz extends CI_Controller {
 				//echo "<br>meta ".$meta;
 				//echo "<br>consumoTotal ".$consumoTotal;
 				//echo "<br>diasParaFimMes ".$diasParaFimMes*12;
-				$valor_dia = ($meta/$qtd_dias);
+				$valor_dia = ($meta/date('t'));
 				//echo"<br>valor_dia ".$valor_dia;
 			}else{
 				$valor_dia = ($meta-$consumoTotal)/$diasParaFimMes;
 			}
 		}else{
+			$meta = $this->Consumo_model->SelecionarMeta($contaContrato);
 			$valor_dia = ($meta/$qtd_dias); //ATENCAO Se tudo por aqui tiver dando errado essa linha tem q sobreviver ATENCAO
 		}
 		return $valor_dia;
@@ -103,7 +113,7 @@ class Raiz extends CI_Controller {
 		$usuario = $this->session->userdata('usuario');
 		$contaContrato = $this->Operacoes->contaContrato($usuario);
 		$intervaloTempo = $this->Operacoes->intervaloTempo($contaContrato);
-		$ultimaAtualizacao = substr($intervaloTempo, 8, 2);
+		$ultimaAtualizacao = substr($intervaloTempo, 0, 10);
 		return $ultimaAtualizacao;
 	}
 
@@ -128,11 +138,13 @@ class Raiz extends CI_Controller {
 			$this->load->model("Metas_model");
 			$dados['meta'] = json_encode($this->Metas_model->get_kwh($dados['usuario']));
 			$this->load->model("Consumo_model");
-			$dados['meuconsumo'] = json_encode($this->Consumo_model->SelecionarConsumoTotal($dados['usuario']));
+			$backupSimulador = $this->session->userdata('simulacaoBackup'.$dados['usuario']);
+			$consumoGrafico = array_sum(array_slice($backupSimulador, 0, date('H')));
+			$dados['meuconsumo'] = json_encode(number_format($this->Consumo_model->SelecionarConsumoTotal($dados['usuario'])+$consumoGrafico, 2));
 			$this->load->model("Usuarios_model");
 			$dados['minhafaixa'] = $this->Usuarios_model->getFaixa($usuario);
 			$this->load->model("Consumo_model");
-			$dados['mediaFaixa'] = json_encode($this->Consumo_model->mediaFaixa($usuario,$dados['minhafaixa']));
+			$dados['mediaFaixa'] = json_encode(number_format($this->Consumo_model->mediaFaixa($usuario,$dados['minhafaixa']), 2));
 			$title['titulo'] ="Consumo";
 			//echo $dados['mediaFaixa'];
 			$this->load->view('header_sidebar', $title);
@@ -457,7 +469,7 @@ class Raiz extends CI_Controller {
 
 	public function contato(){
 		if (isset($_SESSION['login'])) {
-			$title['titulo'] ="Contato";
+			$title['titulo'] ="Contato e FAQ";
 			$this->load->view('header_sidebar', $title);
 			$this->load->view('contato');
 			$this->load->view('footer');
@@ -487,7 +499,7 @@ class Raiz extends CI_Controller {
 				if($personalizados!=null) {$this->session->set_userdata('personalizados', $personalizados);}
 				$title['horassalvas'] = str_replace(0, "", $horassalvar);
 				$title['aparelhosPersonalizados'] = $personalizados;
-			}
+			}else{$title['aparelhosPersonalizados'] = null;}
 			$dados['contaContrato'] ="Quem somos";
 			$title['titulo'] ="Simulador";
 			$this->load->view('header_sidebar', $title);

@@ -27,13 +27,14 @@
 <div class="master bg-light">
 	<!-- Header -->
 	<header>
-		<nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0">
-			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning" style="text-shadow: 0px 0px 1px #22242a">P</span>harus</h1></a> <!--Nossa Logo-->
+		<nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0" id="header">
+			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" alt="Lôgo do sistema Farol aceso" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning" style="text-shadow: 0px 0px 1px #22242a">P</span>harus</h1></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn text-white text-dark sidebar-li-a position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
-              <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;" onclick="animarNotificacao()">
+              <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;" onclick="animarNotificacao()" accesskey="n">
                 <div class="rounded-circle bg-warning position-fixed border border-dark" id="avisonotificacao" style="width: 12px; height: 12px; margin-left: 13px; margin-top: -2px"></div>
                 <i class="fas fa-bell"></i>
               </a>
+              <a href="#atalhos" accesskey="a" class="position-fixed" title="Consultar atalhos de acessibilidade" style="opacity: 0">Para consultar os atalhos de acessibilidade pressione a qualquer momento Alt mais a.</a> 
               <div class="btn-group">
                 <div class="dropdown-menu card-theme theme dropdown-menu-right" id="painelnot" style="top:100px; width: 320px; overflow-x: auto; max-height: 350px; overflow-y: hidden;">
                     <table class="mx-auto"> 
@@ -91,17 +92,17 @@
         <div id="sidebar-wrapper" class="shadow bg-white">
             <ul class="sidebar-nav">
                 <li id="Usuario" class="">
-                    <a href="usuario" class="text-capitalize sidebar-li-a text-dark"><img src="<?= base_url()?>assets/fotos/user_man.png" class="photo_user rounded-circle mr-2" width=35 style="margin-left: -11px; margin-top:-4px; height: 35px; object-fit: cover;"><?php echo $this->session->userdata('usuario'); ?></a>
+                    <a href="usuario" class="text-capitalize sidebar-li-a text-dark"><img src="<?= base_url()?>assets/fotos/user_man.png" class="photo_user rounded-circle mr-2" width=35 style="margin-left: -11px; margin-top:-4px; height: 35px; object-fit: cover;" alt="espaço para sua foto"><?php echo $this->session->userdata('usuario'); ?></a>
                 </li>
                 <div class="dropdown-divider"></div>
-            	<li id="Home" class="">
-            		<a href="index" class="text-capitalize sidebar-li-a text-dark"><i class="fas fa-home"></i>Home</a>
+            	<li id="Home" class="" >
+            		<a href="index" accesskey="h" class="text-capitalize sidebar-li-a text-dark"><i class="fas fa-home"></i>Home</a>
             	</li>
-                <li id="Metas" class="">
-                    <a href="metas" class="sidebar-li-a text-dark"><i class="fas fa-bookmark"></i>Metas</a>
+                <li id="Metas" class="" >
+                    <a href="metas" accesskey="m" class="sidebar-li-a text-dark"><i class="fas fa-bookmark"></i>Metas</a>
                 </li>
-                <li id="Consumo" class="">
-                    <a href="consumo" class="sidebar-li-a text-dark"><i class="fas fa-coins"></i>Consumo</a>
+                <li id="Consumo" class="" >
+                    <a href="consumo" accesskey="c" class="sidebar-li-a text-dark"><i class="fas fa-coins"></i>Consumo</a>
                 </li>
                 <li id="Ideal de Consumo" class="">
                     <a href="idealdeconsumo" class="sidebar-li-a text-dark"><i class="fas fa-funnel-dollar"></i>Ideal de Consumo</a>
@@ -126,7 +127,7 @@
                     }
                 ?>
                 <li class="mb-5">
-                    <a href="login/logout" class="sidebar-li-a text-dark" onclick="destroyphoto()"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
+                    <a href="login/logout" accesskey="s" class="sidebar-li-a text-dark" onclick="destroyphoto()"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
                 </li>
             </ul>
         </div>
@@ -134,3 +135,35 @@
         <div id="dark"></div>
             <!--conteudo-->
         <div id="page-content-wrapper">
+            <a href="#header" accesskey="0" class="inativo" title="Voltar ao topo">Voltar ao topo</a> 
+            <a href="#sidebar-wrapper" accesskey="1" class="inativo" title="Menu">Menu</a> 
+            <a href="#page-content-wrapper" accesskey="2" class="inativo" title="Conteudo">Conteudo</a> 
+            <a href="#rodape" accesskey="3" class="inativo" title="Rodapé">Rodapé</a>
+
+            <a href="login" accesskey="a" class="ml-1 float-right inativo" data-toggle="modal" data-target="#Acessibilidademodal">Acessibilidade</a>
+            <!-- ###modal### -->
+           <div class="modal fade bd-example-modal-lg" id="Acessibilidademodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h6 class="modal-title" id="TituloModalCentralizado">Atalhos de Acessibilidade</h6>
+                  </div>
+                  <div class="modal-body">
+                        <a href="#" class="d-block text-dark">Voltar ao topo. Alt + 0</a>
+                        <a href="#" class="d-block text-dark">Menu. Alt + 1</a>
+                        <a href="#" class="d-block text-dark">Conteudo. Alt + 2</a>
+                        <a href="#" class="d-block text-dark">Rodapé. Alt + 3</a>
+                        <a href="#" class="d-block text-dark">Abrir notificações. Alt + n</a>
+                        <a href="#" class="d-block text-dark">Voltar para a página inicial. Alt + h</a>
+                        <a href="#" class="d-block text-dark">Acessar a página de metas. Alt + m</a>
+                        <a href="#" class="d-block text-dark">Acessar a página de consumo. Alt + c</a>
+                        <a href="#" class="d-block text-dark">Iniciar simulação. (Funciona apenas na página do simulador). Alt + i</a>
+                        <a href="#" class="d-block text-dark">Recarregar dicas. (Funciona apenas na página de dicas). Alt + r</a>
+                        <a href="#" class="d-block text-dark">Sair do sistema. Alt + s</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-warning text-dark" data-dismiss="modal">Ok</button>
+                  </div>
+                </div>
+                </div>
+            </div>

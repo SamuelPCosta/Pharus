@@ -88,7 +88,7 @@ var myBarChart = new Chart(ctx,{
     data:{
         labels: [mesatual],
         datasets: [{
-            label: "Consumo",
+            label: "Meu consumo",
             backgroundColor: "#80bef7",
             borderWidth: 0,
             borderColor: '#80bef7',
@@ -97,7 +97,7 @@ var myBarChart = new Chart(ctx,{
             data: [JSON.parse(meuconsumo)],
         },
         {
-            label: "Meta",
+            label: "Minha meta",
             backgroundColor: "#FFC107",
             borderWidth: 0,
             borderColor: '#FFC107',
@@ -106,7 +106,7 @@ var myBarChart = new Chart(ctx,{
             data: [JSON.parse(meta)]
         },
         {
-            label: "Consumo médio da faixa "+minhafaixa,
+            label: "Média da faixa "+minhafaixa,
             backgroundColor: '#f7da80',
             borderWidth: 0,
             borderColor: '#f7da80',

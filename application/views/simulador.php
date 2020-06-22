@@ -14,6 +14,8 @@
 		width: 72px;
 		padding-left: 0px;
 		margin-bottom: 10px;
+		background-color: #eeeeee !important;
+		box-shadow: none;
 	}
 	h2{
 		font-family: 'Open Sans', sans-serif !important;
@@ -36,6 +38,9 @@
 		box-shadow: none !important;
 		border-radius: none !important;
 	}
+	input.text-white, select.text-white{
+		background-color: #464b51 !important;
+	}
 	.theme.text-white .personalizados{
 		color: white!important;
 	}
@@ -47,6 +52,12 @@
 		margin-bottom: 20px;
 		max-height: 40px;
 	}
+	@keyframes recolher{
+	    0% {transform: translateY(0);}
+	    50% {transform: translateY(6px);}
+	    100% {transform: translateY(0);}
+	}
+	.recolher{animation: recolher 0.5s;-webkit-animation-fill-mode: forwards;/*animation-timing-function: linear;*/}
 	@media(max-width:1200px){
 		table{
 			margin-left: auto!important;
@@ -80,9 +91,9 @@
 </head>
 	<div class="container first-container mt-5 container-simulador">
 		<!-- <h1 class="mb-5 text-uppercase theme">Simulador de Consumo</h1> -->
-		<form method="post" action="Raiz/Consumir">
+		<form method="post" action="Raiz/Consumir" id="formulariodesimulcao">
 		<div class="row align-items-center">
-			<h2 class="mt-0 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme mx-3" >Simulador de Consumo</h2>
+			<h2 class="mt-0 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme mx-3 d-inline">Simulador de Consumo<span class="float-right d-inline span-fa-chevron-down"><i class="fa fa-chevron-down" style="cursor: pointer;"></i></span></h2>
 				<?php $cozinha = array('Exaustor','Freezer','Fogão Elétrico','Geladeira','Microondas','Lava-Louça','Liquidificador');
 				$quartosala = array('Ar-Condicionado','Computador','Estabilizador','Impressora','Televisão','Ventilador','Vídeogame');
 				$outros = array('Chuveiro Elétrico','Ferro Elétrico','Lâmpada Fluor.','Lâmpada Incan.','Lavadora','Secador');
@@ -124,19 +135,19 @@
 							<option value='20'>20 (unidades)</option>";
 				?>
 			</div>
-				<div class="card py-5 px-5 mt-4 mb-0 shadow card-theme">
+				<div class="card py-5 px-5 mt-4 mb-0 shadow card-theme instrucoesSimulador expandir">
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">	
 							<ul class="col-xl col-md-12 mx-auto px-5 theme text-justify">
 								<li>Insira os valores correspondentes a quantas horas cada aparelho permanece ligado.</li>
 								<li>Estamos considerando uma potência média para cada aparelho.</li>
-								<li>Os dados ficam salvos para que você tenha um referncial futuro de sua última simulação.</li>
+								<li>Os dados ficam salvos para que você tenha um referencial futuro de sua última simulação.</li>
 							</ul>
 						</div>
 						<div class="vertical-line" style="height: 150px!important"></div>
 						<div class="col-xl col-md-12 mx-auto px-0">
 							<ul class="col-xl col-md-12 mx-auto px-5 theme text-justify">
-								<li>O último bloco é reservado para aparelhos personalizavéis.</li>
+								<li>O último bloco é reservado para aparelhos personalizáveis.</li>
 								<li>Você pode alterar seus nomes clicando sobre eles.</li>
 								<li>Além disso, você pode alterar a potência destes aparelhos.</.li>
 							</ul>
@@ -154,9 +165,9 @@
 								$i=0;
 								foreach ($cozinha as $aparelho) {
 									echo "<tr><td style='width:330px;'><h2 class='theme'>".$aparelho.":</h2></td>
-										<td><input type='number' min='0' max='24' name='horas[]' value='".$horassalvas[$i]."' placeholder='Horas'>
+										<td><input type='number' min='0' max='24' name='horas[]' value='".$horassalvas[$i]."' placeholder='Horas' class='soma theme'>
 										<select name='potencia[]' style='display:none!important;' class='g1".$i."'>".$optionsC."</select>
-										<select name='qntd[]'>".$qntd."</select></td></tr>";
+										<select name='qntd[]' class='theme'>".$qntd."</select></td></tr>";
 								?>
 								<script>
 									var sel = "<?php echo $i;?>";
@@ -177,9 +188,9 @@
 								$i=0;
 								foreach ($quartosala as $aparelho) {
 									echo "<tr><td style='width:330px;'><h2 class='theme'>".$aparelho.":</h2></td>
-										<td><input type='number' min='0' max='24' name='horas[]' value='".$horassalvas[$i+7]."' placeholder='Horas'>
+										<td><input type='number' min='0' max='24' name='horas[]' value='".$horassalvas[$i+7]."' placeholder='Horas' class='soma theme'>
 										<select name='potencia[]' style='display:none!important;' class='g2".$i."'>".$optionsQS."</select>
-										<select name='qntd[]'>".$qntd."</select></td></tr>";
+										<select name='qntd[]' class='theme'>".$qntd."</select></td></tr>";
 								?>
 								<script>
 									var sel = "<?php echo $i;?>";
@@ -204,9 +215,9 @@
 								$i=0;
 								foreach ($outros as $aparelho) {
 									echo "<tr><td style='width:330px;'><h2 class='theme'>".$aparelho.":</h2></td>
-										<td><input type='number' min='0' max='24' name='horas[]' value='".$horassalvas[$i+14]."' placeholder='Horas'>
+										<td><input type='number' min='0' max='24' name='horas[]' value='".$horassalvas[$i+14]."' placeholder='Horas' class='soma theme'>
 										<select name='potencia[]' style='display:none!important;' class='g3".$i."'>".$optionsO."</select>
-										<select name='qntd[]'>".$qntd."</select></td></tr>";
+										<select name='qntd[]' class='theme'>".$qntd."</select></td></tr>";
 								?>
 								<script>
 									var sel = "<?php echo $i;?>";
@@ -227,9 +238,9 @@
 								$i=0;
 								foreach ($personalizados as $aparelho) {
 									echo "<tr><td class='theme nomep'><input type='text' class='personalizados' name='personalizados[]' placeholder='' value='".$personalizados[$i]."' style='width:200px;border-radius: 0px; text-transform: capitalize;'></td>
-										<td><input type='number' min='0' max='24' name='horas[]' class='horasp' value='".$horassalvas[$i+20]."' placeholder='Horas'>
-										<select name='qntd[]' class='mr-0 ml-0 corrigiraltura'>".$qntd."</select>
-										<select name='potencia[]' class='potenciap'>".$optionsC.$optionsQS.$optionsO."</select></td></tr>";
+										<td><input type='number' min='0' max='24' name='horas[]' class='horasp soma theme' value='".$horassalvas[$i+20]."' placeholder='Horas'>
+										<select name='qntd[]' class='mr-0 ml-0 corrigiraltura theme'>".$qntd."</select>
+										<select name='potencia[]' class='potenciap theme'>".$optionsC.$optionsQS.$optionsO."</select></td></tr>";
 								$i++;
 								}
 								?>
@@ -240,12 +251,71 @@
 				</div>
 		</div>
 		<br>
-		<button type="submit" name="button" class="btn login_btn bg-warning mx-auto d-block w-25 mt-1">Simular consumo</button>
+		<button type="submit" name="button" accesskey="i" class="btn login_btn bg-warning mx-auto d-block w-25 mt-1" id="iniciarsimulador" disabled>Simular consumo</button>
 		</form>
 		<!-- <form method="post" action="Raiz/zerar">
 			<button type="submit" class="btn login_btn bg-danger text-white mx-auto d-block w-25 mt-1">Zerar simulador</button>
 		</form> -->
 </div>
 <script>
+const recolhido = localStorage.getItem('recolhido')
+
+// caso tenha o valor no localStorage
+if (recolhido) {
+	$(".instrucoesSimulador").toggleClass('inativo');
+	$(".instrucoesSimulador").toggleClass('expandir');
+	$(".span-fa-chevron-down").toggleClass('recolher');
+	setTimeout(function() { $('.span-fa-chevron-down').toggleClass('recolher');}, 500);
+}
+
+$(".fa-chevron-down").click(function(e) {
+	e.preventDefault();
+	$(".instrucoesSimulador").toggleClass('inativo');
+	$(".instrucoesSimulador").toggleClass('expandir');
+	$(".span-fa-chevron-down").toggleClass('recolher');
+	setTimeout(function() { $('.span-fa-chevron-down').toggleClass('recolher');}, 500);
+
+	if($(".instrucoesSimulador").hasClass('inativo')) {
+		// salva o tema no localStorage
+		localStorage.setItem('recolhido', true)
+		return
+	}
+	// senão remove
+	localStorage.removeItem('recolhido')
+});
+
+
+//declaro uma var para somar o total
+var total = 0;
+//faço um foreach percorrendo todos os inputs com a class soma e faço a soma na var criada acima
+$(".soma").each(function(){
+    total = total + Number($(this).val());  
+});
+//mostro o total no input Sub Total
+console.log(total);
+if (total>=1) {
+	$("#iniciarsimulador").prop("disabled", false );
+}else{
+	$("#iniciarsimulador").prop("disabled", true);
+}
+
+$("#formulariodesimulcao").change(function () {
+	$(".soma").change(function(){
+        //declaro uma var para somar o total
+        var total = 0;
+        //faço um foreach percorrendo todos os inputs com a class soma e faço a soma na var criada acima
+        $(".soma").each(function(){
+            total = total + Number($(this).val());  
+        });
+        //mostro o total no input Sub Total
+        console.log(total);
+        if (total>=1) {
+    		$("#iniciarsimulador").prop("disabled", false );
+    	}else{
+    		$("#iniciarsimulador").prop("disabled", true);
+    	}
+    });
+}).change();
+
 var atual ="Simulador";
 </script>

@@ -40,7 +40,7 @@
 			      			<?php echo $dica6; ?>
 			      		</p>
 			      	</div>
-			      		<button id="recarregar" onclick="recarregar()" class="btn bg-warning"><i class="fas fa-redo" id="recarregarIcone"></i> Novas dicas</button>
+			      		<button id="recarregar" onclick="recarregar()" class="btn bg-warning" accesskey="r"><i class="fas fa-redo" id="recarregarIcone"></i> Novas dicas</button>
 			      		<button id="recarregarMobile" onclick="recarregar()" class="btn bg-warning"><i class="fas fa-redo" id="recarregarIconeMobile"></i></button>
 			      	</div>
 			      </div>

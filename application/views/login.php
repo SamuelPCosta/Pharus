@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!--Importação da fonte Open Sans-->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Importação de sweetalert-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<link rel="shortcut icon" href="<?= base_url()?>assets/img/logo2.png"/> <!--Icone-->
 </head>
 <!--Coded with love by Mutiullah Samim-->
@@ -33,12 +34,12 @@
     			}
     		}	
     	?>
-    <div class="container h-100">
+    <div class="container h-100 login">
 		<div class="d-flex justify-content-center h-100" >
 			<div class="user_card bg-light">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<img src="<?= base_url()?>assets/img/logo2.png" width=160 class="logo_grande px-2 py-2 mb-2 rounded-circle" alt="Logo"><!--Nossa Logo-->
+						<img src="<?= base_url()?>assets/img/logo2.png" width=160 class="logo_grande px-2 py-2 mb-2 rounded-circle" alt="Lôgo do sistema Farol aceso"><!--Nossa Logo-->
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
@@ -56,12 +57,6 @@
 							</div>
 							<input type="password" name="senha" class="form-control input_pass" value="" placeholder="Senha">
 						</div>
-						<div class="form-group">
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customControlInline">
-								<label class="custom-control-label" for="customControlInline">Lembre-se de mim</label>
-							</div>
-						</div>
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
 						<button type="submit" name="button" class="btn btn-warning login_btn">Entrar</button>
@@ -78,8 +73,43 @@
 			</div>
 		</div>
 	</div>
+
+
+	<style>
+		.inativo{
+			display: none;
+		}
+	</style>
+	<?php
+	if ($_GET["alpha"]==1) {
+	?>
+	<div class="container h-100 inativo" id="fasedeteste">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card bg-light px-5 text-justify" style="width: 40em; height: 29em">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="http://localhost/pharus/assets/img/logo2.png" width="160" class="logo_grande px-2 py-2 mb-2 rounded-circle" alt="Logo"><!--Nossa Logo-->
+					</div>
+				</div>
+				<br>
+					<h3 class="text-center mb-4">Bem vindo(a) à primeira fase de teste do sistema Pharus!</h3>
+						<span>É com grande prazer que convidamos você para participar desta fase do nosso projeto. Sua experiência nos ajudará a entender as necessidades dos usuários, além do nível de usabilidade e satisfação com o sistema. É de extrema importancia que após o período de teste você preencha nosso formulário, para que possamos ter o seu feedback. Faça seu cadastro e vamos começar nossa experiência.</span>
+					<div class="d-flex justify-content-center mt-3 login_container">
+						<a href="cadastro" class="btn btn-warning login_btn">Faça seu cadastro</a>
+					</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(".login").addClass('inativo');
+		$("#fasedeteste").removeClass('inativo');
+	</script>
+    <?php 
+	}
+	?>	
+	
+	
 	<!--Abaixo seguem os scripts para o funcionamento do JS do BS...-->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
 	<!--Fim dos scripts do BS-->

@@ -138,7 +138,7 @@ class Cadastro extends CI_Controller {
 		elseif ($estado=='TO') {echo json_encode('<option value="ETO">ETO</option>');}
 	}
 
-	public function inserirTarifa($usuario, $fornecedor){
+	public function inserirTarifaDB($usuario, $fornecedor){
 		if ($fornecedor=='Eletroacre') {$tarifa=0.570;}
 		elseif ($fornecedor=='Ceal') {$tarifa=0.535;}
 		elseif ($fornecedor=='AmE') {$tarifa=0.537;}

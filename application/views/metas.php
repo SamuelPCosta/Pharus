@@ -66,7 +66,7 @@
 						      	<p>Selecione abaixo o horário em que você deseja ser notificado: </p>
 						        <div class="container usuario">
 				                    <div class="row align-items-center">
-					                    <div class="col-4 mx-auto">
+					                    <div class="mx-auto">
 					                    	<form method="post" action="Raiz/notificacao">
 					                       		<input type="time" class="modal_input_time mx-auto" name="horario" value="<?php echo $this->session->userdata('horas').":".$this->session->userdata('minutos') ?>">
 					                    </div>
@@ -135,7 +135,7 @@
             			<p class="texto-corrido">&emsp;&emsp;O consumo de energia elétrica vem aumentando cada vez mais e isso traz uma série de problemas para o nosso ecossistema, pois no processo de produção dessa corrente elétrica há uma série de fatores prejudiciais, como é o caso da construção de hidrelétricas (representa mais de 90% de nossos recursos energéticos) que contribuem para o desmatamento, areamento do solo ou mesmo na extinção de espécies de animais, além da energia elétrica, eólica e dentre outros. Sendo assim, deve-se evitar esse consumo desenfreado, logo, visando o bem estar social e ambiental.</p>
             		</div>
             		<div class="col-xl-4 col-lg-8 col-md-12 mx-auto colunas-meta d-table-cell align-center">
-            			<img src="<?= base_url()?>assets/img/interruptor.png" class="py-3" width=100% >
+            			<img src="<?= base_url()?>assets/img/interruptor.png" class="py-3" width=100% alt="Ilustração de uma mão desligando um interruptor">
             		</div>
             	</div>
             </div>

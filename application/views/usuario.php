@@ -4,7 +4,7 @@
 						<div class="col-xl col-md-12 mx-auto px-0">
 							<div class="mx-auto col-12 h-75 my-3 rounded-circle overflow-hidden content px-0" id="div_photo_user">
 								<a class="mx-auto" href="#" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<img src="<?= base_url()?>assets/fotos/user_man.png" class="photo_user" width=260>
+									<img src="<?= base_url()?>assets/fotos/user_man.png" class="photo_user" width=260 alt="espaço para sua foto">
 									<div clas s="btn-group">
 										<i class="fas fa-upload ml-1 text-white"></i>
 									</div>

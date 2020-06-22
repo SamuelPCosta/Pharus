@@ -11,6 +11,9 @@ class Questionario extends CI_Controller {
 		$a4=27.00; $b4=45.00; $c4=72.00;
 		$a5=54.00; $b5=90.00; $c5=144.00;
 		$a6=02.70; $b6=04.50; $c6=07.20;
+		$a7=00.00; $b7=0.00; $c7=00.00;
+		$a8=00.00; $b8=00.00; $c8=00.00;
+		$a9=00.00; $b9=00.00; $c9=00.00;
 
 		if ($_POST['resposta']!=NULL) {
 			$resultado_a = get_cookie('a');
@@ -55,6 +58,8 @@ class Questionario extends CI_Controller {
 					$base = 0.022;
 				}elseif ($resposta==="resposta_c") {
 					$base = 0.05;
+				}else{
+					$base = 0.022;
 				}
 				$this->load->model("Operacoes");
 				$contaContrato = $this->Operacoes->contaContrato($usuario);
@@ -73,6 +78,8 @@ class Questionario extends CI_Controller {
 					$horasDormidas = 8;
 				}elseif ($resposta==="resposta_c") {
 					$horasDormidas = 10;
+				}else{
+					$horasDormidas = 8;
 				}
 				$this->Usuarios_model->adicionarHorasDormidas($horasDormidas, $contaContrato);
 			}elseif ($questao==9) {
@@ -82,6 +89,8 @@ class Questionario extends CI_Controller {
 					$horaInicial = 23;
 				}elseif ($resposta==="resposta_c") {
 					$horaInicial = 24;
+				}else{
+					$horaInicial = 22;
 				}
 				$this->Usuarios_model->adicionarHoraInicial($horaInicial, $contaContrato);
 			}

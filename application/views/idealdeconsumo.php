@@ -124,6 +124,7 @@
 					  	<label for="resposta_d">
 					  		<div class="alternativas alternativa_d mx-auto"><h4><?php echo $pergunta['Alternativa_d']?></h4></div>
 					  	</label>
+					  	<input type="radio" name="resposta" value="resposta_pular" checked>
 					  	<div class="d-flex justify-content-center my-3">
 							<button type="submit" name="button" class="next btn btn-warning">Próxima</button>
 						</div>
