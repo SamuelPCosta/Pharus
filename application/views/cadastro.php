@@ -67,7 +67,7 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-address-card"></i></i></span>
 							</div>
-							<input type="text" name="nome" class="form-control input_user text-capitalize" value="<?php if(isset($_SESSION['dadoserro'])){echo $_SESSION['dadoserro']['nome'];}?>" placeholder="Nome completo" required autofocus>
+							<input type="text" name="nome" class="form-control input_user text-capitalize" value="<?php if(isset($_SESSION['dadoserro'])){echo $_SESSION['dadoserro']['nome'];}?>" placeholder="Nome completo" spellcheck="true" required autofocus>
 						</div>
 						<div class="input-group mb-3">
 							<div class="input-group-append">

@@ -1,12 +1,13 @@
+			<div class="card bg-warning mx-auto text-center px-5 py-3 float-right inativo" id="gerandoRelatorio" style="position: fixed; bottom: 0px; right: 20px; z-index: 3;">Estamos gerando seu relatório</div>
 			<div class="container first-container my-3" id="containerconsumo">		
 		        <div class="my-4">
 		        	<h2 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme">Analise seu Consumo</h2>
-		        	<div class='alert card-theme card border-0 float-left' id="alerta--chart" role='alert' style="width: 100%">
-		        	<a href="gerarPdf" class="theme">Clique aqui para baixar seu relatório mensal</a>
+		        	<div class='alert card-theme card border-0 mx-auto' id="download-relatorio" role='alert'>
+		        	<a href="gerarPdf" onclick="avisopdf()" class="theme text-left">Clique aqui para baixar seu relatório mensal</a>
 		        	</div>
-		        	<div class='alert alert-danger bg-warning border-0 float-left' id="alerta-dica-chart" role='alert' style="width: 100%">
-		        	Se você ainda não foi classificado em uma faixa de <wbr>consumo descubra o seu <a href="idealdeconsumo" class="text-secondary">ideal de consumo</a>.<br>
-		        	Clique nas legendas dos dados <wbr>para alterar a visibilidade deles.
+		        	<div class='alert alert-danger bg-warning border-0 mx-auto' id="alerta-dica-chart" role='alert'>
+		        	Se você ainda não foi classificado em uma faixa de <wbr>consumo descubra o seu <a href="idealdeconsumo" class="text-secondary">ideal de consumo.</a><wbr>
+		        	<span> Clique nas legendas dos dados <wbr>para alterar a visibilidade deles.</span>
 		        	<span class="float-right ml-4" id="hide" onclick="escoder()" style="cursor: pointer;">Ok</span><span class="float-right text-dark"><input type="checkbox" name="" id="del" class="mr-1"><label for="del">Não exibir novamente</label></span></div>
 		        <div class="row">
 		        	<div class="col-md-12 graficos">
@@ -47,4 +48,8 @@
 	</script>
 	<script>
     var atual ="Consumo";
+    function avisopdf(){
+    	$("#gerandoRelatorio").removeClass('inativo')
+    	setTimeout(function(){$("#gerandoRelatorio").addClass('inativo')}, 3200);
+    }
 	</script>

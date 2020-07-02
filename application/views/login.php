@@ -81,7 +81,7 @@
 		}
 	</style>
 	<?php
-	if ($_GET["alpha"]==1) {
+	if (isset($_GET["alpha"]) && $_GET["alpha"]==1) {
 	?>
 	<div class="container h-100 inativo" id="fasedeteste">
 		<div class="d-flex justify-content-center h-100">

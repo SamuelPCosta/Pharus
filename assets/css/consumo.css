@@ -144,6 +144,16 @@ h2.card-theme{
 		height: 400px;
 	}
 }
+#download-relatorio, #alerta-dica-chart{
+	width: 100%;
+}
+@media(max-width: 1600px){
+	#download-relatorio, #alerta-dica-chart{width: 85%!important;}
+	#alerta-dica-chart{height: 110px!important;}
+}
+@media(max-width: 768px){
+	#download-relatorio, #alerta-dica-chart{width: 100%!important;}
+}
 @media(max-width: 768px){
 	#line-chart ,#bar-chart{
         height: 310px !important;

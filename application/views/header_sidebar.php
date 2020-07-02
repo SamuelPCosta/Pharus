@@ -34,7 +34,7 @@
                 <div class="rounded-circle bg-warning position-fixed border border-dark" id="avisonotificacao" style="width: 12px; height: 12px; margin-left: 13px; margin-top: -2px"></div>
                 <i class="fas fa-bell"></i>
               </a>
-              <a href="#atalhos" accesskey="a" class="position-fixed" title="Consultar atalhos de acessibilidade" style="opacity: 0">Para consultar os atalhos de acessibilidade pressione a qualquer momento Alt mais a.</a> 
+              <a href="#atalhos" accesskey="a" class="position-fixed" title="Consultar atalhos de acessibilidade" style="opacity: 0; top: -60px;">Para consultar os atalhos de acessibilidade pressione a qualquer momento Alt mais a.</a> 
               <div class="btn-group">
                 <div class="dropdown-menu card-theme theme dropdown-menu-right" id="painelnot" style="top:100px; width: 320px; overflow-x: auto; max-height: 350px; overflow-y: hidden;">
                     <table class="mx-auto"> 

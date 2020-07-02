@@ -49,7 +49,7 @@
 	     			?>
 					<div class='mx-auto mb-5' role='alert' id='notificationdiv'>
 						<!-- Botão para acionar modal -->
-						<button type="submit" class="btn btn-warning mx-auto" id="" style="width:100%;"  data-toggle="modal" data-target="#ExemploModalCentralizado">Notifique-me!</button>
+						<button type="submit" class="btn btn-warning mx-auto" id="stopButton" style="width:100%;" onclick="permission()" data-toggle="modal" data-target="#ExemploModalCentralizado">Notifique-me!</button>
 						
 						<!-- Modal -->
 						<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -67,15 +67,15 @@
 						        <div class="container usuario">
 				                    <div class="row align-items-center">
 					                    <div class="mx-auto">
-					                    	<form method="post" action="Raiz/notificacao">
-					                       		<input type="time" class="modal_input_time mx-auto" name="horario" value="<?php echo $this->session->userdata('horas').":".$this->session->userdata('minutos') ?>">
+					                    	<form method="post" action="">
+					                       		<input type="time" class="modal_input_time mx-auto" name="horario" id="inputhorario" value="<?php echo $this->session->userdata('horas').":".$this->session->userdata('minutos') ?>">
 					                    </div>
 				                	</div>
 				                </div>
 						      </div>
 						      <div class="modal-footer">
-						        <button type="submit" class="btn btn-secondary" value="desativar" name="btn">Desativar</button>
-						        <button type="submit" class="btn btn-warning" value="salvar" name="btn">Salvar horário</button>
+						        <button type="submit" class="btn btn-secondary" value="desativar" onclick="mainDesativar()" name="btn">Desativar</button>
+						        <button type="submit" class="btn btn-warning" value="salvar" name="btn" onclick="main()">Salvar horário</button>
 						        </form>
 						      </div>
 						    </div>
@@ -151,14 +151,20 @@
 			localStorage.setItem('horas', "<?php echo $this->session->userdata('horas'); ?>");
 			localStorage.setItem('minutos', "<?php echo $this->session->userdata('minutos'); ?>");
 		</script>
+		<!-- <script src="<?= base_url()?>assets/js/horario.js"></script> -->
 	<?php 
 		}else{
 	?>
-		<script> localStorage.setItem('estado', "desativada"); </script>
+		<script> localStorage.setItem('estado', "desativada"); 
+            var req = indexedDB.deleteDatabase("horario");
+			req.onsuccess = function () {
+			    console.log("Deleted database successfully");
+			};
+		</script>
+
 	<?php 
 		}	
 	?>
-	<script src="<?= base_url()?>assets/js/notification.js"></script><!--Importação do JS do menu...-->
 	<script>
 		var data = new Date();
 		var dia  = data.getDate();
@@ -169,5 +175,25 @@
 			$('#alterarmetatitulo').html('Você não pode mais alterar a meta do mês!');
 		}
    		var atual ="Metas";
+   		$("#inputhorario").change(function () {
+		    //console.log(str);
+		    var valorHora = $("#inputhorario").val()
+			console.log(valorHora);
+			$.ajax({
+	            url: "<?php echo base_url(); ?>Raiz/notificacao",
+	            type: "POST",
+	            data: {valorHora: valorHora},
+	            success: function(result){
+	            	localStorage.setItem('estado', "ativada");
+					localStorage.setItem('horas', JSON.parse(result).horas);
+					localStorage.setItem('minutos', JSON.parse(result).minutos);
+					console.log("Sessão alterada")
+		        },
+		        error: function(){
+		            console.log('Error');
+		        }
+	        });
+		}).change();
 	</script>
+	<script src="<?= base_url()?>assets/js/index.js"></script>
 	

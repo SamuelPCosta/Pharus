@@ -17,13 +17,14 @@
 		background-color: #eeeeee !important;
 		box-shadow: none;
 	}
-	h2{
+	.container-simulador h2{
 		font-family: 'Open Sans', sans-serif !important;
 		color: #222;
 		margin: 5px 0px 10px 50px;
 		display: inline-block;
 		font-weight: 100;
 		font-size: 2em;
+		width: 100% !important;
 	}
 	.personalizados{
 		font-family: 'Open Sans', sans-serif !important;
@@ -59,6 +60,9 @@
 	}
 	.recolher{animation: recolher 0.5s;-webkit-animation-fill-mode: forwards;/*animation-timing-function: linear;*/}
 	@media(max-width:1200px){
+		h2, input.personalizados{
+			font-size: 1.5em!important;
+		}
 		table{
 			margin-left: auto!important;
 			margin-right: auto!important;

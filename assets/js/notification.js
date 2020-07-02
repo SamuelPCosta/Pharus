@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', function(){
-	if(Notification.permission !== 'granted')
-		Notification.requestPermission();
-});
-
 function notifyMe(icon, title, mensagem, link){
 	if(!Notification){
 		alert('O navegador que você está utilizando não conseguiu exibir a notificação. Tente acessar com outro navegador');
@@ -11,6 +6,7 @@ function notifyMe(icon, title, mensagem, link){
 
 	if(Notification.permission !== "granted"){
 		Notification.requestPermission();
+
 	}else{
 		var notification = new Notification(title, {
 			icon: icon,
@@ -23,7 +19,7 @@ function notifyMe(icon, title, mensagem, link){
 		};
 	}
 }
-
+	//console.log('notificacaoScript');
 	var icon = 'http://localhost/pharus/assets/img/logo2.png';
 	var title = 'O seu consumo hoje ultrapssou o limite!';
 	var mensagem = 'Clique aqui para mais informações.';

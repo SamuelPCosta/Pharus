@@ -54,8 +54,8 @@
 				}
 			</style>
 			<div class="container first-container usuario" style="display: flex; flex-direction: column; justify-content: center; min-height: calc(100vh - 78px);">
-				<h2 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme">Entre em contato</h2>
-				<div class="card py-5 px-5 my-4 shadow card-theme">
+				<h2 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme" style="width: 100%!important">Entre em contato</h2>
+				<div class="card py-5 px-5 my-4 shadow card-theme area-mensagem">
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">
 							<form id="suporte">
@@ -71,14 +71,14 @@
 										<div class="rounded-pill px-4 py-2 shadow-sm card-theme card theme" style="width: fit-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
 									</div>
 
-									<input type="" name="" class="rounded-pill card-theme theme shadow-sm border-0 pl-4 py-2 inputmensagem" placeholder="Digite aqui sua mensagem..." autofocus style="width: calc(100% - 55px); border-left: 4px solid #ffc107!important;">
+									<input type="" name="" class="rounded-pill card-theme theme shadow-sm border-0 pl-4 py-2 inputmensagem" placeholder="Digite aqui sua mensagem..." autofocus spellcheck="true" style="width: calc(100% - 55px); border-left: 4px solid #ffc107!important;">
 									<button class="rounded-circle theme shadow-sm" style="width: 45px; height: 45px"><i class="fas fa-paper-plane"></i></button>
 								</div>
 							</form>
 						</div>
 					</div>
 				</div>
-				<h2 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme">Perguntas Frequentes</h2>
+				<h2 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme" style="width: 100%!important">Perguntas Frequentes</h2>
 				<div onclick="expandirResp(1)" class="faq card py-4 px-5 mt-4 shadow card-theme">
 					<span class="theme">Pergunta tal?</span>
 				</div>
@@ -122,4 +122,11 @@
 				$(".resposta"+pergunta).removeClass('inativo');
 				$(".resposta"+pergunta).addClass('expandir');
 			}
+
+			$(document).mouseup(function(e){
+			    var area = $(".area-mensagem");
+			    area.click(function(){
+					$("input").focus();
+				});  
+			});
 		</script>

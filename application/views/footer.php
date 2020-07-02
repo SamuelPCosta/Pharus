@@ -3,7 +3,7 @@
   <!-- Footer Links -->
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3 card-theme"><!--©--> Pharus <?php echo date('Y') ?> -
-    <a href="quemsomos" class="theme">Quem Somos</a> -
+    <a href="quemsomos" class="theme">Quem Somos</a> - <wbr>
     <a href="parceiros" class="theme">Parceiros</a> -
     <a href="contato" class="theme">Contato e FAQ</a>
   </div>
@@ -22,6 +22,7 @@
 	<script src="<?= base_url()?>assets/js/jquery.easypiechart.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Importação de sweetalert-->
 	<script src="dist/sweetalert.min.js"></script>
+	<script src="<?= base_url()?>assets/js/notification.js"></script>
 		<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	Optional: include a polyfill for ES6 Promises for IE11 and Android browser
 	<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>

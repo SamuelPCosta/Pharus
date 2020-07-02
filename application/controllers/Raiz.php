@@ -256,20 +256,23 @@ class Raiz extends CI_Controller {
 	}
 
 	public function notificacao(){
-		if ($_POST["btn"]=="salvar") {
-			$horario = $this->input->post("horario"); //Recebe horario inserido
+		// if ($_POST["btn"]=="salvar") {
+			$horario = $this->input->post("valorHora"); //Recebe horario inserido
 			$horas = substr($horario, 0, 2); //Quebra em horas
 			$minutos = substr($horario, 3, 2); //E em minutos
 			$this->session->set_userdata('horas', $horas);
 			$this->session->set_userdata('minutos', $minutos);
 			$this->session->set_userdata('notificacao', 'Ativada'); 
+			$horarioDefinido['horas'] = $horas;
+			$horarioDefinido['minutos'] = $minutos;
+			echo json_encode($horarioDefinido);
 			//Salva em session o que vai definir ao final da view se a notificacao esta ativa ou nao
 			//Nesse caso ela sera ativada
-		}else{
-			unset($_SESSION['notificacao']);
+		// }else{
+		// 	unset($_SESSION['notificacao']);
 			//Destruindo essa sesseion nos desativamos a notificacao
-		}	
-		redirect('metas');
+		// }	
+		// redirect('metas');
 	}
 
 	public function idealdeconsumo(){
