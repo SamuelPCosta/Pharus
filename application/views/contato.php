@@ -1,4 +1,7 @@
 			<style type="text/css">
+				.bg-dark a{
+					color: #ffc107
+				}
 				.enviado{
 					margin-right: 100px;
 					//background-color: #0099dd;
@@ -80,34 +83,46 @@
 				</div>
 				<h2 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme" style="width: 100%!important">Perguntas Frequentes</h2>
 				<div onclick="expandirResp(1)" class="faq card py-4 px-5 mt-4 shadow card-theme">
-					<span class="theme">Pergunta tal?</span>
+					<span class="theme">Como posso saber se meu consumo está sendo maior do que o normal?</span>
 				</div>
 				<div class="card py-4 px-5 shadow card-theme repsostasfaq text-justify resposta1 bg-light inativo">
-					<span class="theme">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</span>
+					<span class="theme">O sistema Pharus conta com a ferramenta ideal de consumo, onde o usuário pode colocar informações relativas a seu consumo de energia e ter como resposta seu consumo ideal.<br>Veja em: <a href="idealdeconsumo">Ideal de consumo</a></span>
 				</div>
 				<div onclick="expandirResp(2)" class="faq card py-4 px-5 mt-2 shadow card-theme">
-					<span class="theme">Pergunta tal2?</span>
+					<span class="theme">Como posso saber se ultrapassei minha meta de consumo diário?</span>
 				</div>
 				<div class="card py-4 px-5 shadow card-theme repsostasfaq text-justify resposta2 bg-light inativo">
-					<span class="theme">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+					<span class="theme">Quando o usuário ultrapassa sua meta de consumo diário o sistema Pharus o informa a partir de uma notificação em seu histórico e no sininho, além do mais o seu gráfico de consumo ficará vermelho.<br>Veja em: <a href="consumo">Consumo</a></span>
 				</div>
 				<div onclick="expandirResp(3)" class="faq card py-4 px-5 mt-2 shadow card-theme">
-					<span class="theme">Pergunta tal3?</span>
+					<span class="theme">Como posso diminuir meu consumo de energia?</span>
 				</div>
 				<div class="card py-4 px-5 shadow card-theme repsostasfaq text-justify resposta3 bg-light inativo">
-					<span class="theme">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+					<span class="theme">A partir das dicas oferecidas pelo sistema Pharus o usuário pode encontrar informações sobre como diminuir seu consumo de energia.<br>Veja em: <a href="dicas">Dicas</a></span>
 				</div>
 				<div onclick="expandirResp(4)" class="faq card py-4 px-5 mt-2 shadow card-theme">
-					<span class="theme">Pergunta tal4?</span>
+					<span class="theme">Como posso saber o quanto de energia eu venho gastado?</span>
 				</div>
 				<div class="card py-4 px-5 shadow card-theme repsostasfaq text-justify resposta4 bg-light inativo">
-					<span class="theme">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+					<span class="theme">Além da opção de ver seu consumo diário na própria “Home” do site, você também pode verificar o quanto você gasta na aba “Consumo”.<br>Veja em: <a href="consumo">Consumo</a></span>
 				</div>
 				<div onclick="expandirResp(5)" class="faq card py-4 px-5 mt-2 shadow card-theme">
-					<span class="theme">Pergunta tal5?</span>
+					<span class="theme">Como posso editar meus dados pessoais?</span>
 				</div>
 				<div class="card py-4 px-5 shadow card-theme repsostasfaq text-justify resposta5 bg-light inativo">
-					<span class="theme">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+					<span class="theme">Você pode editar seus dados clicando no seu nome ao acessar sua conta no sistema Pharus.<br>Veja em: <a href="usuario">Usuário</a></span>
+				</div>
+				<div onclick="expandirResp(6)" class="faq card py-4 px-5 mt-2 shadow card-theme">
+					<span class="theme">Como posso editar minha senha?</span>
+				</div>
+				<div class="card py-4 px-5 shadow card-theme repsostasfaq text-justify resposta6 bg-light inativo">
+					<span class="theme">A partir da opção “Esqueci minha senha” na tela de login do site, para isso você apenas necessitará informar o email cadastrado em sua conta.<br>Veja em: <a href="editar-senha">Editar senha</a></span>
+				</div>
+				<div onclick="expandirResp(7)" class="faq card py-4 px-5 mt-2 shadow card-theme">
+					<span class="theme">Como saber qual a minha distribuidora de energia?</span>
+				</div>
+				<div class="card py-4 px-5 shadow card-theme repsostasfaq text-justify resposta7 bg-light inativo">
+					<span class="theme">Você pode checar a sua distribuidora em sua conta de energia e vinculá-la à sua conta em dados do usuário.<br>Vincule acessando: <a href="usuario">Usuário</a></span>
 				</div>
 				<br><br>
 			</div>

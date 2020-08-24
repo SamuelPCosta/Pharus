@@ -6,16 +6,16 @@
 	        			<p class="text-justify theme">O projeto Pharus, é um trabalho que faz parte do Projeto Integrador realizado por estudantes do 3° ano de informática para internet do IFRN Campus Natal - Zona Norte.</p>
 		     		</div>
 		     		<div class="col-lg-6 col-md-12">
-		     			<img src="<?= base_url()?>assets/img/logo.png" class="my-5">
+		     			<img src="<?= base_url()?>assets/img/quemsomos.png" class="my-5">
 		     		</div>
 		     	</div>
 		     	<div class="row align-items-center featurette">
 		     		<div class="col-lg-6 col-md-12 float-left order-lg-2 theme">
-		     			<h1 class="text-lg-right featurette-heading text-center theme">O que fizemos?</h1>
+		     			<a href="galeria"><h1 class="text-lg-right featurette-heading text-center theme">O que fizemos?</h1></a>
 	        			<p class="lead text-justify">Os compenentes estudaram juntos na mesma sala e cada um teve a sua participação no projeto, sendo pelo back-end ou front-end. O projeto irá ser finalizado até o final do quarto bimestre do ano de 2019. Várias pesquisas e entrevistas foram feitas para que houvesse as informações e o conhecimento necessário para o funcionamento do sistema.</p>
 		     		</div>
 		     		<div class="col-lg-6 col-md-12 order-lg-1 text-center">
-		     			<img src="<?= base_url()?>assets/img/logo.png" class="featurette-image img-fluid mx-auto my-5">
+		     			<img src="<?= base_url()?>assets/img/oquefizemos.png" class="featurette-image img-fluid mx-auto my-5 rounded-circle">
 		     		</div>
 		     	</div>
 		     	<div class="row align-items-center">
@@ -34,7 +34,7 @@
 						</ul>
 		     		</div>
 		     		<div class="col-lg-6 col-md-12">
-		     			<img src="<?= base_url()?>assets/img/logo.png" class="my-5">
+		     			<img src="<?= base_url()?>assets/img/linguagens.png" class="my-5">
 		     		</div>
 	     		</div>
 	     	</div>
@@ -45,9 +45,9 @@
 		     		</div>
 					<div class="col-lg-4 col-md-6 my-2 text-center anime">
 						<div class="rounded-circle mx-auto d-table">
-							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
+							<img src="<?= base_url()?>assets/img/gabriel.png" class="my-2 componentes rounded-circle">
 						</div>
-						<h4 class="py-3 theme">Gabriel dos Santos<br><span style="font-size: 0.75em">Elaboração de textos; <br>Desenvolvedor de funcionalidades;</span></h4>
+						<h4 class="py-3 theme">Gabriel dos Santos<br><br><span style="font-size: 0.75em">Desenvolvimento de funcionalidades; <br>Documentação do projeto; <br>Elaboração textual.</span></h4>
 					</div><!-- /.col-lg-4 -->
 					<!-- <div class="col-lg-3 col-md-6 my-2 text-center anime">
 						<div class="rounded-circle mx-auto d-table">
@@ -57,15 +57,15 @@
 					</div>/.col-lg-4 -->
 					<div class="col-lg-4 col-md-6 my-2 text-center animeRight">
 						<div class="rounded-circle mx-auto d-table">
-							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
+							<img src="<?= base_url()?>assets/img/keliane.png" class="my-2 componentes rounded-circle">
 						</div>
-						<h4 class="py-3 theme">Keliane da Silva<br><span style="font-size: 0.75em">Design e Apresentação do site;<br>Documentação do projeto;</span></h4>
+						<h4 class="py-3 theme">Keliane da Silva<br><br><span style="font-size: 0.75em">Desenvolvimento de funcionalidades; <br>Documentação do projeto; <br>Design e apresentação</span></h4>
 					</div><!-- /.col-lg-4 -->
 					<div class="col-lg-4 col-md-6 my-2 text-center animeRight">
 						<div class="rounded-circle mx-auto d-table">
-							<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 componentes rounded-circle">
+							<img src="<?= base_url()?>assets/img/samuel.png" class="my-2 componentes rounded-circle">
 						</div>
-						<h4 class="py-3 theme">Samuel Costa<br><span style="font-size: 0.75em">Programador das funções;<br>Desenvolvedor de funcionalidades;</span></h4>
+						<h4 class="py-3 theme">Samuel Costa<br><br><span style="font-size: 0.75em">Desenvolvimento de funcionalidades;<br>Programador das funções;<br>Ilustrações e design.</span></h4>
 					</div><!-- /.col-lg-4 -->
 				</div><!-- /.row -->
 			</div>

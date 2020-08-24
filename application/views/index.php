@@ -92,21 +92,21 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<a href="visaogeral#">
-									<img src="<?= base_url()?>assets/img/seedling.png" class="rounded-circle" width=200>
-									<h4 class="py-3 theme">Opção #01</h4>
+								<a href="Raiz/abrirItem/1">
+									<img src="<?= base_url()?>assets/img/steps.png" class="rounded-circle" width=200>
+									<h4 class="py-3 theme">Primeiros passos</h4>
 								<a>
 							</div><!-- /.col-lg-4 -->
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<a href="visaogeral#">
-									<img src="<?= base_url()?>assets/img/plug.png" class="rounded-circle" width=200>
+								<a href="Raiz/abrirItem/2">
+									<img src="<?= base_url()?>assets/img/tachometer.png" class="rounded-circle" width=200>
 									<h4 class="py-3 theme">Maneire seu Consumo</h4>
 									<a>
 							</div><!-- /.col-lg-4 -->
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<a href="visaogeral#">
-									<img src="<?= base_url()?>assets/img/power-off.png" class="rounded-circle" width=200>
-									<h4 class="py-3 theme">Primeiros passos</h4>
+								<a href="Raiz/abrirItem/3">
+									<img src="<?= base_url()?>assets/img/hands.png" class="rounded-circle" width=200>
+									<h4 class="py-3 theme">É com você</h4>
 								<a>
 							</div><!-- /.col-lg-4 -->
 						</div>

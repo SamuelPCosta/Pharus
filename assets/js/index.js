@@ -10,13 +10,15 @@ const check = () => {
 horas = 0;
 minutos = 0;
 
-function start(){
+function start(freq){
+  var estadoNotificacao = localStorage.getItem('estadonotificacao')
+  if (estadoNotificacao=="ativada") {
    let context,
    oscillator,
    contextGain,
    x = 1,
    type = 'sine',
-   frequency = 440.0;
+   frequency = freq;
    context = new AudioContext();
    oscillator = context.createOscillator();
    contextGain = context.createGain();
@@ -28,11 +30,23 @@ function start(){
    contextGain.gain.exponentialRampToValueAtTime(
      0.0002, context.currentTime + x
    )
+  }
+}
+
+function tocarnota1(){
+  var freq = 440
+  start(freq)
+}
+
+function tocarnota2(){
+  var freq = 528
+  start(freq)
 }
 
 const swListenerSound = new BroadcastChannel('swListenerSound');
 swListenerSound.onmessage = function(e) {
-  start()
+  tocarnota1()
+  setTimeout(function(){tocarnota2()}, 200);
 };
 
 // const swListenerMinutos = new BroadcastChannel('swListenerMinutos');
@@ -44,6 +58,10 @@ async function unregisterServiceWorker(){
   navigator.serviceWorker.getRegistrations().then(function(registrations) {
   for(let registration of registrations) {
       registration.unregister()
+      var req = indexedDB.deleteDatabase("horario");
+      req.onsuccess = function () {
+        console.log("Deleted database successfully");
+      };
   }}).catch(function(err) {
       console.log('Service Worker registration failed: ', err);
   });
@@ -58,7 +76,9 @@ async function registerServiceWorker(){
   // });
   const swRegistration = navigator.serviceWorker.register('assets/js/sw.js')
     .then(sw => {
-        //Agenda uma futura notificação
+        // //Agenda uma futura notificação
+        //  setTimeout(function(){ 
+        //  console.log("sw was created");}, 1000);
         sw.active.postMessage({
             hora: horas,
             minuto: minutos
@@ -102,14 +122,17 @@ const main = async () => {
   setTimeout(function(){ 
   check();}, 1000);
   const permission = await requestNotificationPermission();
-  var swRegistration = await registerServiceWorker();
   var delayHorario = await delay();
-  var swRegistration2 = await registerServiceWorker();
+  var swRegistration = await registerServiceWorker();
+  //setTimeout(function(){console.log("sw was created");}, 2000);
+  var swRegistration2 = registerServiceWorker();
+  localStorage.setItem('estadonotificacao', "ativada")
 };
 // main(); we will not call main in the beginning.
 
 const mainDesativar = async () => {
   const swUnregistration = await unregisterServiceWorker();
+  localStorage.setItem('estadonotificacao', "desativada")
 };
 // main(); we will not call main in the beginning.
 

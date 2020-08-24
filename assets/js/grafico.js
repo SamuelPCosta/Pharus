@@ -5,6 +5,7 @@ var numeros = new Array();
 for(var h=0; h <= hora; h++){//Passando o limite como uma variável com o numero de horas 
     numeros[h] = h;
 }
+if (typeof Chart !== 'undefined') {
 if (nightModeStorage) {
   Chart.defaults.global.defaultFontColor = 'white';
 }else{
@@ -160,3 +161,4 @@ $("#hide").click(function(e) {
       return
     } 
 });
+}

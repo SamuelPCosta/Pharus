@@ -120,8 +120,8 @@
                     if (!isset($_SESSION['premium'])){
                         //CONFERIRI SE O USUÁRIO É PREMIUM
                 ?>
-                <li id="Atualize" class="">
-                    <a href="atualize" class="sidebar-li-a text-dark"><i class="fas fa-award"></i>Atualize</a>
+                <li id="Apoie" class="">
+                    <a href="apoie" class="sidebar-li-a text-dark"><i class="fas fa-award"></i>Apoie</a>
                 </li>
                 <?php
                     }

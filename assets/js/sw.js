@@ -48,14 +48,14 @@ event.waitUntil(clients.matchAll({
 //   'horario.js'
 // ];
 
+function ativar(hora, minuto){
+  // read()
   var title = 'O seu consumo hoje ultrapssou o limite!';
   var options = {
-    body: 'Clique aqui para mais informações.',
+    body: 'Clique aqui para mais informações. - '+hora+':'+minuto,
     icon: 'http://localhost/pharus/assets/img/logo2.png',
-    badge: 'http://localhost/pharus/assets/img/logo2.png'
+    badge: 'http://localhost/pharus/assets/img/badge.png'
   };
-
-function ativar(hora, minuto){
   var timer = setInterval(function() {
   // const swListenerMinutos = new BroadcastChannel('swListenerMinutos');
   // swListenerMinutos.postMessage('This is From SW');
@@ -64,11 +64,10 @@ function ativar(hora, minuto){
   var minutoAtual = data.getMinutes();
   var estado = "ativada";
 
-  console.log('Hora: '+hora)
-  console.log('Minuto: '+minuto)
   if (estado=="ativada") {
     if (horaAtual==hora) {
       if(minutoAtual==minuto){
+        console.log('Hora: '+hora+' | Minuto: '+minuto)
         const swListenerSound = new BroadcastChannel('swListenerSound');
         swListenerSound.postMessage('Sound');
         var notificationPromise = self.registration.showNotification(title, options);
@@ -80,12 +79,81 @@ function ativar(hora, minuto){
   }, 10000);
 }
 
+function createDB(hora, minuto) {
+  var req = indexedDB.deleteDatabase("horario");
+  req.onsuccess = function () {
+    console.log("Deleted database successfully");
+  };
+    request = indexedDB.open("horario", 1);
+    const employeeData = [
+      { id: "horario", horas: hora, minutos: minuto},
+    ];
+    request.onerror = function(event) {
+      console.log("error: ");
+    };
+    request.onsuccess = function(event) {
+      db = request.result;
+      console.log("success: "+ db);
+    };
+    request.onupgradeneeded = function(event) {
+      var db = event.target.result;
+      var objectStore = db.createObjectStore("horario", {keyPath: "id"});
+      
+      for (var i in employeeData) {
+         objectStore.add(employeeData[i]);
+      }
+    }
+}
+
+function read() {
+  var request = indexedDB.open("horario", 2);
+  request.onsuccess = function(event) {
+    var db = request.target.result;
+    console.log("success: "+ db);
+  };
+  request.onerror = function(event) {
+    console.log("error: ");
+  };
+  
+  
+  // requestT.onsuccess = function(event) {
+  //   db = requestT.result;
+  //   displayData();
+  //   var transaction = db.transaction(["horario"], "readwrite");
+  //   var objectStore = transaction.objectStore("horario");
+  //   var request = objectStore.get("horario");
+  //   alert(request.result.horas);
+
+  //   request.onerror = function(event) {
+  //     alert("Unable to retrieve daa from database!");
+  //   };
+  //   request.onsuccess = function(event) {
+  //     if(request.result) {
+  //       console.log(request.result.horas);
+  //     }
+  //   };
+  // };
+  // requestT.onerror = function(event) {
+  //   console.log('va pra pqp')
+  //   as
+  // };
+}
+
 self.addEventListener('message', event => {
     var hora = event.data.hora
     var minuto = event.data.minuto
-    console.log(event.data.hora)
-    console.log(event.data.minuto)
+    // console.log(event.data.hora)
+    // console.log(event.data.minuto)
+    //criar indexedDB com hora e minuto e escrever ativar depois dessa função, ao inves de puxar por parametros puxara do indexedDb
+    //falta apenas ler os dados do indexeddb
+    createDB(hora, minuto)
+    // var request = db.transaction(["horario"],"readwrite").objectStore("horario").get(horario);
+    // request.onsuccess = function(event){
+    //     console.log("Hora : "+request.result.hora);    
+    // };
+    console.log('MensagemRecebida')
     ativar(hora, minuto)
+    // read()
     // switch (event.data.command) {
     //     case 'schedule':
     //         console.log('cogumelo')
@@ -95,7 +163,6 @@ self.addEventListener('message', event => {
     //         break;
     // }
 });
-
 // self.addEventListener("push", function(event) {
 //   if (event.data) {
 //     console.log("Push event!! ", event.data.text());

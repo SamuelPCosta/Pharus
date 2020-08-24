@@ -60,7 +60,9 @@ $(document).mouseup(function(e){
 //Marcador da sidebar e marcador das perguntas
 window.onload = function(){
   document.getElementById(atual).classList.add("atual");
-  document.getElementById(questao).classList.add("active");
+  if (typeof questao !== "undefined") {
+    document.getElementById(questao).classList.add("active");
+  }
 }
 
 /*###########Giro de imgs###########*/
@@ -75,7 +77,16 @@ function point(imagem, point, texto) {
   setTimeout(function(){ 
     $("#imagemdocirculo").removeClass('diagonal-enter-active'); 
     $("#imagemdocirculo2").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
-    $("#imagemdocirculo2").removeClass('diagonal-leave-active');}, 400);
+    $("#imagemdocirculo2").removeClass('diagonal-leave-active');}, 385);
+}
+
+function startpoint(imagem, point, texto) {
+  $("#imagemdocirculo2").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
+  $("#imagemdocirculo").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
+  $(".point").removeClass('imagematualdocirculo');
+  $("."+point).addClass('imagematualdocirculo');
+  $(".textogiro").removeClass('textodogirovisivel');
+  $("."+texto).addClass('textodogirovisivel');
 }
 
 function video(video, marcador) {

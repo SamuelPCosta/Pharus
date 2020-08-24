@@ -75,8 +75,8 @@
 						      </div>
 						      <div class="modal-footer">
 						        <button type="submit" class="btn btn-secondary" value="desativar" onclick="mainDesativar()" name="btn">Desativar</button>
-						        <button type="submit" class="btn btn-warning" value="salvar" name="btn" onclick="main()">Salvar horário</button>
 						        </form>
+						        <button type="submit" data-dismiss="modal" aria-label="Fechar" class="btn btn-warning" value="salvar" name="btn" id="salvarhorario" onclick="main()" disabled>Salvar horário</button>
 						      </div>
 						    </div>
 						  </div>
@@ -175,8 +175,11 @@
 			$('#alterarmetatitulo').html('Você não pode mais alterar a meta do mês!');
 		}
    		var atual ="Metas";
+   		var liberarbtn = 0
    		$("#inputhorario").change(function () {
 		    //console.log(str);
+		    $("#salvarhorario").attr('disabled', true);
+		    liberarbtn = liberarbtn+1;
 		    var valorHora = $("#inputhorario").val()
 			console.log(valorHora);
 			$.ajax({
@@ -193,6 +196,9 @@
 		            console.log('Error');
 		        }
 	        });
+	        if (liberarbtn>1) {
+				$("#salvarhorario").attr('disabled', false);
+			}
 		}).change();
 	</script>
 	<script src="<?= base_url()?>assets/js/index.js"></script>

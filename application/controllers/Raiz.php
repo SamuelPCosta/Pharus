@@ -63,16 +63,18 @@ class Raiz extends CI_Controller {
 
 		if ($consumoAtivo!=0) {
 			$ultimaAtualizacao = $this->inserirConsumoTotal();
-			$dia_de_hoje = date('m\/d\/Y');
+			$dia_de_hoje = date('Y\/m\/d');
 			// converte as datas para o formato timestamp
 			$d1 = strtotime($ultimaAtualizacao); 
 			$d2 = strtotime($dia_de_hoje);
 			//echo $dia_de_hoje;
 			// verifica a diferença em segundos entre as duas datas e divide pelo número de segundos que um dia possui
 			$dias = ($d2-$d1)/86400;
-			//echo $ultimaAtualizacao;
+			// echo $ultimaAtualizacao;
+			// echo "<br>".$dia_de_hoje;
+			// echo "<br>".($d2-$d1)/86400;
 			if ($dias>=1) {
-				if (date('d')>=2 && $dias>date('d')-1) {
+				if (date('d')>=2 && $dias>=date('d')-1) {
 					$this->Consumo_model->inserirConsumoTotal(0,$contaContrato);
 					$dias = date('d')-1;
 					$backupSimulador = $this->session->userdata('simulacaoBackup'.$contaContrato);
@@ -115,6 +117,20 @@ class Raiz extends CI_Controller {
 		$intervaloTempo = $this->Operacoes->intervaloTempo($contaContrato);
 		$ultimaAtualizacao = substr($intervaloTempo, 0, 10);
 		return $ultimaAtualizacao;
+	}
+
+	public function abrirItem($item){
+		if ($item==1) {
+			$img = 'primeirospassos';
+		}elseif ($item==2) {
+			$img = 'stop';
+		}else{
+			$img = 'comvoce';
+		}
+		$this->session->set_userdata('itemimg', $img);
+		$this->session->set_userdata('itempoint','point'.$item);
+		$this->session->set_userdata('itemtexto','texto'.$item);
+		redirect('visaogeral#'); 
 	}
 
 	public function visaogeral(){
@@ -310,14 +326,14 @@ class Raiz extends CI_Controller {
 		}
 	}
 
-	public function atualize(){
+	public function apoie(){
 		if ($this->session->userdata('premium')==TRUE) {
 			$this->notFound();
 		}else{
 			if (isset($_SESSION['login'])) {
 				$title['titulo'] ="Atualize sua conta";
 				$this->load->view('header_sidebar', $title);
-				$this->load->view('atualize');
+				$this->load->view('apoie');
 				$this->load->view('footer');
 			}else{
 				redirect('login?error=2'); 
@@ -459,7 +475,18 @@ class Raiz extends CI_Controller {
 		}
 	}
 
-		public function parceiros(){
+	public function galeria(){
+		if (isset($_SESSION['login'])) {
+			$title['titulo'] ="Galeria";
+			$this->load->view('header_sidebar', $title);
+			$this->load->view('galeria');
+			$this->load->view('footer');
+		}else{
+			redirect('login?error=2'); 
+		}
+	}
+
+	public function parceiros(){
 		if (isset($_SESSION['login'])) {
 			$title['titulo'] ="Nossos parceiros";
 			$this->load->view('header_sidebar', $title);

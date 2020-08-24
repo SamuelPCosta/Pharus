@@ -6,15 +6,15 @@
 		        		<div class="d-block section" style="height: 100px">
 			        		<div class="row pt-4 icones">
 				        		<div class="col-xl-2 col-lg-4 col pt-3 theme">
-				        			<a href="#" onclick="point('calendario', 'point1', 'texto1')" class="point point1 imagematualdocirculo"><i class="fas fa-seedling align-middle d-table-cell" style="font-size: 3em"></i>
+				        			<a href="#" onclick="point('primeirospassos', 'point1', 'texto1')" class="point point1 imagematualdocirculo"><i class="fas fa-shoe-prints align-middle d-table-cell" style="font-size: 3em"></i>
 				        			<br><br><br><i class="fas fa-circle align-middle d-table-cell pl-3 position-relative" style="top: -28px; z-index: 1"></i></a>
 				        		</div>
 				        		<div class="col-xl-2 col-lg-4 col pt-3 theme">
-				        			<a href="#" onclick="point('dicas', 'point2', 'texto2')" class="point point2"><i class="fas fa-plug align-middle d-table-cell" style="font-size: 3em"></i>
-				        			<br><br><br><i class="fas fa-circle align-middle d-table-cell pl-2 position-relative" style="top: -28px; z-index: 1"></i></a>
+				        			<a href="#" onclick="point('stop', 'point2', 'texto2')" class="point point2" style="margin-left: -3px"><i class="fas fa-tachometer-alt align-middle d-table-cell" style="font-size: 3em"></i>
+				        			<br><br><br><i class="fas fa-circle align-middle d-table-cell pl-3 position-relative" style="top: -28px; z-index: 1"></i></a>
 				        		</div>
 				        		<div class="col-xl-2 col-lg-4 col pt-3 theme">
-				        			<a href="#" onclick="point('interruptor', 'point3', 'texto3')" class="point point3"><i class="fas fa-power-off align-middle d-table-cell" style="font-size: 3em"></i>
+				        			<a href="#" onclick="point('comvoce', 'point3', 'texto3')" class="point point3"><i class="fas fa-handshake align-middle d-table-cell" style="font-size: 3em"></i>
 				        			<br><br><br><i class="fas fa-circle align-middle d-table-cell pl-3 position-relative" style="top: -28px; z-index: 1"></i></a>
 				        		</div>
 			        		</div>
@@ -26,8 +26,8 @@
 		        		<div class="col-xl-12" id="giroimagens">
 		        			<div class="float-right">
 				        		<div class="rounded-circle float-right card card-theme shadow" id="circulofixo" style="height: 600px; width: 600px; display: flex; border: 2px solid; top:-250px; margin-right: 0px">
-				        			<img src="<?= base_url()?>assets/img/calendario.png" class="position-relative float-right" id="imagemdocirculo" style="z-index: 1; height: 100%; width: 100%; animation-timing-function: linear;">
-				        			<img src="<?= base_url()?>assets/img/calendario.png" class="position-absolute float-right" id="imagemdocirculo2" style="z-index: 1; height: 100%; width: 100%; animation-timing-function: linear;">
+				        			<img src="<?= base_url()?>assets/img/primeirospassos.png" class="position-relative float-right" id="imagemdocirculo" style="z-index: 1; height: 100%; width: 100%; animation-timing-function: linear;">
+				        			<img src="<?= base_url()?>assets/img/primeirospassos.png" class="position-absolute float-right" id="imagemdocirculo2" style="z-index: 1; height: 100%; width: 100%; animation-timing-function: linear;">
 				        			<img src="<?= base_url()?>assets/img/circulomovimento.png" class="position-relative float-right cimg" id="circulomovimento" style="top: -596px; height: 100%; width: 100%">
 				        		</div>
 				        	</div>
@@ -88,7 +88,12 @@
 		<!--conteudo-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 	<!--Importação ajax-->
-	<?php $consumoPorHora = $this->session->userdata('consumo'); ?>
+	<?php $consumoPorHora = $this->session->userdata('consumo');?>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			startpoint('<?php echo $this->session->userdata('itemimg'); ?>', '<?php echo $this->session->userdata('itempoint'); ?>', '<?php echo $this->session->userdata('itemtexto'); ?>')
+		});
+	</script>
 	<script>
     var atual ="Home";
 	</script>
