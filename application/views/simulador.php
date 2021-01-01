@@ -101,7 +101,12 @@
 				<?php $cozinha = array('Exaustor','Freezer','Fogão Elétrico','Geladeira','Microondas','Lava-Louça','Liquidificador');
 				$quartosala = array('Ar-Condicionado','Computador','Estabilizador','Impressora','Televisão','Ventilador','Vídeogame');
 				$outros = array('Chuveiro Elétrico','Ferro Elétrico','Lâmpada Fluor.','Lâmpada Incan.','Lavadora','Secador');
-				if (empty($horassalvas)) {$horassalvas=null;}
+				if (empty($horassalvas)) {
+					for ($i=0; $i <30 ; $i++) { 
+						$horassalvas[$i]=0;
+					}
+					
+				}
 				if (isset($_SESSION['personalizados'])) {
 					$personalizados = $aparelhosPersonalizados;
 					if (empty($personalizados)){$personalizados=array('Aparelho 1', 'Aparelho 2', 'Aparelho 3', 'Aparelho 4', 'Aparelho 5', 'Aparelho 6');}

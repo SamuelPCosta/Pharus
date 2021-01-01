@@ -45,7 +45,7 @@ class Cadastro extends CI_Controller {
 					redirect('cadastro?error=3');	
 				}else{
 					$usuario = $this->input->post("usuario");
-					$this->inserirTarifa($usuario, $fornecedor);
+					$this->inserirTarifaDB($usuario, $fornecedor);
 					redirect('login');
 				}
 			}else{

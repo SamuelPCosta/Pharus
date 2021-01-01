@@ -30,7 +30,9 @@
 	text-align: center;
 	margin-top: 30px;
 }
-#meta input{
+
+
+/*#meta input{
 	height: 40px;
 	margin: 0 auto;
 	border: 1px solid #80808055;
@@ -38,14 +40,17 @@
 	display: block;
 	background-color: #ddd;
 	border-radius: 20px;
-}
-.bg-dark.text-white #meta input{
+}*/
+.text-white #meta input{
 	background-color: #464b51 !important;
 }
 .container-metas button{
 	margin-top: 10px;
 	height: 50px;
 }
+
+
+
 #primeirobutton{
 	width: 85%;
 	margin-bottom: 50px;
@@ -57,8 +62,11 @@
 	width: 60%;
 	text-align: center;
 	position: relative;
-	margin-top: 80px;
+	margin-top: 87px;
 	border-radius: 10px;
+}
+.inputmetadiv{
+	width: 60%!important;
 }
 #empresa{
 	display: block;
@@ -82,7 +90,7 @@
 }
 .valor{
 	margin: auto;
-	font-size: 3em;
+	font-size: 2.8em;
 	text-align: center;
 	line-height: 1.1em
 }
@@ -135,7 +143,7 @@ textarea:focus, input:focus, select:focus {
 }
 @media(max-width:768px) {
 	.colunas-meta h1,.container-metas h2, 
-	#meta input, #meta button, .instrucoes, 
+	.inputmetadiv, #meta button, .instrucoes, 
 	.alert-danger, #consumoideal, #notificationdiv{
 		width: 90% !important;
 	}

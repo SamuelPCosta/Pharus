@@ -78,7 +78,7 @@
 					?>
 					<div class="col-xl-6 col-lg-12 text">
 					<h1 class="mx-auto text-center animeRight theme card card-theme mb-5 py-2 shadow-sm" id="titulo_index">Novo aqui?</h1>
-					<p class="mx-auto animeRight theme">Seja bem vindo ao Pharus, <span class="text-capitalize"><?php echo $this->session->userdata('usuario');?></span>! Aqui você poderá gerenciar melhor o seu consumo de energia a partir de metas feitas por você mesmo e dicas que o ajudaram a saber como consumir energia de modo consciente, além disso você poderá ver seu desenvolvimento em tempo real. Comece clicando no botão abaixo!</p>
+					<p class="mx-auto animeRight theme">Seja bem vindo ao Pharus, <span class="text-capitalize"><?php echo $this->session->userdata('usuario')."!";?></span> Aqui você poderá gerenciar melhor o seu consumo de energia a partir de metas feitas por você mesmo e dicas que o ajudaram a saber como consumir energia de modo consciente, além disso você poderá ver seu desenvolvimento em tempo real. Comece clicando no botão abaixo!</p>
 					<a href="metas" class="btn btn-warning mx-auto py-3 position-relative d-block text-center animeRight" id="primeirobutton">Vamos definir uma meta para você!</a>
 					</div>
 					<?php
@@ -116,16 +116,24 @@
 			<div class="container">
 				<div class="row my-4">
 					<div class="col-xl-6 col-lg-12 colunas-home d-table">
-						<div class="d-table-cell align-middle">
-						<h2 class="text-center anime theme">Domicílio</h2><br>
-						<p class="anime theme mb-5">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
+						<a href="dicas">
+						<div class="card shadow card-theme card-colunas-home anime">
+							<div class="d-table-cell align-middle">
+							<h2 class="text-left ml-0 theme">Domicílio</h2><br>
+							<p class="theme mb-5">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
+							</div>
 						</div>
+						</a>
 					</div>
 					<div class="col-xl-6 col-lg-12 colunas-home d-table">
-						<div class="d-table-cell align-middle theme">
-						<h2 class="text-center animeRight theme">Empresa</h2><br>
-						<p class="animeRight mb-5">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
+						<a href="dicas">
+						<div class="card shadow card-theme card-colunas-home animeRight">
+							<div class="d-table-cell align-middle theme">
+							<h2 class="text-left ml-0 theme">Empresa</h2><br>
+							<p class="mb-5">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
+							</div>
 						</div>
+						</a>
 					</div>
 				</div>
 			</div>

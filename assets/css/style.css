@@ -65,6 +65,9 @@ tr.theme:hover{
 tr.theme.text-white:hover{
     background-color: #39444d;
 }
+.theme.text-white svg{
+    fill: #fff;
+}
 #wrapper {
     padding-left: 0;
     padding-top: 55px;
@@ -298,6 +301,10 @@ select.bg-dark2{
     width: 118vw;
     height: 118vh;
 }
+.btn-primary{
+    background-color: #3b94af !important;
+    border-color: #3b94af !important;   
+}
 @media(min-width:1200px) {
     .first-container {
         overflow:hidden;
@@ -378,10 +385,14 @@ select.bg-dark2{
         margin: auto;
     }
     .colunas-home{
-        padding: 60px 85px !important;
+        padding: 30px 42px !important;
     }
     .colunas-home p{
        /*width: 85% !important;*/
+    }
+    .card-colunas-home{
+        padding: 30px 45px !important;
+        color: black;
     }
     footer{
         /*z-index: 1!important;*/

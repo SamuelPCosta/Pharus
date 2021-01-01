@@ -7,7 +7,7 @@
     width: 85% !important;
     font-size: 2em;
 }
-.ideal .col-xl-6 h1 ~ p{ /*Estilização do paragrafo*/
+.ideal h1 ~ p{ /*Estilização do paragrafo*/
 	width: 85% !important;
 	margin: 0 auto;
 	text-align: justify;

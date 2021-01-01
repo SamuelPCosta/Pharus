@@ -22,6 +22,9 @@ class CadastroMeta extends CI_Controller {
 				$faixa = 300;
 			}
 			$limitePelaFaixa = $faixa+(40/100*$faixa);//Quantos % acima da faixa pode ser definido como meta para evitar trapaças
+			if ($faixa==NULL) {
+				$limitePelaFaixa=10000;
+			}
 			if ($meta<=$limitePelaFaixa){
 				$contaContrato = $this->Operacoes->contaContrato($usuario);
 				$this->load->model("Metas_model");

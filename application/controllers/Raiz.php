@@ -155,12 +155,17 @@ class Raiz extends CI_Controller {
 			$dados['meta'] = json_encode($this->Metas_model->get_kwh($dados['usuario']));
 			$this->load->model("Consumo_model");
 			$backupSimulador = $this->session->userdata('simulacaoBackup'.$dados['usuario']);
-			$consumoGrafico = array_sum(array_slice($backupSimulador, 0, date('H')));
-			$dados['meuconsumo'] = json_encode(number_format($this->Consumo_model->SelecionarConsumoTotal($dados['usuario'])+$consumoGrafico, 2));
+			if ($backupSimulador!=NULL) {
+				$consumoGrafico = array_sum(array_slice($backupSimulador, 0, date('H')));
+				$dados['meuconsumo'] = json_encode(number_format($this->Consumo_model->SelecionarConsumoTotal($dados['usuario'])+$consumoGrafico, 2));
+			}else{
+				$dados['meuconsumo'] = 0; 
+				//$dados['mediaFaixa'] = 0;
+			}
 			$this->load->model("Usuarios_model");
 			$dados['minhafaixa'] = $this->Usuarios_model->getFaixa($usuario);
-			$this->load->model("Consumo_model");
 			$dados['mediaFaixa'] = json_encode(number_format($this->Consumo_model->mediaFaixa($usuario,$dados['minhafaixa']), 2));
+			$this->load->model("Consumo_model");	
 			$title['titulo'] ="Consumo";
 			//echo $dados['mediaFaixa'];
 			$this->load->view('header_sidebar', $title);

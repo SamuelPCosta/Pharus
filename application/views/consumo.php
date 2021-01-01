@@ -2,7 +2,7 @@
 			<div class="container first-container my-3" id="containerconsumo">		
 		        <div class="my-4">
 		        	<h2 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme">Analise seu Consumo</h2>
-		        	<div class='alert card-theme card border-0 mx-auto' id="download-relatorio" role='alert'>
+		        	<div class='alert card-theme card border-0 mx-auto' id="download-relatorio" role='alert' style="border: 1px solid #89898944 !important;">
 		        	<a href="gerarPdf" onclick="avisopdf()" class="theme text-left">Clique aqui para baixar seu relatório mensal</a>
 		        	</div>
 		        	<div class='alert alert-danger bg-warning border-0 mx-auto' id="alerta-dica-chart" role='alert'>

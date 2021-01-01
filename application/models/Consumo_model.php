@@ -46,8 +46,12 @@ class Consumo_model extends CI_Model {
 	    $totalDiario=0;
 	    $inativos=0;
 	    $usuarioInativo=0;
-	    for ($i=0; $i <$nUsersFaixa ; $i++) { 
+	    for ($i=0; $i <$nUsersFaixa ; $i++){ 
 	    	$this->db->select('kw_h_total');
+			$this->db->where('usuario', $usuario);
+			$query = $this->db->get('consumo_mensal');
+	    	//$this->db->select('kw_h_total');
+	    	//Preciso pegar esse valor, mas n na tabela usuario
 
 	    	if($minhafaixa!=null) {
 	    		$this->db->where("usuario", $usuarios->result_array()[$i]['conta_contrato']);
@@ -74,9 +78,13 @@ class Consumo_model extends CI_Model {
 				$inativos=$inativos+$usuarioInativo;
 				//echo "<br>consumoTotal: ".$consumoTotal;
 				//echo "<br>".$total;
-	    	}else{return "-";}
+	    	}else{return 0;}
 	    }
-		$media = $total/($nUsersFaixa-$usuarioInativo);
+	    if ($nUsersFaixa-$usuarioInativo==0) {
+	    	$media = 0;
+	    }else{
+	    	$media = $total/($nUsersFaixa-$usuarioInativo);
+	    }
 	    return $media;
 	}
 }

@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/dicas.css"> <!--Importação da folha de estilo css para dicas-->
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/ideal.css"> <!--Importação da folha de estilo css para dicas-->
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/consumo.css"> <!--Importação da folha de estilo css para consumo-->
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/inputnumber.css"> <!--Importação da folha de estilo para o input-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!--Importação dos ícones utilizados-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
@@ -22,6 +23,7 @@
 	<!-- O comando base_url() é um atalho para o enderço da nossa base-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="<?= base_url()?>assets/js/jquery.maskMoney.js" type="text/javascript"></script>
+    <script src="<?= base_url()?>assets/js/scriptInputNumber.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="master bg-light">

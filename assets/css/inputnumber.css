@@ -1,0 +1,50 @@
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  margin: 0 auto;
+  background: #eaeaea;
+  border-radius: 25px;
+  padding: 0.5rem 0.4rem;
+}
+
+.quantity-control.theme.text-white {
+  background: #464b51;
+}
+
+.quantity-btn, .quantity-btn:focus{
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0px 8px;
+  cursor: pointer;
+  height: 26px!important;
+  border-radius: 30px;
+  margin-top: 0 !important;
+}
+.quantity-btn svg {
+  width: 15px;
+  height: 15px;
+}
+.quantity-input {
+  outline: none;
+  user-select: none;
+  text-align: center;
+  width:  fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+}
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-control .quantity-btn:active{
+  background: #3b94af33 !important;
+}
