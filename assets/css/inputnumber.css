@@ -33,6 +33,7 @@
   user-select: none;
   text-align: center;
   width:  fit-content;
+  min-width: 70px;
   display: flex;
   align-items: center;
   justify-content: center;

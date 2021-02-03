@@ -3,7 +3,7 @@
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">
 							<h2 class="theme px-5">Apoie o desenvolvimento</h2>
-							<p class="my-3 text-justify theme px-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+							<p class="my-3 text-justify theme px-5">Ajude o Pharus a se manter no ar! Para deixar um sistema no ar temos que pagar um domínio e uma hospedagem. Entre em contato com <br><br>ribeiro.santos@escolar.ifrn.edu.br,<br> keliane.martins@escolar.ifrn.edu.br ou <br>	 samuel.soares@escolar.ifrn.edu.br e <br> saiba como ajudar.</p>
 						</div>
 						<div class="vertical-line"></div>
 						<div class="col-xl col-md-12 mx-auto px-0">
@@ -27,7 +27,7 @@
 												</div>
 												<span>Contribuição:</span>
 												<div class="input-group mb-2">
-													<input type="number" min="5" max="100" step="5" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney dados_user border-0">
+													<input type="text" min="5" max="100" step="5" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney dados_user border-0">
 												</div>
 										</div>
 												<div class="d-flex justify-content-center mt-3 login_container my-3">

@@ -8,7 +8,7 @@
     font-size: 2em;
 }
 .ideal h1 ~ p{ /*Estilização do paragrafo*/
-	width: 85% !important;
+	width: 100% !important;
 	margin: 0 auto;
 	text-align: justify;
 	font-size: 1.4em;
@@ -108,11 +108,14 @@ input[type=radio]:checked + label .alternativas{
 	position: relative;
 }
 @media(max-width:768px) {
-	.ideal h1, .ideal p, .pergunta, .resultado, .alternativas{
-		width: 90% !important;
+	.pergunta, .alternativas{
+		width: 130% !important;
+	}
+	.ideal h1, .resultado{
+		width: 100% !important;
 	}
 	.pergunta, .alternativas{
-		margin-left: 5% !important;
+		margin-left: -15% !important;
 	}
 	.ideal h1{
 		font-size: 2em

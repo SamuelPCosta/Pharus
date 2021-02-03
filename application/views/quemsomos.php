@@ -3,7 +3,7 @@
 		     		<div class="col-lg-6 col-md-12 float-left">
 		     			<br><br>
 		     			<h1 class="text-lg-left text-center theme">Quem somos?</h1>
-	        			<p class="text-justify theme">O projeto Pharus, é um trabalho que faz parte do Projeto Integrador realizado por estudantes do 3° ano de informática para internet do IFRN Campus Natal - Zona Norte.</p>
+	        			<p class="text-justify theme">O projeto Pharus foi o Projeto Integrador realizado por estudantes do 3° ano de informática para internet do IFRN Campus Natal - Zona Norte. Agora no 4° ano esses estudantes levaram o projeto a frente como Trabalho de Conclusão de Curso.</p>
 		     		</div>
 		     		<div class="col-lg-6 col-md-12">
 		     			<img src="<?= base_url()?>assets/img/quemsomos.png" class="my-5">
@@ -12,7 +12,7 @@
 		     	<div class="row align-items-center featurette">
 		     		<div class="col-lg-6 col-md-12 float-left order-lg-2 theme">
 		     			<a href="galeria"><h1 class="text-lg-right featurette-heading text-center theme">O que fizemos?</h1></a>
-	        			<p class="lead text-justify">Os compenentes estudaram juntos na mesma sala e cada um teve a sua participação no projeto, sendo pelo back-end ou front-end. O projeto irá ser finalizado até o final do quarto bimestre do ano de 2019. Várias pesquisas e entrevistas foram feitas para que houvesse as informações e o conhecimento necessário para o funcionamento do sistema.</p>
+	        			<p class="lead text-justify">Os compenentes estudam juntos e cada um teve a sua participação no projeto, sendo pelo back-end ou front-end.</p>
 		     		</div>
 		     		<div class="col-lg-6 col-md-12 order-lg-1 text-center">
 		     			<img src="<?= base_url()?>assets/img/oquefizemos.png" class="featurette-image img-fluid mx-auto my-5 rounded-circle">

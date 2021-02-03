@@ -6,17 +6,12 @@
 		        	<a href="gerarPdf" onclick="avisopdf()" class="theme text-left">Clique aqui para baixar seu relatório mensal</a>
 		        	</div>
 		        	<div class='alert alert-danger bg-warning border-0 mx-auto' id="alerta-dica-chart" role='alert'>
-		        	Se você ainda não foi classificado em uma faixa de <wbr>consumo descubra o seu <a href="idealdeconsumo" class="text-secondary">ideal de consumo.</a><wbr>
+		        	Descubra o seu <a href="idealdeconsumo" class="text-secondary">ideal de consumo.</a><wbr>
 		        	<span> Clique nas legendas dos dados <wbr>para alterar a visibilidade deles.</span>
 		        	<span class="float-right ml-4" id="hide" onclick="escoder()" style="cursor: pointer;">Ok</span><span class="float-right text-dark"><input type="checkbox" name="" id="del" class="mr-1"><label for="del">Não exibir novamente</label></span></div>
-		        <div class="row">
-		        	<div class="col-md-12 graficos">
-		        		<canvas id="line-chart" height="275"></canvas>
-		        	</div>
-		            <div class="col-md-12 graficos">
-		            	<canvas id="bar-chart" height="275"></canvas>
-		       		</div>
-		        </div>
+		        	
+		        	<canvas id="line-chart" height="275"></canvas>
+		            <canvas id="bar-chart" height="275"></canvas>
 		        <!--conteudo-->
 		    </div>
 </div>

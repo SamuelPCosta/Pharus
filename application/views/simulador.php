@@ -150,7 +150,7 @@
 							<ul class="col-xl col-md-12 mx-auto px-5 theme text-justify">
 								<li>Insira os valores correspondentes a quantas horas cada aparelho permanece ligado.</li>
 								<li>Estamos considerando uma potência média para cada aparelho.</li>
-								<li>Os dados ficam salvos para que você tenha um referencial futuro de sua última simulação.</li>
+								<li>Após a segunda simulação os dados ficam salvos para que você tenha um referencial futuro.</li>
 							</ul>
 						</div>
 						<div class="vertical-line" style="height: 150px!important"></div>

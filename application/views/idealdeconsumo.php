@@ -10,8 +10,8 @@
 					        	</h1><br>
 					        	<p class="theme mb-4">&emsp;&emsp;Aqui você tem acesso a um questionário simples onde suas respostas serão registradas e analisadas com os dados de outros usuários, gerando assim uma faixa de consumo <!-- que fará uma análise das respostas de outros usuários --> para podermos te dar um maior suporte a partir de possíveis soluções para seus problemas. Você pode conferir esses dados na página <i>Consumo.</i></p>
 						</div>
-						<div class="vertical-line"></div>
-						<div class="col-xl col-md-12 mx-auto px-0">
+						<!-- <div class="vertical-line"></div> -->
+						<div class="col-xl-7 col-md-12 mx-auto px-0">
 							<div class="col-md-12" id="questionario"><!--Div do questionário-->
 			     			<?php 
 			     				if (!isset($_GET['questao'])){

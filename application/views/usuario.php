@@ -39,7 +39,7 @@
 											<form method="post" action="cadastro/editarDados">
 												<span>Nome Completo:</span>
 												<div class="input-group mb-2">
-													<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user border-0 text-capitalize" placeholder="">
+													<input type="text" name="nome" disabled="disabled" value="<?php echo $nome ?>" class="form-control dados_user border-0 text-capitalize" placeholder="" style="color:#999!important;">
 												</div>
 												<span>Usuário:</span>
 												<div class="input-group mb-2">
@@ -49,7 +49,7 @@
 												if (isset($_GET['error'])){
 													if ($_GET['error']==1) {
 														?>
-														<div class='alert alert-danger' role='alert'>O nome de usuário<wbr>já existe!</div>
+														<div class='alert alert-danger' role='alert'>O nome de usuário <wbr>já existe!</div>
 															<?php
 														}
 													}
@@ -175,10 +175,10 @@
 									                    </button>
 									                  </div>
 									                  <div class="modal-body">
-									                  	<p class="text-justify">&emsp;O <span class="font-weight-bold">preço</span> ou <span class="font-weight-bold">tarifa por kWh</span> é o valor cobrado em reais a cada kWh (Quilowatt-hora) de energia consumida. Este valor está diretamente relacionado ao preço da sua conta ao final do mês. Essa taxa pode variar de cidade para cidade, ou até mesmo de bairro para bairro. Então, se você puder informar a tarifa de energia você terá uma maior precisão do controle dos seus gastos mensais. Esse valor encontra-se impresso na coluna 'preço (R$)', abaixo do título 'Descrição da nota fiscal' na sua conta. Caso não esteja com sua conta ou não tenha encontrado não se preocupe, nós utilizaremos uma média.</p>
-									                  	<div class="row">
+									                  	<p class="text-justify">&emsp;A <span class="font-weight-bold">tarifa por kWh</span> é o valor cobrado em reais a cada kWh (Quilowatt-hora) de energia consumida. Este valor está diretamente relacionado ao preço da sua conta ao final do mês. Essa taxa pode variar de cidade para cidade, ou até mesmo de bairro para bairro. Nós utilizamos uma taxa média para as distribuídoras média.</p>
+									                  	<!-- <div class="row">
 									                  		<img src="<?= base_url()?>assets/fotos/user_man.png" class="my-2 mx-auto" width='200'>
-									                  	</div>
+									                  	</div> -->
 									                  </div>
 									                  <div class="modal-footer">
 									                    <button type="button" class="btn btn-warning text-dark" data-dismiss="modal">Ok</button>

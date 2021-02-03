@@ -60,10 +60,10 @@ td:nth-child(1){
     min-width: 180px !important;
 }
 tr.theme:hover{
-    background-color: #f7da80;
+    background-color: #fff;
 }
 tr.theme.text-white:hover{
-    background-color: #39444d;
+    background-color: #343a40;
 }
 .theme.text-white svg{
     fill: #fff;
@@ -305,6 +305,15 @@ select.bg-dark2{
     background-color: #3b94af !important;
     border-color: #3b94af !important;   
 }
+.d-table-cell.align-middle{
+    padding: 15px; 
+}
+#pontosvisaogeral .d-table-cell.align-middle{
+    padding: 0px 15px; 
+}
+card-colunas-home .d-table-cell.align-middle{
+    color: black;
+}
 @media(min-width:1200px) {
     .first-container {
         overflow:hidden;
@@ -327,7 +336,7 @@ select.bg-dark2{
         width: 2px; 
         height: 400px; 
         background-color: #b5b5b5;
-        visibility: visible;    
+        visibility: visible;  
     }
     .last-container h2{
         text-align: right;
@@ -484,7 +493,7 @@ footer a:hover{
     opacity: 1;
     color: #fff !important
 }
-input[type="text"]:enabled , input[type="password"]:enabled, select{
+input[type="text"]:enabled, input[type="password"]:enabled, input[type="text"]:disabled, select{
     background: #f8f9fa;
     border: none;
     border-left: 4px solid #FFC107 !important;

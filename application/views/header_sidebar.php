@@ -30,16 +30,29 @@
 	<!-- Header -->
 	<header>
 		<nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0" id="header">
-			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" alt="Lôgo do sistema Farol aceso" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning" style="text-shadow: 0px 0px 1px #22242a">P</span>harus</h1></a> <!--Nossa Logo-->
+			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" alt="Lôgo do sistema Farol aceso" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
 			<a href="#menu-toggle" class="btn text-white text-dark sidebar-li-a position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
               <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;" onclick="animarNotificacao()" accesskey="n">
                 <div class="rounded-circle bg-warning position-fixed border border-dark" id="avisonotificacao" style="width: 12px; height: 12px; margin-left: 13px; margin-top: -2px"></div>
-                <i class="fas fa-bell"></i>
+                <i class="fas fa-exclamation-triangle"></i>
               </a>
               <a href="#atalhos" accesskey="a" class="position-fixed" title="Consultar atalhos de acessibilidade" style="opacity: 0; top: -60px;">Para consultar os atalhos de acessibilidade pressione a qualquer momento Alt mais a.</a> 
               <div class="btn-group">
-                <div class="dropdown-menu card-theme theme dropdown-menu-right" id="painelnot" style="top:100px; width: 320px; overflow-x: auto; max-height: 350px; overflow-y: hidden;">
+                <div class="dropdown-menu card-theme theme dropdown-menu-right" id="painelnot" style="top:100px; width: 320px; overflow-x: auto; max-height: 350px; overflow-y: hidden; border: 1px solid #ffc107;">
                     <table class="mx-auto"> 
+                        <tr class="dropdown-item theme di-1">
+                            <td class="py-2 theme text-center">Após testar as ferramentas <wbr>do nosso sistema responda<wbr>o formulário sobre qualidade,<wbr> usabilidade e eficácia do sistema.<wbr> Isso vai nos ajudar muito!
+                            <br><br>Clique abaixo e responda!
+                            </td>
+                        </tr>
+                        <tr class="theme" style="padding-left: 35px!important;">
+                            <td class="py-2" style="text-align: center; vertical-align:middle !important;">
+                            <a href="https://forms.gle/2EMtEji8vue3HWwWA" target="_blank">
+                                <div style="height:100%;width:90%; background-color: #ffc107; padding: 10px 10px; border-radius: 10px; margin: 0px auto!important; color: black;">
+                                    Responder formulário
+                                </div>
+                            </a></td>
+                        </tr><!-- 
                         <tr class="dropdown-item theme di-1 inativo">
                             <td class="py-2 theme">Seja bem vindo ao Pharus!</td>
                             <td class="text-secondary"> - </td>
@@ -79,7 +92,7 @@
                             <td class="py-2 theme">Seu consumo foi ótimo!</td>
                             <td class="text-secondary"> - </td>
                             <td class="text-secondary text-right">Há 7 dias</td>
-                        </tr>
+                        </tr> -->
                     </table>
               </div>
             </div>

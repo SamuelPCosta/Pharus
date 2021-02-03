@@ -55,8 +55,23 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="senha" class="form-control input_pass" value="" placeholder="Senha">
+							<input type="password" name="senha" id="senha" class="form-control input_pass" value="" placeholder="Senha">
+							<span style="position: absolute; right: 10px; top: 6px; color: #343a40bb; z-index: 10;"><i class="fas fa-eye" id="olho"></i></span>
 						</div>
+						<script type="text/javascript">
+							$("#olho").mousedown(function() {
+							  $("#senha").attr("type", "text");
+							});
+							$("#olho").mouseup(function() {
+							  $("#senha").attr("type", "password");
+							});
+							
+							$('#olho').bind('touchstart', function(){
+                                $("#senha").attr("type", "text");
+                            }).bind('touchend', function(){
+                                $("#senha").attr("type", "password");
+                            });
+						</script>
 				</div>
 					<div class="d-flex justify-content-center mt-3 login_container">
 						<button type="submit" name="button" class="btn btn-warning login_btn">Entrar</button>

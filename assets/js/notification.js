@@ -21,7 +21,7 @@ function notifyMe(icon, title, mensagem, link){
 }
 	//console.log('notificacaoScript');
 	var icon = 'http://localhost/pharus/assets/img/logo2.png';
-	var title = 'O seu consumo hoje ultrapssou o limite!';
+	var title = 'O seu consumo hoje ultrapassou o limite!';
 	var mensagem = 'Clique aqui para mais informações.';
 	var link = 'http://localhost/pharus/';
 

@@ -43,9 +43,9 @@
 		     					}
 		     				}else{
 			     				if ($meta==0) {
-			     					echo("Você ainda não tem uma meta de consumo até o final do mês. Para definir uma meta, preencha o campo seguinte e clique em <span class='font-italic'>'Salvar Meta'</span>.");
+			     					echo("Você ainda tem uma meta de consumo. Preencha o campo seguinte com o valor em reais que você deseja pagar na próxima conta de energia e clique em <span class='font-italic'>'Salvar Meta'</span>.");
 			     				}else{
-			     					echo("Você tem até o <span style='font-weight:bolder;'>quinto</span> dia do mês para editar sua meta. Para alterar o valor preencha o campo seguinte e clique em <span class='font-italic'>'Editar Meta'</span> ao lado.");
+			     					echo("Você tem até <span style='font-weight:bolder;'>cinco</span> dias para editar sua meta. Para alterar o valor preencha o campo seguinte e clique em <span class='font-italic'>'Editar Meta'</span> ao abaixo.");
 			     				}
 			     			}
 		     			?>
@@ -106,7 +106,7 @@
 								    <button type="button" onclick="minus()" class="quantity-btn theme" data-quantity-minus=""><svg viewBox="0 0 409.6 409.6">
 								            <path d="M392.533,187.733H17.067C7.641,187.733,0,195.374,0,204.8s7.641,17.067,17.067,17.067h375.467 c9.426,0,17.067-7.641,17.067-17.067S401.959,187.733,392.533,187.733z" />
 								      </svg></button>
-								    <input type="number" class="quantity-input theme" min="20" max="10000" name="meta" value="<?php echo $meta ?>" placeholder="Apenas números. Ex.: 90" data-quantity-target="">
+								    <input type="number" class="quantity-input theme" min="20" max="10000" name="meta" value="<?php echo $meta ?>" placeholder="números" data-quantity-target="">
 								    <button type="button" onclick="plus()" class="quantity-btn" data-quantity-plus=""><svg viewBox="0 0 426.66667 426.66667">
 								        <svg viewBox="0 0 426.66667 426.66667">
 	    								<path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0"></path></svg>
@@ -123,7 +123,7 @@
 								    <button type="button" onclick="minus()" class="quantity-btn theme" data-quantity-minus=""><svg viewBox="0 0 409.6 409.6">
 								            <path d="M392.533,187.733H17.067C7.641,187.733,0,195.374,0,204.8s7.641,17.067,17.067,17.067h375.467 c9.426,0,17.067-7.641,17.067-17.067S401.959,187.733,392.533,187.733z" />
 								      </svg></button>
-								    <input type="number" class="quantity-input theme" min="20" max="10000" name="meta" value="<?php echo $meta ?>" placeholder="Apenas números. Ex.: 90" data-quantity-target="">
+								    <input type="number" class="quantity-input theme" min="20" max="10000" name="meta" value="<?php echo $meta ?>" placeholder="números" data-quantity-target="">
 								    <button type="button" onclick="plus()" class="quantity-btn" data-quantity-plus=""><svg viewBox="0 0 426.66667 426.66667">
 								        <svg viewBox="0 0 426.66667 426.66667">
         								<path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0"></path></svg>

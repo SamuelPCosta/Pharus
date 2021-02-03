@@ -87,14 +87,29 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="senha" class="form-control input_pass" value="" placeholder="Senha (Min. 8 dígitos)" required>
+							<input type="password" name="senha" class="form-control input_pass" id="senha" value="" placeholder="Senha (Min. 8 car.)" required>
+							<span style="position: absolute; right: 10px; top: 6px; color: #343a40bb; z-index: 10;"><i class="fas fa-eye" id="olho"></i></span>
 						</div>
-						<div class="input-group mb-3">
+						<script type="text/javascript">
+							$("#olho").mousedown(function() {
+							  $("#senha").attr("type", "text");
+							});
+							$("#olho").mouseup(function() {
+							  $("#senha").attr("type", "password");
+							});
+							
+							$('#olho').bind('touchstart', function(){
+                                $("#senha").attr("type", "text");
+                            }).bind('touchend', function(){
+                                $("#senha").attr("type", "password");
+                            });
+						</script>
+						<!-- <div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
 							<input type="password" name="confirmar_senha" class="form-control input_pass" value="" placeholder="Confirmar senha" required>
-						</div>
+						</div> -->
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-map-marker-alt" style="padding: 0 2px"></i></span>
@@ -178,10 +193,11 @@
 									$.ajax({
 							            url: "<?php echo base_url(); ?>Cadastro/carregarfornecedores",
 							            type: "POST",
+							            dataType : "html",
 							            data: {estado: estado},
 							            success: function(result){
-							            console.log(JSON.parse(result));
-							            $('#distribuidor').html(JSON.parse(result));
+							            console.log(JSON.stringify(result));
+							            $('#distribuidor').html(JSON.stringify(result));
 								        },
 								        error: function(){
 								            console.log('Error');

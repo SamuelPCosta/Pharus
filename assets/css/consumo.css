@@ -86,6 +86,7 @@ h2.card-theme{
 @media(max-width: 1600px){
 	#bar-chart, #line-chart{
 		max-width: 85% !important;
+		margin: auto;
 	}
 	h2.card-theme{
 		width: 85% !important;
@@ -156,8 +157,8 @@ h2.card-theme{
 }
 @media(max-width: 768px){
 	#line-chart ,#bar-chart{
-        height: 310px !important;
-       	width: 120% !important;
+        /*height: 310px !important;*/
+       	width: 100% !important;
     }
     h2.card-theme{
 		border-left: 5px solid #ffc107;
