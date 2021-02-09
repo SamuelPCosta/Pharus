@@ -85,13 +85,15 @@ input[type=radio]:checked + label .alternativas{
 	color: #fff;
 }*/
 .page-item.active .page-link {
-    color: #464b51!important;
-    background-color: #ffc107!important;
+    color: #464b51;
+    background-color: #ffffff00!important;
     border-color: #ffc107!important;
 }
 .pagination>li>a, .pagination>li>span{
 	margin: 0 1px;
-	width: 38px;
+	width: 33px;
+	height: auto;
+	font-size: 0.8em;
 }
 .pergunta ~ form input{
 	display: none;
@@ -109,15 +111,31 @@ input[type=radio]:checked + label .alternativas{
 }
 @media(max-width:768px) {
 	.pergunta, .alternativas{
-		width: 130% !important;
+		width: 100% !important;
 	}
 	.ideal h1, .resultado{
 		width: 100% !important;
 	}
-	.pergunta, .alternativas{
+	/*.pergunta, .alternativas{
 		margin-left: -15% !important;
-	}
+	}*/
 	.ideal h1{
 		font-size: 2em
+	}
+	.ideal .card1{
+		padding: 2em!important;
+	}
+	.alternativa_a{
+		margin-left: 0% !important; 
+	}
+	.alternativa_c{
+		margin-left: 0% !important;
+	}
+	.txtresultados{
+		padding: 0px!important;
+		max-width: 500px!important;
+	}
+	.ideal{
+		min-height: 95vh;
 	}
 }

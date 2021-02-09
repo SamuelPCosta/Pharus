@@ -1,18 +1,18 @@
 			<div class="container first-container ideal">
-				<div class="card py-5 px-5 my-4 shadow card-theme">
+				<div class="card py-5 px-5 my-4 shadow card-theme card1">
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">
 				        	<h1 class="theme" style="font-size: 2.5em;">
 					        	<?php 
 					        		$faixa = $this->session->userdata('faixa');
-					        		if (isset($faixa)){echo "Seu ideal de consumo <br> é entre ".$this->session->userdata('faixa');}else{echo "Ideal de consumo <br>";}
+					        		if (isset($faixa)){echo "Seu ideal de consumo <br> é entre ".$this->session->userdata('faixa')." reais.";}else{echo "Ideal de consumo <br>";}
 					        	?>
 					        	</h1><br>
 					        	<p class="theme mb-4">&emsp;&emsp;Aqui você tem acesso a um questionário simples onde suas respostas serão registradas e analisadas com os dados de outros usuários, gerando assim uma faixa de consumo <!-- que fará uma análise das respostas de outros usuários --> para podermos te dar um maior suporte a partir de possíveis soluções para seus problemas. Você pode conferir esses dados na página <i>Consumo.</i></p>
 						</div>
 						<!-- <div class="vertical-line"></div> -->
-						<div class="col-xl-7 col-md-12 mx-auto px-0">
-							<div class="col-md-12" id="questionario"><!--Div do questionário-->
+						<div class="col-xl-7 col-md-12 mx-auto px-0 card2">
+							<div class="col-md-12 px-0" id="questionario"><!--Div do questionário-->
 			     			<?php 
 			     				if (!isset($_GET['questao'])){
 			     					$questao = 1;
@@ -94,7 +94,7 @@
 								}
 			     			?>
 			     			<nav aria-label="...">
-								<ul class="pagination justify-content-center my-3">
+								<ul class="pagination justify-content-center my-3" style="height: 35px">
 									<?php for ($i=1; $i <=9 ; $i++){//numero de questoes na paginacao ?>
 										<li class="page-item" id="questao<?php echo $i?>"><a class="text-center rounded-circle page-link nperguntas theme active"><?php echo $i; ?></a></li>
 									<?php }?>
@@ -138,6 +138,39 @@
 				</div>
 				</div>
 				<!--conteudo-->
+		<!-- Modal -->
+	<div class="modal fade show d-block" id="tipideal" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered tutorialdvi1" role="document">
+	  	<div class="rounded-circle card-theme theme tutorialdvi2"><div class="tutorialicone"><i class="fas fa-funnel-dollar mx-auto"></i></div></div>
+	    <div class="modal-content card-theme theme tutorialcontent">
+	      <div class="modal-header tutorialheader"><h3 class="modal-title text-uppercase tutorialtitle" id="TituloModal">Ideal de consumo</h3></div>
+	      <div class="modal-body text-center">
+	      	<p class="tutorialp">Responda as perguntas e veja o quanto você deveria gastar no mês com a conta de energia a partir do tempo que você passa usando determinados equipamentos eletrônicos.</p>
+	      </div>
+	      <div class="modal-footer tutorialfooter"><button class="btn btn-warning px-4 py-1" id="hidetipideal">Entendi</button></div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal-backdrop fade show" id="bg-dark"></div>
+	<script>
+		const tipideal = localStorage.getItem('tipideal')
+		if (tipideal) {
+		  $('#tipideal').removeClass('show');
+		  $('#tipideal').removeClass('d-block'); 
+		  $('#bg-dark').removeClass('show'); 
+		  $('#bg-dark').addClass('d-none');
+		  $('body').removeClass('modal-open');
+		}else{$('body').addClass('modal-open');}
+		$("#hidetipideal").click(function(e) {
+		  e.preventDefault();
+		    $('#tipideal').removeClass('show');
+		  	$('#tipideal').removeClass('d-block'); 
+		 	$('#bg-dark').removeClass('show'); 
+		  	$('#bg-dark').addClass('d-none');
+		  	$('body').removeClass('modal-open');
+		    localStorage.setItem('tipideal', true);
+		});
+	</script>
 	<?php 
 		if (isset($_GET['questao']) && $_GET['questao']>=2) {
 	?>

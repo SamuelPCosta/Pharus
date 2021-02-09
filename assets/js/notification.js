@@ -1,3 +1,7 @@
+function baseurl(){
+  var baseUrl = "http://localhost/pharus";
+  return baseUrl;
+}
 function notifyMe(icon, title, mensagem, link){
 	if(!Notification){
 		alert('O navegador que você está utilizando não conseguiu exibir a notificação. Tente acessar com outro navegador');
@@ -20,10 +24,10 @@ function notifyMe(icon, title, mensagem, link){
 	}
 }
 	//console.log('notificacaoScript');
-	var icon = 'http://localhost/pharus/assets/img/logo2.png';
+	var icon = baseurl()+'/assets/img/logo2.png';
 	var title = 'O seu consumo hoje ultrapassou o limite!';
 	var mensagem = 'Clique aqui para mais informações.';
-	var link = 'http://localhost/pharus/';
+	var link = baseurl();
 
 	var timer = setInterval(function() {
 	data=new Date();

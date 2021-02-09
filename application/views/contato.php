@@ -55,8 +55,17 @@
 				.repsostasfaq.bg-dark{
 					background-color: #464b51 !important;
 				}
+				.first-container.contato .card{
+				    margin-top: 10px!important;
+				}
+				@media(max-width:769px) {
+					.area-mensagem{
+						padding-right: 20px!important;
+						padding-left: 20px!important; 
+					}
+				}
 			</style>
-			<div class="container first-container usuario" style="display: flex; flex-direction: column; justify-content: center; min-height: calc(100vh - 78px);">
+			<div class="container first-container usuario contato" style="display: flex; flex-direction: column; justify-content: center; min-height: calc(100vh - 78px);">
 				<h2 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme" style="width: 100%!important">Entre em contato</h2>
 				<div class="card py-5 px-5 my-4 shadow card-theme area-mensagem">
 					<div class="row align-items-center">
@@ -101,7 +110,7 @@
 					<span class="theme">A partir das dicas oferecidas pelo sistema Pharus o usuário pode encontrar informações sobre como diminuir seu consumo de energia.<br>Veja em: <a href="dicas">Dicas</a></span>
 				</div>
 				<div onclick="expandirResp(4)" class="faq card py-4 px-5 mt-2 shadow card-theme">
-					<span class="theme">Como posso saber o quanto de energia eu venho gastado?</span>
+					<span class="theme">Como posso saber o quanto de energia eu venho gastando?</span>
 				</div>
 				<div class="card py-4 px-5 shadow card-theme repsostasfaq text-justify resposta4 bg-light inativo">
 					<span class="theme">Além da opção de ver seu consumo diário na própria “Home” do site, você também pode verificar o quanto você gasta na aba “Consumo”.<br>Veja em: <a href="consumo">Consumo</a></span>

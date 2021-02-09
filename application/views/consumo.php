@@ -2,8 +2,8 @@
 			<div class="container first-container my-3" id="containerconsumo">		
 		        <div class="my-4">
 		        	<h2 class="mt-4 mb-1 card text-lg-left text-center card-theme px-5 py-3 theme">Analise seu Consumo</h2>
-		        	<div class='alert card-theme card border-0 mx-auto' id="download-relatorio" role='alert' style="border: 1px solid #89898944 !important;">
-		        	<a href="gerarPdf" onclick="avisopdf()" class="theme text-left">Clique aqui para baixar seu relatório mensal</a>
+		        	<div class='alert card-theme card border-0 mx-auto' id="download-relatorio" role='alert' style="border: 1px solid #89898944 !important; margin-top: 0px!important">
+		        	<a href="gerarPdf" onclick="avisopdf()" class="theme text-left ">Clique para baixar seu relatório mensal</a>
 		        	</div>
 		        	<div class='alert alert-danger bg-warning border-0 mx-auto' id="alerta-dica-chart" role='alert'>
 		        	Descubra o seu <a href="idealdeconsumo" class="text-secondary">ideal de consumo.</a><wbr>
@@ -15,6 +15,39 @@
 		        <!--conteudo-->
 		    </div>
 </div>
+	<!-- Modal -->
+	<div class="modal fade show d-block" id="tipconsumo" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered tutorialdvi1" role="document">
+	  	<div class="rounded-circle card-theme theme tutorialdvi2"><div class="tutorialicone"><i class="fas fa-coins mx-auto"></i></div></div>
+	    <div class="modal-content card-theme theme tutorialcontent">
+	      <div class="modal-header tutorialheader"><h3 class="modal-title text-uppercase tutorialtitle" id="TituloModal">Consumo</h3></div>
+	      <div class="modal-body text-center">
+	      	<p class="tutorialp">Veja o quanto você tem consumido nos últimos dias em gráficos de linha e barra. Baixe o relatório mensal para ter tudo isso salvo em seu dispositivo.</p>
+	      </div>
+	      <div class="modal-footer tutorialfooter"><button class="btn btn-warning px-4 py-1" id="hidetipconsumo">Entendi</button></div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal-backdrop fade show" id="bg-dark"></div>
+	<script>
+		const tipconsumo = localStorage.getItem('tipconsumo')
+		if (tipconsumo) {
+		  $('#tipconsumo').removeClass('show');
+		  $('#tipconsumo').removeClass('d-block'); 
+		  $('#bg-dark').removeClass('show'); 
+		  $('#bg-dark').addClass('d-none');
+		  $('body').removeClass('modal-open');
+		}else{$('body').addClass('modal-open');}
+		$("#hidetipconsumo").click(function(e) {
+		  e.preventDefault();
+		    $('#tipconsumo').removeClass('show');
+		  	$('#tipconsumo').removeClass('d-block'); 
+		 	$('#bg-dark').removeClass('show'); 
+		  	$('#bg-dark').addClass('d-none');
+		  	$('body').removeClass('modal-open');
+		    localStorage.setItem('tipconsumo', true);
+		});
+	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 	<!--Importação ajax-->
 	<?php 

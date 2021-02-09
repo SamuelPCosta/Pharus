@@ -1,3 +1,7 @@
+function baseurl(){
+  var baseUrl = "http://localhost/pharus";
+  return baseUrl;
+}
 // urlB64ToUint8Array is a magic function that will encode the base64 public key
 // to Array buffer which is needed by the subscription option
 const urlB64ToUint8Array = base64String => {
@@ -14,7 +18,7 @@ const urlB64ToUint8Array = base64String => {
 };
 
 const saveSubscription = async subscription => {
-  const SERVER_URL = "http://localhost:4000/save-subscription";
+  const SERVER_URL = baseurl()+"/save-subscription";
   const response = await fetch(SERVER_URL, {
     method: "post",
     headers: {
@@ -40,7 +44,7 @@ event.waitUntil(clients.matchAll({
       return client.focus();
   }
   if (clients.openWindow)
-    return clients.openWindow('http://localhost/pharus/index');
+    return clients.openWindow(baseurl()+'/index');
 }));
 };
 // const filesToCache = [
@@ -53,8 +57,8 @@ function ativar(hora, minuto){
   var title = 'O seu consumo hoje ultrapssou o limite!';
   var options = {
     body: 'Clique aqui para mais informações. - '+hora+':'+minuto,
-    icon: 'http://localhost/pharus/assets/img/logo2.png',
-    badge: 'http://localhost/pharus/assets/img/badge.png'
+    icon: baseurl()+'/assets/img/logo2.png',
+    badge: baseurl()+'/assets/img/badge.png'
   };
   var timer = setInterval(function() {
   // const swListenerMinutos = new BroadcastChannel('swListenerMinutos');

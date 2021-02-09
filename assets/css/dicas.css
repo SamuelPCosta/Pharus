@@ -55,10 +55,10 @@
 @keyframes recarregar{
 	0% {transform: rotate(0deg);}
  	100% {transform: rotate(360deg);}
-}
+}/*
 .colunas p::first-letter{
  	font-size: 1.4em;
-}
+}*/
 @media(max-width:1200px) {
 	.a, .b{
 		margin-bottom: 25px

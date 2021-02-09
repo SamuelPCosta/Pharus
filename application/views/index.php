@@ -5,7 +5,7 @@
 			<?php
 				}
 			?>
-			<div class="container first-container">
+			<div class="container first-container home">
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-lg-12">
 						<div class="box">
@@ -57,7 +57,7 @@
 								}
 							}else{
 								?>
-								<div class="card py-5 px-0 shadow card-theme theme mx-auto mb-5 d-table anime" id="card-home">
+								<div class="py-5 px-0 mx-auto mb-5 d-table anime" id="card-home">
 									<img src="<?= base_url()?>assets/img/calendario.png" class="py-3 mx-auto d-table-cell align-middle" alt="ilustração de um calendário" width=80%>
 								</div><!--Usuário ainda n definiu uma meta para ele, logo não temos gráfico-->
 							<?php
@@ -85,6 +85,9 @@
 						}
 					?>
 				</div>
+				<?php
+					if (isset($gasto)) {
+				?>
 			</div>
 			<div class="container-fluid">
 				<!-- Three columns -->
@@ -93,20 +96,20 @@
 						<div class="row">
 							<div class="col-lg-4 my-2 text-center animeTop">
 								<a href="Raiz/abrirItem/1">
-									<img src="<?= base_url()?>assets/img/steps.png" class="rounded-circle" width=200>
-									<h4 class="py-3 theme">Primeiros passos</h4>
+									<img src="<?= base_url()?>assets/img/tachometer.png" class="rounded-circle" width=200>
+									<h4 class="py-3 theme">Maneire seu Consumo</h4>
 								<a>
 							</div><!-- /.col-lg-4 -->
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<a href="Raiz/abrirItem/2">
-									<img src="<?= base_url()?>assets/img/tachometer.png" class="rounded-circle" width=200>
-									<h4 class="py-3 theme">Maneire seu Consumo</h4>
+								<a href="visaogeral#tutoriais">
+									<img src="<?= base_url()?>assets/img/play.png" class="rounded-circle" width=200>
+									<h4 class="py-3 theme">Tutoriais</h4>
 									<a>
 							</div><!-- /.col-lg-4 -->
 							<div class="col-lg-4 my-2 text-center animeTop">
-								<a href="Raiz/abrirItem/3">
-									<img src="<?= base_url()?>assets/img/hands.png" class="rounded-circle" width=200>
-									<h4 class="py-3 theme">É com você</h4>
+								<a href="visaogeral#guiarapido">
+									<img src="<?= base_url()?>assets/img/book.png" class="rounded-circle" width=200>
+									<h4 class="py-3 theme">Guia rápido</h4>
 								<a>
 							</div><!-- /.col-lg-4 -->
 						</div>
@@ -116,21 +119,21 @@
 			<div class="container">
 				<div class="row my-4">
 					<div class="col-xl-6 col-lg-12 colunas-home d-table">
-						<a href="dicas">
+						<a href="dicas" style="color: #212529">
 						<div class="card shadow card-theme card-colunas-home anime">
 							<div class="d-table-cell align-middle">
 							<h2 class="text-left ml-0 theme">Domicílio</h2><br>
-							<p class="theme mb-5">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
+							<p class="theme mb-5">O consumo de energia elétrica nas residências aumentou 3,1% no ano de 2019 e tende a aumentar cada vez mais, devido a nossa dependência de aparelhos eletrônicos, aumentando assim consideravelmente o valor da nossa conta de energia.</p>
 							</div>
 						</div>
 						</a>
 					</div>
 					<div class="col-xl-6 col-lg-12 colunas-home d-table">
-						<a href="dicas">
+						<a href="dicas" style="color: #212529">
 						<div class="card shadow card-theme card-colunas-home animeRight">
 							<div class="d-table-cell align-middle theme">
 							<h2 class="text-left ml-0 theme">Empresa</h2><br>
-							<p class="mb-5">O consumo de energia tende a subir cada vez mais, tendo em vista que nos tornamos cada vez mais dependentes de aparelhos eletrônicos e que a energia tende a se tornar mais cara pela dificuldade de suprir a grande demanda e épocas de secas.</p>
+							<p class="mb-5">O consumo das empresas também aumentou, em média 4,0% em 2019, tendo o Nordeste registrado um aumento de 6,8%, o maior das regiões do Brasil, se tornando um problema no bolso de muitos empresários.</p>
 							</div>
 						</div>
 						</a>
@@ -142,10 +145,10 @@
 				<div class="row align-items-center card card-theme">
 					<div class="container">
 						<div class="row">
-							<div class="col-xl-6 col-lg-12 last-container py-5 px-5 d-table">
+							<div class="col-xl-6 col-lg-12 last-container py-5 d-table" style="padding-left: 40px;padding-right: 40px;">
 								<div class="align-middle d-table-cell">	
-									<h2 class="anime theme text-center">Heading</h2>
-									<p class="mx-auto anime theme text-justify last-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id. </p>
+									<h2 class="anime theme text-center">Inove-se</h2>
+									<p class="mx-auto anime theme text-justify last-p">Fazendo a sua parte é o primeiro passo para mudar o mundo em que vivemos, ao maneirar no consumo de energia você contribui para um meio ambiente mais saudável. Opte sempre pelo uso de aparelhos eletrônicos mais econômicos e nunca esqueça algo ligado quando não estiver usando, pequenos atos fazem uma grande diferença a longo prazo.</p>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-12 last-container py-5 text-center">
@@ -154,6 +157,9 @@
 						</div>
 					</div>
 				</div><!-- /.row -->
+			<?php
+				}
+			?>
 			</div>
 		<!--conteudo-->
 

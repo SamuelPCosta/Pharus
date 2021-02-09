@@ -1,3 +1,8 @@
+function baseurl(){
+  var baseUrl = "http://localhost/pharus";
+  return baseUrl;
+}
+
 $("#menu-toggle").click(function(e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
@@ -69,20 +74,20 @@ window.onload = function(){
 function point(imagem, point, texto) {
   $("#imagemdocirculo").addClass('diagonal-enter-active');
   $("#imagemdocirculo2").addClass('diagonal-leave-active');
-  $("#imagemdocirculo").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
+  $("#imagemdocirculo").attr("src", baseurl()+"/assets/img/"+imagem+".png");
   $(".point").removeClass('imagematualdocirculo');
   $("."+point).addClass('imagematualdocirculo');
   $(".textogiro").removeClass('textodogirovisivel');
   $("."+texto).addClass('textodogirovisivel');
   setTimeout(function(){ 
     $("#imagemdocirculo").removeClass('diagonal-enter-active'); 
-    $("#imagemdocirculo2").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
+    $("#imagemdocirculo2").attr("src", baseurl()+"/assets/img/"+imagem+".png");
     $("#imagemdocirculo2").removeClass('diagonal-leave-active');}, 385);
 }
 
 function startpoint(imagem, point, texto) {
-  $("#imagemdocirculo2").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
-  $("#imagemdocirculo").attr("src","http://localhost/pharus/assets/img/"+imagem+".png");
+  $("#imagemdocirculo2").attr("src", baseurl()+"/assets/img/"+imagem+".png");
+  $("#imagemdocirculo").attr("src", baseurl()+"/assets/img/"+imagem+".png");
   $(".point").removeClass('imagematualdocirculo');
   $("."+point).addClass('imagematualdocirculo');
   $(".textogiro").removeClass('textodogirovisivel');
@@ -93,7 +98,7 @@ function video(video, marcador) {
   $(".marcadorvideo").addClass('inativo');
   $(".marcadorvideo"+marcador).removeClass('inativo');
   $('#videoclip').get(0).pause();
-  $('#mp4video').attr('src', "http://localhost/pharus/assets/videos/"+video+".mp4");
+  $('#mp4video').attr('src',  baseurl()+"/assets/videos/"+video+".mp4");
   $('#videoclip').get(0).load();
   $('#videoclip').get(0).play();
 }
@@ -103,16 +108,16 @@ var usuario = localStorage.getItem('Usuario')
 var fotoStorage = localStorage.getItem('fotoStorage')
 //localStorage.setItem('fotoStorage', true);
 if (fotoStorage=="true") {
-  $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/profile_"+usuario+".png");
+  $(".photo_user").attr("src", baseurl()+"/assets/fotos/profile_"+usuario+".png");
 }else{
-  $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
+  $(".photo_user").attr("src", baseurl()+"/assets/fotos/user_man.png");
 }
 
 $("#removerimg").click(function(e) {
   e.preventDefault();
-    $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/user_man.png");
+    $(".photo_user").attr("src", baseurl()+"/assets/fotos/user_man.png");
     $.ajax({
-        url: "http://localhost/pharus/Raiz/removerFotoDB",
+        url:  baseurl()+"/Raiz/removerFotoDB",
         type: "POST",
         data: {},
         success: function(){
@@ -140,7 +145,7 @@ $(function(){
 
 function salvarimg(){
     $.ajax({
-        url: "http://localhost/pharus/Raiz/registrarFotoDB",
+        url:  baseurl()+"/Raiz/registrarFotoDB",
         type: "POST",
         data: {},
         success: function(){
@@ -151,7 +156,7 @@ function salvarimg(){
     });
     localStorage.setItem('fotoStorage', "true");
     var fotoStorage = localStorage.getItem('fotoStorage')
-    $(".photo_user").attr("src","http://localhost/pharus/assets/fotos/profile_"+usuario+".png");
+    $(".photo_user").attr("src", baseurl()+"/pharus/assets/fotos/profile_"+usuario+".png");
      
     //window.location.reload(true)
     //return  

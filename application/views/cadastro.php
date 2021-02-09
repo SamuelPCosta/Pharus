@@ -51,7 +51,7 @@
     			}	
     		}
     	?>	
-	<div class="container h-100">
+	<div class="container h-100" style="padding-top: 40px;">
 		<div class="d-flex justify-content-center h-100" >
 			<div class="user_card user_card_cadastro bg-light">
 				<div class="d-flex justify-content-center">

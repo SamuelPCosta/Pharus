@@ -42,8 +42,6 @@ class Consumo_model extends CI_Model {
 		$this->db->where("faixa", $minhafaixa);
 	    $usuarios = $this->db->get('usuario');
 	    $total=0;
-	    $diario=0;
-	    $totalDiario=0;
 	    $inativos=0;
 	    $usuarioInativo=0;
 	    for ($i=0; $i <$nUsersFaixa ; $i++){ 
@@ -62,19 +60,9 @@ class Consumo_model extends CI_Model {
 				$usuarioAtual = $usuarios->result_array()[$i]['conta_contrato'];
 				if ($consumoTotal==0) {
 					$usuarioInativo=1;
-				}else{
-					for ($j=0; $j < 24; $j++) { 
-						$this->db->select('hora'.$j);
-						$this->db->where('usuario', $usuarioAtual);  
-						$query = $this->db->get('simulacao');
-						$hora = "hora".$j;
-						$valor[] = $query->row()->$hora;
-						$diario = array_sum(array_slice($valor, 0, date('H')));
-					}
 				}
 
-				$totalDiario=$totalDiario+$diario;
-				$total=$total+$consumoTotal+$totalDiario;
+				$total=$total+$consumoTotal;
 				$inativos=$inativos+$usuarioInativo;
 				//echo "<br>consumoTotal: ".$consumoTotal;
 				//echo "<br>".$total;

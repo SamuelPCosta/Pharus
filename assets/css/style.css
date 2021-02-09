@@ -267,7 +267,7 @@ h4{
     width: 100% !important;
     text-align: justify;
     margin: auto;
-    font-size: 1.35em;
+    font-size: 20px;
 }
 .line{
     border-right: none;
@@ -289,6 +289,9 @@ h4{
 .last-container i{
     font-size: 10em; 
     color: white
+}
+.last-container.py-5.text-center{
+    margin-top: -110px!important;
 }
 .bg-dark2{
     background-color: #464b51!important;
@@ -313,6 +316,48 @@ select.bg-dark2{
 }
 card-colunas-home .d-table-cell.align-middle{
     color: black;
+}
+.first-container .card{
+    margin-top: 5px!important;
+    padding-top: 15px!important;
+}
+.dicas-container .card {
+    margin-top: 0px!important;
+    padding-top: 0px!important;
+}
+.card-colunas-home.animeRight{
+    margin-top: 20px;
+}
+.container-metas .card h2{
+    margin-top: 15px!important;
+}
+.container-simulador{
+    margin-top: 5px!important;
+}
+.instrucoesSimulador{
+    padding: 15px 5px!important;
+}
+.titulosimulador{
+    padding: 15px 20px!important;
+}
+.container{
+   padding: 5px;
+}
+.containerinfo{
+    padding: 0 15px!important;
+}
+.containerinfo1visaogeral{
+    margin-top: -30px!important;
+    margin-bottom: 100px!important;
+}
+.colunas-home{
+   padding: 0px!important
+}
+.colunas-home p, .colunas-home h2{
+   padding: 0 15px!important
+}
+.card-colunas-home.animeRight{
+    margin-top: 20px;
 }
 @media(min-width:1200px) {
     .first-container {
@@ -340,6 +385,10 @@ card-colunas-home .d-table-cell.align-middle{
     }
     .last-container h2{
         text-align: right;
+    }
+    .containerinfo1visaogeral{
+        margin-top: 120px!important;
+        margin-bottom: 0px!important;
     }
 }
 
@@ -399,12 +448,36 @@ card-colunas-home .d-table-cell.align-middle{
     .colunas-home p{
        /*width: 85% !important;*/
     }
+    .card-colunas-home.animeRight{
+        margin-top: 0px;
+    }
     .card-colunas-home{
         padding: 30px 45px !important;
         color: black;
     }
     footer{
         /*z-index: 1!important;*/
+    }
+    .first-container .card{
+        margin-top: 25px!important;
+    }
+    .dicas-container .card {
+        margin-top: 0px!important;
+    }
+    .ideal-resultado .card{
+        padding-top: 3em!important;
+    }
+    .home .card{
+        margin-top: 0px!important;
+        padding-top: 5px!important;
+    }
+    .last-container.py-5.text-center{
+        margin-top: 0px!important;
+    }
+}
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 700px;
     }
 }
 @media(min-width:1600px) {
@@ -520,9 +593,9 @@ select.form-control{
 
 .title_log{
     margin: 20px 0px;
-    font-size: 1.8em;
+    font-size: 1.6em;
     text-align: center !important;
-    min-width: 280px;
+    /*min-width: 280px;*/
 }
 .usuario{
     padding-top: 0px !important;
@@ -571,6 +644,9 @@ a#editar_senha:hover{
     .atualize p, .atualize .col-md-12 .theme.text-white{
         width: 100% !important;
         padding: 0 !important;
+    }
+    .atualize h2{
+        padding: 0px !important;
     }
 }
 /*#################Animação Scroll#################*/

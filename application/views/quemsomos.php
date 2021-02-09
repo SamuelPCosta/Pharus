@@ -1,4 +1,4 @@
-			<div class="container quemsomos">
+			<div class="container quemsomos" style="padding: 0 15px">
 		        <div class="row align-items-center">
 		     		<div class="col-lg-6 col-md-12 float-left">
 		     			<br><br>

@@ -20,6 +20,7 @@ function update(myChart) {
 }
 
 var consumo = localStorage.getItem('consumo');
+
 console.log(consumo);
 console.log(numeros);
 Chart.defaults.global.defaultFontSize = 16;
@@ -54,8 +55,8 @@ var myChart = new Chart(ctx, {
         responsive: true,
         title: {
             display: true,
-            text: 'Gráfico de Consumo por hora (kWh)',
-            fontSize: 25,
+            text: 'Consumo por hora (kWh)',
+            fontSize: 22,
             fontStyle: 'normal',
             fontFamily: 'Open Sans'
         },
@@ -84,34 +85,36 @@ var myChart = new Chart(ctx, {
 /* Gráfico de barras */
 
 var ctx = document.getElementById("bar-chart").getContext("2d");
+var d = new Date();
+var months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Decembro"];
 var myBarChart = new Chart(ctx,{
     type: 'bar',
     data:{
         labels: [mesatual],
         datasets: [{
-            label: "Meu consumo",
-            backgroundColor: "#80bef7",
-            borderWidth: 0,
-            borderColor: '#80bef7',
-            hoverBackgroundColor:"#80bef7",
-            highlightFill: "#f8f9fa",
-            data: [JSON.parse(meuconsumo)],
-        },
-        {
-            label: "Minha meta",
+            label: "Meu CP (kWh)",
             backgroundColor: "#FFC107",
             borderWidth: 0,
             borderColor: '#FFC107',
             hoverBackgroundColor:"#FFC107",
+            highlightFill: "#f8f9fa",
+            data: [JSON.parse(meuconsumo)],
+        },
+        {
+            label: "Minha meta (kWh)",
+            backgroundColor: "#f7da80",
+            borderWidth: 0,
+            borderColor: '#f7da80',
+            hoverBackgroundColor:"#f7da80",
             lineTension: 0,
             data: [JSON.parse(meta)]
         },
         {
-            label: "Média da faixa "+minhafaixa,
-            backgroundColor: '#f7da80',
+            label: "CP dos outros usuários (kWh)",
+            backgroundColor: '#80bef7',
             borderWidth: 0,
-            borderColor: '#f7da80',
-            hoverBackgroundColor:"#f7da80",
+            borderColor: '#80bef7',
+            hoverBackgroundColor:"#80bef7",
             lineTension: 0,
             data: [JSON.parse(mediafaixa)]
         }]
@@ -120,8 +123,8 @@ var myBarChart = new Chart(ctx,{
         responsive: true,
         title: {
             display: true,
-            text: 'Gráfico de expectativas por mês (kWh)',
-            fontSize: 25,
+            text: 'Previsão para '+months[d.getMonth()]+' (kWh) | CP: consumo previsto',
+            fontSize: 22,
             fontStyle: 'normal',
             fontFamily: 'Open Sans'
         },

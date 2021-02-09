@@ -1,0 +1,67 @@
+.tutorialdvi1{
+	width: 700px!important; 
+	position: absolute; 
+	left: 150px;
+}
+.tutorialdvi2{
+	width: 150px;
+	height: 150px;
+	background-color: #fff;
+	border: 2px solid #b5b5b5;
+	transform: translate(75px,-130px);
+	z-index: 3;
+}
+.tutorialicone{
+	width: 150px;
+	font-size: 4.5em;
+	transform: translate(50%,14%);
+}
+.tutorialicone i{
+	transform: translate(-50%,0);
+}
+.tutorialcontent{
+	border: 8px solid #ffc107;
+	width: 400px;
+}
+.tutorialheader{
+	border-bottom: 8px solid #ffc107;
+}
+.tutorialtitle{
+	margin-left: 60px;
+}
+.tutorialp{
+	font-size: 20px;
+	margin-top: 20px;
+}
+.tutorialfooter{
+	border: none;
+	padding-top: 0;
+}
+.tutorialfooter button{
+	font-size: 14px;
+}
+@media(max-width:767px) {
+	.tutorialdvi1{
+		max-width: 100vw;
+		left: 0px!important;
+		position: static!important;
+		margin: auto!important;
+	}
+	.tutorialcontent{
+		width: 80vw!important;
+		margin: auto!important;
+	}
+	.tutorialicone, .tutorialdvi2{
+		display: none!important;
+	}
+	.tutorialtitle{
+		margin: auto;
+	}
+	.tutorialcontent{
+		border: 4px solid #ffc107;
+		width: 400px;
+	}
+	.tutorialheader{
+		border-bottom: 4px solid #ffc107;
+	}
+}

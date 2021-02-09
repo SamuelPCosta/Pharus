@@ -121,9 +121,9 @@ class Raiz extends CI_Controller {
 
 	public function abrirItem($item){
 		if ($item==1) {
-			$img = 'primeirospassos';
-		}elseif ($item==2) {
 			$img = 'stop';
+		}elseif ($item==2) {
+			$img = 'primeirospassos';
 		}else{
 			$img = 'comvoce';
 		}
@@ -131,7 +131,8 @@ class Raiz extends CI_Controller {
 		$this->session->set_userdata('itempoint','point'.$item);
 		$this->session->set_userdata('itemtexto','texto'.$item);
 		redirect('visaogeral#'); 
-	}
+	} 
+	// Abria a ilustracao e texto certo pelo index
 
 	public function visaogeral(){
 		if (isset($_SESSION['login'])) {
@@ -157,14 +158,24 @@ class Raiz extends CI_Controller {
 			$backupSimulador = $this->session->userdata('simulacaoBackup'.$dados['usuario']);
 			if ($backupSimulador!=NULL) {
 				$consumoGrafico = array_sum(array_slice($backupSimulador, 0, date('H')));
-				$dados['meuconsumo'] = json_encode(number_format($this->Consumo_model->SelecionarConsumoTotal($dados['usuario'])+$consumoGrafico, 2));
+				$consumoTotal=$this->Consumo_model->SelecionarConsumoTotal($dados['usuario']);
+				$dias = date('j')-1;
+				$umdia = $consumoTotal/$dias;
+				$projecao = $umdia*date('t');
+
+				$dados['meuconsumo'] = json_encode(number_format($projecao, 2));
 			}else{
 				$dados['meuconsumo'] = 0; 
 				//$dados['mediaFaixa'] = 0;
 			}
 			$this->load->model("Usuarios_model");
 			$dados['minhafaixa'] = $this->Usuarios_model->getFaixa($usuario);
-			$dados['mediaFaixa'] = json_encode(number_format($this->Consumo_model->mediaFaixa($usuario,$dados['minhafaixa']), 2));
+			$consumoTotalFaixa = $this->Consumo_model->mediaFaixa($usuario,$dados['minhafaixa']);
+			$diasFaixa = date('j')-1;
+			$umdiaFaixa = $consumoTotalFaixa/$diasFaixa;
+			$projecaoFaixa = $umdiaFaixa*date('t');
+
+			$dados['mediaFaixa'] = json_encode(number_format($projecaoFaixa, 2));
 			$this->load->model("Consumo_model");	
 			$title['titulo'] ="Consumo";
 			//echo $dados['mediaFaixa'];
@@ -336,7 +347,7 @@ class Raiz extends CI_Controller {
 			$this->notFound();
 		}else{
 			if (isset($_SESSION['login'])) {
-				$title['titulo'] ="Atualize sua conta";
+				$title['titulo'] ="Apoie o projeto	";
 				$this->load->view('header_sidebar', $title);
 				$this->load->view('apoie');
 				$this->load->view('footer');

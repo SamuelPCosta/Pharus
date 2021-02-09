@@ -19,7 +19,7 @@ h2.card-theme{
 }
 
 /*visaogeral*/
-#containerinfo h2, #containerinfo .dropdown-divider{
+.containerinfo h2, .containerinfo .dropdown-divider{
 	width: 80% !important; margin-left: 0px!important
 }
 
@@ -79,8 +79,9 @@ h2.card-theme{
 	height: 150px;
 }
 .marcadorvideo{
-	top: -208px;
-}.inativo{
+	margin-top: -295px;
+}
+.inativo{
 	display: none;
 }
 @media(max-width: 1600px){
@@ -98,7 +99,7 @@ h2.card-theme{
         padding-left: 0px !important;
     }  
 
-    #containerinfo h2, #containerinfo .dropdown-divider{
+    .containerinfo h2, .containerinfo .dropdown-divider{
 		width: 100% !important; 
 	}
 	#containerinfo .my-5{
@@ -106,10 +107,10 @@ h2.card-theme{
 		top: -80px;
 	}
 
-	#containerinfo .col-xl-2{
+	.containerinfo .col-xl-2{
 		text-align: center;
 	}
-	#containerinfo .fas{
+	.containerinfo .fas{
 		padding-left: 0px!important;
 	}
 
