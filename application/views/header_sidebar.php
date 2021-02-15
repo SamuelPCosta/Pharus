@@ -32,8 +32,8 @@
 	<header>
 		<nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0" id="header">
 			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" alt="Lôgo do sistema Farol aceso" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
-			<a href="#menu-toggle" class="btn text-white text-dark sidebar-li-a position-fixed" id="menu-toggle"><i class="fas fa-bars"></i></a>
-              <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;" onclick="animarNotificacao()" accesskey="n">
+			<a href="#menu-toggle" class="btn text-white text-dark sidebar-li-a position-fixed" id="menu-toggle" title="menu lateral"><i class="fas fa-bars"></i></a>
+              <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;" onclick="animarNotificacao()" accesskey="n" title="Notificação">
                 <div class="rounded-circle bg-warning position-fixed border border-dark" id="avisonotificacao" style="width: 12px; height: 12px; margin-left: 13px; margin-top: -2px"></div>
                 <i class="fas fa-exclamation-triangle"></i>
               </a>
@@ -112,38 +112,38 @@
                 </li>
                 <div class="dropdown-divider"></div>
             	<li id="Home" class="" >
-            		<a href="index" accesskey="h" class="text-capitalize sidebar-li-a text-dark"><i class="fas fa-home"></i>Home</a>
+            		<a href="index" accesskey="h" class="text-capitalize sidebar-li-a text-dark" title="Ícone de casa"><i class="fas fa-home"></i>Home</a>
             	</li>
                 <li id="Metas" class="" >
-                    <a href="metas" accesskey="m" class="sidebar-li-a text-dark"><i class="fas fa-bookmark"></i>Metas</a>
+                    <a href="metas" accesskey="m" class="sidebar-li-a text-dark" title="Ícone de marcador de páginas"><i class="fas fa-bookmark"></i>Metas</a>
                 </li>
                 <li id="Consumo" class="" >
-                    <a href="consumo" accesskey="c" class="sidebar-li-a text-dark"><i class="fas fa-coins"></i>Consumo</a>
+                    <a href="consumo" accesskey="c" class="sidebar-li-a text-dark" title="Ícone de moedas"><i class="fas fa-coins"></i>Consumo</a>
                 </li>
                 <li id="Ideal de Consumo" class="">
-                    <a href="idealdeconsumo" class="sidebar-li-a text-dark"><i class="fas fa-funnel-dollar"></i>Ideal de Consumo</a>
+                    <a href="idealdeconsumo" class="sidebar-li-a text-dark" title="Ícone de funil junto com uma moeda"><i class="fas fa-funnel-dollar"></i>Ideal de Consumo</a>
                 </li>
                 <li id="Simulador" class="">
-                    <a href="simulador" class="sidebar-li-a text-dark"><i class="fas fa-laptop-code"></i>Simulador</a>
+                    <a href="simulador" class="sidebar-li-a text-dark" title="Ícone de um notebook"><i class="fas fa-laptop-code"></i>Simulador</a>
                 </li>
                 <li id="Dicas" class="">
-                    <a href="dicas#" class="sidebar-li-a text-dark"><i class="fas fa-lightbulb"></i>Dicas</a>
+                    <a href="dicas#" class="sidebar-li-a text-dark" title="Ícone de lâmpada"><i class="fas fa-lightbulb"></i>Dicas</a>
                 </li>
                 <li id="Conquistas" class="">
-                    <a href="conquistas" class="sidebar-li-a text-dark"><i class="fas fa-star"></i>Conquistas</a>
+                    <a href="conquistas" class="sidebar-li-a text-dark" title="Ícone de estrela"><i class="fas fa-star"></i>Conquistas</a>
                 </li>
                 <?php 
                     if (!isset($_SESSION['premium'])){
                         //CONFERIRI SE O USUÁRIO É PREMIUM
                 ?>
                 <li id="Apoie" class="">
-                    <a href="apoie" class="sidebar-li-a text-dark"><i class="fas fa-award"></i>Apoie</a>
+                    <a href="apoie" class="sidebar-li-a text-dark" title="Ícone de medalha"><i class="fas fa-award"></i>Apoie</a>
                 </li>
                 <?php
                     }
                 ?>
                 <li class="mb-5">
-                    <a href="login/logout" accesskey="s" class="sidebar-li-a text-dark" onclick="destroyphoto()"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
+                    <a href="login/logout" accesskey="s" class="sidebar-li-a text-dark" onclick="destroyphoto()" title="Ícone de seta indicando saída"><i class="fas fa-sign-out-alt"></i> Sair</a><!--Controller login/ função logout-->
                 </li>
             </ul>
         </div>

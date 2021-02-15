@@ -72,7 +72,7 @@ html {
 }
 @media(max-width:768px) {
 	.user_card_cadastro{
-		margin-bottom:30px;
+		margin-top:80px;
 	}
 }
 input:-webkit-autofill,

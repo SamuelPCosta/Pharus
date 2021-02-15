@@ -79,8 +79,11 @@
 									<div align="left" class="remetente mb-2"> 
 										<div class="rounded-pill px-4 py-2 shadow-sm card-theme card theme" style="width: fit-content">Como podemos te ajudar hoje?</div>
 									</div>
+									<div align="left" class="remetente mb-2"> 
+										<div class="rounded-pill px-4 py-2 shadow-sm card-theme card theme" style="width: fit-content"><<< Ferramenta em desenvolvimento >>></div>
+									</div>
 									<div align="right" class="enviado mb-2 w-100"> 
-										<div class="rounded-pill px-4 py-2 shadow-sm card-theme card theme" style="width: fit-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
+										<div class="rounded-pill px-4 py-2 shadow-sm card-theme card theme float-right mb-2" style="width: fit-content">Ok, entendi</div>
 									</div>
 
 									<input type="" name="" class="rounded-pill card-theme theme shadow-sm border-0 pl-4 py-2 inputmensagem" placeholder="Digite aqui sua mensagem..." autofocus spellcheck="true" style="width: calc(100% - 55px); border-left: 4px solid #ffc107!important;">

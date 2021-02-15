@@ -96,19 +96,19 @@
 						<div class="row">
 							<div class="col-lg-4 my-2 text-center animeTop">
 								<a href="Raiz/abrirItem/1">
-									<img src="<?= base_url()?>assets/img/tachometer.png" class="rounded-circle" width=200>
+									<img src="<?= base_url()?>assets/img/tachometer.png" alt="Marcador de ponteiro semelhante a um velocimetro" class="rounded-circle" width=200>
 									<h4 class="py-3 theme">Maneire seu Consumo</h4>
 								<a>
 							</div><!-- /.col-lg-4 -->
 							<div class="col-lg-4 my-2 text-center animeTop">
 								<a href="visaogeral#tutoriais">
-									<img src="<?= base_url()?>assets/img/play.png" class="rounded-circle" width=200>
+									<img src="<?= base_url()?>assets/img/play.png" alt="Símbolo de play, formato triangular apontado para a direita" class="rounded-circle" width=200>
 									<h4 class="py-3 theme">Tutoriais</h4>
 									<a>
 							</div><!-- /.col-lg-4 -->
 							<div class="col-lg-4 my-2 text-center animeTop">
 								<a href="visaogeral#guiarapido">
-									<img src="<?= base_url()?>assets/img/book.png" class="rounded-circle" width=200>
+									<img src="<?= base_url()?>assets/img/book.png" alt="Livro aberto" class="rounded-circle" width=200>
 									<h4 class="py-3 theme">Guia rápido</h4>
 								<a>
 							</div><!-- /.col-lg-4 -->
@@ -122,7 +122,7 @@
 						<a href="dicas" style="color: #212529">
 						<div class="card shadow card-theme card-colunas-home anime">
 							<div class="d-table-cell align-middle">
-							<h2 class="text-left ml-0 theme">Domicílio</h2><br>
+							<h2 class="text-md-left text-center ml-0 theme">Domicílio</h2><br>
 							<p class="theme mb-5">O consumo de energia elétrica nas residências aumentou 3,1% no ano de 2019 e tende a aumentar cada vez mais, devido a nossa dependência de aparelhos eletrônicos, aumentando assim consideravelmente o valor da nossa conta de energia.</p>
 							</div>
 						</div>
@@ -132,7 +132,7 @@
 						<a href="dicas" style="color: #212529">
 						<div class="card shadow card-theme card-colunas-home animeRight">
 							<div class="d-table-cell align-middle theme">
-							<h2 class="text-left ml-0 theme">Empresa</h2><br>
+							<h2 class="text-md-left text-center ml-0 theme">Empresa</h2><br>
 							<p class="mb-5">O consumo das empresas também aumentou, em média 4,0% em 2019, tendo o Nordeste registrado um aumento de 6,8%, o maior das regiões do Brasil, se tornando um problema no bolso de muitos empresários.</p>
 							</div>
 						</div>
@@ -147,7 +147,7 @@
 						<div class="row">
 							<div class="col-xl-6 col-lg-12 last-container py-5 d-table" style="padding-left: 40px;padding-right: 40px;">
 								<div class="align-middle d-table-cell">	
-									<h2 class="anime theme text-center">Inove-se</h2>
+									<h2 class="anime theme text-xl-left text-center">Inove-se</h2>
 									<p class="mx-auto anime theme text-justify last-p">Fazendo a sua parte é o primeiro passo para mudar o mundo em que vivemos, ao maneirar no consumo de energia você contribui para um meio ambiente mais saudável. Opte sempre pelo uso de aparelhos eletrônicos mais econômicos e nunca esqueça algo ligado quando não estiver usando, pequenos atos fazem uma grande diferença a longo prazo.</p>
 								</div>
 							</div>

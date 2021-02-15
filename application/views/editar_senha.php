@@ -22,14 +22,43 @@
 											<form method="post" action="Login/atualizar_senha"><!--Mandar para a página de checagem-->
 												<!--Envia para o controller Login.php na função autenticar-->
 												<div class="input-group mb-2">
-													<input type="password" name="senha_atual" value="" class="form-control dados_user border-0" placeholder="Digite a senha atual">
+													<input type="password" name="senha_atual" value="" id="senha" class="form-control dados_user border-0" placeholder="Digite a senha atual">
+													<span style="position: absolute; right: 10px; top: 6px; color: #343a40bb; z-index: 10;"><i class="fas fa-eye theme" id="olho"></i></span>
 												</div>
 												<div class="input-group mb-2">
-													<input type="password" name="nova_senha" value="" class="form-control dados_user border-0" placeholder="Nova Senha">
+													<input type="password" name="nova_senha" value="" id="novasenha" class="form-control dados_user border-0" placeholder="Nova Senha">
+													<span style="position: absolute; right: 10px; top: 6px; color: #343a40bb; z-index: 10;"><i class="fas fa-eye theme" id="olho2"></i></span>
 												</div>
-												<div class="input-group mb-2">
+												<script type="text/javascript">
+													$("#olho").mousedown(function() {
+													  $("#senha").attr("type", "text");
+													});
+													$("#olho").mouseup(function() {
+													  $("#senha").attr("type", "password");
+													});
+													
+													$('#olho').bind('touchstart', function(){
+						                                $("#senha").attr("type", "text");
+						                            }).bind('touchend', function(){
+						                                $("#senha").attr("type", "password");
+						                            });
+
+													$("#olho2").mousedown(function() {
+													  $("#novasenha").attr("type", "text");
+													});
+													$("#olho2").mouseup(function() {
+													  $("#novasenha").attr("type", "password");
+													});
+													
+													$('#olho2').bind('touchstart', function(){
+						                                $("#novasenha").attr("type", "text");
+						                            }).bind('touchend', function(){
+						                                $("#novasenha").attr("type", "password");
+						                            });
+												</script>
+												<!-- <div class="input-group mb-2">
 													<input type="password" name="confirmar_senha" value="" class="form-control dados_user border-0" placeholder="Confirmar Senha">
-												</div>
+												</div> -->
 											</div>
 											<div class="d-flex justify-content-center mt-3 login_container">
 												<button type="submit" name="editar" class="btn btn-warning">Editar senha</button>

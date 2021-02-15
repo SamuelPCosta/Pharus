@@ -5,10 +5,13 @@
 				        	<h1 class="theme" style="font-size: 2.5em;">
 					        	<?php 
 					        		$faixa = $this->session->userdata('faixa');
-					        		if (isset($faixa)){echo "Seu ideal de consumo <br> é entre ".$this->session->userdata('faixa')." reais.";}else{echo "Ideal de consumo <br>";}
+					        		if (isset($faixa)){echo "Ideal de consumo: <br>de ".$this->session->userdata('faixa')." reais.";}else{echo "Ideal de consumo <br>";}
 					        	?>
 					        	</h1><br>
-					        	<p class="theme mb-4">&emsp;&emsp;Aqui você tem acesso a um questionário simples onde suas respostas serão registradas e analisadas com os dados de outros usuários, gerando assim uma faixa de consumo <!-- que fará uma análise das respostas de outros usuários --> para podermos te dar um maior suporte a partir de possíveis soluções para seus problemas. Você pode conferir esses dados na página <i>Consumo.</i></p>
+					        	<p class="theme mb-4">&emsp;&emsp;Aqui você tem acesso a um questionário simples onde suas respostas serão registradas e analisadas com os dados de outros usuários, gerando assim uma faixa de consumo <!-- que fará uma análise das respostas de outros usuários --> para podermos te dar um maior suporte a partir de possíveis soluções para seus problemas. Aprimore seus resultados na página <i>Simulador.</i></p>
+					        	<div class="d-flex justify-content-center my-3">
+									<a href="simulador" name="button" class="next btn btn-warning">Conheça o simulador</a>
+								</div>
 						</div>
 						<!-- <div class="vertical-line"></div> -->
 						<div class="col-xl-7 col-md-12 mx-auto px-0 card2">
@@ -21,31 +24,31 @@
 			     				};
 			     				if ($questao==1) {
 									$pergunta = array(
-										'Pergunta' => "Por quantas horas sua máquina de lavar roupas permanece ligada?",
-										'Alternativa_a' => "Até 3 horas",
-										'Alternativa_b' => "Até 5 horas",
-										'Alternativa_c' => "Até 8 horas",
+										'Pergunta' => "Quantas lavagens você chega a fazer no mesmo dia na máquina de lavar roupas?",
+										'Alternativa_a' => "Até 2 vezes",
+										'Alternativa_b' => "Até 3 vezes",
+										'Alternativa_c' => "4 vezes ou mais",
 										'Alternativa_d' => "Pular pergunta"
 									);
 								}elseif ($questao==2) {
 									$pergunta = array(
-										'Pergunta' => "Por quantas horas sua cafeteira permanece ligada?",
-										'Alternativa_a' => "Até 3 horas",
-										'Alternativa_b' => "Até 5 horas",
-										'Alternativa_c' => "Até 8 horas",
+										'Pergunta' => "Até quantos dias na semana você usa a máquina de lavar roupas?",
+										'Alternativa_a' => "1 dia",
+										'Alternativa_b' => "2 dias",
+										'Alternativa_c' => "3 dias  ou mais",
 										'Alternativa_d' => "Pular pergunta"
 									);
 								}elseif ($questao==3) {
 									$pergunta = array(
-										'Pergunta' => "Por quantas horas seu computador permanece ligado?",
-										'Alternativa_a' => "Até 3 horas",
-										'Alternativa_b' => "Até 5 horas",
-										'Alternativa_c' => "Até 8 horas",
+										'Pergunta' => "Quantas vezes no dia você usa sua cafeteira?",
+										'Alternativa_a' => "Até 1 vez",
+										'Alternativa_b' => "2 a 3 vezes",
+										'Alternativa_c' => "4 vezes ou mais",
 										'Alternativa_d' => "Pular pergunta"
 									);
 								}elseif ($questao==4) {
 									$pergunta = array(
-										'Pergunta' => " Por quantas horas você utiliza o ferro elétrico?",
+										'Pergunta' => "Quanto tempo você usa seu computador por dia?",
 										'Alternativa_a' => "Até 3 horas",
 										'Alternativa_b' => "Até 5 horas",
 										'Alternativa_c' => "Até 8 horas",
@@ -53,21 +56,29 @@
 									);
 								}elseif ($questao==5) {
 									$pergunta = array(
-										'Pergunta' => "Por quantas horas microondas permanece ligado?",
-										'Alternativa_a' => "Até 3 horas",
-										'Alternativa_b' => "Até 5 horas",
-										'Alternativa_c' => "Até 8 horas",
+										'Pergunta' => "Quantas vezes você usa o ferro elétrico na semana?",
+										'Alternativa_a' => "1 a 2 vezes",
+										'Alternativa_b' => "2 a 3 vezes",
+										'Alternativa_c' => "4 vezes ou mais",
 										'Alternativa_d' => "Pular pergunta"
 									);
 								}elseif ($questao==6) {
 									$pergunta = array(
-										'Pergunta' => "Por quantas horas seu ventilador permanece ligado?",
-										'Alternativa_a' => "Até 3 horas",
-										'Alternativa_b' => "Até 5 horas",
-										'Alternativa_c' => "Até 8 horas",
+										'Pergunta' => "Por quanto tempo você costuma usar o microondas no dia?",
+										'Alternativa_a' => "Até 30 minutos",
+										'Alternativa_b' => "Até 1 hora",
+										'Alternativa_c' => "2 horas ou mais",
 										'Alternativa_d' => "Pular pergunta"
 									);
 								}elseif ($questao==7) {
+									$pergunta = array(
+										'Pergunta' => "Por quanto tempo seu ventilador permanece ligado?",
+										'Alternativa_a' => "Até 3 horas",
+										'Alternativa_b' => "Até 5 horas",
+										'Alternativa_c' => "14 horas ou mais",
+										'Alternativa_d' => "Pular pergunta"
+									);
+								}elseif ($questao==8) {
 									$pergunta = array(
 										'Pergunta' => "Quantas horas por dia você dorme?",
 										'Alternativa_a' => "Até 6 horas",
@@ -75,15 +86,15 @@
 										'Alternativa_c' => "Até 10 horas",
 										'Alternativa_d' => "Pular pergunta"
 									);
-								}elseif ($questao==8) {
+								}elseif ($questao==9) {
 									$pergunta = array(
-										'Pergunta' => "De qual hora você vai dormir?",
+										'Pergunta' => "Em qual horário você dorme?",
 										'Alternativa_a' => "22 horas ou antes",
 										'Alternativa_b' => "23 horas",
 										'Alternativa_c' => "00 horas ou depois",
 										'Alternativa_d' => "Pular pergunta"
 									);
-								}elseif ($questao==9) {
+								}elseif ($questao==10) {
 									$pergunta = array(
 										'Pergunta' => "O que fica ligado enquanto você dorme?",
 										'Alternativa_a' => "Nada",
@@ -95,7 +106,7 @@
 			     			?>
 			     			<nav aria-label="...">
 								<ul class="pagination justify-content-center my-3" style="height: 35px">
-									<?php for ($i=1; $i <=9 ; $i++){//numero de questoes na paginacao ?>
+									<?php for ($i=1; $i <=10 ; $i++){//numero de questoes na paginacao ?>
 										<li class="page-item" id="questao<?php echo $i?>"><a class="text-center rounded-circle page-link nperguntas theme active"><?php echo $i; ?></a></li>
 									<?php }?>
 								</ul>
@@ -105,7 +116,7 @@
 			     				<?php  
 			     					if ($questao==1) {
 			     				?>
-			     					<p class="mx-auto" style="width: 90%; font-size: 1.2em">Responda com base no uso diário dos aparelhos e no tempo em stand by.</p>
+			     					<span class="mx-auto" style="width: 90%; font-size: 1.2em;">Responda com base no uso diário dos aparelhos e no tempo em stand by.</span>
 			     				<?php
 			     					}
 			     				?>

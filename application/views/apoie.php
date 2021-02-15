@@ -2,7 +2,7 @@
 				<div class="card py-5 px-5 mt-4 mb-0 shadow card-theme">
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">
-							<h2 class="theme px-5 text-center text-md-left">Apoie o desenvolvimento</h2>
+							<h2 class="theme px-5  text-center text-md-left">Apoie o desenvolvimento</h2>
 							<p class="my-3 text-justify theme px-5">Ajude o Pharus a se manter no ar! Para deixar um sistema no ar temos que pagar um domínio e uma hospedagem. Entre em contato com <br><br>ribeiro.santos@escolar.ifrn.edu.br,<br> keliane.martins@escolar.ifrn.edu.br ou <br>	 samuel.soares@escolar.ifrn.edu.br e <br> saiba como ajudar.</p>
 						</div>
 						<div class="vertical-line"></div>
@@ -31,25 +31,6 @@
 												<button class="btn btn-warning inativo" id="esconderchaves" onclick="$('#chaves').toggleClass('inativo'); $('#esconderchaves').toggleClass('inativo'); $('#verchaves').toggleClass('inativo');" style="width: 100%!important">Esconder Chaves</button>
 											</div>
 										</div>
-										<!-- <div class="d-flex justify-content-center form_container theme">
-											<form method="post" action="">
-												<span>Nome Completo:</span>
-												<div class="input-group mb-2">
-													<input type="text" name="nome" class="form-control dados_user border-0 text-capitalize" placeholder="">
-												</div>
-												<span>Email:</span>
-												<div class="input-group mb-2">
-													<input type="text" name="email" class="form-control dados_user border-0" placeholder="">
-												</div>
-												<span>Contribuição:</span>
-												<div class="input-group mb-2">
-													<input type="text" min="5" max="100" step="5" name="tarifa_kwh" id="tarifa" class="form-control input_pass maskMoney dados_user border-0">
-												</div>
-										</div> -->
-												<!-- <div class="d-flex justify-content-center mt-3 login_container my-3">
-													<button type="" name="editar" id="atualizar" class="btn btn-warning position-absolute my-4 mb-5" disabled>Fazer contribuição</button>
-												</form>
-											</div> -->
 									</div>
 								</div>
 							</div>
@@ -60,31 +41,31 @@
 
 				<!--Segundo container-->
 
-				<div class="card py-5 px-5 my-4 mt-0 shadow card-theme">
+				<div class="card py-5 px-5 mt-4 mb-3 shadow card-theme">
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">	
-							<h2 class="my-3 px-5 theme">Como funciona?</h2>
+							<h2 class="my-3 px-5 theme text-center text-md-left">Como funciona?</h2>
 							<ul class="col-xl col-md-12 mx-auto px-5 theme" style="list-style-type: none">
-								<li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
-								<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
-								<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
-								<li>Excepteur sint occaecat cupidatat non proident.</li>
+								<li class="mb-2">Entre em contato com nossos emails para ajudar;</li>
+								<li class="mb-2">Se preferir faça uma doação via PIX;</li>
+								<li>Agradecemos qualquer tipo de ajuda.</li>
 							</ul>
 						</div>
 						<div class="vertical-line"></div>
 						<div class="col-xl col-md-12 mx-auto px-0">
-							<h2 class="my-3 px-5 theme">Quais as vantagens?</h2>
+							<h2 class="my-3 px-5 theme text-center text-md-left">Por que fazer isso?</h2>
 							<ul class="col-xl col-md-12 mx-auto px-5 theme" style="list-style-type: none">
-								<li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
-								<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
-								<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
-								<li>Excepteur sint occaecat cupidatat non proident.</li>
+								<li class="mb-2">Fazendo isso você doa para ajudar o site a se manter no ar;</li>
+								<li class="mb-2">Fazendo com que o sitema alcance mais pessoas;</li>
+								<li>Quanto mais pessoas utilizando a ferramenta melhor será para o meio ambiente.</li>
 							</ul>
 							<!--conteudo-->
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		</div>
 		<div class="modal fade show d-block" id="tipapoie" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered tutorialdvi1" role="document">
 		  	<div class="rounded-circle card-theme theme tutorialdvi2"><div class="tutorialicone"><i class="fas fa-award mx-auto"></i></div></div>

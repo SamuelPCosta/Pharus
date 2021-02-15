@@ -91,7 +91,7 @@ input[type=radio]:checked + label .alternativas{
 }
 .pagination>li>a, .pagination>li>span{
 	margin: 0 1px;
-	width: 33px;
+	/*width: 33px;*/
 	height: auto;
 	font-size: 0.8em;
 }

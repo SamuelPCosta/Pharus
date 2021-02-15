@@ -118,7 +118,7 @@
 				$outros = array('Chuveiro Elétrico','Ferro Elétrico','Lâmpada Fluor.','Lâmpada Incan.','Lavadora','Secador');
 				if (empty($horassalvas)) {
 					for ($i=0; $i <30 ; $i++) { 
-						$horassalvas[$i]="";
+						$horassalvas[$i]=" ";
 					}
 					
 				}

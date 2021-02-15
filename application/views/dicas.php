@@ -109,7 +109,7 @@
     };
 
     function animar(){
-    	setTimeout(function() { $('.animeTop').addClass('anime-init');}, 150);
+    	setTimeout(function() {$('.animeTop').addClass('anime-init');}, 150);
 	    setTimeout(function() {$('#recarregarIcone').removeClass('recarregarIcone');$('#recarregarIconeMobile').removeClass('recarregarIcone')}, 1000);
     } 
 
@@ -161,18 +161,20 @@
 	    }
 	  }, false)
 
-
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		document.getElementById("alerta-dica-dicas").style.display = "visible";
-	}else{document.getElementById("alerta-dica-dicas").style.display = "none";}
-
 	const tipdisabledDicas = localStorage.getItem('tipdisabledDicas')
 	if (tipdisabledDicas) {
 	  document.getElementById("alerta-dica-dicas").style.display = "none";
 	  $('#bg-dark2').removeClass('show'); 
 	  $('#bg-dark2').addClass('d-none');
 	  $('body').removeClass('modal-open');
-	}else{$('body').addClass('modal-open');}
+	}else{$('#bg-dark2').addClass('d-none');$('#bg-dark2').removeClass('show'); }
+
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		document.getElementById("alerta-dica-dicas").style.display = "visible";
+		$('body').addClass('modal-open');
+		$('#bg-dark2').removeClass('d-none');
+		$('#bg-dark2').addClass('show');
+	}else{document.getElementById("alerta-dica-dicas").style.display = "none";$('body').removeClass('modal-open');$('#bg-dark2').removeClass('show');$('#bg-dark2').addClass('d-none');}
 
 	$("#hideDicas").click(function(e) {
 	  e.preventDefault();

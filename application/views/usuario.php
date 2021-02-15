@@ -39,7 +39,7 @@
 											<form method="post" action="cadastro/editarDados">
 												<span>Nome Completo:</span>
 												<div class="input-group mb-2">
-													<input type="text" name="nome" disabled="disabled" value="<?php echo $nome ?>" class="form-control dados_user border-0 text-capitalize" placeholder="" style="color:#999!important;">
+													<input type="text" name="nome" value="<?php echo $nome ?>" class="form-control dados_user border-0 text-capitalize" placeholder="">  <!-- style="color:#999!important;" -->
 												</div>
 												<span>Usuário:</span>
 												<div class="input-group mb-2">
@@ -56,7 +56,7 @@
 													?>
 												<span>Email:</span>
 												<div class="input-group mb-2">
-													<input type="text" name="email" value="<?php echo $email ?>" class="form-control dados_user border-0" placeholder="">
+													<input type="email" name="email" value="<?php echo $email ?>" class="form-control dados_user border-0" placeholder="">
 												</div>
 												<span>Estado/Fornecedor:</span><br>
 												<div class="input-group mb-2">

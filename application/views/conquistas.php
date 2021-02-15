@@ -65,7 +65,7 @@
 				    	<div class="align-middle d-table-cell">
 					    	<h1 class="nao_conquistado conquista8"><i class="fas fa-star"></i></h1>
 					      	<p class="animeTop text-center w-75 pt-0"> 
-					      		Desligue o monitor do PC sempre que for se ausentar por mais de 5 minutos.
+					      		Consuma menos que a média dos usuários do sistema. (Conquista temporária)
 					      	</p>
 				      	</div>
 				    </div>

@@ -316,11 +316,13 @@ class Raiz extends CI_Controller {
 			$this->load->model("Usuarios_model");
 			$faixa = $this->Usuarios_model->getFaixa($this->session->userdata('usuario'));
 			if ($faixa==1) {
-				$this->session->set_userdata('faixa', "122 e 155"); //dois valores alterar aqui e no controller questionario e controler de metas
+				$this->session->set_userdata('faixa', "60 a 140"); //dois valores alterar aqui e no controller questionario e controler de metas
 			}elseif ($faixa==2) {
-				$this->session->set_userdata('faixa', "156 e 210");
+				$this->session->set_userdata('faixa', "140 a 280");
 			}elseif ($faixa==3) {
-				$this->session->set_userdata('faixa', "211 e 300");
+				$this->session->set_userdata('faixa', "280 a 420");
+			}elseif ($faixa==4) {
+				$this->session->set_userdata('faixa', "420 a 530");
 			}
 			$title['titulo'] ="Ideal de consumo";
 			$this->load->view('header_sidebar', $title);

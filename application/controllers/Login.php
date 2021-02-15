@@ -37,17 +37,17 @@ class Login extends CI_Controller {
 	public function atualizar_senha(){
 		$senha_atual = $this->input->post("senha_atual"); //Recebe a senha atual
 		$nova_senha = $this->input->post("nova_senha"); //Recebe a nova senha 
-		$confirmar_senha = $this->input->post("confirmar_senha"); //Recebe a confirmação de nova senha
+		// $confirmar_senha = $this->input->post("confirmar_senha"); //Recebe a confirmação de nova senha
 		$usuario = $this->session->userdata('usuario');
 		$this->load->model("usuarios_model");
 		$senha = $this->usuarios_model->senhaAtual($usuario,$senha_atual);
 		if ($senha) {
-			if ($nova_senha==$confirmar_senha) {
+			// if ($nova_senha==$confirmar_senha) {
 				$this->usuarios_model->atualizarSenha($usuario,$nova_senha);
 				redirect('login');
-			}else{
-				redirect('editar-senha?error=2');
-			}
+			// }else{
+			// 	redirect('editar-senha?error=2');
+			// }
 		}else{
 			redirect('editar-senha?error=1');
 			//Senha atual errada

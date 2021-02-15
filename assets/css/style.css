@@ -317,7 +317,11 @@ select.bg-dark2{
 card-colunas-home .d-table-cell.align-middle{
     color: black;
 }
-.first-container .card{
+.first-container:not(.contato, .atualize, .dicas-container, .home) .card{
+    margin-top: 5px!important;
+    padding-top: 15px!important;
+}
+.atualize .card{
     margin-top: 5px!important;
     padding-top: 15px!important;
 }
@@ -566,7 +570,7 @@ footer a:hover{
     opacity: 1;
     color: #fff !important
 }
-input[type="text"]:enabled, input[type="password"]:enabled, input[type="text"]:disabled, select{
+input[type="text"]:enabled, input[type="password"]:enabled, input[type="text"]:disabled, select, input[type="email"]:enabled{
     background: #f8f9fa;
     border: none;
     border-left: 4px solid #FFC107 !important;
@@ -714,5 +718,4 @@ a#editar_senha:hover{
     opacity: 1;
   }
 }
-
 /*https://codepen.io/origamid/pen/vXEmQJ?editors=0110*/

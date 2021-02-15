@@ -64,4 +64,14 @@
 	.tutorialheader{
 		border-bottom: 4px solid #ffc107;
 	}
+	.mx-auto.anime.theme.text-justify.last-p.anime-init{
+	    font-size: 1.2em!important;
+	}
+}
+@media (max-width: 360px){
+    .first-container.home p, .card-colunas-home p, .texto_metas p, .container-metas p, .ideal p, .instrucoesSimulador li, .b p, .c p, .atualize p{font-size: 8.5pt !important;}
+    .sidebar-nav li{font-size: 9.5pt !important;}
+    .container-metas .modal-body p{font-size: 14pt !important;}
+    #inputhorario{max-width: 200px!important;}
+    .contato span{font-size: 10pt !important;}
 }
