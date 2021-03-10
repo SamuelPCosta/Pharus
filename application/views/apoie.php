@@ -3,7 +3,7 @@
 					<div class="row align-items-center">
 						<div class="col-xl col-md-12 mx-auto px-0">
 							<h2 class="theme px-5  text-center text-md-left">Apoie o desenvolvimento</h2>
-							<p class="my-3 text-justify theme px-5">Ajude o Pharus a se manter no ar! Para deixar um sistema no ar temos que pagar um domínio e uma hospedagem. Entre em contato com <br><br>ribeiro.santos@escolar.ifrn.edu.br,<br> keliane.martins@escolar.ifrn.edu.br ou <br>	 samuel.soares@escolar.ifrn.edu.br e <br> saiba como ajudar.</p>
+							<p class="my-3 text-justify theme px-5">Ajude o Pharus a se manter no ar! Para deixar um sistema no ar temos que pagar um domínio e uma hospedagem. Entre em contato com: <br><br>ribeiro.santos@escolar.ifrn.edu.br,<br> keliane.martins@escolar.ifrn.edu.br ou <br>	 samuel.soares@escolar.ifrn.edu.br e <br> saiba como ajudar.</p>
 						</div>
 						<div class="vertical-line"></div>
 						<div class="col-xl col-md-12 mx-auto px-0">
@@ -70,7 +70,7 @@
 		  <div class="modal-dialog modal-dialog-centered tutorialdvi1" role="document">
 		  	<div class="rounded-circle card-theme theme tutorialdvi2"><div class="tutorialicone"><i class="fas fa-award mx-auto"></i></div></div>
 		    <div class="modal-content card-theme theme tutorialcontent">
-		      <div class="modal-header tutorialheader"><h3 class="modal-title text-uppercase tutorialtitle" id="TituloModal">Conquistas</h3></div>
+		      <div class="modal-header tutorialheader"><h3 class="modal-title text-uppercase tutorialtitle" id="TituloModal">Apoie</h3></div>
 		      <div class="modal-body text-center">
 		      	<p class="tutorialp">Sinta-se à vontade para nos apoiar com algum valor caso tenha gostado do sistema e queira ajuda-lo a se manter no ar.</p>
 		      </div>

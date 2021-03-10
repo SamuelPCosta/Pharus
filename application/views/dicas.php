@@ -167,14 +167,14 @@
 	  $('#bg-dark2').removeClass('show'); 
 	  $('#bg-dark2').addClass('d-none');
 	  $('body').removeClass('modal-open');
-	}else{$('#bg-dark2').addClass('d-none');$('#bg-dark2').removeClass('show'); }
-
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		document.getElementById("alerta-dica-dicas").style.display = "visible";
-		$('body').addClass('modal-open');
-		$('#bg-dark2').removeClass('d-none');
-		$('#bg-dark2').addClass('show');
-	}else{document.getElementById("alerta-dica-dicas").style.display = "none";$('body').removeClass('modal-open');$('#bg-dark2').removeClass('show');$('#bg-dark2').addClass('d-none');}
+	}else{
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			document.getElementById("alerta-dica-dicas").style.display = "visible";
+			$('body').addClass('modal-open');
+			$('#bg-dark2').removeClass('d-none');
+			$('#bg-dark2').addClass('show');
+		}else{document.getElementById("alerta-dica-dicas").style.display = "none";$('body').removeClass('modal-open');$('#bg-dark2').removeClass('show');$('#bg-dark2').addClass('d-none');}
+	}
 
 	$("#hideDicas").click(function(e) {
 	  e.preventDefault();

@@ -102,9 +102,9 @@ class Questionario extends CI_Controller {
 			$this->Usuarios_model->adicionarFaixa($usuario, $faixa);
 			if ($questao==11) {
 				if ($resposta==="resposta_a") {
-					$base = 1.25;
+					$base = 0;
 				}elseif ($resposta==="resposta_b") {
-					$base = 14.64;
+					$base = 1;
 				}elseif ($resposta==="resposta_c") {
 					$base = 1.25;
 				}else{

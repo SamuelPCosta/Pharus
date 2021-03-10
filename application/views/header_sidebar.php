@@ -30,9 +30,9 @@
 <div class="master bg-light">
 	<!-- Header -->
 	<header>
-		<nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0" id="header">
-			<a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" alt="Lôgo do sistema Farol aceso" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
-			<a href="#menu-toggle" class="btn text-white text-dark sidebar-li-a position-fixed" id="menu-toggle" title="menu lateral"><i class="fas fa-bars"></i></a>
+        <nav class="navbar theme-nav bg-white navbar-expand-lg shadow-sm fixed-top my-0" id="header">
+            <a href="index" class="mx-auto logo position-relative"><img src="<?= base_url()?>assets/img/logo2.png" alt="Lôgo do sistema Farol aceso" width=35><h1 class="theme d-inline-block ml-2"><span class="text-warning">P</span>harus</h1></a> <!--Nossa Logo-->
+            <a href="#menu-toggle" class="btn text-white text-dark sidebar-li-a position-fixed" id="menu-toggle" title="menu lateral"><i class="fas fa-bars"></i></a>
               <a class="dropdown btn text-white sidebar-li-a text-dark position-fixed" data-toggle="dropdown" aria-haspopup="true" id="notifications" aria-expanded="false" style="cursor: pointer;" onclick="animarNotificacao()" accesskey="n" title="Notificação">
                 <div class="rounded-circle bg-warning position-fixed border border-dark" id="avisonotificacao" style="width: 12px; height: 12px; margin-left: 13px; margin-top: -2px"></div>
                 <i class="fas fa-exclamation-triangle"></i>
@@ -48,7 +48,7 @@
                         </tr>
                         <tr class="theme" style="padding-left: 35px!important;">
                             <td class="py-2" style="text-align: center; vertical-align:middle !important;">
-                            <a href="https://forms.gle/2EMtEji8vue3HWwWA" target="_blank">
+                            <a href="https://forms.gle/T1CP19yJttyAXqaf6" target="_blank">
                                 <div style="height:100%;width:90%; background-color: #ffc107; padding: 10px 10px; border-radius: 10px; margin: 0px auto!important; color: black;">
                                     Responder formulário
                                 </div>

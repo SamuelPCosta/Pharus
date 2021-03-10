@@ -160,6 +160,7 @@ class Raiz extends CI_Controller {
 				$consumoGrafico = array_sum(array_slice($backupSimulador, 0, date('H')));
 				$consumoTotal=$this->Consumo_model->SelecionarConsumoTotal($dados['usuario']);
 				$dias = date('j')-1;
+				if(date('j')==1){$dias=1;}
 				$umdia = $consumoTotal/$dias;
 				$projecao = $umdia*date('t');
 
@@ -172,6 +173,7 @@ class Raiz extends CI_Controller {
 			$dados['minhafaixa'] = $this->Usuarios_model->getFaixa($usuario);
 			$consumoTotalFaixa = $this->Consumo_model->mediaFaixa($usuario,$dados['minhafaixa']);
 			$diasFaixa = date('j')-1;
+			if(date('j')==1){$diasFaixa=1;}
 			$umdiaFaixa = $consumoTotalFaixa/$diasFaixa;
 			$projecaoFaixa = $umdiaFaixa*date('t');
 
